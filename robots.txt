@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: /img/
 
-Sitemap: {{ site.url }}/sitemap.xml 
+Sitemap: /sitemap.txt
