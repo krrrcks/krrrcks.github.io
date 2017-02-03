@@ -3,15 +3,15 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Heimseite Daniel Brunner</title>
-    <meta name="description" content="Heimseite Daniel Brunner: Dies ist meine Heimseite; viel Spaß damit....">
+    <title>Migration alter Blog-Einträge</title>
+    <meta name="description" content="Es kamen lange Winterabende und ich habe die alten Blog-Einträge von der mittels Org-Mode erstellten Seite hier nach Octopress migriert. Im Archiv sind diese zu finden und die Links etc. sollten nun auch passend mit migriert worden sein.  Bei der Konverti...">
     <meta name="author"      content="Daniel Brunner">
-    <meta name="keywords"    content="">
+    <meta name="keywords"    content="Homepage, Org-Mode, Octopress">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="http://www.dbrunner.de/README.html">
-
-
+    <link rel="canonical" href="http://www.dbrunner.de/2014/12/17/migration-alter-blog-einträge/">
+    <link rel="next" href="/2014/11/21/wie-das-haus-von-bundesministerin-nahles-mauert/">
+    <link rel="prev" href="/2014/12/18/aus-der-entscheidung-des-bverfg-zur-erbschaftsteuer/">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -140,10 +140,62 @@
 
 
 
+          <article>
+  <header>
+    <h1>Migration alter Blog-Einträge</h1>
+    <p class='date-and-tags'>
+<time datetime="2014-12-17" pubdate="true">2014-12-17</time> :: <span class="tags"><a href="/tags/Homepage.html">Homepage</a>, <a href="/tags/Org-Mode.html">Org-Mode</a>, <a href="/tags/Octopress.html">Octopress</a></span></p>
+  </header>
 
-<h1 id="heimseite-daniel-brunner">Heimseite Daniel Brunner</h1>
+<p>Es kamen lange Winterabende und ich habe die alten Blog-Einträge von der mittels Org-Mode erstellten Seite hier nach Octopress migriert. Im Archiv sind diese zu finden und die Links etc. sollten nun auch passend mit migriert worden sein.</p>
 
-<p>Dies ist meine Heimseite; viel Spaß damit.</p>
+<p>Bei der Konvertierung habe ich ein Programm kennengelernt, das mir sehr geholfen hat: <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>. Das ist ein Konverter, der Text- und Markupdateien hin und her konvertieren kann. Dabei beherrscht er eine ganze Reihe von Formaten. Insbesondere kann er das Org-Mode-Format (das ich für viele Dinge verwende) ebenso wie LaTeX und Markdown (daneben aber auch noch eine Legion von Formaten).</p>
+
+<p>Da mein Hauptdateiformat ohnehin &ldquo;Textdateien&rdquo; sind (&ldquo;Never trust a file that isn&rsquo;t ASCII&rdquo;) ist das sehr praktisch, um zwischen verschiedenen Markup-Formaten hin und her zu springen.</p>
+
+<p>Für die Migration meine Blog-Einträge lief dies wie folgt: Ich hatte die in der alten Homepage mit Org-Mode und Org-Jekyll erstellt. Dabei hatte das Org-Jekyll-Modul entsprechende HTML-Dateien mit einem YAML-Header erzeugt. Mittels Pandoc konnte ich die nun wieder nach Markdown konvertieren, habe die YAML-Header ein wenig angepasst, Kategorien aktualisiert und noch mal das Markup zwecks Zeilenumbrüche, Fußnoten und Links geprüft und leicht angepasst. Insgesamt sehr schnell bewältigbar.</p>
+
+<p>Dieser ganze Zoo rund um Markdown und andere ähnliche Formate ist zwar manchmal ein bisschen unübersichtlich, aber mir gefällt das sehr gut, dass man mit wenig Markup schön Textdateien strukturieren kann und dann mit Pandoc auch gut hin und her konvertieren kann.</p>
+  <footer>
+    <script type="text/javascript">
+      !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;
+              js.src="//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js,fjs);
+          }
+      }(document,"script","twitter-wjs");
+    </script>
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-url="http://www.dbrunner.de/2014/12/17/migration-alter-blog-einträge/"
+       data-dnt="true">
+      "Tweet"</a>
+    <!-- <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+         <g:plusone size="medium" href="http://www.dbrunner.de/2014/12/17/migration-alter-blog-einträge/"></g:plusone> -->
+    <!-- <script type="text/javascript">
+           var disqus_shortname = 'shortname';
+           (function() {
+               var dsq = document.createElement('script');
+               dsq.type = 'text/javascript';
+               dsq.async = true;
+               dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+           })();
+         </script>
+         <div id="disqus_thread"></div> -->
+    <ul class="pager">
+    <li class="previous">
+      <a href="/2014/12/18/aus-der-entscheidung-des-bverfg-zur-erbschaftsteuer/">&larr; <em>Aus der Entscheidung des BVerfG zur Erbschaftsteuer</em></a>
+    </li>
+    <li class="next">
+      <a href="/2014/11/21/wie-das-haus-von-bundesministerin-nahles-mauert/"><em>Wie das Haus von Bundesministerin Nahles mauert</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
         </div>
       </div>
       <footer>

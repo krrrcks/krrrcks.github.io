@@ -3,14 +3,14 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Heimseite Daniel Brunner</title>
-    <meta name="description" content="Heimseite Daniel Brunner: Dies ist meine Heimseite; viel Spaß damit....">
+    <title>Using Racket Minimal and raco</title>
+    <meta name="description" content="I use Racket Minimal on my smart phone (this describes how to compile the run time for an ARM based system). It's is a very small installation of Racket (about 36 MB after installation). After installation one only needs to install the packages that are r...">
     <meta name="author"      content="Daniel Brunner">
-    <meta name="keywords"    content="">
+    <meta name="keywords"    content="IT, Lisp, Racket">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="http://www.dbrunner.de/README.html">
-
+    <link rel="canonical" href="http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco/">
+    <link rel="next" href="/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
@@ -140,10 +140,60 @@
 
 
 
+          <article>
+  <header>
+    <h1>Using Racket Minimal and raco</h1>
+    <p class='date-and-tags'>
+<time datetime="2016-01-12" pubdate="true">2016-01-12</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Racket.html">Racket</a></span></p>
+  </header>
 
-<h1 id="heimseite-daniel-brunner">Heimseite Daniel Brunner</h1>
+<p>I use Racket Minimal on my smart phone (<a href="../2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/">this</a> describes how to compile the run time for an ARM based system). It&rsquo;s is a very small installation of Racket (about 36 MB after installation). After installation one only needs to install the packages that are really neded. But this can be a bit tricky because a lot of packages want to install their documentation and other stuff and bring a whole bunch of files on your drive as dependencies.</p>
 
-<p>Dies ist meine Heimseite; viel Spaß damit.</p>
+<p>Some of the packages are divided up into a "-lib", "-doc" (and sometimes "-test") as laid out in the <a href="https://docs.racket-lang.org/pkg/getting-started.html#%28part._.Naming_and_.Designing_.Packages%29">documentation</a>. With these packages it&rsquo;s easier to only install the implementation.</p>
+
+<p>A small script of mine used only basic modules and relied on <code>rackunit</code> for the tests. On a mobile device the start up time of such a program can be  critical. Therefore it is wise to only require the needed packages and to have the source code being compiled to byte code. One could do this with <code>raco setup</code> (which is included in Minimal Racket) but I wanted to have <code>raco make</code> (which is not part of Minimal Racket) available.</p>
+
+<p>The commands of <code>raco</code> are added via a <code>raco-commands</code> variable in packages&rsquo; <code>info.rkt</code> file. I looked through the packages of my &ldquo;full install&rdquo; and found the package <code>compiler-lib</code> which adds some commands (<code>make</code>, <code>exe</code>, <code>pack</code>, <code>unpack</code>, <code>decompile</code>, <code>test</code>, <code>expand</code>, <code>read</code>, <code>distribute</code>, <code>demodularize</code>) to <a href="https://mirror.racket-lang.org/releases/6.3/doc/raco/index.html"><code>raco</code></a> and relies on only a few other packages. As a result the source and binary files need about 3.8 MB on my phone which is okay for me.</p>
+
+<p>To sum up: After a simple <code>raco pkg install compiler-lib</code> I could easily use <code>raco make</code> and <code>raco test</code> to play with my program on my phone.</p>
+  <footer>
+    <script type="text/javascript">
+      !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;
+              js.src="//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js,fjs);
+          }
+      }(document,"script","twitter-wjs");
+    </script>
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-url="http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco/"
+       data-dnt="true">
+      "Tweet"</a>
+    <!-- <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+         <g:plusone size="medium" href="http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco/"></g:plusone> -->
+    <!-- <script type="text/javascript">
+           var disqus_shortname = 'shortname';
+           (function() {
+               var dsq = document.createElement('script');
+               dsq.type = 'text/javascript';
+               dsq.async = true;
+               dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+           })();
+         </script>
+         <div id="disqus_thread"></div> -->
+    <ul class="pager">
+
+    <li class="next">
+      <a href="/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/"><em>I played with CHICKEN Scheme, Docker and Alpine Linux</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
         </div>
       </div>
       <footer>

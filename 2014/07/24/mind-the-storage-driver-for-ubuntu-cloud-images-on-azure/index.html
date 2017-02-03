@@ -3,15 +3,15 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Heimseite Daniel Brunner</title>
-    <meta name="description" content="Heimseite Daniel Brunner: Dies ist meine Heimseite; viel Spaß damit....">
+    <title>Mind the storage driver for Ubuntu cloud images (on Azure)</title>
+    <meta name="description" content="A few days ago I wanted to build Firefox OS' newest release for a friend. Because I did not wanted these GB of code, binaries etc. on my notebook I fired up an Ubuntu image on Microsoft Azure. I feared that at a certain point in the build process I may ha...">
     <meta name="author"      content="Daniel Brunner">
-    <meta name="keywords"    content="">
+    <meta name="keywords"    content="Azure, Docker, IT">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="http://www.dbrunner.de/README.html">
-
-
+    <link rel="canonical" href="http://www.dbrunner.de/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure/">
+    <link rel="next" href="/2014/07/24/datetime-conversion-can-be-tricky/">
+    <link rel="prev" href="/2014/10/05/aktenführung-beim-beitragsservice/">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -140,10 +140,84 @@
 
 
 
+          <article>
+  <header>
+    <h1>Mind the storage driver for Ubuntu cloud images (on Azure)</h1>
+    <p class='date-and-tags'>
+<time datetime="2014-07-24" pubdate="true">2014-07-24</time> :: <span class="tags"><a href="/tags/Azure.html">Azure</a>, <a href="/tags/Docker.html">Docker</a>, <a href="/tags/IT.html">IT</a></span></p>
+  </header>
 
-<h1 id="heimseite-daniel-brunner">Heimseite Daniel Brunner</h1>
+<p>A few days ago I wanted to build Firefox OS&rsquo; newest release for a friend. Because I did not wanted these GB of code, binaries etc. on my notebook I fired up an Ubuntu image on Microsoft Azure. I feared that at a certain point in the build process I may had to download everything to my local machine and therefore I installed Docker via a simple</p>
 
-<p>Dies ist meine Heimseite; viel Spaß damit.</p>
+<pre><code>sudo apt-get install docker.io</code></pre>
+
+<p>Then I started the build process as laid out on Mozilla&rsquo;s Developer Network. But, during downloading the source code (that&rsquo;s about 12 GB of Git repositories from Mozilla and Android), I got a &ldquo;no more space left on device&rdquo;. That was strange: I had a 100 GB volume attached to the VM and enough space and inodes left. After some searching I asked on the IRC channel and got a good hint: &ldquo;What&rsquo;s your storage driver?&rdquo;</p>
+
+<p>Well, I thought that it&rsquo;s AUFS; I wanted to add &ldquo;as usual&rdquo; because AUFS was available on my notebook from the beginning. But a <code>docker.io
+info</code> gave me:</p>
+
+<pre><code>$ sudo docker.io info
+Containers: 0
+Images: 0
+Storage Driver: devicemapper
+ Pool Name: docker-8:1-131188-pool
+ Data file: /var/lib/docker/devicemapper/devicemapper/data
+ Metadata file: /var/lib/docker/devicemapper/devicemapper/metadata
+ Data Space Used: 291.5 Mb
+ Data Space Total: 102400.0 Mb
+ Metadata Space Used: 0.7 Mb
+ Metadata Space Total: 2048.0 Mb
+Execution Driver: native-0.1
+Kernel Version: 3.13.0-29-generic
+WARNING: No swap limit support</code></pre>
+
+<p>I then learned that somehow the DeviceMapper driver only allows a certain amount of diffs and I reached that amount with my build process. (Maybe it&rsquo;s possible to relax that restriction but I do not know how.)</p>
+
+<p>I learned as well that the Ubuntu cloud image that is provided by Microsoft Azure doesn&rsquo;t have AUFS support. Therefore Docker uses the DeviceMapper storage driver instead. After I installed the AUFS support I could export the images, change the storage driver and import the images again.</p>
+
+<p>It would be nice seeing the Docker documentation being more detailed on those storage drivers.</p>
+
+<p><strong>(Update 2014&ndash;10&ndash;23)</strong> Thanks to  <a href="http://blog.iron.io/2014/10/docker-in-production-what-weve-learned.html">this blog post from Iron.io</a>  I found some documentation of the devicemapper storage driver. It is  located in the  <a href="https://github.com/docker/docker/tree/master/daemon/graphdriver/devmapper">Repository</a>.</p>
+  <footer>
+    <script type="text/javascript">
+      !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;
+              js.src="//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js,fjs);
+          }
+      }(document,"script","twitter-wjs");
+    </script>
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-url="http://www.dbrunner.de/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure/"
+       data-dnt="true">
+      "Tweet"</a>
+    <!-- <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+         <g:plusone size="medium" href="http://www.dbrunner.de/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure/"></g:plusone> -->
+    <!-- <script type="text/javascript">
+           var disqus_shortname = 'shortname';
+           (function() {
+               var dsq = document.createElement('script');
+               dsq.type = 'text/javascript';
+               dsq.async = true;
+               dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+           })();
+         </script>
+         <div id="disqus_thread"></div> -->
+    <ul class="pager">
+    <li class="previous">
+      <a href="/2014/10/05/aktenführung-beim-beitragsservice/">&larr; <em>Aktenführung beim Beitragsservice</em></a>
+    </li>
+    <li class="next">
+      <a href="/2014/07/24/datetime-conversion-can-be-tricky/"><em>DateTime conversion can be tricky</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
         </div>
       </div>
       <footer>

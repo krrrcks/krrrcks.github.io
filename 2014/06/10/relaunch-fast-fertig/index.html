@@ -3,15 +3,15 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Heimseite Daniel Brunner</title>
-    <meta name="description" content="Heimseite Daniel Brunner: Dies ist meine Heimseite; viel Spaß damit....">
+    <title>Relaunch fast fertig</title>
+    <meta name="description" content="So, nach einigem Gefummel mit Ruby und Octopress und den Weiterleitungsmöglichkeiten meines Hosters ist die Sache wohl bald so am laufen, wie ich mir das vorstelle. Es fehlt noch ein wenig das Eindeutschen der Octopress-Texte und vielleicht so eine Katego...">
     <meta name="author"      content="Daniel Brunner">
-    <meta name="keywords"    content="">
+    <meta name="keywords"    content="Homepage, Octopress">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="http://www.dbrunner.de/README.html">
-
-
+    <link rel="canonical" href="http://www.dbrunner.de/2014/06/10/relaunch-fast-fertig/">
+    <link rel="next" href="/2014/06/06/archiv-mit-der-alten-homepage/">
+    <link rel="prev" href="/2014/06/10/unicode-support-for-octopress/">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -140,10 +140,58 @@
 
 
 
+          <article>
+  <header>
+    <h1>Relaunch fast fertig</h1>
+    <p class='date-and-tags'>
+<time datetime="2014-06-10" pubdate="true">2014-06-10</time> :: <span class="tags"><a href="/tags/Homepage.html">Homepage</a>, <a href="/tags/Octopress.html">Octopress</a></span></p>
+  </header>
 
-<h1 id="heimseite-daniel-brunner">Heimseite Daniel Brunner</h1>
+<p>So, nach einigem Gefummel mit Ruby und Octopress und den Weiterleitungsmöglichkeiten meines Hosters ist die Sache wohl bald so am laufen, wie ich mir das vorstelle. Es fehlt noch ein wenig das Eindeutschen der Octopress-Texte und vielleicht so eine Kategorien-Liste rechts.</p>
 
-<p>Dies ist meine Heimseite; viel Spaß damit.</p>
+<p>Ansonsten habe ich, um der &ldquo;Gem-Hölle&rdquo; zu entgehen, das Octopress in einen Docker-Container gepackt; hier ist ein <a href="/blog/2014/06/10/unicode-support-for-octopress/">Link</a> zu dem verwendeten <code>Dockerfile</code>. Ich habe es dann auch so gemacht, dass ich das <code>/opt/octopress</code>-Verzeichnis auf den Host-Rechner verschoben habe und in den Container als <em>Volume</em> hineinpacke. So kann ich auf dem Host-Rechner ganz bequem mit dem Emacs die Files editieren und verwende den Container nur noch für die Erstellung, das &ldquo;Preview&rdquo; und für das Hochladen.</p>
+
+<p>Die &ldquo;preview&rdquo;-Funktion ist übrigens ein wirklich nettes Features: Die kann man derart nutzen, dass ein Webserver den aktuellen Stand lokal ausliefert. Dabei beobachtet der Dienst, ob sich Dateien ändern und erstellt unmittelbar wieder die HTML-Seiten. So kann man bequem im Editor das Markdown bearbeiten und im Browser daneben das fertige Ergebnis beurteilen.</p>
+  <footer>
+    <script type="text/javascript">
+      !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;
+              js.src="//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js,fjs);
+          }
+      }(document,"script","twitter-wjs");
+    </script>
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-url="http://www.dbrunner.de/2014/06/10/relaunch-fast-fertig/"
+       data-dnt="true">
+      "Tweet"</a>
+    <!-- <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+         <g:plusone size="medium" href="http://www.dbrunner.de/2014/06/10/relaunch-fast-fertig/"></g:plusone> -->
+    <!-- <script type="text/javascript">
+           var disqus_shortname = 'shortname';
+           (function() {
+               var dsq = document.createElement('script');
+               dsq.type = 'text/javascript';
+               dsq.async = true;
+               dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+           })();
+         </script>
+         <div id="disqus_thread"></div> -->
+    <ul class="pager">
+    <li class="previous">
+      <a href="/2014/06/10/unicode-support-for-octopress/">&larr; <em>Unicode support for Octopress</em></a>
+    </li>
+    <li class="next">
+      <a href="/2014/06/06/archiv-mit-der-alten-homepage/"><em>Archiv mit der alten Homepage</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
         </div>
       </div>
       <footer>

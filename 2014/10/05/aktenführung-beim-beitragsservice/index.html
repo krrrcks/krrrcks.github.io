@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Aktenführung beim Beitragsservice</title>
+    <meta name="description" content="Im Jahr 2012 habe ich mich rechtmäßig (was allerdings auch etwas Überzeugungsarbeit kostete) von der damaligen GEZ abgemeldet und die neue Beitragsnummer mitgeteilt, über die meine damalige Rundfunkgebühr verbucht werden sollte. Der GEZ war meine alte Bei...">
+    <meta name="author"      content="Daniel Brunner">
+    <meta name="keywords"    content="Allerlei, Behörden">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon"      href="/favicon.ico">
+    <link rel="canonical" href="http://www.dbrunner.de/2014/10/05/aktenführung-beim-beitragsservice/">
+    <link rel="next" href="/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure/">
+    <link rel="prev" href="/2014/10/05/erfahrungen-mit-docker/">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <!-- Feeds -->
+    <link rel="alternate" type="application/atom+xml"
+          href="/feeds/all.atom.xml" title="Atom Feed">
+    <link rel="alternate" type="application/rss+xml"
+          href="/feeds/all.rss.xml" title="RSS Feed">
+    <!-- JS -->
+    <!-- <script type="text/javascript">
+           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+           ga('create', 'UA-xxxxx', 'auto');
+           ga('send', 'pageview');
+         </script> -->
+  </head>
+  <body>
+    <!-- A standard Twitter Bootstrap nav bar -->
+    <header class="navbar navbar-default navbar-inverse"
+            role="banner">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle"
+                  data-toggle="collapse"
+                  data-target=".our-nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a href="/index.html" class="navbar-brand">Daniel Brunner</a>
+        </div>
+        <div class="collapse navbar-collapse our-nav-collapse"
+             role="navigation">
+          <ul class="nav navbar-nav">
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Tags <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/index.html">All Posts</a></li>
+
+<li><a href="/tags/Allerlei.html">Allerlei</a></li>
+
+<li><a href="/tags/Ausgehen.html">Ausgehen</a></li>
+
+<li><a href="/tags/AWS.html">AWS</a></li>
+
+<li><a href="/tags/Azure.html">Azure</a></li>
+
+<li><a href="/tags/Behörden.html">Behörden</a></li>
+
+<li><a href="/tags/Bücher.html">Bücher</a></li>
+
+<li><a href="/tags/CHICKEN.html">CHICKEN</a></li>
+
+<li><a href="/tags/Common-Lisp.html">Common Lisp</a></li>
+
+<li><a href="/tags/Docker.html">Docker</a></li>
+
+<li><a href="/tags/Gesellschaft.html">Gesellschaft</a></li>
+
+<li><a href="/tags/Homepage.html">Homepage</a></li>
+
+<li><a href="/tags/IT.html">IT</a></li>
+
+<li><a href="/tags/JavaScript.html">JavaScript</a></li>
+
+<li><a href="/tags/Linux.html">Linux</a></li>
+
+<li><a href="/tags/Lisp.html">Lisp</a></li>
+
+<li><a href="/tags/Medien.html">Medien</a></li>
+
+<li><a href="/tags/MorgenGrauen.html">MorgenGrauen</a></li>
+
+<li><a href="/tags/Octopress.html">Octopress</a></li>
+
+<li><a href="/tags/Org-Mode.html">Org-Mode</a></li>
+
+<li><a href="/tags/Politik.html">Politik</a></li>
+
+<li><a href="/tags/R.html">R</a></li>
+
+<li><a href="/tags/Racket.html">Racket</a></li>
+
+<li><a href="/tags/Reisen.html">Reisen</a></li>
+
+<li><a href="/tags/S3.html">S3</a></li>
+
+<li><a href="/tags/Scheme.html">Scheme</a></li>
+
+<li><a href="/tags/Statistik.html">Statistik</a></li>
+
+<li><a href="/tags/Steuern.html">Steuern</a></li>
+
+<li><a href="/tags/Veranstaltungen.html">Veranstaltungen</a></li>
+
+<li><a href="/tags/Wirtschaft.html">Wirtschaft</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/ueber/index.html">Über mich</a>
+            </li> 
+            <li>
+              <a href="/impressum/index.html">Impressum</a>
+            </li> 
+            <li><a href="/feeds/all.atom.xml">Atom</a></li>
+            <li><a href="/feeds/all.rss.xml">RSS</a></li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+
+        <!-- Main column -->
+        <div id="content" class="col-md-12">
+
+<!--           -->
+
+
+
+          <article>
+  <header>
+    <h1>Aktenführung beim Beitragsservice</h1>
+    <p class='date-and-tags'>
+<time datetime="2014-10-05" pubdate="true">2014-10-05</time> :: <span class="tags"><a href="/tags/Allerlei.html">Allerlei</a>, <a href="/tags/Behörden.html">Behörden</a></span></p>
+  </header>
+
+<p>Im Jahr 2012 habe ich mich rechtmäßig (was allerdings auch etwas Überzeugungsarbeit kostete) von der damaligen GEZ abgemeldet und die neue Beitragsnummer mitgeteilt, über die meine damalige Rundfunkgebühr verbucht werden sollte. Der GEZ war meine alte Beitragsnummer, die neue Beitragsnummer sowie meine Anschrift bekannt. Soweit so gut, besondere Veränderungen sind in der Zwischenzeit nicht eingetreten.</p>
+
+<p>Am <strong>17. April 2014</strong> erreicht mich ein Schreiben des Beitragsservices. Sie schreiben dort:</p>
+
+<blockquote>
+ <p>Auf Basis gesetzlicher Bestimmungen haben wir die Adressdaten der Einwohnermeldeämter mit den bei uns angemeldeten Beitragszahlern abgeglichen. Unter Ihrem Namen konnten wir für diese Wohnung kein Beitragskonto finden.</p></blockquote>
+
+<p>Oh! Das ist interessant: Sie kannten meinen Namen und Anschrift, schafften es aber dennoch nicht, das mit dem damaligen Vorgang zusammenzubringen? Recht schwaches Bild für so eine Institution, die doch so professionell mit Adressdaten umzugehen weiß.</p>
+
+<p>Ich beschloss, den Beitragsservice etwas zappeln zu lassen. Meine Antwort vom <strong>24. April 2014</strong> war daher entsprechend kryptisch:</p>
+
+<blockquote>
+ <p>Ich verweise auf mein Schreiben vom 24. April 2012 an die seinerzeitige Gebühreneinzugszentrale, die Antwort hierauf vom 10. Mai 2012 und mein Schreiben vom 16. Mai 2012 mit dem Aktenzeichen (&hellip;). Am seinerzeitigen Sacheverhalt hat sich nichts geändert. Demgemäß wird ein Rundfunkbeitrag für die von mir bewohnte Wohnung entrichtet und der Rundfunkbeitrag wird auch regelmäßig abgebucht.</p></blockquote>
+
+<p>Nun war ich gespannt, ob sie es mit etwas Mühe nicht doch hinbekommen, den Vorgang von damals wieder zu finden und ihren aktuellen Vorgang abzuschließen. Nach der Beitragsservice-Bedenkzeit von acht Wochen (ich meine mich zu erinnern, dass die GEZ es meistens in sechs Wochen geschafft hatte, eine Antwort zu schreiben), kam nun mit Schreiben vom <strong>26. Juni 2014</strong> eine erneute Bitte um Mitteilung der Beitragsnummer:</p>
+
+<blockquote>
+ <p>Gerne bearbeiten wir Ihre Angaben. Hierfür benötigen wir jedoch noch die Beitragsnummer, unter der die Wohnung angemeldet ist. Teilen Sie uns diese bitte auf dem Antwortbogen mit.</p></blockquote>
+
+<p>Alternativ können sie das wohl auch aus der Bankverbindung, früheren Anschriften, früheren Namen etc. herausfinden. Warum jedoch nicht über meine Anschrift und mein damaliges Schreiben? Ach ja, die üblichen Daumenschrauben wurden dem Schreiben noch hinzugefügt:</p>
+
+<blockquote>
+ <p>Sollten Sie uns nicht innerhalb der Frist (von vier Wochen, D.B.) gehen wir davon aus, dass eine Anmeldung für diese Wohnung erforderlich ist.</p></blockquote>
+
+<p>Ahja, der Beitragsservice braucht acht Wochen um nach der Beitragsnummer zu fragen, ich soll aber in vier Wochen antworten?</p>
+
+<p>Nun ging mit das Porto zu sehr ins Geld und ich wechselte auf E-Mails. Am <strong>7. Juli 2014</strong> teilte ich dem Beitragsservice noch mal alles mit: Neue Wohnung, neue Beitragsnummer etc. Und dass Sie das ja alles seit dem Jahr 2012 schon wüssten. Ich ermunterte den Beitragsservice, doch einfach noch mal einen Adressabgleich durchzuführen:</p>
+
+<blockquote>
+ <p>Ich bin daher etwas verwundert, dass ich nun schon wieder über einen bei Ihnen bekannten und aktenkundigen Sachverhalt erneut Auskunft erteilen soll. Denn die seinerzeit mitgeteilten Daten mussten doch irgendwie mir und meiner Anschrift (die sich ja auch nicht geändert hat) zugeordnet worden sein. Ich bin zuversichtlich, es ist Ihnen ein Leichtes, aufgrund obiger Informationen und Ihnen bereits vor zwei Jahren mitgeteilten Sachverhaltes Ihren Vorgang abschließen zu können.</p></blockquote>
+
+<p>Nun ging es Schlag auf Schlag, denn völlig unerwartet antwortete der Beitragsservice bereits am <strong>22. Juli 2014</strong>. Und nun das erste Eingeständnis:</p>
+
+<blockquote>
+ <p>Sie teilen mit, dass Sie bereits in 05.2012 mitgeteilt haben, (&hellip;)  Dieses Schreiben liegt uns leider nicht mehr vor, so dass wir auf dessen Inhalt nicht zurückgreifen können.</p></blockquote>
+
+<p>Wie kann dies sein? Es handelt sich doch um eine Verwaltung? Die sollte doch ihre Aktenführung in Ordnung halten können. In meiner E-Mail vom <strong>28. Juli 2014</strong> erlöste ich den Beitragsservice und teilte ihnen die Beitragsnummer mit. Allerdings nicht ohne noch ein wenig meine Besorgnis über die Aktenführung zum Ausdruck zu bringen:</p>
+
+<blockquote>
+ <p>Des Weiteren sehen Sie mich überrascht, dass Sie auf ein Schreiben aus dem Jahr 2012 keinen Zugriff mehr haben. Da ich bisher davon ausging, dass sich die öffentlich-rechtliche Verwaltung in besonderem Maße durch die Schriftlichkeit und Aktenkundigkeit Ihres Handelns auszeichnet, ging ich davon aus, dass zu mir auch die Unterlagen und der Schriftverkehr verfügbar sind. Ich bitte Sie höflichst mir mitzuteilen, wie dieses Schriftgut verloren gegangen ist und wie sichergestellt ist, dass nicht alle zwei Jahre erneut eine Anfrage wie die vom 17.04.2014 (&hellip;) bei mir eingeht.</p></blockquote>
+
+<p>Nach vier Wochen erreichte mich dann die Auskunft am <strong>27. August 2014</strong>:</p>
+
+<blockquote>
+ <p>Sie fragen, warum wir keinen Zugang zu Ihrem Schreiben vom 24.04.2012 hatten. Der Schriftverkehr wurde unter Ihrem abgemeldeten Beitragskonto (&hellip;) sowie unter dem Beitragskonto (&hellip;) verfilmt. Da Sie nun den Bezug zur Beitragsnummer (&hellip;) hergestellt haben, können wir den Schriftverkehr einsehen. Wir hoffen, Ihnen mit diesen Erläuterungen weitergeholfen zu haben.</p></blockquote>
+
+<p>Ohja, das haben sie. Nachdem der Vorgang wohl beiderseits genügend Schmerzen verursacht hat, habe ich es dabei bewenden lassen.</p>
+  <footer>
+    <script type="text/javascript">
+      !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;
+              js.src="//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js,fjs);
+          }
+      }(document,"script","twitter-wjs");
+    </script>
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-url="http://www.dbrunner.de/2014/10/05/aktenführung-beim-beitragsservice/"
+       data-dnt="true">
+      "Tweet"</a>
+    <!-- <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+         <g:plusone size="medium" href="http://www.dbrunner.de/2014/10/05/aktenführung-beim-beitragsservice/"></g:plusone> -->
+    <!-- <script type="text/javascript">
+           var disqus_shortname = 'shortname';
+           (function() {
+               var dsq = document.createElement('script');
+               dsq.type = 'text/javascript';
+               dsq.async = true;
+               dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+           })();
+         </script>
+         <div id="disqus_thread"></div> -->
+    <ul class="pager">
+    <li class="previous">
+      <a href="/2014/10/05/erfahrungen-mit-docker/">&larr; <em>Erfahrungen mit Docker</em></a>
+    </li>
+    <li class="next">
+      <a href="/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure/"><em>Mind the storage driver for Ubuntu cloud images (on Azure)</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
+        </div>
+      </div>
+      <footer>
+        <hr />
+        <p><a href="https://twitter.com/krrrcks"
+              class="twitter-follow-button"
+              data-show-count="false"
+              data-lang="en">
+             "Follow krrrcks"
+           </a>
+           <script type="text/javascript">
+             !function(d,s,id){
+                 var js,fjs=d.getElementsByTagName(s)[0];
+                 if(!d.getElementById(id)){
+                     js=d.createElement(s);
+                     js.id=id;
+                     js.src="//platform.twitter.com/widgets.js";
+                     fjs.parentNode.insertBefore(js,fjs);
+                 }
+             }(document,"script","twitter-wjs");
+           </script></p>
+        <p>Site generated
+        by <a href="https://github.com/greghendershott/frog">Frog</a>,
+        the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
+        <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
+        <p><em>(C) Daniel Brunner</em>.</p>
+      </footer>
+    </div>
+    <!-- </body> JS -->
+    <script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  </body>
+</html>

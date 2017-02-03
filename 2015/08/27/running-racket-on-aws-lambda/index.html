@@ -3,15 +3,15 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Heimseite Daniel Brunner</title>
-    <meta name="description" content="Heimseite Daniel Brunner: Dies ist meine Heimseite; viel Spaß damit....">
+    <title>Running Racket on AWS Lambda</title>
+    <meta name="description" content="I started to use AWS for some projects recently. But I only use few of their services. From time to time I look into some of there services and wonder if they are useful for my tasks. I looked into AWS Lambda, &quot; a compute service that runs your code in re...">
     <meta name="author"      content="Daniel Brunner">
-    <meta name="keywords"    content="">
+    <meta name="keywords"    content="IT, Lisp, Racket, AWS">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="http://www.dbrunner.de/README.html">
-
-
+    <link rel="canonical" href="http://www.dbrunner.de/2015/08/27/running-racket-on-aws-lambda/">
+    <link rel="next" href="/2015/08/27/lisp-und-ich/">
+    <link rel="prev" href="/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -140,10 +140,91 @@
 
 
 
+          <article>
+  <header>
+    <h1>Running Racket on AWS Lambda</h1>
+    <p class='date-and-tags'>
+<time datetime="2015-08-27" pubdate="true">2015-08-27</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Racket.html">Racket</a>, <a href="/tags/AWS.html">AWS</a></span></p>
+  </header>
 
-<h1 id="heimseite-daniel-brunner">Heimseite Daniel Brunner</h1>
+<p>I started to use AWS for some projects recently. But I only use few of their services. From time to time I look into some of there services and wonder if they are useful for my tasks. I looked into <a href="http://aws.amazon.com/lambda">AWS Lambda</a>, "&hellip; a compute service that runs your code in response to events and automatically manages the compute resources for you, making it easy to build applications that respond quickly to new information." Nowadays these &ldquo;lambda functions&rdquo; could be written in NodeJS or Java. When I was looking for a roadmap of the supported languages I found an interesting <a href="http://blog.0x82.com/2014/11/24/aws-lambda-functions-in-go/">blog post</a> by <a href="https://www.twitter.com/rubenfonseca">Ruben Fonseca</a>. He explaind how to run Go code on AWS Lambda.</p>
 
-<p>Dies ist meine Heimseite; viel Spaß damit.</p>
+<p>I tried the same with <a href="http://racket-lang.org">Racket</a> and wrote a short Racket programm <code>test.rkt</code>:</p>
+
+<pre><code>#lang racket/base
+
+(display (format "Hello from Racket, args: ~a~%" (current-command-line-arguments)))</code></pre>
+
+<p>Then I used <code>raco</code> to create a binary <code>test</code>:</p>
+
+<pre><code>raco exe --orig-exe test.rkt</code></pre>
+
+<p>I took the NodeJS wrapper from Ruben&rsquo;s blog post and put it in a file <code>main.js</code>:</p>
+
+<pre><code>var child_process = require('child_process');
+
+exports.handler = function(event, context) {
+  var proc = child_process.spawn('./test', [ JSON.stringify(event) ], { stdio: 'inherit' });
+
+  proc.on('close', function(code) {
+    if(code !== 0) {
+      return context.done(new Error("Process exited with non-zero status code"));
+    }
+
+    context.done(null);
+  });
+}</code></pre>
+
+<p>Then I put both files in a zip archive, created a new AWS Lambda function, uploaded the zip file and invoked the function:</p>
+
+<div class="figure"><img src="/img/2015-08-27-racket-aws-lambda.png" alt="Invocation of AWS Lambda function" />
+ <p class="caption">Invocation of AWS Lambda function</p></div>
+
+<p>Fine!</p>
+
+<p>PS: Only question is: When is AWS Lambda coming to the region <code>eu-central-1</code>, located in Frankfurt?</p>
+
+<p><em>Upate (2016&ndash;03&ndash;15):</em> AWS Lambda is <a href="https://aws.amazon.com/de/about-aws/whats-new/2016/03/aws-lambda-available-in-eu-frankfurt/">now available</a> in the EU (Frankfurt)  region!</p>
+  <footer>
+    <script type="text/javascript">
+      !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;
+              js.src="//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js,fjs);
+          }
+      }(document,"script","twitter-wjs");
+    </script>
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-url="http://www.dbrunner.de/2015/08/27/running-racket-on-aws-lambda/"
+       data-dnt="true">
+      "Tweet"</a>
+    <!-- <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+         <g:plusone size="medium" href="http://www.dbrunner.de/2015/08/27/running-racket-on-aws-lambda/"></g:plusone> -->
+    <!-- <script type="text/javascript">
+           var disqus_shortname = 'shortname';
+           (function() {
+               var dsq = document.createElement('script');
+               dsq.type = 'text/javascript';
+               dsq.async = true;
+               dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+           })();
+         </script>
+         <div id="disqus_thread"></div> -->
+    <ul class="pager">
+    <li class="previous">
+      <a href="/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/">&larr; <em>How to run Racket on the Raspberry Pi 2</em></a>
+    </li>
+    <li class="next">
+      <a href="/2015/08/27/lisp-und-ich/"><em>Lisp und ich</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
         </div>
       </div>
       <footer>

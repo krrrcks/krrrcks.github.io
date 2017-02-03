@@ -3,15 +3,15 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Heimseite Daniel Brunner</title>
-    <meta name="description" content="Heimseite Daniel Brunner: Dies ist meine Heimseite; viel Spaß damit....">
+    <title>Unicode support for Octopress</title>
+    <meta name="description" content="Well, it seems Octopress/Jekyll would like to have a locale set for UTF-8 support. I followed this (text in German) hint and now my Dockerfile looks like this:  `# dockerfile for octopress FROM ubuntu:14.04 MAINTAINER krrrcks <krrrcks@krrrcks.net> ENV DEB...">
     <meta name="author"      content="Daniel Brunner">
-    <meta name="keywords"    content="">
+    <meta name="keywords"    content="Docker, Octopress, IT">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="http://www.dbrunner.de/README.html">
-
-
+    <link rel="canonical" href="http://www.dbrunner.de/2014/06/10/unicode-support-for-octopress/">
+    <link rel="next" href="/2014/06/10/relaunch-fast-fertig/">
+    <link rel="prev" href="/2014/07/06/i-learned-something-about-symbols-and-packages/">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -140,10 +140,90 @@
 
 
 
+          <article>
+  <header>
+    <h1>Unicode support for Octopress</h1>
+    <p class='date-and-tags'>
+<time datetime="2014-06-10" pubdate="true">2014-06-10</time> :: <span class="tags"><a href="/tags/Docker.html">Docker</a>, <a href="/tags/Octopress.html">Octopress</a>, <a href="/tags/IT.html">IT</a></span></p>
+  </header>
 
-<h1 id="heimseite-daniel-brunner">Heimseite Daniel Brunner</h1>
+<p>Well, it seems Octopress/Jekyll would like to have a locale set for UTF&ndash;8 support. I followed <a href="http://www.dominik-gaetjens.de/blog/2012/06/09/utf-8-in-octopress/">this (text in German)</a> hint and now my Dockerfile looks like this:</p>
 
-<p>Dies ist meine Heimseite; viel Spaß damit.</p>
+<pre><code># dockerfile for octopress
+
+FROM ubuntu:14.04
+MAINTAINER krrrcks &lt;krrrcks@krrrcks.net&gt;
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update; \
+  apt-get -q -y upgrade
+RUN /usr/sbin/locale-gen en_US.UTF-8; \
+  update-locale LANG=en_US.UTF-8
+RUN apt-get -q -y install git curl; \
+  apt-get clean
+RUN git clone git://github.com/imathis/octopress.git /opt/octopress
+RUN curl -L https://get.rvm.io | bash -s stable --ruby
+ENV HOME /root
+RUN echo "export LC_ALL=en_US.UTF-8" &gt;&gt; /root/.bashrc
+RUN echo "export LANG=en_US.UTF-8" &gt;&gt; /root/.bashrc
+RUN echo "source /usr/local/rvm/scripts/rvm" &gt;&gt; /root/.bashrc; 
+RUN /bin/bash -l -c "source /usr/local/rvm/scripts/rvm; \
+  rvm install 1.9.3; \
+  rvm use 1.9.3; \
+  rvm rubygems latest; \
+  cd /opt/octopress; \
+  gem install bundler; \
+  bundle install; \
+  rake install" 
+RUN echo "rvm use 1.9.3" &gt;&gt; /root/.bashrc
+
+WORKDIR /opt/octopress
+EXPOSE 4000
+CMD ["/bin/bash"] </code></pre>
+
+<p>After playing around with Docker and Octopress I put the whole <code>/opt/octopress</code> folder on my host machine and then  restarted the image with the <code>-v</code> flag. Therefore I can edit the files on my host machine with my favorite editor and use the container only for producing the HTML files, for preview and for publishing.</p>
+
+<p>The <code>rake preview</code> is a neat feature because the server always looks for changed files and produces the HTML files on the fly. That means I can edit the files in my editor and could see the resulting pages in a  browser nearly the same time.</p>
+  <footer>
+    <script type="text/javascript">
+      !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;
+              js.src="//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js,fjs);
+          }
+      }(document,"script","twitter-wjs");
+    </script>
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-url="http://www.dbrunner.de/2014/06/10/unicode-support-for-octopress/"
+       data-dnt="true">
+      "Tweet"</a>
+    <!-- <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+         <g:plusone size="medium" href="http://www.dbrunner.de/2014/06/10/unicode-support-for-octopress/"></g:plusone> -->
+    <!-- <script type="text/javascript">
+           var disqus_shortname = 'shortname';
+           (function() {
+               var dsq = document.createElement('script');
+               dsq.type = 'text/javascript';
+               dsq.async = true;
+               dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+           })();
+         </script>
+         <div id="disqus_thread"></div> -->
+    <ul class="pager">
+    <li class="previous">
+      <a href="/2014/07/06/i-learned-something-about-symbols-and-packages/">&larr; <em>I learned something about symbols and packages</em></a>
+    </li>
+    <li class="next">
+      <a href="/2014/06/10/relaunch-fast-fertig/"><em>Relaunch fast fertig</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
         </div>
       </div>
       <footer>

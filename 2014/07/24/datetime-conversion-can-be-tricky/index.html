@@ -3,15 +3,15 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Heimseite Daniel Brunner</title>
-    <meta name="description" content="Heimseite Daniel Brunner: Dies ist meine Heimseite; viel Spaß damit....">
+    <title>DateTime conversion can be tricky</title>
+    <meta name="description" content="I wrote a small Lisp application and a JavaScript client gets some data from that application. All time stamps are returned as &quot;Lisp&quot; time stamps, i.e. an integer with seconds where zero equals Jan 01 1900.  In the JS client the time stamp is then convert...">
     <meta name="author"      content="Daniel Brunner">
-    <meta name="keywords"    content="">
+    <meta name="keywords"    content="JavaScript, Common Lisp, IT">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="http://www.dbrunner.de/README.html">
-
-
+    <link rel="canonical" href="http://www.dbrunner.de/2014/07/24/datetime-conversion-can-be-tricky/">
+    <link rel="next" href="/2014/07/06/i-learned-something-about-symbols-and-packages/">
+    <link rel="prev" href="/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure/">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -140,10 +140,74 @@
 
 
 
+          <article>
+  <header>
+    <h1>DateTime conversion can be tricky</h1>
+    <p class='date-and-tags'>
+<time datetime="2014-07-24" pubdate="true">2014-07-24</time> :: <span class="tags"><a href="/tags/JavaScript.html">JavaScript</a>, <a href="/tags/Common-Lisp.html">Common Lisp</a>, <a href="/tags/IT.html">IT</a></span></p>
+  </header>
 
-<h1 id="heimseite-daniel-brunner">Heimseite Daniel Brunner</h1>
+<p>I wrote a small Lisp application and a JavaScript client gets some data from that application. All time stamps are returned as &ldquo;Lisp&rdquo; time stamps, i.e. an integer with seconds where zero equals Jan 01 1900.</p>
 
-<p>Dies ist meine Heimseite; viel Spaß damit.</p>
+<p>In the JS client the time stamp is then converted to JS time stamps, i.e. millisconds where zero equals Jan 01 1970.</p>
+
+<p>When testing the application I noticed that sometimes the displayed date is one day behind. For example in the data base I have Jan 05 1980 but in JavaScript I get a Jan 04 1980. But some other dates worked: A time stamp Jan 05 1970 was correctly converted to Jan 05 1970.</p>
+
+<p>I had a look into the JavaScript code and found:</p>
+
+<pre><code>convA = function(ts) {
+  tmp = new Date(ts*1000);
+  tmp.setFullYear(tmp.getFullYear() - 70);
+  return tmp.getTime();
+}</code></pre>
+
+<p>It&rsquo;s likely the developer thought: &ldquo;Well, it&rsquo;s millisecond instead of second. Therefore I multiply by 1,000. But then I am 70 years in the future and I have to substract 70 years and everything will be ok.&rdquo;</p>
+
+<p>After thinking a while I came to the conclusion: Of course not!</p>
+
+<p>The developer made the assumption that there are as many leap years between 1900 and 1970 as between <code>ts</code> and <code>ts+70</code>. Obviously that assumption does not hold for all time stamps. And therefore sometimes the resulting JavaScript date is one day behind.</p>
+
+<p>So a better solution would be to substract all seconds between 1900 and 1970 from <code>ts</code>, multiply by 1,000 and treat this as a JavaScript time stamp. Perhaps best would be to do the conversion in the Lisp process and only deliver a JavaScript-like time stamp.</p>
+  <footer>
+    <script type="text/javascript">
+      !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;
+              js.src="//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js,fjs);
+          }
+      }(document,"script","twitter-wjs");
+    </script>
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-url="http://www.dbrunner.de/2014/07/24/datetime-conversion-can-be-tricky/"
+       data-dnt="true">
+      "Tweet"</a>
+    <!-- <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+         <g:plusone size="medium" href="http://www.dbrunner.de/2014/07/24/datetime-conversion-can-be-tricky/"></g:plusone> -->
+    <!-- <script type="text/javascript">
+           var disqus_shortname = 'shortname';
+           (function() {
+               var dsq = document.createElement('script');
+               dsq.type = 'text/javascript';
+               dsq.async = true;
+               dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+           })();
+         </script>
+         <div id="disqus_thread"></div> -->
+    <ul class="pager">
+    <li class="previous">
+      <a href="/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure/">&larr; <em>Mind the storage driver for Ubuntu cloud images (on Azure)</em></a>
+    </li>
+    <li class="next">
+      <a href="/2014/07/06/i-learned-something-about-symbols-and-packages/"><em>I learned something about symbols and packages</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
         </div>
       </div>
       <footer>

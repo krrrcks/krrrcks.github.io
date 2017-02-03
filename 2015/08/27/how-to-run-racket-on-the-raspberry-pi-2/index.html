@@ -3,15 +3,15 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Heimseite Daniel Brunner</title>
-    <meta name="description" content="Heimseite Daniel Brunner: Dies ist meine Heimseite; viel Spaß damit....">
+    <title>How to run Racket on the Raspberry Pi 2</title>
+    <meta name="description" content="I got a Raspberry Pi 2 Model B to play with. I used Raspbian image as operating system. I was wondering how difficult it is to get Racket running on the Raspberry Pi. I downloaded the Unix source + built packages tarball from Racket's homepage because I o...">
     <meta name="author"      content="Daniel Brunner">
-    <meta name="keywords"    content="">
+    <meta name="keywords"    content="IT, Lisp, Racket">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="http://www.dbrunner.de/README.html">
-
-
+    <link rel="canonical" href="http://www.dbrunner.de/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/">
+    <link rel="next" href="/2015/08/27/running-racket-on-aws-lambda/">
+    <link rel="prev" href="/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -140,10 +140,72 @@
 
 
 
+          <article>
+  <header>
+    <h1>How to run Racket on the Raspberry Pi 2</h1>
+    <p class='date-and-tags'>
+<time datetime="2015-08-27" pubdate="true">2015-08-27</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Racket.html">Racket</a></span></p>
+  </header>
 
-<h1 id="heimseite-daniel-brunner">Heimseite Daniel Brunner</h1>
+<p>I got a <a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi 2 Model B</a> to play with. I used Raspbian image as operating system. I was wondering how difficult it is to get Racket running on the Raspberry Pi. I downloaded the <a href="http://mirror.racket-lang.org/installers/6.2.1/racket-6.2.1-src-builtpkgs.tgz">Unix source + built packages</a> tarball from <a href="http://racket-lang.org">Racket&rsquo;s homepage</a> because I only wanted to compile the core of Racket. After unpacking the tarball I was suprised that the instructions were quite short:</p>
 
-<p>Dies ist meine Heimseite; viel Spaß damit.</p>
+<pre><code>From this directory (where the `configure' file is), run the following
+commands:
+
+  mkdir build
+  cd build
+  ../configure
+  make
+  make install</code></pre>
+
+<p>Between <code>make</code> and <code>make install</code> I had to wait for about 40 minutes but then everything was fine and I could even use DrRacket on the Raspberry Pi:</p>
+
+<div class="figure"><img src="/img/2015-08-27-racket-pi.png" alt="DrRacket on Raspberry Pi" />
+ <p class="caption">DrRacket on Raspberry Pi</p></div>
+
+<p>Very nice and easy to get Racket running on ARM.</p>
+
+<p>PS: Because the Raspberry Pi 2 Model B has an ARMv7 processor the binary runs on my Jolla smart phone as well.</p>
+  <footer>
+    <script type="text/javascript">
+      !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;
+              js.src="//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js,fjs);
+          }
+      }(document,"script","twitter-wjs");
+    </script>
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-url="http://www.dbrunner.de/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/"
+       data-dnt="true">
+      "Tweet"</a>
+    <!-- <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+         <g:plusone size="medium" href="http://www.dbrunner.de/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/"></g:plusone> -->
+    <!-- <script type="text/javascript">
+           var disqus_shortname = 'shortname';
+           (function() {
+               var dsq = document.createElement('script');
+               dsq.type = 'text/javascript';
+               dsq.async = true;
+               dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+           })();
+         </script>
+         <div id="disqus_thread"></div> -->
+    <ul class="pager">
+    <li class="previous">
+      <a href="/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/">&larr; <em>How to use GET Bucket location on Amazon S3 with Racket</em></a>
+    </li>
+    <li class="next">
+      <a href="/2015/08/27/running-racket-on-aws-lambda/"><em>Running Racket on AWS Lambda</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
         </div>
       </div>
       <footer>

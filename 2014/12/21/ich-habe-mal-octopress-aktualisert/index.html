@@ -3,15 +3,15 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Heimseite Daniel Brunner</title>
-    <meta name="description" content="Heimseite Daniel Brunner: Dies ist meine Heimseite; viel Spaß damit....">
+    <title>Ich habe mal Octopress aktualisert</title>
+    <meta name="description" content="Neulich fiel mir auf, dass die Suchfunktion, die auf Google basiert, nicht nur auf der eigenen Homepage, sondern im &quot;gesamten&quot; Suchindex von Google gesucht hat. Eben flatterte dieser Tweet mit Link zu einem Fix an mir vorbei und da hat sich wohl die API g...">
     <meta name="author"      content="Daniel Brunner">
-    <meta name="keywords"    content="">
+    <meta name="keywords"    content="Homepage, Octopress">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="http://www.dbrunner.de/README.html">
-
-
+    <link rel="canonical" href="http://www.dbrunner.de/2014/12/21/ich-habe-mal-octopress-aktualisert/">
+    <link rel="next" href="/2014/12/18/-neues-arbeitspapier/">
+    <link rel="prev" href="/2015/01/04/aus-zwei-mach-eins/">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
@@ -140,10 +140,78 @@
 
 
 
+          <article>
+  <header>
+    <h1>Ich habe mal Octopress aktualisert</h1>
+    <p class='date-and-tags'>
+<time datetime="2014-12-21" pubdate="true">2014-12-21</time> :: <span class="tags"><a href="/tags/Homepage.html">Homepage</a>, <a href="/tags/Octopress.html">Octopress</a></span></p>
+  </header>
 
-<h1 id="heimseite-daniel-brunner">Heimseite Daniel Brunner</h1>
+<p>Neulich fiel mir auf, dass die Suchfunktion, die auf Google basiert, nicht nur auf der eigenen Homepage, sondern im &ldquo;gesamten&rdquo; Suchindex von Google gesucht hat. Eben flatterte dieser <a href="https://twitter.com/octopress/status/546528904115404800">Tweet</a> mit <a href="https://github.com/imathis/octopress/commit/514ed5eb9f6bb91a6f3288febf3c2ba892a9b693">Link</a> zu einem Fix an mir vorbei und da hat sich wohl die API geändert.</p>
 
-<p>Dies ist meine Heimseite; viel Spaß damit.</p>
+<div class="figure"><img src="/img/2014-12-21-octopress.png" alt="Octopress-Tweet" />
+ <p class="caption">Octopress-Tweet</p></div>
+
+<p>Also habe ich mich einmal an den <a href="http://octopress.org/docs/updating/">Hinweisen</a> zum Aktualisieren von Octopress orientiert. Hierzu werden die folgenden Schritte vorgeschlagen:</p>
+
+<pre><code>git pull octopress master      # Get the latest Octopress
+bundle install                 # Keep gems updated
+rake update_source             # update the template's source
+rake update_style              # update the template's style</code></pre>
+
+<p>Soweit lief das auch. Es tauchten anschließend zwei Probleme auf:</p>
+
+<ol>
+ <li>
+  <p>Das <code>execjs</code> jammerte, dass ihm irgendwie eine  JavaScript-Bibliothek fehlte. Nach kurzer Recherche gab es die  Empfehlung, die Zeile <code>gem 'therubyracer'</code> in das <code>Gemfile</code>  aufzunehmen. Okay, das funktionierte schon einmal.</p></li>
+ <li>
+  <p>Bei den Feeds für die Kategorien jammerte das Octopress ein  ungültiges Layout an. In <code>category_feed.xml</code> stand in der Tat  <code>layout: nil</code>. Ich habe das auf <code>layout: page</code> geändert. Nun tat  auch dies.</p></li></ol>
+
+<p>Mit dem Update funktioniert nun auch das Such-Formular wieder.</p>
+
+<p><strong>Ergänzung:</strong> Ich lasse das Jekyll und Octopress in einem  <a href="/blog/2014/06/10/relaunch-fast-fertig/">Docker-Container</a> laufen und irgendwie bekam ich bei <code>rake preview</code>  meine Seite nicht mehr zu sehen. Da ich mich mit Ruby und den  Komponenten nicht so gut auskenne, weiß ich nicht, ob mein &ldquo;Fix&rdquo; so  gut ist: Ich habe im <code>Rakefile</code> den <code>rackup</code>-Aufruf um den  Parameter <code>-o 0.0.0.0</code> ergänzt. Dann bekam ich vom Host wieder eine  Verbindung zum Webserver im Octopress-Container.</p>
+
+<p><strong>Update vom 04. Januar 2014:</strong> Nach einem kurzen  <a href="https://twitter.com/Krrrcks/status/546667456128114688">Gespräch</a>  via Twitter habe ich mich entschieden, den eingebauten Server doch  wieder so zu belassen, wie es im <code>Rakefile</code> ursprünglich  stand. Statt dessen habe ich einfach in dem Docker-Container einen  <code>nginx</code> hinzuinstalliert, der dann mein <code>public</code>-Verzeichnis an den  Port 4000 ausliefert. So funktioniert es wieder prima: Ich starte  den <code>nginx</code> und lasse dann das <code>rake watch</code> laufen, um die Seiten  immer wieder neu zu erzeugen, wenn sich Dinge geändert haben.</p>
+  <footer>
+    <script type="text/javascript">
+      !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;
+              js.src="//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js,fjs);
+          }
+      }(document,"script","twitter-wjs");
+    </script>
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-url="http://www.dbrunner.de/2014/12/21/ich-habe-mal-octopress-aktualisert/"
+       data-dnt="true">
+      "Tweet"</a>
+    <!-- <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+         <g:plusone size="medium" href="http://www.dbrunner.de/2014/12/21/ich-habe-mal-octopress-aktualisert/"></g:plusone> -->
+    <!-- <script type="text/javascript">
+           var disqus_shortname = 'shortname';
+           (function() {
+               var dsq = document.createElement('script');
+               dsq.type = 'text/javascript';
+               dsq.async = true;
+               dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+           })();
+         </script>
+         <div id="disqus_thread"></div> -->
+    <ul class="pager">
+    <li class="previous">
+      <a href="/2015/01/04/aus-zwei-mach-eins/">&larr; <em>Aus zwei mach eins</em></a>
+    </li>
+    <li class="next">
+      <a href="/2014/12/18/-neues-arbeitspapier/"><em>&ldquo;Neues&rdquo; Arbeitspapier</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
         </div>
       </div>
       <footer>
