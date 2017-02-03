@@ -1,4 +1,6 @@
-# Kurzer Lebenslauf
+# Über mich
+
+## Kurzer Lebenslauf
 
 <img class="right" src="/img/daniel.jpg" title="Daniel">
 
@@ -11,7 +13,7 @@ ich im in den elterlichen
 *Software-Unternehmen ([Link](http://www.systemhaus-brunner.de) und [Link](http://www.brunner-software.de))* meine
 Arbeit aufgenommen.
 
-# Interessen Ökonomie 
+## Interessen Ökonomie 
 
 * Markt- und Wettbewerbstheorie
 * Evolutionsökonomik 
@@ -19,7 +21,7 @@ Arbeit aufgenommen.
 * Wohnungsmärkte
 * Genossenschaften
 
-# Interessen Technik
+## Interessen Technik
 
 * Linux, Container-Virtualisierung mit OpenVZ, Docker
 * TeX/LaTeX 

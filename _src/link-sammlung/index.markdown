@@ -1,13 +1,4 @@
----
-layout: page
-title: "Linksammlung zu alten Beiträgen"
-date: 2014-10-05 12:08
-comments: true
-sharing: true
-footer: true
-description: "Linksammlung der Beiträge der alten Org-Mode Homepage"
-keywords: "Links, Org-Mode, alte Beiträge"
----
+# Linksammlung der Beiträge der alten Org-Mode Homepage
 
 Nachdem einige der Links zu Beiträgen meiner alten Org-Mode-Seite
 nicht richtig funktionieren bzw. schwer zu finden sind, habe ich die

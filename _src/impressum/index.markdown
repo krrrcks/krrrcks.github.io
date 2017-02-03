@@ -1,5 +1,4 @@
-	Title: "Impressum"
-	Date: 2015-01-14 12:52
+# Impressum
 
 Dies ist mein kleines Blog. Ich zeichne hierfür auch presserechtlich verantwortlich.
 Ich bin wie folgt erreichbar:

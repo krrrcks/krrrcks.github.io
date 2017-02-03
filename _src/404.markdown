@@ -1,12 +1,4 @@
----
-layout: page
-title: "Fehler 404: Inhalt nicht gefunden"
-date: 2015-01-04 14:14
-comments: true
-sharing: true
-footer: true
-permalink: /404.html
----
+# 404: Nicht gefunden 
 
 Der gesuchte Inhalt wurde nicht gefunden. Ich würde mich sehr über
 eine Rückmeldung hierzu, beispielsweise als
