@@ -1,4 +1,4 @@
-	Title: "Using Racket Minimal and raco"
+	Title: Using Racket Minimal and raco
 	Date: 2016-01-12T10:55:43
 	Tags: IT, Lisp, Racket
 

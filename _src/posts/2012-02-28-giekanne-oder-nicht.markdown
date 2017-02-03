@@ -1,4 +1,4 @@
-	Title: Gießkann oder nicht?
+	Title: Gießkanne oder nicht?
 	Date: 2012-02-28T11:06:00
 	Tags: Wirtschaft
 

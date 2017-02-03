@@ -1,4 +1,4 @@
-	Title: "Postbank: Ein Lottoschein entspricht dem Wesen nach Bargeld"
+	Title: Postbank: Ein Lottoschein entspricht dem Wesen nach Bargeld
 	Date: 2015-03-09T11:59:34
 	Tags: DRAFT, Wirtschaft
 

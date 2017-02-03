@@ -1,4 +1,4 @@
-	Title: "3. Docker-Meetup in Frankfurt"
+	Title: 3. Docker-Meetup in Frankfurt
 	Date: 2015-01-18T20:05:35
 	Tags: IT, Docker, Veranstaltungen
 

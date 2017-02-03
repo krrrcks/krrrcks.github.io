@@ -1,4 +1,4 @@
-	Title: "Beschleunigung als soziales Phänomen"
+	Title: Beschleunigung als soziales Phänomen
 	Date: 2010-02-15T22:10:00
 	Tags: Gesellschaft
 

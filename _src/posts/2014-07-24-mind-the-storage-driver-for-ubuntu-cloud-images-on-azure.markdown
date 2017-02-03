@@ -1,4 +1,4 @@
-	Title: "Mind the storage driver for Ubuntu cloud images (on Azure)"
+	Title: Mind the storage driver for Ubuntu cloud images (on Azure)
 	Date: 2014-07-24T12:30:43
 	Tags: Azure, Docker, IT
 

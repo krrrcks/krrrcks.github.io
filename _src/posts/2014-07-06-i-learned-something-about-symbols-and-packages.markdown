@@ -1,6 +1,6 @@
-	Title: "I learned something about symbols and packages"
+	Title: I learned something about symbols and packages
 	Date: 2014-07-06T09:02:39
-	Tags: "Common Lisp", IT
+	Tags: Common Lisp, IT
 
 I am using Common Lisp for developing a web application. Several days
 ago a new part of this application didn't worked as supposed and I

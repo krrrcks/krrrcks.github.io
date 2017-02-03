@@ -1,4 +1,4 @@
-	Title: "Der Rundfunkrat des hr übt den Diskurs"
+	Title: Der Rundfunkrat des hr übt den Diskurs
 	Date: 2015-02-17T11:44:35
 	Tags: Medien, Wirtschaft
 

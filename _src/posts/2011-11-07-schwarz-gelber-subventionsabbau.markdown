@@ -1,6 +1,6 @@
-	Title: "Schwarz-gelber Subventionsabbau"
+	Title: Schwarz-gelber Subventionsabbau
 	Date: 2011-11-07T00:00:00
-	Tags: [Politik, Steuern]
+	Tags: Politik, Steuern
 
 *Kleine Vorbemerkung:* Im vergangenen Jahr hatte ich mich mehr zufällig
 als absichtlich mit dem Biersteuergesetz

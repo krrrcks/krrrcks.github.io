@@ -1,4 +1,4 @@
-	Title: "Kurze Anmerkung zum \"Mehr Brutto vom Netto\""
+	Title: Kurze Anmerkung zum "Mehr Brutto vom Netto"
 	Date: 2010-07-09T09:51:00
 	Tags: Politik
 

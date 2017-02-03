@@ -1,4 +1,4 @@
-	Title: "Umbau der Webseite und des Blogs"
+	Title: Umbau der Webseite und des Blogs
 	Date: 2011-10-15T00:00:00
 	Tags: Homepage
 

@@ -1,4 +1,4 @@
-	Title: "Nachtrag I zum E-Postbrief"
+	Title: Nachtrag I zum E-Postbrief
 	Date: 2010-07-26T10:32:00
 	Tags: IT
 

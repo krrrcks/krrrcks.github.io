@@ -1,4 +1,4 @@
-	Title: "Steuerliche Behandlung von Popcorn"
+	Title: Steuerliche Behandlung von Popcorn
 	Date: 2011-11-28T12:06:00
 	Tags: Steuern
 

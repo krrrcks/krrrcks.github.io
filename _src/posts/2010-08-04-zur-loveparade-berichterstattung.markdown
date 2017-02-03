@@ -1,6 +1,6 @@
-	Title: "Zur Loveparade-Berichterstattung"
+	Title: Zur Loveparade-Berichterstattung
 	Date: 2010-08-04T09:11:00
-	Tags: [Allerlei, Medien]
+	Tags: Allerlei, Medien
 
 Ich habe im Online-Angebot der [FAZ](http://www.faz.net) einen
 interessanten Artikel von [Stefan

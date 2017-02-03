@@ -1,4 +1,4 @@
-	Title: "Verrechnen leicht gemacht"
+	Title: Verrechnen leicht gemacht
 	Date: 2010-06-13T15:10:00
 	Tags: Statistik, IT, R
 

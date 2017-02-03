@@ -1,4 +1,4 @@
-	Title: "Aus zwei mach eins"
+	Title: Aus zwei mach eins
 	Date: 2015-01-04T16:16:08
 	Tags: Homepage, IT
 

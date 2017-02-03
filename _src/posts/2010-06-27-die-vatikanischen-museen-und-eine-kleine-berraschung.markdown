@@ -1,4 +1,4 @@
-	Title: "Die vatikanischen Museen und eine kleine Überraschung"
+	Title: Die vatikanischen Museen und eine kleine Überraschung
 	Date: 2010-06-27T12:16:00
 	Tags: Reisen
 

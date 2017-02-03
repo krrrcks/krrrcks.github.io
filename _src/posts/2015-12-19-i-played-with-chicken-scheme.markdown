@@ -1,4 +1,4 @@
-	Title: "I played with CHICKEN Scheme, Docker and Alpine Linux"
+	Title: I played with CHICKEN Scheme, Docker and Alpine Linux
 	Date: 2015-12-19T17:54:50
 	Tags: IT, Lisp, Scheme, CHICKEN, Docker, Linux
 

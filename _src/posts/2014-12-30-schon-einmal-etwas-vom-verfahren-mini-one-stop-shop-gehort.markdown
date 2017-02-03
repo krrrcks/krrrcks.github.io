@@ -1,6 +1,6 @@
-	Title: "Schon einmal etwas vom Verfahren Mini-One-Stop-Shop gehört?"
+	Title: Schon einmal etwas vom Verfahren Mini-One-Stop-Shop gehört?
 	Date: 2014-12-23T14:58:55
-    Tags: DRAFT, "Steuern"
+    Tags: DRAFT, Steuern
 
 Freundlicherweise wies das Bundesministerium der Finanzen noch in
 einem Tweet darauf hin, dass sich im Jahr 2015 das eine oder andere

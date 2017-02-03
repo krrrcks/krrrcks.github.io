@@ -1,4 +1,4 @@
-	Title: "Ein Blick auf das neue Mueseum MAXXI in Rom"
+	Title: Ein Blick auf das neue Mueseum MAXXI in Rom
 	Date: 2010-06-11T14:59:00
 	Tags: Reisen
 

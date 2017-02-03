@@ -1,4 +1,4 @@
-	Title: "Zur Diskussion um ständige und nicht ständige Mitglieder im UN-Sicherheitsrat"
+	Title: Zur Diskussion um ständige und nicht ständige Mitglieder im UN-Sicherheitsrat
 	Date: 2010-07-22T17:06:00
 	Tags: Politik
 

@@ -1,4 +1,4 @@
-	Title: "Zu den negativen Zinsen"
+	Title: Zu den negativen Zinsen
 	Date: 2012-01-10T19:03:00
 	Tags: Wirtschaft
 

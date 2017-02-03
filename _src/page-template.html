@@ -25,7 +25,7 @@
     <link rel="alternate" type="application/rss+xml"
           href="@|rss-feed-uri|" title="RSS Feed">
     <!-- JS -->
-    @google-universal-analytics["UA-xxxxx"]
+    <!-- @google-universal-analytics["UA-xxxxx"] -->
   </head>
   <body>
     <!-- A standard Twitter Bootstrap nav bar -->
@@ -41,7 +41,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a href="@|uri-prefix|/index.html" class="navbar-brand">My Blog Brand</a>
+          <a href="@|uri-prefix|/index.html" class="navbar-brand">Daniel Brunner</a>
         </div>
         <div class="collapse navbar-collapse our-nav-collapse"
              role="navigation">
@@ -62,7 +62,8 @@
                 @|tags-list-items|
               </ul>
             </li>
-            @ni[(string-append uri-prefix "/About.html") "About"]
+            @ni[(string-append uri-prefix "/ueber/index.html") "Über mich"]
+            @ni[(string-append uri-prefix "/impressum/index.html") "Impressum"]
             <li><a href="@|atom-feed-uri|">Atom</a></li>
             <li><a href="@|rss-feed-uri|">RSS</a></li>
           </ul>
@@ -78,14 +79,14 @@
         <div id="content" class="col-md-12">
           @;{ To put something only on the home page, check for
               @uri-path being "/index.html" }
-          @(when (string-ci=? uri-path
+<!--          @(when (string-ci=? uri-path
                               (string-append uri-prefix
                                              "/index.html"))
             @list{
               <h1>Welcome</h1>
               <p>Here is some text that only goes on the home page,
                 because <code>@"@"uri-path</code> is
-                <code>/index.html</code>.</p> })
+                <code>/index.html</code>.</p> }) -->
           @;{ Index pages for posts have @tag that's not #f }
           @(when tag
             @list{<h1>Posts tagged <em>@|tag|</em></h1>})
@@ -95,12 +96,12 @@
       </div>
       <footer>
         <hr />
-        <p>@twitter-follow-button["racketlang" "Follow RacketLang"]</p>
+        <p>@twitter-follow-button["krrrcks" "Follow krrrcks"]</p>
         <p>Site generated
         by <a href="https://github.com/greghendershott/frog">Frog</a>,
         the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
         <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
-        <p><em>Your legal notice here</em>.</p>
+        <p><em>(C) Daniel Brunner</em>.</p>
       </footer>
     </div>
     <!-- </body> JS -->

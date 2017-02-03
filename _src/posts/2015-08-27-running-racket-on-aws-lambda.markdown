@@ -1,4 +1,4 @@
-	Title: "Running Racket on AWS Lambda"
+	Title: Running Racket on AWS Lambda
 	Date: 2015-08-27T12:46:57
 	Tags: IT, Lisp, Racket, AWS
 

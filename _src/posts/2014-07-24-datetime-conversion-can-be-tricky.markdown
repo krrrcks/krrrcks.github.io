@@ -1,6 +1,6 @@
-	Title: "DateTime conversion can be tricky"
+	Title: DateTime conversion can be tricky
 	Date: 2014-07-24T09:41:36
-	Tags: JavaScript, "Common Lisp", IT
+	Tags: JavaScript, Common Lisp, IT
 
 I wrote a small Lisp application and a JavaScript client gets some
 data from that application. All time stamps are returned as "Lisp"

@@ -1,4 +1,4 @@
-	Title: "Wir testen Stress"
+	Title: Wir testen Stress
 	Date: 2011-12-16T12:13:00
 	Tags: Allerlei
 

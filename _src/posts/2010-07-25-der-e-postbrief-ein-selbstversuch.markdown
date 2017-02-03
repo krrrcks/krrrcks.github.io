@@ -1,4 +1,4 @@
-	Title: "Der E-Postbrief, ein Selbstversuch"
+	Title: Der E-Postbrief, ein Selbstversuch
 	Date: 2010-07-25T23:57:00
 	Tags: IT
 

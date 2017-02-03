@@ -1,4 +1,4 @@
-	Title: "Ein Relaunch"
+	Title: Ein Relaunch
 	Date: 2014-06-06T15:48:31
 	Tags: Homepage, Octopress
 

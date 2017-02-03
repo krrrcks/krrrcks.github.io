@@ -1,4 +1,4 @@
-	Title: "Eine verschwurbelte Stellenausschreibung"
+	Title: Eine verschwurbelte Stellenausschreibung
 	Date: 2010-03-21T22:10:00
 	Tags: Allerlei
 

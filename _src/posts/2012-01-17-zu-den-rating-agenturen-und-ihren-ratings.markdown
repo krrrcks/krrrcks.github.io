@@ -1,4 +1,4 @@
-	Title: "Zu den Rating-Agenturen und ihren Ratings"
+	Title: Zu den Rating-Agenturen und ihren Ratings
 	Date: 2012-01-17T12:24:00
 	Tags: Wirtschaft
 

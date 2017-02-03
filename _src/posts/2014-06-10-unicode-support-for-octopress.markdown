@@ -1,4 +1,4 @@
-	Title: "Unicode support for Octopress"
+	Title: Unicode support for Octopress
 	Date: 2014-06-10T09:26:22
 	Tags: Docker, Octopress, IT
 

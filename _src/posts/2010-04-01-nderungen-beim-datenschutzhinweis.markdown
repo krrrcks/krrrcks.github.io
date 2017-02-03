@@ -1,4 +1,4 @@
-	Title: "Änderungen beim Datenschutzhinweis"
+	Title: Änderungen beim Datenschutzhinweis
 	Date: 2010-04-01T00:00:00
 	Tags: Homepage
 

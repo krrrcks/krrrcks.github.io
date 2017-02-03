@@ -1,4 +1,4 @@
-	Title: "Erfahrungen mit Docker"
+	Title: Erfahrungen mit Docker
 	Date: 2014-10-05T11:29:43
 	Tags: Docker
 

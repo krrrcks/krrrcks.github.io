@@ -1,4 +1,4 @@
-	Title: "Referendum in Griechenland"
+	Title: Referendum in Griechenland
 	Date: 2011-11-02T11:21:00
 	Tags: Wirtschaft
 

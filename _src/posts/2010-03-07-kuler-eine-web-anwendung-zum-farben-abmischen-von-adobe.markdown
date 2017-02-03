@@ -1,4 +1,4 @@
-	Title: "Kuler, eine Web-Anwendung zum Farben abmischen von Adobe"
+	Title: Kuler, eine Web-Anwendung zum Farben abmischen von Adobe
 	Date: 2010-03-07T12:10:00
 	Tags: IT
 

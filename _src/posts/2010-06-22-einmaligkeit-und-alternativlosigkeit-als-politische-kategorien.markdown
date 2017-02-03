@@ -1,4 +1,4 @@
-	Title: "Einmaligkeit und Alternativlosigkeit als politische Kategorien"
+	Title: Einmaligkeit und Alternativlosigkeit als politische Kategorien
 	Date: 2010-06-22T12:25:00
 	Tags: Politik
 

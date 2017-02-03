@@ -1,4 +1,4 @@
-	Title: "Migration alter Blog-Einträge"
+	Title: Migration alter Blog-Einträge
 	Date: 2014-12-17T18:11:00
 	Tags: Homepage, Org-Mode, Octopress
 

@@ -1,4 +1,4 @@
-	Title: "Lexmarks Druckerpatronen-Lizenz"
+	Title: Lexmarks Druckerpatronen-Lizenz
 	Date: 2015-02-17T11:28:02
 	Tags: IT, Wirtschaft, Allerlei
 

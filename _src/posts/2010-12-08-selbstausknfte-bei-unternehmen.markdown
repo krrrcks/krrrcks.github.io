@@ -1,4 +1,4 @@
-	Title: "Selbstauskünfte bei Unternehmen"
+	Title: Selbstauskünfte bei Unternehmen
 	Date: 2010-12-08T00:00:00
 	Tags: Allerlei
 

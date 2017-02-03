@@ -1,6 +1,6 @@
-	Title: "\"Neues\" Arbeitspapier"
+	Title: "Neues" Arbeitspapier
 	Date: 2014-12-18T18:24:27
-	Tags:  Wirtschaft
+	Tags: Wirtschaft
 
 Zusammen mit
 [Marietta Haffner](http://www.bk.tudelft.nl/en/about-faculty/departments/otb/about-otb/staff/alle-medewerkers/haffner-marietta/)

@@ -1,4 +1,4 @@
-	Title: "Wie das Haus von Bundesministerin Nahles mauert"
+	Title: Wie das Haus von Bundesministerin Nahles mauert
 	Date: 2014-11-21T10:39:08
 	Tags: Politik, Behörden
 

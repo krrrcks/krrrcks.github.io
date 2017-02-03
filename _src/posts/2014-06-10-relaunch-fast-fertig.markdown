@@ -1,4 +1,4 @@
-	Title: "Relaunch fast fertig"
+	Title: Relaunch fast fertig
 	Date: 2014-06-10T09:20:03
 	Tags: Homepage, Octopress
 

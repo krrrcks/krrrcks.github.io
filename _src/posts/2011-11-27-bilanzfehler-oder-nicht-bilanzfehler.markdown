@@ -1,4 +1,4 @@
-	Title: "Bilanzfehler oder nicht Bilanzfehler"
+	Title: Bilanzfehler oder nicht Bilanzfehler
 	Date: 2011-11-27T10:58:00
 	Tags: Wirtschaft
 

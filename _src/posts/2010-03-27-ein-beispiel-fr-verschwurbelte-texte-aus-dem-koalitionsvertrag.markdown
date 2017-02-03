@@ -1,4 +1,4 @@
-	Title: "Ein Beispiel für verschwurbelte Texte aus dem Koalitionsvertrag"
+	Title: Ein Beispiel für verschwurbelte Texte aus dem Koalitionsvertrag
 	Date: 2010-03-27T15:03:00
 	Tags: Politik
 

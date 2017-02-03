@@ -1,4 +1,4 @@
-	Title: "EU will Länderratings verbieten"
+	Title: EU will Länderratings verbieten
 	Date: 2011-10-20T17:56:00
 	Tags: Wirtschaft
 

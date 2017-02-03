@@ -1,4 +1,4 @@
-	Title: "Warten auf den technischen Fortschritt als politisches Prinzip?"
+	Title: Warten auf den technischen Fortschritt als politisches Prinzip?
 	Date: 2014-11-13T09:53:28
 	Tags: Politik
 

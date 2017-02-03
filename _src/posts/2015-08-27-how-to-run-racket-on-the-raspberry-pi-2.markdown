@@ -1,4 +1,4 @@
-	Title: "How to run Racket on the Raspberry Pi 2"
+	Title: How to run Racket on the Raspberry Pi 2
 	Date: 2015-08-27T13:25:45
 	Tags: IT, Lisp, Racket
 

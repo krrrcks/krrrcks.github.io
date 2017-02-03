@@ -16,11 +16,13 @@ geschützt. Ich habe mir noch keine passende CC-Lizenz herausgesucht. Wenn Sie a
 irgendwas, sei es Text oder Bild, verwenden wollen, schicken Sie mir doch bitte
 eine Nachricht.
 
-*Ein Wort zum Datenschutz:* Diese Homepage ist mit
-[Octopress](http://octopress.org) erstellt, also sind das im
-Wesentlichen nur statische Inhalte. Diese Seite wird von
-[Github](https://github.com) über deren [Github Pages](https://pages.github.com)-Projekt gehostet.  Ich selbst erhebe
-und verarbeite keine Daten über Ihren Besuch auf dieser Seite.
+*Ein Wort zum Datenschutz:* Diese Homepage ist
+mit [Frog](https://github.com/greghendershott/frog) erstellt, also
+sind das im Wesentlichen nur statische Inhalte. Diese Seite wird
+von [Github](https://github.com) über
+deren [Github Pages](https://pages.github.com)-Projekt gehostet.  Ich
+selbst erhebe und verarbeite keine Daten über Ihren Besuch auf dieser
+Seite.
 
 *Update vom 14. Januar 2015:* Ich habe den in Octopress eingebauten
  Twitter-Knopf aktiviert (besteht aus dem Follow-Knopf und den

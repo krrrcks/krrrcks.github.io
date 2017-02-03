@@ -1,4 +1,4 @@
-	Title: "Aktenführung beim Beitragsservice"
+	Title: Aktenführung beim Beitragsservice
 	Date: 2014-10-05T10:45:13
 	Tags: Allerlei, Behörden
 

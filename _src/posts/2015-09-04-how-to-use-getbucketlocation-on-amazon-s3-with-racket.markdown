@@ -1,4 +1,4 @@
-	Title: "How to use GET Bucket location on Amazon S3 with Racket"
+	Title: How to use GET Bucket location on Amazon S3 with Racket
 	Date: 2015-09-04T07:23:43 
 	Tags: IT, Lisp, Racket, AWS, S3
 

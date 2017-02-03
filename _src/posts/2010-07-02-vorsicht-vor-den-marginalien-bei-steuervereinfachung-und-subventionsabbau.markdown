@@ -1,6 +1,6 @@
-	Title: "Vorsicht vor den Marginalien bei Steuervereinfachung und Subventionsabbau!"
+	Title: Vorsicht vor den Marginalien bei Steuervereinfachung und Subventionsabbau!
 	Date: 2010-07-02T12:54:00
-	Tags: [Politik, Wirtschaft]
+	Tags: Politik, Wirtschaft
 
 Eine These vorab:
 

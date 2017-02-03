@@ -1,4 +1,4 @@
-	Title: "Missbrauchsgebühr beim Bundesverfassungsgericht"
+	Title: Missbrauchsgebühr beim Bundesverfassungsgericht
 	Date: 2010-07-30T16:03:00
 	Tags: Allerlei
 

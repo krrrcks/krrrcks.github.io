@@ -1,4 +1,4 @@
-	Title: "Das Restaurant Si An in Berlin"
+	Title: Das Restaurant Si An in Berlin
 	Date: 2010-03-22T17:36:00
 	Tags: Ausgehen
 

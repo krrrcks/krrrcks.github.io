@@ -1,4 +1,4 @@
-	Title: "Aus der Entscheidung des BVerfG zur Erbschaftsteuer"
+	Title: Aus der Entscheidung des BVerfG zur Erbschaftsteuer
 	Date: 2014-12-18T07:41:37
 	Tags: Steuern
 

@@ -1,4 +1,4 @@
-	Title: "Programm-Bibliotheken und verschiedene Versionsstände"
+	Title: Programm-Bibliotheken und verschiedene Versionsstände
 	Date: 2011-10-16T00:00:00
 	Tags: Homepage, Org-Mode, IT
 

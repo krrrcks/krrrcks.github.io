@@ -1,4 +1,4 @@
-	Title: "Lisp und ich"
+	Title: Lisp und ich
 	Date: 2015-08-27T10:57:45
 	Tags: IT, Lisp
 

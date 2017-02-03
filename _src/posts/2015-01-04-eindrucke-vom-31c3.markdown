@@ -1,4 +1,4 @@
-	Title: "Eindrücke vom 31C3"
+	Title: Eindrücke vom 31C3
 	Date: 2015-01-05T17:03:00
 	Tags: IT, Veranstaltungen, Reisen, MorgenGrauen
 

@@ -1,4 +1,4 @@
-	Title: "Constanze Kurz/Frank Rieger, Die Datenfresser"
+	Title: Constanze Kurz/Frank Rieger, Die Datenfresser
 	Date: 2011-06-30T13:00:00
 	Tags: Bücher, IT
 

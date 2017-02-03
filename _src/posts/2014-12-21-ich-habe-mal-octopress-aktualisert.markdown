@@ -1,4 +1,4 @@
-	Title: "Ich habe mal Octopress aktualisert"
+	Title: Ich habe mal Octopress aktualisert
 	Date: 2014-12-21T11:58:16
 	Tags: Homepage, Octopress 
 

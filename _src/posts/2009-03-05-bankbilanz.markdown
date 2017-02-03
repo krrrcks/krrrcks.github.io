@@ -1,4 +1,4 @@
-	Title: "Für wen bilanzieren unsere Banken eigentlich?"
+	Title: Für wen bilanzieren unsere Banken eigentlich?
 	Date: 2009-03-05T00:00:00
     Tags: Wirtschaft
 

@@ -1,4 +1,4 @@
-	Title: "Spielt ALBA Berlin nun Handball oder Basketball? Der Sportschau ist es egal"
+	Title: Spielt ALBA Berlin nun Handball oder Basketball? Der Sportschau ist es egal
 	Date: 2015-01-30T11:32:49
 	Tags: Medien, Allerlei
 
