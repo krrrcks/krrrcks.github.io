@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">Daniel Brunner: Posts tagged 'Org-Mode'</title>
+ <link rel="self" href="http://www.dbrunner.de/feeds/Org-Mode.atom.xml" />
+ <link href="http://www.dbrunner.de/tags/Org-Mode.html" />
+ <id>urn:http-www-dbrunner-de:-tags-Org-Mode-html</id>
+ <updated>2014-12-17T17:11:00Z</updated>
+ <entry>
+  <title type="text">Migration alter Blog-Einträge</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/12/17/migration-alter-blog-einträge/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-12-17-migration-alter-blog-einträge</id>
+  <published>2014-12-17T17:11:00Z</published>
+  <updated>2014-12-17T17:11:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Es kamen lange Winterabende und ich habe die alten Blog-Einträge von der mittels Org-Mode erstellten Seite hier nach Octopress migriert. Im Archiv sind diese zu finden und die Links etc. sollten nun auch passend mit migriert worden sein.&lt;/p&gt;
+
+&lt;p&gt;Bei der Konvertierung habe ich ein Programm kennengelernt, das mir sehr geholfen hat: &lt;a href="http://johnmacfarlane.net/pandoc/"&gt;Pandoc&lt;/a&gt;. Das ist ein Konverter, der Text- und Markupdateien hin und her konvertieren kann. Dabei beherrscht er eine ganze Reihe von Formaten. Insbesondere kann er das Org-Mode-Format (das ich für viele Dinge verwende) ebenso wie LaTeX und Markdown (daneben aber auch noch eine Legion von Formaten).&lt;/p&gt;
+
+&lt;p&gt;Da mein Hauptdateiformat ohnehin &amp;ldquo;Textdateien&amp;rdquo; sind (&amp;ldquo;Never trust a file that isn&amp;rsquo;t ASCII&amp;rdquo;) ist das sehr praktisch, um zwischen verschiedenen Markup-Formaten hin und her zu springen.&lt;/p&gt;
+
+&lt;p&gt;Für die Migration meine Blog-Einträge lief dies wie folgt: Ich hatte die in der alten Homepage mit Org-Mode und Org-Jekyll erstellt. Dabei hatte das Org-Jekyll-Modul entsprechende HTML-Dateien mit einem YAML-Header erzeugt. Mittels Pandoc konnte ich die nun wieder nach Markdown konvertieren, habe die YAML-Header ein wenig angepasst, Kategorien aktualisiert und noch mal das Markup zwecks Zeilenumbrüche, Fußnoten und Links geprüft und leicht angepasst. Insgesamt sehr schnell bewältigbar.&lt;/p&gt;
+
+&lt;p&gt;Dieser ganze Zoo rund um Markdown und andere ähnliche Formate ist zwar manchmal ein bisschen unübersichtlich, aber mir gefällt das sehr gut, dass man mit wenig Markup schön Textdateien strukturieren kann und dann mit Pandoc auch gut hin und her konvertieren kann.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Programm-Bibliotheken und verschiedene Versionsstände</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2011/10/16/programm-bibliotheken-und-verschiedene-versionsstände/" />
+  <id>urn:http-www-dbrunner-de:-blog-2011-10-16-programm-bibliotheken-und-verschiedene-versionsstände</id>
+  <published>2011-10-15T22:00:00Z</published>
+  <updated>2011-10-15T22:00:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Ich bin ein sehr intensiver Nutzer von &lt;a href="http://www.orgmode.org"&gt;Org-Mode&lt;/a&gt;, einem speziellen Modul/Modus für den Emacs-Editor (ich habe hier auf meiner Homepage auch einmal mit einer kleinen &lt;a href="http://archive.dbrunner.de/it/org-mode.html"&gt;Seite&lt;/a&gt; dazu begonnen). Nun ja, was soll man sagen: Bei Emacs wird eine recht alte Version mitgeliefert. Ich wollte dann mal auch wegen einiger Funktionen die neueste nutzen. Also via &lt;code&gt;git&lt;/code&gt; heruntergeladen und eingebunden und Peng, irgendwas funktioniert natürlich nicht mehr: Ich benötige pratisch täglich den Export von Org-Mode-Dateien nach &lt;code&gt;LaTeX&lt;/code&gt;, der wollte aber nicht mehr. Nun kann ich zwar Lisp, aber das Emacs Lisp ist doch etwas speziell und die Debug-Möglichkeiten sind etwas … nun ja, altbacken. Kurzum: Das macht überhaupt keinen Spaß. Im Endeffekt habe ich dann herausgefunden, dass unter bestimmten Umständen Teile des alten, bei Emacs mitgelieferten Codes nachgeladen wird anstelle der neuen Distribution. Diese bescheidene Art von Emacs mit Modulen und Paketen umzugehen ist wirklich erschreckend. Was dafür wiederum total toll war: In der von mir verwendeten Org-Mode-Version war wohl ein Fehler, das ganze Ding über die Mailingliste geschickt und innert einem halben Tag war der Fehler von anderen Nutzern und von Carsten Dominik auch gleich gefixt. Grandiose Antwortzeit!&lt;/p&gt;</content></entry></feed>

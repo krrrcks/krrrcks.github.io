@@ -1,0 +1,664 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">Daniel Brunner: Daniel Brunner</title>
+ <link rel="self" href="http://www.dbrunner.de/feeds/all.atom.xml" />
+ <link href="http://www.dbrunner.de/index.html" />
+ <id>urn:http-www-dbrunner-de:-index-html</id>
+ <updated>2016-01-12T09:55:43Z</updated>
+ <entry>
+  <title type="text">Using Racket Minimal and raco</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2016/01/12/using-racket-minimal-and-raco/" />
+  <id>urn:http-www-dbrunner-de:-blog-2016-01-12-using-racket-minimal-and-raco</id>
+  <published>2016-01-12T09:55:43Z</published>
+  <updated>2016-01-12T09:55:43Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;I use Racket Minimal on my smart phone (&lt;a href="../2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/"&gt;this&lt;/a&gt; describes how to compile the run time for an ARM based system). It&amp;rsquo;s is a very small installation of Racket (about 36 MB after installation). After installation one only needs to install the packages that are really neded. But this can be a bit tricky because a lot of packages want to install their documentation and other stuff and bring a whole bunch of files on your drive as dependencies.&lt;/p&gt;
+
+&lt;p&gt;Some of the packages are divided up into a "-lib", "-doc" (and sometimes "-test") as laid out in the &lt;a href="https://docs.racket-lang.org/pkg/getting-started.html#%28part._.Naming_and_.Designing_.Packages%29"&gt;documentation&lt;/a&gt;. With these packages it&amp;rsquo;s easier to only install the implementation.&lt;/p&gt;
+
+&lt;p&gt;A small script of mine used only basic modules and relied on &lt;code&gt;rackunit&lt;/code&gt; for the tests. On a mobile device the start up time of such a program can be  critical. Therefore it is wise to only require the needed packages and to have the source code being compiled to byte code. One could do this with &lt;code&gt;raco setup&lt;/code&gt; (which is included in Minimal Racket) but I wanted to have &lt;code&gt;raco make&lt;/code&gt; (which is not part of Minimal Racket) available.&lt;/p&gt;
+
+&lt;p&gt;The commands of &lt;code&gt;raco&lt;/code&gt; are added via a &lt;code&gt;raco-commands&lt;/code&gt; variable in packages&amp;rsquo; &lt;code&gt;info.rkt&lt;/code&gt; file. I looked through the packages of my &amp;ldquo;full install&amp;rdquo; and found the package &lt;code&gt;compiler-lib&lt;/code&gt; which adds some commands (&lt;code&gt;make&lt;/code&gt;, &lt;code&gt;exe&lt;/code&gt;, &lt;code&gt;pack&lt;/code&gt;, &lt;code&gt;unpack&lt;/code&gt;, &lt;code&gt;decompile&lt;/code&gt;, &lt;code&gt;test&lt;/code&gt;, &lt;code&gt;expand&lt;/code&gt;, &lt;code&gt;read&lt;/code&gt;, &lt;code&gt;distribute&lt;/code&gt;, &lt;code&gt;demodularize&lt;/code&gt;) to &lt;a href="https://mirror.racket-lang.org/releases/6.3/doc/raco/index.html"&gt;&lt;code&gt;raco&lt;/code&gt;&lt;/a&gt; and relies on only a few other packages. As a result the source and binary files need about 3.8 MB on my phone which is okay for me.&lt;/p&gt;
+
+&lt;p&gt;To sum up: After a simple &lt;code&gt;raco pkg install compiler-lib&lt;/code&gt; I could easily use &lt;code&gt;raco make&lt;/code&gt; and &lt;code&gt;raco test&lt;/code&gt; to play with my program on my phone.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">I played with CHICKEN Scheme, Docker and Alpine Linux</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-12-19-i-played-with-chicken-scheme-docker-and-alpine-linux</id>
+  <published>2015-12-19T16:54:50Z</published>
+  <updated>2015-12-19T16:54:50Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;I am looking forward to meet LISP people at the &lt;a href="https://events.ccc.de/congress/2015/wiki/Main_Page"&gt;32c3&amp;rsquo;s&lt;/a&gt; &lt;a href="https://events.ccc.de/congress/2015/wiki/Assembly:The_%28un%29employed_schemers_%26_lispers_guild"&gt;LISP assembly&lt;/a&gt;. The last days I played a bit with different Scheme implementations including  &lt;a href="http://call-cc.org"&gt;CHICKEN scheme&lt;/a&gt;. The main feature of CHICKEN is that it compiles the Scheme code to C and then creates dynamic libraries and binaries with the C compiler. I thought that combining these binaries with a minimal Docker container could give me a very small deployment. So here are my steps:&lt;/p&gt;
+
+&lt;h2 id="choosing-alpine-linux-as-a-small-linux"&gt;Choosing Alpine Linux as a &amp;ldquo;small&amp;rdquo; Linux&lt;/h2&gt;
+
+&lt;p&gt;The smallest Linux image for Docker is undoubtly busybox with a size of about 2.489 MB. But busybox lacks a package manager which makes installing software painful. Therefore I have chosen &lt;a href="http://alpinelinux.org"&gt;Alpine Linux&lt;/a&gt; which comes with package manager and it&amp;rsquo;s image&amp;rsquo;s size is about 5.234 MB. That&amp;rsquo;s double the size of the busybox image but still quite small compared to the Ubuntu image which is about 266 MB.&lt;/p&gt;
+
+&lt;h2 id="creating-a-docker-container-with-chicken"&gt;Creating a Docker container with CHICKEN&lt;/h2&gt;
+
+&lt;p&gt;Alpine Linux comes with the &lt;a href="http://www.muscl-libc.org"&gt;musl libc&lt;/a&gt; and I thought it would be best to compile all the CHICKEN stuff with that libc. Therefore I created a Docker container with gcc and all the other stuff with this Dockerfile (&lt;a href="https://github.com/krrrcks/chicken-docker-alpine"&gt;Github repository&lt;/a&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;FROM alpine:3.2
+
+RUN apk update &amp;amp;&amp;amp; apk add make gcc musl-dev 
+RUN wget -O - http://code.call-cc.org/releases/4.10.0/chicken-4.10.0.tar.gz | tar xz
+
+WORKDIR /chicken-4.10.0
+
+RUN make PLATFORM=linux &amp;amp;&amp;amp; make PLATFORM=linux install
+
+RUN rm -fr /chicken-4.10.0 
+
+WORKDIR /
+
+CMD ["csi"]&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This image is quite big (about 161.7 MB) and is available for download at the &lt;a href="https://hub.docker.com/r/krrrcks/chicken-alpine/"&gt;Docker Hub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id="compiling-some-chicken-code"&gt;Compiling some CHICKEN code&lt;/h2&gt;
+
+&lt;p&gt;For testing purposes I wanted a minimal web server running in the Alpine Linux image. Therefore I looked through the &lt;a href="http://wiki.call-cc.org/chicken-projects/egg-index-4.html"&gt;egg index&lt;/a&gt; and found &lt;a href="http://wiki.call-cc.org/eggref/4/spiffy"&gt;spiffy&lt;/a&gt;. I fired up the &lt;code&gt;chicken-alpine&lt;/code&gt; container (but I used &lt;code&gt;ash&lt;/code&gt; as command instead of the &lt;code&gt;csi&lt;/code&gt; Scheme interpreter) and created a small web server that serves some static pages. I wrote a &lt;code&gt;main.scm&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(use spiffy)
+(start-server)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and added some static pages to a &lt;code&gt;./web&lt;/code&gt; sub-directory. Then everything had to be compiled and prepared for deployment:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;chicken-install spiffy
+csc -deploy main.scm
+chicken-install -deploy -p $PWD/main spiffy&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="deploy-in-a-fresh-alpine-linux-image"&gt;Deploy in a fresh Alpine Linux image&lt;/h2&gt;
+
+&lt;p&gt;After the compilation I copied the &lt;code&gt;main&lt;/code&gt; and &lt;code&gt;web&lt;/code&gt; directories on my host machine using &lt;code&gt;docker cp&lt;/code&gt; and created the following Dockerfile:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;FROM alpine:3.2
+
+ADD main /main
+ADD web main/web
+WORKDIR main
+
+CMD /main/main&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and let &lt;code&gt;docker build -t krrrcks/spiffy-test .&lt;/code&gt; do the job. The size of the resulting image is about 12.37 MB and that&amp;rsquo;s pretty small. I uploaded that image to the &lt;a href="https://hub.docker.com/r/krrrcks/spiffy-test/"&gt;Docker Hub&lt;/a&gt; as well.&lt;/p&gt;
+
+&lt;p&gt;To serve the pages I did a &lt;code&gt;docker run -d -p 8080:8080 krrrcks/spiffy-test&lt;/code&gt;  (spiffy listens on port 8080 in the default install) and browsed my static pages.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">How to use GET Bucket location on Amazon S3 with Racket</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-09-04-how-to-use-get-bucket-location-on-amazon-s3-with-racket</id>
+  <published>2015-09-04T05:23:43Z</published>
+  <updated>2015-09-04T05:23:43Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;In &lt;a href="http://www.racket-lang.org"&gt;Racket&lt;/a&gt; I want to iterate over my buckets in Amazon S3. They are located in different regions. So how do I get my bucket&amp;rsquo;s location/region? In the API Reference there is a call &lt;a href="http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETlocation.html"&gt;GET Bucket location&lt;/a&gt;. I use &lt;a href="https://github.com/greghendershott/aws"&gt;Greg&amp;rsquo;s AWS library for Racket&lt;/a&gt; and this library authenticates its calls with &lt;a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html"&gt;signature version V4&lt;/a&gt;. But V4 requires the user to know the &lt;em&gt;region&lt;/em&gt; to correctly sign the request. So I need to know the region to ask Amazon S3 for the region where the bucket is located. Otherwise Amazon S3 responds with an error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version="1.0" encoding="UTF-8"?&amp;gt;
+&amp;lt;Error&amp;gt;
+ &amp;lt;Code&amp;gt;AuthorizationHeaderMalformed&amp;lt;/Code&amp;gt;
+ &amp;lt;Message&amp;gt;The authorization header is malformed; the region 'us-east-1'
+is wrong; expecting 'eu-central-1'&amp;lt;/Message&amp;gt;
+ &amp;lt;Region&amp;gt;eu-central-1&amp;lt;/Region&amp;gt;
+ &amp;lt;RequestId&amp;gt;XXXX&amp;lt;/RequestId&amp;gt;
+ &amp;lt;HostId&amp;gt;XXXX&amp;gt;
+&amp;lt;/Error&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After some search on the net I found a &lt;a href="http://stackoverflow.com/questions/27091816/retrieve-buckets-objects-without-knowing-buckets-region-with-aws-s3-rest-api"&gt;post on Stackoverflow&lt;/a&gt; that helped to solve that issue: If I use the URL format (instead of the normally used virtual host format) I could get the location of any bucket. Every region responds with a &lt;em&gt;LocationConstraint&lt;/em&gt; answer.&lt;/p&gt;
+
+&lt;p&gt;Therefore a code snippet for Racket could be:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(define (get-bucket-location bucket)
+  (parameterize
+      ([s3-path-requests? #t])
+    (define xpr (get/proc (string-append bucket "/?location") read-entity/xexpr))
+    (and (list? xpr)
+         (= (length xpr) 3)
+         (third xpr))))&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; (get-bucket-location "my-bucket-somewhere")
+"eu-central-1"&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;PS: I think official Amazon S3 documentation could be a bit more verbose on the issues with GetBucketLocation and signature V4.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; Greg added a &lt;code&gt;bucket-location&lt;/code&gt; function to his great &lt;a href="http://docs.racket-lang.org/aws/S3__Storage_.html#%28def._%28%28lib._aws%2Fs3..rkt%29._bucket-location%29%29"&gt;library&lt;/a&gt;&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">How to run Racket on the Raspberry Pi 2</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-08-27-how-to-run-racket-on-the-raspberry-pi-2</id>
+  <published>2015-08-27T11:25:45Z</published>
+  <updated>2015-08-27T11:25:45Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;I got a &lt;a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/"&gt;Raspberry Pi 2 Model B&lt;/a&gt; to play with. I used Raspbian image as operating system. I was wondering how difficult it is to get Racket running on the Raspberry Pi. I downloaded the &lt;a href="http://mirror.racket-lang.org/installers/6.2.1/racket-6.2.1-src-builtpkgs.tgz"&gt;Unix source + built packages&lt;/a&gt; tarball from &lt;a href="http://racket-lang.org"&gt;Racket&amp;rsquo;s homepage&lt;/a&gt; because I only wanted to compile the core of Racket. After unpacking the tarball I was suprised that the instructions were quite short:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;From this directory (where the `configure' file is), run the following
+commands:
+
+  mkdir build
+  cd build
+  ../configure
+  make
+  make install&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Between &lt;code&gt;make&lt;/code&gt; and &lt;code&gt;make install&lt;/code&gt; I had to wait for about 40 minutes but then everything was fine and I could even use DrRacket on the Raspberry Pi:&lt;/p&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/2015-08-27-racket-pi.png" alt="DrRacket on Raspberry Pi" /&gt;
+ &lt;p class="caption"&gt;DrRacket on Raspberry Pi&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;Very nice and easy to get Racket running on ARM.&lt;/p&gt;
+
+&lt;p&gt;PS: Because the Raspberry Pi 2 Model B has an ARMv7 processor the binary runs on my Jolla smart phone as well.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Running Racket on AWS Lambda</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/08/27/running-racket-on-aws-lambda/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-08-27-running-racket-on-aws-lambda</id>
+  <published>2015-08-27T10:46:57Z</published>
+  <updated>2015-08-27T10:46:57Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;I started to use AWS for some projects recently. But I only use few of their services. From time to time I look into some of there services and wonder if they are useful for my tasks. I looked into &lt;a href="http://aws.amazon.com/lambda"&gt;AWS Lambda&lt;/a&gt;, "&amp;hellip; a compute service that runs your code in response to events and automatically manages the compute resources for you, making it easy to build applications that respond quickly to new information." Nowadays these &amp;ldquo;lambda functions&amp;rdquo; could be written in NodeJS or Java. When I was looking for a roadmap of the supported languages I found an interesting &lt;a href="http://blog.0x82.com/2014/11/24/aws-lambda-functions-in-go/"&gt;blog post&lt;/a&gt; by &lt;a href="https://www.twitter.com/rubenfonseca"&gt;Ruben Fonseca&lt;/a&gt;. He explaind how to run Go code on AWS Lambda.&lt;/p&gt;
+
+&lt;p&gt;I tried the same with &lt;a href="http://racket-lang.org"&gt;Racket&lt;/a&gt; and wrote a short Racket programm &lt;code&gt;test.rkt&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#lang racket/base
+
+(display (format "Hello from Racket, args: ~a~%" (current-command-line-arguments)))&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then I used &lt;code&gt;raco&lt;/code&gt; to create a binary &lt;code&gt;test&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;raco exe --orig-exe test.rkt&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I took the NodeJS wrapper from Ruben&amp;rsquo;s blog post and put it in a file &lt;code&gt;main.js&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var child_process = require('child_process');
+
+exports.handler = function(event, context) {
+  var proc = child_process.spawn('./test', [ JSON.stringify(event) ], { stdio: 'inherit' });
+
+  proc.on('close', function(code) {
+    if(code !== 0) {
+      return context.done(new Error("Process exited with non-zero status code"));
+    }
+
+    context.done(null);
+  });
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then I put both files in a zip archive, created a new AWS Lambda function, uploaded the zip file and invoked the function:&lt;/p&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/2015-08-27-racket-aws-lambda.png" alt="Invocation of AWS Lambda function" /&gt;
+ &lt;p class="caption"&gt;Invocation of AWS Lambda function&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;Fine!&lt;/p&gt;
+
+&lt;p&gt;PS: Only question is: When is AWS Lambda coming to the region &lt;code&gt;eu-central-1&lt;/code&gt;, located in Frankfurt?&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Upate (2016&amp;ndash;03&amp;ndash;15):&lt;/em&gt; AWS Lambda is &lt;a href="https://aws.amazon.com/de/about-aws/whats-new/2016/03/aws-lambda-available-in-eu-frankfurt/"&gt;now available&lt;/a&gt; in the EU (Frankfurt)  region!&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Lisp und ich</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/08/27/lisp-und-ich/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-08-27-lisp-und-ich</id>
+  <published>2015-08-27T08:57:45Z</published>
+  <updated>2015-08-27T08:57:45Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Dieser Beitrag ist kurzer Hintergrund für meine bisherigen und zukünftigen Beiträge zur Programmierung und Software-Entiwcklung. Eigentlich ist es eher ein &lt;em&gt;Disclaimer&lt;/em&gt;, denn ich habe das gar nicht professionell gelernt. Ich habe ein sozialwissenschaftliches Fach studiert und meine Kenntnisse aus dem Bereich der Programmierung entstammen im Wesentlichen meiner Schul- und Studienzeit und sehr viel autodidaktes Lernen. Insofern ist aller Code von mir mit einer gewissen Vorsicht zu genießen; möglicherweise ist das nicht immer die beste und schönste Variante ein Problem zu lösen.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Der Rundfunkrat des hr übt den Diskurs</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/02/17/der-rundfunkrat-des-hr-übt-den-diskurs/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-02-17-der-rundfunkrat-des-hr-übt-den-diskurs</id>
+  <published>2015-02-17T10:44:35Z</published>
+  <updated>2015-02-17T10:44:35Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Am 15. Dezember 2014 hat der &lt;a href="http://www.bundesfinanzministerium.de/Web/DE/Ministerium/Geschaeftsbereich/Wissenschaftlicher_Beirat/wissenschaftlicher_beirat.html"&gt;Wissenschaftliche Beirat des Bundesministeriums des Finanzen&lt;/a&gt; ein Gutachten zu &amp;ldquo;Öffentlich-rechtliche Medien - Aufgabe und Finanzierung&amp;rdquo; &lt;a href="http://www.bundesfinanzministerium.de/Content/DE/Downloads/Broschueren_Bestellservice/2014-12-15-gutachten-medien.pdf?__blob=publicationFile&amp;amp;v=9"&gt;veröffentlicht&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Der Inhalt wollte dem einen oder anderen Vertreter der öffentlich-rechtlichen Medien nicht schmecken. So haben sich der Runkfunkrat und der Verwaltungsrat des Hessischen Rundfunks &amp;ldquo;ausführlich&amp;rdquo; mit dem Gutachten und einer Stellungnahme des &amp;ldquo;hr-Justitiars&amp;rdquo; befasst und einen &amp;ldquo;einstimmigen Beschluss&amp;rdquo; hierzu &lt;a href="http://www.hr-online.de/website/extern/rundfunkrat/download.jsp?key=standard_document_54315171&amp;amp;row=0&amp;amp;rubrik=62561"&gt;gefasst&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Ich möchte nun nicht auf sämtliche Aspekte des Gutachtens und was dafür oder dagegen spricht eingehen. Allerdings hat mich das eine oder andere in dem &amp;ldquo;Beschluss&amp;rdquo; der hr-Gremien etwas stutzig gemacht. Es heißt dort gleich zu Beginn:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;&amp;ldquo;1. Der Rundfunkrat und der Verwaltungsrat kritisieren, dass sich ein  für Rundfunktfragen unstreitig unzuständiges Gremium ein Papier  veröffentlicht hat, das längst überholte ökonomische Positionen  wieder aufleben lässt und Auffassungen vertritt, die sich weder  ökonomisch noch rechtlich halten lassen.&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;In Deutschland hat sich neben der Wirtschaftstheorie und Wirtschaftspolitik ein eigenes Gebiet der &amp;ldquo;Finanzwissenschaft&amp;rdquo; als Lehre von den öffentlichen Haushalten, der Besteuerung, der Staatsausgaben, der öffentlichen Schuld, der Staatstätigkeit etc. herausgebildet. Einige Vertreter dieses Faches sind Mitglieder des Wissenschaftlichen Beirats beim Bundesministerium der Finanzen.&lt;/p&gt;
+
+&lt;p&gt;Eine der ersten Fragen in der Finanzwissenschaft, die man sich bspw. in der universitären Ausbildung stellt, ist: &amp;ldquo;Was gehört eigentlich zum &amp;lsquo;Staat&amp;rsquo;?&amp;rdquo; Mitunter zuerst fallen einem die Gebietskörperschaften (Bund, Länder und Gemeinden) und ihre Haushalte ein. Daneben spielen aber auch öffentlich-rechtliche Institutionen eine bedeutsame Rolle, die man mit dem Begriff der &amp;ldquo;Parafisken&amp;rdquo; bezeichnet, sie erfüllen öffentliche Aufgaben und finanzieren sich in der Regel über Zwangsabgaben. Hierzu zählt man beispielsweise die Sozialversicherungen, aber auch Kammern, soweit sie öffentliche Aufgaben wahrnehmen. Auch sie sind Gegenstand der Finanzwissenschaft. In meinem Exemplar von Zimmermann/Henke, Finanzwissenschaft, 7. Auflage, 1994 sind einige Ausführungen zu den Parafisken auf den Seiten 8 bis 11 zu finden.&lt;/p&gt;
+
+&lt;p&gt;Und hierzu gehören aus diesem Blickwinkel unstreitig auch die Institutionen des öffentlich-rechtlichen Rundfunks. Eine etwas ausführlichere Darstellung zu den Parafisken findet sich in einem &lt;a href="http://www.diw.de/sixcms/detail.php?id=diw_01.c.41304.de"&gt;Gutachten des DIW Berlin von C. Katharina Spieß&lt;/a&gt; aus dem Jahr 2014 (das allerdings nicht den Rundfunk, sondern familienpolitische Leistungen zum wesentlichen Inhalt hat) in den Kapiteln 2 bis 3, für den öffentlich-rechtlichen Rundfunk im Abschnitt 3.3.&lt;/p&gt;
+
+&lt;p&gt;Wenn nun die öffentlich-rechtlichen Rundfunkanstalten Parafisken sind, die Parafisken zum Gegenstand der Finanzwissenschaft gehören, dann wäre es meines Erachtens sträflich, würde sich der Wissenschaftliche Beirat beim BMF nicht damit befassen.&lt;/p&gt;
+
+&lt;p&gt;Insofern halte ich die Behauptung, der Beirat sei &amp;ldquo;unstreitig unzuständig&amp;rdquo; für falsch und irreführend.&lt;/p&gt;
+
+&lt;p&gt;Außerdem beschreibt die &lt;a href="http://www.bundesfinanzministerium.de/Web/DE/Ministerium/Geschaeftsbereich/Wissenschaftlicher_Beirat/Satzung/satzung.html"&gt;Satzung&lt;/a&gt; des Beirates seine Aufgaben recht weit:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt; "§ 1 Aufgaben des Beirats&lt;/p&gt;
+ &lt;p&gt;Der Beirat soll den Bundesminister der Finanzen in voller Unabhängigkeit und ehrenamtlich in allen Fragen der Finanzpolitik beraten."&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Die hr-Gremien haben insgesamt 7 Punkte beschlossen. Obwohl sie in dem oben zitierten ersten Punkt dem Beirat Auffassungen unterstellen, die sich ihrer Ansicht nach ökonomisch nicht halten lassen, so finden sich in den beschlossenen Punkten nahezu keinerlei ökonomische Entgegenungen:&lt;/p&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;In Punkt 2 werden die unterstellten Marktmechanismen in Bezug auf  den Zeitungsmarkt in Frage gestellt.&lt;/li&gt;
+ &lt;li&gt;In Punkt 3 wird im Kern argumentiert, man hätte doch auch das  Angebot des öffentlich-rechtlichen Rundfunks beachten sollen.&lt;/li&gt;&lt;/ul&gt;
+
+&lt;p&gt;Demgegenüber wird bis auf Punkt 2 durchgehend mit &amp;ldquo;verfassungsrechtlich&amp;rdquo; (kommt als Wort insgesamt 5mal vor) oder dem &amp;ldquo;Bundesverfassungsgericht&amp;rdquo; (4 Vorkommen, 3mal als &amp;ldquo;Bundesverfassungsgericht&amp;rdquo; und einmal als &amp;ldquo;höchste deutsche Gericht&amp;rdquo;) argumentiert.&lt;/p&gt;
+
+&lt;p&gt;Zum Schutz der hr-Gremien muss man allerdings noch erwähnen, dass der Beirat in seinem Gutachten neben eher finanzpolitischen Überlegungen auch einen Abschnitt über verfassungsrechtliche Perspektiven verfasst hatte.&lt;/p&gt;
+
+&lt;p&gt;Es bleibt aber dabei, dass die hr-Gremien sich bis auf ihren Punkt 2 mit den ökonomischen Fragestellungen aus dem Gutachten eigentlich nicht recht auseinandersetzen wollen. Dabei wäre das dringend nötig. Die Auseinandersetzungen um Druckerzeugnisse vs. Rundfunk, &amp;ldquo;Tagesschau-App&amp;rdquo;, Depublizierung, neuartige Rundfunkgeräte, etc. machen meines Erachtens deutlich, dass hier ein Austausch von Argumenten dringend nötig wäre. Hierzu haben die hr-Gremien allerdings entweder nicht die Kraft oder nicht das Verlangen. Statt dessen werfen sie dem Wissenschaftlichen Beirat eine Entgleisung vor, wenn sie schreiben:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;&amp;ldquo;Das Ignorieren der mittlerweile 50jährigen kontinuierlichen Rechtsprechung des Bundesverfassungsgerichts zur dualen Rundfunkordnung &amp;hellip; ist &amp;hellip; nicht nur eine indiskutable Ohrfeige an das höchste deutsche Gericht, &amp;hellip;&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;An diesem Zitat zeigt sich für mich auch, dass ein Austausch von Argumenten wohl gar nicht gewollt ist. Die Positionen des Beirats werden mit kernigen Formulierungen belegt: &amp;ldquo;Auffassungen vertritt, die sich weder ökonomisch noch rechtlich halten lassen&amp;rdquo;, &amp;ldquo;indiskutable Ohrfeige an das höchste deutsche Gericht&amp;rdquo;, &amp;ldquo;mit der Entwicklung der Rundfunkordnung &amp;hellip; in keiner Weise ernsthaft auseinandergesetzt&amp;rdquo;, &amp;ldquo;verkennt in erschreckender Weise&amp;rdquo;, &amp;ldquo;völlig unverständlich&amp;rdquo;, &amp;ldquo;völlig abwegig&amp;rdquo;, &amp;ldquo;hat sich keinerlei Mühe gemacht&amp;rdquo;, &amp;ldquo;macht deutlich, wie wenig sich der Beirat mit den rechtlichen und verfassungsrechtlichen Fakten befasst hat&amp;rdquo;, &amp;ldquo;völlig untauglich&amp;rdquo;, &amp;ldquo;keine Alternative&amp;rdquo; und im letzten Satz "[a]ngesichts der vielfachen Defizite des Papiers kann es auch nicht den Anspruch erheben, wissenschaftlich zu sein."&lt;/p&gt;
+
+&lt;p&gt;Im Ergebnis: In meinen Augen zeigen die hr-Gremien einen oft zu beobachtender Reflex: Die Gegenseite wird zuerst einmal für nicht zuständig erklärt, anschließend ihre Argumente ignoriert und auf einer anderen Ebene gegen sie argumentiert. Dies passiert schlussendlich noch in einem Duktus, der auch keine Antwort mehr erwartet.&lt;/p&gt;
+
+&lt;p&gt;Insgesamt doch eher unbefriedigend und nicht von der Fähigkeit zum Diskurs gekennzeichnet. Vielleicht hätte man nicht nur den hr-Justitiar, sondern auch den hr-Ökonomen befragen sollen.&lt;/p&gt;
+
+&lt;p&gt;PS: Nach wie vor macht mich etwas stutzig, wie &lt;a href="http://www.hr-online.de/website/extern/rundfunkrat/index.jsp?rubrik=45412&amp;amp;key=standard_document_3728464"&gt;Rolf-Dieter Postlep&lt;/a&gt; das hat unterschreiben können.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Lexmarks Druckerpatronen-Lizenz</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/02/17/lexmarks-druckerpatronen-lizenz/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-02-17-lexmarks-druckerpatronen-lizenz</id>
+  <published>2015-02-17T10:28:02Z</published>
+  <updated>2015-02-17T10:28:02Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Heute benötigte ich eine Ersatzpatrone für meinen Lexmark-Drucker. An der Aufreißlasche prangen Ausrufezeichen und der Hinweis: &amp;ldquo;Attention: Updated License Terms&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Lizenzbedingungen? Für eine Druckerpatrone? Also mal ein Blick aufs Kleingedruckte:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;Bitte vor dem Öffnnen lesen. Durch das Öffnen der Verpackung oder die Verwendung der mitgelieferten patentierten Kassette erklären Sie sich mit der folgenden Lizenz-Vereinbarung einverstanden. Diese patentierte Tonerkassette wird zu einem Sonderpreis verkauft und unterliegt der Patenteinschränkung, dass sie nur einmal verwendet wird. Nach ihrer erstmaligen Verwendung verpflichten Sie sich, sie zur Wiederaufbereitung und/oder zum Recylcing nur an Lexmark zurückzugeben. Die Tonerkassette funktioniert nach der Abgabe einer bestimmten Tonermenge nicht mehr. Wenn sie ersetzt werden muss, kann sie noch Resttoner enthalten. Die Kassette ist zusätzlich so konzipiert, dass die Informationen zur Kassettenkompatibilität im Druckerspeicher automatisch aktualisiert werden. Auf diese Weise kann die Verwendung gefälschter Kassetten und/oder bestimmer Drittprodukte eingeschränkt werden. Durch die Installation der beiliegenden Kassette gestatten Sie Lexmark, diese Änderungen vorzunehmen. Wenn Sie mit den vorgenannten Bedingungen nicht einverstanden sind, geben Sie die ungeöffnete Verpackung an Ihren Händler zurück. Nicht im Rahmen dieser Bestimmungen verkaufte Ersatztonerkassetten sind unter www.lexmark.com erhältlich.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Irgendwie ja auch ein bisschen putzig, wie um einen Alltagsgegenstand wie Toner so ein Bohei gemacht wird. Zwei Gedanken kommen mir da in den Sinn: 1. Es verfestigt sich mein Eindruck, dass das Patentsystem recht nahe an kaputt ist. 2. Unternehmen, die so etwas machen, sollten weniger Geld für Juristen, Patentanwälte ausgeben und das Geld eher in coole Produkte investieren.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Spielt ALBA Berlin nun Handball oder Basketball? Der Sportschau ist es egal</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/01/30/spielt-alba-berlin-nun-handball-oder-basketball-der-sportschau-ist-es-egal/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-01-30-spielt-alba-berlin-nun-handball-oder-basketball-der-sportschau-ist-es-egal</id>
+  <published>2015-01-30T10:32:49Z</published>
+  <updated>2015-01-30T10:32:49Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Mit Stand vom 14. Januar 2015 erschien auf der Homepage der &lt;a href="http://www.sportschau"&gt;Sportschau&lt;/a&gt; ein &lt;a href="http://www.sportschau.de/weitere/basketball/eurocup144.html"&gt;Artikel&lt;/a&gt; über die Bamberger Basketballer. Darin findet sich ein Satz über die ALBA Berlin (ebenfalls eine Basketball-Mannschaft):&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;ALBA Berlin dominiert aktuell in der Liga und ist das einzig verbliebene deutsche Team in der Euro League, der Champions League des Handballs.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Ah! ALBA spielt auch noch Handball? Oder doch nicht? Jedenfalls sollte da wohl &amp;ldquo;in der Euro League, der Champions League des Basketballs&amp;rdquo; stehen, denn die &lt;a href="https://de.wikipedia.org/wiki/ULEB_Euroleague"&gt;Euro League&lt;/a&gt; ist ein europäischer Wettbewerb von Basketball-Vereinsmannschaften.&lt;/p&gt;
+
+&lt;p&gt;Denke ich mir also: &amp;ldquo;Ach, wie lustig, das kann ja mal passieren&amp;rdquo; und twittere die Sportschau am &lt;a href="https://twitter.com/Krrrcks/status/555840754858610688"&gt;15. Januar 2015&lt;/a&gt; und &lt;a href="ttps://twitter.com/Krrrcks/status/556751066587734016"&gt;18. Januar 2015&lt;/a&gt; mit einem Hinweis auf den Tippfehler an. Beim heutigen Durchblättern der Sportschau-Seite stieß ich erneut auf den Text und der Fehler ist heute, also am 30. Januar 2015, nach wie vor dort zu sehen:&lt;/p&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/2015-01-30-sportschau.png" alt="Homepage Sportschau" /&gt;
+ &lt;p class="caption"&gt;Homepage Sportschau&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;Ich meine, man kann sich ja mal vertun, aber dann auf einen Leserhinweis so gar nichts zu unternehmen, ist der Sportschau eigentlich nicht würdig.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; Ich twitterte die Sportschau mit meinem Blog-Post an und  unmittelbar danach wurde der Fehler  &lt;a href="https://twitter.com/sportschau/status/561138889776447489"&gt;korrigiert.&lt;/a&gt;  Sehr prompte Reaktion.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">3. Docker-Meetup in Frankfurt</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/01/18/3-docker-meetup-in-frankfurt/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-01-18-3-docker-meetup-in-frankfurt</id>
+  <published>2015-01-18T19:05:35Z</published>
+  <updated>2015-01-18T19:05:35Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Am 13. Januar 2015 fand in Frankfurt das bereits &lt;a href="http://www.meetup.com/Docker-Frankfurt/events/219160756/"&gt;dritte Docker-Meetup&lt;/a&gt; statt, hier einige Notizen von mir dazu.&lt;/p&gt;
+
+&lt;h2 id="neues-zum-them-orchestrierung"&gt;Neues zum Them Orchestrierung&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https://www.twitter.com/PRossbach"&gt;Peter Rossbach&lt;/a&gt; hat in einem munteren Vortrag einige Neuerungen aus dem &amp;ldquo;Docker Universum&amp;rdquo; zum Thema Orchestrierung vorgestellt. Unter anderem &lt;a href="https://github.com/docker/machine"&gt;Docker Machine&lt;/a&gt;, &lt;a href="https://github.com/docker/swarm"&gt;Docker Swarm&lt;/a&gt;, Docker Compose (ehemals &lt;a href="http://fig.sh"&gt;fig.sh&lt;/a&gt;, das wohl aufgrund von Aussprachemehrdeutigkeiten umbenannt wurde) etc. Ein sehr interessanter Überblick, insbesondere da Peter auch die ganzen Sachen immer mal angefasst und ausprobiert hat. Im Kern scheint es mir jedoch so zu sein, als wäre die Frage nach &amp;ldquo;Was nimmt man am besten, um Docker auf einer oder mehreren Maschinen im Produktivbetrieb zu nutzen?&amp;rdquo; noch recht in Bewegung. Für mich kristallisiert sich für meine Anwendungsfälle da bisher noch keine überzeugende Lösung heraus. Was ich jedoch einmal testen werde ist das fig.sh bzw. Docker Compose, da man damit eigentlich sehr schön in einem YAML-Dokument mehrere Container und ihre Abhängigkeiten darstellen kann.&lt;/p&gt;
+
+&lt;h2 id="docker-linking"&gt;Docker Linking&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="http://linsenraum.de"&gt;Erkan Yanar&lt;/a&gt; hat in einem Einsteigervortrag die Grundlagen von Links zwischen Containern vorgestellt. Hier scheint die Entwicklung auch noch in Bewegung zu sein, insbesondere Links über mehrere Hosts hinweg scheinen doch noch nicht so ganz einfach handzuhaben zu sein (vorgestellt wurden &lt;a href="https://github.com/SvenDowideit/dockerfiles/blob/master/ambassador/Dockerfile"&gt;Ambassador-Ansätze&lt;/a&gt; mit &lt;a href="http://www.dest-unreach.org/socat/"&gt;socat&lt;/a&gt; und anderes).&lt;/p&gt;
+
+&lt;p&gt;Besonders erhellend fand ich den Hinweis, dass ab Docker Version 1.3 nun bei Links zwischen den Containern die &lt;code&gt;/etc/hosts&lt;/code&gt; auch nach Neustarts von gelinkten Containern immer deren richtige IP-Adresse erhält, wohingegen die Umgebungsvariablen nur die Ursprungs-IP-Adressen enthalten (also ein klares &amp;ldquo;Verlasst Euch nicht auf die Umgebungsvariablen!&amp;rdquo;).&lt;/p&gt;
+
+&lt;h2 id="netzwerken-mit-docker"&gt;Netzwerken mit Docker&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https:/www.twitter.com/aschmidt75"&gt;Andreas Schmidt&lt;/a&gt; stellte eine ganze Reihe von Varianten vor, mit denen man die Container im Netzwerk auf unterschiedliche Arten und Weisen verknoten kann. Soweit ganz interessant, aber nicht meine &amp;ldquo;Liga&amp;rdquo;, wo ich mich gut auskenne.&lt;/p&gt;
+
+&lt;h2 id="fazit"&gt;Fazit&lt;/h2&gt;
+
+&lt;p&gt;Bei Docker in Bezug auf Orchestrierung und Container-Linken gibt es recht viel Bewegung und für mich kristallisieren sich die überzeugenden Konzepte noch nicht so richtig heraus, um damit in eine Produktivumgebung zu gehen. Im Bereich der Entwicklung und der Tests nutze ich die Container von Docker schon recht gerne, bei Produktiv-Umgebungen schreckt mich die Vielzahl an Werkzeugen und zum Teil auch die Komplexität doch noch etwas.&lt;/p&gt;
+
+&lt;p&gt;Jedenfalls wieder ein gutes Meetup mit Ideen und Anregungen. Ich finde das schon sehr außergewöhnlich (besonders wenn man es mit anderen Branchen vergleicht), dass sich Leute zum Austauschen über Technologie treffen, Vorträge vorbereiten etc.&lt;/p&gt;
+
+&lt;h2 id="links-zu-den-folien"&gt;Links zu den Folien&lt;/h2&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;&lt;a href="https://speakerdeck.com/rossbachp/docker-meetup-frankfurt-2015-docker-orchestration"&gt;Peter Rossbach, Docker Orchestation&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="https://speakerdeck.com/aschmidt75/docker-networking"&gt;Andreas Schmidt, Docker Networking&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content></entry>
+ <entry>
+  <title type="text">Eindrücke vom 31C3</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/01/05/eindrücke-vom-31c3/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-01-05-eindrücke-vom-31c3</id>
+  <published>2015-01-05T16:03:00Z</published>
+  <updated>2015-01-05T16:03:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Dieses Jahr habe ich mich einmal aufgerafft und bin das erste mal zum Congress des CCC nach Hamburg gefahren. Im Folgenden ein paar Eindrücke:&lt;/p&gt;
+
+&lt;h2 id="drumherum"&gt;Drumherum&lt;/h2&gt;
+
+&lt;p&gt;Ich fand den &lt;a href="http://events.ccc.de/congress/2014/wiki/Main_Page"&gt;31C3&lt;/a&gt; ein tolles Ereignis: Sehr professionell und umsichtig organisiert. Überall, wo ich hinkam, war man nett und freundlich, insgesamt eine sehr willkommende Atmosphäre. Nur der Termin, der ist ja doch etwas sperrig.&lt;/p&gt;
+
+&lt;h2 id="vorträge"&gt;Vorträge&lt;/h2&gt;
+
+&lt;p&gt;Ich konnte einige Vorträge anhören, von denen haben mir die folgenden besonders gut gefallen (ich habe mal die Links zu den Videos und die Links zu den Einträgen im Fahrplan aufgeführt, oft gibt es im Fahrplan auch noch zugehöriges Material und weitere Hinweise):&lt;/p&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6264_-_de_-_saal_1_-_201412271245_-_wir_beteiligen_uns_aktiv_an_den_diskussionen_-_martin_haase_maha.html"&gt;&amp;ldquo;Wir beteiligen uns aktiv an den Dikussionen&amp;rdquo;&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6264.html"&gt;(Link im Fahrplan)&lt;/a&gt; von Martin Haase, der die &lt;a href="http://www.digitale-agenda.de/"&gt;Digitale Agenda&lt;/a&gt; der Bundesregierung aus sprachwissenschaftlicher Sicht entlarvt als das, was es ist: Heiße Luft und wenig Konkretes, schon gar nicht für den &amp;ldquo;Bürger&amp;rdquo;. Besonders spannend fand ich den Teil des &amp;ldquo;PDF befreien&amp;rdquo;, denn die Bundesregierung hat nur ein wenig konsistentes PDF bereit gestellt, dass maha erst einmal in einen Text umwandeln musste, mit dem er mit seinen Werkzeugen arbeiten konnte. In der Diskussion wurde er dazu auch noch einmal befragt und meinte, Markdown, das sei eigentlich ein ganz gutes Format.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;Die beiden SS7-Vorträge von &lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6249_-_en_-_saal_1_-_201412271715_-_ss7_locate_track_manipulate_-_tobias_engel.html"&gt;Tobias Engel&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6249.html"&gt;(Fahrplan)&lt;/a&gt; und &lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6122_-_en_-_saal_1_-_201412271830_-_mobile_self-defense_-_karsten_nohl.html"&gt;Karsten Nohl&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6122.html"&gt;(Fahrplan)&lt;/a&gt;: Die Talks fand ich incl. der Live-Vorführungen sehr eindrücklich und haben mir vor Augen geführt, dass es mit der Sicherheit im Mobilfunk noch schlechter aussieht, als ich so befürchtet habe.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6369_-_en_-_saal_1_-_201412272145_-_ecchacks_-_djb_-_tanja_lange.html"&gt;ECCHacks&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6369.html"&gt;(Fahrplan)&lt;/a&gt; von djb und Tanja Lange: Ein Bekannter empfahl mir den Vortrag und meinte, ich könnte da schon was verstehen, obwohl ich mich mit diesen Ellpitischen Kurven nicht wirklich auskenne. Der Talk war didaktisch sehr gut aufbereitet und ich habe trotz der späten Stunde ein bisschen verstanden (glaube ich), worum es da eigentlich geht.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6294_-_de_-_saal_1_-_201412281815_-_vor_windows_8_wird_gewarnt_-_ruedi.html"&gt;Vor Windows 8 wird gewarnt&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6294.html"&gt;(Fahrplan)&lt;/a&gt; von ruedi: Ein kurzweiliger Vortrag über &amp;ldquo;Secure Boot&amp;rdquo; und andere Schwierigkeiten mit &amp;ldquo;Windows 8&amp;rdquo;.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6258_-_en_-_saal_1_-_201412282030_-_reconstructing_narratives_-_jacob_-_laura_poitras.html"&gt;Reconstructing naraatives&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6258.html"&gt;(Fahrplan)&lt;/a&gt; von Jacob Appelbaum und Laura Poitras: Das war im voll besetzten Saal 1 ein sehr eindrücklicher Vortrag, der mit Standing Ovations endete.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6121_-_en_-_saal_2_-_201412291715_-_what_ever_happened_to_nuclear_weapons_-_michael_buker.html"&gt;What Ever Happened to Nuclear Weapons?&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6121.html"&gt;(Fahrplan)&lt;/a&gt; von Michael Büker: Diesen Vortrag fand ich vom Aufbau und der Didaktik sehr gut vorbereitet. Als wichtige Erkenntnis habe ich für mich den &lt;a href="http://de.wikipedia.org/wiki/Kernwaffenteststopp-Vertrag"&gt;Kernwaffenstopp-Vertrag (englisch Comprehensive Nuclear-Test-Ban Treaty)&lt;/a&gt; mitgenommen, einen internationalen Vertrag, der sämtliche Kernwaffentests verbietet, der aber noch nicht in Kraft getreten ist; dieser Vertrag geht weiter als der Nuclear Test Ban Treaty aus den 1960er Jahren, der Kernwaffenversuche in der Atmosphäre, im Weltraum und unter Wasser verbietet. Dennoch gibt es hierzu schon eine &lt;a href="http://www.ctbto.org/"&gt;Organisation, die Preparatory Commission for the Comprehensive Nuclear-Test-Ban Treaty Organisation&lt;/a&gt;, der man auch auf Twitter &lt;a href="http://twitter.com/ctbto_alerts"&gt;folgen kann&lt;/a&gt;. Diese &amp;ldquo;Preparatory Commission&amp;rdquo; bereitet das Inkraftreten vor und baut ein Überwachungssystem auf.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6128_-_en_-_saal_1_-_201412291830_-_thunderstrike_efi_bootkits_for_apple_macbooks_-_trammell_hudson.html"&gt;EFI bootkits for Apple MacBooks&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6128.html"&gt;(Fahrplan)&lt;/a&gt; von Trammell Hudson: Ich fand das sehr spannend vorgetragen (incl. Hexdumps etc.), wie Trammel Hudson durch &amp;ldquo;Reverse Engineering&amp;rdquo; auf ein Sicherheitsproblem bei Apple-Produktion gestoßen ist und dieses dann in einem Proof-of-Concept auch ausnutzen konnte.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;
+
+&lt;p&gt;Aufgrund des riesigen Angebots an Vorträgen, Workshops etc. muss ich mir in den kommenden Tagen glaube ich noch den einen oder anderen Vortrag als Video ansehen.&lt;/p&gt;
+
+&lt;h2 id="morgengrauen-stammtisch"&gt;MorgenGrauen-Stammtisch&lt;/h2&gt;
+
+&lt;p&gt;Etwas spontan und nicht so sonderlich koordiniert haben wir auch einen &lt;a href="http://mg.mud.de"&gt;MorgenGrauen&lt;/a&gt;-Stammtisch ausgerufen und siehe da: Drei Spieler und zwei Gäste fanden sich ein, so dass man bei einem Bier ein wenig plaudern und sich austauschen konnte.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Aus zwei mach eins</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/01/04/aus-zwei-mach-eins/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-01-04-aus-zwei-mach-eins</id>
+  <published>2015-01-04T15:16:08Z</published>
+  <updated>2015-01-04T15:16:08Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Bisher hatte ich meine Blog-Einträge auf zwei Blogs aufgeteilt, &lt;a href="http://blog.krrrcks.net"&gt;eines&lt;/a&gt; mit mehr technischen (und zum Teil englischen Texten) und dieses hier mit deutschen Texten. Ich denke, ich werde das auf dieses eine Blog hier konzentrieren. Das reduziert doch etwas den Verwaltungsaufwand. Ich habe die Texte vom nun etwas still gelegten Blog hier herüber kopiert.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Ich habe mal Octopress aktualisert</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/12/21/ich-habe-mal-octopress-aktualisert/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-12-21-ich-habe-mal-octopress-aktualisert</id>
+  <published>2014-12-21T10:58:16Z</published>
+  <updated>2014-12-21T10:58:16Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Neulich fiel mir auf, dass die Suchfunktion, die auf Google basiert, nicht nur auf der eigenen Homepage, sondern im &amp;ldquo;gesamten&amp;rdquo; Suchindex von Google gesucht hat. Eben flatterte dieser &lt;a href="https://twitter.com/octopress/status/546528904115404800"&gt;Tweet&lt;/a&gt; mit &lt;a href="https://github.com/imathis/octopress/commit/514ed5eb9f6bb91a6f3288febf3c2ba892a9b693"&gt;Link&lt;/a&gt; zu einem Fix an mir vorbei und da hat sich wohl die API geändert.&lt;/p&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/2014-12-21-octopress.png" alt="Octopress-Tweet" /&gt;
+ &lt;p class="caption"&gt;Octopress-Tweet&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;Also habe ich mich einmal an den &lt;a href="http://octopress.org/docs/updating/"&gt;Hinweisen&lt;/a&gt; zum Aktualisieren von Octopress orientiert. Hierzu werden die folgenden Schritte vorgeschlagen:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git pull octopress master      # Get the latest Octopress
+bundle install                 # Keep gems updated
+rake update_source             # update the template's source
+rake update_style              # update the template's style&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Soweit lief das auch. Es tauchten anschließend zwei Probleme auf:&lt;/p&gt;
+
+&lt;ol&gt;
+ &lt;li&gt;
+  &lt;p&gt;Das &lt;code&gt;execjs&lt;/code&gt; jammerte, dass ihm irgendwie eine  JavaScript-Bibliothek fehlte. Nach kurzer Recherche gab es die  Empfehlung, die Zeile &lt;code&gt;gem 'therubyracer'&lt;/code&gt; in das &lt;code&gt;Gemfile&lt;/code&gt;  aufzunehmen. Okay, das funktionierte schon einmal.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;Bei den Feeds für die Kategorien jammerte das Octopress ein  ungültiges Layout an. In &lt;code&gt;category_feed.xml&lt;/code&gt; stand in der Tat  &lt;code&gt;layout: nil&lt;/code&gt;. Ich habe das auf &lt;code&gt;layout: page&lt;/code&gt; geändert. Nun tat  auch dies.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
+
+&lt;p&gt;Mit dem Update funktioniert nun auch das Such-Formular wieder.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ergänzung:&lt;/strong&gt; Ich lasse das Jekyll und Octopress in einem  &lt;a href="/blog/2014/06/10/relaunch-fast-fertig/"&gt;Docker-Container&lt;/a&gt; laufen und irgendwie bekam ich bei &lt;code&gt;rake preview&lt;/code&gt;  meine Seite nicht mehr zu sehen. Da ich mich mit Ruby und den  Komponenten nicht so gut auskenne, weiß ich nicht, ob mein &amp;ldquo;Fix&amp;rdquo; so  gut ist: Ich habe im &lt;code&gt;Rakefile&lt;/code&gt; den &lt;code&gt;rackup&lt;/code&gt;-Aufruf um den  Parameter &lt;code&gt;-o 0.0.0.0&lt;/code&gt; ergänzt. Dann bekam ich vom Host wieder eine  Verbindung zum Webserver im Octopress-Container.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update vom 04. Januar 2014:&lt;/strong&gt; Nach einem kurzen  &lt;a href="https://twitter.com/Krrrcks/status/546667456128114688"&gt;Gespräch&lt;/a&gt;  via Twitter habe ich mich entschieden, den eingebauten Server doch  wieder so zu belassen, wie es im &lt;code&gt;Rakefile&lt;/code&gt; ursprünglich  stand. Statt dessen habe ich einfach in dem Docker-Container einen  &lt;code&gt;nginx&lt;/code&gt; hinzuinstalliert, der dann mein &lt;code&gt;public&lt;/code&gt;-Verzeichnis an den  Port 4000 ausliefert. So funktioniert es wieder prima: Ich starte  den &lt;code&gt;nginx&lt;/code&gt; und lasse dann das &lt;code&gt;rake watch&lt;/code&gt; laufen, um die Seiten  immer wieder neu zu erzeugen, wenn sich Dinge geändert haben.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">"Neues" Arbeitspapier</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/12/18/-neues-arbeitspapier/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-12-18-neues-arbeitspapier</id>
+  <published>2014-12-18T17:24:27Z</published>
+  <updated>2014-12-18T17:24:27Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Zusammen mit &lt;a href="http://www.bk.tudelft.nl/en/about-faculty/departments/otb/about-otb/staff/alle-medewerkers/haffner-marietta/"&gt;Marietta Haffner&lt;/a&gt; hatte ich für die &lt;a href="http://www.ccnorway.no/enhr2012/"&gt;ENHR-Konferenz im Jahr 2012 in Lillehammer&lt;/a&gt; ein Konferenzpapier vorbereitet, das Marietta dort vorgestellt hatte. Wir haben nun in der Arbeitspapier-Reihe des OTB an der TU Delft eine überarbeitete Fassung &lt;a href="http://www.bk.tudelft.nl/fileadmin/Faculteit/BK/Over_de_faculteit/Afdelingen/OTB/publicaties/Working_papers/OTB_Working_papers_2014-07_German_cooperatives.pdf"&gt;eingestellt&lt;/a&gt;.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Aus der Entscheidung des BVerfG zur Erbschaftsteuer</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/12/18/aus-der-entscheidung-des-bverfg-zur-erbschaftsteuer/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-12-18-aus-der-entscheidung-des-bverfg-zur-erbschaftsteuer</id>
+  <published>2014-12-18T06:41:37Z</published>
+  <updated>2014-12-18T06:41:37Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Das Bundesverfassungsgerichts hat in seiner &lt;a href="http://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/DE/2014/12/ls20141217_1bvl002112.html"&gt;Entscheidung&lt;/a&gt; vom 17. Dezember 2014 (1 BvL 21/12) Regelungen zur Erbschaftsteuer als verfassungwidrig moniert. Ich finde in der Entscheidung eigentlich den fünften Leitsatz mit am interessantesten:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;&amp;ldquo;Ein Steuergesetz ist verfassungswidrig, wenn es Gestaltungen zulässt, mit denen Steuerentlastungen erzielt werden können, die es nicht bezweckt und die gleichheitsrechtlich nicht zu rechtfertigen sind.&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Nun bin ich kein Steuer-, Verfassungsrechtsspezialist (genaugenommen gar kein Rechtsspezialist) und weiß nicht, ob dieser Satz nicht ohnehin schon gilt oder Verfassungs- und Steurrechtsrealität ist. Ich habe es allerdings in dieser Klarheit noch nicht gelesen. Und wenn ich mir so das eine oder andere Steuergesetz und seine Wirkungen ansehe, dann kommt da unter diesem Leitsatz vielleicht in den kommenden Jahren einiges auf die Gerichte zu.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Migration alter Blog-Einträge</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/12/17/migration-alter-blog-einträge/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-12-17-migration-alter-blog-einträge</id>
+  <published>2014-12-17T17:11:00Z</published>
+  <updated>2014-12-17T17:11:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Es kamen lange Winterabende und ich habe die alten Blog-Einträge von der mittels Org-Mode erstellten Seite hier nach Octopress migriert. Im Archiv sind diese zu finden und die Links etc. sollten nun auch passend mit migriert worden sein.&lt;/p&gt;
+
+&lt;p&gt;Bei der Konvertierung habe ich ein Programm kennengelernt, das mir sehr geholfen hat: &lt;a href="http://johnmacfarlane.net/pandoc/"&gt;Pandoc&lt;/a&gt;. Das ist ein Konverter, der Text- und Markupdateien hin und her konvertieren kann. Dabei beherrscht er eine ganze Reihe von Formaten. Insbesondere kann er das Org-Mode-Format (das ich für viele Dinge verwende) ebenso wie LaTeX und Markdown (daneben aber auch noch eine Legion von Formaten).&lt;/p&gt;
+
+&lt;p&gt;Da mein Hauptdateiformat ohnehin &amp;ldquo;Textdateien&amp;rdquo; sind (&amp;ldquo;Never trust a file that isn&amp;rsquo;t ASCII&amp;rdquo;) ist das sehr praktisch, um zwischen verschiedenen Markup-Formaten hin und her zu springen.&lt;/p&gt;
+
+&lt;p&gt;Für die Migration meine Blog-Einträge lief dies wie folgt: Ich hatte die in der alten Homepage mit Org-Mode und Org-Jekyll erstellt. Dabei hatte das Org-Jekyll-Modul entsprechende HTML-Dateien mit einem YAML-Header erzeugt. Mittels Pandoc konnte ich die nun wieder nach Markdown konvertieren, habe die YAML-Header ein wenig angepasst, Kategorien aktualisiert und noch mal das Markup zwecks Zeilenumbrüche, Fußnoten und Links geprüft und leicht angepasst. Insgesamt sehr schnell bewältigbar.&lt;/p&gt;
+
+&lt;p&gt;Dieser ganze Zoo rund um Markdown und andere ähnliche Formate ist zwar manchmal ein bisschen unübersichtlich, aber mir gefällt das sehr gut, dass man mit wenig Markup schön Textdateien strukturieren kann und dann mit Pandoc auch gut hin und her konvertieren kann.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Wie das Haus von Bundesministerin Nahles mauert</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/11/21/wie-das-haus-von-bundesministerin-nahles-mauert/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-11-21-wie-das-haus-von-bundesministerin-nahles-mauert</id>
+  <published>2014-11-21T09:39:08Z</published>
+  <updated>2014-11-21T09:39:08Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Ein Gesetzesvorhaben der großen Koalition ist eine Regelung zur Tarifeinheit. Passend in die Tarifauseinandersetzungen bei der Deutschen Bahn zeigte Bundesministerin Nahles Entschlossenheit und Tatkraft:&lt;/p&gt;
+
+&lt;p&gt;Am 28. Oktober 2014 &lt;a href="http://www.bmas.de/DE/Themen/Arbeitsrecht/Meldungen/gesetzentwurf-tarifeinheit.html;jsessionid=FB47DA2A8F96F14200ECE524ACBD96BC"&gt;informierte sie&lt;/a&gt; die Presse über den Gesetzentwurf ihres Hauses zur Tarifeinheit. Dieser solle in die Ressortabstimmung gehen und am 3. Dezember im Kabinett verabschieden werden. Den Abschluss des parlamentarischen Verfahrens erwartete Frau Nahles für den Sommer 2015.&lt;/p&gt;
+
+&lt;p&gt;Über die Vorstellung und den Inhalt des Entwurfs berichtete ausführlich in zwei Berichten die FAZ (&lt;a href="http://www.faz.net/-i2k-7vmd0"&gt;hier&lt;/a&gt; und &lt;a href="http://www.faz.net/-gqg-7vng9"&gt;hier&lt;/a&gt;). Den Berichten nach fand ein Gespräch der FAZ mit der Bundesministerin statt. Der FAZ lag der Referentenentwurf vor. Den Berichten ebenfalls zu entnehmen war, dass sozialpolitische und arbeitsrechtliche Interessenverbände wie die Bundesvereinigung der Arbeitgeber und auch der Deutsche Gewerkschaftsbund über den Entwurf verfügten, diese genannten sogar an &amp;ldquo;der Ausarbeitung des Gesetzes beteiligt&amp;rdquo; waren (Zitat aus dem FAZ-Bericht).&lt;/p&gt;
+
+&lt;p&gt;Ich bin ja skeptisch, wie man das, was die Koalition sich da vorgenommen hat, regeln kann. Also dachte ich mir: Wenn die Zeitung davon weiß, die Interessenverbände mitgearbeitet haben und auch denen der Entwurf vorlag und dann die Bundesministerin auch noch hierüber Pressegespräche führt und den Entwurf öffentlich &amp;ldquo;vorstellt&amp;rdquo;, dann kann ich da ja auch einmal einen Blick hineinwerfen. Ich habe, da ich den Entwurf nicht auf der Homepage entdeckte, diesen beim Bundesministerium für Arbeit und Soziales angefordert.&lt;/p&gt;
+
+&lt;p&gt;So einfach geht es aber nicht: Es antwortete mir am &lt;em&gt;29. Oktober 2014&lt;/em&gt; das &amp;ldquo;Kommunikationscenter&amp;rdquo; des Bundesministeriums für Arbeit und Soziales wie folgt:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;Sollten Sie (&amp;hellip;) den Gesetzentwurf zur Tarifeinheit meinen, so müssen wir Ihnen mitteilen, dass dieser noch nicht veröffentlicht wurde. Er geht in Kürze in die Ressortabstimmung und kann erst danach veröffentlicht werden.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Ich wies in einer Antwort darauf hin, dass das ja nicht so ganz sein könnte, dass die Tarifparteien, interessierte Verbände und die Presse den Entwurf vorliegen hätten, der gemeine Bürger sich aber mit der Presseerklärung der Bundesministerin (ein MP3-File mit 2:36 Minuten Länge) bescheiden müsse. Am &lt;em&gt;30. Oktober 2014&lt;/em&gt; teilte das Kommunikationscenter mit, dass sie die Anfrage an die Fachabteilung weitergeben wollten, dafür aber noch meine Postanschrift benötigten. Diese habe ich umgehend übermittelt. Es passierte erst einmal nichts. Am &lt;em&gt;4. November 2014&lt;/em&gt; wollte ich dann den Stand wissen (es kann ja nicht so schwer sein, ein PDF per E-Mail zu versenden) und außerdem, welche Fachabteilung dafür zuständig ist (dann kann man das ja schnell per Telefon oder E-Mail klären). Nichts passierte. Am &lt;em&gt;7. November 2014&lt;/em&gt; habe ich dann noch mal erklärt, dass ich den Entwurf wirklich möchte und die Anfrage formal auf das Informationsfreiheitsgesetz gestützt. Nun wachte das Kommunikationscenter am &lt;em&gt;10. November 2014&lt;/em&gt; auf und teilte mit, dass sie die Anfrage an die zuständige Fachabteilung weitergeleitet hätten. Welche das ist, mochte man mir aber immer noch nicht mitteilen.&lt;/p&gt;
+
+&lt;p&gt;Das war es dann wieder, das Bundesministerium verfiel erneut in Stille. Seit dem sind zwei Wochen vergangen.&lt;/p&gt;
+
+&lt;p&gt;Da mich der Entwurf wirklich interessierte, habe ich einmal einen Interessenverband angeschrieben und nach ca. einer Stunde erhielt ich den Entwurf.&lt;/p&gt;
+
+&lt;p&gt;Ich stelle mir da ja schon einige Fragen: Was ist eigentlich so schwer daran, einen Referentenentwurf, den man ohnehin breit hat zirkulieren lassen, einem Bürger zur Verfügung zu stellen? Warum antwortet die Fachabteilung über einen Zeitraum vom 4. November 2014 bis heute einfach gar nicht?&lt;/p&gt;
+
+&lt;p&gt;Mir drängt sich jedenfalls der Eindruck auf, dass das Ministerium von Frau Nahles die Diskussion gestalten möchte. Dabei soll wohl die Bundesministerin als zupackende und problemlösende Politikerin dargestellt werden. Hierzu werden Verbände und Medien exklusiv mit Details versorgt. Der gemeine Bürger soll sich davon beeindrucken lassen und bloß nicht nach Details fragen; die erfährt er dann schon, wenn die Politik und Ministerialverwaltung es für geboten halten.&lt;/p&gt;
+
+&lt;p&gt;P.S.: Ich weiß, dass Referentenentwürfe normalerweise nicht auf der Homepage erscheinen und Gesetzesvorhaben vorab mit Verbänden diskutiert werden. Ich halte das auch grundsätzlich für sinnvoll. Ich habe aber bisher noch nicht ein solches &amp;ldquo;Mauern&amp;rdquo; erlebt. Bisher erhielt ich dort, wo ich angefragt hatte, immer ohne Schwierigkeiten Auskunft.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update (01. Dezember 2014):&lt;/strong&gt; Zwischenzeitlich habe ich den  Referentenentwurf für jedermann zum Download bei der taz gefunden:  &lt;a href="http://taz.de/static/pdf/ReferentenentwurfTarifeinheit.pdf"&gt;PDF&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update (13. Dezember 2014):&lt;/strong&gt; Am 11. Dezember 2014 hat das  Bundeskabinett den Gesetzentwurf zur Tarifeinheit  &lt;a href="http://www.bundesregierung.de/Content/DE/Kabinettssitzung/2014/12/2014-12-11-kabinett.html?nn=434518"&gt;beschlossen&lt;/a&gt;,  er findet sich nun  &lt;a href="http://www.bmas.de/DE/Service/Presse/Pressemitteilungen/Tarifeinheit-staerkt-sozialpartnerschaft.html?nn=31846"&gt;auf der&lt;/a&gt;  Homepage des Bundesministeriums für  Arbeit und Soziales:  &lt;a href="http://www.bmas.de/SharedDocs/Downloads/DE/Thema-Arbeitsrecht/entwurf-gesetz-tarifeinheit.pdf?__blob=publicationFile"&gt;PDF&lt;/a&gt;  Wenig erstaunlicherweise habe ich auf meine Anfrage vom 29. Oktober  2014 außer den oben dargestellten Nachrichten des  &amp;ldquo;Kommunikationscenters&amp;rdquo; nichts gehört.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Warten auf den technischen Fortschritt als politisches Prinzip?</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/11/13/warten-auf-den-technischen-fortschritt-als-politisches-prinzip/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-11-13-warten-auf-den-technischen-fortschritt-als-politisches-prinzip</id>
+  <published>2014-11-13T08:53:28Z</published>
+  <updated>2014-11-13T08:53:28Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Am 12. November 2014 sendete der &lt;a href="http://www.deutschlandfunk.de"&gt;Deutschlandfunk&lt;/a&gt; in der Reihe &amp;ldquo;Hintergrund&amp;rdquo; einen &lt;a href="http://www.deutschlandfunk.de/energetische-sanierung-widerstand-gegen-das-daemmen-waechst.724.de.html?dram:article_id=303005"&gt;Bericht&lt;/a&gt; über die energetische Sanierung mit Wärmedämmverbundsystemen.&lt;/p&gt;
+
+&lt;p&gt;Zu der Diskussion wollte sich die zuständige Bundesministerin Barbara Hendricks nicht äußern, das Thema sei nur ein Randthema und sie habe andere Prioritäten. Sehr interessant waren dafür dann die Meinungen des sie vertretenden Staatssekretärs &lt;a href="http://www.bmub.bund.de/bmub/leitung-des-hauses/lebenslauf-von-herrn-gunther-adler/"&gt;Gunther Adler&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;In diesem Blogpost will ich auf einen Aspekt des Berichts eingehen. Es sei wohl so, dass die Entsorgung von Wärmedämmverbundsystemen (also im Wesentlichen auf verschiedene Arten behandeltes Polystyrol) schwierig ist. So wird gesagt:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;&amp;ldquo;Das große Problem ist gerade bei der Polystyrol-Dämmung, dass die Lebenserwartung der Dämmplatten relativ gering ist. Man geht davon aus, dass sie 20 oder 30 Jahre an der Fassade bleiben können, dann ersetzt werden müssen.&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Über die Entsorgung wurde gesagt:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;&amp;ldquo;Das Dämmmaterial Polystyrol darf nicht auf die Mülldeponie, unter anderem wegen der erwähnten Flammschutzmittel. Das Material soll in Müllverbrennungsanlagen vernichtet werden, &amp;hellip;&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Auf diese Thematik angesprochen, entgegnete der Staatssekretär unter anderem:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;"&amp;hellip; da gibt es berechtigte Fragen, da gibt es auch nichts unter den Tisch zu kehren. Da gibt es im Moment noch Forschungsbedarf."&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Die DLF-Redakteure wiesen hier jedoch darauf hin, dass das Material seit Langem eingesetzt würde. In den vergangenen 35 Jahren seien 900 Millionen Quadratmeter Wärmedämmverbundsysteme verbaut worden, davon 80 Prozent mit Polystyrol. Hierauf der Staatssekretär:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;&amp;ldquo;Wenn wir da schon heute die Forschung anlaufen lassen und fragen, was passiert eigentlich in 30 oder 40 oder 50 Jahren, wenn das dann mal in die Müllverbrennungsanlage geht, da sollten wir doch offen für technischen Fortschritt in Deutschland sein, dass es unserer Industrie und unserer Forschung gelingen wird, beispielsweise Filteranlagen zu entwickeln, die wirklich garantieren, dass hundert Prozent aller Schadstoffe abgefangen werden.&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Ich fasse zusammen: Das Bundesministerium für Umwelt, Naturschutz, Bau und Reaktorsicherheit unterstützt offen das Inverkehrbringen von Stoffen, deren Entsorgung zumindest &amp;ldquo;offene Fragen&amp;rdquo; und &amp;ldquo;Forschungsbedarf&amp;rdquo; bringt und das Ministerium findet, der technische Fortschritt wird es schon richten. Kurzum, es gilt das Prinzip &amp;ldquo;Hoffnung auf die Zukunft&amp;rdquo; und die Last, sich die Entsorgung zu überlegen, bürdet man den nachfolgenden Generationen auf.&lt;/p&gt;
+
+&lt;p&gt;Wo sind in diesem Zusammenhang eigentlich die ganzen Papiere und politischen Ansätze zu Nachhaltigkeit, Verantwortung, Schutz zukünftiger Generationen geblieben? Im Übrigen widerspricht die Haltung auch dem vom Bauministerium selbst herausgegebenen &lt;a href="http://www.nachhaltigesbauen.de/leitfaeden-und-arbeitshilfen-veroeffentlichungen/leitfaden-nachhaltiges-bauen-2013.html"&gt;Leitfaden Nachhaltiges Bauen 2013&lt;/a&gt;, in dem besonderer Wert auf den Lebenszyklus von Gebäuden auch unter dem Gesichtspunkt der Entsorgung von Materialen gelegt wird.&lt;/p&gt;
+
+&lt;p&gt;Wenn schon das Thema &amp;ldquo;Wärmedämmverbundsysteme&amp;rdquo; nicht die Priorität der Bundesministerin hat, so muss sie sich fragen lassen, ob gerade im Umwelt- und Bauressort das Prinzip &amp;ldquo;Hoffnung auf die Zukunft&amp;rdquo; Leitlinie ihrer Politik ist.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Erfahrungen mit Docker</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/10/05/erfahrungen-mit-docker/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-10-05-erfahrungen-mit-docker</id>
+  <published>2014-10-05T09:29:43Z</published>
+  <updated>2014-10-05T09:29:43Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Ein Bekannter bat mich, einmal von meinen Erfahrungen mit Docker zu berichten. Also hier als Blog-Post dazu. Ich werde nicht beschreiben, was genau Docker ist und wie es funktioniert. Hierzu gibt es mittlerweile schon eine Reihe von guten Quellen (bspw. auf der Docker-Homepage, in der c&amp;rsquo;t war in Heft 17 (Seiten 146&amp;ndash;151) auch eine ganz gute Einführung enthalten).&lt;/p&gt;
+
+&lt;h2 id="hintergrund"&gt;Hintergrund&lt;/h2&gt;
+
+&lt;p&gt;Seit einigen Jahren verwende ich zum Ausrollen von Software OpenVZ als Container-Lösung. Das funktioniert sehr gut, schont die Ressourcen, lässt sich gut verwalten und überwachen. In den OpenVZ-Containern befindet sich ein kleines Linux der gewünschten Distribution mit so allem, was man im Standard dafür erwartet. Darin installiert und konfiguriert man seine Software und rollt sie dann auf dem Zielsystem bequem aus. Der einzige Nachteil hierbei ist, dass der Host einen eigenen OpenVZ-Kernel benötigt, da nicht oder noch nicht alle Features im Standard-Kernel bereit stehen. Das macht das Zusammenstellen auf meinem Notebook etwas schwierig, denn dort habe ich den OpenVZ-Kernel in der Regel nicht installiert.&lt;/p&gt;
+
+&lt;h2 id="warum-nun-docker"&gt;Warum nun Docker?&lt;/h2&gt;
+
+&lt;p&gt;Im April bin ich eher zufällig (tauchte in den Release-Notes von Ubuntu 14.04 auf) auf das Docker-Projekt gestoßen und habe damit begonnen herumzuexperimentieren.&lt;/p&gt;
+
+&lt;p&gt;Rund um Docker und den Einsatz haben sich eine Vielzahl von Projekten angesammelt. Nicht alles verstehe ich auf Anhieb und mir fällt es zum Teil auch schwer, die unterschiedlichen Projekte zum Ausrollen, Verwalten etc. zu bewerten und zu entscheiden, was davon auch &amp;ldquo;zukunftsfähig&amp;rdquo; ist. Wahrscheinlich muss man hier auch ein bisschen Geduld haben.&lt;/p&gt;
+
+&lt;h2 id="einsatzbereiche"&gt;Einsatzbereiche&lt;/h2&gt;
+
+&lt;p&gt;Für mich haben sich im Wesentlichen zwei Haupteinsatzbereiche herauskristallisiert:  * als Werkzeug in der Software-Entwicklung und  * als Werkzeug zum Ausrollen und dauerhaften Betrieb von Anwendungen&lt;/p&gt;
+
+&lt;h3 id="werkzeug-in-der-software-entwicklung"&gt;Werkzeug in der Software-Entwicklung&lt;/h3&gt;
+
+&lt;p&gt;Ich arbeite in Teams zusammen, bei denen die Entwickler mal nen Windows-Notebook und mal nen Linux-Notebook ihr Eigen nennen. Docker bot sich hier an, eine definitierte Test- und Entwicklungsplattform bereit zu stellen. Ich habe dazu alles, was man so braucht in ein Image zusammengeworfen, dies lässt sich mit dem aktuellen Source Code starten.&lt;/p&gt;
+
+&lt;h3 id="dauerhafter-betrieb"&gt;Dauerhafter Betrieb&lt;/h3&gt;
+
+&lt;h2 id="eigenarten-und-erfahrungen"&gt;Eigenarten und Erfahrungen&lt;/h2&gt;
+
+&lt;h2 id="was-toll-ist"&gt;Was toll ist:&lt;/h2&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;Sehr leicht zu installieren und man kann schnell damit anfangen herumzuspielen.&lt;/li&gt;
+ &lt;li&gt;docker build / Dockerfile&lt;/li&gt;
+ &lt;li&gt;Es entwickelt sich sehr schnell eine aktive Gemeinschaft, so habe  ich auch schon an MeetUps in Frankfurt und Darmstadt  mit Gewinn teilgenommen.&lt;/li&gt;
+ &lt;li&gt;Nicht zu vergessen das Logo.&lt;/li&gt;&lt;/ul&gt;
+
+&lt;h2 id="was-nicht-so-toll-ist"&gt;Was nicht so toll ist:&lt;/h2&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;
+  &lt;p&gt;Images und Container erhalten zur Identifikation Hash-Werte; man  kann Images und Container auch mit Namen versehen. Ist man  allerdings ein wenig am experimentieren und herumbasteln, so sammeln  sich schnell eine Reihe von Containern mit wenig sprechenden Ids an  und zumindest ich verliere da schnell den Überblick.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;Eigentlich sind die Container nicht so mobil, wie die Analogie es  vermuten lässt. Am ehesten sind es noch die Images, die man in eine  Registry einspielen und dann auf unterschiedlichen Systemen  herunterlädt. Mir würde allerdings auch so etwas wie Live Migration  (funktioniert beispielsweise bei OpenVZ für meine Einsatzzwecke ganz  hervorragend) gefallen.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;Für den dauerhaften Betrieb gibt es eine Reihe von für mich offenen  Fragen. Hierzu gibt es zwar Lösungsansätze oder Produkte, aber viele  entwickeln sich erst. Ich will einmal exemplarisch einige offene  Enden herausgreifen:&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;Irgendwie muss man sich um seine Logfiles kümmern, wo die so  landen sollen. Hat man in einem &amp;ldquo;normalen Linux&amp;rdquo; (oder auch einem  Standard-OpenVZ-Container) meist so etwas wie ein logrotated am  laufen, so fehlt das (wenn man der Docker-Philosophie folgt, die  Container so schlank wie möglich zu halten) in einem  Docker-Deployment. Also muss man für jede Anwendung prüfen:  Schreibt sie ihr Log auf Platte? Dann muss man das da irgendwie  herausholen (bspw. über einen Log-File-Volume) oder überwachen,  nutzt sie syslogd muss man das auch irgendwie in den Griff  bekommen oder rotzt sie ihre Meldungen über die Standardausgabe  heraus, dann sammelt immerhin Docker die auf und man kann darin  blättern (die können dort aber auch recht groß werden).&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;Was tut man mit persistenten Daten? Also beispielsweise einer  Datenbank? Der Docker-Weg-zum-Glück bietet an, dass man einen  Container mit der Datenbank erstellt und dann einen für die  jeweilige Anwendung (ist bspw. für das Wordpress-Image auch so gut  zu studieren). Damit die Daten der Datenbank nicht in dem  Container herumliegen, kann man diese noch in ein Volume  packen. Damit die beiden Container nun miteinander kommunizieren  können, kann man deren Daten über Links einander bekannt  machen. Da man sich als Container und Anwendung nicht um  IP-Adressen etc. kümmern &amp;ldquo;soll&amp;rdquo;, ist das auch ganz fein. So erhält  man im Anwendungscontainer dann Umgebungsvariablen zum  Datenbankcontainer sowie auch einen Eintrag in /etc/hosts. Dumm  nur, wenn der Datenbankcontainer mal abschmiert und neu gestartet  werden muss, denn dann erhält er in der Regel eine neue IP-Adresse  und der Link vom Anwendungscontainer zur Datenbank funktioniert  nicht mehr. Sicher, es gibt nun Mittel und Wege damit umzugehen  (DNS-Geschichten, Entdecken der Dienste, etc.), aber ich fände es  eigentlich toll, wenn das Out-of-the-box funktionieren würde.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;
+
+&lt;h2 id="fazit"&gt;Fazit&lt;/h2&gt;
+
+&lt;p&gt;Ich finde es ein spannendes Projekt und wenn sich für mich die einen oder anderen Unklarheiten lichten, werde ich es sicherlich auch für den Produktiveinsatz in Erwägung ziehen. Ich vermute, dass das Projekt sich noch deutlich weiterentwickeln wird, die knapp 65 Mio Venture Capital werden neben Marketing hoffentlich auch ins Produkt gesteckt.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Aktenführung beim Beitragsservice</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/10/05/aktenführung-beim-beitragsservice/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-10-05-aktenführung-beim-beitragsservice</id>
+  <published>2014-10-05T08:45:13Z</published>
+  <updated>2014-10-05T08:45:13Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Im Jahr 2012 habe ich mich rechtmäßig (was allerdings auch etwas Überzeugungsarbeit kostete) von der damaligen GEZ abgemeldet und die neue Beitragsnummer mitgeteilt, über die meine damalige Rundfunkgebühr verbucht werden sollte. Der GEZ war meine alte Beitragsnummer, die neue Beitragsnummer sowie meine Anschrift bekannt. Soweit so gut, besondere Veränderungen sind in der Zwischenzeit nicht eingetreten.&lt;/p&gt;
+
+&lt;p&gt;Am &lt;strong&gt;17. April 2014&lt;/strong&gt; erreicht mich ein Schreiben des Beitragsservices. Sie schreiben dort:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;Auf Basis gesetzlicher Bestimmungen haben wir die Adressdaten der Einwohnermeldeämter mit den bei uns angemeldeten Beitragszahlern abgeglichen. Unter Ihrem Namen konnten wir für diese Wohnung kein Beitragskonto finden.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Oh! Das ist interessant: Sie kannten meinen Namen und Anschrift, schafften es aber dennoch nicht, das mit dem damaligen Vorgang zusammenzubringen? Recht schwaches Bild für so eine Institution, die doch so professionell mit Adressdaten umzugehen weiß.&lt;/p&gt;
+
+&lt;p&gt;Ich beschloss, den Beitragsservice etwas zappeln zu lassen. Meine Antwort vom &lt;strong&gt;24. April 2014&lt;/strong&gt; war daher entsprechend kryptisch:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;Ich verweise auf mein Schreiben vom 24. April 2012 an die seinerzeitige Gebühreneinzugszentrale, die Antwort hierauf vom 10. Mai 2012 und mein Schreiben vom 16. Mai 2012 mit dem Aktenzeichen (&amp;hellip;). Am seinerzeitigen Sacheverhalt hat sich nichts geändert. Demgemäß wird ein Rundfunkbeitrag für die von mir bewohnte Wohnung entrichtet und der Rundfunkbeitrag wird auch regelmäßig abgebucht.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Nun war ich gespannt, ob sie es mit etwas Mühe nicht doch hinbekommen, den Vorgang von damals wieder zu finden und ihren aktuellen Vorgang abzuschließen. Nach der Beitragsservice-Bedenkzeit von acht Wochen (ich meine mich zu erinnern, dass die GEZ es meistens in sechs Wochen geschafft hatte, eine Antwort zu schreiben), kam nun mit Schreiben vom &lt;strong&gt;26. Juni 2014&lt;/strong&gt; eine erneute Bitte um Mitteilung der Beitragsnummer:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;Gerne bearbeiten wir Ihre Angaben. Hierfür benötigen wir jedoch noch die Beitragsnummer, unter der die Wohnung angemeldet ist. Teilen Sie uns diese bitte auf dem Antwortbogen mit.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Alternativ können sie das wohl auch aus der Bankverbindung, früheren Anschriften, früheren Namen etc. herausfinden. Warum jedoch nicht über meine Anschrift und mein damaliges Schreiben? Ach ja, die üblichen Daumenschrauben wurden dem Schreiben noch hinzugefügt:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;Sollten Sie uns nicht innerhalb der Frist (von vier Wochen, D.B.) gehen wir davon aus, dass eine Anmeldung für diese Wohnung erforderlich ist.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Ahja, der Beitragsservice braucht acht Wochen um nach der Beitragsnummer zu fragen, ich soll aber in vier Wochen antworten?&lt;/p&gt;
+
+&lt;p&gt;Nun ging mit das Porto zu sehr ins Geld und ich wechselte auf E-Mails. Am &lt;strong&gt;7. Juli 2014&lt;/strong&gt; teilte ich dem Beitragsservice noch mal alles mit: Neue Wohnung, neue Beitragsnummer etc. Und dass Sie das ja alles seit dem Jahr 2012 schon wüssten. Ich ermunterte den Beitragsservice, doch einfach noch mal einen Adressabgleich durchzuführen:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;Ich bin daher etwas verwundert, dass ich nun schon wieder über einen bei Ihnen bekannten und aktenkundigen Sachverhalt erneut Auskunft erteilen soll. Denn die seinerzeit mitgeteilten Daten mussten doch irgendwie mir und meiner Anschrift (die sich ja auch nicht geändert hat) zugeordnet worden sein. Ich bin zuversichtlich, es ist Ihnen ein Leichtes, aufgrund obiger Informationen und Ihnen bereits vor zwei Jahren mitgeteilten Sachverhaltes Ihren Vorgang abschließen zu können.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Nun ging es Schlag auf Schlag, denn völlig unerwartet antwortete der Beitragsservice bereits am &lt;strong&gt;22. Juli 2014&lt;/strong&gt;. Und nun das erste Eingeständnis:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;Sie teilen mit, dass Sie bereits in 05.2012 mitgeteilt haben, (&amp;hellip;)  Dieses Schreiben liegt uns leider nicht mehr vor, so dass wir auf dessen Inhalt nicht zurückgreifen können.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Wie kann dies sein? Es handelt sich doch um eine Verwaltung? Die sollte doch ihre Aktenführung in Ordnung halten können. In meiner E-Mail vom &lt;strong&gt;28. Juli 2014&lt;/strong&gt; erlöste ich den Beitragsservice und teilte ihnen die Beitragsnummer mit. Allerdings nicht ohne noch ein wenig meine Besorgnis über die Aktenführung zum Ausdruck zu bringen:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;Des Weiteren sehen Sie mich überrascht, dass Sie auf ein Schreiben aus dem Jahr 2012 keinen Zugriff mehr haben. Da ich bisher davon ausging, dass sich die öffentlich-rechtliche Verwaltung in besonderem Maße durch die Schriftlichkeit und Aktenkundigkeit Ihres Handelns auszeichnet, ging ich davon aus, dass zu mir auch die Unterlagen und der Schriftverkehr verfügbar sind. Ich bitte Sie höflichst mir mitzuteilen, wie dieses Schriftgut verloren gegangen ist und wie sichergestellt ist, dass nicht alle zwei Jahre erneut eine Anfrage wie die vom 17.04.2014 (&amp;hellip;) bei mir eingeht.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Nach vier Wochen erreichte mich dann die Auskunft am &lt;strong&gt;27. August 2014&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;Sie fragen, warum wir keinen Zugang zu Ihrem Schreiben vom 24.04.2012 hatten. Der Schriftverkehr wurde unter Ihrem abgemeldeten Beitragskonto (&amp;hellip;) sowie unter dem Beitragskonto (&amp;hellip;) verfilmt. Da Sie nun den Bezug zur Beitragsnummer (&amp;hellip;) hergestellt haben, können wir den Schriftverkehr einsehen. Wir hoffen, Ihnen mit diesen Erläuterungen weitergeholfen zu haben.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Ohja, das haben sie. Nachdem der Vorgang wohl beiderseits genügend Schmerzen verursacht hat, habe ich es dabei bewenden lassen.&lt;/p&gt;</content></entry></feed>

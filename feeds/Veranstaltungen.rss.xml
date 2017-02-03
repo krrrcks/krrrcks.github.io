@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<rss version="2.0">
+ <channel>
+  <title>Daniel Brunner: Posts tagged 'Veranstaltungen'</title>
+  <description>Daniel Brunner: Posts tagged 'Veranstaltungen'</description>
+  <link>http://www.dbrunner.de/tags/Veranstaltungen.html</link>
+  <lastBuildDate>Sun, 18 Jan 2015 19:05:35 UT</lastBuildDate>
+  <pubDate>Sun, 18 Jan 2015 19:05:35 UT</pubDate>
+  <ttl>1800</ttl>
+  <item>
+   <title>3. Docker-Meetup in Frankfurt</title>
+   <link>http://www.dbrunner.de/blog/2015/01/18/3-docker-meetup-in-frankfurt/</link>
+   <guid>urn:http-www-dbrunner-de:-blog-2015-01-18-3-docker-meetup-in-frankfurt</guid>
+   <pubDate>Sun, 18 Jan 2015 19:05:35 UT</pubDate>
+   <description>
+&lt;p&gt;Am 13. Januar 2015 fand in Frankfurt das bereits &lt;a href="http://www.meetup.com/Docker-Frankfurt/events/219160756/"&gt;dritte Docker-Meetup&lt;/a&gt; statt, hier einige Notizen von mir dazu.&lt;/p&gt;
+
+&lt;h2 id="neues-zum-them-orchestrierung"&gt;Neues zum Them Orchestrierung&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https://www.twitter.com/PRossbach"&gt;Peter Rossbach&lt;/a&gt; hat in einem munteren Vortrag einige Neuerungen aus dem &amp;ldquo;Docker Universum&amp;rdquo; zum Thema Orchestrierung vorgestellt. Unter anderem &lt;a href="https://github.com/docker/machine"&gt;Docker Machine&lt;/a&gt;, &lt;a href="https://github.com/docker/swarm"&gt;Docker Swarm&lt;/a&gt;, Docker Compose (ehemals &lt;a href="http://fig.sh"&gt;fig.sh&lt;/a&gt;, das wohl aufgrund von Aussprachemehrdeutigkeiten umbenannt wurde) etc. Ein sehr interessanter Überblick, insbesondere da Peter auch die ganzen Sachen immer mal angefasst und ausprobiert hat. Im Kern scheint es mir jedoch so zu sein, als wäre die Frage nach &amp;ldquo;Was nimmt man am besten, um Docker auf einer oder mehreren Maschinen im Produktivbetrieb zu nutzen?&amp;rdquo; noch recht in Bewegung. Für mich kristallisiert sich für meine Anwendungsfälle da bisher noch keine überzeugende Lösung heraus. Was ich jedoch einmal testen werde ist das fig.sh bzw. Docker Compose, da man damit eigentlich sehr schön in einem YAML-Dokument mehrere Container und ihre Abhängigkeiten darstellen kann.&lt;/p&gt;
+
+&lt;h2 id="docker-linking"&gt;Docker Linking&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="http://linsenraum.de"&gt;Erkan Yanar&lt;/a&gt; hat in einem Einsteigervortrag die Grundlagen von Links zwischen Containern vorgestellt. Hier scheint die Entwicklung auch noch in Bewegung zu sein, insbesondere Links über mehrere Hosts hinweg scheinen doch noch nicht so ganz einfach handzuhaben zu sein (vorgestellt wurden &lt;a href="https://github.com/SvenDowideit/dockerfiles/blob/master/ambassador/Dockerfile"&gt;Ambassador-Ansätze&lt;/a&gt; mit &lt;a href="http://www.dest-unreach.org/socat/"&gt;socat&lt;/a&gt; und anderes).&lt;/p&gt;
+
+&lt;p&gt;Besonders erhellend fand ich den Hinweis, dass ab Docker Version 1.3 nun bei Links zwischen den Containern die &lt;code&gt;/etc/hosts&lt;/code&gt; auch nach Neustarts von gelinkten Containern immer deren richtige IP-Adresse erhält, wohingegen die Umgebungsvariablen nur die Ursprungs-IP-Adressen enthalten (also ein klares &amp;ldquo;Verlasst Euch nicht auf die Umgebungsvariablen!&amp;rdquo;).&lt;/p&gt;
+
+&lt;h2 id="netzwerken-mit-docker"&gt;Netzwerken mit Docker&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https:/www.twitter.com/aschmidt75"&gt;Andreas Schmidt&lt;/a&gt; stellte eine ganze Reihe von Varianten vor, mit denen man die Container im Netzwerk auf unterschiedliche Arten und Weisen verknoten kann. Soweit ganz interessant, aber nicht meine &amp;ldquo;Liga&amp;rdquo;, wo ich mich gut auskenne.&lt;/p&gt;
+
+&lt;h2 id="fazit"&gt;Fazit&lt;/h2&gt;
+
+&lt;p&gt;Bei Docker in Bezug auf Orchestrierung und Container-Linken gibt es recht viel Bewegung und für mich kristallisieren sich die überzeugenden Konzepte noch nicht so richtig heraus, um damit in eine Produktivumgebung zu gehen. Im Bereich der Entwicklung und der Tests nutze ich die Container von Docker schon recht gerne, bei Produktiv-Umgebungen schreckt mich die Vielzahl an Werkzeugen und zum Teil auch die Komplexität doch noch etwas.&lt;/p&gt;
+
+&lt;p&gt;Jedenfalls wieder ein gutes Meetup mit Ideen und Anregungen. Ich finde das schon sehr außergewöhnlich (besonders wenn man es mit anderen Branchen vergleicht), dass sich Leute zum Austauschen über Technologie treffen, Vorträge vorbereiten etc.&lt;/p&gt;
+
+&lt;h2 id="links-zu-den-folien"&gt;Links zu den Folien&lt;/h2&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;&lt;a href="https://speakerdeck.com/rossbachp/docker-meetup-frankfurt-2015-docker-orchestration"&gt;Peter Rossbach, Docker Orchestation&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="https://speakerdeck.com/aschmidt75/docker-networking"&gt;Andreas Schmidt, Docker Networking&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</description></item>
+  <item>
+   <title>Eindrücke vom 31C3</title>
+   <link>http://www.dbrunner.de/blog/2015/01/05/eindrücke-vom-31c3/</link>
+   <guid>urn:http-www-dbrunner-de:-blog-2015-01-05-eindrücke-vom-31c3</guid>
+   <pubDate>Mon, 05 Jan 2015 16:03:00 UT</pubDate>
+   <description>
+&lt;p&gt;Dieses Jahr habe ich mich einmal aufgerafft und bin das erste mal zum Congress des CCC nach Hamburg gefahren. Im Folgenden ein paar Eindrücke:&lt;/p&gt;
+
+&lt;h2 id="drumherum"&gt;Drumherum&lt;/h2&gt;
+
+&lt;p&gt;Ich fand den &lt;a href="http://events.ccc.de/congress/2014/wiki/Main_Page"&gt;31C3&lt;/a&gt; ein tolles Ereignis: Sehr professionell und umsichtig organisiert. Überall, wo ich hinkam, war man nett und freundlich, insgesamt eine sehr willkommende Atmosphäre. Nur der Termin, der ist ja doch etwas sperrig.&lt;/p&gt;
+
+&lt;h2 id="vorträge"&gt;Vorträge&lt;/h2&gt;
+
+&lt;p&gt;Ich konnte einige Vorträge anhören, von denen haben mir die folgenden besonders gut gefallen (ich habe mal die Links zu den Videos und die Links zu den Einträgen im Fahrplan aufgeführt, oft gibt es im Fahrplan auch noch zugehöriges Material und weitere Hinweise):&lt;/p&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6264_-_de_-_saal_1_-_201412271245_-_wir_beteiligen_uns_aktiv_an_den_diskussionen_-_martin_haase_maha.html"&gt;&amp;ldquo;Wir beteiligen uns aktiv an den Dikussionen&amp;rdquo;&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6264.html"&gt;(Link im Fahrplan)&lt;/a&gt; von Martin Haase, der die &lt;a href="http://www.digitale-agenda.de/"&gt;Digitale Agenda&lt;/a&gt; der Bundesregierung aus sprachwissenschaftlicher Sicht entlarvt als das, was es ist: Heiße Luft und wenig Konkretes, schon gar nicht für den &amp;ldquo;Bürger&amp;rdquo;. Besonders spannend fand ich den Teil des &amp;ldquo;PDF befreien&amp;rdquo;, denn die Bundesregierung hat nur ein wenig konsistentes PDF bereit gestellt, dass maha erst einmal in einen Text umwandeln musste, mit dem er mit seinen Werkzeugen arbeiten konnte. In der Diskussion wurde er dazu auch noch einmal befragt und meinte, Markdown, das sei eigentlich ein ganz gutes Format.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;Die beiden SS7-Vorträge von &lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6249_-_en_-_saal_1_-_201412271715_-_ss7_locate_track_manipulate_-_tobias_engel.html"&gt;Tobias Engel&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6249.html"&gt;(Fahrplan)&lt;/a&gt; und &lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6122_-_en_-_saal_1_-_201412271830_-_mobile_self-defense_-_karsten_nohl.html"&gt;Karsten Nohl&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6122.html"&gt;(Fahrplan)&lt;/a&gt;: Die Talks fand ich incl. der Live-Vorführungen sehr eindrücklich und haben mir vor Augen geführt, dass es mit der Sicherheit im Mobilfunk noch schlechter aussieht, als ich so befürchtet habe.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6369_-_en_-_saal_1_-_201412272145_-_ecchacks_-_djb_-_tanja_lange.html"&gt;ECCHacks&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6369.html"&gt;(Fahrplan)&lt;/a&gt; von djb und Tanja Lange: Ein Bekannter empfahl mir den Vortrag und meinte, ich könnte da schon was verstehen, obwohl ich mich mit diesen Ellpitischen Kurven nicht wirklich auskenne. Der Talk war didaktisch sehr gut aufbereitet und ich habe trotz der späten Stunde ein bisschen verstanden (glaube ich), worum es da eigentlich geht.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6294_-_de_-_saal_1_-_201412281815_-_vor_windows_8_wird_gewarnt_-_ruedi.html"&gt;Vor Windows 8 wird gewarnt&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6294.html"&gt;(Fahrplan)&lt;/a&gt; von ruedi: Ein kurzweiliger Vortrag über &amp;ldquo;Secure Boot&amp;rdquo; und andere Schwierigkeiten mit &amp;ldquo;Windows 8&amp;rdquo;.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6258_-_en_-_saal_1_-_201412282030_-_reconstructing_narratives_-_jacob_-_laura_poitras.html"&gt;Reconstructing naraatives&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6258.html"&gt;(Fahrplan)&lt;/a&gt; von Jacob Appelbaum und Laura Poitras: Das war im voll besetzten Saal 1 ein sehr eindrücklicher Vortrag, der mit Standing Ovations endete.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6121_-_en_-_saal_2_-_201412291715_-_what_ever_happened_to_nuclear_weapons_-_michael_buker.html"&gt;What Ever Happened to Nuclear Weapons?&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6121.html"&gt;(Fahrplan)&lt;/a&gt; von Michael Büker: Diesen Vortrag fand ich vom Aufbau und der Didaktik sehr gut vorbereitet. Als wichtige Erkenntnis habe ich für mich den &lt;a href="http://de.wikipedia.org/wiki/Kernwaffenteststopp-Vertrag"&gt;Kernwaffenstopp-Vertrag (englisch Comprehensive Nuclear-Test-Ban Treaty)&lt;/a&gt; mitgenommen, einen internationalen Vertrag, der sämtliche Kernwaffentests verbietet, der aber noch nicht in Kraft getreten ist; dieser Vertrag geht weiter als der Nuclear Test Ban Treaty aus den 1960er Jahren, der Kernwaffenversuche in der Atmosphäre, im Weltraum und unter Wasser verbietet. Dennoch gibt es hierzu schon eine &lt;a href="http://www.ctbto.org/"&gt;Organisation, die Preparatory Commission for the Comprehensive Nuclear-Test-Ban Treaty Organisation&lt;/a&gt;, der man auch auf Twitter &lt;a href="http://twitter.com/ctbto_alerts"&gt;folgen kann&lt;/a&gt;. Diese &amp;ldquo;Preparatory Commission&amp;rdquo; bereitet das Inkraftreten vor und baut ein Überwachungssystem auf.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6128_-_en_-_saal_1_-_201412291830_-_thunderstrike_efi_bootkits_for_apple_macbooks_-_trammell_hudson.html"&gt;EFI bootkits for Apple MacBooks&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6128.html"&gt;(Fahrplan)&lt;/a&gt; von Trammell Hudson: Ich fand das sehr spannend vorgetragen (incl. Hexdumps etc.), wie Trammel Hudson durch &amp;ldquo;Reverse Engineering&amp;rdquo; auf ein Sicherheitsproblem bei Apple-Produktion gestoßen ist und dieses dann in einem Proof-of-Concept auch ausnutzen konnte.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;
+
+&lt;p&gt;Aufgrund des riesigen Angebots an Vorträgen, Workshops etc. muss ich mir in den kommenden Tagen glaube ich noch den einen oder anderen Vortrag als Video ansehen.&lt;/p&gt;
+
+&lt;h2 id="morgengrauen-stammtisch"&gt;MorgenGrauen-Stammtisch&lt;/h2&gt;
+
+&lt;p&gt;Etwas spontan und nicht so sonderlich koordiniert haben wir auch einen &lt;a href="http://mg.mud.de"&gt;MorgenGrauen&lt;/a&gt;-Stammtisch ausgerufen und siehe da: Drei Spieler und zwei Gäste fanden sich ein, so dass man bei einem Bier ein wenig plaudern und sich austauschen konnte.&lt;/p&gt;</description></item>
+  <item>
+   <title>CeBIT 2010</title>
+   <link>http://www.dbrunner.de/blog/2010/03/04/cebit-2010/</link>
+   <guid>urn:http-www-dbrunner-de:-blog-2010-03-04-cebit-2010</guid>
+   <pubDate>Thu, 04 Mar 2010 20:25:00 UT</pubDate>
+   <description>
+&lt;p&gt;Trotz erneut markigem Auftritt (mit Begriffen wie Webciety oder dem Beschwören von &amp;ldquo;Lösungen&amp;rdquo; als Konzept im Gegensatz zu früheren Hardware-Schauen) geriet mein diesjähriger CeBIT-Besuch zur Enttäuschung. Ich stellte fest, dass einige der Unternehmen, die ich besuchen wollte, entweder den Stand massiv reduziert hatten oder schlicht zu Hause geblieben sind. Somit sank die Zahl der &amp;ldquo;guten Gespräche&amp;rdquo; auf ein historisches Tief. Darüberhinaus schien es zum Teil so zu sein, als würde die CeBIT auch nur noch als medialer Punkt in der Dramaturgie von Marketing-Spezialisten. Kleine Geschichte am Rande hierzu: Microsoft stellte eine Demo-Version des neuen Mobiltelefonbetriebsystems Microsoft Windows Phone 7 vor; auf die Rückfrage, ob denn die Applikationen auch nur über ein Shop-Konzept wie bei Apple auf das Gerät kommen, wich der Präsentator aus: Man müsse mit der Antwort auf diese Frage doch noch zwei Wochen warten, bis zur nächsten Mix (der Entwickler-Hausmesse von Microsoft).&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Nachtrag vom 2010&amp;ndash;03&amp;ndash;07 So:&lt;/em&gt; Eine interessante Diskussion zum Design von Windows Phone 7 findet sich im &lt;a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003cy&amp;amp;topic_id=1&amp;amp;topic=Ask+E.T."&gt;Forum von Edward Tufte&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Nachtrag vom 2010&amp;ndash;03&amp;ndash;16 Di:&lt;/em&gt; Nun haben wir also fast zwei Wochen gewartet und mit Spannung lüftet Microsoft auf seiner Entwicklerkonferenz &lt;a href="http://www.microsoft.com/events/mix/"&gt;Mix&lt;/a&gt; das Geheimnis um die ersten Windows-Phone-Anwendungen. Der Heise-Verlag hat hierzu eine Mitteilung &lt;a href="http://www.heise.de:80/mobil/meldung/Microsoft-zeigt-erste-Windows-Phone-Anwendungen-955528.html"&gt;verfasst&lt;/a&gt;, in der es unter anderem über die neuen Anwendungen für das Windows Phone Betriebsystem heisst:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;&amp;ldquo;Bekommen wird man diese Anwendungen ausschließlich über einen runderneuerten Windows Phone Marketplace, der diverse Vertriebsmodelle unterstützen wird (kostenlos, Freemium, Trial, Bezahlung über Kreditkarte oder Mobilfunkanbieter).&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Damit schwenkt Microsoft für seine mobilen Anwendungen auf Basis von Microsoft Phone auf das Geschäftsmodell von Apple ein.&lt;/p&gt;</description></item></channel></rss>

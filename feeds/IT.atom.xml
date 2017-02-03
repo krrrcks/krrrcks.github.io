@@ -1,0 +1,639 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">Daniel Brunner: Posts tagged 'IT'</title>
+ <link rel="self" href="http://www.dbrunner.de/feeds/IT.atom.xml" />
+ <link href="http://www.dbrunner.de/tags/IT.html" />
+ <id>urn:http-www-dbrunner-de:-tags-IT-html</id>
+ <updated>2016-01-12T09:55:43Z</updated>
+ <entry>
+  <title type="text">Using Racket Minimal and raco</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2016/01/12/using-racket-minimal-and-raco/" />
+  <id>urn:http-www-dbrunner-de:-blog-2016-01-12-using-racket-minimal-and-raco</id>
+  <published>2016-01-12T09:55:43Z</published>
+  <updated>2016-01-12T09:55:43Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;I use Racket Minimal on my smart phone (&lt;a href="../2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/"&gt;this&lt;/a&gt; describes how to compile the run time for an ARM based system). It&amp;rsquo;s is a very small installation of Racket (about 36 MB after installation). After installation one only needs to install the packages that are really neded. But this can be a bit tricky because a lot of packages want to install their documentation and other stuff and bring a whole bunch of files on your drive as dependencies.&lt;/p&gt;
+
+&lt;p&gt;Some of the packages are divided up into a "-lib", "-doc" (and sometimes "-test") as laid out in the &lt;a href="https://docs.racket-lang.org/pkg/getting-started.html#%28part._.Naming_and_.Designing_.Packages%29"&gt;documentation&lt;/a&gt;. With these packages it&amp;rsquo;s easier to only install the implementation.&lt;/p&gt;
+
+&lt;p&gt;A small script of mine used only basic modules and relied on &lt;code&gt;rackunit&lt;/code&gt; for the tests. On a mobile device the start up time of such a program can be  critical. Therefore it is wise to only require the needed packages and to have the source code being compiled to byte code. One could do this with &lt;code&gt;raco setup&lt;/code&gt; (which is included in Minimal Racket) but I wanted to have &lt;code&gt;raco make&lt;/code&gt; (which is not part of Minimal Racket) available.&lt;/p&gt;
+
+&lt;p&gt;The commands of &lt;code&gt;raco&lt;/code&gt; are added via a &lt;code&gt;raco-commands&lt;/code&gt; variable in packages&amp;rsquo; &lt;code&gt;info.rkt&lt;/code&gt; file. I looked through the packages of my &amp;ldquo;full install&amp;rdquo; and found the package &lt;code&gt;compiler-lib&lt;/code&gt; which adds some commands (&lt;code&gt;make&lt;/code&gt;, &lt;code&gt;exe&lt;/code&gt;, &lt;code&gt;pack&lt;/code&gt;, &lt;code&gt;unpack&lt;/code&gt;, &lt;code&gt;decompile&lt;/code&gt;, &lt;code&gt;test&lt;/code&gt;, &lt;code&gt;expand&lt;/code&gt;, &lt;code&gt;read&lt;/code&gt;, &lt;code&gt;distribute&lt;/code&gt;, &lt;code&gt;demodularize&lt;/code&gt;) to &lt;a href="https://mirror.racket-lang.org/releases/6.3/doc/raco/index.html"&gt;&lt;code&gt;raco&lt;/code&gt;&lt;/a&gt; and relies on only a few other packages. As a result the source and binary files need about 3.8 MB on my phone which is okay for me.&lt;/p&gt;
+
+&lt;p&gt;To sum up: After a simple &lt;code&gt;raco pkg install compiler-lib&lt;/code&gt; I could easily use &lt;code&gt;raco make&lt;/code&gt; and &lt;code&gt;raco test&lt;/code&gt; to play with my program on my phone.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">I played with CHICKEN Scheme, Docker and Alpine Linux</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-12-19-i-played-with-chicken-scheme-docker-and-alpine-linux</id>
+  <published>2015-12-19T16:54:50Z</published>
+  <updated>2015-12-19T16:54:50Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;I am looking forward to meet LISP people at the &lt;a href="https://events.ccc.de/congress/2015/wiki/Main_Page"&gt;32c3&amp;rsquo;s&lt;/a&gt; &lt;a href="https://events.ccc.de/congress/2015/wiki/Assembly:The_%28un%29employed_schemers_%26_lispers_guild"&gt;LISP assembly&lt;/a&gt;. The last days I played a bit with different Scheme implementations including  &lt;a href="http://call-cc.org"&gt;CHICKEN scheme&lt;/a&gt;. The main feature of CHICKEN is that it compiles the Scheme code to C and then creates dynamic libraries and binaries with the C compiler. I thought that combining these binaries with a minimal Docker container could give me a very small deployment. So here are my steps:&lt;/p&gt;
+
+&lt;h2 id="choosing-alpine-linux-as-a-small-linux"&gt;Choosing Alpine Linux as a &amp;ldquo;small&amp;rdquo; Linux&lt;/h2&gt;
+
+&lt;p&gt;The smallest Linux image for Docker is undoubtly busybox with a size of about 2.489 MB. But busybox lacks a package manager which makes installing software painful. Therefore I have chosen &lt;a href="http://alpinelinux.org"&gt;Alpine Linux&lt;/a&gt; which comes with package manager and it&amp;rsquo;s image&amp;rsquo;s size is about 5.234 MB. That&amp;rsquo;s double the size of the busybox image but still quite small compared to the Ubuntu image which is about 266 MB.&lt;/p&gt;
+
+&lt;h2 id="creating-a-docker-container-with-chicken"&gt;Creating a Docker container with CHICKEN&lt;/h2&gt;
+
+&lt;p&gt;Alpine Linux comes with the &lt;a href="http://www.muscl-libc.org"&gt;musl libc&lt;/a&gt; and I thought it would be best to compile all the CHICKEN stuff with that libc. Therefore I created a Docker container with gcc and all the other stuff with this Dockerfile (&lt;a href="https://github.com/krrrcks/chicken-docker-alpine"&gt;Github repository&lt;/a&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;FROM alpine:3.2
+
+RUN apk update &amp;amp;&amp;amp; apk add make gcc musl-dev 
+RUN wget -O - http://code.call-cc.org/releases/4.10.0/chicken-4.10.0.tar.gz | tar xz
+
+WORKDIR /chicken-4.10.0
+
+RUN make PLATFORM=linux &amp;amp;&amp;amp; make PLATFORM=linux install
+
+RUN rm -fr /chicken-4.10.0 
+
+WORKDIR /
+
+CMD ["csi"]&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This image is quite big (about 161.7 MB) and is available for download at the &lt;a href="https://hub.docker.com/r/krrrcks/chicken-alpine/"&gt;Docker Hub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id="compiling-some-chicken-code"&gt;Compiling some CHICKEN code&lt;/h2&gt;
+
+&lt;p&gt;For testing purposes I wanted a minimal web server running in the Alpine Linux image. Therefore I looked through the &lt;a href="http://wiki.call-cc.org/chicken-projects/egg-index-4.html"&gt;egg index&lt;/a&gt; and found &lt;a href="http://wiki.call-cc.org/eggref/4/spiffy"&gt;spiffy&lt;/a&gt;. I fired up the &lt;code&gt;chicken-alpine&lt;/code&gt; container (but I used &lt;code&gt;ash&lt;/code&gt; as command instead of the &lt;code&gt;csi&lt;/code&gt; Scheme interpreter) and created a small web server that serves some static pages. I wrote a &lt;code&gt;main.scm&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(use spiffy)
+(start-server)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and added some static pages to a &lt;code&gt;./web&lt;/code&gt; sub-directory. Then everything had to be compiled and prepared for deployment:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;chicken-install spiffy
+csc -deploy main.scm
+chicken-install -deploy -p $PWD/main spiffy&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="deploy-in-a-fresh-alpine-linux-image"&gt;Deploy in a fresh Alpine Linux image&lt;/h2&gt;
+
+&lt;p&gt;After the compilation I copied the &lt;code&gt;main&lt;/code&gt; and &lt;code&gt;web&lt;/code&gt; directories on my host machine using &lt;code&gt;docker cp&lt;/code&gt; and created the following Dockerfile:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;FROM alpine:3.2
+
+ADD main /main
+ADD web main/web
+WORKDIR main
+
+CMD /main/main&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and let &lt;code&gt;docker build -t krrrcks/spiffy-test .&lt;/code&gt; do the job. The size of the resulting image is about 12.37 MB and that&amp;rsquo;s pretty small. I uploaded that image to the &lt;a href="https://hub.docker.com/r/krrrcks/spiffy-test/"&gt;Docker Hub&lt;/a&gt; as well.&lt;/p&gt;
+
+&lt;p&gt;To serve the pages I did a &lt;code&gt;docker run -d -p 8080:8080 krrrcks/spiffy-test&lt;/code&gt;  (spiffy listens on port 8080 in the default install) and browsed my static pages.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">How to use GET Bucket location on Amazon S3 with Racket</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-09-04-how-to-use-get-bucket-location-on-amazon-s3-with-racket</id>
+  <published>2015-09-04T05:23:43Z</published>
+  <updated>2015-09-04T05:23:43Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;In &lt;a href="http://www.racket-lang.org"&gt;Racket&lt;/a&gt; I want to iterate over my buckets in Amazon S3. They are located in different regions. So how do I get my bucket&amp;rsquo;s location/region? In the API Reference there is a call &lt;a href="http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETlocation.html"&gt;GET Bucket location&lt;/a&gt;. I use &lt;a href="https://github.com/greghendershott/aws"&gt;Greg&amp;rsquo;s AWS library for Racket&lt;/a&gt; and this library authenticates its calls with &lt;a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html"&gt;signature version V4&lt;/a&gt;. But V4 requires the user to know the &lt;em&gt;region&lt;/em&gt; to correctly sign the request. So I need to know the region to ask Amazon S3 for the region where the bucket is located. Otherwise Amazon S3 responds with an error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version="1.0" encoding="UTF-8"?&amp;gt;
+&amp;lt;Error&amp;gt;
+ &amp;lt;Code&amp;gt;AuthorizationHeaderMalformed&amp;lt;/Code&amp;gt;
+ &amp;lt;Message&amp;gt;The authorization header is malformed; the region 'us-east-1'
+is wrong; expecting 'eu-central-1'&amp;lt;/Message&amp;gt;
+ &amp;lt;Region&amp;gt;eu-central-1&amp;lt;/Region&amp;gt;
+ &amp;lt;RequestId&amp;gt;XXXX&amp;lt;/RequestId&amp;gt;
+ &amp;lt;HostId&amp;gt;XXXX&amp;gt;
+&amp;lt;/Error&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After some search on the net I found a &lt;a href="http://stackoverflow.com/questions/27091816/retrieve-buckets-objects-without-knowing-buckets-region-with-aws-s3-rest-api"&gt;post on Stackoverflow&lt;/a&gt; that helped to solve that issue: If I use the URL format (instead of the normally used virtual host format) I could get the location of any bucket. Every region responds with a &lt;em&gt;LocationConstraint&lt;/em&gt; answer.&lt;/p&gt;
+
+&lt;p&gt;Therefore a code snippet for Racket could be:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(define (get-bucket-location bucket)
+  (parameterize
+      ([s3-path-requests? #t])
+    (define xpr (get/proc (string-append bucket "/?location") read-entity/xexpr))
+    (and (list? xpr)
+         (= (length xpr) 3)
+         (third xpr))))&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; (get-bucket-location "my-bucket-somewhere")
+"eu-central-1"&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;PS: I think official Amazon S3 documentation could be a bit more verbose on the issues with GetBucketLocation and signature V4.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; Greg added a &lt;code&gt;bucket-location&lt;/code&gt; function to his great &lt;a href="http://docs.racket-lang.org/aws/S3__Storage_.html#%28def._%28%28lib._aws%2Fs3..rkt%29._bucket-location%29%29"&gt;library&lt;/a&gt;&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">How to run Racket on the Raspberry Pi 2</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-08-27-how-to-run-racket-on-the-raspberry-pi-2</id>
+  <published>2015-08-27T11:25:45Z</published>
+  <updated>2015-08-27T11:25:45Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;I got a &lt;a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/"&gt;Raspberry Pi 2 Model B&lt;/a&gt; to play with. I used Raspbian image as operating system. I was wondering how difficult it is to get Racket running on the Raspberry Pi. I downloaded the &lt;a href="http://mirror.racket-lang.org/installers/6.2.1/racket-6.2.1-src-builtpkgs.tgz"&gt;Unix source + built packages&lt;/a&gt; tarball from &lt;a href="http://racket-lang.org"&gt;Racket&amp;rsquo;s homepage&lt;/a&gt; because I only wanted to compile the core of Racket. After unpacking the tarball I was suprised that the instructions were quite short:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;From this directory (where the `configure' file is), run the following
+commands:
+
+  mkdir build
+  cd build
+  ../configure
+  make
+  make install&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Between &lt;code&gt;make&lt;/code&gt; and &lt;code&gt;make install&lt;/code&gt; I had to wait for about 40 minutes but then everything was fine and I could even use DrRacket on the Raspberry Pi:&lt;/p&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/2015-08-27-racket-pi.png" alt="DrRacket on Raspberry Pi" /&gt;
+ &lt;p class="caption"&gt;DrRacket on Raspberry Pi&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;Very nice and easy to get Racket running on ARM.&lt;/p&gt;
+
+&lt;p&gt;PS: Because the Raspberry Pi 2 Model B has an ARMv7 processor the binary runs on my Jolla smart phone as well.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Running Racket on AWS Lambda</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/08/27/running-racket-on-aws-lambda/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-08-27-running-racket-on-aws-lambda</id>
+  <published>2015-08-27T10:46:57Z</published>
+  <updated>2015-08-27T10:46:57Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;I started to use AWS for some projects recently. But I only use few of their services. From time to time I look into some of there services and wonder if they are useful for my tasks. I looked into &lt;a href="http://aws.amazon.com/lambda"&gt;AWS Lambda&lt;/a&gt;, "&amp;hellip; a compute service that runs your code in response to events and automatically manages the compute resources for you, making it easy to build applications that respond quickly to new information." Nowadays these &amp;ldquo;lambda functions&amp;rdquo; could be written in NodeJS or Java. When I was looking for a roadmap of the supported languages I found an interesting &lt;a href="http://blog.0x82.com/2014/11/24/aws-lambda-functions-in-go/"&gt;blog post&lt;/a&gt; by &lt;a href="https://www.twitter.com/rubenfonseca"&gt;Ruben Fonseca&lt;/a&gt;. He explaind how to run Go code on AWS Lambda.&lt;/p&gt;
+
+&lt;p&gt;I tried the same with &lt;a href="http://racket-lang.org"&gt;Racket&lt;/a&gt; and wrote a short Racket programm &lt;code&gt;test.rkt&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#lang racket/base
+
+(display (format "Hello from Racket, args: ~a~%" (current-command-line-arguments)))&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then I used &lt;code&gt;raco&lt;/code&gt; to create a binary &lt;code&gt;test&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;raco exe --orig-exe test.rkt&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I took the NodeJS wrapper from Ruben&amp;rsquo;s blog post and put it in a file &lt;code&gt;main.js&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var child_process = require('child_process');
+
+exports.handler = function(event, context) {
+  var proc = child_process.spawn('./test', [ JSON.stringify(event) ], { stdio: 'inherit' });
+
+  proc.on('close', function(code) {
+    if(code !== 0) {
+      return context.done(new Error("Process exited with non-zero status code"));
+    }
+
+    context.done(null);
+  });
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then I put both files in a zip archive, created a new AWS Lambda function, uploaded the zip file and invoked the function:&lt;/p&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/2015-08-27-racket-aws-lambda.png" alt="Invocation of AWS Lambda function" /&gt;
+ &lt;p class="caption"&gt;Invocation of AWS Lambda function&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;Fine!&lt;/p&gt;
+
+&lt;p&gt;PS: Only question is: When is AWS Lambda coming to the region &lt;code&gt;eu-central-1&lt;/code&gt;, located in Frankfurt?&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Upate (2016&amp;ndash;03&amp;ndash;15):&lt;/em&gt; AWS Lambda is &lt;a href="https://aws.amazon.com/de/about-aws/whats-new/2016/03/aws-lambda-available-in-eu-frankfurt/"&gt;now available&lt;/a&gt; in the EU (Frankfurt)  region!&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Lisp und ich</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/08/27/lisp-und-ich/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-08-27-lisp-und-ich</id>
+  <published>2015-08-27T08:57:45Z</published>
+  <updated>2015-08-27T08:57:45Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Dieser Beitrag ist kurzer Hintergrund für meine bisherigen und zukünftigen Beiträge zur Programmierung und Software-Entiwcklung. Eigentlich ist es eher ein &lt;em&gt;Disclaimer&lt;/em&gt;, denn ich habe das gar nicht professionell gelernt. Ich habe ein sozialwissenschaftliches Fach studiert und meine Kenntnisse aus dem Bereich der Programmierung entstammen im Wesentlichen meiner Schul- und Studienzeit und sehr viel autodidaktes Lernen. Insofern ist aller Code von mir mit einer gewissen Vorsicht zu genießen; möglicherweise ist das nicht immer die beste und schönste Variante ein Problem zu lösen.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Lexmarks Druckerpatronen-Lizenz</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/02/17/lexmarks-druckerpatronen-lizenz/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-02-17-lexmarks-druckerpatronen-lizenz</id>
+  <published>2015-02-17T10:28:02Z</published>
+  <updated>2015-02-17T10:28:02Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Heute benötigte ich eine Ersatzpatrone für meinen Lexmark-Drucker. An der Aufreißlasche prangen Ausrufezeichen und der Hinweis: &amp;ldquo;Attention: Updated License Terms&amp;rdquo;.&lt;/p&gt;
+
+&lt;p&gt;Lizenzbedingungen? Für eine Druckerpatrone? Also mal ein Blick aufs Kleingedruckte:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;Bitte vor dem Öffnnen lesen. Durch das Öffnen der Verpackung oder die Verwendung der mitgelieferten patentierten Kassette erklären Sie sich mit der folgenden Lizenz-Vereinbarung einverstanden. Diese patentierte Tonerkassette wird zu einem Sonderpreis verkauft und unterliegt der Patenteinschränkung, dass sie nur einmal verwendet wird. Nach ihrer erstmaligen Verwendung verpflichten Sie sich, sie zur Wiederaufbereitung und/oder zum Recylcing nur an Lexmark zurückzugeben. Die Tonerkassette funktioniert nach der Abgabe einer bestimmten Tonermenge nicht mehr. Wenn sie ersetzt werden muss, kann sie noch Resttoner enthalten. Die Kassette ist zusätzlich so konzipiert, dass die Informationen zur Kassettenkompatibilität im Druckerspeicher automatisch aktualisiert werden. Auf diese Weise kann die Verwendung gefälschter Kassetten und/oder bestimmer Drittprodukte eingeschränkt werden. Durch die Installation der beiliegenden Kassette gestatten Sie Lexmark, diese Änderungen vorzunehmen. Wenn Sie mit den vorgenannten Bedingungen nicht einverstanden sind, geben Sie die ungeöffnete Verpackung an Ihren Händler zurück. Nicht im Rahmen dieser Bestimmungen verkaufte Ersatztonerkassetten sind unter www.lexmark.com erhältlich.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Irgendwie ja auch ein bisschen putzig, wie um einen Alltagsgegenstand wie Toner so ein Bohei gemacht wird. Zwei Gedanken kommen mir da in den Sinn: 1. Es verfestigt sich mein Eindruck, dass das Patentsystem recht nahe an kaputt ist. 2. Unternehmen, die so etwas machen, sollten weniger Geld für Juristen, Patentanwälte ausgeben und das Geld eher in coole Produkte investieren.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">3. Docker-Meetup in Frankfurt</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/01/18/3-docker-meetup-in-frankfurt/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-01-18-3-docker-meetup-in-frankfurt</id>
+  <published>2015-01-18T19:05:35Z</published>
+  <updated>2015-01-18T19:05:35Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Am 13. Januar 2015 fand in Frankfurt das bereits &lt;a href="http://www.meetup.com/Docker-Frankfurt/events/219160756/"&gt;dritte Docker-Meetup&lt;/a&gt; statt, hier einige Notizen von mir dazu.&lt;/p&gt;
+
+&lt;h2 id="neues-zum-them-orchestrierung"&gt;Neues zum Them Orchestrierung&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https://www.twitter.com/PRossbach"&gt;Peter Rossbach&lt;/a&gt; hat in einem munteren Vortrag einige Neuerungen aus dem &amp;ldquo;Docker Universum&amp;rdquo; zum Thema Orchestrierung vorgestellt. Unter anderem &lt;a href="https://github.com/docker/machine"&gt;Docker Machine&lt;/a&gt;, &lt;a href="https://github.com/docker/swarm"&gt;Docker Swarm&lt;/a&gt;, Docker Compose (ehemals &lt;a href="http://fig.sh"&gt;fig.sh&lt;/a&gt;, das wohl aufgrund von Aussprachemehrdeutigkeiten umbenannt wurde) etc. Ein sehr interessanter Überblick, insbesondere da Peter auch die ganzen Sachen immer mal angefasst und ausprobiert hat. Im Kern scheint es mir jedoch so zu sein, als wäre die Frage nach &amp;ldquo;Was nimmt man am besten, um Docker auf einer oder mehreren Maschinen im Produktivbetrieb zu nutzen?&amp;rdquo; noch recht in Bewegung. Für mich kristallisiert sich für meine Anwendungsfälle da bisher noch keine überzeugende Lösung heraus. Was ich jedoch einmal testen werde ist das fig.sh bzw. Docker Compose, da man damit eigentlich sehr schön in einem YAML-Dokument mehrere Container und ihre Abhängigkeiten darstellen kann.&lt;/p&gt;
+
+&lt;h2 id="docker-linking"&gt;Docker Linking&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="http://linsenraum.de"&gt;Erkan Yanar&lt;/a&gt; hat in einem Einsteigervortrag die Grundlagen von Links zwischen Containern vorgestellt. Hier scheint die Entwicklung auch noch in Bewegung zu sein, insbesondere Links über mehrere Hosts hinweg scheinen doch noch nicht so ganz einfach handzuhaben zu sein (vorgestellt wurden &lt;a href="https://github.com/SvenDowideit/dockerfiles/blob/master/ambassador/Dockerfile"&gt;Ambassador-Ansätze&lt;/a&gt; mit &lt;a href="http://www.dest-unreach.org/socat/"&gt;socat&lt;/a&gt; und anderes).&lt;/p&gt;
+
+&lt;p&gt;Besonders erhellend fand ich den Hinweis, dass ab Docker Version 1.3 nun bei Links zwischen den Containern die &lt;code&gt;/etc/hosts&lt;/code&gt; auch nach Neustarts von gelinkten Containern immer deren richtige IP-Adresse erhält, wohingegen die Umgebungsvariablen nur die Ursprungs-IP-Adressen enthalten (also ein klares &amp;ldquo;Verlasst Euch nicht auf die Umgebungsvariablen!&amp;rdquo;).&lt;/p&gt;
+
+&lt;h2 id="netzwerken-mit-docker"&gt;Netzwerken mit Docker&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https:/www.twitter.com/aschmidt75"&gt;Andreas Schmidt&lt;/a&gt; stellte eine ganze Reihe von Varianten vor, mit denen man die Container im Netzwerk auf unterschiedliche Arten und Weisen verknoten kann. Soweit ganz interessant, aber nicht meine &amp;ldquo;Liga&amp;rdquo;, wo ich mich gut auskenne.&lt;/p&gt;
+
+&lt;h2 id="fazit"&gt;Fazit&lt;/h2&gt;
+
+&lt;p&gt;Bei Docker in Bezug auf Orchestrierung und Container-Linken gibt es recht viel Bewegung und für mich kristallisieren sich die überzeugenden Konzepte noch nicht so richtig heraus, um damit in eine Produktivumgebung zu gehen. Im Bereich der Entwicklung und der Tests nutze ich die Container von Docker schon recht gerne, bei Produktiv-Umgebungen schreckt mich die Vielzahl an Werkzeugen und zum Teil auch die Komplexität doch noch etwas.&lt;/p&gt;
+
+&lt;p&gt;Jedenfalls wieder ein gutes Meetup mit Ideen und Anregungen. Ich finde das schon sehr außergewöhnlich (besonders wenn man es mit anderen Branchen vergleicht), dass sich Leute zum Austauschen über Technologie treffen, Vorträge vorbereiten etc.&lt;/p&gt;
+
+&lt;h2 id="links-zu-den-folien"&gt;Links zu den Folien&lt;/h2&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;&lt;a href="https://speakerdeck.com/rossbachp/docker-meetup-frankfurt-2015-docker-orchestration"&gt;Peter Rossbach, Docker Orchestation&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="https://speakerdeck.com/aschmidt75/docker-networking"&gt;Andreas Schmidt, Docker Networking&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content></entry>
+ <entry>
+  <title type="text">Eindrücke vom 31C3</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/01/05/eindrücke-vom-31c3/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-01-05-eindrücke-vom-31c3</id>
+  <published>2015-01-05T16:03:00Z</published>
+  <updated>2015-01-05T16:03:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Dieses Jahr habe ich mich einmal aufgerafft und bin das erste mal zum Congress des CCC nach Hamburg gefahren. Im Folgenden ein paar Eindrücke:&lt;/p&gt;
+
+&lt;h2 id="drumherum"&gt;Drumherum&lt;/h2&gt;
+
+&lt;p&gt;Ich fand den &lt;a href="http://events.ccc.de/congress/2014/wiki/Main_Page"&gt;31C3&lt;/a&gt; ein tolles Ereignis: Sehr professionell und umsichtig organisiert. Überall, wo ich hinkam, war man nett und freundlich, insgesamt eine sehr willkommende Atmosphäre. Nur der Termin, der ist ja doch etwas sperrig.&lt;/p&gt;
+
+&lt;h2 id="vorträge"&gt;Vorträge&lt;/h2&gt;
+
+&lt;p&gt;Ich konnte einige Vorträge anhören, von denen haben mir die folgenden besonders gut gefallen (ich habe mal die Links zu den Videos und die Links zu den Einträgen im Fahrplan aufgeführt, oft gibt es im Fahrplan auch noch zugehöriges Material und weitere Hinweise):&lt;/p&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6264_-_de_-_saal_1_-_201412271245_-_wir_beteiligen_uns_aktiv_an_den_diskussionen_-_martin_haase_maha.html"&gt;&amp;ldquo;Wir beteiligen uns aktiv an den Dikussionen&amp;rdquo;&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6264.html"&gt;(Link im Fahrplan)&lt;/a&gt; von Martin Haase, der die &lt;a href="http://www.digitale-agenda.de/"&gt;Digitale Agenda&lt;/a&gt; der Bundesregierung aus sprachwissenschaftlicher Sicht entlarvt als das, was es ist: Heiße Luft und wenig Konkretes, schon gar nicht für den &amp;ldquo;Bürger&amp;rdquo;. Besonders spannend fand ich den Teil des &amp;ldquo;PDF befreien&amp;rdquo;, denn die Bundesregierung hat nur ein wenig konsistentes PDF bereit gestellt, dass maha erst einmal in einen Text umwandeln musste, mit dem er mit seinen Werkzeugen arbeiten konnte. In der Diskussion wurde er dazu auch noch einmal befragt und meinte, Markdown, das sei eigentlich ein ganz gutes Format.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;Die beiden SS7-Vorträge von &lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6249_-_en_-_saal_1_-_201412271715_-_ss7_locate_track_manipulate_-_tobias_engel.html"&gt;Tobias Engel&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6249.html"&gt;(Fahrplan)&lt;/a&gt; und &lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6122_-_en_-_saal_1_-_201412271830_-_mobile_self-defense_-_karsten_nohl.html"&gt;Karsten Nohl&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6122.html"&gt;(Fahrplan)&lt;/a&gt;: Die Talks fand ich incl. der Live-Vorführungen sehr eindrücklich und haben mir vor Augen geführt, dass es mit der Sicherheit im Mobilfunk noch schlechter aussieht, als ich so befürchtet habe.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6369_-_en_-_saal_1_-_201412272145_-_ecchacks_-_djb_-_tanja_lange.html"&gt;ECCHacks&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6369.html"&gt;(Fahrplan)&lt;/a&gt; von djb und Tanja Lange: Ein Bekannter empfahl mir den Vortrag und meinte, ich könnte da schon was verstehen, obwohl ich mich mit diesen Ellpitischen Kurven nicht wirklich auskenne. Der Talk war didaktisch sehr gut aufbereitet und ich habe trotz der späten Stunde ein bisschen verstanden (glaube ich), worum es da eigentlich geht.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6294_-_de_-_saal_1_-_201412281815_-_vor_windows_8_wird_gewarnt_-_ruedi.html"&gt;Vor Windows 8 wird gewarnt&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6294.html"&gt;(Fahrplan)&lt;/a&gt; von ruedi: Ein kurzweiliger Vortrag über &amp;ldquo;Secure Boot&amp;rdquo; und andere Schwierigkeiten mit &amp;ldquo;Windows 8&amp;rdquo;.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6258_-_en_-_saal_1_-_201412282030_-_reconstructing_narratives_-_jacob_-_laura_poitras.html"&gt;Reconstructing naraatives&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6258.html"&gt;(Fahrplan)&lt;/a&gt; von Jacob Appelbaum und Laura Poitras: Das war im voll besetzten Saal 1 ein sehr eindrücklicher Vortrag, der mit Standing Ovations endete.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6121_-_en_-_saal_2_-_201412291715_-_what_ever_happened_to_nuclear_weapons_-_michael_buker.html"&gt;What Ever Happened to Nuclear Weapons?&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6121.html"&gt;(Fahrplan)&lt;/a&gt; von Michael Büker: Diesen Vortrag fand ich vom Aufbau und der Didaktik sehr gut vorbereitet. Als wichtige Erkenntnis habe ich für mich den &lt;a href="http://de.wikipedia.org/wiki/Kernwaffenteststopp-Vertrag"&gt;Kernwaffenstopp-Vertrag (englisch Comprehensive Nuclear-Test-Ban Treaty)&lt;/a&gt; mitgenommen, einen internationalen Vertrag, der sämtliche Kernwaffentests verbietet, der aber noch nicht in Kraft getreten ist; dieser Vertrag geht weiter als der Nuclear Test Ban Treaty aus den 1960er Jahren, der Kernwaffenversuche in der Atmosphäre, im Weltraum und unter Wasser verbietet. Dennoch gibt es hierzu schon eine &lt;a href="http://www.ctbto.org/"&gt;Organisation, die Preparatory Commission for the Comprehensive Nuclear-Test-Ban Treaty Organisation&lt;/a&gt;, der man auch auf Twitter &lt;a href="http://twitter.com/ctbto_alerts"&gt;folgen kann&lt;/a&gt;. Diese &amp;ldquo;Preparatory Commission&amp;rdquo; bereitet das Inkraftreten vor und baut ein Überwachungssystem auf.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6128_-_en_-_saal_1_-_201412291830_-_thunderstrike_efi_bootkits_for_apple_macbooks_-_trammell_hudson.html"&gt;EFI bootkits for Apple MacBooks&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6128.html"&gt;(Fahrplan)&lt;/a&gt; von Trammell Hudson: Ich fand das sehr spannend vorgetragen (incl. Hexdumps etc.), wie Trammel Hudson durch &amp;ldquo;Reverse Engineering&amp;rdquo; auf ein Sicherheitsproblem bei Apple-Produktion gestoßen ist und dieses dann in einem Proof-of-Concept auch ausnutzen konnte.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;
+
+&lt;p&gt;Aufgrund des riesigen Angebots an Vorträgen, Workshops etc. muss ich mir in den kommenden Tagen glaube ich noch den einen oder anderen Vortrag als Video ansehen.&lt;/p&gt;
+
+&lt;h2 id="morgengrauen-stammtisch"&gt;MorgenGrauen-Stammtisch&lt;/h2&gt;
+
+&lt;p&gt;Etwas spontan und nicht so sonderlich koordiniert haben wir auch einen &lt;a href="http://mg.mud.de"&gt;MorgenGrauen&lt;/a&gt;-Stammtisch ausgerufen und siehe da: Drei Spieler und zwei Gäste fanden sich ein, so dass man bei einem Bier ein wenig plaudern und sich austauschen konnte.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Aus zwei mach eins</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/01/04/aus-zwei-mach-eins/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-01-04-aus-zwei-mach-eins</id>
+  <published>2015-01-04T15:16:08Z</published>
+  <updated>2015-01-04T15:16:08Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Bisher hatte ich meine Blog-Einträge auf zwei Blogs aufgeteilt, &lt;a href="http://blog.krrrcks.net"&gt;eines&lt;/a&gt; mit mehr technischen (und zum Teil englischen Texten) und dieses hier mit deutschen Texten. Ich denke, ich werde das auf dieses eine Blog hier konzentrieren. Das reduziert doch etwas den Verwaltungsaufwand. Ich habe die Texte vom nun etwas still gelegten Blog hier herüber kopiert.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Mind the storage driver for Ubuntu cloud images (on Azure)</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-07-24-mind-the-storage-driver-for-ubuntu-cloud-images-on-azure</id>
+  <published>2014-07-24T10:30:43Z</published>
+  <updated>2014-07-24T10:30:43Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;A few days ago I wanted to build Firefox OS&amp;rsquo; newest release for a friend. Because I did not wanted these GB of code, binaries etc. on my notebook I fired up an Ubuntu image on Microsoft Azure. I feared that at a certain point in the build process I may had to download everything to my local machine and therefore I installed Docker via a simple&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install docker.io&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then I started the build process as laid out on Mozilla&amp;rsquo;s Developer Network. But, during downloading the source code (that&amp;rsquo;s about 12 GB of Git repositories from Mozilla and Android), I got a &amp;ldquo;no more space left on device&amp;rdquo;. That was strange: I had a 100 GB volume attached to the VM and enough space and inodes left. After some searching I asked on the IRC channel and got a good hint: &amp;ldquo;What&amp;rsquo;s your storage driver?&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Well, I thought that it&amp;rsquo;s AUFS; I wanted to add &amp;ldquo;as usual&amp;rdquo; because AUFS was available on my notebook from the beginning. But a &lt;code&gt;docker.io
+info&lt;/code&gt; gave me:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo docker.io info
+Containers: 0
+Images: 0
+Storage Driver: devicemapper
+ Pool Name: docker-8:1-131188-pool
+ Data file: /var/lib/docker/devicemapper/devicemapper/data
+ Metadata file: /var/lib/docker/devicemapper/devicemapper/metadata
+ Data Space Used: 291.5 Mb
+ Data Space Total: 102400.0 Mb
+ Metadata Space Used: 0.7 Mb
+ Metadata Space Total: 2048.0 Mb
+Execution Driver: native-0.1
+Kernel Version: 3.13.0-29-generic
+WARNING: No swap limit support&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I then learned that somehow the DeviceMapper driver only allows a certain amount of diffs and I reached that amount with my build process. (Maybe it&amp;rsquo;s possible to relax that restriction but I do not know how.)&lt;/p&gt;
+
+&lt;p&gt;I learned as well that the Ubuntu cloud image that is provided by Microsoft Azure doesn&amp;rsquo;t have AUFS support. Therefore Docker uses the DeviceMapper storage driver instead. After I installed the AUFS support I could export the images, change the storage driver and import the images again.&lt;/p&gt;
+
+&lt;p&gt;It would be nice seeing the Docker documentation being more detailed on those storage drivers.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(Update 2014&amp;ndash;10&amp;ndash;23)&lt;/strong&gt; Thanks to  &lt;a href="http://blog.iron.io/2014/10/docker-in-production-what-weve-learned.html"&gt;this blog post from Iron.io&lt;/a&gt;  I found some documentation of the devicemapper storage driver. It is  located in the  &lt;a href="https://github.com/docker/docker/tree/master/daemon/graphdriver/devmapper"&gt;Repository&lt;/a&gt;.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">DateTime conversion can be tricky</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/07/24/datetime-conversion-can-be-tricky/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-07-24-datetime-conversion-can-be-tricky</id>
+  <published>2014-07-24T07:41:36Z</published>
+  <updated>2014-07-24T07:41:36Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;I wrote a small Lisp application and a JavaScript client gets some data from that application. All time stamps are returned as &amp;ldquo;Lisp&amp;rdquo; time stamps, i.e. an integer with seconds where zero equals Jan 01 1900.&lt;/p&gt;
+
+&lt;p&gt;In the JS client the time stamp is then converted to JS time stamps, i.e. millisconds where zero equals Jan 01 1970.&lt;/p&gt;
+
+&lt;p&gt;When testing the application I noticed that sometimes the displayed date is one day behind. For example in the data base I have Jan 05 1980 but in JavaScript I get a Jan 04 1980. But some other dates worked: A time stamp Jan 05 1970 was correctly converted to Jan 05 1970.&lt;/p&gt;
+
+&lt;p&gt;I had a look into the JavaScript code and found:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;convA = function(ts) {
+  tmp = new Date(ts*1000);
+  tmp.setFullYear(tmp.getFullYear() - 70);
+  return tmp.getTime();
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It&amp;rsquo;s likely the developer thought: &amp;ldquo;Well, it&amp;rsquo;s millisecond instead of second. Therefore I multiply by 1,000. But then I am 70 years in the future and I have to substract 70 years and everything will be ok.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;After thinking a while I came to the conclusion: Of course not!&lt;/p&gt;
+
+&lt;p&gt;The developer made the assumption that there are as many leap years between 1900 and 1970 as between &lt;code&gt;ts&lt;/code&gt; and &lt;code&gt;ts+70&lt;/code&gt;. Obviously that assumption does not hold for all time stamps. And therefore sometimes the resulting JavaScript date is one day behind.&lt;/p&gt;
+
+&lt;p&gt;So a better solution would be to substract all seconds between 1900 and 1970 from &lt;code&gt;ts&lt;/code&gt;, multiply by 1,000 and treat this as a JavaScript time stamp. Perhaps best would be to do the conversion in the Lisp process and only deliver a JavaScript-like time stamp.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">I learned something about symbols and packages</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/07/06/i-learned-something-about-symbols-and-packages/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-07-06-i-learned-something-about-symbols-and-packages</id>
+  <published>2014-07-06T07:02:39Z</published>
+  <updated>2014-07-06T07:02:39Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;I am using Common Lisp for developing a web application. Several days ago a new part of this application didn&amp;rsquo;t worked as supposed and I spent a considerable large amount of time in finding the bug. It was a very simple problem with symbols where I mixed something up.&lt;/p&gt;
+
+&lt;p&gt;In the application the web server somewhen gets some JSON data from the browser. It is then converted to Lisp object using the &lt;code&gt;CL-JSON&lt;/code&gt; package. This package converts JSON objects to a-lists and converts the member keys to symbols (see CL-JSON&amp;rsquo;s &lt;a href="http://common-lisp.net/project/cl-json/"&gt;documentation&lt;/a&gt;. I then wanted to look something up in that a-list and failed.&lt;/p&gt;
+
+&lt;p&gt;I wrote a small test case to show the effect and explain what went wrong.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(ql:quickload '("hunchentoot" "cl-who"))
+;; direct loading via ql only for demonstration purposes, normally I
+;; would use a asdf:defsystem for that.
+
+(in-package :cl-user)
+
+(defpackage :my-app (:use :cl))
+
+(in-package :my-app)
+
+(defparameter *my-a-list* 
+  '((foo . 100)
+    (bar . 200)))   ;; in the real application this a-list is
+		    ;; generated by a JSON-to-lisp conversion by
+		    ;; CL-JSON; in CL-JSON the object member keys are
+		    ;; converted to symbols.
+
+(defun get-value (key)
+  "Returns the value with KEY from *MY-A-LIST*."
+  (cdr (assoc (intern (string-upcase key)) *my-a-list*)))
+
+(hunchentoot:define-easy-handler (web-get-value :uri "/get-value") (id)
+  (cl-who:with-html-output-to-string (*standard-output* nil :prologue t)
+    (:p (cl-who:fmt "Value of ~a is: ~a" id (get-value id)))))
+
+(defun start ()
+  (hunchentoot:start (make-instance 'hunchentoot:easy-acceptor :port 4242)))&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;So on the REPL everything looks fine: &lt;code&gt;MY-APP&amp;gt; (get-value "foo")
+100
+MY-APP&amp;gt; (get-value "bar")
+200
+MY-APP&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;But when I used my web browser to give me these results as well I got something strange.  For example here are some results when using curl: &lt;code&gt;~&amp;gt; curl http://localhost:4242/get-value?id=foo
+&amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&amp;gt;
+&amp;lt;p&amp;gt;Value of foo is: NIL&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;I was puzzled: The value is &lt;code&gt;NIL&lt;/code&gt;?&lt;/p&gt;
+
+&lt;p&gt;After some debugging I found out that the easy handler from Hunchentoot runs with &lt;code&gt;*package*&lt;/code&gt; set to &lt;code&gt;COMMON-LISP-USER&lt;/code&gt; (and not to &lt;code&gt;MY-APP&lt;/code&gt; as I implicitly assumed). That means that &lt;code&gt;assoc&lt;/code&gt; looked up &lt;code&gt;COMMON-LISP-USER::FOO&lt;/code&gt; in the a-list where the keys are &lt;code&gt;MY-APP::FOO&lt;/code&gt; and &lt;code&gt;MY-APP::BAR&lt;/code&gt;.  And this test fails. Therefore &lt;code&gt;NIL&lt;/code&gt; is returned which is correct.&lt;/p&gt;
+
+&lt;p&gt;So I rewrote the &lt;code&gt;get-value&lt;/code&gt; function to: &lt;code&gt;(defun get-value (key)
+  "Returns the value with KEY from *MY-A-LIST*."
+  (cdr (assoc (intern (string-upcase key)
+		      (find-package :my-app)) *my-a-list*)))&lt;/code&gt; Now the symbols are interned in the same package and everything went well: &lt;code&gt;~&amp;gt; curl http://localhost:4242/get-value?id=foo
+&amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&amp;gt;
+&amp;lt;p&amp;gt;Value of foo ist: 100&amp;lt;/p&amp;gt;
+
+~&amp;gt; curl http://localhost:4242/get-value?id=bar
+&amp;lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&amp;gt;
+&amp;lt;p&amp;gt;Value of bar ist: 200&amp;lt;/p&amp;gt;&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Therefore I was reminded to think about packages when interning  symbols. A good guide to symbols and packages could be found in this  document: &lt;a href="http://www.flownet.com/gat/packages.pdf"&gt;The Complete Idiot&amp;rsquo;s Guide to Common Lisp Packages&lt;/a&gt;.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Unicode support for Octopress</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/06/10/unicode-support-for-octopress/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-06-10-unicode-support-for-octopress</id>
+  <published>2014-06-10T07:26:22Z</published>
+  <updated>2014-06-10T07:26:22Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Well, it seems Octopress/Jekyll would like to have a locale set for UTF&amp;ndash;8 support. I followed &lt;a href="http://www.dominik-gaetjens.de/blog/2012/06/09/utf-8-in-octopress/"&gt;this (text in German)&lt;/a&gt; hint and now my Dockerfile looks like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# dockerfile for octopress
+
+FROM ubuntu:14.04
+MAINTAINER krrrcks &amp;lt;krrrcks@krrrcks.net&amp;gt;
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update; \
+  apt-get -q -y upgrade
+RUN /usr/sbin/locale-gen en_US.UTF-8; \
+  update-locale LANG=en_US.UTF-8
+RUN apt-get -q -y install git curl; \
+  apt-get clean
+RUN git clone git://github.com/imathis/octopress.git /opt/octopress
+RUN curl -L https://get.rvm.io | bash -s stable --ruby
+ENV HOME /root
+RUN echo "export LC_ALL=en_US.UTF-8" &amp;gt;&amp;gt; /root/.bashrc
+RUN echo "export LANG=en_US.UTF-8" &amp;gt;&amp;gt; /root/.bashrc
+RUN echo "source /usr/local/rvm/scripts/rvm" &amp;gt;&amp;gt; /root/.bashrc; 
+RUN /bin/bash -l -c "source /usr/local/rvm/scripts/rvm; \
+  rvm install 1.9.3; \
+  rvm use 1.9.3; \
+  rvm rubygems latest; \
+  cd /opt/octopress; \
+  gem install bundler; \
+  bundle install; \
+  rake install" 
+RUN echo "rvm use 1.9.3" &amp;gt;&amp;gt; /root/.bashrc
+
+WORKDIR /opt/octopress
+EXPOSE 4000
+CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After playing around with Docker and Octopress I put the whole &lt;code&gt;/opt/octopress&lt;/code&gt; folder on my host machine and then  restarted the image with the &lt;code&gt;-v&lt;/code&gt; flag. Therefore I can edit the files on my host machine with my favorite editor and use the container only for producing the HTML files, for preview and for publishing.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;rake preview&lt;/code&gt; is a neat feature because the server always looks for changed files and produces the HTML files on the fly. That means I can edit the files in my editor and could see the resulting pages in a  browser nearly the same time.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">My Dockerfile for setting up Octopress</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/05/26/my-dockerfile-for-setting-up-octopress/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-05-26-my-dockerfile-for-setting-up-octopress</id>
+  <published>2014-05-26T07:24:00Z</published>
+  <updated>2014-05-26T07:24:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;After my trouble with installing all the dependencies for Octopress I  came up with the following Dockerfile for Docker. This follows the  instructions from the Octopress homepage and uses RVM for managing the ruby dependencies.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# dockerfile for octopress
+
+FROM ubuntu:14.04
+MAINTAINER krrrcks &amp;lt;krrrcks@krrrcks.net&amp;gt;
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update; \
+  apt-get -q -y upgrade
+RUN apt-get -q -y install git curl; \
+  apt-get clean
+RUN git clone git://github.com/imathis/octopress.git /opt/octopress
+RUN curl -L https://get.rvm.io | bash -s stable --ruby
+ENV HOME /root
+RUN echo "source /usr/local/rvm/scripts/rvm" &amp;gt;&amp;gt; /root/.bashrc; 
+RUN /bin/bash -l -c "source /usr/local/rvm/scripts/rvm; \
+  rvm install 1.9.3; \
+  rvm use 1.9.3; \
+  rvm rubygems latest; \
+  cd /opt/octopress; \
+  gem install bundler; \
+  bundle install; \
+  rake install" 
+RUN echo "rvm use 1.9.3" &amp;gt;&amp;gt; /root/.bashrc
+
+WORKDIR /opt/octopress
+EXPOSE 4000
+CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;</content></entry>
+ <entry>
+  <title type="text">Programm-Bibliotheken und verschiedene Versionsstände</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2011/10/16/programm-bibliotheken-und-verschiedene-versionsstände/" />
+  <id>urn:http-www-dbrunner-de:-blog-2011-10-16-programm-bibliotheken-und-verschiedene-versionsstände</id>
+  <published>2011-10-15T22:00:00Z</published>
+  <updated>2011-10-15T22:00:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Ich bin ein sehr intensiver Nutzer von &lt;a href="http://www.orgmode.org"&gt;Org-Mode&lt;/a&gt;, einem speziellen Modul/Modus für den Emacs-Editor (ich habe hier auf meiner Homepage auch einmal mit einer kleinen &lt;a href="http://archive.dbrunner.de/it/org-mode.html"&gt;Seite&lt;/a&gt; dazu begonnen). Nun ja, was soll man sagen: Bei Emacs wird eine recht alte Version mitgeliefert. Ich wollte dann mal auch wegen einiger Funktionen die neueste nutzen. Also via &lt;code&gt;git&lt;/code&gt; heruntergeladen und eingebunden und Peng, irgendwas funktioniert natürlich nicht mehr: Ich benötige pratisch täglich den Export von Org-Mode-Dateien nach &lt;code&gt;LaTeX&lt;/code&gt;, der wollte aber nicht mehr. Nun kann ich zwar Lisp, aber das Emacs Lisp ist doch etwas speziell und die Debug-Möglichkeiten sind etwas … nun ja, altbacken. Kurzum: Das macht überhaupt keinen Spaß. Im Endeffekt habe ich dann herausgefunden, dass unter bestimmten Umständen Teile des alten, bei Emacs mitgelieferten Codes nachgeladen wird anstelle der neuen Distribution. Diese bescheidene Art von Emacs mit Modulen und Paketen umzugehen ist wirklich erschreckend. Was dafür wiederum total toll war: In der von mir verwendeten Org-Mode-Version war wohl ein Fehler, das ganze Ding über die Mailingliste geschickt und innert einem halben Tag war der Fehler von anderen Nutzern und von Carsten Dominik auch gleich gefixt. Grandiose Antwortzeit!&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Constanze Kurz/Frank Rieger, Die Datenfresser</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2011/06/30/constanze-kurz-frank-rieger-die-datenfresser/" />
+  <id>urn:http-www-dbrunner-de:-blog-2011-06-30-constanze-kurz-frank-rieger-die-datenfresser</id>
+  <published>2011-06-30T11:00:00Z</published>
+  <updated>2011-06-30T11:00:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Nun, ich habe das Buch von Constanze Kurz und Frank Rieger, Die Datenfresser, gelesen. Hier eine sehr kurze Besprechung:&lt;/p&gt;
+
+&lt;p&gt;Die beiden Autoren wollen erklären, &amp;ldquo;wie Internetfirmen und Staat sich unsere persönlichen Daten einverbleiben und wie wir die Kontrolle darüber zurückerlangen.&amp;rdquo; Thematisch werden automatisierte Datenanalysen, der Wert der Nutzerdaten, die ökonomischen Mechanismen hinter sozialen Netzwerken und den Daten der Nutzer und einige Aspekte des staatlichen Einsatzes zur Datenanalyse vorgestellt und diskutiert.&lt;/p&gt;
+
+&lt;p&gt;Als wichtige Botschaft wird dem Leser mitgegeben, dass seine Daten für Unternehmen einen Wert darstellen und dass Angebote im Netz dazu dienen, diese Daten zu erlangen und zu monetarisieren; also Vorsicht vor Kostenlos-Angeboten, denn im Kern zahlt man auch für ein kostenloses Angebot, im Zweifel mit seinen Daten. Eine andere Kernbotschaft läuft darauf hinaus, dass Daten auch missbraucht werden können, sei es von staatlicher Stelle oder von zwielichtigen Zeitgenossen.&lt;/p&gt;
+
+&lt;p&gt;Das Bändchen mit 272 Seiten ist kurzweilig geschrieben, wechselt zwischen tatsächlichen Begebenheiten, Sachbuchdarstellung, fiktiven Geschichten und netzpolitischen und gesellschaftspolitischen Erwägungen geschickt hin und her. Der leichte und nicht in technische Details verliebte Sprachstil sowie die Art, wie technische Probleme dargestellt werden, macht es sicherlich auch einem Laien einfach, den Themen zu folgen und etwas hinter die Geschäftspraktiken und die Techniken zu sehen.&lt;/p&gt;
+
+&lt;p&gt;Das Buch leidet an mancher Stelle etwas, da die Kraft des Arguments nicht so richtig einschlagen mag. Beispiele sind insbesondere die Frage, wie man sich denn nun gegen die Datenfresser wehrt oder die Argumentation gegen die &amp;ldquo;Wer nichts zu verbergen hat…&amp;rdquo;-Ideologie. Das wirkt an der einen oder anderen Stelle zwar bemüht, aber nicht so kraftvoll, wie man sich das erhofft hat. Insbesondere ein schlüssiges Gegenkonzept hätte noch etwas breiter und prominenter ausgearbeitet werden können.&lt;/p&gt;
+
+&lt;p&gt;Auch werden zum Teil Gefahren und Befürchtungen recht abstrakt beschrieben, manchmal auch mit Hinweis, so etwas sei schon vorgekommen, aber man hätte es dann an der einen oder anderen Stelle doch gerne genauer gewusst.&lt;/p&gt;
+
+&lt;p&gt;Eher ein Buch zum Verschenken an Leute, die noch nicht so firm im Netz sind.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href="http://www.fischerverlage.de/buch/Die_Datenfresser/9783100485182"&gt;Constanze Kurz/Frank Rieger, Die Datenfresser, 272 Seiten, S. Fischer Verlag, 16,95 EUR.&lt;/a&gt;&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Nachtrag I zum E-Postbrief</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2010/07/26/nachtrag-i-zum-e-postbrief/" />
+  <id>urn:http-www-dbrunner-de:-blog-2010-07-26-nachtrag-i-zum-e-postbrief</id>
+  <published>2010-07-26T08:32:00Z</published>
+  <updated>2010-07-26T08:32:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Ein Nachtrag zu meinem Eintrag über den E-Postbrief. Da überall von &amp;ldquo;qualifizierter elektronischer Signatur&amp;rdquo; die Rede ist, möchte ich gern auf Folgendes hinweisen: Lässt sich der Benutzer ein Zertifikat zum zusätzlichen Verschlüsseln und Signieren erzeugen, so darf man sich ob der Güte dieses Schlüssels nicht täuschen. Es handelt sich dann nämlich &lt;strong&gt;nicht&lt;/strong&gt; um eine qualifizierte elektronische Signatur nach Signaturgesetz. So leicht erlesbar aus der &lt;a href="https://service.deutschepost.de/epost/downloads/7/Leistungsbeschreibung_E-Postbrief.pdf"&gt;Leistungsbeschreibung E-Postbrief&lt;/a&gt;; dort heißt es unter den &amp;ldquo;Zusatzleistungen&amp;rdquo;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;"&lt;strong&gt;Persönlich signiert&lt;/strong&gt;: Der Absender signiert die Nachricht zusätzlich mit seinem privaten Schlüssel. Da der private Schlüssel eine eindeutige Zuordnung zu einem Nutzer ermöglicht, erhöht dies den Grad der Authentifizierung.&lt;/p&gt;
+ &lt;p&gt;Die eingesetzten Verschlüsselungsverfahren erfüllen allerdings nicht die Voraussetzungen einer qualifizierten elektronischen Signatur nach dem Signaturgesetz (SigG), so dass gesetzlich vorgesehene Schriftformerfordernisse nicht erfüllt werden."&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Schade, so hat die Post noch eine Möglichkeit mit ihrem Produkt zu punkten verpasst und lässt den Ball ins Seitenaus rollen.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Der E-Postbrief, ein Selbstversuch</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2010/07/25/der-e-postbrief-ein-selbstversuch/" />
+  <id>urn:http-www-dbrunner-de:-blog-2010-07-25-der-e-postbrief-ein-selbstversuch</id>
+  <published>2010-07-25T21:57:00Z</published>
+  <updated>2010-07-25T21:57:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;So, da &lt;a href="http://www.heise.de/ix/meldung/Deutsche-Post-steigt-in-E-Mail-Geschaeft-ein-1037580.html"&gt;kam&lt;/a&gt; er also mit viel Marketingaufwand: Der &lt;a href="http://www.epost.de"&gt;E-Postbrief&lt;/a&gt; der Deutschen Post. Wohl mit Absicht etwas vor der Einführung der &lt;a href="http://www.heise.de/newsticker/meldung/Rechtssichere-Buerger-E-Post-De-Mail-Besonderheiten-und-Fallstricke-1037231.html"&gt;DE-Mail&lt;/a&gt;, einer Initiative der Bundesregierung. Nachdem dann auch ein Werbeflatterer in meinem (normalen) Briefkasten gelandet ist, habe ich mir einen Selbstversuch gegönnt und die neue Plattform testen wollen. (Erinnern Sie sich übrigens daran, dass die Post, ich glaube sogar auch unter der URL &lt;code&gt;epost.de&lt;/code&gt; schon vor Jahren jedem Bundesbürger eine lebenslang gültige E-Mail-Adresse versprochen hat? Nach einigen Jahren starb dieses E-Mail-Portal-Projekt. Werden schon Wetten auf das Ende des E-Postbriefs angenommen?)&lt;/p&gt;
+
+&lt;p&gt;Die Behauptung der Post, mit der E-Mail käme nun eine besondere Form von Rechtssicherheit in das Internet, mag man dem Werbe-Tamtam anlasten. Mir wäre nämlich nicht bekannt, dass E-Mails, in denen man etwas bestellt oder mit denen man Verträge gestaltet, nicht rechtsicher wären. Okay, zugegeben, das Protokoll zum Transport von E-Mails hat Probleme (insb. hinsichtlich der Identifizierung des Absenders). Aber grundsätzlich werden ständig und in großer Zahl Verträge per E-Mail geschlossen, verändert und auch E-Mails als Beweisstücke vor Gericht vorgelegt und anerkannt.&lt;/p&gt;
+
+&lt;p&gt;Was mir auch nicht so ganz klar ist: Wenn E-Mail-Adressen der Art &lt;code&gt;Hans.Mustermann1.23&lt;/code&gt; und &lt;code&gt;Hans.Mustermann.4&lt;/code&gt; vergeben werden, dann weiß ich zwar beim E-Postbrief, dass sich hinter jeder Adresse sicher ein Hans Mustermann verbirgt. Aber ob es derjenige Hans Mustermann ist, mit dem ich einen Vertrag abschließen will, ist mir aus der Adresse nicht erkennbar. Schlicht, solange ich nur die E-Mail-Adresse habe, sind Verwechslungen nicht ausgeschlossen. Das Durchnummerieren ist nur bedingt schön für den Anwender.&lt;/p&gt;
+
+&lt;p&gt;In der Folge nun einige Erlebnisse. Auf die weiteren konzeptionellen Probleme (siehe &lt;a href="http://www.heise.de/newsticker/meldung/Kritik-am-E-Postbrief-waechst-1044814.html"&gt;den Eintrag bei Heise.DE&lt;/a&gt; bzw. &lt;a href="http://www.heise.de/tp/blogs/8/148074"&gt;den Telepolis-Artikel&lt;/a&gt;) will ich gar nicht eingehen, sondern erst einmal das Gefühl des Benutzers in den Vordergrund stellen:&lt;/p&gt;
+
+&lt;p&gt;Nach dem Anmelde-Vorgang, den ich nicht sonderlich komplex fand, erhielt ich irgendwann eine SMS, dass mein Postfach freigeschaltet sei. Also gleich einmal angemeldet und alle möglich Funktionen ausprobiert.&lt;/p&gt;
+
+&lt;p&gt;Trotz der Kritik am vielgescholtene Adressverzeichnis (da nimmt sich &lt;a href="http://gutjahr.biz/blog/2010/07/die-gelbe-gefahr/"&gt;wohl&lt;/a&gt; die Post den Adressverkauf heraus) wollte ich dies testen und melde mich mit ein paar Zusatzinformationen an. Anschließend wollte ich prüfen, wie denn der Eintrag so aussieht, wenn man sich selbst aufruft. Aber, ich finde mich gar nicht im Verzeichnis. Also habe ich diese Einstellung wieder deaktiviert.&lt;/p&gt;
+
+&lt;p&gt;Völlig kryptisch ist das Verfahren, &amp;ldquo;normale&amp;rdquo; E-Mails zu senden. Man muss dazu nämlich ein normales E-Mail-Konto bei einem anderen Provider &amp;ldquo;einbinden&amp;rdquo;. Kein Problem, denke ich mir, lege eines bei meinem Provider an, binde es ein und alles scheint zu funktionieren. Allein, die E-Post-Adresse taugt gar nicht zum E-Mail-Empfang. Man erhält nur Fehlermeldung erfolgloser Zustellungen. Und wenn man umgekehrt eine E-Mail aus dem E-Postbrief-Portal senden will, wird die Domain &lt;code&gt;dp-mail.de&lt;/code&gt; als Absende-Domain angehängt. Eine solche E-Mail wird auch zugestellt (wobei nicht immer, auf die Zustellung einer E-Mail warte ich nocht), jedoch kann man darauf als Empfänger nicht mehr antworten, da auch die Antwort-E-Mail wieder wegen erfolgloser Zustellung irgendwo im gelben Konzern ihre Runden dreht. Dieses E-Mail-Einbinden funktioniert meines Erachtens gar nicht.&lt;/p&gt;
+
+&lt;p&gt;Freudig habe ich zur Kenntnis genommen, dass man auch Faxe empfangen und senden kann. Nach einem Klick wurde mir eine Fax-Nummer zugeteilt. Also schnell ein Testfax handschriftlich gekritzelt, zum Papierfax gerannt und losgefaxt. Ich habe ein Übertragungsprotokoll mit der Aufrschrift &amp;ldquo;Übertragung Ok&amp;rdquo;, aber selbst nach nun drei Tagen ist im E-Postbrief-Eingang kein Telefax eingegangen. Auch diese Funktion scheint kaputt zu sein. Den Versand aus dem E-Postbrief-Portal habe ich mir dann geschenkt.&lt;/p&gt;
+
+&lt;p&gt;Da ich noch niemanden kenne, der auch ein solches E-Postbrief-Konto hat, habe ich den Versuch gemacht und an meine Postanschrift einen E-Postbrief mit normaler Zustellung schreiben wollen. Beim ersten Versuch wollte das Anhängen eines Anhangs (siehe dazu auch noch unten eine generelle Anmerkung zu Fehlern) nicht klappen und eine Fehlerseite erschien. Erfreulicherweise wurde der bisher getippte Text als &amp;ldquo;Entwurf&amp;rdquo; gespeichert. Jedoch war es mir nicht möglich, diesen Entwurf weiter zu bearbeiten, ich konnte ihn mir nur anzeigen lassen, eine &amp;ldquo;Entwurf weiter bearbeiten&amp;rdquo;-Funktion war nicht auszumachen. Was also diese Entwürfe sollen, bleibt das Geheimnis des gelben Riesen. Nachdem ich nun einen neuen Brief erstellt und losgeschicken wollte, das nächste Ärgernis: Das Guthabenkonto für das Porto kann man nur in ganzen Euro-Beträgen aufladen. Das erscheint technisch völlig anachronistisch. Von der Kundenfreundlichkeit her ist das schlicht unverschämt. Aber um des Fortschritts willen investiere ich einen Euro und kann anschließend meinen ersten E-Postbrief (Anschreiben plus ein PDF mit zwei Seiten als Anhang) versenden. In der Tat, am kommenden Tag lag ein fein kuvertierter Brief in meinem Briefkasten. Einzig das PDF war etwas grieselig, aber da wird man mit Standardschriften und ähnlichem sicherlich optimieren können. Diese Funktion ist wirklich praktisch, da man sich das ausdrucken, kuvertieren und frankieren sparen und alles bequem via Web-Portal erledigen kann.&lt;/p&gt;
+
+&lt;p&gt;Empfangen habe ich noch nichts: E-Mails wollte das Portal nicht empfangen und Telefaxe auch nicht. Nun ja, vielleicht sendet mir ja irgendwann mal jemand einen E-Postbrief. Ich habe mir auch eine SMS-Benachrichtigung eingerichtet, befürchte aber, dass diese wie so vieles anderes auch nicht funktioniern wird.&lt;/p&gt;
+
+&lt;p&gt;Abschließend noch ein riesiges Ärgernis: Ständig erscheinen völlig unvermittelt (bspw. beim Absenden von E-Mails, beim Anhängen von PDS an einen E-Postbrief) Fehlerseiten der Art &amp;ldquo;Bitte entschuldigen Sie&amp;rdquo;. Angegeben jeweils völlig kryptische Fehlercodes. Da fragt man sich nach wenigen Minuten, ob dies Produkt wirklich so sicher und so toll ist, wie der Anbieter werbewirksam behauptet.&lt;/p&gt;
+
+&lt;p&gt;Einschränkend will ich sagen, dass ich vielleicht die Bedienung nicht ganz verstanden habe; aber Hilfe-Seiten oder passende Dokumentation habe ich nicht finden können, die mir aus den oben beschriebenen Fallstricken geholfen hätte.&lt;/p&gt;
+
+&lt;p&gt;Zusammenfassend: Man wird wohl einfach einmal abwarten können, ob sich der E-Postbrief oder DE-Mail durchsetzt; auch die Preise werden sicherlich noch ein wenig Bewegung erfahren. Ob die Regelungen aus den AGBen so Bestand haben werden, ist auch fraglich. Was jedoch klar ist: So wie derzeit ausgeliefert, macht das E-Postbrief-System den Eindruck als sei es ein halbes Jahr zu früh in Echtbetrieb gegangen und als habe man die Testphase gleich an die Benutzer delegiert. Ich kann von der Benutzung derzeit nur abraten. Folglich werde ich auch nicht verraten, unter welcher Name- und Nummernkombination ich &lt;code&gt;@epost.de&lt;/code&gt; zu erreichen bin.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Nachtrag:&lt;/em&gt; Nun ist doch endlich eine E-Mail an die &lt;code&gt;@dp-mail.de&lt;/code&gt;-Adresse angekommen.&lt;/p&gt;
+
+&lt;p&gt;2010&amp;ndash;08&amp;ndash;04 Mi &lt;em&gt;Nachtrag 2:&lt;/em&gt; Zufällig entdeckte ich in der aktuellen Ausgabe der Wirtschaftswoche eine ähnliche Schilderung von Pannen, der Artikel ist auch &lt;a href="http://www.wiwo.de/unternehmen-maerkte/post-verpatzt-start-des-e-briefs-436971/"&gt;online&lt;/a&gt; verfügbar.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Code snippets not working at the moment</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2010/07/02/code-snippets-not-working-at-the-moment/" />
+  <id>urn:http-www-dbrunner-de:-blog-2010-07-02-code-snippets-not-working-at-the-moment</id>
+  <published>2010-07-01T22:00:00Z</published>
+  <updated>2010-07-01T22:00:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Two of my &lt;a href="http://archive.dbrunner.de/it/org-mode.html"&gt;code snippets&lt;/a&gt; for org-mode are not working with the actual &lt;code&gt;master&lt;/code&gt; of the git repository. I have to check this and I am going to fix them when I find enough time for that.&lt;/p&gt;</content></entry></feed>

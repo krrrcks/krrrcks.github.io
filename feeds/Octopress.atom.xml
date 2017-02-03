@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">Daniel Brunner: Posts tagged 'Octopress'</title>
+ <link rel="self" href="http://www.dbrunner.de/feeds/Octopress.atom.xml" />
+ <link href="http://www.dbrunner.de/tags/Octopress.html" />
+ <id>urn:http-www-dbrunner-de:-tags-Octopress-html</id>
+ <updated>2014-12-21T10:58:16Z</updated>
+ <entry>
+  <title type="text">Ich habe mal Octopress aktualisert</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/12/21/ich-habe-mal-octopress-aktualisert/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-12-21-ich-habe-mal-octopress-aktualisert</id>
+  <published>2014-12-21T10:58:16Z</published>
+  <updated>2014-12-21T10:58:16Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Neulich fiel mir auf, dass die Suchfunktion, die auf Google basiert, nicht nur auf der eigenen Homepage, sondern im &amp;ldquo;gesamten&amp;rdquo; Suchindex von Google gesucht hat. Eben flatterte dieser &lt;a href="https://twitter.com/octopress/status/546528904115404800"&gt;Tweet&lt;/a&gt; mit &lt;a href="https://github.com/imathis/octopress/commit/514ed5eb9f6bb91a6f3288febf3c2ba892a9b693"&gt;Link&lt;/a&gt; zu einem Fix an mir vorbei und da hat sich wohl die API geändert.&lt;/p&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/2014-12-21-octopress.png" alt="Octopress-Tweet" /&gt;
+ &lt;p class="caption"&gt;Octopress-Tweet&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;Also habe ich mich einmal an den &lt;a href="http://octopress.org/docs/updating/"&gt;Hinweisen&lt;/a&gt; zum Aktualisieren von Octopress orientiert. Hierzu werden die folgenden Schritte vorgeschlagen:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git pull octopress master      # Get the latest Octopress
+bundle install                 # Keep gems updated
+rake update_source             # update the template's source
+rake update_style              # update the template's style&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Soweit lief das auch. Es tauchten anschließend zwei Probleme auf:&lt;/p&gt;
+
+&lt;ol&gt;
+ &lt;li&gt;
+  &lt;p&gt;Das &lt;code&gt;execjs&lt;/code&gt; jammerte, dass ihm irgendwie eine  JavaScript-Bibliothek fehlte. Nach kurzer Recherche gab es die  Empfehlung, die Zeile &lt;code&gt;gem 'therubyracer'&lt;/code&gt; in das &lt;code&gt;Gemfile&lt;/code&gt;  aufzunehmen. Okay, das funktionierte schon einmal.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;Bei den Feeds für die Kategorien jammerte das Octopress ein  ungültiges Layout an. In &lt;code&gt;category_feed.xml&lt;/code&gt; stand in der Tat  &lt;code&gt;layout: nil&lt;/code&gt;. Ich habe das auf &lt;code&gt;layout: page&lt;/code&gt; geändert. Nun tat  auch dies.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
+
+&lt;p&gt;Mit dem Update funktioniert nun auch das Such-Formular wieder.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ergänzung:&lt;/strong&gt; Ich lasse das Jekyll und Octopress in einem  &lt;a href="/blog/2014/06/10/relaunch-fast-fertig/"&gt;Docker-Container&lt;/a&gt; laufen und irgendwie bekam ich bei &lt;code&gt;rake preview&lt;/code&gt;  meine Seite nicht mehr zu sehen. Da ich mich mit Ruby und den  Komponenten nicht so gut auskenne, weiß ich nicht, ob mein &amp;ldquo;Fix&amp;rdquo; so  gut ist: Ich habe im &lt;code&gt;Rakefile&lt;/code&gt; den &lt;code&gt;rackup&lt;/code&gt;-Aufruf um den  Parameter &lt;code&gt;-o 0.0.0.0&lt;/code&gt; ergänzt. Dann bekam ich vom Host wieder eine  Verbindung zum Webserver im Octopress-Container.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update vom 04. Januar 2014:&lt;/strong&gt; Nach einem kurzen  &lt;a href="https://twitter.com/Krrrcks/status/546667456128114688"&gt;Gespräch&lt;/a&gt;  via Twitter habe ich mich entschieden, den eingebauten Server doch  wieder so zu belassen, wie es im &lt;code&gt;Rakefile&lt;/code&gt; ursprünglich  stand. Statt dessen habe ich einfach in dem Docker-Container einen  &lt;code&gt;nginx&lt;/code&gt; hinzuinstalliert, der dann mein &lt;code&gt;public&lt;/code&gt;-Verzeichnis an den  Port 4000 ausliefert. So funktioniert es wieder prima: Ich starte  den &lt;code&gt;nginx&lt;/code&gt; und lasse dann das &lt;code&gt;rake watch&lt;/code&gt; laufen, um die Seiten  immer wieder neu zu erzeugen, wenn sich Dinge geändert haben.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Migration alter Blog-Einträge</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/12/17/migration-alter-blog-einträge/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-12-17-migration-alter-blog-einträge</id>
+  <published>2014-12-17T17:11:00Z</published>
+  <updated>2014-12-17T17:11:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Es kamen lange Winterabende und ich habe die alten Blog-Einträge von der mittels Org-Mode erstellten Seite hier nach Octopress migriert. Im Archiv sind diese zu finden und die Links etc. sollten nun auch passend mit migriert worden sein.&lt;/p&gt;
+
+&lt;p&gt;Bei der Konvertierung habe ich ein Programm kennengelernt, das mir sehr geholfen hat: &lt;a href="http://johnmacfarlane.net/pandoc/"&gt;Pandoc&lt;/a&gt;. Das ist ein Konverter, der Text- und Markupdateien hin und her konvertieren kann. Dabei beherrscht er eine ganze Reihe von Formaten. Insbesondere kann er das Org-Mode-Format (das ich für viele Dinge verwende) ebenso wie LaTeX und Markdown (daneben aber auch noch eine Legion von Formaten).&lt;/p&gt;
+
+&lt;p&gt;Da mein Hauptdateiformat ohnehin &amp;ldquo;Textdateien&amp;rdquo; sind (&amp;ldquo;Never trust a file that isn&amp;rsquo;t ASCII&amp;rdquo;) ist das sehr praktisch, um zwischen verschiedenen Markup-Formaten hin und her zu springen.&lt;/p&gt;
+
+&lt;p&gt;Für die Migration meine Blog-Einträge lief dies wie folgt: Ich hatte die in der alten Homepage mit Org-Mode und Org-Jekyll erstellt. Dabei hatte das Org-Jekyll-Modul entsprechende HTML-Dateien mit einem YAML-Header erzeugt. Mittels Pandoc konnte ich die nun wieder nach Markdown konvertieren, habe die YAML-Header ein wenig angepasst, Kategorien aktualisiert und noch mal das Markup zwecks Zeilenumbrüche, Fußnoten und Links geprüft und leicht angepasst. Insgesamt sehr schnell bewältigbar.&lt;/p&gt;
+
+&lt;p&gt;Dieser ganze Zoo rund um Markdown und andere ähnliche Formate ist zwar manchmal ein bisschen unübersichtlich, aber mir gefällt das sehr gut, dass man mit wenig Markup schön Textdateien strukturieren kann und dann mit Pandoc auch gut hin und her konvertieren kann.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Unicode support for Octopress</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/06/10/unicode-support-for-octopress/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-06-10-unicode-support-for-octopress</id>
+  <published>2014-06-10T07:26:22Z</published>
+  <updated>2014-06-10T07:26:22Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Well, it seems Octopress/Jekyll would like to have a locale set for UTF&amp;ndash;8 support. I followed &lt;a href="http://www.dominik-gaetjens.de/blog/2012/06/09/utf-8-in-octopress/"&gt;this (text in German)&lt;/a&gt; hint and now my Dockerfile looks like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# dockerfile for octopress
+
+FROM ubuntu:14.04
+MAINTAINER krrrcks &amp;lt;krrrcks@krrrcks.net&amp;gt;
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update; \
+  apt-get -q -y upgrade
+RUN /usr/sbin/locale-gen en_US.UTF-8; \
+  update-locale LANG=en_US.UTF-8
+RUN apt-get -q -y install git curl; \
+  apt-get clean
+RUN git clone git://github.com/imathis/octopress.git /opt/octopress
+RUN curl -L https://get.rvm.io | bash -s stable --ruby
+ENV HOME /root
+RUN echo "export LC_ALL=en_US.UTF-8" &amp;gt;&amp;gt; /root/.bashrc
+RUN echo "export LANG=en_US.UTF-8" &amp;gt;&amp;gt; /root/.bashrc
+RUN echo "source /usr/local/rvm/scripts/rvm" &amp;gt;&amp;gt; /root/.bashrc; 
+RUN /bin/bash -l -c "source /usr/local/rvm/scripts/rvm; \
+  rvm install 1.9.3; \
+  rvm use 1.9.3; \
+  rvm rubygems latest; \
+  cd /opt/octopress; \
+  gem install bundler; \
+  bundle install; \
+  rake install" 
+RUN echo "rvm use 1.9.3" &amp;gt;&amp;gt; /root/.bashrc
+
+WORKDIR /opt/octopress
+EXPOSE 4000
+CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After playing around with Docker and Octopress I put the whole &lt;code&gt;/opt/octopress&lt;/code&gt; folder on my host machine and then  restarted the image with the &lt;code&gt;-v&lt;/code&gt; flag. Therefore I can edit the files on my host machine with my favorite editor and use the container only for producing the HTML files, for preview and for publishing.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;rake preview&lt;/code&gt; is a neat feature because the server always looks for changed files and produces the HTML files on the fly. That means I can edit the files in my editor and could see the resulting pages in a  browser nearly the same time.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Relaunch fast fertig</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/06/10/relaunch-fast-fertig/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-06-10-relaunch-fast-fertig</id>
+  <published>2014-06-10T07:20:03Z</published>
+  <updated>2014-06-10T07:20:03Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;So, nach einigem Gefummel mit Ruby und Octopress und den Weiterleitungsmöglichkeiten meines Hosters ist die Sache wohl bald so am laufen, wie ich mir das vorstelle. Es fehlt noch ein wenig das Eindeutschen der Octopress-Texte und vielleicht so eine Kategorien-Liste rechts.&lt;/p&gt;
+
+&lt;p&gt;Ansonsten habe ich, um der &amp;ldquo;Gem-Hölle&amp;rdquo; zu entgehen, das Octopress in einen Docker-Container gepackt; hier ist ein &lt;a href="/blog/2014/06/10/unicode-support-for-octopress/"&gt;Link&lt;/a&gt; zu dem verwendeten &lt;code&gt;Dockerfile&lt;/code&gt;. Ich habe es dann auch so gemacht, dass ich das &lt;code&gt;/opt/octopress&lt;/code&gt;-Verzeichnis auf den Host-Rechner verschoben habe und in den Container als &lt;em&gt;Volume&lt;/em&gt; hineinpacke. So kann ich auf dem Host-Rechner ganz bequem mit dem Emacs die Files editieren und verwende den Container nur noch für die Erstellung, das &amp;ldquo;Preview&amp;rdquo; und für das Hochladen.&lt;/p&gt;
+
+&lt;p&gt;Die &amp;ldquo;preview&amp;rdquo;-Funktion ist übrigens ein wirklich nettes Features: Die kann man derart nutzen, dass ein Webserver den aktuellen Stand lokal ausliefert. Dabei beobachtet der Dienst, ob sich Dateien ändern und erstellt unmittelbar wieder die HTML-Seiten. So kann man bequem im Editor das Markdown bearbeiten und im Browser daneben das fertige Ergebnis beurteilen.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Ein Relaunch</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/06/06/ein-relaunch/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-06-06-ein-relaunch</id>
+  <published>2014-06-06T13:48:31Z</published>
+  <updated>2014-06-06T13:48:31Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Ich denke, mir geht es wie vielen: Nach einer gewissen Zeit, in der das bisherige Blog, die bisherige Web-Seite nicht gepflegt wird,  steht irgendwann ein Neubeginn an, dann gleich mit einem &amp;ldquo;Relaunch&amp;rdquo; und vielen neuen und guten Vorsätzen.&lt;/p&gt;
+
+&lt;p&gt;Ich bin zwar nach wie vor ein großer Freund und Nutzer von Org-Mode, aber  für das Führen eines Blogs erschien mir der Ablauf doch immer recht umständlich. Ich habe mir daher einmal Octopress angeschaut (vor allem, da die Blog-Funktion von Org-Mode, die ich nutzte, auch mit Jekyll  arbeitete) und finde das eigentlich ganz hübsch. Einzig so ein wenig &amp;ldquo;eindeutschen&amp;rdquo; sollte ich es noch. Außerdem ist das Umleiten von der bisherigen Domain hierher noch ein wenig kaputt; mein bisheriger Hoster lässt mich das nicht so schön mit CNAME-Einträgen gestalten, wie das eigentlich gedacht ist.&lt;/p&gt;
+
+&lt;p&gt;Nun also ein Relaunch, aber ohne große Vorsätze. Es wird hier also  nur selten und nur wenig zu lesen geben.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">My Dockerfile for setting up Octopress</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/05/26/my-dockerfile-for-setting-up-octopress/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-05-26-my-dockerfile-for-setting-up-octopress</id>
+  <published>2014-05-26T07:24:00Z</published>
+  <updated>2014-05-26T07:24:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;After my trouble with installing all the dependencies for Octopress I  came up with the following Dockerfile for Docker. This follows the  instructions from the Octopress homepage and uses RVM for managing the ruby dependencies.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# dockerfile for octopress
+
+FROM ubuntu:14.04
+MAINTAINER krrrcks &amp;lt;krrrcks@krrrcks.net&amp;gt;
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update; \
+  apt-get -q -y upgrade
+RUN apt-get -q -y install git curl; \
+  apt-get clean
+RUN git clone git://github.com/imathis/octopress.git /opt/octopress
+RUN curl -L https://get.rvm.io | bash -s stable --ruby
+ENV HOME /root
+RUN echo "source /usr/local/rvm/scripts/rvm" &amp;gt;&amp;gt; /root/.bashrc; 
+RUN /bin/bash -l -c "source /usr/local/rvm/scripts/rvm; \
+  rvm install 1.9.3; \
+  rvm use 1.9.3; \
+  rvm rubygems latest; \
+  cd /opt/octopress; \
+  gem install bundler; \
+  bundle install; \
+  rake install" 
+RUN echo "rvm use 1.9.3" &amp;gt;&amp;gt; /root/.bashrc
+
+WORKDIR /opt/octopress
+EXPOSE 4000
+CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;</content></entry></feed>

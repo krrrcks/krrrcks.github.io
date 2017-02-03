@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">Daniel Brunner: Posts tagged 'S3'</title>
+ <link rel="self" href="http://www.dbrunner.de/feeds/S3.atom.xml" />
+ <link href="http://www.dbrunner.de/tags/S3.html" />
+ <id>urn:http-www-dbrunner-de:-tags-S3-html</id>
+ <updated>2015-09-04T05:23:43Z</updated>
+ <entry>
+  <title type="text">How to use GET Bucket location on Amazon S3 with Racket</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-09-04-how-to-use-get-bucket-location-on-amazon-s3-with-racket</id>
+  <published>2015-09-04T05:23:43Z</published>
+  <updated>2015-09-04T05:23:43Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;In &lt;a href="http://www.racket-lang.org"&gt;Racket&lt;/a&gt; I want to iterate over my buckets in Amazon S3. They are located in different regions. So how do I get my bucket&amp;rsquo;s location/region? In the API Reference there is a call &lt;a href="http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETlocation.html"&gt;GET Bucket location&lt;/a&gt;. I use &lt;a href="https://github.com/greghendershott/aws"&gt;Greg&amp;rsquo;s AWS library for Racket&lt;/a&gt; and this library authenticates its calls with &lt;a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html"&gt;signature version V4&lt;/a&gt;. But V4 requires the user to know the &lt;em&gt;region&lt;/em&gt; to correctly sign the request. So I need to know the region to ask Amazon S3 for the region where the bucket is located. Otherwise Amazon S3 responds with an error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version="1.0" encoding="UTF-8"?&amp;gt;
+&amp;lt;Error&amp;gt;
+ &amp;lt;Code&amp;gt;AuthorizationHeaderMalformed&amp;lt;/Code&amp;gt;
+ &amp;lt;Message&amp;gt;The authorization header is malformed; the region 'us-east-1'
+is wrong; expecting 'eu-central-1'&amp;lt;/Message&amp;gt;
+ &amp;lt;Region&amp;gt;eu-central-1&amp;lt;/Region&amp;gt;
+ &amp;lt;RequestId&amp;gt;XXXX&amp;lt;/RequestId&amp;gt;
+ &amp;lt;HostId&amp;gt;XXXX&amp;gt;
+&amp;lt;/Error&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After some search on the net I found a &lt;a href="http://stackoverflow.com/questions/27091816/retrieve-buckets-objects-without-knowing-buckets-region-with-aws-s3-rest-api"&gt;post on Stackoverflow&lt;/a&gt; that helped to solve that issue: If I use the URL format (instead of the normally used virtual host format) I could get the location of any bucket. Every region responds with a &lt;em&gt;LocationConstraint&lt;/em&gt; answer.&lt;/p&gt;
+
+&lt;p&gt;Therefore a code snippet for Racket could be:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(define (get-bucket-location bucket)
+  (parameterize
+      ([s3-path-requests? #t])
+    (define xpr (get/proc (string-append bucket "/?location") read-entity/xexpr))
+    (and (list? xpr)
+         (= (length xpr) 3)
+         (third xpr))))&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; (get-bucket-location "my-bucket-somewhere")
+"eu-central-1"&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;PS: I think official Amazon S3 documentation could be a bit more verbose on the issues with GetBucketLocation and signature V4.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; Greg added a &lt;code&gt;bucket-location&lt;/code&gt; function to his great &lt;a href="http://docs.racket-lang.org/aws/S3__Storage_.html#%28def._%28%28lib._aws%2Fs3..rkt%29._bucket-location%29%29"&gt;library&lt;/a&gt;&lt;/p&gt;</content></entry></feed>

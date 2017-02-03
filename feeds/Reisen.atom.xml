@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">Daniel Brunner: Posts tagged 'Reisen'</title>
+ <link rel="self" href="http://www.dbrunner.de/feeds/Reisen.atom.xml" />
+ <link href="http://www.dbrunner.de/tags/Reisen.html" />
+ <id>urn:http-www-dbrunner-de:-tags-Reisen-html</id>
+ <updated>2015-01-05T16:03:00Z</updated>
+ <entry>
+  <title type="text">Eindrücke vom 31C3</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/01/05/eindrücke-vom-31c3/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-01-05-eindrücke-vom-31c3</id>
+  <published>2015-01-05T16:03:00Z</published>
+  <updated>2015-01-05T16:03:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Dieses Jahr habe ich mich einmal aufgerafft und bin das erste mal zum Congress des CCC nach Hamburg gefahren. Im Folgenden ein paar Eindrücke:&lt;/p&gt;
+
+&lt;h2 id="drumherum"&gt;Drumherum&lt;/h2&gt;
+
+&lt;p&gt;Ich fand den &lt;a href="http://events.ccc.de/congress/2014/wiki/Main_Page"&gt;31C3&lt;/a&gt; ein tolles Ereignis: Sehr professionell und umsichtig organisiert. Überall, wo ich hinkam, war man nett und freundlich, insgesamt eine sehr willkommende Atmosphäre. Nur der Termin, der ist ja doch etwas sperrig.&lt;/p&gt;
+
+&lt;h2 id="vorträge"&gt;Vorträge&lt;/h2&gt;
+
+&lt;p&gt;Ich konnte einige Vorträge anhören, von denen haben mir die folgenden besonders gut gefallen (ich habe mal die Links zu den Videos und die Links zu den Einträgen im Fahrplan aufgeführt, oft gibt es im Fahrplan auch noch zugehöriges Material und weitere Hinweise):&lt;/p&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6264_-_de_-_saal_1_-_201412271245_-_wir_beteiligen_uns_aktiv_an_den_diskussionen_-_martin_haase_maha.html"&gt;&amp;ldquo;Wir beteiligen uns aktiv an den Dikussionen&amp;rdquo;&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6264.html"&gt;(Link im Fahrplan)&lt;/a&gt; von Martin Haase, der die &lt;a href="http://www.digitale-agenda.de/"&gt;Digitale Agenda&lt;/a&gt; der Bundesregierung aus sprachwissenschaftlicher Sicht entlarvt als das, was es ist: Heiße Luft und wenig Konkretes, schon gar nicht für den &amp;ldquo;Bürger&amp;rdquo;. Besonders spannend fand ich den Teil des &amp;ldquo;PDF befreien&amp;rdquo;, denn die Bundesregierung hat nur ein wenig konsistentes PDF bereit gestellt, dass maha erst einmal in einen Text umwandeln musste, mit dem er mit seinen Werkzeugen arbeiten konnte. In der Diskussion wurde er dazu auch noch einmal befragt und meinte, Markdown, das sei eigentlich ein ganz gutes Format.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;Die beiden SS7-Vorträge von &lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6249_-_en_-_saal_1_-_201412271715_-_ss7_locate_track_manipulate_-_tobias_engel.html"&gt;Tobias Engel&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6249.html"&gt;(Fahrplan)&lt;/a&gt; und &lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6122_-_en_-_saal_1_-_201412271830_-_mobile_self-defense_-_karsten_nohl.html"&gt;Karsten Nohl&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6122.html"&gt;(Fahrplan)&lt;/a&gt;: Die Talks fand ich incl. der Live-Vorführungen sehr eindrücklich und haben mir vor Augen geführt, dass es mit der Sicherheit im Mobilfunk noch schlechter aussieht, als ich so befürchtet habe.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6369_-_en_-_saal_1_-_201412272145_-_ecchacks_-_djb_-_tanja_lange.html"&gt;ECCHacks&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6369.html"&gt;(Fahrplan)&lt;/a&gt; von djb und Tanja Lange: Ein Bekannter empfahl mir den Vortrag und meinte, ich könnte da schon was verstehen, obwohl ich mich mit diesen Ellpitischen Kurven nicht wirklich auskenne. Der Talk war didaktisch sehr gut aufbereitet und ich habe trotz der späten Stunde ein bisschen verstanden (glaube ich), worum es da eigentlich geht.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6294_-_de_-_saal_1_-_201412281815_-_vor_windows_8_wird_gewarnt_-_ruedi.html"&gt;Vor Windows 8 wird gewarnt&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6294.html"&gt;(Fahrplan)&lt;/a&gt; von ruedi: Ein kurzweiliger Vortrag über &amp;ldquo;Secure Boot&amp;rdquo; und andere Schwierigkeiten mit &amp;ldquo;Windows 8&amp;rdquo;.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6258_-_en_-_saal_1_-_201412282030_-_reconstructing_narratives_-_jacob_-_laura_poitras.html"&gt;Reconstructing naraatives&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6258.html"&gt;(Fahrplan)&lt;/a&gt; von Jacob Appelbaum und Laura Poitras: Das war im voll besetzten Saal 1 ein sehr eindrücklicher Vortrag, der mit Standing Ovations endete.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6121_-_en_-_saal_2_-_201412291715_-_what_ever_happened_to_nuclear_weapons_-_michael_buker.html"&gt;What Ever Happened to Nuclear Weapons?&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6121.html"&gt;(Fahrplan)&lt;/a&gt; von Michael Büker: Diesen Vortrag fand ich vom Aufbau und der Didaktik sehr gut vorbereitet. Als wichtige Erkenntnis habe ich für mich den &lt;a href="http://de.wikipedia.org/wiki/Kernwaffenteststopp-Vertrag"&gt;Kernwaffenstopp-Vertrag (englisch Comprehensive Nuclear-Test-Ban Treaty)&lt;/a&gt; mitgenommen, einen internationalen Vertrag, der sämtliche Kernwaffentests verbietet, der aber noch nicht in Kraft getreten ist; dieser Vertrag geht weiter als der Nuclear Test Ban Treaty aus den 1960er Jahren, der Kernwaffenversuche in der Atmosphäre, im Weltraum und unter Wasser verbietet. Dennoch gibt es hierzu schon eine &lt;a href="http://www.ctbto.org/"&gt;Organisation, die Preparatory Commission for the Comprehensive Nuclear-Test-Ban Treaty Organisation&lt;/a&gt;, der man auch auf Twitter &lt;a href="http://twitter.com/ctbto_alerts"&gt;folgen kann&lt;/a&gt;. Diese &amp;ldquo;Preparatory Commission&amp;rdquo; bereitet das Inkraftreten vor und baut ein Überwachungssystem auf.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;&lt;a href="http://media.ccc.de/browse/congress/2014/31c3_-_6128_-_en_-_saal_1_-_201412291830_-_thunderstrike_efi_bootkits_for_apple_macbooks_-_trammell_hudson.html"&gt;EFI bootkits for Apple MacBooks&lt;/a&gt; &lt;a href="http://events.ccc.de/congress/2014/Fahrplan/events/6128.html"&gt;(Fahrplan)&lt;/a&gt; von Trammell Hudson: Ich fand das sehr spannend vorgetragen (incl. Hexdumps etc.), wie Trammel Hudson durch &amp;ldquo;Reverse Engineering&amp;rdquo; auf ein Sicherheitsproblem bei Apple-Produktion gestoßen ist und dieses dann in einem Proof-of-Concept auch ausnutzen konnte.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;
+
+&lt;p&gt;Aufgrund des riesigen Angebots an Vorträgen, Workshops etc. muss ich mir in den kommenden Tagen glaube ich noch den einen oder anderen Vortrag als Video ansehen.&lt;/p&gt;
+
+&lt;h2 id="morgengrauen-stammtisch"&gt;MorgenGrauen-Stammtisch&lt;/h2&gt;
+
+&lt;p&gt;Etwas spontan und nicht so sonderlich koordiniert haben wir auch einen &lt;a href="http://mg.mud.de"&gt;MorgenGrauen&lt;/a&gt;-Stammtisch ausgerufen und siehe da: Drei Spieler und zwei Gäste fanden sich ein, so dass man bei einem Bier ein wenig plaudern und sich austauschen konnte.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Die vatikanischen Museen und eine kleine Überraschung</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2010/06/27/die-vatikanischen-museen-und-eine-kleine-überraschung/" />
+  <id>urn:http-www-dbrunner-de:-blog-2010-06-27-die-vatikanischen-museen-und-eine-kleine-überraschung</id>
+  <published>2010-06-27T10:16:00Z</published>
+  <updated>2010-06-27T10:16:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;&lt;em&gt;Hier noch ein kleiner Nachtrag zu meinem Besuch in Rom:&lt;/em&gt;&lt;/p&gt;
+
+&lt;h3 id="die-vatikanischen-museen"&gt;Die vatikanischen Museen&lt;/h3&gt;
+
+&lt;p&gt;Nachdem sich auf dem Petersplatz eine gehörige Schlange am Eingang zum Petersdom gebildet hatte, stand der Entschluss schnell fest, doch lieber einen kleinen Spaziergang um den Vatikan herum zu machen. Am Eingang der vatikanischen Museen dann umgekehrte Welt: Keine Warteschlange. Also hinein und für 15 Euro Eintritt einen Blick in die Gebäude und auf die ausgestellten Kunstwerke nehmen. Als besonders herausragend empfand ich die antiken Skulpturen, die in einer überwältigenden Menge präsentiert wurden. So beispielsweise die berühmte &lt;em&gt;Laokoon&lt;/em&gt;-Gruppe. Manchmal jedoch wirkten die Präsentationsflächen ob der schieren Menge vielleicht auch ein bisschen zugestellt.&lt;/p&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/2010-06-27-rom1.jpg" alt="2010-06-27-rom1.jpg" /&gt;
+ &lt;p class="caption"&gt;2010&amp;ndash;06&amp;ndash;27-rom1.jpg&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;Ein Museum mit einer beeindruckenden Sammlung und einer langen Geschichte. Jedoch, was negativ auffiel, ist die scheinbar völlige Abwesenheit eines museumdsdidaktischen Konzeptes. Die Exponate standen zum Teil sehr dicht beeinander, selten durch Tafeln inhaltlich miteinander verbunden oder überhaupt mit Tafeln erläutert. Einzig an vereinzelten Exponaten fanden sich kurze Tafeln. Warum nun welche Skulpturen gezeigt wurden und wie diese im Zusammenhang miteinander stehen, erschloss sich nicht. Manchmal wirkte die Ausstellung sogar lieblos: In einem der Gänge standen vor den schön bemalten Wänden Geschenke, die der Papst wohl von Diözesen sowie während seiner Auslandsaufenthalte erhalten hatte. Welchen Wert dieser Teil der Ausstellung hat ist mir schleierhaft. Vor allem da einige der Geschenke Ausdruck schaurigen Kitsches sind. Herausragend schaurig darunter eine Vitrine mit Porzellanschwänen, die eine amerikanische Diozöse geschenkt hatte. Kurzum, das Museum würde ausgesprochen gewinnen, wenn zu den Exponaten ein passendes museumsdidaktisches Konzept erarbeitet würde.&lt;/p&gt;
+
+&lt;h3 id="eine-kleine-überraschung-der-tempietto-di-bramante"&gt;Eine kleine Überraschung: Der Tempietto di Bramante&lt;/h3&gt;
+
+&lt;p&gt;Im Stadtteil Trastevere findet sich auf einer kleinen Anhöhe in der unmittelbaren Nähe zur spanischen Botschaft im Hof zur Kirche San Pietro in Monotorio der Tempietto di Bramante. Bramante war seinerzeit mit dem Bau des Petersdoms beauftragt und angeblich stellte der Tempietto die Vorlage für Bramantes Planungen dar, so sah sein Erstentwurf für den Petersdom einen dreischiffigen Zentralbau vor. Der Tempietto selbst ist ein kleiner, übersichtlicher Rundbau mit wohltuender Proportionen und wohltuender Symmetrie.&lt;/p&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/2010-06-27-rom2.jpg" alt="2010-06-27-rom2.jpg" /&gt;
+ &lt;p class="caption"&gt;2010&amp;ndash;06&amp;ndash;27-rom2.jpg&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/2010-06-27-rom3.jpg" alt="2010-06-27-rom3.jpg" /&gt;
+ &lt;p class="caption"&gt;2010&amp;ndash;06&amp;ndash;27-rom3.jpg&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;Allein, der hübsche Tempietto steht doch ein bisschen arg eingestellt in einem Hof.&lt;/p&gt;
+
+&lt;p&gt;Man beachte allerdings, dass die Besichtigung über die Mittagszeit nicht möglich ist, erst nach der Siesta wird das Portal zum Hof wieder geöffnet.&lt;/p&gt;
+
+&lt;h3 id="eine-anektdote-als-postscriptum"&gt;Eine Anektdote als Postscriptum&lt;/h3&gt;
+
+&lt;p&gt;Einen Abend befand ich mich in einer Trattoria im abends und nachts lebendigen Stadtviertel San Lorenzo nahe der Universität. Zum Essen bestellte ich eine Karaffe offenen Rotweins. Der kam auch sofort. Jedoch: Er war eisgekühlt! Nach einer kurzen Nachfrage beim Kellner kümmerte sich die Chefin des Services gleich umgehend selbst um uns und bedauerte, dass man uns diesen eiskalten Rotwein serviert habe. Es kam nach wenigen Augenblicken eine neue Karaffe, diesmal wohl temperiert. Und der Wein war gut; es gab also gar keinen Grund, ihn auf Eiseskälte herunterzukühlen.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Ein Blick auf das neue Mueseum MAXXI in Rom</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2010/06/11/ein-blick-auf-das-neue-mueseum-maxxi-in-rom/" />
+  <id>urn:http-www-dbrunner-de:-blog-2010-06-11-ein-blick-auf-das-neue-mueseum-maxxi-in-rom</id>
+  <published>2010-06-11T12:59:00Z</published>
+  <updated>2010-06-11T12:59:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;In Rom eröffnete Ende Mai das &lt;a href="http://www.fondazionemaxxi.it/en/museo_chi_siamo.aspx"&gt;MAXXI&lt;/a&gt; (Museo Nazionale delle Arti del XXI Scolo) mit seinen ersten Ausstellungen. Der Neubau wurde von &lt;a href="http://www.zaha-hadid.com/"&gt;Zaha Hadid&lt;/a&gt; entworfen. Grund genug, einmal einen Blick auf die Architektur von außen zu werfen und einen kleinen Rundgang durch das Foyer zu unternehmen. Leider fehlte mir die Zeit, die Ausstellung selbst anzusehen und damit auch einen Blick in die Ausstellungsräume zu werfen.&lt;/p&gt;
+
+&lt;p&gt;Wenn man von der Bushaltestelle der Linie 2 in die Straße des Museums einbiegt, voller Erwartung auf das neue Bauwerk, so steht man erst einmal inmitten normaler Bauwerke vor einem breiten, mannshohen Tor, halb geöffnet mit dem Schriftzug &amp;ldquo;MAXXI&amp;rdquo; darauf. Nachdem man hier durchgeschluüpft ist, zeigt sich das von Zaha Hadid elegant geschwungene Gebäude mit seiner glatten Fassade.&lt;/p&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/2010-06-11-maxxi1.jpg" alt="2010-06-11-maxxi1.jpg" /&gt;
+ &lt;p class="caption"&gt;2010&amp;ndash;06&amp;ndash;11-maxxi1.jpg&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/2010-06-11-maxxi2.jpg" alt="2010-06-11-maxxi2.jpg" /&gt;
+ &lt;p class="caption"&gt;2010&amp;ndash;06&amp;ndash;11-maxxi2.jpg&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;Die Wirkung wird noch unterstrichen durch eine relativ große freie Fläche, gegliedert mit Fahrweg, Bodenplatten und weißen Kieselsteinen. Hier lässt sich bequem auf einem der Stühle das Gebäude betrachten und auf sich wirken lassen.&lt;/p&gt;
+
+&lt;p&gt;Im Innern findet sich ein ebenfalls sehr elegant gestaltetes Foyer, von dem aus die Treppengänge zu den einzelnen Ausstellungsräumen abzweigen. Von oben fällt Tageslicht durch die Deckenlamellen und mischen sich - geschickt gemacht - mit dem künstlichen Licht, das von der Unterseite der Treppengänge ausstrahlt.&lt;/p&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/2010-06-11-maxxi3.jpg" alt="2010-06-11-maxxi3.jpg" /&gt;
+ &lt;p class="caption"&gt;2010&amp;ndash;06&amp;ndash;11-maxxi3.jpg&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/2010-06-11-maxxi4.jpg" alt="2010-06-11-maxxi4.jpg" /&gt;
+ &lt;p class="caption"&gt;2010&amp;ndash;06&amp;ndash;11-maxxi4.jpg&lt;/p&gt;&lt;/div&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/2010-06-11-maxxi5.jpg" alt="2010-06-11-maxxi5.jpg" /&gt;
+ &lt;p class="caption"&gt;2010&amp;ndash;06&amp;ndash;11-maxxi5.jpg&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;Der Innenraum wirkt trotz seiner futuristischen Gestaltung ausgesprochen angenehm. Die Treppen, die hohen Räume und die Flächen wirken von den Proportionen sehr gut auf einander abgestimmt. Insgesamt ein schönes Gebäude und ein gutes Beispiel dafür, dass moderne Architektur für das Auge und Erleben sehr gefällig gestaltet sein kann. Ob man auf dem Platz vor dem Museum nun wirklich weiße Kiesel auslegen musste, nun denn, das ist wohl Geschmacksfrage. Dennoch, beim nächsten Rom-Besuch werde ich auch einer der Ausstellungen einen Besuch abstatten.&lt;/p&gt;</content></entry></feed>

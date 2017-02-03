@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">Daniel Brunner: Posts tagged 'Docker'</title>
+ <link rel="self" href="http://www.dbrunner.de/feeds/Docker.atom.xml" />
+ <link href="http://www.dbrunner.de/tags/Docker.html" />
+ <id>urn:http-www-dbrunner-de:-tags-Docker-html</id>
+ <updated>2015-12-19T16:54:50Z</updated>
+ <entry>
+  <title type="text">I played with CHICKEN Scheme, Docker and Alpine Linux</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-12-19-i-played-with-chicken-scheme-docker-and-alpine-linux</id>
+  <published>2015-12-19T16:54:50Z</published>
+  <updated>2015-12-19T16:54:50Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;I am looking forward to meet LISP people at the &lt;a href="https://events.ccc.de/congress/2015/wiki/Main_Page"&gt;32c3&amp;rsquo;s&lt;/a&gt; &lt;a href="https://events.ccc.de/congress/2015/wiki/Assembly:The_%28un%29employed_schemers_%26_lispers_guild"&gt;LISP assembly&lt;/a&gt;. The last days I played a bit with different Scheme implementations including  &lt;a href="http://call-cc.org"&gt;CHICKEN scheme&lt;/a&gt;. The main feature of CHICKEN is that it compiles the Scheme code to C and then creates dynamic libraries and binaries with the C compiler. I thought that combining these binaries with a minimal Docker container could give me a very small deployment. So here are my steps:&lt;/p&gt;
+
+&lt;h2 id="choosing-alpine-linux-as-a-small-linux"&gt;Choosing Alpine Linux as a &amp;ldquo;small&amp;rdquo; Linux&lt;/h2&gt;
+
+&lt;p&gt;The smallest Linux image for Docker is undoubtly busybox with a size of about 2.489 MB. But busybox lacks a package manager which makes installing software painful. Therefore I have chosen &lt;a href="http://alpinelinux.org"&gt;Alpine Linux&lt;/a&gt; which comes with package manager and it&amp;rsquo;s image&amp;rsquo;s size is about 5.234 MB. That&amp;rsquo;s double the size of the busybox image but still quite small compared to the Ubuntu image which is about 266 MB.&lt;/p&gt;
+
+&lt;h2 id="creating-a-docker-container-with-chicken"&gt;Creating a Docker container with CHICKEN&lt;/h2&gt;
+
+&lt;p&gt;Alpine Linux comes with the &lt;a href="http://www.muscl-libc.org"&gt;musl libc&lt;/a&gt; and I thought it would be best to compile all the CHICKEN stuff with that libc. Therefore I created a Docker container with gcc and all the other stuff with this Dockerfile (&lt;a href="https://github.com/krrrcks/chicken-docker-alpine"&gt;Github repository&lt;/a&gt;):&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;FROM alpine:3.2
+
+RUN apk update &amp;amp;&amp;amp; apk add make gcc musl-dev 
+RUN wget -O - http://code.call-cc.org/releases/4.10.0/chicken-4.10.0.tar.gz | tar xz
+
+WORKDIR /chicken-4.10.0
+
+RUN make PLATFORM=linux &amp;amp;&amp;amp; make PLATFORM=linux install
+
+RUN rm -fr /chicken-4.10.0 
+
+WORKDIR /
+
+CMD ["csi"]&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;This image is quite big (about 161.7 MB) and is available for download at the &lt;a href="https://hub.docker.com/r/krrrcks/chicken-alpine/"&gt;Docker Hub&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h2 id="compiling-some-chicken-code"&gt;Compiling some CHICKEN code&lt;/h2&gt;
+
+&lt;p&gt;For testing purposes I wanted a minimal web server running in the Alpine Linux image. Therefore I looked through the &lt;a href="http://wiki.call-cc.org/chicken-projects/egg-index-4.html"&gt;egg index&lt;/a&gt; and found &lt;a href="http://wiki.call-cc.org/eggref/4/spiffy"&gt;spiffy&lt;/a&gt;. I fired up the &lt;code&gt;chicken-alpine&lt;/code&gt; container (but I used &lt;code&gt;ash&lt;/code&gt; as command instead of the &lt;code&gt;csi&lt;/code&gt; Scheme interpreter) and created a small web server that serves some static pages. I wrote a &lt;code&gt;main.scm&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(use spiffy)
+(start-server)&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and added some static pages to a &lt;code&gt;./web&lt;/code&gt; sub-directory. Then everything had to be compiled and prepared for deployment:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;chicken-install spiffy
+csc -deploy main.scm
+chicken-install -deploy -p $PWD/main spiffy&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="deploy-in-a-fresh-alpine-linux-image"&gt;Deploy in a fresh Alpine Linux image&lt;/h2&gt;
+
+&lt;p&gt;After the compilation I copied the &lt;code&gt;main&lt;/code&gt; and &lt;code&gt;web&lt;/code&gt; directories on my host machine using &lt;code&gt;docker cp&lt;/code&gt; and created the following Dockerfile:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;FROM alpine:3.2
+
+ADD main /main
+ADD web main/web
+WORKDIR main
+
+CMD /main/main&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;and let &lt;code&gt;docker build -t krrrcks/spiffy-test .&lt;/code&gt; do the job. The size of the resulting image is about 12.37 MB and that&amp;rsquo;s pretty small. I uploaded that image to the &lt;a href="https://hub.docker.com/r/krrrcks/spiffy-test/"&gt;Docker Hub&lt;/a&gt; as well.&lt;/p&gt;
+
+&lt;p&gt;To serve the pages I did a &lt;code&gt;docker run -d -p 8080:8080 krrrcks/spiffy-test&lt;/code&gt;  (spiffy listens on port 8080 in the default install) and browsed my static pages.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">3. Docker-Meetup in Frankfurt</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/01/18/3-docker-meetup-in-frankfurt/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-01-18-3-docker-meetup-in-frankfurt</id>
+  <published>2015-01-18T19:05:35Z</published>
+  <updated>2015-01-18T19:05:35Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Am 13. Januar 2015 fand in Frankfurt das bereits &lt;a href="http://www.meetup.com/Docker-Frankfurt/events/219160756/"&gt;dritte Docker-Meetup&lt;/a&gt; statt, hier einige Notizen von mir dazu.&lt;/p&gt;
+
+&lt;h2 id="neues-zum-them-orchestrierung"&gt;Neues zum Them Orchestrierung&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https://www.twitter.com/PRossbach"&gt;Peter Rossbach&lt;/a&gt; hat in einem munteren Vortrag einige Neuerungen aus dem &amp;ldquo;Docker Universum&amp;rdquo; zum Thema Orchestrierung vorgestellt. Unter anderem &lt;a href="https://github.com/docker/machine"&gt;Docker Machine&lt;/a&gt;, &lt;a href="https://github.com/docker/swarm"&gt;Docker Swarm&lt;/a&gt;, Docker Compose (ehemals &lt;a href="http://fig.sh"&gt;fig.sh&lt;/a&gt;, das wohl aufgrund von Aussprachemehrdeutigkeiten umbenannt wurde) etc. Ein sehr interessanter Überblick, insbesondere da Peter auch die ganzen Sachen immer mal angefasst und ausprobiert hat. Im Kern scheint es mir jedoch so zu sein, als wäre die Frage nach &amp;ldquo;Was nimmt man am besten, um Docker auf einer oder mehreren Maschinen im Produktivbetrieb zu nutzen?&amp;rdquo; noch recht in Bewegung. Für mich kristallisiert sich für meine Anwendungsfälle da bisher noch keine überzeugende Lösung heraus. Was ich jedoch einmal testen werde ist das fig.sh bzw. Docker Compose, da man damit eigentlich sehr schön in einem YAML-Dokument mehrere Container und ihre Abhängigkeiten darstellen kann.&lt;/p&gt;
+
+&lt;h2 id="docker-linking"&gt;Docker Linking&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="http://linsenraum.de"&gt;Erkan Yanar&lt;/a&gt; hat in einem Einsteigervortrag die Grundlagen von Links zwischen Containern vorgestellt. Hier scheint die Entwicklung auch noch in Bewegung zu sein, insbesondere Links über mehrere Hosts hinweg scheinen doch noch nicht so ganz einfach handzuhaben zu sein (vorgestellt wurden &lt;a href="https://github.com/SvenDowideit/dockerfiles/blob/master/ambassador/Dockerfile"&gt;Ambassador-Ansätze&lt;/a&gt; mit &lt;a href="http://www.dest-unreach.org/socat/"&gt;socat&lt;/a&gt; und anderes).&lt;/p&gt;
+
+&lt;p&gt;Besonders erhellend fand ich den Hinweis, dass ab Docker Version 1.3 nun bei Links zwischen den Containern die &lt;code&gt;/etc/hosts&lt;/code&gt; auch nach Neustarts von gelinkten Containern immer deren richtige IP-Adresse erhält, wohingegen die Umgebungsvariablen nur die Ursprungs-IP-Adressen enthalten (also ein klares &amp;ldquo;Verlasst Euch nicht auf die Umgebungsvariablen!&amp;rdquo;).&lt;/p&gt;
+
+&lt;h2 id="netzwerken-mit-docker"&gt;Netzwerken mit Docker&lt;/h2&gt;
+
+&lt;p&gt;&lt;a href="https:/www.twitter.com/aschmidt75"&gt;Andreas Schmidt&lt;/a&gt; stellte eine ganze Reihe von Varianten vor, mit denen man die Container im Netzwerk auf unterschiedliche Arten und Weisen verknoten kann. Soweit ganz interessant, aber nicht meine &amp;ldquo;Liga&amp;rdquo;, wo ich mich gut auskenne.&lt;/p&gt;
+
+&lt;h2 id="fazit"&gt;Fazit&lt;/h2&gt;
+
+&lt;p&gt;Bei Docker in Bezug auf Orchestrierung und Container-Linken gibt es recht viel Bewegung und für mich kristallisieren sich die überzeugenden Konzepte noch nicht so richtig heraus, um damit in eine Produktivumgebung zu gehen. Im Bereich der Entwicklung und der Tests nutze ich die Container von Docker schon recht gerne, bei Produktiv-Umgebungen schreckt mich die Vielzahl an Werkzeugen und zum Teil auch die Komplexität doch noch etwas.&lt;/p&gt;
+
+&lt;p&gt;Jedenfalls wieder ein gutes Meetup mit Ideen und Anregungen. Ich finde das schon sehr außergewöhnlich (besonders wenn man es mit anderen Branchen vergleicht), dass sich Leute zum Austauschen über Technologie treffen, Vorträge vorbereiten etc.&lt;/p&gt;
+
+&lt;h2 id="links-zu-den-folien"&gt;Links zu den Folien&lt;/h2&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;&lt;a href="https://speakerdeck.com/rossbachp/docker-meetup-frankfurt-2015-docker-orchestration"&gt;Peter Rossbach, Docker Orchestation&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="https://speakerdeck.com/aschmidt75/docker-networking"&gt;Andreas Schmidt, Docker Networking&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content></entry>
+ <entry>
+  <title type="text">Erfahrungen mit Docker</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/10/05/erfahrungen-mit-docker/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-10-05-erfahrungen-mit-docker</id>
+  <published>2014-10-05T09:29:43Z</published>
+  <updated>2014-10-05T09:29:43Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Ein Bekannter bat mich, einmal von meinen Erfahrungen mit Docker zu berichten. Also hier als Blog-Post dazu. Ich werde nicht beschreiben, was genau Docker ist und wie es funktioniert. Hierzu gibt es mittlerweile schon eine Reihe von guten Quellen (bspw. auf der Docker-Homepage, in der c&amp;rsquo;t war in Heft 17 (Seiten 146&amp;ndash;151) auch eine ganz gute Einführung enthalten).&lt;/p&gt;
+
+&lt;h2 id="hintergrund"&gt;Hintergrund&lt;/h2&gt;
+
+&lt;p&gt;Seit einigen Jahren verwende ich zum Ausrollen von Software OpenVZ als Container-Lösung. Das funktioniert sehr gut, schont die Ressourcen, lässt sich gut verwalten und überwachen. In den OpenVZ-Containern befindet sich ein kleines Linux der gewünschten Distribution mit so allem, was man im Standard dafür erwartet. Darin installiert und konfiguriert man seine Software und rollt sie dann auf dem Zielsystem bequem aus. Der einzige Nachteil hierbei ist, dass der Host einen eigenen OpenVZ-Kernel benötigt, da nicht oder noch nicht alle Features im Standard-Kernel bereit stehen. Das macht das Zusammenstellen auf meinem Notebook etwas schwierig, denn dort habe ich den OpenVZ-Kernel in der Regel nicht installiert.&lt;/p&gt;
+
+&lt;h2 id="warum-nun-docker"&gt;Warum nun Docker?&lt;/h2&gt;
+
+&lt;p&gt;Im April bin ich eher zufällig (tauchte in den Release-Notes von Ubuntu 14.04 auf) auf das Docker-Projekt gestoßen und habe damit begonnen herumzuexperimentieren.&lt;/p&gt;
+
+&lt;p&gt;Rund um Docker und den Einsatz haben sich eine Vielzahl von Projekten angesammelt. Nicht alles verstehe ich auf Anhieb und mir fällt es zum Teil auch schwer, die unterschiedlichen Projekte zum Ausrollen, Verwalten etc. zu bewerten und zu entscheiden, was davon auch &amp;ldquo;zukunftsfähig&amp;rdquo; ist. Wahrscheinlich muss man hier auch ein bisschen Geduld haben.&lt;/p&gt;
+
+&lt;h2 id="einsatzbereiche"&gt;Einsatzbereiche&lt;/h2&gt;
+
+&lt;p&gt;Für mich haben sich im Wesentlichen zwei Haupteinsatzbereiche herauskristallisiert:  * als Werkzeug in der Software-Entwicklung und  * als Werkzeug zum Ausrollen und dauerhaften Betrieb von Anwendungen&lt;/p&gt;
+
+&lt;h3 id="werkzeug-in-der-software-entwicklung"&gt;Werkzeug in der Software-Entwicklung&lt;/h3&gt;
+
+&lt;p&gt;Ich arbeite in Teams zusammen, bei denen die Entwickler mal nen Windows-Notebook und mal nen Linux-Notebook ihr Eigen nennen. Docker bot sich hier an, eine definitierte Test- und Entwicklungsplattform bereit zu stellen. Ich habe dazu alles, was man so braucht in ein Image zusammengeworfen, dies lässt sich mit dem aktuellen Source Code starten.&lt;/p&gt;
+
+&lt;h3 id="dauerhafter-betrieb"&gt;Dauerhafter Betrieb&lt;/h3&gt;
+
+&lt;h2 id="eigenarten-und-erfahrungen"&gt;Eigenarten und Erfahrungen&lt;/h2&gt;
+
+&lt;h2 id="was-toll-ist"&gt;Was toll ist:&lt;/h2&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;Sehr leicht zu installieren und man kann schnell damit anfangen herumzuspielen.&lt;/li&gt;
+ &lt;li&gt;docker build / Dockerfile&lt;/li&gt;
+ &lt;li&gt;Es entwickelt sich sehr schnell eine aktive Gemeinschaft, so habe  ich auch schon an MeetUps in Frankfurt und Darmstadt  mit Gewinn teilgenommen.&lt;/li&gt;
+ &lt;li&gt;Nicht zu vergessen das Logo.&lt;/li&gt;&lt;/ul&gt;
+
+&lt;h2 id="was-nicht-so-toll-ist"&gt;Was nicht so toll ist:&lt;/h2&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;
+  &lt;p&gt;Images und Container erhalten zur Identifikation Hash-Werte; man  kann Images und Container auch mit Namen versehen. Ist man  allerdings ein wenig am experimentieren und herumbasteln, so sammeln  sich schnell eine Reihe von Containern mit wenig sprechenden Ids an  und zumindest ich verliere da schnell den Überblick.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;Eigentlich sind die Container nicht so mobil, wie die Analogie es  vermuten lässt. Am ehesten sind es noch die Images, die man in eine  Registry einspielen und dann auf unterschiedlichen Systemen  herunterlädt. Mir würde allerdings auch so etwas wie Live Migration  (funktioniert beispielsweise bei OpenVZ für meine Einsatzzwecke ganz  hervorragend) gefallen.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;Für den dauerhaften Betrieb gibt es eine Reihe von für mich offenen  Fragen. Hierzu gibt es zwar Lösungsansätze oder Produkte, aber viele  entwickeln sich erst. Ich will einmal exemplarisch einige offene  Enden herausgreifen:&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;Irgendwie muss man sich um seine Logfiles kümmern, wo die so  landen sollen. Hat man in einem &amp;ldquo;normalen Linux&amp;rdquo; (oder auch einem  Standard-OpenVZ-Container) meist so etwas wie ein logrotated am  laufen, so fehlt das (wenn man der Docker-Philosophie folgt, die  Container so schlank wie möglich zu halten) in einem  Docker-Deployment. Also muss man für jede Anwendung prüfen:  Schreibt sie ihr Log auf Platte? Dann muss man das da irgendwie  herausholen (bspw. über einen Log-File-Volume) oder überwachen,  nutzt sie syslogd muss man das auch irgendwie in den Griff  bekommen oder rotzt sie ihre Meldungen über die Standardausgabe  heraus, dann sammelt immerhin Docker die auf und man kann darin  blättern (die können dort aber auch recht groß werden).&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;Was tut man mit persistenten Daten? Also beispielsweise einer  Datenbank? Der Docker-Weg-zum-Glück bietet an, dass man einen  Container mit der Datenbank erstellt und dann einen für die  jeweilige Anwendung (ist bspw. für das Wordpress-Image auch so gut  zu studieren). Damit die Daten der Datenbank nicht in dem  Container herumliegen, kann man diese noch in ein Volume  packen. Damit die beiden Container nun miteinander kommunizieren  können, kann man deren Daten über Links einander bekannt  machen. Da man sich als Container und Anwendung nicht um  IP-Adressen etc. kümmern &amp;ldquo;soll&amp;rdquo;, ist das auch ganz fein. So erhält  man im Anwendungscontainer dann Umgebungsvariablen zum  Datenbankcontainer sowie auch einen Eintrag in /etc/hosts. Dumm  nur, wenn der Datenbankcontainer mal abschmiert und neu gestartet  werden muss, denn dann erhält er in der Regel eine neue IP-Adresse  und der Link vom Anwendungscontainer zur Datenbank funktioniert  nicht mehr. Sicher, es gibt nun Mittel und Wege damit umzugehen  (DNS-Geschichten, Entdecken der Dienste, etc.), aber ich fände es  eigentlich toll, wenn das Out-of-the-box funktionieren würde.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;
+
+&lt;h2 id="fazit"&gt;Fazit&lt;/h2&gt;
+
+&lt;p&gt;Ich finde es ein spannendes Projekt und wenn sich für mich die einen oder anderen Unklarheiten lichten, werde ich es sicherlich auch für den Produktiveinsatz in Erwägung ziehen. Ich vermute, dass das Projekt sich noch deutlich weiterentwickeln wird, die knapp 65 Mio Venture Capital werden neben Marketing hoffentlich auch ins Produkt gesteckt.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Mind the storage driver for Ubuntu cloud images (on Azure)</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-07-24-mind-the-storage-driver-for-ubuntu-cloud-images-on-azure</id>
+  <published>2014-07-24T10:30:43Z</published>
+  <updated>2014-07-24T10:30:43Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;A few days ago I wanted to build Firefox OS&amp;rsquo; newest release for a friend. Because I did not wanted these GB of code, binaries etc. on my notebook I fired up an Ubuntu image on Microsoft Azure. I feared that at a certain point in the build process I may had to download everything to my local machine and therefore I installed Docker via a simple&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install docker.io&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then I started the build process as laid out on Mozilla&amp;rsquo;s Developer Network. But, during downloading the source code (that&amp;rsquo;s about 12 GB of Git repositories from Mozilla and Android), I got a &amp;ldquo;no more space left on device&amp;rdquo;. That was strange: I had a 100 GB volume attached to the VM and enough space and inodes left. After some searching I asked on the IRC channel and got a good hint: &amp;ldquo;What&amp;rsquo;s your storage driver?&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Well, I thought that it&amp;rsquo;s AUFS; I wanted to add &amp;ldquo;as usual&amp;rdquo; because AUFS was available on my notebook from the beginning. But a &lt;code&gt;docker.io
+info&lt;/code&gt; gave me:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo docker.io info
+Containers: 0
+Images: 0
+Storage Driver: devicemapper
+ Pool Name: docker-8:1-131188-pool
+ Data file: /var/lib/docker/devicemapper/devicemapper/data
+ Metadata file: /var/lib/docker/devicemapper/devicemapper/metadata
+ Data Space Used: 291.5 Mb
+ Data Space Total: 102400.0 Mb
+ Metadata Space Used: 0.7 Mb
+ Metadata Space Total: 2048.0 Mb
+Execution Driver: native-0.1
+Kernel Version: 3.13.0-29-generic
+WARNING: No swap limit support&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I then learned that somehow the DeviceMapper driver only allows a certain amount of diffs and I reached that amount with my build process. (Maybe it&amp;rsquo;s possible to relax that restriction but I do not know how.)&lt;/p&gt;
+
+&lt;p&gt;I learned as well that the Ubuntu cloud image that is provided by Microsoft Azure doesn&amp;rsquo;t have AUFS support. Therefore Docker uses the DeviceMapper storage driver instead. After I installed the AUFS support I could export the images, change the storage driver and import the images again.&lt;/p&gt;
+
+&lt;p&gt;It would be nice seeing the Docker documentation being more detailed on those storage drivers.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(Update 2014&amp;ndash;10&amp;ndash;23)&lt;/strong&gt; Thanks to  &lt;a href="http://blog.iron.io/2014/10/docker-in-production-what-weve-learned.html"&gt;this blog post from Iron.io&lt;/a&gt;  I found some documentation of the devicemapper storage driver. It is  located in the  &lt;a href="https://github.com/docker/docker/tree/master/daemon/graphdriver/devmapper"&gt;Repository&lt;/a&gt;.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Unicode support for Octopress</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/06/10/unicode-support-for-octopress/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-06-10-unicode-support-for-octopress</id>
+  <published>2014-06-10T07:26:22Z</published>
+  <updated>2014-06-10T07:26:22Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Well, it seems Octopress/Jekyll would like to have a locale set for UTF&amp;ndash;8 support. I followed &lt;a href="http://www.dominik-gaetjens.de/blog/2012/06/09/utf-8-in-octopress/"&gt;this (text in German)&lt;/a&gt; hint and now my Dockerfile looks like this:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# dockerfile for octopress
+
+FROM ubuntu:14.04
+MAINTAINER krrrcks &amp;lt;krrrcks@krrrcks.net&amp;gt;
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update; \
+  apt-get -q -y upgrade
+RUN /usr/sbin/locale-gen en_US.UTF-8; \
+  update-locale LANG=en_US.UTF-8
+RUN apt-get -q -y install git curl; \
+  apt-get clean
+RUN git clone git://github.com/imathis/octopress.git /opt/octopress
+RUN curl -L https://get.rvm.io | bash -s stable --ruby
+ENV HOME /root
+RUN echo "export LC_ALL=en_US.UTF-8" &amp;gt;&amp;gt; /root/.bashrc
+RUN echo "export LANG=en_US.UTF-8" &amp;gt;&amp;gt; /root/.bashrc
+RUN echo "source /usr/local/rvm/scripts/rvm" &amp;gt;&amp;gt; /root/.bashrc; 
+RUN /bin/bash -l -c "source /usr/local/rvm/scripts/rvm; \
+  rvm install 1.9.3; \
+  rvm use 1.9.3; \
+  rvm rubygems latest; \
+  cd /opt/octopress; \
+  gem install bundler; \
+  bundle install; \
+  rake install" 
+RUN echo "rvm use 1.9.3" &amp;gt;&amp;gt; /root/.bashrc
+
+WORKDIR /opt/octopress
+EXPOSE 4000
+CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After playing around with Docker and Octopress I put the whole &lt;code&gt;/opt/octopress&lt;/code&gt; folder on my host machine and then  restarted the image with the &lt;code&gt;-v&lt;/code&gt; flag. Therefore I can edit the files on my host machine with my favorite editor and use the container only for producing the HTML files, for preview and for publishing.&lt;/p&gt;
+
+&lt;p&gt;The &lt;code&gt;rake preview&lt;/code&gt; is a neat feature because the server always looks for changed files and produces the HTML files on the fly. That means I can edit the files in my editor and could see the resulting pages in a  browser nearly the same time.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">My Dockerfile for setting up Octopress</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/05/26/my-dockerfile-for-setting-up-octopress/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-05-26-my-dockerfile-for-setting-up-octopress</id>
+  <published>2014-05-26T07:24:00Z</published>
+  <updated>2014-05-26T07:24:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;After my trouble with installing all the dependencies for Octopress I  came up with the following Dockerfile for Docker. This follows the  instructions from the Octopress homepage and uses RVM for managing the ruby dependencies.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;# dockerfile for octopress
+
+FROM ubuntu:14.04
+MAINTAINER krrrcks &amp;lt;krrrcks@krrrcks.net&amp;gt;
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update; \
+  apt-get -q -y upgrade
+RUN apt-get -q -y install git curl; \
+  apt-get clean
+RUN git clone git://github.com/imathis/octopress.git /opt/octopress
+RUN curl -L https://get.rvm.io | bash -s stable --ruby
+ENV HOME /root
+RUN echo "source /usr/local/rvm/scripts/rvm" &amp;gt;&amp;gt; /root/.bashrc; 
+RUN /bin/bash -l -c "source /usr/local/rvm/scripts/rvm; \
+  rvm install 1.9.3; \
+  rvm use 1.9.3; \
+  rvm rubygems latest; \
+  cd /opt/octopress; \
+  gem install bundler; \
+  bundle install; \
+  rake install" 
+RUN echo "rvm use 1.9.3" &amp;gt;&amp;gt; /root/.bashrc
+
+WORKDIR /opt/octopress
+EXPOSE 4000
+CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;</content></entry></feed>

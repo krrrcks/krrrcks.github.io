@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">Daniel Brunner: Posts tagged 'Homepage'</title>
+ <link rel="self" href="http://www.dbrunner.de/feeds/Homepage.atom.xml" />
+ <link href="http://www.dbrunner.de/tags/Homepage.html" />
+ <id>urn:http-www-dbrunner-de:-tags-Homepage-html</id>
+ <updated>2015-01-04T15:16:08Z</updated>
+ <entry>
+  <title type="text">Aus zwei mach eins</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/01/04/aus-zwei-mach-eins/" />
+  <id>urn:http-www-dbrunner-de:-blog-2015-01-04-aus-zwei-mach-eins</id>
+  <published>2015-01-04T15:16:08Z</published>
+  <updated>2015-01-04T15:16:08Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Bisher hatte ich meine Blog-Einträge auf zwei Blogs aufgeteilt, &lt;a href="http://blog.krrrcks.net"&gt;eines&lt;/a&gt; mit mehr technischen (und zum Teil englischen Texten) und dieses hier mit deutschen Texten. Ich denke, ich werde das auf dieses eine Blog hier konzentrieren. Das reduziert doch etwas den Verwaltungsaufwand. Ich habe die Texte vom nun etwas still gelegten Blog hier herüber kopiert.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Ich habe mal Octopress aktualisert</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/12/21/ich-habe-mal-octopress-aktualisert/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-12-21-ich-habe-mal-octopress-aktualisert</id>
+  <published>2014-12-21T10:58:16Z</published>
+  <updated>2014-12-21T10:58:16Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Neulich fiel mir auf, dass die Suchfunktion, die auf Google basiert, nicht nur auf der eigenen Homepage, sondern im &amp;ldquo;gesamten&amp;rdquo; Suchindex von Google gesucht hat. Eben flatterte dieser &lt;a href="https://twitter.com/octopress/status/546528904115404800"&gt;Tweet&lt;/a&gt; mit &lt;a href="https://github.com/imathis/octopress/commit/514ed5eb9f6bb91a6f3288febf3c2ba892a9b693"&gt;Link&lt;/a&gt; zu einem Fix an mir vorbei und da hat sich wohl die API geändert.&lt;/p&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/2014-12-21-octopress.png" alt="Octopress-Tweet" /&gt;
+ &lt;p class="caption"&gt;Octopress-Tweet&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;Also habe ich mich einmal an den &lt;a href="http://octopress.org/docs/updating/"&gt;Hinweisen&lt;/a&gt; zum Aktualisieren von Octopress orientiert. Hierzu werden die folgenden Schritte vorgeschlagen:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;git pull octopress master      # Get the latest Octopress
+bundle install                 # Keep gems updated
+rake update_source             # update the template's source
+rake update_style              # update the template's style&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Soweit lief das auch. Es tauchten anschließend zwei Probleme auf:&lt;/p&gt;
+
+&lt;ol&gt;
+ &lt;li&gt;
+  &lt;p&gt;Das &lt;code&gt;execjs&lt;/code&gt; jammerte, dass ihm irgendwie eine  JavaScript-Bibliothek fehlte. Nach kurzer Recherche gab es die  Empfehlung, die Zeile &lt;code&gt;gem 'therubyracer'&lt;/code&gt; in das &lt;code&gt;Gemfile&lt;/code&gt;  aufzunehmen. Okay, das funktionierte schon einmal.&lt;/p&gt;&lt;/li&gt;
+ &lt;li&gt;
+  &lt;p&gt;Bei den Feeds für die Kategorien jammerte das Octopress ein  ungültiges Layout an. In &lt;code&gt;category_feed.xml&lt;/code&gt; stand in der Tat  &lt;code&gt;layout: nil&lt;/code&gt;. Ich habe das auf &lt;code&gt;layout: page&lt;/code&gt; geändert. Nun tat  auch dies.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
+
+&lt;p&gt;Mit dem Update funktioniert nun auch das Such-Formular wieder.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Ergänzung:&lt;/strong&gt; Ich lasse das Jekyll und Octopress in einem  &lt;a href="/blog/2014/06/10/relaunch-fast-fertig/"&gt;Docker-Container&lt;/a&gt; laufen und irgendwie bekam ich bei &lt;code&gt;rake preview&lt;/code&gt;  meine Seite nicht mehr zu sehen. Da ich mich mit Ruby und den  Komponenten nicht so gut auskenne, weiß ich nicht, ob mein &amp;ldquo;Fix&amp;rdquo; so  gut ist: Ich habe im &lt;code&gt;Rakefile&lt;/code&gt; den &lt;code&gt;rackup&lt;/code&gt;-Aufruf um den  Parameter &lt;code&gt;-o 0.0.0.0&lt;/code&gt; ergänzt. Dann bekam ich vom Host wieder eine  Verbindung zum Webserver im Octopress-Container.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update vom 04. Januar 2014:&lt;/strong&gt; Nach einem kurzen  &lt;a href="https://twitter.com/Krrrcks/status/546667456128114688"&gt;Gespräch&lt;/a&gt;  via Twitter habe ich mich entschieden, den eingebauten Server doch  wieder so zu belassen, wie es im &lt;code&gt;Rakefile&lt;/code&gt; ursprünglich  stand. Statt dessen habe ich einfach in dem Docker-Container einen  &lt;code&gt;nginx&lt;/code&gt; hinzuinstalliert, der dann mein &lt;code&gt;public&lt;/code&gt;-Verzeichnis an den  Port 4000 ausliefert. So funktioniert es wieder prima: Ich starte  den &lt;code&gt;nginx&lt;/code&gt; und lasse dann das &lt;code&gt;rake watch&lt;/code&gt; laufen, um die Seiten  immer wieder neu zu erzeugen, wenn sich Dinge geändert haben.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Migration alter Blog-Einträge</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/12/17/migration-alter-blog-einträge/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-12-17-migration-alter-blog-einträge</id>
+  <published>2014-12-17T17:11:00Z</published>
+  <updated>2014-12-17T17:11:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Es kamen lange Winterabende und ich habe die alten Blog-Einträge von der mittels Org-Mode erstellten Seite hier nach Octopress migriert. Im Archiv sind diese zu finden und die Links etc. sollten nun auch passend mit migriert worden sein.&lt;/p&gt;
+
+&lt;p&gt;Bei der Konvertierung habe ich ein Programm kennengelernt, das mir sehr geholfen hat: &lt;a href="http://johnmacfarlane.net/pandoc/"&gt;Pandoc&lt;/a&gt;. Das ist ein Konverter, der Text- und Markupdateien hin und her konvertieren kann. Dabei beherrscht er eine ganze Reihe von Formaten. Insbesondere kann er das Org-Mode-Format (das ich für viele Dinge verwende) ebenso wie LaTeX und Markdown (daneben aber auch noch eine Legion von Formaten).&lt;/p&gt;
+
+&lt;p&gt;Da mein Hauptdateiformat ohnehin &amp;ldquo;Textdateien&amp;rdquo; sind (&amp;ldquo;Never trust a file that isn&amp;rsquo;t ASCII&amp;rdquo;) ist das sehr praktisch, um zwischen verschiedenen Markup-Formaten hin und her zu springen.&lt;/p&gt;
+
+&lt;p&gt;Für die Migration meine Blog-Einträge lief dies wie folgt: Ich hatte die in der alten Homepage mit Org-Mode und Org-Jekyll erstellt. Dabei hatte das Org-Jekyll-Modul entsprechende HTML-Dateien mit einem YAML-Header erzeugt. Mittels Pandoc konnte ich die nun wieder nach Markdown konvertieren, habe die YAML-Header ein wenig angepasst, Kategorien aktualisiert und noch mal das Markup zwecks Zeilenumbrüche, Fußnoten und Links geprüft und leicht angepasst. Insgesamt sehr schnell bewältigbar.&lt;/p&gt;
+
+&lt;p&gt;Dieser ganze Zoo rund um Markdown und andere ähnliche Formate ist zwar manchmal ein bisschen unübersichtlich, aber mir gefällt das sehr gut, dass man mit wenig Markup schön Textdateien strukturieren kann und dann mit Pandoc auch gut hin und her konvertieren kann.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Relaunch fast fertig</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/06/10/relaunch-fast-fertig/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-06-10-relaunch-fast-fertig</id>
+  <published>2014-06-10T07:20:03Z</published>
+  <updated>2014-06-10T07:20:03Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;So, nach einigem Gefummel mit Ruby und Octopress und den Weiterleitungsmöglichkeiten meines Hosters ist die Sache wohl bald so am laufen, wie ich mir das vorstelle. Es fehlt noch ein wenig das Eindeutschen der Octopress-Texte und vielleicht so eine Kategorien-Liste rechts.&lt;/p&gt;
+
+&lt;p&gt;Ansonsten habe ich, um der &amp;ldquo;Gem-Hölle&amp;rdquo; zu entgehen, das Octopress in einen Docker-Container gepackt; hier ist ein &lt;a href="/blog/2014/06/10/unicode-support-for-octopress/"&gt;Link&lt;/a&gt; zu dem verwendeten &lt;code&gt;Dockerfile&lt;/code&gt;. Ich habe es dann auch so gemacht, dass ich das &lt;code&gt;/opt/octopress&lt;/code&gt;-Verzeichnis auf den Host-Rechner verschoben habe und in den Container als &lt;em&gt;Volume&lt;/em&gt; hineinpacke. So kann ich auf dem Host-Rechner ganz bequem mit dem Emacs die Files editieren und verwende den Container nur noch für die Erstellung, das &amp;ldquo;Preview&amp;rdquo; und für das Hochladen.&lt;/p&gt;
+
+&lt;p&gt;Die &amp;ldquo;preview&amp;rdquo;-Funktion ist übrigens ein wirklich nettes Features: Die kann man derart nutzen, dass ein Webserver den aktuellen Stand lokal ausliefert. Dabei beobachtet der Dienst, ob sich Dateien ändern und erstellt unmittelbar wieder die HTML-Seiten. So kann man bequem im Editor das Markdown bearbeiten und im Browser daneben das fertige Ergebnis beurteilen.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Archiv mit der alten Homepage</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/06/06/archiv-mit-der-alten-homepage/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-06-06-archiv-mit-der-alten-homepage</id>
+  <published>2014-06-06T15:05:45Z</published>
+  <updated>2014-06-06T15:05:45Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Meine alten Homepages kann man immer noch finden:&lt;/p&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;Meine mit &lt;a href="http://org-mode.org"&gt;Org-Mode&lt;/a&gt; gestaltete Seite unter &lt;a href="http://archive.dbrunner.de"&gt;http://archive.dbrunner.de&lt;/a&gt; (2010&amp;ndash;2012)&lt;/li&gt;
+ &lt;li&gt;Meine mit &lt;a href="http://www.tiddlywiki.com"&gt;Tiddlywiki&lt;/a&gt; gestaltete Seite unter &lt;a href="http://archive.dbrunner.de/old/main.html"&gt;http://archive.dbrunner.de/old/main.html&lt;/a&gt;  (2005&amp;ndash;2009)&lt;/li&gt;&lt;/ul&gt;</content></entry>
+ <entry>
+  <title type="text">Ein Relaunch</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/06/06/ein-relaunch/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-06-06-ein-relaunch</id>
+  <published>2014-06-06T13:48:31Z</published>
+  <updated>2014-06-06T13:48:31Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Ich denke, mir geht es wie vielen: Nach einer gewissen Zeit, in der das bisherige Blog, die bisherige Web-Seite nicht gepflegt wird,  steht irgendwann ein Neubeginn an, dann gleich mit einem &amp;ldquo;Relaunch&amp;rdquo; und vielen neuen und guten Vorsätzen.&lt;/p&gt;
+
+&lt;p&gt;Ich bin zwar nach wie vor ein großer Freund und Nutzer von Org-Mode, aber  für das Führen eines Blogs erschien mir der Ablauf doch immer recht umständlich. Ich habe mir daher einmal Octopress angeschaut (vor allem, da die Blog-Funktion von Org-Mode, die ich nutzte, auch mit Jekyll  arbeitete) und finde das eigentlich ganz hübsch. Einzig so ein wenig &amp;ldquo;eindeutschen&amp;rdquo; sollte ich es noch. Außerdem ist das Umleiten von der bisherigen Domain hierher noch ein wenig kaputt; mein bisheriger Hoster lässt mich das nicht so schön mit CNAME-Einträgen gestalten, wie das eigentlich gedacht ist.&lt;/p&gt;
+
+&lt;p&gt;Nun also ein Relaunch, aber ohne große Vorsätze. Es wird hier also  nur selten und nur wenig zu lesen geben.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Programm-Bibliotheken und verschiedene Versionsstände</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2011/10/16/programm-bibliotheken-und-verschiedene-versionsstände/" />
+  <id>urn:http-www-dbrunner-de:-blog-2011-10-16-programm-bibliotheken-und-verschiedene-versionsstände</id>
+  <published>2011-10-15T22:00:00Z</published>
+  <updated>2011-10-15T22:00:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Ich bin ein sehr intensiver Nutzer von &lt;a href="http://www.orgmode.org"&gt;Org-Mode&lt;/a&gt;, einem speziellen Modul/Modus für den Emacs-Editor (ich habe hier auf meiner Homepage auch einmal mit einer kleinen &lt;a href="http://archive.dbrunner.de/it/org-mode.html"&gt;Seite&lt;/a&gt; dazu begonnen). Nun ja, was soll man sagen: Bei Emacs wird eine recht alte Version mitgeliefert. Ich wollte dann mal auch wegen einiger Funktionen die neueste nutzen. Also via &lt;code&gt;git&lt;/code&gt; heruntergeladen und eingebunden und Peng, irgendwas funktioniert natürlich nicht mehr: Ich benötige pratisch täglich den Export von Org-Mode-Dateien nach &lt;code&gt;LaTeX&lt;/code&gt;, der wollte aber nicht mehr. Nun kann ich zwar Lisp, aber das Emacs Lisp ist doch etwas speziell und die Debug-Möglichkeiten sind etwas … nun ja, altbacken. Kurzum: Das macht überhaupt keinen Spaß. Im Endeffekt habe ich dann herausgefunden, dass unter bestimmten Umständen Teile des alten, bei Emacs mitgelieferten Codes nachgeladen wird anstelle der neuen Distribution. Diese bescheidene Art von Emacs mit Modulen und Paketen umzugehen ist wirklich erschreckend. Was dafür wiederum total toll war: In der von mir verwendeten Org-Mode-Version war wohl ein Fehler, das ganze Ding über die Mailingliste geschickt und innert einem halben Tag war der Fehler von anderen Nutzern und von Carsten Dominik auch gleich gefixt. Grandiose Antwortzeit!&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Umbau der Webseite und des Blogs</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2011/10/15/umbau-der-webseite-und-des-blogs/" />
+  <id>urn:http-www-dbrunner-de:-blog-2011-10-15-umbau-der-webseite-und-des-blogs</id>
+  <published>2011-10-14T22:00:00Z</published>
+  <updated>2011-10-14T22:00:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Manchmal muss man am blutigen Ende ein wenig leiden. Jedenfalls funktionierte mein schönes Setup mit Org-Mode und einem kleinen Werkzeug für die Blog-Einträge und den Atom-Feed nicht mehr. Ich habe versucht, mich in den zehntausenden Zeilen Emacs-Lisp-Code von Org-Mode zurecht zu finden, habe es dann aber aufgegeben. Im Nachgang hatte ich dann keine große Lust mehr auf Fehlerkorrekturen und Herumgebastel und der Blog-Teil blieb eine Weile liegen.&lt;/p&gt;
+
+&lt;p&gt;Insbesondere habe ich mich nicht so richtig für eine Variante auf Basis von &lt;a href="https://github.com/mojombo/jekyll/wiki"&gt;Jekyll&lt;/a&gt; begeistern können: Neues Stück Software, das kaputt gehen kann und basiert dann auch noch auf einem Haufen Bibliotheken und Ruby und damit habe ich es bisher doch noch nicht so recht.&lt;/p&gt;
+
+&lt;p&gt;Wieder gingen Monate ins Land und dann habe ich im Sommer 2011 mal damit ein wenig herumexperimentiert und das funktioniert eigentlich ganz brauchbar. Beim Update auf die Version 7.7 von Org-Mode brach dann auch wieder einmal alles auseinander. Das Leben am blutigen Ende hat eben auch so seine Tücken.&lt;/p&gt;
+
+&lt;p&gt;Einzig, den Atom-Feed, den habe ich bisher noch nicht wiederbeleben können, dafür gibt es unter &lt;a href="blog/feed.xml"&gt;einen RSS-Feed&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Und die Links zu den Bildern hier im Blog scheinen auch noch nicht so richtig zu tun; da muss ich auch noch einmal ran.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Code snippets not working at the moment</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2010/07/02/code-snippets-not-working-at-the-moment/" />
+  <id>urn:http-www-dbrunner-de:-blog-2010-07-02-code-snippets-not-working-at-the-moment</id>
+  <published>2010-07-01T22:00:00Z</published>
+  <updated>2010-07-01T22:00:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Two of my &lt;a href="http://archive.dbrunner.de/it/org-mode.html"&gt;code snippets&lt;/a&gt; for org-mode are not working with the actual &lt;code&gt;master&lt;/code&gt; of the git repository. I have to check this and I am going to fix them when I find enough time for that.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Änderungen beim Datenschutzhinweis</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2010/04/01/änderungen-beim-datenschutzhinweis/" />
+  <id>urn:http-www-dbrunner-de:-blog-2010-04-01-änderungen-beim-datenschutzhinweis</id>
+  <published>2010-03-31T22:00:00Z</published>
+  <updated>2010-03-31T22:00:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Bisher hatte ich folgenden Hinweis zum Datenschutz in meinem Impressum hinterlegt:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;Ich speichere und verarbeite &lt;strong&gt;keine&lt;/strong&gt; Daten zu Ihrem Besuch auf dieser Seite.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Durch ein Update meines Webseiten-Paketes erhalte ich nun Zugang zu den anonymisierten Daten der Webserver-Logfiles. Aus diesem Grund ändert sich der Text &lt;a href="kontakt.html"&gt;wie folgt&lt;/a&gt;:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;Mein Hoster &lt;a href="http://www.strato.de"&gt;Strato&lt;/a&gt; protokolliert jeden einzelnen Zugriff auf eine Element dieser Homepage. Diese sogenannten Logfiles werden von mir von Zeit zu Zeit ausgewertet, um einen Überblick über die Besuche zu erhalten und Ansatzpunkte für Verbesserungen zu finden. Die Einträge in den Logfiles werden von Strato zur Sicherung des Datenschutzes anonymisiert. Ich erhalte den Host-Anteil der Adresse, oder wenn dieser nicht ermittelbar ist, eine komplett anonymisierte Adresse. Ein Rückverfolgen zu Ihrer IP-Adresse ist mir nicht möglich. Weitere Informationen hierzu hält Strato auf seiner &lt;a href="http://strato-faq.de/view.php4?articleid=718&amp;amp;extern=1"&gt;FAQ-Seite&lt;/a&gt; bereit. Wenn Sie hierzu weitere Fragen haben, senden Sie mir einfach eine E-Mail. Darüberhinaus speichere und verarbeite ich keine Daten zu Ihrem Besuch auf dieser Seite.&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Ich denke, das ist ein guter Kompromiss zwischen statistischen Auswertungen zur Webseite und dem Datenschutz des Betrachters. Ich werde Sie auch weiterhin nicht mit Verfolgetechniken (Cookies und ähnliches) belästigen, um etwas über Sie oder Ihre Art, meine Homepage zu betrachten, herauszufinden.&lt;/p&gt;</content></entry></feed>

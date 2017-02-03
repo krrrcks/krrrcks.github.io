@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<rss version="2.0">
+ <channel>
+  <title>Daniel Brunner: Posts tagged 'Racket'</title>
+  <description>Daniel Brunner: Posts tagged 'Racket'</description>
+  <link>http://www.dbrunner.de/tags/Racket.html</link>
+  <lastBuildDate>Tue, 12 Jan 2016 09:55:43 UT</lastBuildDate>
+  <pubDate>Tue, 12 Jan 2016 09:55:43 UT</pubDate>
+  <ttl>1800</ttl>
+  <item>
+   <title>Using Racket Minimal and raco</title>
+   <link>http://www.dbrunner.de/blog/2016/01/12/using-racket-minimal-and-raco/</link>
+   <guid>urn:http-www-dbrunner-de:-blog-2016-01-12-using-racket-minimal-and-raco</guid>
+   <pubDate>Tue, 12 Jan 2016 09:55:43 UT</pubDate>
+   <description>
+&lt;p&gt;I use Racket Minimal on my smart phone (&lt;a href="../2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/"&gt;this&lt;/a&gt; describes how to compile the run time for an ARM based system). It&amp;rsquo;s is a very small installation of Racket (about 36 MB after installation). After installation one only needs to install the packages that are really neded. But this can be a bit tricky because a lot of packages want to install their documentation and other stuff and bring a whole bunch of files on your drive as dependencies.&lt;/p&gt;
+
+&lt;p&gt;Some of the packages are divided up into a "-lib", "-doc" (and sometimes "-test") as laid out in the &lt;a href="https://docs.racket-lang.org/pkg/getting-started.html#%28part._.Naming_and_.Designing_.Packages%29"&gt;documentation&lt;/a&gt;. With these packages it&amp;rsquo;s easier to only install the implementation.&lt;/p&gt;
+
+&lt;p&gt;A small script of mine used only basic modules and relied on &lt;code&gt;rackunit&lt;/code&gt; for the tests. On a mobile device the start up time of such a program can be  critical. Therefore it is wise to only require the needed packages and to have the source code being compiled to byte code. One could do this with &lt;code&gt;raco setup&lt;/code&gt; (which is included in Minimal Racket) but I wanted to have &lt;code&gt;raco make&lt;/code&gt; (which is not part of Minimal Racket) available.&lt;/p&gt;
+
+&lt;p&gt;The commands of &lt;code&gt;raco&lt;/code&gt; are added via a &lt;code&gt;raco-commands&lt;/code&gt; variable in packages&amp;rsquo; &lt;code&gt;info.rkt&lt;/code&gt; file. I looked through the packages of my &amp;ldquo;full install&amp;rdquo; and found the package &lt;code&gt;compiler-lib&lt;/code&gt; which adds some commands (&lt;code&gt;make&lt;/code&gt;, &lt;code&gt;exe&lt;/code&gt;, &lt;code&gt;pack&lt;/code&gt;, &lt;code&gt;unpack&lt;/code&gt;, &lt;code&gt;decompile&lt;/code&gt;, &lt;code&gt;test&lt;/code&gt;, &lt;code&gt;expand&lt;/code&gt;, &lt;code&gt;read&lt;/code&gt;, &lt;code&gt;distribute&lt;/code&gt;, &lt;code&gt;demodularize&lt;/code&gt;) to &lt;a href="https://mirror.racket-lang.org/releases/6.3/doc/raco/index.html"&gt;&lt;code&gt;raco&lt;/code&gt;&lt;/a&gt; and relies on only a few other packages. As a result the source and binary files need about 3.8 MB on my phone which is okay for me.&lt;/p&gt;
+
+&lt;p&gt;To sum up: After a simple &lt;code&gt;raco pkg install compiler-lib&lt;/code&gt; I could easily use &lt;code&gt;raco make&lt;/code&gt; and &lt;code&gt;raco test&lt;/code&gt; to play with my program on my phone.&lt;/p&gt;</description></item>
+  <item>
+   <title>How to use GET Bucket location on Amazon S3 with Racket</title>
+   <link>http://www.dbrunner.de/blog/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/</link>
+   <guid>urn:http-www-dbrunner-de:-blog-2015-09-04-how-to-use-get-bucket-location-on-amazon-s3-with-racket</guid>
+   <pubDate>Fri, 04 Sep 2015 05:23:43 UT</pubDate>
+   <description>
+&lt;p&gt;In &lt;a href="http://www.racket-lang.org"&gt;Racket&lt;/a&gt; I want to iterate over my buckets in Amazon S3. They are located in different regions. So how do I get my bucket&amp;rsquo;s location/region? In the API Reference there is a call &lt;a href="http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETlocation.html"&gt;GET Bucket location&lt;/a&gt;. I use &lt;a href="https://github.com/greghendershott/aws"&gt;Greg&amp;rsquo;s AWS library for Racket&lt;/a&gt; and this library authenticates its calls with &lt;a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html"&gt;signature version V4&lt;/a&gt;. But V4 requires the user to know the &lt;em&gt;region&lt;/em&gt; to correctly sign the request. So I need to know the region to ask Amazon S3 for the region where the bucket is located. Otherwise Amazon S3 responds with an error:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;?xml version="1.0" encoding="UTF-8"?&amp;gt;
+&amp;lt;Error&amp;gt;
+ &amp;lt;Code&amp;gt;AuthorizationHeaderMalformed&amp;lt;/Code&amp;gt;
+ &amp;lt;Message&amp;gt;The authorization header is malformed; the region 'us-east-1'
+is wrong; expecting 'eu-central-1'&amp;lt;/Message&amp;gt;
+ &amp;lt;Region&amp;gt;eu-central-1&amp;lt;/Region&amp;gt;
+ &amp;lt;RequestId&amp;gt;XXXX&amp;lt;/RequestId&amp;gt;
+ &amp;lt;HostId&amp;gt;XXXX&amp;gt;
+&amp;lt;/Error&amp;gt;&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;After some search on the net I found a &lt;a href="http://stackoverflow.com/questions/27091816/retrieve-buckets-objects-without-knowing-buckets-region-with-aws-s3-rest-api"&gt;post on Stackoverflow&lt;/a&gt; that helped to solve that issue: If I use the URL format (instead of the normally used virtual host format) I could get the location of any bucket. Every region responds with a &lt;em&gt;LocationConstraint&lt;/em&gt; answer.&lt;/p&gt;
+
+&lt;p&gt;Therefore a code snippet for Racket could be:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;(define (get-bucket-location bucket)
+  (parameterize
+      ([s3-path-requests? #t])
+    (define xpr (get/proc (string-append bucket "/?location") read-entity/xexpr))
+    (and (list? xpr)
+         (= (length xpr) 3)
+         (third xpr))))&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;For example:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;gt; (get-bucket-location "my-bucket-somewhere")
+"eu-central-1"&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;PS: I think official Amazon S3 documentation could be a bit more verbose on the issues with GetBucketLocation and signature V4.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; Greg added a &lt;code&gt;bucket-location&lt;/code&gt; function to his great &lt;a href="http://docs.racket-lang.org/aws/S3__Storage_.html#%28def._%28%28lib._aws%2Fs3..rkt%29._bucket-location%29%29"&gt;library&lt;/a&gt;&lt;/p&gt;</description></item>
+  <item>
+   <title>How to run Racket on the Raspberry Pi 2</title>
+   <link>http://www.dbrunner.de/blog/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/</link>
+   <guid>urn:http-www-dbrunner-de:-blog-2015-08-27-how-to-run-racket-on-the-raspberry-pi-2</guid>
+   <pubDate>Thu, 27 Aug 2015 11:25:45 UT</pubDate>
+   <description>
+&lt;p&gt;I got a &lt;a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/"&gt;Raspberry Pi 2 Model B&lt;/a&gt; to play with. I used Raspbian image as operating system. I was wondering how difficult it is to get Racket running on the Raspberry Pi. I downloaded the &lt;a href="http://mirror.racket-lang.org/installers/6.2.1/racket-6.2.1-src-builtpkgs.tgz"&gt;Unix source + built packages&lt;/a&gt; tarball from &lt;a href="http://racket-lang.org"&gt;Racket&amp;rsquo;s homepage&lt;/a&gt; because I only wanted to compile the core of Racket. After unpacking the tarball I was suprised that the instructions were quite short:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;From this directory (where the `configure' file is), run the following
+commands:
+
+  mkdir build
+  cd build
+  ../configure
+  make
+  make install&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Between &lt;code&gt;make&lt;/code&gt; and &lt;code&gt;make install&lt;/code&gt; I had to wait for about 40 minutes but then everything was fine and I could even use DrRacket on the Raspberry Pi:&lt;/p&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/2015-08-27-racket-pi.png" alt="DrRacket on Raspberry Pi" /&gt;
+ &lt;p class="caption"&gt;DrRacket on Raspberry Pi&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;Very nice and easy to get Racket running on ARM.&lt;/p&gt;
+
+&lt;p&gt;PS: Because the Raspberry Pi 2 Model B has an ARMv7 processor the binary runs on my Jolla smart phone as well.&lt;/p&gt;</description></item>
+  <item>
+   <title>Running Racket on AWS Lambda</title>
+   <link>http://www.dbrunner.de/blog/2015/08/27/running-racket-on-aws-lambda/</link>
+   <guid>urn:http-www-dbrunner-de:-blog-2015-08-27-running-racket-on-aws-lambda</guid>
+   <pubDate>Thu, 27 Aug 2015 10:46:57 UT</pubDate>
+   <description>
+&lt;p&gt;I started to use AWS for some projects recently. But I only use few of their services. From time to time I look into some of there services and wonder if they are useful for my tasks. I looked into &lt;a href="http://aws.amazon.com/lambda"&gt;AWS Lambda&lt;/a&gt;, "&amp;hellip; a compute service that runs your code in response to events and automatically manages the compute resources for you, making it easy to build applications that respond quickly to new information." Nowadays these &amp;ldquo;lambda functions&amp;rdquo; could be written in NodeJS or Java. When I was looking for a roadmap of the supported languages I found an interesting &lt;a href="http://blog.0x82.com/2014/11/24/aws-lambda-functions-in-go/"&gt;blog post&lt;/a&gt; by &lt;a href="https://www.twitter.com/rubenfonseca"&gt;Ruben Fonseca&lt;/a&gt;. He explaind how to run Go code on AWS Lambda.&lt;/p&gt;
+
+&lt;p&gt;I tried the same with &lt;a href="http://racket-lang.org"&gt;Racket&lt;/a&gt; and wrote a short Racket programm &lt;code&gt;test.rkt&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;#lang racket/base
+
+(display (format "Hello from Racket, args: ~a~%" (current-command-line-arguments)))&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then I used &lt;code&gt;raco&lt;/code&gt; to create a binary &lt;code&gt;test&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;raco exe --orig-exe test.rkt&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I took the NodeJS wrapper from Ruben&amp;rsquo;s blog post and put it in a file &lt;code&gt;main.js&lt;/code&gt;:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;var child_process = require('child_process');
+
+exports.handler = function(event, context) {
+  var proc = child_process.spawn('./test', [ JSON.stringify(event) ], { stdio: 'inherit' });
+
+  proc.on('close', function(code) {
+    if(code !== 0) {
+      return context.done(new Error("Process exited with non-zero status code"));
+    }
+
+    context.done(null);
+  });
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then I put both files in a zip archive, created a new AWS Lambda function, uploaded the zip file and invoked the function:&lt;/p&gt;
+
+&lt;div class="figure"&gt;&lt;img src="/img/2015-08-27-racket-aws-lambda.png" alt="Invocation of AWS Lambda function" /&gt;
+ &lt;p class="caption"&gt;Invocation of AWS Lambda function&lt;/p&gt;&lt;/div&gt;
+
+&lt;p&gt;Fine!&lt;/p&gt;
+
+&lt;p&gt;PS: Only question is: When is AWS Lambda coming to the region &lt;code&gt;eu-central-1&lt;/code&gt;, located in Frankfurt?&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Upate (2016&amp;ndash;03&amp;ndash;15):&lt;/em&gt; AWS Lambda is &lt;a href="https://aws.amazon.com/de/about-aws/whats-new/2016/03/aws-lambda-available-in-eu-frankfurt/"&gt;now available&lt;/a&gt; in the EU (Frankfurt)  region!&lt;/p&gt;</description></item></channel></rss>

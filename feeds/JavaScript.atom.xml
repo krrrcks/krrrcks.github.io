@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
+ <title type="text">Daniel Brunner: Posts tagged 'JavaScript'</title>
+ <link rel="self" href="http://www.dbrunner.de/feeds/JavaScript.atom.xml" />
+ <link href="http://www.dbrunner.de/tags/JavaScript.html" />
+ <id>urn:http-www-dbrunner-de:-tags-JavaScript-html</id>
+ <updated>2014-07-24T07:41:36Z</updated>
+ <entry>
+  <title type="text">DateTime conversion can be tricky</title>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/07/24/datetime-conversion-can-be-tricky/" />
+  <id>urn:http-www-dbrunner-de:-blog-2014-07-24-datetime-conversion-can-be-tricky</id>
+  <published>2014-07-24T07:41:36Z</published>
+  <updated>2014-07-24T07:41:36Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;I wrote a small Lisp application and a JavaScript client gets some data from that application. All time stamps are returned as &amp;ldquo;Lisp&amp;rdquo; time stamps, i.e. an integer with seconds where zero equals Jan 01 1900.&lt;/p&gt;
+
+&lt;p&gt;In the JS client the time stamp is then converted to JS time stamps, i.e. millisconds where zero equals Jan 01 1970.&lt;/p&gt;
+
+&lt;p&gt;When testing the application I noticed that sometimes the displayed date is one day behind. For example in the data base I have Jan 05 1980 but in JavaScript I get a Jan 04 1980. But some other dates worked: A time stamp Jan 05 1970 was correctly converted to Jan 05 1970.&lt;/p&gt;
+
+&lt;p&gt;I had a look into the JavaScript code and found:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;convA = function(ts) {
+  tmp = new Date(ts*1000);
+  tmp.setFullYear(tmp.getFullYear() - 70);
+  return tmp.getTime();
+}&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;It&amp;rsquo;s likely the developer thought: &amp;ldquo;Well, it&amp;rsquo;s millisecond instead of second. Therefore I multiply by 1,000. But then I am 70 years in the future and I have to substract 70 years and everything will be ok.&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;After thinking a while I came to the conclusion: Of course not!&lt;/p&gt;
+
+&lt;p&gt;The developer made the assumption that there are as many leap years between 1900 and 1970 as between &lt;code&gt;ts&lt;/code&gt; and &lt;code&gt;ts+70&lt;/code&gt;. Obviously that assumption does not hold for all time stamps. And therefore sometimes the resulting JavaScript date is one day behind.&lt;/p&gt;
+
+&lt;p&gt;So a better solution would be to substract all seconds between 1900 and 1970 from &lt;code&gt;ts&lt;/code&gt;, multiply by 1,000 and treat this as a JavaScript time stamp. Perhaps best would be to do the conversion in the Lisp process and only deliver a JavaScript-like time stamp.&lt;/p&gt;</content></entry></feed>
