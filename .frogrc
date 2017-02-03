@@ -1,5 +1,5 @@
 # Required: Should NOT end in trailing slash.
-scheme/host = http://www.example.com
+scheme/host = http://www.dbrunner.de
 
 # A path prepended to URIs, including those specified here in .frogrc
 # such as `permalink` and `posts-index-uri`. Defaults to `/`. This is
@@ -7,11 +7,11 @@ scheme/host = http://www.example.com
 uri-prefix = /
 
 # The title of the blog. Used when generating feeds.
-title = My Awesome Blog
+title = Daniel Brunner
 
 # The author. Used when generating feeds, and provided to
 # `page-template.html` as the template variable `@author`.
-author = The Unknown Author
+author = Daniel Brunner
 
 # What editor to launch with --edit. $EDITOR means to use $EDITOR from
 # the environment
@@ -53,11 +53,11 @@ max-feed-items = 20
 
 # Decorate feed URIs with Google Analytics query parameters like
 # utm_source ?
-decorate-feed-uris? = true
+decorate-feed-uris? = false
 
 # Insert in each feed item an image bug whose URI is decorated with
 # Google Analytics query parameters like utm_source ?
-feed-image-bugs? = true
+feed-image-bugs? = false
 
 # Replace links to tweets with embedded tweets?
 # In Markdown, must be auto-links alone in a pargraph (blank lines
@@ -84,7 +84,7 @@ racket-doc-link-prose? = true
 # could change to e.g. /blog/index.html or /posts-index.html, and use
 # some other /index.html for your site. This also effects the URI used
 # in the Atom and RSS feed files for posts.
-posts-index-uri = /index.html
+posts-index-uri = /blog/index.html
 
 # The source directory. Defaults to "_src".
 #
