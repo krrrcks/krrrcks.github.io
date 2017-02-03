@@ -1,0 +1,40 @@
+	Title: CeBIT 2010
+	Date: 2010-03-04T21:25:00
+	Tags: IT, Veranstaltungen 
+
+Trotz erneut markigem Auftritt (mit Begriffen wie Webciety oder dem
+Beschwören von "Lösungen" als Konzept im Gegensatz zu früheren
+Hardware-Schauen) geriet mein diesjähriger CeBIT-Besuch zur
+Enttäuschung. Ich stellte fest, dass einige der Unternehmen, die ich
+besuchen wollte, entweder den Stand massiv reduziert hatten oder
+schlicht zu Hause geblieben sind. Somit sank die Zahl der "guten
+Gespräche" auf ein historisches Tief. Darüberhinaus schien es zum Teil
+so zu sein, als würde die CeBIT auch nur noch als medialer Punkt in der
+Dramaturgie von Marketing-Spezialisten. Kleine Geschichte am Rande
+hierzu: Microsoft stellte eine Demo-Version des neuen
+Mobiltelefonbetriebsystems Microsoft Windows Phone 7 vor; auf die
+Rückfrage, ob denn die Applikationen auch nur über ein Shop-Konzept wie
+bei Apple auf das Gerät kommen, wich der Präsentator aus: Man müsse mit
+der Antwort auf diese Frage doch noch zwei Wochen warten, bis zur
+nächsten Mix (der Entwickler-Hausmesse von Microsoft).
+
+*Nachtrag vom 2010-03-07 So:* Eine interessante Diskussion zum Design
+von Windows Phone 7 findet sich im [Forum von Edward Tufte](http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003cy&topic_id=1&topic=Ask+E.T.).
+
+*Nachtrag vom 2010-03-16 Di:* Nun haben wir also fast zwei Wochen
+gewartet und mit Spannung lüftet Microsoft auf seiner
+Entwicklerkonferenz [Mix](http://www.microsoft.com/events/mix/) das
+Geheimnis um die ersten Windows-Phone-Anwendungen. Der Heise-Verlag hat
+hierzu eine Mitteilung
+[verfasst](http://www.heise.de:80/mobil/meldung/Microsoft-zeigt-erste-Windows-Phone-Anwendungen-955528.html),
+in der es unter anderem über die neuen Anwendungen für das Windows Phone
+Betriebsystem heisst:
+
+> "Bekommen wird man diese Anwendungen ausschließlich über einen
+> runderneuerten Windows Phone Marketplace, der diverse Vertriebsmodelle
+> unterstützen wird (kostenlos, Freemium, Trial, Bezahlung über
+> Kreditkarte oder Mobilfunkanbieter)."
+
+Damit schwenkt Microsoft für seine mobilen Anwendungen auf Basis von
+Microsoft Phone auf das Geschäftsmodell von Apple ein.
+
