@@ -7,8 +7,8 @@
  <updated>2014-12-21T10:58:16Z</updated>
  <entry>
   <title type="text">Ich habe mal Octopress aktualisert</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/12/21/ich-habe-mal-octopress-aktualisert/" />
-  <id>urn:http-www-dbrunner-de:-blog-2014-12-21-ich-habe-mal-octopress-aktualisert</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2014/12/21/ich-habe-mal-octopress-aktualisert/" />
+  <id>urn:http-www-dbrunner-de:-2014-12-21-ich-habe-mal-octopress-aktualisert</id>
   <published>2014-12-21T10:58:16Z</published>
   <updated>2014-12-21T10:58:16Z</updated>
   <author>
@@ -41,8 +41,8 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;&lt;strong&gt;Update vom 04. Januar 2014:&lt;/strong&gt; Nach einem kurzen  &lt;a href="https://twitter.com/Krrrcks/status/546667456128114688"&gt;Gespräch&lt;/a&gt;  via Twitter habe ich mich entschieden, den eingebauten Server doch  wieder so zu belassen, wie es im &lt;code&gt;Rakefile&lt;/code&gt; ursprünglich  stand. Statt dessen habe ich einfach in dem Docker-Container einen  &lt;code&gt;nginx&lt;/code&gt; hinzuinstalliert, der dann mein &lt;code&gt;public&lt;/code&gt;-Verzeichnis an den  Port 4000 ausliefert. So funktioniert es wieder prima: Ich starte  den &lt;code&gt;nginx&lt;/code&gt; und lasse dann das &lt;code&gt;rake watch&lt;/code&gt; laufen, um die Seiten  immer wieder neu zu erzeugen, wenn sich Dinge geändert haben.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Migration alter Blog-Einträge</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/12/17/migration-alter-blog-einträge/" />
-  <id>urn:http-www-dbrunner-de:-blog-2014-12-17-migration-alter-blog-einträge</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2014/12/17/migration-alter-blog-einträge/" />
+  <id>urn:http-www-dbrunner-de:-2014-12-17-migration-alter-blog-einträge</id>
   <published>2014-12-17T17:11:00Z</published>
   <updated>2014-12-17T17:11:00Z</updated>
   <author>
@@ -59,8 +59,8 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;Dieser ganze Zoo rund um Markdown und andere ähnliche Formate ist zwar manchmal ein bisschen unübersichtlich, aber mir gefällt das sehr gut, dass man mit wenig Markup schön Textdateien strukturieren kann und dann mit Pandoc auch gut hin und her konvertieren kann.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Unicode support for Octopress</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/06/10/unicode-support-for-octopress/" />
-  <id>urn:http-www-dbrunner-de:-blog-2014-06-10-unicode-support-for-octopress</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2014/06/10/unicode-support-for-octopress/" />
+  <id>urn:http-www-dbrunner-de:-2014-06-10-unicode-support-for-octopress</id>
   <published>2014-06-10T07:26:22Z</published>
   <updated>2014-06-10T07:26:22Z</updated>
   <author>
@@ -105,8 +105,8 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The &lt;code&gt;rake preview&lt;/code&gt; is a neat feature because the server always looks for changed files and produces the HTML files on the fly. That means I can edit the files in my editor and could see the resulting pages in a  browser nearly the same time.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Relaunch fast fertig</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/06/10/relaunch-fast-fertig/" />
-  <id>urn:http-www-dbrunner-de:-blog-2014-06-10-relaunch-fast-fertig</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2014/06/10/relaunch-fast-fertig/" />
+  <id>urn:http-www-dbrunner-de:-2014-06-10-relaunch-fast-fertig</id>
   <published>2014-06-10T07:20:03Z</published>
   <updated>2014-06-10T07:20:03Z</updated>
   <author>
@@ -119,8 +119,8 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Die &amp;ldquo;preview&amp;rdquo;-Funktion ist übrigens ein wirklich nettes Features: Die kann man derart nutzen, dass ein Webserver den aktuellen Stand lokal ausliefert. Dabei beobachtet der Dienst, ob sich Dateien ändern und erstellt unmittelbar wieder die HTML-Seiten. So kann man bequem im Editor das Markdown bearbeiten und im Browser daneben das fertige Ergebnis beurteilen.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Ein Relaunch</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/06/06/ein-relaunch/" />
-  <id>urn:http-www-dbrunner-de:-blog-2014-06-06-ein-relaunch</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2014/06/06/ein-relaunch/" />
+  <id>urn:http-www-dbrunner-de:-2014-06-06-ein-relaunch</id>
   <published>2014-06-06T13:48:31Z</published>
   <updated>2014-06-06T13:48:31Z</updated>
   <author>
@@ -133,8 +133,8 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Nun also ein Relaunch, aber ohne große Vorsätze. Es wird hier also  nur selten und nur wenig zu lesen geben.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">My Dockerfile for setting up Octopress</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/05/26/my-dockerfile-for-setting-up-octopress/" />
-  <id>urn:http-www-dbrunner-de:-blog-2014-05-26-my-dockerfile-for-setting-up-octopress</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2014/05/26/my-dockerfile-for-setting-up-octopress/" />
+  <id>urn:http-www-dbrunner-de:-2014-05-26-my-dockerfile-for-setting-up-octopress</id>
   <published>2014-05-26T07:24:00Z</published>
   <updated>2014-05-26T07:24:00Z</updated>
   <author>

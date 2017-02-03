@@ -9,8 +9,8 @@
   <ttl>1800</ttl>
   <item>
    <title>I played with CHICKEN Scheme, Docker and Alpine Linux</title>
-   <link>http://www.dbrunner.de/blog/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2015-12-19-i-played-with-chicken-scheme-docker-and-alpine-linux</guid>
+   <link>http://www.dbrunner.de/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/</link>
+   <guid>urn:http-www-dbrunner-de:-2015-12-19-i-played-with-chicken-scheme-docker-and-alpine-linux</guid>
    <pubDate>Sat, 19 Dec 2015 16:54:50 UT</pubDate>
    <description>
 &lt;p&gt;I am looking forward to meet LISP people at the &lt;a href="https://events.ccc.de/congress/2015/wiki/Main_Page"&gt;32c3&amp;rsquo;s&lt;/a&gt; &lt;a href="https://events.ccc.de/congress/2015/wiki/Assembly:The_%28un%29employed_schemers_%26_lispers_guild"&gt;LISP assembly&lt;/a&gt;. The last days I played a bit with different Scheme implementations including  &lt;a href="http://call-cc.org"&gt;CHICKEN scheme&lt;/a&gt;. The main feature of CHICKEN is that it compiles the Scheme code to C and then creates dynamic libraries and binaries with the C compiler. I thought that combining these binaries with a minimal Docker container could give me a very small deployment. So here are my steps:&lt;/p&gt;
@@ -70,8 +70,8 @@ CMD /main/main&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;To serve the pages I did a &lt;code&gt;docker run -d -p 8080:8080 krrrcks/spiffy-test&lt;/code&gt;  (spiffy listens on port 8080 in the default install) and browsed my static pages.&lt;/p&gt;</description></item>
   <item>
    <title>3. Docker-Meetup in Frankfurt</title>
-   <link>http://www.dbrunner.de/blog/2015/01/18/3-docker-meetup-in-frankfurt/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2015-01-18-3-docker-meetup-in-frankfurt</guid>
+   <link>http://www.dbrunner.de/2015/01/18/3-docker-meetup-in-frankfurt/</link>
+   <guid>urn:http-www-dbrunner-de:-2015-01-18-3-docker-meetup-in-frankfurt</guid>
    <pubDate>Sun, 18 Jan 2015 19:05:35 UT</pubDate>
    <description>
 &lt;p&gt;Am 13. Januar 2015 fand in Frankfurt das bereits &lt;a href="http://www.meetup.com/Docker-Frankfurt/events/219160756/"&gt;dritte Docker-Meetup&lt;/a&gt; statt, hier einige Notizen von mir dazu.&lt;/p&gt;
@@ -103,8 +103,8 @@ CMD /main/main&lt;/code&gt;&lt;/pre&gt;
  &lt;li&gt;&lt;a href="https://speakerdeck.com/aschmidt75/docker-networking"&gt;Andreas Schmidt, Docker Networking&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</description></item>
   <item>
    <title>Erfahrungen mit Docker</title>
-   <link>http://www.dbrunner.de/blog/2014/10/05/erfahrungen-mit-docker/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2014-10-05-erfahrungen-mit-docker</guid>
+   <link>http://www.dbrunner.de/2014/10/05/erfahrungen-mit-docker/</link>
+   <guid>urn:http-www-dbrunner-de:-2014-10-05-erfahrungen-mit-docker</guid>
    <pubDate>Sun, 05 Oct 2014 09:29:43 UT</pubDate>
    <description>
 &lt;p&gt;Ein Bekannter bat mich, einmal von meinen Erfahrungen mit Docker zu berichten. Also hier als Blog-Post dazu. Ich werde nicht beschreiben, was genau Docker ist und wie es funktioniert. Hierzu gibt es mittlerweile schon eine Reihe von guten Quellen (bspw. auf der Docker-Homepage, in der c&amp;rsquo;t war in Heft 17 (Seiten 146&amp;ndash;151) auch eine ganz gute Einführung enthalten).&lt;/p&gt;
@@ -158,8 +158,8 @@ CMD /main/main&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Ich finde es ein spannendes Projekt und wenn sich für mich die einen oder anderen Unklarheiten lichten, werde ich es sicherlich auch für den Produktiveinsatz in Erwägung ziehen. Ich vermute, dass das Projekt sich noch deutlich weiterentwickeln wird, die knapp 65 Mio Venture Capital werden neben Marketing hoffentlich auch ins Produkt gesteckt.&lt;/p&gt;</description></item>
   <item>
    <title>Mind the storage driver for Ubuntu cloud images (on Azure)</title>
-   <link>http://www.dbrunner.de/blog/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2014-07-24-mind-the-storage-driver-for-ubuntu-cloud-images-on-azure</guid>
+   <link>http://www.dbrunner.de/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure/</link>
+   <guid>urn:http-www-dbrunner-de:-2014-07-24-mind-the-storage-driver-for-ubuntu-cloud-images-on-azure</guid>
    <pubDate>Thu, 24 Jul 2014 10:30:43 UT</pubDate>
    <description>
 &lt;p&gt;A few days ago I wanted to build Firefox OS&amp;rsquo; newest release for a friend. Because I did not wanted these GB of code, binaries etc. on my notebook I fired up an Ubuntu image on Microsoft Azure. I feared that at a certain point in the build process I may had to download everything to my local machine and therefore I installed Docker via a simple&lt;/p&gt;
@@ -195,8 +195,8 @@ WARNING: No swap limit support&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;(Update 2014&amp;ndash;10&amp;ndash;23)&lt;/strong&gt; Thanks to  &lt;a href="http://blog.iron.io/2014/10/docker-in-production-what-weve-learned.html"&gt;this blog post from Iron.io&lt;/a&gt;  I found some documentation of the devicemapper storage driver. It is  located in the  &lt;a href="https://github.com/docker/docker/tree/master/daemon/graphdriver/devmapper"&gt;Repository&lt;/a&gt;.&lt;/p&gt;</description></item>
   <item>
    <title>Unicode support for Octopress</title>
-   <link>http://www.dbrunner.de/blog/2014/06/10/unicode-support-for-octopress/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2014-06-10-unicode-support-for-octopress</guid>
+   <link>http://www.dbrunner.de/2014/06/10/unicode-support-for-octopress/</link>
+   <guid>urn:http-www-dbrunner-de:-2014-06-10-unicode-support-for-octopress</guid>
    <pubDate>Tue, 10 Jun 2014 07:26:22 UT</pubDate>
    <description>
 &lt;p&gt;Well, it seems Octopress/Jekyll would like to have a locale set for UTF&amp;ndash;8 support. I followed &lt;a href="http://www.dominik-gaetjens.de/blog/2012/06/09/utf-8-in-octopress/"&gt;this (text in German)&lt;/a&gt; hint and now my Dockerfile looks like this:&lt;/p&gt;
@@ -238,8 +238,8 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The &lt;code&gt;rake preview&lt;/code&gt; is a neat feature because the server always looks for changed files and produces the HTML files on the fly. That means I can edit the files in my editor and could see the resulting pages in a  browser nearly the same time.&lt;/p&gt;</description></item>
   <item>
    <title>My Dockerfile for setting up Octopress</title>
-   <link>http://www.dbrunner.de/blog/2014/05/26/my-dockerfile-for-setting-up-octopress/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2014-05-26-my-dockerfile-for-setting-up-octopress</guid>
+   <link>http://www.dbrunner.de/2014/05/26/my-dockerfile-for-setting-up-octopress/</link>
+   <guid>urn:http-www-dbrunner-de:-2014-05-26-my-dockerfile-for-setting-up-octopress</guid>
    <pubDate>Mon, 26 May 2014 07:24:00 UT</pubDate>
    <description>
 &lt;p&gt;After my trouble with installing all the dependencies for Octopress I  came up with the following Dockerfile for Docker. This follows the  instructions from the Octopress homepage and uses RVM for managing the ruby dependencies.&lt;/p&gt;

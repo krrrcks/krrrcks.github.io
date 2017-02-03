@@ -9,8 +9,8 @@
   <ttl>1800</ttl>
   <item>
    <title>How to use GET Bucket location on Amazon S3 with Racket</title>
-   <link>http://www.dbrunner.de/blog/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2015-09-04-how-to-use-get-bucket-location-on-amazon-s3-with-racket</guid>
+   <link>http://www.dbrunner.de/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/</link>
+   <guid>urn:http-www-dbrunner-de:-2015-09-04-how-to-use-get-bucket-location-on-amazon-s3-with-racket</guid>
    <pubDate>Fri, 04 Sep 2015 05:23:43 UT</pubDate>
    <description>
 &lt;p&gt;In &lt;a href="http://www.racket-lang.org"&gt;Racket&lt;/a&gt; I want to iterate over my buckets in Amazon S3. They are located in different regions. So how do I get my bucket&amp;rsquo;s location/region? In the API Reference there is a call &lt;a href="http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETlocation.html"&gt;GET Bucket location&lt;/a&gt;. I use &lt;a href="https://github.com/greghendershott/aws"&gt;Greg&amp;rsquo;s AWS library for Racket&lt;/a&gt; and this library authenticates its calls with &lt;a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html"&gt;signature version V4&lt;/a&gt;. But V4 requires the user to know the &lt;em&gt;region&lt;/em&gt; to correctly sign the request. So I need to know the region to ask Amazon S3 for the region where the bucket is located. Otherwise Amazon S3 responds with an error:&lt;/p&gt;

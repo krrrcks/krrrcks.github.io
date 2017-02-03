@@ -9,8 +9,8 @@
   <ttl>1800</ttl>
   <item>
    <title>DateTime conversion can be tricky</title>
-   <link>http://www.dbrunner.de/blog/2014/07/24/datetime-conversion-can-be-tricky/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2014-07-24-datetime-conversion-can-be-tricky</guid>
+   <link>http://www.dbrunner.de/2014/07/24/datetime-conversion-can-be-tricky/</link>
+   <guid>urn:http-www-dbrunner-de:-2014-07-24-datetime-conversion-can-be-tricky</guid>
    <pubDate>Thu, 24 Jul 2014 07:41:36 UT</pubDate>
    <description>
 &lt;p&gt;I wrote a small Lisp application and a JavaScript client gets some data from that application. All time stamps are returned as &amp;ldquo;Lisp&amp;rdquo; time stamps, i.e. an integer with seconds where zero equals Jan 01 1900.&lt;/p&gt;

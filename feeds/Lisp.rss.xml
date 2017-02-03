@@ -9,8 +9,8 @@
   <ttl>1800</ttl>
   <item>
    <title>Using Racket Minimal and raco</title>
-   <link>http://www.dbrunner.de/blog/2016/01/12/using-racket-minimal-and-raco/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2016-01-12-using-racket-minimal-and-raco</guid>
+   <link>http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco/</link>
+   <guid>urn:http-www-dbrunner-de:-2016-01-12-using-racket-minimal-and-raco</guid>
    <pubDate>Tue, 12 Jan 2016 09:55:43 UT</pubDate>
    <description>
 &lt;p&gt;I use Racket Minimal on my smart phone (&lt;a href="../2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/"&gt;this&lt;/a&gt; describes how to compile the run time for an ARM based system). It&amp;rsquo;s is a very small installation of Racket (about 36 MB after installation). After installation one only needs to install the packages that are really neded. But this can be a bit tricky because a lot of packages want to install their documentation and other stuff and bring a whole bunch of files on your drive as dependencies.&lt;/p&gt;
@@ -24,8 +24,8 @@
 &lt;p&gt;To sum up: After a simple &lt;code&gt;raco pkg install compiler-lib&lt;/code&gt; I could easily use &lt;code&gt;raco make&lt;/code&gt; and &lt;code&gt;raco test&lt;/code&gt; to play with my program on my phone.&lt;/p&gt;</description></item>
   <item>
    <title>I played with CHICKEN Scheme, Docker and Alpine Linux</title>
-   <link>http://www.dbrunner.de/blog/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2015-12-19-i-played-with-chicken-scheme-docker-and-alpine-linux</guid>
+   <link>http://www.dbrunner.de/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/</link>
+   <guid>urn:http-www-dbrunner-de:-2015-12-19-i-played-with-chicken-scheme-docker-and-alpine-linux</guid>
    <pubDate>Sat, 19 Dec 2015 16:54:50 UT</pubDate>
    <description>
 &lt;p&gt;I am looking forward to meet LISP people at the &lt;a href="https://events.ccc.de/congress/2015/wiki/Main_Page"&gt;32c3&amp;rsquo;s&lt;/a&gt; &lt;a href="https://events.ccc.de/congress/2015/wiki/Assembly:The_%28un%29employed_schemers_%26_lispers_guild"&gt;LISP assembly&lt;/a&gt;. The last days I played a bit with different Scheme implementations including  &lt;a href="http://call-cc.org"&gt;CHICKEN scheme&lt;/a&gt;. The main feature of CHICKEN is that it compiles the Scheme code to C and then creates dynamic libraries and binaries with the C compiler. I thought that combining these binaries with a minimal Docker container could give me a very small deployment. So here are my steps:&lt;/p&gt;
@@ -85,8 +85,8 @@ CMD /main/main&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;To serve the pages I did a &lt;code&gt;docker run -d -p 8080:8080 krrrcks/spiffy-test&lt;/code&gt;  (spiffy listens on port 8080 in the default install) and browsed my static pages.&lt;/p&gt;</description></item>
   <item>
    <title>How to use GET Bucket location on Amazon S3 with Racket</title>
-   <link>http://www.dbrunner.de/blog/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2015-09-04-how-to-use-get-bucket-location-on-amazon-s3-with-racket</guid>
+   <link>http://www.dbrunner.de/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/</link>
+   <guid>urn:http-www-dbrunner-de:-2015-09-04-how-to-use-get-bucket-location-on-amazon-s3-with-racket</guid>
    <pubDate>Fri, 04 Sep 2015 05:23:43 UT</pubDate>
    <description>
 &lt;p&gt;In &lt;a href="http://www.racket-lang.org"&gt;Racket&lt;/a&gt; I want to iterate over my buckets in Amazon S3. They are located in different regions. So how do I get my bucket&amp;rsquo;s location/region? In the API Reference there is a call &lt;a href="http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETlocation.html"&gt;GET Bucket location&lt;/a&gt;. I use &lt;a href="https://github.com/greghendershott/aws"&gt;Greg&amp;rsquo;s AWS library for Racket&lt;/a&gt; and this library authenticates its calls with &lt;a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html"&gt;signature version V4&lt;/a&gt;. But V4 requires the user to know the &lt;em&gt;region&lt;/em&gt; to correctly sign the request. So I need to know the region to ask Amazon S3 for the region where the bucket is located. Otherwise Amazon S3 responds with an error:&lt;/p&gt;
@@ -123,8 +123,8 @@ is wrong; expecting 'eu-central-1'&amp;lt;/Message&amp;gt;
 &lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; Greg added a &lt;code&gt;bucket-location&lt;/code&gt; function to his great &lt;a href="http://docs.racket-lang.org/aws/S3__Storage_.html#%28def._%28%28lib._aws%2Fs3..rkt%29._bucket-location%29%29"&gt;library&lt;/a&gt;&lt;/p&gt;</description></item>
   <item>
    <title>How to run Racket on the Raspberry Pi 2</title>
-   <link>http://www.dbrunner.de/blog/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2015-08-27-how-to-run-racket-on-the-raspberry-pi-2</guid>
+   <link>http://www.dbrunner.de/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/</link>
+   <guid>urn:http-www-dbrunner-de:-2015-08-27-how-to-run-racket-on-the-raspberry-pi-2</guid>
    <pubDate>Thu, 27 Aug 2015 11:25:45 UT</pubDate>
    <description>
 &lt;p&gt;I got a &lt;a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/"&gt;Raspberry Pi 2 Model B&lt;/a&gt; to play with. I used Raspbian image as operating system. I was wondering how difficult it is to get Racket running on the Raspberry Pi. I downloaded the &lt;a href="http://mirror.racket-lang.org/installers/6.2.1/racket-6.2.1-src-builtpkgs.tgz"&gt;Unix source + built packages&lt;/a&gt; tarball from &lt;a href="http://racket-lang.org"&gt;Racket&amp;rsquo;s homepage&lt;/a&gt; because I only wanted to compile the core of Racket. After unpacking the tarball I was suprised that the instructions were quite short:&lt;/p&gt;
@@ -148,8 +148,8 @@ commands:
 &lt;p&gt;PS: Because the Raspberry Pi 2 Model B has an ARMv7 processor the binary runs on my Jolla smart phone as well.&lt;/p&gt;</description></item>
   <item>
    <title>Running Racket on AWS Lambda</title>
-   <link>http://www.dbrunner.de/blog/2015/08/27/running-racket-on-aws-lambda/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2015-08-27-running-racket-on-aws-lambda</guid>
+   <link>http://www.dbrunner.de/2015/08/27/running-racket-on-aws-lambda/</link>
+   <guid>urn:http-www-dbrunner-de:-2015-08-27-running-racket-on-aws-lambda</guid>
    <pubDate>Thu, 27 Aug 2015 10:46:57 UT</pubDate>
    <description>
 &lt;p&gt;I started to use AWS for some projects recently. But I only use few of their services. From time to time I look into some of there services and wonder if they are useful for my tasks. I looked into &lt;a href="http://aws.amazon.com/lambda"&gt;AWS Lambda&lt;/a&gt;, "&amp;hellip; a compute service that runs your code in response to events and automatically manages the compute resources for you, making it easy to build applications that respond quickly to new information." Nowadays these &amp;ldquo;lambda functions&amp;rdquo; could be written in NodeJS or Java. When I was looking for a roadmap of the supported languages I found an interesting &lt;a href="http://blog.0x82.com/2014/11/24/aws-lambda-functions-in-go/"&gt;blog post&lt;/a&gt; by &lt;a href="https://www.twitter.com/rubenfonseca"&gt;Ruben Fonseca&lt;/a&gt;. He explaind how to run Go code on AWS Lambda.&lt;/p&gt;
@@ -192,8 +192,8 @@ exports.handler = function(event, context) {
 &lt;p&gt;&lt;em&gt;Upate (2016&amp;ndash;03&amp;ndash;15):&lt;/em&gt; AWS Lambda is &lt;a href="https://aws.amazon.com/de/about-aws/whats-new/2016/03/aws-lambda-available-in-eu-frankfurt/"&gt;now available&lt;/a&gt; in the EU (Frankfurt)  region!&lt;/p&gt;</description></item>
   <item>
    <title>Lisp und ich</title>
-   <link>http://www.dbrunner.de/blog/2015/08/27/lisp-und-ich/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2015-08-27-lisp-und-ich</guid>
+   <link>http://www.dbrunner.de/2015/08/27/lisp-und-ich/</link>
+   <guid>urn:http-www-dbrunner-de:-2015-08-27-lisp-und-ich</guid>
    <pubDate>Thu, 27 Aug 2015 08:57:45 UT</pubDate>
    <description>
 &lt;p&gt;Dieser Beitrag ist kurzer Hintergrund für meine bisherigen und zukünftigen Beiträge zur Programmierung und Software-Entiwcklung. Eigentlich ist es eher ein &lt;em&gt;Disclaimer&lt;/em&gt;, denn ich habe das gar nicht professionell gelernt. Ich habe ein sozialwissenschaftliches Fach studiert und meine Kenntnisse aus dem Bereich der Programmierung entstammen im Wesentlichen meiner Schul- und Studienzeit und sehr viel autodidaktes Lernen. Insofern ist aller Code von mir mit einer gewissen Vorsicht zu genießen; möglicherweise ist das nicht immer die beste und schönste Variante ein Problem zu lösen.&lt;/p&gt;</description></item></channel></rss>

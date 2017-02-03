@@ -9,15 +9,15 @@
   <ttl>1800</ttl>
   <item>
    <title>Aus zwei mach eins</title>
-   <link>http://www.dbrunner.de/blog/2015/01/04/aus-zwei-mach-eins/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2015-01-04-aus-zwei-mach-eins</guid>
+   <link>http://www.dbrunner.de/2015/01/04/aus-zwei-mach-eins/</link>
+   <guid>urn:http-www-dbrunner-de:-2015-01-04-aus-zwei-mach-eins</guid>
    <pubDate>Sun, 04 Jan 2015 15:16:08 UT</pubDate>
    <description>
 &lt;p&gt;Bisher hatte ich meine Blog-Einträge auf zwei Blogs aufgeteilt, &lt;a href="http://blog.krrrcks.net"&gt;eines&lt;/a&gt; mit mehr technischen (und zum Teil englischen Texten) und dieses hier mit deutschen Texten. Ich denke, ich werde das auf dieses eine Blog hier konzentrieren. Das reduziert doch etwas den Verwaltungsaufwand. Ich habe die Texte vom nun etwas still gelegten Blog hier herüber kopiert.&lt;/p&gt;</description></item>
   <item>
    <title>Ich habe mal Octopress aktualisert</title>
-   <link>http://www.dbrunner.de/blog/2014/12/21/ich-habe-mal-octopress-aktualisert/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2014-12-21-ich-habe-mal-octopress-aktualisert</guid>
+   <link>http://www.dbrunner.de/2014/12/21/ich-habe-mal-octopress-aktualisert/</link>
+   <guid>urn:http-www-dbrunner-de:-2014-12-21-ich-habe-mal-octopress-aktualisert</guid>
    <pubDate>Sun, 21 Dec 2014 10:58:16 UT</pubDate>
    <description>
 &lt;p&gt;Neulich fiel mir auf, dass die Suchfunktion, die auf Google basiert, nicht nur auf der eigenen Homepage, sondern im &amp;ldquo;gesamten&amp;rdquo; Suchindex von Google gesucht hat. Eben flatterte dieser &lt;a href="https://twitter.com/octopress/status/546528904115404800"&gt;Tweet&lt;/a&gt; mit &lt;a href="https://github.com/imathis/octopress/commit/514ed5eb9f6bb91a6f3288febf3c2ba892a9b693"&gt;Link&lt;/a&gt; zu einem Fix an mir vorbei und da hat sich wohl die API geändert.&lt;/p&gt;
@@ -47,8 +47,8 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;&lt;strong&gt;Update vom 04. Januar 2014:&lt;/strong&gt; Nach einem kurzen  &lt;a href="https://twitter.com/Krrrcks/status/546667456128114688"&gt;Gespräch&lt;/a&gt;  via Twitter habe ich mich entschieden, den eingebauten Server doch  wieder so zu belassen, wie es im &lt;code&gt;Rakefile&lt;/code&gt; ursprünglich  stand. Statt dessen habe ich einfach in dem Docker-Container einen  &lt;code&gt;nginx&lt;/code&gt; hinzuinstalliert, der dann mein &lt;code&gt;public&lt;/code&gt;-Verzeichnis an den  Port 4000 ausliefert. So funktioniert es wieder prima: Ich starte  den &lt;code&gt;nginx&lt;/code&gt; und lasse dann das &lt;code&gt;rake watch&lt;/code&gt; laufen, um die Seiten  immer wieder neu zu erzeugen, wenn sich Dinge geändert haben.&lt;/p&gt;</description></item>
   <item>
    <title>Migration alter Blog-Einträge</title>
-   <link>http://www.dbrunner.de/blog/2014/12/17/migration-alter-blog-einträge/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2014-12-17-migration-alter-blog-einträge</guid>
+   <link>http://www.dbrunner.de/2014/12/17/migration-alter-blog-einträge/</link>
+   <guid>urn:http-www-dbrunner-de:-2014-12-17-migration-alter-blog-einträge</guid>
    <pubDate>Wed, 17 Dec 2014 17:11:00 UT</pubDate>
    <description>
 &lt;p&gt;Es kamen lange Winterabende und ich habe die alten Blog-Einträge von der mittels Org-Mode erstellten Seite hier nach Octopress migriert. Im Archiv sind diese zu finden und die Links etc. sollten nun auch passend mit migriert worden sein.&lt;/p&gt;
@@ -62,8 +62,8 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;Dieser ganze Zoo rund um Markdown und andere ähnliche Formate ist zwar manchmal ein bisschen unübersichtlich, aber mir gefällt das sehr gut, dass man mit wenig Markup schön Textdateien strukturieren kann und dann mit Pandoc auch gut hin und her konvertieren kann.&lt;/p&gt;</description></item>
   <item>
    <title>Relaunch fast fertig</title>
-   <link>http://www.dbrunner.de/blog/2014/06/10/relaunch-fast-fertig/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2014-06-10-relaunch-fast-fertig</guid>
+   <link>http://www.dbrunner.de/2014/06/10/relaunch-fast-fertig/</link>
+   <guid>urn:http-www-dbrunner-de:-2014-06-10-relaunch-fast-fertig</guid>
    <pubDate>Tue, 10 Jun 2014 07:20:03 UT</pubDate>
    <description>
 &lt;p&gt;So, nach einigem Gefummel mit Ruby und Octopress und den Weiterleitungsmöglichkeiten meines Hosters ist die Sache wohl bald so am laufen, wie ich mir das vorstelle. Es fehlt noch ein wenig das Eindeutschen der Octopress-Texte und vielleicht so eine Kategorien-Liste rechts.&lt;/p&gt;
@@ -73,8 +73,8 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;Die &amp;ldquo;preview&amp;rdquo;-Funktion ist übrigens ein wirklich nettes Features: Die kann man derart nutzen, dass ein Webserver den aktuellen Stand lokal ausliefert. Dabei beobachtet der Dienst, ob sich Dateien ändern und erstellt unmittelbar wieder die HTML-Seiten. So kann man bequem im Editor das Markdown bearbeiten und im Browser daneben das fertige Ergebnis beurteilen.&lt;/p&gt;</description></item>
   <item>
    <title>Archiv mit der alten Homepage</title>
-   <link>http://www.dbrunner.de/blog/2014/06/06/archiv-mit-der-alten-homepage/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2014-06-06-archiv-mit-der-alten-homepage</guid>
+   <link>http://www.dbrunner.de/2014/06/06/archiv-mit-der-alten-homepage/</link>
+   <guid>urn:http-www-dbrunner-de:-2014-06-06-archiv-mit-der-alten-homepage</guid>
    <pubDate>Fri, 06 Jun 2014 15:05:45 UT</pubDate>
    <description>
 &lt;p&gt;Meine alten Homepages kann man immer noch finden:&lt;/p&gt;
@@ -84,8 +84,8 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
  &lt;li&gt;Meine mit &lt;a href="http://www.tiddlywiki.com"&gt;Tiddlywiki&lt;/a&gt; gestaltete Seite unter &lt;a href="http://archive.dbrunner.de/old/main.html"&gt;http://archive.dbrunner.de/old/main.html&lt;/a&gt;  (2005&amp;ndash;2009)&lt;/li&gt;&lt;/ul&gt;</description></item>
   <item>
    <title>Ein Relaunch</title>
-   <link>http://www.dbrunner.de/blog/2014/06/06/ein-relaunch/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2014-06-06-ein-relaunch</guid>
+   <link>http://www.dbrunner.de/2014/06/06/ein-relaunch/</link>
+   <guid>urn:http-www-dbrunner-de:-2014-06-06-ein-relaunch</guid>
    <pubDate>Fri, 06 Jun 2014 13:48:31 UT</pubDate>
    <description>
 &lt;p&gt;Ich denke, mir geht es wie vielen: Nach einer gewissen Zeit, in der das bisherige Blog, die bisherige Web-Seite nicht gepflegt wird,  steht irgendwann ein Neubeginn an, dann gleich mit einem &amp;ldquo;Relaunch&amp;rdquo; und vielen neuen und guten Vorsätzen.&lt;/p&gt;
@@ -95,15 +95,15 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;Nun also ein Relaunch, aber ohne große Vorsätze. Es wird hier also  nur selten und nur wenig zu lesen geben.&lt;/p&gt;</description></item>
   <item>
    <title>Programm-Bibliotheken und verschiedene Versionsstände</title>
-   <link>http://www.dbrunner.de/blog/2011/10/16/programm-bibliotheken-und-verschiedene-versionsstände/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2011-10-16-programm-bibliotheken-und-verschiedene-versionsstände</guid>
+   <link>http://www.dbrunner.de/2011/10/16/programm-bibliotheken-und-verschiedene-versionsstände/</link>
+   <guid>urn:http-www-dbrunner-de:-2011-10-16-programm-bibliotheken-und-verschiedene-versionsstände</guid>
    <pubDate>Sat, 15 Oct 2011 22:00:00 UT</pubDate>
    <description>
 &lt;p&gt;Ich bin ein sehr intensiver Nutzer von &lt;a href="http://www.orgmode.org"&gt;Org-Mode&lt;/a&gt;, einem speziellen Modul/Modus für den Emacs-Editor (ich habe hier auf meiner Homepage auch einmal mit einer kleinen &lt;a href="http://archive.dbrunner.de/it/org-mode.html"&gt;Seite&lt;/a&gt; dazu begonnen). Nun ja, was soll man sagen: Bei Emacs wird eine recht alte Version mitgeliefert. Ich wollte dann mal auch wegen einiger Funktionen die neueste nutzen. Also via &lt;code&gt;git&lt;/code&gt; heruntergeladen und eingebunden und Peng, irgendwas funktioniert natürlich nicht mehr: Ich benötige pratisch täglich den Export von Org-Mode-Dateien nach &lt;code&gt;LaTeX&lt;/code&gt;, der wollte aber nicht mehr. Nun kann ich zwar Lisp, aber das Emacs Lisp ist doch etwas speziell und die Debug-Möglichkeiten sind etwas … nun ja, altbacken. Kurzum: Das macht überhaupt keinen Spaß. Im Endeffekt habe ich dann herausgefunden, dass unter bestimmten Umständen Teile des alten, bei Emacs mitgelieferten Codes nachgeladen wird anstelle der neuen Distribution. Diese bescheidene Art von Emacs mit Modulen und Paketen umzugehen ist wirklich erschreckend. Was dafür wiederum total toll war: In der von mir verwendeten Org-Mode-Version war wohl ein Fehler, das ganze Ding über die Mailingliste geschickt und innert einem halben Tag war der Fehler von anderen Nutzern und von Carsten Dominik auch gleich gefixt. Grandiose Antwortzeit!&lt;/p&gt;</description></item>
   <item>
    <title>Umbau der Webseite und des Blogs</title>
-   <link>http://www.dbrunner.de/blog/2011/10/15/umbau-der-webseite-und-des-blogs/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2011-10-15-umbau-der-webseite-und-des-blogs</guid>
+   <link>http://www.dbrunner.de/2011/10/15/umbau-der-webseite-und-des-blogs/</link>
+   <guid>urn:http-www-dbrunner-de:-2011-10-15-umbau-der-webseite-und-des-blogs</guid>
    <pubDate>Fri, 14 Oct 2011 22:00:00 UT</pubDate>
    <description>
 &lt;p&gt;Manchmal muss man am blutigen Ende ein wenig leiden. Jedenfalls funktionierte mein schönes Setup mit Org-Mode und einem kleinen Werkzeug für die Blog-Einträge und den Atom-Feed nicht mehr. Ich habe versucht, mich in den zehntausenden Zeilen Emacs-Lisp-Code von Org-Mode zurecht zu finden, habe es dann aber aufgegeben. Im Nachgang hatte ich dann keine große Lust mehr auf Fehlerkorrekturen und Herumgebastel und der Blog-Teil blieb eine Weile liegen.&lt;/p&gt;
@@ -117,15 +117,15 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Und die Links zu den Bildern hier im Blog scheinen auch noch nicht so richtig zu tun; da muss ich auch noch einmal ran.&lt;/p&gt;</description></item>
   <item>
    <title>Code snippets not working at the moment</title>
-   <link>http://www.dbrunner.de/blog/2010/07/02/code-snippets-not-working-at-the-moment/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2010-07-02-code-snippets-not-working-at-the-moment</guid>
+   <link>http://www.dbrunner.de/2010/07/02/code-snippets-not-working-at-the-moment/</link>
+   <guid>urn:http-www-dbrunner-de:-2010-07-02-code-snippets-not-working-at-the-moment</guid>
    <pubDate>Thu, 01 Jul 2010 22:00:00 UT</pubDate>
    <description>
 &lt;p&gt;Two of my &lt;a href="http://archive.dbrunner.de/it/org-mode.html"&gt;code snippets&lt;/a&gt; for org-mode are not working with the actual &lt;code&gt;master&lt;/code&gt; of the git repository. I have to check this and I am going to fix them when I find enough time for that.&lt;/p&gt;</description></item>
   <item>
    <title>Änderungen beim Datenschutzhinweis</title>
-   <link>http://www.dbrunner.de/blog/2010/04/01/änderungen-beim-datenschutzhinweis/</link>
-   <guid>urn:http-www-dbrunner-de:-blog-2010-04-01-änderungen-beim-datenschutzhinweis</guid>
+   <link>http://www.dbrunner.de/2010/04/01/änderungen-beim-datenschutzhinweis/</link>
+   <guid>urn:http-www-dbrunner-de:-2010-04-01-änderungen-beim-datenschutzhinweis</guid>
    <pubDate>Wed, 31 Mar 2010 22:00:00 UT</pubDate>
    <description>
 &lt;p&gt;Bisher hatte ich folgenden Hinweis zum Datenschutz in meinem Impressum hinterlegt:&lt;/p&gt;

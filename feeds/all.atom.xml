@@ -7,8 +7,8 @@
  <updated>2016-01-12T09:55:43Z</updated>
  <entry>
   <title type="text">Using Racket Minimal and raco</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2016/01/12/using-racket-minimal-and-raco/" />
-  <id>urn:http-www-dbrunner-de:-blog-2016-01-12-using-racket-minimal-and-raco</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco/" />
+  <id>urn:http-www-dbrunner-de:-2016-01-12-using-racket-minimal-and-raco</id>
   <published>2016-01-12T09:55:43Z</published>
   <updated>2016-01-12T09:55:43Z</updated>
   <author>
@@ -25,8 +25,8 @@
 &lt;p&gt;To sum up: After a simple &lt;code&gt;raco pkg install compiler-lib&lt;/code&gt; I could easily use &lt;code&gt;raco make&lt;/code&gt; and &lt;code&gt;raco test&lt;/code&gt; to play with my program on my phone.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">I played with CHICKEN Scheme, Docker and Alpine Linux</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/" />
-  <id>urn:http-www-dbrunner-de:-blog-2015-12-19-i-played-with-chicken-scheme-docker-and-alpine-linux</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/" />
+  <id>urn:http-www-dbrunner-de:-2015-12-19-i-played-with-chicken-scheme-docker-and-alpine-linux</id>
   <published>2015-12-19T16:54:50Z</published>
   <updated>2015-12-19T16:54:50Z</updated>
   <author>
@@ -89,8 +89,8 @@ CMD /main/main&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;To serve the pages I did a &lt;code&gt;docker run -d -p 8080:8080 krrrcks/spiffy-test&lt;/code&gt;  (spiffy listens on port 8080 in the default install) and browsed my static pages.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">How to use GET Bucket location on Amazon S3 with Racket</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/" />
-  <id>urn:http-www-dbrunner-de:-blog-2015-09-04-how-to-use-get-bucket-location-on-amazon-s3-with-racket</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/" />
+  <id>urn:http-www-dbrunner-de:-2015-09-04-how-to-use-get-bucket-location-on-amazon-s3-with-racket</id>
   <published>2015-09-04T05:23:43Z</published>
   <updated>2015-09-04T05:23:43Z</updated>
   <author>
@@ -130,8 +130,8 @@ is wrong; expecting 'eu-central-1'&amp;lt;/Message&amp;gt;
 &lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; Greg added a &lt;code&gt;bucket-location&lt;/code&gt; function to his great &lt;a href="http://docs.racket-lang.org/aws/S3__Storage_.html#%28def._%28%28lib._aws%2Fs3..rkt%29._bucket-location%29%29"&gt;library&lt;/a&gt;&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">How to run Racket on the Raspberry Pi 2</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/" />
-  <id>urn:http-www-dbrunner-de:-blog-2015-08-27-how-to-run-racket-on-the-raspberry-pi-2</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/" />
+  <id>urn:http-www-dbrunner-de:-2015-08-27-how-to-run-racket-on-the-raspberry-pi-2</id>
   <published>2015-08-27T11:25:45Z</published>
   <updated>2015-08-27T11:25:45Z</updated>
   <author>
@@ -158,8 +158,8 @@ commands:
 &lt;p&gt;PS: Because the Raspberry Pi 2 Model B has an ARMv7 processor the binary runs on my Jolla smart phone as well.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Running Racket on AWS Lambda</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/08/27/running-racket-on-aws-lambda/" />
-  <id>urn:http-www-dbrunner-de:-blog-2015-08-27-running-racket-on-aws-lambda</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2015/08/27/running-racket-on-aws-lambda/" />
+  <id>urn:http-www-dbrunner-de:-2015-08-27-running-racket-on-aws-lambda</id>
   <published>2015-08-27T10:46:57Z</published>
   <updated>2015-08-27T10:46:57Z</updated>
   <author>
@@ -205,8 +205,8 @@ exports.handler = function(event, context) {
 &lt;p&gt;&lt;em&gt;Upate (2016&amp;ndash;03&amp;ndash;15):&lt;/em&gt; AWS Lambda is &lt;a href="https://aws.amazon.com/de/about-aws/whats-new/2016/03/aws-lambda-available-in-eu-frankfurt/"&gt;now available&lt;/a&gt; in the EU (Frankfurt)  region!&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Lisp und ich</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/08/27/lisp-und-ich/" />
-  <id>urn:http-www-dbrunner-de:-blog-2015-08-27-lisp-und-ich</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2015/08/27/lisp-und-ich/" />
+  <id>urn:http-www-dbrunner-de:-2015-08-27-lisp-und-ich</id>
   <published>2015-08-27T08:57:45Z</published>
   <updated>2015-08-27T08:57:45Z</updated>
   <author>
@@ -215,8 +215,8 @@ exports.handler = function(event, context) {
 &lt;p&gt;Dieser Beitrag ist kurzer Hintergrund für meine bisherigen und zukünftigen Beiträge zur Programmierung und Software-Entiwcklung. Eigentlich ist es eher ein &lt;em&gt;Disclaimer&lt;/em&gt;, denn ich habe das gar nicht professionell gelernt. Ich habe ein sozialwissenschaftliches Fach studiert und meine Kenntnisse aus dem Bereich der Programmierung entstammen im Wesentlichen meiner Schul- und Studienzeit und sehr viel autodidaktes Lernen. Insofern ist aller Code von mir mit einer gewissen Vorsicht zu genießen; möglicherweise ist das nicht immer die beste und schönste Variante ein Problem zu lösen.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Der Rundfunkrat des hr übt den Diskurs</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/02/17/der-rundfunkrat-des-hr-übt-den-diskurs/" />
-  <id>urn:http-www-dbrunner-de:-blog-2015-02-17-der-rundfunkrat-des-hr-übt-den-diskurs</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2015/02/17/der-rundfunkrat-des-hr-übt-den-diskurs/" />
+  <id>urn:http-www-dbrunner-de:-2015-02-17-der-rundfunkrat-des-hr-übt-den-diskurs</id>
   <published>2015-02-17T10:44:35Z</published>
   <updated>2015-02-17T10:44:35Z</updated>
   <author>
@@ -271,8 +271,8 @@ exports.handler = function(event, context) {
 &lt;p&gt;PS: Nach wie vor macht mich etwas stutzig, wie &lt;a href="http://www.hr-online.de/website/extern/rundfunkrat/index.jsp?rubrik=45412&amp;amp;key=standard_document_3728464"&gt;Rolf-Dieter Postlep&lt;/a&gt; das hat unterschreiben können.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Lexmarks Druckerpatronen-Lizenz</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/02/17/lexmarks-druckerpatronen-lizenz/" />
-  <id>urn:http-www-dbrunner-de:-blog-2015-02-17-lexmarks-druckerpatronen-lizenz</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2015/02/17/lexmarks-druckerpatronen-lizenz/" />
+  <id>urn:http-www-dbrunner-de:-2015-02-17-lexmarks-druckerpatronen-lizenz</id>
   <published>2015-02-17T10:28:02Z</published>
   <updated>2015-02-17T10:28:02Z</updated>
   <author>
@@ -288,8 +288,8 @@ exports.handler = function(event, context) {
 &lt;p&gt;Irgendwie ja auch ein bisschen putzig, wie um einen Alltagsgegenstand wie Toner so ein Bohei gemacht wird. Zwei Gedanken kommen mir da in den Sinn: 1. Es verfestigt sich mein Eindruck, dass das Patentsystem recht nahe an kaputt ist. 2. Unternehmen, die so etwas machen, sollten weniger Geld für Juristen, Patentanwälte ausgeben und das Geld eher in coole Produkte investieren.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Spielt ALBA Berlin nun Handball oder Basketball? Der Sportschau ist es egal</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/01/30/spielt-alba-berlin-nun-handball-oder-basketball-der-sportschau-ist-es-egal/" />
-  <id>urn:http-www-dbrunner-de:-blog-2015-01-30-spielt-alba-berlin-nun-handball-oder-basketball-der-sportschau-ist-es-egal</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2015/01/30/spielt-alba-berlin-nun-handball-oder-basketball-der-sportschau-ist-es-egal/" />
+  <id>urn:http-www-dbrunner-de:-2015-01-30-spielt-alba-berlin-nun-handball-oder-basketball-der-sportschau-ist-es-egal</id>
   <published>2015-01-30T10:32:49Z</published>
   <updated>2015-01-30T10:32:49Z</updated>
   <author>
@@ -312,8 +312,8 @@ exports.handler = function(event, context) {
 &lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; Ich twitterte die Sportschau mit meinem Blog-Post an und  unmittelbar danach wurde der Fehler  &lt;a href="https://twitter.com/sportschau/status/561138889776447489"&gt;korrigiert.&lt;/a&gt;  Sehr prompte Reaktion.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">3. Docker-Meetup in Frankfurt</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/01/18/3-docker-meetup-in-frankfurt/" />
-  <id>urn:http-www-dbrunner-de:-blog-2015-01-18-3-docker-meetup-in-frankfurt</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2015/01/18/3-docker-meetup-in-frankfurt/" />
+  <id>urn:http-www-dbrunner-de:-2015-01-18-3-docker-meetup-in-frankfurt</id>
   <published>2015-01-18T19:05:35Z</published>
   <updated>2015-01-18T19:05:35Z</updated>
   <author>
@@ -348,8 +348,8 @@ exports.handler = function(event, context) {
  &lt;li&gt;&lt;a href="https://speakerdeck.com/aschmidt75/docker-networking"&gt;Andreas Schmidt, Docker Networking&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content></entry>
  <entry>
   <title type="text">Eindrücke vom 31C3</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/01/05/eindrücke-vom-31c3/" />
-  <id>urn:http-www-dbrunner-de:-blog-2015-01-05-eindrücke-vom-31c3</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2015/01/05/eindrücke-vom-31c3/" />
+  <id>urn:http-www-dbrunner-de:-2015-01-05-eindrücke-vom-31c3</id>
   <published>2015-01-05T16:03:00Z</published>
   <updated>2015-01-05T16:03:00Z</updated>
   <author>
@@ -388,8 +388,8 @@ exports.handler = function(event, context) {
 &lt;p&gt;Etwas spontan und nicht so sonderlich koordiniert haben wir auch einen &lt;a href="http://mg.mud.de"&gt;MorgenGrauen&lt;/a&gt;-Stammtisch ausgerufen und siehe da: Drei Spieler und zwei Gäste fanden sich ein, so dass man bei einem Bier ein wenig plaudern und sich austauschen konnte.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Aus zwei mach eins</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2015/01/04/aus-zwei-mach-eins/" />
-  <id>urn:http-www-dbrunner-de:-blog-2015-01-04-aus-zwei-mach-eins</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2015/01/04/aus-zwei-mach-eins/" />
+  <id>urn:http-www-dbrunner-de:-2015-01-04-aus-zwei-mach-eins</id>
   <published>2015-01-04T15:16:08Z</published>
   <updated>2015-01-04T15:16:08Z</updated>
   <author>
@@ -398,8 +398,8 @@ exports.handler = function(event, context) {
 &lt;p&gt;Bisher hatte ich meine Blog-Einträge auf zwei Blogs aufgeteilt, &lt;a href="http://blog.krrrcks.net"&gt;eines&lt;/a&gt; mit mehr technischen (und zum Teil englischen Texten) und dieses hier mit deutschen Texten. Ich denke, ich werde das auf dieses eine Blog hier konzentrieren. Das reduziert doch etwas den Verwaltungsaufwand. Ich habe die Texte vom nun etwas still gelegten Blog hier herüber kopiert.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Ich habe mal Octopress aktualisert</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/12/21/ich-habe-mal-octopress-aktualisert/" />
-  <id>urn:http-www-dbrunner-de:-blog-2014-12-21-ich-habe-mal-octopress-aktualisert</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2014/12/21/ich-habe-mal-octopress-aktualisert/" />
+  <id>urn:http-www-dbrunner-de:-2014-12-21-ich-habe-mal-octopress-aktualisert</id>
   <published>2014-12-21T10:58:16Z</published>
   <updated>2014-12-21T10:58:16Z</updated>
   <author>
@@ -432,8 +432,8 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;&lt;strong&gt;Update vom 04. Januar 2014:&lt;/strong&gt; Nach einem kurzen  &lt;a href="https://twitter.com/Krrrcks/status/546667456128114688"&gt;Gespräch&lt;/a&gt;  via Twitter habe ich mich entschieden, den eingebauten Server doch  wieder so zu belassen, wie es im &lt;code&gt;Rakefile&lt;/code&gt; ursprünglich  stand. Statt dessen habe ich einfach in dem Docker-Container einen  &lt;code&gt;nginx&lt;/code&gt; hinzuinstalliert, der dann mein &lt;code&gt;public&lt;/code&gt;-Verzeichnis an den  Port 4000 ausliefert. So funktioniert es wieder prima: Ich starte  den &lt;code&gt;nginx&lt;/code&gt; und lasse dann das &lt;code&gt;rake watch&lt;/code&gt; laufen, um die Seiten  immer wieder neu zu erzeugen, wenn sich Dinge geändert haben.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">"Neues" Arbeitspapier</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/12/18/-neues-arbeitspapier/" />
-  <id>urn:http-www-dbrunner-de:-blog-2014-12-18-neues-arbeitspapier</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2014/12/18/-neues-arbeitspapier/" />
+  <id>urn:http-www-dbrunner-de:-2014-12-18-neues-arbeitspapier</id>
   <published>2014-12-18T17:24:27Z</published>
   <updated>2014-12-18T17:24:27Z</updated>
   <author>
@@ -442,8 +442,8 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;Zusammen mit &lt;a href="http://www.bk.tudelft.nl/en/about-faculty/departments/otb/about-otb/staff/alle-medewerkers/haffner-marietta/"&gt;Marietta Haffner&lt;/a&gt; hatte ich für die &lt;a href="http://www.ccnorway.no/enhr2012/"&gt;ENHR-Konferenz im Jahr 2012 in Lillehammer&lt;/a&gt; ein Konferenzpapier vorbereitet, das Marietta dort vorgestellt hatte. Wir haben nun in der Arbeitspapier-Reihe des OTB an der TU Delft eine überarbeitete Fassung &lt;a href="http://www.bk.tudelft.nl/fileadmin/Faculteit/BK/Over_de_faculteit/Afdelingen/OTB/publicaties/Working_papers/OTB_Working_papers_2014-07_German_cooperatives.pdf"&gt;eingestellt&lt;/a&gt;.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Aus der Entscheidung des BVerfG zur Erbschaftsteuer</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/12/18/aus-der-entscheidung-des-bverfg-zur-erbschaftsteuer/" />
-  <id>urn:http-www-dbrunner-de:-blog-2014-12-18-aus-der-entscheidung-des-bverfg-zur-erbschaftsteuer</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2014/12/18/aus-der-entscheidung-des-bverfg-zur-erbschaftsteuer/" />
+  <id>urn:http-www-dbrunner-de:-2014-12-18-aus-der-entscheidung-des-bverfg-zur-erbschaftsteuer</id>
   <published>2014-12-18T06:41:37Z</published>
   <updated>2014-12-18T06:41:37Z</updated>
   <author>
@@ -457,8 +457,8 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;Nun bin ich kein Steuer-, Verfassungsrechtsspezialist (genaugenommen gar kein Rechtsspezialist) und weiß nicht, ob dieser Satz nicht ohnehin schon gilt oder Verfassungs- und Steurrechtsrealität ist. Ich habe es allerdings in dieser Klarheit noch nicht gelesen. Und wenn ich mir so das eine oder andere Steuergesetz und seine Wirkungen ansehe, dann kommt da unter diesem Leitsatz vielleicht in den kommenden Jahren einiges auf die Gerichte zu.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Migration alter Blog-Einträge</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/12/17/migration-alter-blog-einträge/" />
-  <id>urn:http-www-dbrunner-de:-blog-2014-12-17-migration-alter-blog-einträge</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2014/12/17/migration-alter-blog-einträge/" />
+  <id>urn:http-www-dbrunner-de:-2014-12-17-migration-alter-blog-einträge</id>
   <published>2014-12-17T17:11:00Z</published>
   <updated>2014-12-17T17:11:00Z</updated>
   <author>
@@ -475,8 +475,8 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;Dieser ganze Zoo rund um Markdown und andere ähnliche Formate ist zwar manchmal ein bisschen unübersichtlich, aber mir gefällt das sehr gut, dass man mit wenig Markup schön Textdateien strukturieren kann und dann mit Pandoc auch gut hin und her konvertieren kann.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Wie das Haus von Bundesministerin Nahles mauert</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/11/21/wie-das-haus-von-bundesministerin-nahles-mauert/" />
-  <id>urn:http-www-dbrunner-de:-blog-2014-11-21-wie-das-haus-von-bundesministerin-nahles-mauert</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2014/11/21/wie-das-haus-von-bundesministerin-nahles-mauert/" />
+  <id>urn:http-www-dbrunner-de:-2014-11-21-wie-das-haus-von-bundesministerin-nahles-mauert</id>
   <published>2014-11-21T09:39:08Z</published>
   <updated>2014-11-21T09:39:08Z</updated>
   <author>
@@ -512,8 +512,8 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;&lt;strong&gt;Update (13. Dezember 2014):&lt;/strong&gt; Am 11. Dezember 2014 hat das  Bundeskabinett den Gesetzentwurf zur Tarifeinheit  &lt;a href="http://www.bundesregierung.de/Content/DE/Kabinettssitzung/2014/12/2014-12-11-kabinett.html?nn=434518"&gt;beschlossen&lt;/a&gt;,  er findet sich nun  &lt;a href="http://www.bmas.de/DE/Service/Presse/Pressemitteilungen/Tarifeinheit-staerkt-sozialpartnerschaft.html?nn=31846"&gt;auf der&lt;/a&gt;  Homepage des Bundesministeriums für  Arbeit und Soziales:  &lt;a href="http://www.bmas.de/SharedDocs/Downloads/DE/Thema-Arbeitsrecht/entwurf-gesetz-tarifeinheit.pdf?__blob=publicationFile"&gt;PDF&lt;/a&gt;  Wenig erstaunlicherweise habe ich auf meine Anfrage vom 29. Oktober  2014 außer den oben dargestellten Nachrichten des  &amp;ldquo;Kommunikationscenters&amp;rdquo; nichts gehört.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Warten auf den technischen Fortschritt als politisches Prinzip?</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/11/13/warten-auf-den-technischen-fortschritt-als-politisches-prinzip/" />
-  <id>urn:http-www-dbrunner-de:-blog-2014-11-13-warten-auf-den-technischen-fortschritt-als-politisches-prinzip</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2014/11/13/warten-auf-den-technischen-fortschritt-als-politisches-prinzip/" />
+  <id>urn:http-www-dbrunner-de:-2014-11-13-warten-auf-den-technischen-fortschritt-als-politisches-prinzip</id>
   <published>2014-11-13T08:53:28Z</published>
   <updated>2014-11-13T08:53:28Z</updated>
   <author>
@@ -550,8 +550,8 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;Wenn schon das Thema &amp;ldquo;Wärmedämmverbundsysteme&amp;rdquo; nicht die Priorität der Bundesministerin hat, so muss sie sich fragen lassen, ob gerade im Umwelt- und Bauressort das Prinzip &amp;ldquo;Hoffnung auf die Zukunft&amp;rdquo; Leitlinie ihrer Politik ist.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Erfahrungen mit Docker</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/10/05/erfahrungen-mit-docker/" />
-  <id>urn:http-www-dbrunner-de:-blog-2014-10-05-erfahrungen-mit-docker</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2014/10/05/erfahrungen-mit-docker/" />
+  <id>urn:http-www-dbrunner-de:-2014-10-05-erfahrungen-mit-docker</id>
   <published>2014-10-05T09:29:43Z</published>
   <updated>2014-10-05T09:29:43Z</updated>
   <author>
@@ -608,8 +608,8 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;Ich finde es ein spannendes Projekt und wenn sich für mich die einen oder anderen Unklarheiten lichten, werde ich es sicherlich auch für den Produktiveinsatz in Erwägung ziehen. Ich vermute, dass das Projekt sich noch deutlich weiterentwickeln wird, die knapp 65 Mio Venture Capital werden neben Marketing hoffentlich auch ins Produkt gesteckt.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Aktenführung beim Beitragsservice</title>
-  <link rel="alternate" href="http://www.dbrunner.de/blog/2014/10/05/aktenführung-beim-beitragsservice/" />
-  <id>urn:http-www-dbrunner-de:-blog-2014-10-05-aktenführung-beim-beitragsservice</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2014/10/05/aktenführung-beim-beitragsservice/" />
+  <id>urn:http-www-dbrunner-de:-2014-10-05-aktenführung-beim-beitragsservice</id>
   <published>2014-10-05T08:45:13Z</published>
   <updated>2014-10-05T08:45:13Z</updated>
   <author>
