@@ -16,6 +16,7 @@
     @(when rel-prev @list{<link rel="prev" href="@|rel-prev|">})
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="@|uri-prefix|/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="@|uri-prefix|/css/dbr.css">
     <link rel="stylesheet" type="text/css" href="@|uri-prefix|/css/pygments.css">
     <link rel="stylesheet" type="text/css" href="@|uri-prefix|/css/scribble.css">
     <link rel="stylesheet" type="text/css" href="@|uri-prefix|/css/custom.css">
@@ -25,6 +26,9 @@
     <link rel="alternate" type="application/rss+xml"
           href="@|rss-feed-uri|" title="RSS Feed">
     <!-- JS -->
+    <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+    <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
     <!-- @google-universal-analytics["UA-xxxxx"] -->
   </head>
   <body>
@@ -47,13 +51,16 @@
              role="navigation">
           <ul class="nav navbar-nav">
             @;{ We can define Racket functions to "DRY". Here's one to
-                emit HMTL for a nav item, adding class="active" iff
+                emit HMTL for a nav item, adding class="active" if
                 this page's @|uri-path| is the same as the nav link. }
             @(define (ni uri label [a-attribs ""])
               @list{
                 <li@(when (string-ci=? uri uri-path) " class=\"active\"")>
                   <a href="@|uri|"@|a-attribs|>@|label|</a>
-                </li> })
+                </li> })	    
+            @ni[(string-append uri-prefix "/ueber/index.html") "Über mich"]	    
+	    @ni[(string-append uri-prefix "/publikationen/index.html") "Publikationen/Vorträge/Projekte"]
+            @ni[(string-append uri-prefix "/impressum/index.html") "Impressum"]
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Tags <b class="caret"></b></a>
@@ -62,8 +69,6 @@
                 @|tags-list-items|
               </ul>
             </li>
-            @ni[(string-append uri-prefix "/ueber/index.html") "Über mich"]
-            @ni[(string-append uri-prefix "/impressum/index.html") "Impressum"]
             <li><a href="@|atom-feed-uri|">Atom</a></li>
             <li><a href="@|rss-feed-uri|">RSS</a></li>
           </ul>
@@ -97,15 +102,12 @@
       <footer>
         <hr />
         <p>@twitter-follow-button["krrrcks" "Follow krrrcks"]</p>
-        <p>Site generated
-        by <a href="https://github.com/greghendershott/frog">Frog</a>,
-        the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
-        <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
-        <p><em>(C) Daniel Brunner</em>.</p>
+        <p>Made with  <a href="https://github.com/greghendershott/frog">Frog</a> and <a href="http://www.racket-lang.org">Racket</a>. Using <a href="http://www.getbootstrap.com">Bootstrap</a>.</p>
+        <p><em>(C) 2017, Daniel Brunner</em>.</p>
       </footer>
     </div>
     <!-- </body> JS -->
-    <script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="@|uri-prefix|js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="@|uri-prefix|/js/bootstrap.min.js"></script>
   </body>
 </html>

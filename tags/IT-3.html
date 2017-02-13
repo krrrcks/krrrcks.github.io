@@ -14,6 +14,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/dbr.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
     <link rel="stylesheet" type="text/css" href="/css/scribble.css">
     <link rel="stylesheet" type="text/css" href="/css/custom.css">
@@ -23,6 +24,9 @@
     <link rel="alternate" type="application/rss+xml"
           href="/feeds/IT.rss.xml" title="RSS Feed">
     <!-- JS -->
+    <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+    <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
     <!-- <script type="text/javascript">
            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -53,6 +57,15 @@
              role="navigation">
           <ul class="nav navbar-nav">
 
+            <li>
+              <a href="/ueber/index.html">Über mich</a>
+            </li> 
+            <li>
+              <a href="/publikationen/index.html">Publikationen/Vorträge/Projekte</a>
+            </li> 
+            <li>
+              <a href="/impressum/index.html">Impressum</a>
+            </li> 
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                 Tags <b class="caret"></b></a>
@@ -118,12 +131,6 @@
 <li><a href="/tags/Wirtschaft.html">Wirtschaft</a></li>
               </ul>
             </li>
-            <li>
-              <a href="/ueber/index.html">Über mich</a>
-            </li> 
-            <li>
-              <a href="/impressum/index.html">Impressum</a>
-            </li> 
             <li><a href="/feeds/IT.atom.xml">Atom</a></li>
             <li><a href="/feeds/IT.rss.xml">RSS</a></li>
           </ul>
@@ -141,33 +148,6 @@
           <h1>Posts tagged <em>IT</em></h1>
 
           <article>
-  <header>
-    <h2><a href='/2010/06/13/verrechnen-leicht-gemacht/'>Verrechnen leicht gemacht</a></h2>
-    <p class='date-and-tags'>
-<time datetime="2010-06-13" pubdate="true">2010-06-13</time> :: <span class="tags"><a href="/tags/Statistik.html">Statistik</a>, <a href="/tags/IT.html">IT</a>, <a href="/tags/R.html">R</a></span></p>
-  </header>
-
-<p>Folgende Ereignisse finde ich ja sehr erhellend: Telepolis <a href="http://www.heise.de/tp/blogs/3/121897">berichtete</a> von einer Studie (Pollet und Nettle, 2009), in der anhand von Daten aus dem &ldquo;Chinese Health and Family Life Survey&rdquo; der Schluss gezogen wurde, dass die Zahl der Orgasmen einer Frau mit dem Einkommen des Partners ansteige:</p>
-
-<blockquote>
- <p>&ldquo;In a large representative sample of the Chinese population, we found evidence that women&rsquo;s self-reported orgasm frequency increases with the income of their partner.&rdquo; (Pollet und Nettle, 2009, S. 149)</p></blockquote>
-
-<p>Etwas später <a href="http://www.heise.de/tp/blogs/3/147390">berichtete</a> Telepolis, dass dem wohl doch nicht so sei. Was war passiert? Die Forscher Esther Herberich und Torsten Hothorn haben die Analysen mit den frei verfügbaren Daten nachgerechnet und erhielten andere Ergebnisse (Herberich et al., 2010). Ursache war, dass der in der von Pollet und Nettle (2009) verwendeten Software (SPSS 15.0) der Algorithmus zur Auswahl des besten Modells (verwendet wurde ein <em>ordinal regression model</em>) einen Fehler aufwies: Die Kriterien zur Modellauswahl (Akaike Information Criteion (AIC) und Bayesian Information Criterion (BIC)) wurden in der Standardeinstellung der Modellauswahl falsch berechnet, so dass die Kriterien eigentlich nicht verglichen werden konnten. In der Folge kam es zu einer verkehrten Modellauswahl für das beste Modell. Herberich et al. berechneten die Analysen mit <a href="http://www.r-project.org">R</a> neu und kamen zu anderen Ergebnissen: So konnte das Modell durch die Aufnahme weiterer Variablen verbessert werden; und zwar derart, dass der Einfluss des Einkommens letztendlich nicht mehr signifikant war. In der Korrektur ihres Beitrages fassen Pollet und Nettle (2010) dies wie folgt zusammen:</p>
-
-<blockquote>
- <p>The association in the CHFLS (Chinese Health and Family Life Survey, D.B.) data between partner wealth and self-reported orgasm frequency ist best explained by the fact that women with higher-income partners are healthier, happier, younger, and more educated than women with lower-income partners. The data do not support a direct effect of partner income on self-reported orgasm frequency, once other variables have been controlled for." (Pollet und Nettle, 2010, S. 149)</p></blockquote>
-
-<p>Zusammengefasst: (1) Erst durch das Bereitstellen der Daten konnte ein anderes Forscherteam die Anwendung der Methode prüfen und stieß auf die oben skizzierten Merkwürdigkeiten. Somit war es möglich, nach den Ursachen für die falsche Modellauswahl zu suchen. (2) Es zeigt sich, dass eine geschlossene, proprietäre Implementierung so ihre Tücken hat; wenn eine Gemeinschaft gegenseitig Kontrolle über Implementierungen von Modellen übt und sie verbessert, kann auch hier wieder ein System der gegenseitige Kontrolle wirksam werden, was zu einer höheren Qualität führen kann.</p>
-
-<p>Literatur:</p>
-
-<ul>
- <li><em>Pollet, T. und Nettle, D.</em> (2009), Partner Wealth predicts self-reported orgasm frequency in a sample of Chinese women, Evolution and Human Behavior, Volume 30, S. 146&ndash;151.</li>
- <li><em>Herberich, E., Hothorn, T., Nettle, D. und Pollet, T.</em> (2010), A re-evalutation of the statistical model in Pollet and Nettle 2009, Evolution and Human Behavior, Volume 31, S. 150&ndash;151 (sowie der Online Appendix).</li>
- <li><em>Pollet, T. und Nettle, D.</em> (2010), Correction to Pollet and Nettle (2009): &ldquo;Partner wealth predicts self-reported orgasm frequency in a sample of Chinese women&rdquo;, Evolution and Human Behavior, Volume 31, S. 149.</li></ul>
-
-</article>
-<article>
   <header>
     <h2><a href='/2010/03/07/kuler-eine-web-anwendung-zum-farben-abmischen-von-adobe/'>Kuler, eine Web-Anwendung zum Farben abmischen von Adobe</a></h2>
     <p class='date-and-tags'>
@@ -232,15 +212,12 @@
                  }
              }(document,"script","twitter-wjs");
            </script></p>
-        <p>Site generated
-        by <a href="https://github.com/greghendershott/frog">Frog</a>,
-        the <strong>fr</strong>ozen bl<strong>og</strong> tool.</p>
-        <p>Using <a href="http://twitter.github.com/bootstrap/index.html">Bootstrap</a>.</p>
-        <p><em>(C) Daniel Brunner</em>.</p>
+        <p>Made with  <a href="https://github.com/greghendershott/frog">Frog</a> and <a href="http://www.racket-lang.org">Racket</a>. Using <a href="http://www.getbootstrap.com">Bootstrap</a>.</p>
+        <p><em>(C) 2017, Daniel Brunner</em>.</p>
       </footer>
     </div>
     <!-- </body> JS -->
-    <script type="text/javascript" src="//code.jquery.com/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
     <script type="text/javascript" src="/js/bootstrap.min.js"></script>
   </body>
 </html>

@@ -202,14 +202,4 @@ exports.handler = function(event, context) {
 
 &lt;p&gt;PS: Only question is: When is AWS Lambda coming to the region &lt;code&gt;eu-central-1&lt;/code&gt;, located in Frankfurt?&lt;/p&gt;
 
-&lt;p&gt;&lt;em&gt;Upate (2016&amp;ndash;03&amp;ndash;15):&lt;/em&gt; AWS Lambda is &lt;a href="https://aws.amazon.com/de/about-aws/whats-new/2016/03/aws-lambda-available-in-eu-frankfurt/"&gt;now available&lt;/a&gt; in the EU (Frankfurt)  region!&lt;/p&gt;</content></entry>
- <entry>
-  <title type="text">Lisp und ich</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/08/27/lisp-und-ich/" />
-  <id>urn:http-www-dbrunner-de:-2015-08-27-lisp-und-ich</id>
-  <published>2015-08-27T08:57:45Z</published>
-  <updated>2015-08-27T08:57:45Z</updated>
-  <author>
-   <name>Daniel Brunner</name></author>
-  <content type="html">
-&lt;p&gt;Dieser Beitrag ist kurzer Hintergrund für meine bisherigen und zukünftigen Beiträge zur Programmierung und Software-Entiwcklung. Eigentlich ist es eher ein &lt;em&gt;Disclaimer&lt;/em&gt;, denn ich habe das gar nicht professionell gelernt. Ich habe ein sozialwissenschaftliches Fach studiert und meine Kenntnisse aus dem Bereich der Programmierung entstammen im Wesentlichen meiner Schul- und Studienzeit und sehr viel autodidaktes Lernen. Insofern ist aller Code von mir mit einer gewissen Vorsicht zu genießen; möglicherweise ist das nicht immer die beste und schönste Variante ein Problem zu lösen.&lt;/p&gt;</content></entry></feed>
+&lt;p&gt;&lt;em&gt;Upate (2016&amp;ndash;03&amp;ndash;15):&lt;/em&gt; AWS Lambda is &lt;a href="https://aws.amazon.com/de/about-aws/whats-new/2016/03/aws-lambda-available-in-eu-frankfurt/"&gt;now available&lt;/a&gt; in the EU (Frankfurt)  region!&lt;/p&gt;</content></entry></feed>

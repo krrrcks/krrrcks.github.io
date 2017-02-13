@@ -29,6 +29,12 @@ Arbeit aufgenommen.
 * Gnu Emacs, Org-mode
 * R, ggplot2 
 
+## Mitgliedschaften
+
+* American Economic Association
+* Verein für Socialpolitik
+* European Network for Housing Research 
+
 ## Zu meinen bisherigen Homepages und Beiträgen
 
 Hier habe ich noch einige Links zu den Inhalten meiner früheren

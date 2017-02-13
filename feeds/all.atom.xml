@@ -204,16 +204,6 @@ exports.handler = function(event, context) {
 
 &lt;p&gt;&lt;em&gt;Upate (2016&amp;ndash;03&amp;ndash;15):&lt;/em&gt; AWS Lambda is &lt;a href="https://aws.amazon.com/de/about-aws/whats-new/2016/03/aws-lambda-available-in-eu-frankfurt/"&gt;now available&lt;/a&gt; in the EU (Frankfurt)  region!&lt;/p&gt;</content></entry>
  <entry>
-  <title type="text">Lisp und ich</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/08/27/lisp-und-ich/" />
-  <id>urn:http-www-dbrunner-de:-2015-08-27-lisp-und-ich</id>
-  <published>2015-08-27T08:57:45Z</published>
-  <updated>2015-08-27T08:57:45Z</updated>
-  <author>
-   <name>Daniel Brunner</name></author>
-  <content type="html">
-&lt;p&gt;Dieser Beitrag ist kurzer Hintergrund für meine bisherigen und zukünftigen Beiträge zur Programmierung und Software-Entiwcklung. Eigentlich ist es eher ein &lt;em&gt;Disclaimer&lt;/em&gt;, denn ich habe das gar nicht professionell gelernt. Ich habe ein sozialwissenschaftliches Fach studiert und meine Kenntnisse aus dem Bereich der Programmierung entstammen im Wesentlichen meiner Schul- und Studienzeit und sehr viel autodidaktes Lernen. Insofern ist aller Code von mir mit einer gewissen Vorsicht zu genießen; möglicherweise ist das nicht immer die beste und schönste Variante ein Problem zu lösen.&lt;/p&gt;</content></entry>
- <entry>
   <title type="text">Der Rundfunkrat des hr übt den Diskurs</title>
   <link rel="alternate" href="http://www.dbrunner.de/2015/02/17/der-rundfunkrat-des-hr-übt-den-diskurs/" />
   <id>urn:http-www-dbrunner-de:-2015-02-17-der-rundfunkrat-des-hr-übt-den-diskurs</id>
@@ -283,7 +273,7 @@ exports.handler = function(event, context) {
 &lt;p&gt;Lizenzbedingungen? Für eine Druckerpatrone? Also mal ein Blick aufs Kleingedruckte:&lt;/p&gt;
 
 &lt;blockquote&gt;
- &lt;p&gt;Bitte vor dem Öffnnen lesen. Durch das Öffnen der Verpackung oder die Verwendung der mitgelieferten patentierten Kassette erklären Sie sich mit der folgenden Lizenz-Vereinbarung einverstanden. Diese patentierte Tonerkassette wird zu einem Sonderpreis verkauft und unterliegt der Patenteinschränkung, dass sie nur einmal verwendet wird. Nach ihrer erstmaligen Verwendung verpflichten Sie sich, sie zur Wiederaufbereitung und/oder zum Recylcing nur an Lexmark zurückzugeben. Die Tonerkassette funktioniert nach der Abgabe einer bestimmten Tonermenge nicht mehr. Wenn sie ersetzt werden muss, kann sie noch Resttoner enthalten. Die Kassette ist zusätzlich so konzipiert, dass die Informationen zur Kassettenkompatibilität im Druckerspeicher automatisch aktualisiert werden. Auf diese Weise kann die Verwendung gefälschter Kassetten und/oder bestimmer Drittprodukte eingeschränkt werden. Durch die Installation der beiliegenden Kassette gestatten Sie Lexmark, diese Änderungen vorzunehmen. Wenn Sie mit den vorgenannten Bedingungen nicht einverstanden sind, geben Sie die ungeöffnete Verpackung an Ihren Händler zurück. Nicht im Rahmen dieser Bestimmungen verkaufte Ersatztonerkassetten sind unter www.lexmark.com erhältlich.&lt;/p&gt;&lt;/blockquote&gt;
+ &lt;p&gt;Bitte vor dem Öffnen lesen. Durch das Öffnen der Verpackung oder die Verwendung der mitgelieferten patentierten Kassette erklären Sie sich mit der folgenden Lizenz-Vereinbarung einverstanden. Diese patentierte Tonerkassette wird zu einem Sonderpreis verkauft und unterliegt der Patenteinschränkung, dass sie nur einmal verwendet wird. Nach ihrer erstmaligen Verwendung verpflichten Sie sich, sie zur Wiederaufbereitung und/oder zum Recylcing nur an Lexmark zurückzugeben. Die Tonerkassette funktioniert nach der Abgabe einer bestimmten Tonermenge nicht mehr. Wenn sie ersetzt werden muss, kann sie noch Resttoner enthalten. Die Kassette ist zusätzlich so konzipiert, dass die Informationen zur Kassettenkompatibilität im Druckerspeicher automatisch aktualisiert werden. Auf diese Weise kann die Verwendung gefälschter Kassetten und/oder bestimmer Drittprodukte eingeschränkt werden. Durch die Installation der beiliegenden Kassette gestatten Sie Lexmark, diese Änderungen vorzunehmen. Wenn Sie mit den vorgenannten Bedingungen nicht einverstanden sind, geben Sie die ungeöffnete Verpackung an Ihren Händler zurück. Nicht im Rahmen dieser Bestimmungen verkaufte Ersatztonerkassetten sind unter www.lexmark.com erhältlich.&lt;/p&gt;&lt;/blockquote&gt;
 
 &lt;p&gt;Irgendwie ja auch ein bisschen putzig, wie um einen Alltagsgegenstand wie Toner so ein Bohei gemacht wird. Zwei Gedanken kommen mir da in den Sinn: 1. Es verfestigt sich mein Eindruck, dass das Patentsystem recht nahe an kaputt ist. 2. Unternehmen, die so etwas machen, sollten weniger Geld für Juristen, Patentanwälte ausgeben und das Geld eher in coole Produkte investieren.&lt;/p&gt;</content></entry>
  <entry>
@@ -661,4 +651,44 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;blockquote&gt;
  &lt;p&gt;Sie fragen, warum wir keinen Zugang zu Ihrem Schreiben vom 24.04.2012 hatten. Der Schriftverkehr wurde unter Ihrem abgemeldeten Beitragskonto (&amp;hellip;) sowie unter dem Beitragskonto (&amp;hellip;) verfilmt. Da Sie nun den Bezug zur Beitragsnummer (&amp;hellip;) hergestellt haben, können wir den Schriftverkehr einsehen. Wir hoffen, Ihnen mit diesen Erläuterungen weitergeholfen zu haben.&lt;/p&gt;&lt;/blockquote&gt;
 
-&lt;p&gt;Ohja, das haben sie. Nachdem der Vorgang wohl beiderseits genügend Schmerzen verursacht hat, habe ich es dabei bewenden lassen.&lt;/p&gt;</content></entry></feed>
+&lt;p&gt;Ohja, das haben sie. Nachdem der Vorgang wohl beiderseits genügend Schmerzen verursacht hat, habe ich es dabei bewenden lassen.&lt;/p&gt;</content></entry>
+ <entry>
+  <title type="text">Mind the storage driver for Ubuntu cloud images (on Azure)</title>
+  <link rel="alternate" href="http://www.dbrunner.de/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure/" />
+  <id>urn:http-www-dbrunner-de:-2014-07-24-mind-the-storage-driver-for-ubuntu-cloud-images-on-azure</id>
+  <published>2014-07-24T10:30:43Z</published>
+  <updated>2014-07-24T10:30:43Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;A few days ago I wanted to build Firefox OS&amp;rsquo; newest release for a friend. Because I did not wanted these GB of code, binaries etc. on my notebook I fired up an Ubuntu image on Microsoft Azure. I feared that at a certain point in the build process I may had to download everything to my local machine and therefore I installed Docker via a simple&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install docker.io&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;Then I started the build process as laid out on Mozilla&amp;rsquo;s Developer Network. But, during downloading the source code (that&amp;rsquo;s about 12 GB of Git repositories from Mozilla and Android), I got a &amp;ldquo;no more space left on device&amp;rdquo;. That was strange: I had a 100 GB volume attached to the VM and enough space and inodes left. After some searching I asked on the IRC channel and got a good hint: &amp;ldquo;What&amp;rsquo;s your storage driver?&amp;rdquo;&lt;/p&gt;
+
+&lt;p&gt;Well, I thought that it&amp;rsquo;s AUFS; I wanted to add &amp;ldquo;as usual&amp;rdquo; because AUFS was available on my notebook from the beginning. But a &lt;code&gt;docker.io
+info&lt;/code&gt; gave me:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;$ sudo docker.io info
+Containers: 0
+Images: 0
+Storage Driver: devicemapper
+ Pool Name: docker-8:1-131188-pool
+ Data file: /var/lib/docker/devicemapper/devicemapper/data
+ Metadata file: /var/lib/docker/devicemapper/devicemapper/metadata
+ Data Space Used: 291.5 Mb
+ Data Space Total: 102400.0 Mb
+ Metadata Space Used: 0.7 Mb
+ Metadata Space Total: 2048.0 Mb
+Execution Driver: native-0.1
+Kernel Version: 3.13.0-29-generic
+WARNING: No swap limit support&lt;/code&gt;&lt;/pre&gt;
+
+&lt;p&gt;I then learned that somehow the DeviceMapper driver only allows a certain amount of diffs and I reached that amount with my build process. (Maybe it&amp;rsquo;s possible to relax that restriction but I do not know how.)&lt;/p&gt;
+
+&lt;p&gt;I learned as well that the Ubuntu cloud image that is provided by Microsoft Azure doesn&amp;rsquo;t have AUFS support. Therefore Docker uses the DeviceMapper storage driver instead. After I installed the AUFS support I could export the images, change the storage driver and import the images again.&lt;/p&gt;
+
+&lt;p&gt;It would be nice seeing the Docker documentation being more detailed on those storage drivers.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;(Update 2014&amp;ndash;10&amp;ndash;23)&lt;/strong&gt; Thanks to  &lt;a href="http://blog.iron.io/2014/10/docker-in-production-what-weve-learned.html"&gt;this blog post from Iron.io&lt;/a&gt;  I found some documentation of the devicemapper storage driver. It is  located in the  &lt;a href="https://github.com/docker/docker/tree/master/daemon/graphdriver/devmapper"&gt;Repository&lt;/a&gt;.&lt;/p&gt;</content></entry></feed>

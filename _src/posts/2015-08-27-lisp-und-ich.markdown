@@ -1,6 +1,6 @@
 	Title: Lisp und ich
 	Date: 2015-08-27T10:57:45
-	Tags: IT, Lisp
+	Tags: DRAFT, IT, Lisp
 
 Dieser Beitrag ist kurzer Hintergrund für meine bisherigen und
 zukünftigen Beiträge zur Programmierung und

@@ -186,9 +186,7 @@ oder Download in [deutscher](/pub/KommWohnZiBru-de.pdf) oder [ukrainischer](/pub
    ihren Mitgliedern im Wettbewerb: eine evolutionsökonomische
    Analyse"',
    XIII. AGI-Nachwuchswissenschaftlertagung, 18. bis 19. März 2008,
-   Wien, Österreich.
-
-   Hierfür erhielten wir den Nachwuchswissenschaftlerpreis 2008 der
+   Wien, Österreich. Hierfür erhielten wir den Nachwuchswissenschaftlerpreis 2008 der
    österreichischen Genossenschaften in der Kategorie "Work in Progress"
 
  - (zusammen mit Tim Voigt) "Management of Market Knowledge in
@@ -242,10 +240,16 @@ oder Download in [deutscher](/pub/KommWohnZiBru-de.pdf) oder [ukrainischer](/pub
    Germany", ENHR International New Housing Researchers Conference,
    Cambridge, England, June/July 2004
 
+## Lehrveranstaltungen
+
+-  *[Technische Hochschule Mittelhessen, StudiumPlus](http://www.studiumplus.de)*, 2-tägiges Modul 
+  "Industrie 4.0, Internet of Things: Eine praktische Annäherung, 9. und 10. Dezember 2016.
+
 ## Projekte 
 
-- *GTZ/BMZ:* (zusammen mit [Horst
-  Zimmermann](http://www.uni-marburg.de/fb02/fachgebiete/emeriti/zimmermann))
+- *GTZ/BMZ:* (zusammen
+  mit
+  [Horst Zimmermann](http://www.uni-marburg.de/fb02/fachgebiete/emeriti/zimmermann))
   Mitarbeit am deutsch-ukrainischen Projekt "Reform der
   Regionalpolitik in der Ukraine" mit einem Papier über die
   "Erfahrungen mit der Transformation der kommunalen

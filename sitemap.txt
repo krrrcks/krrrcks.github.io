@@ -10,7 +10,6 @@ http://www.dbrunner.de/2010/06/22/einmaligkeit-und-alternativlosigkeit-als-polit
 http://www.dbrunner.de/2010/06/27/die-vatikanischen-museen-und-eine-kleine-überraschung/
 http://www.dbrunner.de/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/
 http://www.dbrunner.de/2011/11/07/schwarz-gelber-subventionsabbau/
-http://www.dbrunner.de/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/
 http://www.dbrunner.de/2010/07/25/der-e-postbrief-ein-selbstversuch/
 http://www.dbrunner.de/2010/07/22/zur-diskussion-um-ständige-und-nicht-ständige-mitglieder-im-un-sicherheitsrat/
 http://www.dbrunner.de/2014/12/21/ich-habe-mal-octopress-aktualisert/
@@ -21,11 +20,11 @@ http://www.dbrunner.de/2011/10/16/programm-bibliotheken-und-verschiedene-version
 http://www.dbrunner.de/2014/06/10/relaunch-fast-fertig/
 http://www.dbrunner.de/2010/02/15/beschleunigung-als-soziales-phänomen/
 http://www.dbrunner.de/2012/01/10/zu-den-negativen-zinsen/
-http://www.dbrunner.de/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/
+http://www.dbrunner.de/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/
 http://www.dbrunner.de/2009/03/05/für-wen-bilanzieren-unsere-banken-eigentlich/
 http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco/
 http://www.dbrunner.de/2010/04/01/änderungen-beim-datenschutzhinweis/
-http://www.dbrunner.de/2015/08/27/lisp-und-ich/
+http://www.dbrunner.de/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/
 http://www.dbrunner.de/2015/08/27/running-racket-on-aws-lambda/
 http://www.dbrunner.de/2010/07/02/vorsicht-vor-den-marginalien-bei-steuervereinfachung-und-subventionsabbau/
 http://www.dbrunner.de/2015/01/04/aus-zwei-mach-eins/

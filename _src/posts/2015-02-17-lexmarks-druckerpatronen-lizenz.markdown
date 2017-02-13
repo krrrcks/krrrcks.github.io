@@ -9,7 +9,7 @@ Hinweis: "Attention: Updated License Terms".
 Lizenzbedingungen? Für eine Druckerpatrone? Also mal ein Blick aufs
 Kleingedruckte:
 
-> Bitte vor dem Öffnnen lesen. Durch das Öffnen der Verpackung oder
+> Bitte vor dem Öffnen lesen. Durch das Öffnen der Verpackung oder
 > die Verwendung der mitgelieferten patentierten Kassette erklären Sie
 > sich mit der folgenden Lizenz-Vereinbarung einverstanden. Diese
 > patentierte Tonerkassette wird zu einem Sonderpreis verkauft und
