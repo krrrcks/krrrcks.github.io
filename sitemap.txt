@@ -62,5 +62,4 @@ http://www.dbrunner.de/ueber/index.html
 http://www.dbrunner.de/publikationen/index.html
 http://www.dbrunner.de/link-sammlung/index.html
 http://www.dbrunner.de/impressum/index.html
-http://www.dbrunner.de/README.html
 http://www.dbrunner.de/404.html

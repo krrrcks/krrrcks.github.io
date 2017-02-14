@@ -24,7 +24,7 @@ deren [Github Pages](https://pages.github.com)-Projekt gehostet.  Ich
 selbst erhebe und verarbeite keine Daten über Ihren Besuch auf dieser
 Seite.
 
-*Update vom 14. Januar 2015:* Ich habe ein Twitter-Knopf aktiviert
+*Update vom 14. Januar 2015:* Ich habe einen Twitter-Knopf aktiviert
  (besteht aus dem Follow-Knopf und den Tweet-Knöpfen an den Artikeln
  und Seiten), hierzu werden beim Betrachten der Seite Daten an Twitter
  gesendet. Twitters Datenschutzrichtlinie
