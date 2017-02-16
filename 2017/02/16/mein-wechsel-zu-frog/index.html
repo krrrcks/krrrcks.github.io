@@ -3,15 +3,15 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Using Racket Minimal and raco</title>
-    <meta name="description" content="I use Racket Minimal on my smart phone (this describes how to compile the run time for an ARM based system). It's is a very small installation of Racket (about 36 MB after installation). After installation one only needs to install the packages that are r...">
+    <title>Mein Wechsel zu Frog</title>
+    <meta name="description" content="Bisher habe ich mein Blog mit Octopress bereit gestellt. Eine neue Version (&quot;3.0&quot;) ist auf dem Weg. Nachdem in letzter Zeit die einen oder anderen Schwierigkeiten mit meiner Octopress-Installation auftauchten, habe ich mich entschieden, mit dem  Blog auf ...">
     <meta name="author"      content="Daniel Brunner">
-    <meta name="keywords"    content="IT, Lisp, Racket">
+    <meta name="keywords"    content="Homepage, Racket, Frog">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco/">
-    <link rel="next" href="/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/">
-    <link rel="prev" href="/2017/02/16/wechsel-zu-frog/">
+    <link rel="canonical" href="http://www.dbrunner.de/2017/02/16/mein-wechsel-zu-frog/">
+    <link rel="next" href="/2016/01/12/using-racket-minimal-and-raco/">
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="/css/dbr.css">
@@ -149,20 +149,40 @@
 
           <article>
   <header>
-    <h1>Using Racket Minimal and raco</h1>
+    <h1>Mein Wechsel zu Frog</h1>
     <p class='date-and-tags'>
-<time datetime="2016-01-12" pubdate="true">2016-01-12</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Racket.html">Racket</a></span></p>
+<time datetime="2017-02-16" pubdate="true">2017-02-16</time> :: <span class="tags"><a href="/tags/Homepage.html">Homepage</a>, <a href="/tags/Racket.html">Racket</a>, <a href="/tags/Frog.html">Frog</a></span></p>
   </header>
 
-<p>I use Racket Minimal on my smart phone (<a href="../2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/">this</a> describes how to compile the run time for an ARM based system). It&rsquo;s is a very small installation of Racket (about 36 MB after installation). After installation one only needs to install the packages that are really neded. But this can be a bit tricky because a lot of packages want to install their documentation and other stuff and bring a whole bunch of files on your drive as dependencies.</p>
+<p>Bisher habe ich mein Blog mit <a href="http://www.octopress.org">Octopress</a> bereit gestellt. Eine neue Version (&ldquo;3.0&rdquo;) ist auf dem <a href="http://octopress.org/2015/01/15/octopress-3.0-is-coming/">Weg</a>. Nachdem in letzter Zeit die einen oder anderen Schwierigkeiten mit meiner Octopress-Installation auftauchten, habe ich mich entschieden, mit dem  Blog auf <a href="https://github.com/greghendershott/frog">Frog</a>, ebenfalls ein Generator für statische Blogseiten, zu wechseln.</p>
 
-<p>Some of the packages are divided up into a "-lib", "-doc" (and sometimes "-test") as laid out in the <a href="https://docs.racket-lang.org/pkg/getting-started.html#%28part._.Naming_and_.Designing_.Packages%29">documentation</a>. With these packages it&rsquo;s easier to only install the implementation.</p>
+<h2 id="meine-erfahrungen-mit-octopress">Meine Erfahrungen mit Octopress</h2>
 
-<p>A small script of mine used only basic modules and relied on <code>rackunit</code> for the tests. On a mobile device the start up time of such a program can be  critical. Therefore it is wise to only require the needed packages and to have the source code being compiled to byte code. One could do this with <code>raco setup</code> (which is included in Minimal Racket) but I wanted to have <code>raco make</code> (which is not part of Minimal Racket) available.</p>
+<ul>
+ <li>Ich hatte Octopress und alle Abhängigkeiten in einen Docker-Container <a href="/2014/06/10/relaunch-fast-fertig/">gepackt</a>. Das war ganz sinnvoll, um die Ruby-Bibliotheken-Abhängigkeitshölle in den Griff zu bekommen. Es hatte mich aber nur bedingt glücklich gemacht, da ich immer auf Docker angewiesen war, um einen Blogpost zu erzeugen.</li>
+ <li>Einige der Sachen, die <a href="http://octopress.org/2015/01/15/octopress-3.0-is-coming/">Brandon Mathis (dem Autor von Octopress)</a> aufgezeigt hatte, fand ich auch überarbeitungsbedürftig (bspw. das Ausliefern über Git und die enge Verzahnung, die Updates schwierig machte).</li>
+ <li>Was mir sehr gut gefallen hat, war das Layout und Thema sowie auch die Zahl an Plugins und Erweiterungsmöglichkeiten. Da wird mir doch die eine oder andere Möglichkeit fehlen.</li></ul>
 
-<p>The commands of <code>raco</code> are added via a <code>raco-commands</code> variable in packages&rsquo; <code>info.rkt</code> file. I looked through the packages of my &ldquo;full install&rdquo; and found the package <code>compiler-lib</code> which adds some commands (<code>make</code>, <code>exe</code>, <code>pack</code>, <code>unpack</code>, <code>decompile</code>, <code>test</code>, <code>expand</code>, <code>read</code>, <code>distribute</code>, <code>demodularize</code>) to <a href="https://mirror.racket-lang.org/releases/6.3/doc/raco/index.html"><code>raco</code></a> and relies on only a few other packages. As a result the source and binary files need about 3.8 MB on my phone which is okay for me.</p>
+<h2 id="warum-nun-frog">Warum nun Frog?</h2>
 
-<p>To sum up: After a simple <code>raco pkg install compiler-lib</code> I could easily use <code>raco make</code> and <code>raco test</code> to play with my program on my phone.</p>
+<p>Es gibt ja viele Generatoren für statische Homepages und Blogs. Ich habe mich für den Generator  <a href="https://github.com/greghendershott/frog">Frog</a> von Greg Hendershott entschieden. Es sprach für mich dafür:</p>
+
+<ul>
+ <li>Frog ist in <a href="http://www.racket-lang.org">Racket</a> geschrieben und da ich das praktisch täglich für allerlei Sachen benutze, liegt es mir deutlich näher als Ruby und ich kann die Abhängigkeiten etc. besser beurteilen und ggf. beheben.</li>
+ <li>Frog verwendet im Standard ein paar HTML-Templates, die dann eine Seite mit Bootstrap-CSS etc. bereit stellen. Da ich eh das eine oder andere mit Bootstrap mache bzw. vorhabe, ist das für mich eine ganz gute Lernmöglichkeit.</li>
+ <li>Die Anpassung von Templates ist für mich einfacher als bei Octopress, da ich dort direkt Racket-Code eingeben und nutzen kann.</li>
+ <li>Wie Octopress/Jekyll verarbeitet Frog Markdown als Eingabeformat. Allerdings kann man auch <a href="https://docs.racket-lang.org/scribble/index.html">Scribble</a>-Dateien zum Schreiben von Seiten und Posts verwenden. Scribble verwende ich zwischenzeitlich recht oft als Dokumentations- bzw. Schreibwerkzeug, so dass das ein nettes zusätzliches Feature ist.</li>
+ <li>Es wirkt auf mich, als wäre Frog auch etwas schneller als Octopress im Erzeugen der HTML-Seiten.</li></ul>
+
+<h2 id="umstellungsaufwand">Umstellungsaufwand</h2>
+
+<p>Frog verarbeitet ebenso wie Octopress Dateien im Markdown-Format; allerdings sind die Metadaten etwas anders formatiert (in Octopress gibt es eine YAML-Präambel). Insofern musste ich alle Blog-Posts (knapp 60 Stück) und Seiten einmal in die Hand nehmen und anpassen. Für die Einrichtung und die Anpassung der Files habe ich ca. eine Stunde gebraucht, dann noch &ldquo;etwas&rdquo; Gefummel mit dem CSS und den DNS-Einträgen für die Github Pages. Also durchaus überschaubar.</p>
+
+<h2 id="zukünftiges">Zukünftiges</h2>
+
+<p>Es gibt beim neuen Blog noch einiges, was ich ergänzen möchte (&ldquo;Letzte Artikel&rdquo;-Sidebar, Tag-Sidebar etc.) und mit dem CSS/Thema bin auch noch nicht so zufrieden, aber es tut zumindest nun schon mal.</p>
+
+<p>Ach ja, zum Thema CSS und Fummeln darf natürlich nicht der übliche Hinweis auf diesen (bewegten) <a href="https://imgur.com/gallery/Q3cUg29">Cartoon</a> fehlen.</p>
   <footer>
     <script type="text/javascript">
       !function(d,s,id){
@@ -177,11 +197,11 @@
     </script>
     <a href="https://twitter.com/share"
        class="twitter-share-button"
-       data-url="http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco/"
+       data-url="http://www.dbrunner.de/2017/02/16/mein-wechsel-zu-frog/"
        data-dnt="true">
       "Tweet"</a>
     <!-- <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
-         <g:plusone size="medium" href="http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco/"></g:plusone> -->
+         <g:plusone size="medium" href="http://www.dbrunner.de/2017/02/16/mein-wechsel-zu-frog/"></g:plusone> -->
     <!-- <script type="text/javascript">
            var disqus_shortname = 'shortname';
            (function() {
@@ -194,11 +214,9 @@
          </script>
          <div id="disqus_thread"></div> -->
     <ul class="pager">
-    <li class="previous">
-      <a href="/2017/02/16/wechsel-zu-frog/">&larr; <em>Wechsel zu Frog</em></a>
-    </li>
+
     <li class="next">
-      <a href="/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/"><em>I played with CHICKEN Scheme, Docker and Alpine Linux</em> &rarr;</a>
+      <a href="/2016/01/12/using-racket-minimal-and-raco/"><em>Using Racket Minimal and raco</em> &rarr;</a>
     </li>
     </ul>
   </footer>

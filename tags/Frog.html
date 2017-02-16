@@ -3,13 +3,13 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Posts tagged 'IT' (page 3)</title>
-    <meta name="description" content="Posts tagged 'IT' (page 3)">
+    <title>Posts tagged 'Frog'</title>
+    <meta name="description" content="Posts tagged 'Frog'">
     <meta name="author"      content="Daniel Brunner">
-    <meta name="keywords"    content="IT">
+    <meta name="keywords"    content="Frog">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="http://www.dbrunner.de/tags/IT-3.html">
+    <link rel="canonical" href="http://www.dbrunner.de/tags/Frog.html">
 
 
     <!-- CSS -->
@@ -20,9 +20,9 @@
     <link rel="stylesheet" type="text/css" href="/css/custom.css">
     <!-- Feeds -->
     <link rel="alternate" type="application/atom+xml"
-          href="/feeds/IT.atom.xml" title="Atom Feed">
+          href="/feeds/Frog.atom.xml" title="Atom Feed">
     <link rel="alternate" type="application/rss+xml"
-          href="/feeds/IT.rss.xml" title="RSS Feed">
+          href="/feeds/Frog.rss.xml" title="RSS Feed">
     <!-- JS -->
     <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
     <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
@@ -145,52 +145,46 @@
 
 <!--           -->
 
-          <h1>Posts tagged <em>IT</em></h1>
+          <h1>Posts tagged <em>Frog</em></h1>
 
           <article>
   <header>
-    <h1><a href='/2010/03/07/kuler-eine-web-anwendung-zum-farben-abmischen-von-adobe/'>Kuler, eine Web-Anwendung zum Farben abmischen von Adobe</a></h2>
+    <h1><a href='/2017/02/16/mein-wechsel-zu-frog/'>Mein Wechsel zu Frog</a></h2>
     <p class='date-and-tags'>
-<time datetime="2010-03-07" pubdate="true">2010-03-07</time> :: <span class="tags"><a href="/tags/IT.html">IT</a></span></p>
+<time datetime="2017-02-16" pubdate="true">2017-02-16</time> :: <span class="tags"><a href="/tags/Homepage.html">Homepage</a>, <a href="/tags/Racket.html">Racket</a>, <a href="/tags/Frog.html">Frog</a></span></p>
   </header>
 
-<p>Im Blog von <a href="http://www.presentationzen.com">Garr Reynolds</a> fand ich vor kurzem einen netten <a href="http://www.presentationzen.com/presentationzen/2009/11/using-kuler-to-create-color-themes.html">Hinweis</a> auf eine Web-Anwendung: Für mich als im Bereich Grafik, Farben etc. wenig Beschlagenen ist es immer schwierig, passende Farbzusammenstellungen zu finden. Mit <a href="http://kuler.adobe.com/">Kuler</a> von Adobe kann man Farbschemata nach bestimmten Mustern erstellen, verändern und diese auch abspeichern. Man kann für die Farben auch auf eine Bild-Datei zurückgreifen und daraus eine Farbe herauswählen. Dabei werden diese dann in verschiedenen Formaten ausgegeben und man kann sie beispielsweise für eine Webseite weiterverwenden. Das Ganze lässt sich (Achtung, Flash-Anwendung), leicht und bequem bedienen. Eine wirkliche feine und nette Anwendung.</p>
+<p>Bisher habe ich mein Blog mit <a href="http://www.octopress.org">Octopress</a> bereit gestellt. Eine neue Version (&ldquo;3.0&rdquo;) ist auf dem <a href="http://octopress.org/2015/01/15/octopress-3.0-is-coming/">Weg</a>. Nachdem in letzter Zeit die einen oder anderen Schwierigkeiten mit meiner Octopress-Installation auftauchten, habe ich mich entschieden, mit dem  Blog auf <a href="https://github.com/greghendershott/frog">Frog</a>, ebenfalls ein Generator für statische Blogseiten, zu wechseln.</p>
 
-<p>Links:</p>
+<h2 id="meine-erfahrungen-mit-octopress">Meine Erfahrungen mit Octopress</h2>
 
 <ul>
- <li><a href="http://kuler.adobe.com">http://kuler.adobe.com</a></li>
- <li><a href="http://www.presentationzen.com/presentationzen/2009/11/using-kuler-to-create-color-themes.html">http://www.presentationzen.com/presentationzen/2009/11/using-kuler-to-create-color-themes.html</a></li></ul>
+ <li>Ich hatte Octopress und alle Abhängigkeiten in einen Docker-Container <a href="/2014/06/10/relaunch-fast-fertig/">gepackt</a>. Das war ganz sinnvoll, um die Ruby-Bibliotheken-Abhängigkeitshölle in den Griff zu bekommen. Es hatte mich aber nur bedingt glücklich gemacht, da ich immer auf Docker angewiesen war, um einen Blogpost zu erzeugen.</li>
+ <li>Einige der Sachen, die <a href="http://octopress.org/2015/01/15/octopress-3.0-is-coming/">Brandon Mathis (dem Autor von Octopress)</a> aufgezeigt hatte, fand ich auch überarbeitungsbedürftig (bspw. das Ausliefern über Git und die enge Verzahnung, die Updates schwierig machte).</li>
+ <li>Was mir sehr gut gefallen hat, war das Layout und Thema sowie auch die Zahl an Plugins und Erweiterungsmöglichkeiten. Da wird mir doch die eine oder andere Möglichkeit fehlen.</li></ul>
+
+<h2 id="warum-nun-frog">Warum nun Frog?</h2>
+
+<p>Es gibt ja viele Generatoren für statische Homepages und Blogs. Ich habe mich für den Generator  <a href="https://github.com/greghendershott/frog">Frog</a> von Greg Hendershott entschieden. Es sprach für mich dafür:</p>
+
+<ul>
+ <li>Frog ist in <a href="http://www.racket-lang.org">Racket</a> geschrieben und da ich das praktisch täglich für allerlei Sachen benutze, liegt es mir deutlich näher als Ruby und ich kann die Abhängigkeiten etc. besser beurteilen und ggf. beheben.</li>
+ <li>Frog verwendet im Standard ein paar HTML-Templates, die dann eine Seite mit Bootstrap-CSS etc. bereit stellen. Da ich eh das eine oder andere mit Bootstrap mache bzw. vorhabe, ist das für mich eine ganz gute Lernmöglichkeit.</li>
+ <li>Die Anpassung von Templates ist für mich einfacher als bei Octopress, da ich dort direkt Racket-Code eingeben und nutzen kann.</li>
+ <li>Wie Octopress/Jekyll verarbeitet Frog Markdown als Eingabeformat. Allerdings kann man auch <a href="https://docs.racket-lang.org/scribble/index.html">Scribble</a>-Dateien zum Schreiben von Seiten und Posts verwenden. Scribble verwende ich zwischenzeitlich recht oft als Dokumentations- bzw. Schreibwerkzeug, so dass das ein nettes zusätzliches Feature ist.</li>
+ <li>Es wirkt auf mich, als wäre Frog auch etwas schneller als Octopress im Erzeugen der HTML-Seiten.</li></ul>
+
+<h2 id="umstellungsaufwand">Umstellungsaufwand</h2>
+
+<p>Frog verarbeitet ebenso wie Octopress Dateien im Markdown-Format; allerdings sind die Metadaten etwas anders formatiert (in Octopress gibt es eine YAML-Präambel). Insofern musste ich alle Blog-Posts (knapp 60 Stück) und Seiten einmal in die Hand nehmen und anpassen. Für die Einrichtung und die Anpassung der Files habe ich ca. eine Stunde gebraucht, dann noch &ldquo;etwas&rdquo; Gefummel mit dem CSS und den DNS-Einträgen für die Github Pages. Also durchaus überschaubar.</p>
+
+<h2 id="zukünftiges">Zukünftiges</h2>
+
+<p>Es gibt beim neuen Blog noch einiges, was ich ergänzen möchte (&ldquo;Letzte Artikel&rdquo;-Sidebar, Tag-Sidebar etc.) und mit dem CSS/Thema bin auch noch nicht so zufrieden, aber es tut zumindest nun schon mal.</p>
+
+<p>Ach ja, zum Thema CSS und Fummeln darf natürlich nicht der übliche Hinweis auf diesen (bewegten) <a href="https://imgur.com/gallery/Q3cUg29">Cartoon</a> fehlen.</p>
 
 </article>
-<article>
-  <header>
-    <h1><a href='/2010/03/04/cebit-2010/'>CeBIT 2010</a></h2>
-    <p class='date-and-tags'>
-<time datetime="2010-03-04" pubdate="true">2010-03-04</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Veranstaltungen.html">Veranstaltungen</a></span></p>
-  </header>
-
-<p>Trotz erneut markigem Auftritt (mit Begriffen wie Webciety oder dem Beschwören von &ldquo;Lösungen&rdquo; als Konzept im Gegensatz zu früheren Hardware-Schauen) geriet mein diesjähriger CeBIT-Besuch zur Enttäuschung. Ich stellte fest, dass einige der Unternehmen, die ich besuchen wollte, entweder den Stand massiv reduziert hatten oder schlicht zu Hause geblieben sind. Somit sank die Zahl der &ldquo;guten Gespräche&rdquo; auf ein historisches Tief. Darüberhinaus schien es zum Teil so zu sein, als würde die CeBIT auch nur noch als medialer Punkt in der Dramaturgie von Marketing-Spezialisten. Kleine Geschichte am Rande hierzu: Microsoft stellte eine Demo-Version des neuen Mobiltelefonbetriebsystems Microsoft Windows Phone 7 vor; auf die Rückfrage, ob denn die Applikationen auch nur über ein Shop-Konzept wie bei Apple auf das Gerät kommen, wich der Präsentator aus: Man müsse mit der Antwort auf diese Frage doch noch zwei Wochen warten, bis zur nächsten Mix (der Entwickler-Hausmesse von Microsoft).</p>
-
-<p><em>Nachtrag vom 2010&ndash;03&ndash;07 So:</em> Eine interessante Diskussion zum Design von Windows Phone 7 findet sich im <a href="http://www.edwardtufte.com/bboard/q-and-a-fetch-msg?msg_id=0003cy&amp;topic_id=1&amp;topic=Ask+E.T.">Forum von Edward Tufte</a>.</p>
-
-<p><em>Nachtrag vom 2010&ndash;03&ndash;16 Di:</em> Nun haben wir also fast zwei Wochen gewartet und mit Spannung lüftet Microsoft auf seiner Entwicklerkonferenz <a href="http://www.microsoft.com/events/mix/">Mix</a> das Geheimnis um die ersten Windows-Phone-Anwendungen. Der Heise-Verlag hat hierzu eine Mitteilung <a href="http://www.heise.de:80/mobil/meldung/Microsoft-zeigt-erste-Windows-Phone-Anwendungen-955528.html">verfasst</a>, in der es unter anderem über die neuen Anwendungen für das Windows Phone Betriebsystem heisst:</p>
-
-<blockquote>
- <p>&ldquo;Bekommen wird man diese Anwendungen ausschließlich über einen runderneuerten Windows Phone Marketplace, der diverse Vertriebsmodelle unterstützen wird (kostenlos, Freemium, Trial, Bezahlung über Kreditkarte oder Mobilfunkanbieter).&rdquo;</p></blockquote>
-
-<p>Damit schwenkt Microsoft für seine mobilen Anwendungen auf Basis von Microsoft Phone auf das Geschäftsmodell von Apple ein.</p>
-
-</article>
-<footer>
- <ul class="pagination">
-  <li><a href="/tags/IT-2.html">
-    <quote>&larr;</quote></a></li>
-  <li><a href="/tags/IT.html">1</a></li>
-  <li><a href="/tags/IT-2.html">2</a></li>
-  <li class="active"><a href="/tags/IT-3.html">3</a></li>
-  <li class="disabled"><a href="#">
-    <quote>&rarr;</quote></a></li></ul></footer>
         </div>
       </div>
       <footer>
@@ -213,7 +207,7 @@
              }(document,"script","twitter-wjs");
            </script></p>
         <p>Made with  <a href="https://github.com/greghendershott/frog">Frog</a> and <a href="http://www.racket-lang.org">Racket</a>. Using <a href="http://www.getbootstrap.com">Bootstrap</a>.
-          Feeds are available via <a href="/feeds/IT.atom.xml">Atom</a> or <a href="/feeds/IT.rss.xml">RSS</a>.</p>
+          Feeds are available via <a href="/feeds/Frog.atom.xml">Atom</a> or <a href="/feeds/Frog.rss.xml">RSS</a>.</p>
         <p><em>(C) 2017, Daniel Brunner</em>.</p>
       </footer>
     </div>

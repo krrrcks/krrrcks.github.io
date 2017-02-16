@@ -6,7 +6,7 @@
     <title>Daniel Brunner</title>
     <meta name="description" content="Daniel Brunner">
     <meta name="author"      content="Daniel Brunner">
-    <meta name="keywords"    content="AWS, Common Lisp, JavaScript, Gesellschaft, Linux, CHICKEN, Wirtschaft, Scheme, Bücher, Org-Mode, Politik, Veranstaltungen, MorgenGrauen, R, Medien, Allerlei, Statistik, Lisp, Ausgehen, all, Reisen, Homepage, Behörden, Octopress, Docker, IT, Racket, S3, Steuern, Azure">
+    <meta name="keywords"    content="AWS, Common Lisp, JavaScript, Gesellschaft, Linux, CHICKEN, Wirtschaft, Scheme, Bücher, Org-Mode, Politik, R, Veranstaltungen, MorgenGrauen, Frog, Medien, Allerlei, Statistik, Lisp, Ausgehen, all, Reisen, Homepage, Behörden, Octopress, Docker, IT, Racket, S3, Steuern, Azure">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
     <link rel="canonical" href="http://www.dbrunner.de/index.html">
@@ -90,6 +90,8 @@
 
 <li><a href="/tags/Docker.html">Docker</a></li>
 
+<li><a href="/tags/Frog.html">Frog</a></li>
+
 <li><a href="/tags/Gesellschaft.html">Gesellschaft</a></li>
 
 <li><a href="/tags/Homepage.html">Homepage</a></li>
@@ -150,7 +152,45 @@
 
           <article>
   <header>
-    <h2><a href='/2016/01/12/using-racket-minimal-and-raco/'>Using Racket Minimal and raco</a></h2>
+    <h1><a href='/2017/02/16/mein-wechsel-zu-frog/'>Mein Wechsel zu Frog</a></h2>
+    <p class='date-and-tags'>
+<time datetime="2017-02-16" pubdate="true">2017-02-16</time> :: <span class="tags"><a href="/tags/Homepage.html">Homepage</a>, <a href="/tags/Racket.html">Racket</a>, <a href="/tags/Frog.html">Frog</a></span></p>
+  </header>
+
+<p>Bisher habe ich mein Blog mit <a href="http://www.octopress.org">Octopress</a> bereit gestellt. Eine neue Version (&ldquo;3.0&rdquo;) ist auf dem <a href="http://octopress.org/2015/01/15/octopress-3.0-is-coming/">Weg</a>. Nachdem in letzter Zeit die einen oder anderen Schwierigkeiten mit meiner Octopress-Installation auftauchten, habe ich mich entschieden, mit dem  Blog auf <a href="https://github.com/greghendershott/frog">Frog</a>, ebenfalls ein Generator für statische Blogseiten, zu wechseln.</p>
+
+<h2 id="meine-erfahrungen-mit-octopress">Meine Erfahrungen mit Octopress</h2>
+
+<ul>
+ <li>Ich hatte Octopress und alle Abhängigkeiten in einen Docker-Container <a href="/2014/06/10/relaunch-fast-fertig/">gepackt</a>. Das war ganz sinnvoll, um die Ruby-Bibliotheken-Abhängigkeitshölle in den Griff zu bekommen. Es hatte mich aber nur bedingt glücklich gemacht, da ich immer auf Docker angewiesen war, um einen Blogpost zu erzeugen.</li>
+ <li>Einige der Sachen, die <a href="http://octopress.org/2015/01/15/octopress-3.0-is-coming/">Brandon Mathis (dem Autor von Octopress)</a> aufgezeigt hatte, fand ich auch überarbeitungsbedürftig (bspw. das Ausliefern über Git und die enge Verzahnung, die Updates schwierig machte).</li>
+ <li>Was mir sehr gut gefallen hat, war das Layout und Thema sowie auch die Zahl an Plugins und Erweiterungsmöglichkeiten. Da wird mir doch die eine oder andere Möglichkeit fehlen.</li></ul>
+
+<h2 id="warum-nun-frog">Warum nun Frog?</h2>
+
+<p>Es gibt ja viele Generatoren für statische Homepages und Blogs. Ich habe mich für den Generator  <a href="https://github.com/greghendershott/frog">Frog</a> von Greg Hendershott entschieden. Es sprach für mich dafür:</p>
+
+<ul>
+ <li>Frog ist in <a href="http://www.racket-lang.org">Racket</a> geschrieben und da ich das praktisch täglich für allerlei Sachen benutze, liegt es mir deutlich näher als Ruby und ich kann die Abhängigkeiten etc. besser beurteilen und ggf. beheben.</li>
+ <li>Frog verwendet im Standard ein paar HTML-Templates, die dann eine Seite mit Bootstrap-CSS etc. bereit stellen. Da ich eh das eine oder andere mit Bootstrap mache bzw. vorhabe, ist das für mich eine ganz gute Lernmöglichkeit.</li>
+ <li>Die Anpassung von Templates ist für mich einfacher als bei Octopress, da ich dort direkt Racket-Code eingeben und nutzen kann.</li>
+ <li>Wie Octopress/Jekyll verarbeitet Frog Markdown als Eingabeformat. Allerdings kann man auch <a href="https://docs.racket-lang.org/scribble/index.html">Scribble</a>-Dateien zum Schreiben von Seiten und Posts verwenden. Scribble verwende ich zwischenzeitlich recht oft als Dokumentations- bzw. Schreibwerkzeug, so dass das ein nettes zusätzliches Feature ist.</li>
+ <li>Es wirkt auf mich, als wäre Frog auch etwas schneller als Octopress im Erzeugen der HTML-Seiten.</li></ul>
+
+<h2 id="umstellungsaufwand">Umstellungsaufwand</h2>
+
+<p>Frog verarbeitet ebenso wie Octopress Dateien im Markdown-Format; allerdings sind die Metadaten etwas anders formatiert (in Octopress gibt es eine YAML-Präambel). Insofern musste ich alle Blog-Posts (knapp 60 Stück) und Seiten einmal in die Hand nehmen und anpassen. Für die Einrichtung und die Anpassung der Files habe ich ca. eine Stunde gebraucht, dann noch &ldquo;etwas&rdquo; Gefummel mit dem CSS und den DNS-Einträgen für die Github Pages. Also durchaus überschaubar.</p>
+
+<h2 id="zukünftiges">Zukünftiges</h2>
+
+<p>Es gibt beim neuen Blog noch einiges, was ich ergänzen möchte (&ldquo;Letzte Artikel&rdquo;-Sidebar, Tag-Sidebar etc.) und mit dem CSS/Thema bin auch noch nicht so zufrieden, aber es tut zumindest nun schon mal.</p>
+
+<p>Ach ja, zum Thema CSS und Fummeln darf natürlich nicht der übliche Hinweis auf diesen (bewegten) <a href="https://imgur.com/gallery/Q3cUg29">Cartoon</a> fehlen.</p>
+
+</article>
+<article>
+  <header>
+    <h1><a href='/2016/01/12/using-racket-minimal-and-raco/'>Using Racket Minimal and raco</a></h2>
     <p class='date-and-tags'>
 <time datetime="2016-01-12" pubdate="true">2016-01-12</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Racket.html">Racket</a></span></p>
   </header>
@@ -168,7 +208,7 @@
 </article>
 <article>
   <header>
-    <h2><a href='/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/'>I played with CHICKEN Scheme, Docker and Alpine Linux</a></h2>
+    <h1><a href='/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/'>I played with CHICKEN Scheme, Docker and Alpine Linux</a></h2>
     <p class='date-and-tags'>
 <time datetime="2015-12-19" pubdate="true">2015-12-19</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Scheme.html">Scheme</a>, <a href="/tags/CHICKEN.html">CHICKEN</a>, <a href="/tags/Docker.html">Docker</a>, <a href="/tags/Linux.html">Linux</a></span></p>
   </header>
@@ -232,7 +272,7 @@ CMD /main/main</code></pre>
 </article>
 <article>
   <header>
-    <h2><a href='/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/'>How to use GET Bucket location on Amazon S3 with Racket</a></h2>
+    <h1><a href='/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/'>How to use GET Bucket location on Amazon S3 with Racket</a></h2>
     <p class='date-and-tags'>
 <time datetime="2015-09-04" pubdate="true">2015-09-04</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Racket.html">Racket</a>, <a href="/tags/AWS.html">AWS</a>, <a href="/tags/S3.html">S3</a></span></p>
   </header>
@@ -273,7 +313,7 @@ is wrong; expecting 'eu-central-1'&lt;/Message&gt;
 </article>
 <article>
   <header>
-    <h2><a href='/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/'>How to run Racket on the Raspberry Pi 2</a></h2>
+    <h1><a href='/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/'>How to run Racket on the Raspberry Pi 2</a></h2>
     <p class='date-and-tags'>
 <time datetime="2015-08-27" pubdate="true">2015-08-27</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Racket.html">Racket</a></span></p>
   </header>
@@ -301,7 +341,7 @@ commands:
 </article>
 <article>
   <header>
-    <h2><a href='/2015/08/27/running-racket-on-aws-lambda/'>Running Racket on AWS Lambda</a></h2>
+    <h1><a href='/2015/08/27/running-racket-on-aws-lambda/'>Running Racket on AWS Lambda</a></h2>
     <p class='date-and-tags'>
 <time datetime="2015-08-27" pubdate="true">2015-08-27</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Racket.html">Racket</a>, <a href="/tags/AWS.html">AWS</a></span></p>
   </header>
@@ -348,7 +388,7 @@ exports.handler = function(event, context) {
 </article>
 <article>
   <header>
-    <h2><a href='/2015/02/17/der-rundfunkrat-des-hr-übt-den-diskurs/'>Der Rundfunkrat des hr übt den Diskurs</a></h2>
+    <h1><a href='/2015/02/17/der-rundfunkrat-des-hr-übt-den-diskurs/'>Der Rundfunkrat des hr übt den Diskurs</a></h2>
     <p class='date-and-tags'>
 <time datetime="2015-02-17" pubdate="true">2015-02-17</time> :: <span class="tags"><a href="/tags/Medien.html">Medien</a>, <a href="/tags/Wirtschaft.html">Wirtschaft</a></span></p>
   </header>
@@ -404,7 +444,7 @@ exports.handler = function(event, context) {
 </article>
 <article>
   <header>
-    <h2><a href='/2015/02/17/lexmarks-druckerpatronen-lizenz/'>Lexmarks Druckerpatronen-Lizenz</a></h2>
+    <h1><a href='/2015/02/17/lexmarks-druckerpatronen-lizenz/'>Lexmarks Druckerpatronen-Lizenz</a></h2>
     <p class='date-and-tags'>
 <time datetime="2015-02-17" pubdate="true">2015-02-17</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Wirtschaft.html">Wirtschaft</a>, <a href="/tags/Allerlei.html">Allerlei</a></span></p>
   </header>
@@ -421,7 +461,7 @@ exports.handler = function(event, context) {
 </article>
 <article>
   <header>
-    <h2><a href='/2015/01/30/spielt-alba-berlin-nun-handball-oder-basketball-der-sportschau-ist-es-egal/'>Spielt ALBA Berlin nun Handball oder Basketball? Der Sportschau ist es egal</a></h2>
+    <h1><a href='/2015/01/30/spielt-alba-berlin-nun-handball-oder-basketball-der-sportschau-ist-es-egal/'>Spielt ALBA Berlin nun Handball oder Basketball? Der Sportschau ist es egal</a></h2>
     <p class='date-and-tags'>
 <time datetime="2015-01-30" pubdate="true">2015-01-30</time> :: <span class="tags"><a href="/tags/Medien.html">Medien</a>, <a href="/tags/Allerlei.html">Allerlei</a></span></p>
   </header>
@@ -445,7 +485,7 @@ exports.handler = function(event, context) {
 </article>
 <article>
   <header>
-    <h2><a href='/2015/01/18/3-docker-meetup-in-frankfurt/'>
+    <h1><a href='/2015/01/18/3-docker-meetup-in-frankfurt/'>
 <ol>
  <li>Docker-Meetup in Frankfurt</li></ol></a></h2>
     <p class='date-and-tags'>
@@ -481,46 +521,6 @@ exports.handler = function(event, context) {
  <li><a href="https://speakerdeck.com/aschmidt75/docker-networking">Andreas Schmidt, Docker Networking</a></li></ul>
 
 </article>
-<article>
-  <header>
-    <h2><a href='/2015/01/05/eindrücke-vom-31c3/'>Eindrücke vom 31C3</a></h2>
-    <p class='date-and-tags'>
-<time datetime="2015-01-05" pubdate="true">2015-01-05</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Veranstaltungen.html">Veranstaltungen</a>, <a href="/tags/Reisen.html">Reisen</a>, <a href="/tags/MorgenGrauen.html">MorgenGrauen</a></span></p>
-  </header>
-
-<p>Dieses Jahr habe ich mich einmal aufgerafft und bin das erste mal zum Congress des CCC nach Hamburg gefahren. Im Folgenden ein paar Eindrücke:</p>
-
-<h2 id="drumherum">Drumherum</h2>
-
-<p>Ich fand den <a href="http://events.ccc.de/congress/2014/wiki/Main_Page">31C3</a> ein tolles Ereignis: Sehr professionell und umsichtig organisiert. Überall, wo ich hinkam, war man nett und freundlich, insgesamt eine sehr willkommende Atmosphäre. Nur der Termin, der ist ja doch etwas sperrig.</p>
-
-<h2 id="vorträge">Vorträge</h2>
-
-<p>Ich konnte einige Vorträge anhören, von denen haben mir die folgenden besonders gut gefallen (ich habe mal die Links zu den Videos und die Links zu den Einträgen im Fahrplan aufgeführt, oft gibt es im Fahrplan auch noch zugehöriges Material und weitere Hinweise):</p>
-
-<ul>
- <li>
-  <p><a href="http://media.ccc.de/browse/congress/2014/31c3_-_6264_-_de_-_saal_1_-_201412271245_-_wir_beteiligen_uns_aktiv_an_den_diskussionen_-_martin_haase_maha.html">&ldquo;Wir beteiligen uns aktiv an den Dikussionen&rdquo;</a> <a href="http://events.ccc.de/congress/2014/Fahrplan/events/6264.html">(Link im Fahrplan)</a> von Martin Haase, der die <a href="http://www.digitale-agenda.de/">Digitale Agenda</a> der Bundesregierung aus sprachwissenschaftlicher Sicht entlarvt als das, was es ist: Heiße Luft und wenig Konkretes, schon gar nicht für den &ldquo;Bürger&rdquo;. Besonders spannend fand ich den Teil des &ldquo;PDF befreien&rdquo;, denn die Bundesregierung hat nur ein wenig konsistentes PDF bereit gestellt, dass maha erst einmal in einen Text umwandeln musste, mit dem er mit seinen Werkzeugen arbeiten konnte. In der Diskussion wurde er dazu auch noch einmal befragt und meinte, Markdown, das sei eigentlich ein ganz gutes Format.</p></li>
- <li>
-  <p>Die beiden SS7-Vorträge von <a href="http://media.ccc.de/browse/congress/2014/31c3_-_6249_-_en_-_saal_1_-_201412271715_-_ss7_locate_track_manipulate_-_tobias_engel.html">Tobias Engel</a> <a href="http://events.ccc.de/congress/2014/Fahrplan/events/6249.html">(Fahrplan)</a> und <a href="http://media.ccc.de/browse/congress/2014/31c3_-_6122_-_en_-_saal_1_-_201412271830_-_mobile_self-defense_-_karsten_nohl.html">Karsten Nohl</a> <a href="http://events.ccc.de/congress/2014/Fahrplan/events/6122.html">(Fahrplan)</a>: Die Talks fand ich incl. der Live-Vorführungen sehr eindrücklich und haben mir vor Augen geführt, dass es mit der Sicherheit im Mobilfunk noch schlechter aussieht, als ich so befürchtet habe.</p></li>
- <li>
-  <p><a href="http://media.ccc.de/browse/congress/2014/31c3_-_6369_-_en_-_saal_1_-_201412272145_-_ecchacks_-_djb_-_tanja_lange.html">ECCHacks</a> <a href="http://events.ccc.de/congress/2014/Fahrplan/events/6369.html">(Fahrplan)</a> von djb und Tanja Lange: Ein Bekannter empfahl mir den Vortrag und meinte, ich könnte da schon was verstehen, obwohl ich mich mit diesen Ellpitischen Kurven nicht wirklich auskenne. Der Talk war didaktisch sehr gut aufbereitet und ich habe trotz der späten Stunde ein bisschen verstanden (glaube ich), worum es da eigentlich geht.</p></li>
- <li>
-  <p><a href="http://media.ccc.de/browse/congress/2014/31c3_-_6294_-_de_-_saal_1_-_201412281815_-_vor_windows_8_wird_gewarnt_-_ruedi.html">Vor Windows 8 wird gewarnt</a> <a href="http://events.ccc.de/congress/2014/Fahrplan/events/6294.html">(Fahrplan)</a> von ruedi: Ein kurzweiliger Vortrag über &ldquo;Secure Boot&rdquo; und andere Schwierigkeiten mit &ldquo;Windows 8&rdquo;.</p></li>
- <li>
-  <p><a href="http://media.ccc.de/browse/congress/2014/31c3_-_6258_-_en_-_saal_1_-_201412282030_-_reconstructing_narratives_-_jacob_-_laura_poitras.html">Reconstructing naraatives</a> <a href="http://events.ccc.de/congress/2014/Fahrplan/events/6258.html">(Fahrplan)</a> von Jacob Appelbaum und Laura Poitras: Das war im voll besetzten Saal 1 ein sehr eindrücklicher Vortrag, der mit Standing Ovations endete.</p></li>
- <li>
-  <p><a href="http://media.ccc.de/browse/congress/2014/31c3_-_6121_-_en_-_saal_2_-_201412291715_-_what_ever_happened_to_nuclear_weapons_-_michael_buker.html">What Ever Happened to Nuclear Weapons?</a> <a href="http://events.ccc.de/congress/2014/Fahrplan/events/6121.html">(Fahrplan)</a> von Michael Büker: Diesen Vortrag fand ich vom Aufbau und der Didaktik sehr gut vorbereitet. Als wichtige Erkenntnis habe ich für mich den <a href="http://de.wikipedia.org/wiki/Kernwaffenteststopp-Vertrag">Kernwaffenstopp-Vertrag (englisch Comprehensive Nuclear-Test-Ban Treaty)</a> mitgenommen, einen internationalen Vertrag, der sämtliche Kernwaffentests verbietet, der aber noch nicht in Kraft getreten ist; dieser Vertrag geht weiter als der Nuclear Test Ban Treaty aus den 1960er Jahren, der Kernwaffenversuche in der Atmosphäre, im Weltraum und unter Wasser verbietet. Dennoch gibt es hierzu schon eine <a href="http://www.ctbto.org/">Organisation, die Preparatory Commission for the Comprehensive Nuclear-Test-Ban Treaty Organisation</a>, der man auch auf Twitter <a href="http://twitter.com/ctbto_alerts">folgen kann</a>. Diese &ldquo;Preparatory Commission&rdquo; bereitet das Inkraftreten vor und baut ein Überwachungssystem auf.</p></li>
- <li>
-  <p><a href="http://media.ccc.de/browse/congress/2014/31c3_-_6128_-_en_-_saal_1_-_201412291830_-_thunderstrike_efi_bootkits_for_apple_macbooks_-_trammell_hudson.html">EFI bootkits for Apple MacBooks</a> <a href="http://events.ccc.de/congress/2014/Fahrplan/events/6128.html">(Fahrplan)</a> von Trammell Hudson: Ich fand das sehr spannend vorgetragen (incl. Hexdumps etc.), wie Trammel Hudson durch &ldquo;Reverse Engineering&rdquo; auf ein Sicherheitsproblem bei Apple-Produktion gestoßen ist und dieses dann in einem Proof-of-Concept auch ausnutzen konnte.</p></li></ul>
-
-<p>Aufgrund des riesigen Angebots an Vorträgen, Workshops etc. muss ich mir in den kommenden Tagen glaube ich noch den einen oder anderen Vortrag als Video ansehen.</p>
-
-<h2 id="morgengrauen-stammtisch">MorgenGrauen-Stammtisch</h2>
-
-<p>Etwas spontan und nicht so sonderlich koordiniert haben wir auch einen <a href="http://mg.mud.de">MorgenGrauen</a>-Stammtisch ausgerufen und siehe da: Drei Spieler und zwei Gäste fanden sich ein, so dass man bei einem Bier ein wenig plaudern und sich austauschen konnte.</p>
-
-</article>
 <footer>
  <ul class="pagination">
   <li class="disabled"><a href="#">
@@ -531,6 +531,7 @@ exports.handler = function(event, context) {
   <li><a href="/index-4.html">4</a></li>
   <li><a href="/index-5.html">5</a></li>
   <li><a href="/index-6.html">6</a></li>
+  <li><a href="/index-7.html">7</a></li>
   <li><a href="/index-2.html">
     <quote>&rarr;</quote></a></li></ul></footer>
         </div>

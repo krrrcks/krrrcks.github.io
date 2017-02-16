@@ -4,9 +4,44 @@
   <title>Daniel Brunner: Daniel Brunner</title>
   <description>Daniel Brunner: Daniel Brunner</description>
   <link>http://www.dbrunner.de/index.html</link>
-  <lastBuildDate>Tue, 12 Jan 2016 09:55:43 UT</lastBuildDate>
-  <pubDate>Tue, 12 Jan 2016 09:55:43 UT</pubDate>
+  <lastBuildDate>Thu, 16 Feb 2017 10:08:04 UT</lastBuildDate>
+  <pubDate>Thu, 16 Feb 2017 10:08:04 UT</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>Mein Wechsel zu Frog</title>
+   <link>http://www.dbrunner.de/2017/02/16/mein-wechsel-zu-frog/</link>
+   <guid>urn:http-www-dbrunner-de:-2017-02-16-mein-wechsel-zu-frog</guid>
+   <pubDate>Thu, 16 Feb 2017 10:08:04 UT</pubDate>
+   <description>
+&lt;p&gt;Bisher habe ich mein Blog mit &lt;a href="http://www.octopress.org"&gt;Octopress&lt;/a&gt; bereit gestellt. Eine neue Version (&amp;ldquo;3.0&amp;rdquo;) ist auf dem &lt;a href="http://octopress.org/2015/01/15/octopress-3.0-is-coming/"&gt;Weg&lt;/a&gt;. Nachdem in letzter Zeit die einen oder anderen Schwierigkeiten mit meiner Octopress-Installation auftauchten, habe ich mich entschieden, mit dem  Blog auf &lt;a href="https://github.com/greghendershott/frog"&gt;Frog&lt;/a&gt;, ebenfalls ein Generator für statische Blogseiten, zu wechseln.&lt;/p&gt;
+
+&lt;h2 id="meine-erfahrungen-mit-octopress"&gt;Meine Erfahrungen mit Octopress&lt;/h2&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;Ich hatte Octopress und alle Abhängigkeiten in einen Docker-Container &lt;a href="/2014/06/10/relaunch-fast-fertig/"&gt;gepackt&lt;/a&gt;. Das war ganz sinnvoll, um die Ruby-Bibliotheken-Abhängigkeitshölle in den Griff zu bekommen. Es hatte mich aber nur bedingt glücklich gemacht, da ich immer auf Docker angewiesen war, um einen Blogpost zu erzeugen.&lt;/li&gt;
+ &lt;li&gt;Einige der Sachen, die &lt;a href="http://octopress.org/2015/01/15/octopress-3.0-is-coming/"&gt;Brandon Mathis (dem Autor von Octopress)&lt;/a&gt; aufgezeigt hatte, fand ich auch überarbeitungsbedürftig (bspw. das Ausliefern über Git und die enge Verzahnung, die Updates schwierig machte).&lt;/li&gt;
+ &lt;li&gt;Was mir sehr gut gefallen hat, war das Layout und Thema sowie auch die Zahl an Plugins und Erweiterungsmöglichkeiten. Da wird mir doch die eine oder andere Möglichkeit fehlen.&lt;/li&gt;&lt;/ul&gt;
+
+&lt;h2 id="warum-nun-frog"&gt;Warum nun Frog?&lt;/h2&gt;
+
+&lt;p&gt;Es gibt ja viele Generatoren für statische Homepages und Blogs. Ich habe mich für den Generator  &lt;a href="https://github.com/greghendershott/frog"&gt;Frog&lt;/a&gt; von Greg Hendershott entschieden. Es sprach für mich dafür:&lt;/p&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;Frog ist in &lt;a href="http://www.racket-lang.org"&gt;Racket&lt;/a&gt; geschrieben und da ich das praktisch täglich für allerlei Sachen benutze, liegt es mir deutlich näher als Ruby und ich kann die Abhängigkeiten etc. besser beurteilen und ggf. beheben.&lt;/li&gt;
+ &lt;li&gt;Frog verwendet im Standard ein paar HTML-Templates, die dann eine Seite mit Bootstrap-CSS etc. bereit stellen. Da ich eh das eine oder andere mit Bootstrap mache bzw. vorhabe, ist das für mich eine ganz gute Lernmöglichkeit.&lt;/li&gt;
+ &lt;li&gt;Die Anpassung von Templates ist für mich einfacher als bei Octopress, da ich dort direkt Racket-Code eingeben und nutzen kann.&lt;/li&gt;
+ &lt;li&gt;Wie Octopress/Jekyll verarbeitet Frog Markdown als Eingabeformat. Allerdings kann man auch &lt;a href="https://docs.racket-lang.org/scribble/index.html"&gt;Scribble&lt;/a&gt;-Dateien zum Schreiben von Seiten und Posts verwenden. Scribble verwende ich zwischenzeitlich recht oft als Dokumentations- bzw. Schreibwerkzeug, so dass das ein nettes zusätzliches Feature ist.&lt;/li&gt;
+ &lt;li&gt;Es wirkt auf mich, als wäre Frog auch etwas schneller als Octopress im Erzeugen der HTML-Seiten.&lt;/li&gt;&lt;/ul&gt;
+
+&lt;h2 id="umstellungsaufwand"&gt;Umstellungsaufwand&lt;/h2&gt;
+
+&lt;p&gt;Frog verarbeitet ebenso wie Octopress Dateien im Markdown-Format; allerdings sind die Metadaten etwas anders formatiert (in Octopress gibt es eine YAML-Präambel). Insofern musste ich alle Blog-Posts (knapp 60 Stück) und Seiten einmal in die Hand nehmen und anpassen. Für die Einrichtung und die Anpassung der Files habe ich ca. eine Stunde gebraucht, dann noch &amp;ldquo;etwas&amp;rdquo; Gefummel mit dem CSS und den DNS-Einträgen für die Github Pages. Also durchaus überschaubar.&lt;/p&gt;
+
+&lt;h2 id="zukünftiges"&gt;Zukünftiges&lt;/h2&gt;
+
+&lt;p&gt;Es gibt beim neuen Blog noch einiges, was ich ergänzen möchte (&amp;ldquo;Letzte Artikel&amp;rdquo;-Sidebar, Tag-Sidebar etc.) und mit dem CSS/Thema bin auch noch nicht so zufrieden, aber es tut zumindest nun schon mal.&lt;/p&gt;
+
+&lt;p&gt;Ach ja, zum Thema CSS und Fummeln darf natürlich nicht der übliche Hinweis auf diesen (bewegten) &lt;a href="https://imgur.com/gallery/Q3cUg29"&gt;Cartoon&lt;/a&gt; fehlen.&lt;/p&gt;</description></item>
   <item>
    <title>Using Racket Minimal and raco</title>
    <link>http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco/</link>
@@ -596,41 +631,4 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;blockquote&gt;
  &lt;p&gt;Sie fragen, warum wir keinen Zugang zu Ihrem Schreiben vom 24.04.2012 hatten. Der Schriftverkehr wurde unter Ihrem abgemeldeten Beitragskonto (&amp;hellip;) sowie unter dem Beitragskonto (&amp;hellip;) verfilmt. Da Sie nun den Bezug zur Beitragsnummer (&amp;hellip;) hergestellt haben, können wir den Schriftverkehr einsehen. Wir hoffen, Ihnen mit diesen Erläuterungen weitergeholfen zu haben.&lt;/p&gt;&lt;/blockquote&gt;
 
-&lt;p&gt;Ohja, das haben sie. Nachdem der Vorgang wohl beiderseits genügend Schmerzen verursacht hat, habe ich es dabei bewenden lassen.&lt;/p&gt;</description></item>
-  <item>
-   <title>Mind the storage driver for Ubuntu cloud images (on Azure)</title>
-   <link>http://www.dbrunner.de/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure/</link>
-   <guid>urn:http-www-dbrunner-de:-2014-07-24-mind-the-storage-driver-for-ubuntu-cloud-images-on-azure</guid>
-   <pubDate>Thu, 24 Jul 2014 10:30:43 UT</pubDate>
-   <description>
-&lt;p&gt;A few days ago I wanted to build Firefox OS&amp;rsquo; newest release for a friend. Because I did not wanted these GB of code, binaries etc. on my notebook I fired up an Ubuntu image on Microsoft Azure. I feared that at a certain point in the build process I may had to download everything to my local machine and therefore I installed Docker via a simple&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;sudo apt-get install docker.io&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Then I started the build process as laid out on Mozilla&amp;rsquo;s Developer Network. But, during downloading the source code (that&amp;rsquo;s about 12 GB of Git repositories from Mozilla and Android), I got a &amp;ldquo;no more space left on device&amp;rdquo;. That was strange: I had a 100 GB volume attached to the VM and enough space and inodes left. After some searching I asked on the IRC channel and got a good hint: &amp;ldquo;What&amp;rsquo;s your storage driver?&amp;rdquo;&lt;/p&gt;
-
-&lt;p&gt;Well, I thought that it&amp;rsquo;s AUFS; I wanted to add &amp;ldquo;as usual&amp;rdquo; because AUFS was available on my notebook from the beginning. But a &lt;code&gt;docker.io
-info&lt;/code&gt; gave me:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;$ sudo docker.io info
-Containers: 0
-Images: 0
-Storage Driver: devicemapper
- Pool Name: docker-8:1-131188-pool
- Data file: /var/lib/docker/devicemapper/devicemapper/data
- Metadata file: /var/lib/docker/devicemapper/devicemapper/metadata
- Data Space Used: 291.5 Mb
- Data Space Total: 102400.0 Mb
- Metadata Space Used: 0.7 Mb
- Metadata Space Total: 2048.0 Mb
-Execution Driver: native-0.1
-Kernel Version: 3.13.0-29-generic
-WARNING: No swap limit support&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;I then learned that somehow the DeviceMapper driver only allows a certain amount of diffs and I reached that amount with my build process. (Maybe it&amp;rsquo;s possible to relax that restriction but I do not know how.)&lt;/p&gt;
-
-&lt;p&gt;I learned as well that the Ubuntu cloud image that is provided by Microsoft Azure doesn&amp;rsquo;t have AUFS support. Therefore Docker uses the DeviceMapper storage driver instead. After I installed the AUFS support I could export the images, change the storage driver and import the images again.&lt;/p&gt;
-
-&lt;p&gt;It would be nice seeing the Docker documentation being more detailed on those storage drivers.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;(Update 2014&amp;ndash;10&amp;ndash;23)&lt;/strong&gt; Thanks to  &lt;a href="http://blog.iron.io/2014/10/docker-in-production-what-weve-learned.html"&gt;this blog post from Iron.io&lt;/a&gt;  I found some documentation of the devicemapper storage driver. It is  located in the  &lt;a href="https://github.com/docker/docker/tree/master/daemon/graphdriver/devmapper"&gt;Repository&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Ohja, das haben sie. Nachdem der Vorgang wohl beiderseits genügend Schmerzen verursacht hat, habe ich es dabei bewenden lassen.&lt;/p&gt;</description></item></channel></rss>

@@ -6,7 +6,7 @@
     <title>Daniel Brunner (page 4)</title>
     <meta name="description" content="Daniel Brunner (page 4)">
     <meta name="author"      content="Daniel Brunner">
-    <meta name="keywords"    content="AWS, Common Lisp, JavaScript, Gesellschaft, Linux, CHICKEN, Wirtschaft, Scheme, Bücher, Org-Mode, Politik, Veranstaltungen, MorgenGrauen, R, Medien, Allerlei, Statistik, Lisp, Ausgehen, all, Reisen, Homepage, Behörden, Octopress, Docker, IT, Racket, S3, Steuern, Azure">
+    <meta name="keywords"    content="AWS, Common Lisp, JavaScript, Gesellschaft, Linux, CHICKEN, Wirtschaft, Scheme, Bücher, Org-Mode, Politik, R, Veranstaltungen, MorgenGrauen, Frog, Medien, Allerlei, Statistik, Lisp, Ausgehen, all, Reisen, Homepage, Behörden, Octopress, Docker, IT, Racket, S3, Steuern, Azure">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
     <link rel="canonical" href="http://www.dbrunner.de/index-4.html">
@@ -90,6 +90,8 @@
 
 <li><a href="/tags/Docker.html">Docker</a></li>
 
+<li><a href="/tags/Frog.html">Frog</a></li>
+
 <li><a href="/tags/Gesellschaft.html">Gesellschaft</a></li>
 
 <li><a href="/tags/Homepage.html">Homepage</a></li>
@@ -147,7 +149,35 @@
 
           <article>
   <header>
-    <h2><a href='/2011/12/16/wir-testen-stress/'>Wir testen Stress</a></h2>
+    <h1><a href='/2012/01/10/zu-den-negativen-zinsen/'>Zu den negativen Zinsen</a></h2>
+    <p class='date-and-tags'>
+<time datetime="2012-01-10" pubdate="true">2012-01-10</time> :: <span class="tags"><a href="/tags/Wirtschaft.html">Wirtschaft</a></span></p>
+  </header>
+
+<p>Verschiedene Zeitungen berichteten, es habe nun bei einer aktuellen Refinanzierungsrunde Deutschlands negative &ldquo;Zinsen&rdquo; gegeben. Wie kann das passieren?</p>
+
+<p>Bei der Ausgabe einer Anleihe überlegt sich der ausgebende Staat einen Nominalzins, den er für die Anleihe zahlen würde. Ein Nominalsatz von 1,00% würde bei einer Anleihe von 100 EUR dem Zeichner oder Inhaber der Anleihe eine jährliche Zinszahlung von 1,00 EUR bringen. Diesen Wert nennt man auch den Kupon einer Anleihe, da dafür früher tatsächlich Stücke eines speziellen Bogens als Kupon abgeschnitten werden mussten und gegen diesen Kupon dann die Zahlung erfolgt.</p>
+
+<p>Nun geht der ausgebende Staat an den Markt und schaut für eine solche Anleihe, ob die ihm jemand abkaufen würde. Er sagt also: &ldquo;Ich will 100 EUR und zahle dafür nominal 1,00% im Jahr.&rdquo;</p>
+
+<p>Wenn er nun ein schlechter Schuldner ist, kann es sein, dass er die Anleihe dann nur für 90 los wird. Dann ist der Nominalzins immer noch 1,00%, da der Inhaber der Anleihe aber 1,00 EUR für 90 EUR bekommt, steigt die Rendite, zugleich muss die ausgebende Stelle am Ende der Laufzeit die 100 EUR zurückzahlen. Umgekehrt kann es auch sein, dass Leute 110 EUR für die Anleihe bieten, sie bekommen dann am Ende nur 100 EUR zurück und erhalten auch nur eine Zinszahlung von 1,00 EUR pro Jahr für die angelegten 110 EUR, was dann eine niedrigere Rendite als 1,00% ergibt.</p>
+
+<p>Oder um es noch einfacher zu machen, nehmen wir nun noch an, dass die Anleihe bereits nach einem Jahr zurückgezahlt wird:</p>
+
+<p>Wird sie zu 100 verkauft, so ist die Rendite einfach 1%, bei Kurs 101 ist die Rendite 0% (man bekommt am Ende des Jahres ja die 100 plus 1% Kupon, also 101 wieder, das ist also genau das, was man bei der Ausgabe gezahlt hat), bei Kurs 102 ist die Rendite dann &ndash;1%.</p>
+
+<p>Zusammengefasst, die Rendite sinkt, wenn der Kurs ansteigt und umgekehrt. Sie kann auch in der Konstellation negativ werden, wenn beispielsweise ein kleiner Kupon mit einem hohen Kurs einhergeht.</p>
+
+<p>Bei neuen Anleihen schätzt der ausgebende Staat in der Regel vorher ab, wo die Rendite wohl liegen wird und ruft ein Volumen und einen Kupon auf. Bei der Schuldenverwaltung in Deutschland liegt man mit dieser Abschätzung zumeist recht gut, so dass die Rendite oft sehr nah beim Kupon zu liegen kommt. Das ist bei anderen Ländern in jüngster Vergangenheit auch schon mal gerne schief gegangen.</p>
+
+<p>Bei den in der Presse dargestellten kurzfristigen Titeln handelte es sich um sogenannte unverzinsliche Schatzanweisungen. Diese funktionieren nun anders, denn sie haben gar keinen Kupon (sog. Nullkuponanleihen oder Zerobonds). Das bedeutet, wenn der Ausgabepreis unter 100 liegt, ergibt sich eine positive Rendite (der häufigste Fall), bei der gestrigen Auktion lag der Kurs über 100, damit wurde die Rendite negativ. Genaugenommen gab es also gar keine &ldquo;negative Zinsen&rdquo;, sondern eine &ldquo;negative Rendite&rdquo;</p>
+
+<p>Die aktuellen Informationen zu den Auktionsergebnissen kann man <a href="http://www.deutsche-finanzagentur.de/fileadmin/Material_Deutsche_Finanzagentur/PDF/Aktuelle_Informationen/Auktionsergebnisse.pdf">hier</a> einsehen.</p>
+
+</article>
+<article>
+  <header>
+    <h1><a href='/2011/12/16/wir-testen-stress/'>Wir testen Stress</a></h2>
     <p class='date-and-tags'>
 <time datetime="2011-12-16" pubdate="true">2011-12-16</time> :: <span class="tags"><a href="/tags/Allerlei.html">Allerlei</a></span></p>
   </header>
@@ -164,7 +194,7 @@
 </article>
 <article>
   <header>
-    <h2><a href='/2011/11/28/steuerliche-behandlung-von-popcorn/'>Steuerliche Behandlung von Popcorn</a></h2>
+    <h1><a href='/2011/11/28/steuerliche-behandlung-von-popcorn/'>Steuerliche Behandlung von Popcorn</a></h2>
     <p class='date-and-tags'>
 <time datetime="2011-11-28" pubdate="true">2011-11-28</time> :: <span class="tags"><a href="/tags/Steuern.html">Steuern</a></span></p>
   </header>
@@ -181,7 +211,7 @@
 </article>
 <article>
   <header>
-    <h2><a href='/2011/11/27/bilanzfehler-oder-nicht-bilanzfehler/'>Bilanzfehler oder nicht Bilanzfehler</a></h2>
+    <h1><a href='/2011/11/27/bilanzfehler-oder-nicht-bilanzfehler/'>Bilanzfehler oder nicht Bilanzfehler</a></h2>
     <p class='date-and-tags'>
 <time datetime="2011-11-27" pubdate="true">2011-11-27</time> :: <span class="tags"><a href="/tags/Wirtschaft.html">Wirtschaft</a></span></p>
   </header>
@@ -206,7 +236,7 @@
 </article>
 <article>
   <header>
-    <h2><a href='/2011/11/07/schwarz-gelber-subventionsabbau/'>Schwarz-gelber Subventionsabbau</a></h2>
+    <h1><a href='/2011/11/07/schwarz-gelber-subventionsabbau/'>Schwarz-gelber Subventionsabbau</a></h2>
     <p class='date-and-tags'>
 <time datetime="2011-11-07" pubdate="true">2011-11-07</time> :: <span class="tags"><a href="/tags/Politik.html">Politik</a>, <a href="/tags/Steuern.html">Steuern</a></span></p>
   </header>
@@ -231,7 +261,7 @@
 </article>
 <article>
   <header>
-    <h2><a href='/2011/11/02/referendum-in-griechenland/'>Referendum in Griechenland</a></h2>
+    <h1><a href='/2011/11/02/referendum-in-griechenland/'>Referendum in Griechenland</a></h2>
     <p class='date-and-tags'>
 <time datetime="2011-11-02" pubdate="true">2011-11-02</time> :: <span class="tags"><a href="/tags/Wirtschaft.html">Wirtschaft</a></span></p>
   </header>
@@ -251,7 +281,7 @@
 </article>
 <article>
   <header>
-    <h2><a href='/2011/10/20/eu-will-länderratings-verbieten/'>EU will Länderratings verbieten</a></h2>
+    <h1><a href='/2011/10/20/eu-will-länderratings-verbieten/'>EU will Länderratings verbieten</a></h2>
     <p class='date-and-tags'>
 <time datetime="2011-10-20" pubdate="true">2011-10-20</time> :: <span class="tags"><a href="/tags/Wirtschaft.html">Wirtschaft</a></span></p>
   </header>
@@ -265,7 +295,7 @@
 </article>
 <article>
   <header>
-    <h2><a href='/2011/10/16/programm-bibliotheken-und-verschiedene-versionsstände/'>Programm-Bibliotheken und verschiedene Versionsstände</a></h2>
+    <h1><a href='/2011/10/16/programm-bibliotheken-und-verschiedene-versionsstände/'>Programm-Bibliotheken und verschiedene Versionsstände</a></h2>
     <p class='date-and-tags'>
 <time datetime="2011-10-16" pubdate="true">2011-10-16</time> :: <span class="tags"><a href="/tags/Homepage.html">Homepage</a>, <a href="/tags/Org-Mode.html">Org-Mode</a>, <a href="/tags/IT.html">IT</a></span></p>
   </header>
@@ -275,7 +305,7 @@
 </article>
 <article>
   <header>
-    <h2><a href='/2011/10/15/umbau-der-webseite-und-des-blogs/'>Umbau der Webseite und des Blogs</a></h2>
+    <h1><a href='/2011/10/15/umbau-der-webseite-und-des-blogs/'>Umbau der Webseite und des Blogs</a></h2>
     <p class='date-and-tags'>
 <time datetime="2011-10-15" pubdate="true">2011-10-15</time> :: <span class="tags"><a href="/tags/Homepage.html">Homepage</a></span></p>
   </header>
@@ -293,7 +323,7 @@
 </article>
 <article>
   <header>
-    <h2><a href='/2011/06/30/constanze-kurz-frank-rieger-die-datenfresser/'>Constanze Kurz/Frank Rieger, Die Datenfresser</a></h2>
+    <h1><a href='/2011/06/30/constanze-kurz-frank-rieger-die-datenfresser/'>Constanze Kurz/Frank Rieger, Die Datenfresser</a></h2>
     <p class='date-and-tags'>
 <time datetime="2011-06-30" pubdate="true">2011-06-30</time> :: <span class="tags"><a href="/tags/Bücher.html">Bücher</a>, <a href="/tags/IT.html">IT</a></span></p>
   </header>
@@ -315,18 +345,6 @@
 <p><a href="http://www.fischerverlage.de/buch/Die_Datenfresser/9783100485182">Constanze Kurz/Frank Rieger, Die Datenfresser, 272 Seiten, S. Fischer Verlag, 16,95 EUR.</a></p>
 
 </article>
-<article>
-  <header>
-    <h2><a href='/2010/12/08/selbstauskünfte-bei-unternehmen/'>Selbstauskünfte bei Unternehmen</a></h2>
-    <p class='date-and-tags'>
-<time datetime="2010-12-08" pubdate="true">2010-12-08</time> :: <span class="tags"><a href="/tags/Allerlei.html">Allerlei</a></span></p>
-  </header>
-
-<p>Nach dem geltenden <a href="http://bundesrecht.juris.de/bdsg_1990/__34.html">Paragraphen 34 des Bundesdatenschutzgesetztes</a> steht einem als &ldquo;Betroffener&rdquo; einmal jährlich eine Auskunft über die bei &ldquo;verarbeitenden Stellen&rdquo; gespeicherten Daten und Übermittlungen zu. Ebenso muss der Score-Wert für irgendwelche Bonitätseinstufungen mitgeteilt werden. So aus dem Kopf fielen mir einige Unternehmen ein und ich hatte mir vorgenommen, dort einmal vorstellig zu werden. Jedoch gibt es unter <a href="http://www.selbstauskunft.net">http://www.selbstauskunft.net</a> einen kostenlosen Internetdienst, der diese Anfragen per Telefax an bekannte Unternehmen sendet. Also flugs die Daten eingetragen, einen geschwärzten Scan meines Personalausweises hinzugefügt und die Fax-Maschine von www.selbstauskunft.net angeworfen. Und siehe da, schon ab dem zweiten Tag kommen die ersten Rückmeldungen mit Auskünften. Sehr erhellend, was man dort weiß bzw. was man alles nicht weiß. Man kann dort auch die Antwortzeit hinterlegen, so dass die Statistiken zum Antwortverhalten der Unternehmen befüttert werden. Und man kann abschließend, so die Homepage, auch alle Daten wieder löschen.</p>
-
-<p>Wer also einmal diese Selbstauskünfte bei Schufa und anderen einholen möchte, der sollte auf die Homepage von <a href="http://www.selbstauskunft.net">http://www.selbstauskunft.net</a> einmal einen Blick werden; denn so ist das Stellen der Anfrage sehr komfortabel.</p>
-
-</article>
 <footer>
  <ul class="pagination">
   <li><a href="/index-3.html">
@@ -337,6 +355,7 @@
   <li class="active"><a href="/index-4.html">4</a></li>
   <li><a href="/index-5.html">5</a></li>
   <li><a href="/index-6.html">6</a></li>
+  <li><a href="/index-7.html">7</a></li>
   <li><a href="/index-5.html">
     <quote>&rarr;</quote></a></li></ul></footer>
         </div>
