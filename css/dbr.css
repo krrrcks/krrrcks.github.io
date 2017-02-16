@@ -52,11 +52,15 @@ summary {
     font-family: "PT Serif", "Georgia", serif; 
 }
 
+
+.container {
+    font-size: 16px;
+}
+
 /* Customize container */
 @media (min-width: 768px) {
   .container {
       /* max-width: 730px; */ 
-      font-size: 16px;
   }
 }
 .container-narrow > hr {
@@ -66,9 +70,6 @@ summary {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
-    .container {
-	font-seize: 16px;
-    }
     /* Remove the padding we set earlier */
   .header,
   .marketing,
