@@ -23,9 +23,9 @@ Arbeit aufgenommen.
 
 ## Interessen Technik
 
+* Common Lisp, [Racket](/racket/index.html), Scheme 
 * Linux, Container-Virtualisierung mit OpenVZ, Docker
 * TeX/LaTeX 
-* Common Lisp, Racket, Scheme 
 * Gnu Emacs, Org-mode
 * R, ggplot2 
 
