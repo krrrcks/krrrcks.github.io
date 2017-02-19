@@ -149,6 +149,46 @@
 
           <article>
   <header>
+    <h1><a href='/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure/'>Mind the storage driver for Ubuntu cloud images (on Azure)</a></h2>
+    <p class='date-and-tags'>
+<time datetime="2014-07-24" pubdate="true">2014-07-24</time> :: <span class="tags"><a href="/tags/Azure.html">Azure</a>, <a href="/tags/Docker.html">Docker</a>, <a href="/tags/IT.html">IT</a></span></p>
+  </header>
+
+<p>A few days ago I wanted to build Firefox OS&rsquo; newest release for a friend. Because I did not wanted these GB of code, binaries etc. on my notebook I fired up an Ubuntu image on Microsoft Azure. I feared that at a certain point in the build process I may had to download everything to my local machine and therefore I installed Docker via a simple</p>
+
+<pre><code>sudo apt-get install docker.io</code></pre>
+
+<p>Then I started the build process as laid out on Mozilla&rsquo;s Developer Network. But, during downloading the source code (that&rsquo;s about 12 GB of Git repositories from Mozilla and Android), I got a &ldquo;no more space left on device&rdquo;. That was strange: I had a 100 GB volume attached to the VM and enough space and inodes left. After some searching I asked on the IRC channel and got a good hint: &ldquo;What&rsquo;s your storage driver?&rdquo;</p>
+
+<p>Well, I thought that it&rsquo;s AUFS; I wanted to add &ldquo;as usual&rdquo; because AUFS was available on my notebook from the beginning. But a <code>docker.io
+info</code> gave me:</p>
+
+<pre><code>$ sudo docker.io info
+Containers: 0
+Images: 0
+Storage Driver: devicemapper
+ Pool Name: docker-8:1-131188-pool
+ Data file: /var/lib/docker/devicemapper/devicemapper/data
+ Metadata file: /var/lib/docker/devicemapper/devicemapper/metadata
+ Data Space Used: 291.5 Mb
+ Data Space Total: 102400.0 Mb
+ Metadata Space Used: 0.7 Mb
+ Metadata Space Total: 2048.0 Mb
+Execution Driver: native-0.1
+Kernel Version: 3.13.0-29-generic
+WARNING: No swap limit support</code></pre>
+
+<p>I then learned that somehow the DeviceMapper driver only allows a certain amount of diffs and I reached that amount with my build process. (Maybe it&rsquo;s possible to relax that restriction but I do not know how.)</p>
+
+<p>I learned as well that the Ubuntu cloud image that is provided by Microsoft Azure doesn&rsquo;t have AUFS support. Therefore Docker uses the DeviceMapper storage driver instead. After I installed the AUFS support I could export the images, change the storage driver and import the images again.</p>
+
+<p>It would be nice seeing the Docker documentation being more detailed on those storage drivers.</p>
+
+<p><strong>(Update 2014&ndash;10&ndash;23)</strong> Thanks to  <a href="http://blog.iron.io/2014/10/docker-in-production-what-weve-learned.html">this blog post from Iron.io</a>  I found some documentation of the devicemapper storage driver. It is  located in the  <a href="https://github.com/docker/docker/tree/master/daemon/graphdriver/devmapper">Repository</a>.</p>
+
+</article>
+<article>
+  <header>
     <h1><a href='/2014/07/24/datetime-conversion-can-be-tricky/'>DateTime conversion can be tricky</a></h2>
     <p class='date-and-tags'>
 <time datetime="2014-07-24" pubdate="true">2014-07-24</time> :: <span class="tags"><a href="/tags/JavaScript.html">JavaScript</a>, <a href="/tags/Common-Lisp.html">Common Lisp</a>, <a href="/tags/IT.html">IT</a></span></p>
@@ -426,33 +466,6 @@ CMD ["/bin/bash"] </code></pre>
   </header>
 
 <p>Two of my <a href="http://archive.dbrunner.de/it/org-mode.html">code snippets</a> for org-mode are not working with the actual <code>master</code> of the git repository. I have to check this and I am going to fix them when I find enough time for that.</p>
-
-</article>
-<article>
-  <header>
-    <h1><a href='/2010/06/13/verrechnen-leicht-gemacht/'>Verrechnen leicht gemacht</a></h2>
-    <p class='date-and-tags'>
-<time datetime="2010-06-13" pubdate="true">2010-06-13</time> :: <span class="tags"><a href="/tags/Statistik.html">Statistik</a>, <a href="/tags/IT.html">IT</a>, <a href="/tags/R.html">R</a></span></p>
-  </header>
-
-<p>Folgende Ereignisse finde ich ja sehr erhellend: Telepolis <a href="http://www.heise.de/tp/blogs/3/121897">berichtete</a> von einer Studie (Pollet und Nettle, 2009), in der anhand von Daten aus dem &ldquo;Chinese Health and Family Life Survey&rdquo; der Schluss gezogen wurde, dass die Zahl der Orgasmen einer Frau mit dem Einkommen des Partners ansteige:</p>
-
-<blockquote>
- <p>&ldquo;In a large representative sample of the Chinese population, we found evidence that women&rsquo;s self-reported orgasm frequency increases with the income of their partner.&rdquo; (Pollet und Nettle, 2009, S. 149)</p></blockquote>
-
-<p>Etwas später <a href="http://www.heise.de/tp/blogs/3/147390">berichtete</a> Telepolis, dass dem wohl doch nicht so sei. Was war passiert? Die Forscher Esther Herberich und Torsten Hothorn haben die Analysen mit den frei verfügbaren Daten nachgerechnet und erhielten andere Ergebnisse (Herberich et al., 2010). Ursache war, dass der in der von Pollet und Nettle (2009) verwendeten Software (SPSS 15.0) der Algorithmus zur Auswahl des besten Modells (verwendet wurde ein <em>ordinal regression model</em>) einen Fehler aufwies: Die Kriterien zur Modellauswahl (Akaike Information Criteion (AIC) und Bayesian Information Criterion (BIC)) wurden in der Standardeinstellung der Modellauswahl falsch berechnet, so dass die Kriterien eigentlich nicht verglichen werden konnten. In der Folge kam es zu einer verkehrten Modellauswahl für das beste Modell. Herberich et al. berechneten die Analysen mit <a href="http://www.r-project.org">R</a> neu und kamen zu anderen Ergebnissen: So konnte das Modell durch die Aufnahme weiterer Variablen verbessert werden; und zwar derart, dass der Einfluss des Einkommens letztendlich nicht mehr signifikant war. In der Korrektur ihres Beitrages fassen Pollet und Nettle (2010) dies wie folgt zusammen:</p>
-
-<blockquote>
- <p>The association in the CHFLS (Chinese Health and Family Life Survey, D.B.) data between partner wealth and self-reported orgasm frequency ist best explained by the fact that women with higher-income partners are healthier, happier, younger, and more educated than women with lower-income partners. The data do not support a direct effect of partner income on self-reported orgasm frequency, once other variables have been controlled for." (Pollet und Nettle, 2010, S. 149)</p></blockquote>
-
-<p>Zusammengefasst: (1) Erst durch das Bereitstellen der Daten konnte ein anderes Forscherteam die Anwendung der Methode prüfen und stieß auf die oben skizzierten Merkwürdigkeiten. Somit war es möglich, nach den Ursachen für die falsche Modellauswahl zu suchen. (2) Es zeigt sich, dass eine geschlossene, proprietäre Implementierung so ihre Tücken hat; wenn eine Gemeinschaft gegenseitig Kontrolle über Implementierungen von Modellen übt und sie verbessert, kann auch hier wieder ein System der gegenseitige Kontrolle wirksam werden, was zu einer höheren Qualität führen kann.</p>
-
-<p>Literatur:</p>
-
-<ul>
- <li><em>Pollet, T. und Nettle, D.</em> (2009), Partner Wealth predicts self-reported orgasm frequency in a sample of Chinese women, Evolution and Human Behavior, Volume 30, S. 146&ndash;151.</li>
- <li><em>Herberich, E., Hothorn, T., Nettle, D. und Pollet, T.</em> (2010), A re-evalutation of the statistical model in Pollet and Nettle 2009, Evolution and Human Behavior, Volume 31, S. 150&ndash;151 (sowie der Online Appendix).</li>
- <li><em>Pollet, T. und Nettle, D.</em> (2010), Correction to Pollet and Nettle (2009): &ldquo;Partner wealth predicts self-reported orgasm frequency in a sample of Chinese women&rdquo;, Evolution and Human Behavior, Volume 31, S. 149.</li></ul>
 
 </article>
 <footer>

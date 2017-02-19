@@ -4,9 +4,20 @@
   <title>Daniel Brunner: Posts tagged 'IT'</title>
   <description>Daniel Brunner: Posts tagged 'IT'</description>
   <link>http://www.dbrunner.de/tags/IT.html</link>
-  <lastBuildDate>Tue, 12 Jan 2016 09:55:43 UT</lastBuildDate>
-  <pubDate>Tue, 12 Jan 2016 09:55:43 UT</pubDate>
+  <lastBuildDate>Sun, 19 Feb 2017 14:59:09 UT</lastBuildDate>
+  <pubDate>Sun, 19 Feb 2017 14:59:09 UT</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>Neues vom E-Postbrief</title>
+   <link>http://www.dbrunner.de/2017/02/19/neues-vom-e-postbrief/</link>
+   <guid>urn:http-www-dbrunner-de:-2017-02-19-neues-vom-e-postbrief</guid>
+   <pubDate>Sun, 19 Feb 2017 14:59:09 UT</pubDate>
+   <description>
+&lt;p&gt;Im Somme des Jahres 2010 bloggte ich über meinen Selbstversuch mit dem &lt;a href="https://www.epost.de/"&gt;E-Postbrief&lt;/a&gt; (heißt wohl nun &amp;ldquo;E-POST&amp;rdquo;) der Deutschen Post. Zwischenzeitlich musste ich einmal das Kennwort erneuern. Bei dem Telefonat mit der Hotline fiel dem freundlichen Mitarbeiter auf, dass ich mich praktisch nie (es war damals über 12 Monate her) in den Dienst einloggte. Ob ich das Produkt denn wirklich noch weiter haben möchte, wollte er wissen. Nun, ich entschied mich erst einmal dabei zu bleiben. Ca. einmal im Jahr sendete mir die Post einen Newsletterin das Postfach, manchmal habe ich ihn gelesen, manchmal auch ignoriert.&lt;/p&gt;
+
+&lt;p&gt;Jedoch, am frühen Anbend des 31. Januar 2016 schreckte ich hoch, denn eine frisch eingegangene SMS deutete darauf hin, dass noch jemand anderes außer dem Kundenservice mir etwas mitteilen wollte. Und tatsächlich, nach über sechs Jahren: Mein erster E-Postbrief!&lt;/p&gt;
+
+&lt;p&gt;(Und was war es? Die Rechnung für ein Zeitschriften-Abonnement.)&lt;/p&gt;</description></item>
   <item>
    <title>Using Racket Minimal and raco</title>
    <link>http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco/</link>
@@ -571,28 +582,4 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;</description></item>
    <guid>urn:http-www-dbrunner-de:-2010-07-02-code-snippets-not-working-at-the-moment</guid>
    <pubDate>Thu, 01 Jul 2010 22:00:00 UT</pubDate>
    <description>
-&lt;p&gt;Two of my &lt;a href="http://archive.dbrunner.de/it/org-mode.html"&gt;code snippets&lt;/a&gt; for org-mode are not working with the actual &lt;code&gt;master&lt;/code&gt; of the git repository. I have to check this and I am going to fix them when I find enough time for that.&lt;/p&gt;</description></item>
-  <item>
-   <title>Verrechnen leicht gemacht</title>
-   <link>http://www.dbrunner.de/2010/06/13/verrechnen-leicht-gemacht/</link>
-   <guid>urn:http-www-dbrunner-de:-2010-06-13-verrechnen-leicht-gemacht</guid>
-   <pubDate>Sun, 13 Jun 2010 13:10:00 UT</pubDate>
-   <description>
-&lt;p&gt;Folgende Ereignisse finde ich ja sehr erhellend: Telepolis &lt;a href="http://www.heise.de/tp/blogs/3/121897"&gt;berichtete&lt;/a&gt; von einer Studie (Pollet und Nettle, 2009), in der anhand von Daten aus dem &amp;ldquo;Chinese Health and Family Life Survey&amp;rdquo; der Schluss gezogen wurde, dass die Zahl der Orgasmen einer Frau mit dem Einkommen des Partners ansteige:&lt;/p&gt;
-
-&lt;blockquote&gt;
- &lt;p&gt;&amp;ldquo;In a large representative sample of the Chinese population, we found evidence that women&amp;rsquo;s self-reported orgasm frequency increases with the income of their partner.&amp;rdquo; (Pollet und Nettle, 2009, S. 149)&lt;/p&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;Etwas später &lt;a href="http://www.heise.de/tp/blogs/3/147390"&gt;berichtete&lt;/a&gt; Telepolis, dass dem wohl doch nicht so sei. Was war passiert? Die Forscher Esther Herberich und Torsten Hothorn haben die Analysen mit den frei verfügbaren Daten nachgerechnet und erhielten andere Ergebnisse (Herberich et al., 2010). Ursache war, dass der in der von Pollet und Nettle (2009) verwendeten Software (SPSS 15.0) der Algorithmus zur Auswahl des besten Modells (verwendet wurde ein &lt;em&gt;ordinal regression model&lt;/em&gt;) einen Fehler aufwies: Die Kriterien zur Modellauswahl (Akaike Information Criteion (AIC) und Bayesian Information Criterion (BIC)) wurden in der Standardeinstellung der Modellauswahl falsch berechnet, so dass die Kriterien eigentlich nicht verglichen werden konnten. In der Folge kam es zu einer verkehrten Modellauswahl für das beste Modell. Herberich et al. berechneten die Analysen mit &lt;a href="http://www.r-project.org"&gt;R&lt;/a&gt; neu und kamen zu anderen Ergebnissen: So konnte das Modell durch die Aufnahme weiterer Variablen verbessert werden; und zwar derart, dass der Einfluss des Einkommens letztendlich nicht mehr signifikant war. In der Korrektur ihres Beitrages fassen Pollet und Nettle (2010) dies wie folgt zusammen:&lt;/p&gt;
-
-&lt;blockquote&gt;
- &lt;p&gt;The association in the CHFLS (Chinese Health and Family Life Survey, D.B.) data between partner wealth and self-reported orgasm frequency ist best explained by the fact that women with higher-income partners are healthier, happier, younger, and more educated than women with lower-income partners. The data do not support a direct effect of partner income on self-reported orgasm frequency, once other variables have been controlled for." (Pollet und Nettle, 2010, S. 149)&lt;/p&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;Zusammengefasst: (1) Erst durch das Bereitstellen der Daten konnte ein anderes Forscherteam die Anwendung der Methode prüfen und stieß auf die oben skizzierten Merkwürdigkeiten. Somit war es möglich, nach den Ursachen für die falsche Modellauswahl zu suchen. (2) Es zeigt sich, dass eine geschlossene, proprietäre Implementierung so ihre Tücken hat; wenn eine Gemeinschaft gegenseitig Kontrolle über Implementierungen von Modellen übt und sie verbessert, kann auch hier wieder ein System der gegenseitige Kontrolle wirksam werden, was zu einer höheren Qualität führen kann.&lt;/p&gt;
-
-&lt;p&gt;Literatur:&lt;/p&gt;
-
-&lt;ul&gt;
- &lt;li&gt;&lt;em&gt;Pollet, T. und Nettle, D.&lt;/em&gt; (2009), Partner Wealth predicts self-reported orgasm frequency in a sample of Chinese women, Evolution and Human Behavior, Volume 30, S. 146&amp;ndash;151.&lt;/li&gt;
- &lt;li&gt;&lt;em&gt;Herberich, E., Hothorn, T., Nettle, D. und Pollet, T.&lt;/em&gt; (2010), A re-evalutation of the statistical model in Pollet and Nettle 2009, Evolution and Human Behavior, Volume 31, S. 150&amp;ndash;151 (sowie der Online Appendix).&lt;/li&gt;
- &lt;li&gt;&lt;em&gt;Pollet, T. und Nettle, D.&lt;/em&gt; (2010), Correction to Pollet and Nettle (2009): &amp;ldquo;Partner wealth predicts self-reported orgasm frequency in a sample of Chinese women&amp;rdquo;, Evolution and Human Behavior, Volume 31, S. 149.&lt;/li&gt;&lt;/ul&gt;</description></item></channel></rss>
+&lt;p&gt;Two of my &lt;a href="http://archive.dbrunner.de/it/org-mode.html"&gt;code snippets&lt;/a&gt; for org-mode are not working with the actual &lt;code&gt;master&lt;/code&gt; of the git repository. I have to check this and I am going to fix them when I find enough time for that.&lt;/p&gt;</description></item></channel></rss>

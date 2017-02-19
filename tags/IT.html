@@ -149,6 +149,20 @@
 
           <article>
   <header>
+    <h1><a href='/2017/02/19/neues-vom-e-postbrief/'>Neues vom E-Postbrief</a></h2>
+    <p class='date-and-tags'>
+<time datetime="2017-02-19" pubdate="true">2017-02-19</time> :: <span class="tags"><a href="/tags/IT.html">IT</a></span></p>
+  </header>
+
+<p>Im Somme des Jahres 2010 bloggte ich über meinen Selbstversuch mit dem <a href="https://www.epost.de/">E-Postbrief</a> (heißt wohl nun &ldquo;E-POST&rdquo;) der Deutschen Post. Zwischenzeitlich musste ich einmal das Kennwort erneuern. Bei dem Telefonat mit der Hotline fiel dem freundlichen Mitarbeiter auf, dass ich mich praktisch nie (es war damals über 12 Monate her) in den Dienst einloggte. Ob ich das Produkt denn wirklich noch weiter haben möchte, wollte er wissen. Nun, ich entschied mich erst einmal dabei zu bleiben. Ca. einmal im Jahr sendete mir die Post einen Newsletterin das Postfach, manchmal habe ich ihn gelesen, manchmal auch ignoriert.</p>
+
+<p>Jedoch, am frühen Anbend des 31. Januar 2016 schreckte ich hoch, denn eine frisch eingegangene SMS deutete darauf hin, dass noch jemand anderes außer dem Kundenservice mir etwas mitteilen wollte. Und tatsächlich, nach über sechs Jahren: Mein erster E-Postbrief!</p>
+
+<p>(Und was war es? Die Rechnung für ein Zeitschriften-Abonnement.)</p>
+
+</article>
+<article>
+  <header>
     <h1><a href='/2016/01/12/using-racket-minimal-and-raco/'>Using Racket Minimal and raco</a></h2>
     <p class='date-and-tags'>
 <time datetime="2016-01-12" pubdate="true">2016-01-12</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Racket.html">Racket</a></span></p>
@@ -448,46 +462,6 @@ exports.handler = function(event, context) {
   </header>
 
 <p>Bisher hatte ich meine Blog-Einträge auf zwei Blogs aufgeteilt, <a href="http://blog.krrrcks.net">eines</a> mit mehr technischen (und zum Teil englischen Texten) und dieses hier mit deutschen Texten. Ich denke, ich werde das auf dieses eine Blog hier konzentrieren. Das reduziert doch etwas den Verwaltungsaufwand. Ich habe die Texte vom nun etwas still gelegten Blog hier herüber kopiert.</p>
-
-</article>
-<article>
-  <header>
-    <h1><a href='/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure/'>Mind the storage driver for Ubuntu cloud images (on Azure)</a></h2>
-    <p class='date-and-tags'>
-<time datetime="2014-07-24" pubdate="true">2014-07-24</time> :: <span class="tags"><a href="/tags/Azure.html">Azure</a>, <a href="/tags/Docker.html">Docker</a>, <a href="/tags/IT.html">IT</a></span></p>
-  </header>
-
-<p>A few days ago I wanted to build Firefox OS&rsquo; newest release for a friend. Because I did not wanted these GB of code, binaries etc. on my notebook I fired up an Ubuntu image on Microsoft Azure. I feared that at a certain point in the build process I may had to download everything to my local machine and therefore I installed Docker via a simple</p>
-
-<pre><code>sudo apt-get install docker.io</code></pre>
-
-<p>Then I started the build process as laid out on Mozilla&rsquo;s Developer Network. But, during downloading the source code (that&rsquo;s about 12 GB of Git repositories from Mozilla and Android), I got a &ldquo;no more space left on device&rdquo;. That was strange: I had a 100 GB volume attached to the VM and enough space and inodes left. After some searching I asked on the IRC channel and got a good hint: &ldquo;What&rsquo;s your storage driver?&rdquo;</p>
-
-<p>Well, I thought that it&rsquo;s AUFS; I wanted to add &ldquo;as usual&rdquo; because AUFS was available on my notebook from the beginning. But a <code>docker.io
-info</code> gave me:</p>
-
-<pre><code>$ sudo docker.io info
-Containers: 0
-Images: 0
-Storage Driver: devicemapper
- Pool Name: docker-8:1-131188-pool
- Data file: /var/lib/docker/devicemapper/devicemapper/data
- Metadata file: /var/lib/docker/devicemapper/devicemapper/metadata
- Data Space Used: 291.5 Mb
- Data Space Total: 102400.0 Mb
- Metadata Space Used: 0.7 Mb
- Metadata Space Total: 2048.0 Mb
-Execution Driver: native-0.1
-Kernel Version: 3.13.0-29-generic
-WARNING: No swap limit support</code></pre>
-
-<p>I then learned that somehow the DeviceMapper driver only allows a certain amount of diffs and I reached that amount with my build process. (Maybe it&rsquo;s possible to relax that restriction but I do not know how.)</p>
-
-<p>I learned as well that the Ubuntu cloud image that is provided by Microsoft Azure doesn&rsquo;t have AUFS support. Therefore Docker uses the DeviceMapper storage driver instead. After I installed the AUFS support I could export the images, change the storage driver and import the images again.</p>
-
-<p>It would be nice seeing the Docker documentation being more detailed on those storage drivers.</p>
-
-<p><strong>(Update 2014&ndash;10&ndash;23)</strong> Thanks to  <a href="http://blog.iron.io/2014/10/docker-in-production-what-weve-learned.html">this blog post from Iron.io</a>  I found some documentation of the devicemapper storage driver. It is  located in the  <a href="https://github.com/docker/docker/tree/master/daemon/graphdriver/devmapper">Repository</a>.</p>
 
 </article>
 <footer>
