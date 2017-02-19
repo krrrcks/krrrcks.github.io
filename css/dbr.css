@@ -24,10 +24,6 @@ footer {
     line-height: 40px; 
 }
 
-.navbar-brand, .navbar-nav {
-    font-size: 16px;
-}
-
 /* Custom page footer */
 .footer {
   padding-top: 19px; 
