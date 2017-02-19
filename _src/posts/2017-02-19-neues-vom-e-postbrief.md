@@ -12,7 +12,7 @@ freundlichen Mitarbeiter auf, dass ich mich praktisch nie (es war
 damals über 12 Monate her) in den Dienst einloggte. Ob ich das Produkt
 denn wirklich noch weiter haben möchte, wollte er wissen. Nun, ich
 entschied mich erst einmal dabei zu bleiben. Ca. einmal im Jahr
-sendete mir die Post einen Newsletterin das Postfach, manchmal habe
+sendete mir die Post einen Newsletter in das Postfach, manchmal habe
 ich ihn gelesen, manchmal auch ignoriert.
 
 Jedoch, am frühen Anbend des 31. Januar 2016 schreckte ich hoch, denn
