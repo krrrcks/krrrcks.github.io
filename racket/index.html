@@ -159,7 +159,8 @@
  <li><a href="https://github.com/mflatt/s3-sync">s3-sync</a> by <a href="http://www.cs.utah.edu/~mflatt/">Matthew Flatt</a>: Syncs a local filesystem with a S3 bucket.</li>
  <li><a href="https://github.com/greghendershott/frog">Frog</a> by <a href="http://www.greghendershott.com/">Greg Hendershott</a>: A nice static web site generator renders Markdown <em>and</em> Scribble; used to make this site.</li>
  <li><a href="https://github.com/florence/cover">Cover</a> by <a href="http://florence.io/">Spencer Florence</a>: A code coverage tool.</li>
- <li><a href="https://github.com/tonyg/racket-explorer">Racket Explorer</a> by <a href="https://eighty-twenty.org">Tony Garnock-Jones</a>: Utility for interactive exploration of complex data structures.</li></ul>
+ <li><a href="https://github.com/tonyg/racket-explorer">Racket Explorer</a> by <a href="https://eighty-twenty.org">Tony Garnock-Jones</a>: Utility for interactive exploration of complex data structures.</li>
+ <li><a href="https://github.com/takikawa/raco-find-collection">raco-find-collection</a> by <a href="http://asumu.xyz">Asumu Takikawa</a>: A raco script for finding collections.</li></ul>
 
 <h2 id="blog-posts-and-articles">Blog Posts and Articles</h2>
 
@@ -169,7 +170,8 @@
 <h2 id="small-snippets">Small snippets</h2>
 
 <ul>
- <li>How to install all libraries after a new version of Racket comes out: <code>raco pkg migrate</code></li></ul>
+ <li>How to install all libraries after a new version of Racket comes out: <code>raco pkg migrate</code></li>
+ <li>How to find where a module is located: <code>(collection-file-path "main" "drracket")</code>, <code>(require syntax/modresolve) (resolve-module-path 'drracket)</code> in Emacs (with Racket-Mode installed): <code>racket-open-require-path</code> (C-c C-x C-f), <code>racket-find-collection</code> which uses the Racket package <a href="https://github.com/takikawa/raco-find-collection">raco-find-collection</a>. (Source: <a href="https://groups.google.com/forum/#!topic/racket-users/tJULSX5mYAA">Racket Users</a> mailing list)</li></ul>
         </div>
       </div>
       <footer>
