@@ -17,6 +17,7 @@ I collected several resources that I found useful when learning and using Racket
 
 ## Small snippets 
 
-* How to install all libraries after a new version of Racket comes out: `raco pkg migrate` 
-  * How to find where a module is located: `(collection-file-path "main" "drracket")`, `(require syntax/modresolve) (resolve-module-path 'drracket)` in Emacs (with Racket-Mode installed): `racket-open-require-path` (C-c C-x C-f), `racket-find-collection` which uses the Racket package [raco-find-collection](https://github.com/takikawa/raco-find-collection).
-(Source: [Racket Users](https://groups.google.com/forum/#!topic/racket-users/tJULSX5mYAA) mailing list)
+* How to install all libraries after a new version of Racket comes out: `raco pkg migrate`.
+  * How to find where a module is located: `(collection-file-path "main" "drracket")`, `(require syntax/modresolve) (resolve-module-path 'drracket)` in Emacs (with Racket-Mode installed): `racket-open-require-path` (C-c C-x C-f), `racket-find-collection` which uses the Racket package [raco-find-collection](https://github.com/takikawa/raco-find-collection), 
+(Source: [Racket Users](https://groups.google.com/forum/#!topic/racket-users/tJULSX5mYAA) mailing list).
+* Adding `raco make` to Racket Minimal: `raco pkg install compiler-lib`.
