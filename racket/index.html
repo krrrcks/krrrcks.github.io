@@ -170,8 +170,9 @@
 <h2 id="small-snippets">Small snippets</h2>
 
 <ul>
- <li>How to install all libraries after a new version of Racket comes out: <code>raco pkg migrate</code></li>
- <li>How to find where a module is located: <code>(collection-file-path "main" "drracket")</code>, <code>(require syntax/modresolve) (resolve-module-path 'drracket)</code> in Emacs (with Racket-Mode installed): <code>racket-open-require-path</code> (C-c C-x C-f), <code>racket-find-collection</code> which uses the Racket package <a href="https://github.com/takikawa/raco-find-collection">raco-find-collection</a>. (Source: <a href="https://groups.google.com/forum/#!topic/racket-users/tJULSX5mYAA">Racket Users</a> mailing list)</li></ul>
+ <li>How to install all libraries after a new version of Racket comes out: <code>raco pkg migrate</code>.</li>
+ <li>How to find where a module is located: <code>(collection-file-path "main" "drracket")</code>, <code>(require syntax/modresolve) (resolve-module-path 'drracket)</code> in Emacs (with Racket-Mode installed): <code>racket-open-require-path</code> (C-c C-x C-f), <code>racket-find-collection</code> which uses the Racket package <a href="https://github.com/takikawa/raco-find-collection">raco-find-collection</a>,  (Source: <a href="https://groups.google.com/forum/#!topic/racket-users/tJULSX5mYAA">Racket Users</a> mailing list).</li>
+ <li>Adding <code>raco make</code> to Racket Minimal: <code>raco pkg install compiler-lib</code>.</li></ul>
         </div>
       </div>
       <footer>
