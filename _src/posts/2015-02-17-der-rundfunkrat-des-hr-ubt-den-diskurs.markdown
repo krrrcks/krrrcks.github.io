@@ -138,3 +138,5 @@ hr-Justitiar, sondern auch den hr-Ökonomen befragen sollen.
 PS: Nach wie vor macht mich etwas stutzig, wie
 [Rolf-Dieter Postlep](http://www.hr-online.de/website/extern/rundfunkrat/index.jsp?rubrik=45412&key=standard_document_3728464)
 das hat unterschreiben können. 
+
+*Update (2017-03-08):* Laut [Pressemitteilung](http://www.hr-online.de/website/extern/rundfunkrat/index.jsp?rubrik=62561&key=standard_document_63425232) vom 03. Februar 2017 des Rundfunkrates ist Rolf-Dieter Postlep aus dem Rundfunkrat ausgeschieden. Seinen Platz als Vertreterin der Hochschulen hat Kira Kastell eingenommen. 
