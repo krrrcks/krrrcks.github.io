@@ -10,7 +10,7 @@
   <item>
    <title>Neues vom E-Postbrief</title>
    <link>http://www.dbrunner.de/2017/02/19/neues-vom-e-postbrief/</link>
-   <guid>urn:http-www-dbrunner-de:-2017-02-19-neues-vom-e-postbrief</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2017-02-19-neues-vom-e-postbrief</guid>
    <pubDate>Sun, 19 Feb 2017 14:59:09 UT</pubDate>
    <description>
 &lt;p&gt;Im Sommer des Jahres 2010 bloggte ich (&lt;a href="/2010/07/25/der-e-postbrief-ein-selbstversuch/"&gt;hier&lt;/a&gt; und &lt;a href="/2010/07/26/nachtrag-i-zum-e-postbrief"&gt;hier&lt;/a&gt;) über meinen Selbstversuch mit dem &lt;a href="https://www.epost.de/"&gt;E-Postbrief&lt;/a&gt; (heißt wohl nun &amp;ldquo;E-POST&amp;rdquo;) der Deutschen Post. Zwischenzeitlich musste ich einmal das Kennwort erneuern. Bei dem Telefonat mit der Hotline fiel dem freundlichen Mitarbeiter auf, dass ich mich praktisch nie (es war damals über 12 Monate her) in den Dienst einloggte. Ob ich das Produkt denn wirklich noch weiter haben möchte, wollte er wissen. Nun, ich entschied mich erst einmal dabei zu bleiben. Ca. einmal im Jahr sendete mir die Post einen Newsletter in das Postfach, manchmal habe ich ihn gelesen, manchmal auch ignoriert.&lt;/p&gt;
@@ -21,7 +21,7 @@
   <item>
    <title>Using Racket Minimal and raco</title>
    <link>http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco/</link>
-   <guid>urn:http-www-dbrunner-de:-2016-01-12-using-racket-minimal-and-raco</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2016-01-12-using-racket-minimal-and-raco</guid>
    <pubDate>Tue, 12 Jan 2016 09:55:43 UT</pubDate>
    <description>
 &lt;p&gt;I use Racket Minimal on my smart phone (&lt;a href="../2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/"&gt;this&lt;/a&gt; describes how to compile the run time for an ARM based system). It&amp;rsquo;s is a very small installation of Racket (about 36 MB after installation). After installation one only needs to install the packages that are really neded. But this can be a bit tricky because a lot of packages want to install their documentation and other stuff and bring a whole bunch of files on your drive as dependencies.&lt;/p&gt;
@@ -36,7 +36,7 @@
   <item>
    <title>I played with CHICKEN Scheme, Docker and Alpine Linux</title>
    <link>http://www.dbrunner.de/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/</link>
-   <guid>urn:http-www-dbrunner-de:-2015-12-19-i-played-with-chicken-scheme-docker-and-alpine-linux</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-12-19-i-played-with-chicken-scheme-docker-and-alpine-linux</guid>
    <pubDate>Sat, 19 Dec 2015 16:54:50 UT</pubDate>
    <description>
 &lt;p&gt;I am looking forward to meet LISP people at the &lt;a href="https://events.ccc.de/congress/2015/wiki/Main_Page"&gt;32c3&amp;rsquo;s&lt;/a&gt; &lt;a href="https://events.ccc.de/congress/2015/wiki/Assembly:The_%28un%29employed_schemers_%26_lispers_guild"&gt;LISP assembly&lt;/a&gt;. The last days I played a bit with different Scheme implementations including  &lt;a href="http://call-cc.org"&gt;CHICKEN scheme&lt;/a&gt;. The main feature of CHICKEN is that it compiles the Scheme code to C and then creates dynamic libraries and binaries with the C compiler. I thought that combining these binaries with a minimal Docker container could give me a very small deployment. So here are my steps:&lt;/p&gt;
@@ -97,7 +97,7 @@ CMD /main/main&lt;/code&gt;&lt;/pre&gt;
   <item>
    <title>How to use GET Bucket location on Amazon S3 with Racket</title>
    <link>http://www.dbrunner.de/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/</link>
-   <guid>urn:http-www-dbrunner-de:-2015-09-04-how-to-use-get-bucket-location-on-amazon-s3-with-racket</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-09-04-how-to-use-get-bucket-location-on-amazon-s3-with-racket</guid>
    <pubDate>Fri, 04 Sep 2015 05:23:43 UT</pubDate>
    <description>
 &lt;p&gt;In &lt;a href="http://www.racket-lang.org"&gt;Racket&lt;/a&gt; I want to iterate over my buckets in Amazon S3. They are located in different regions. So how do I get my bucket&amp;rsquo;s location/region? In the API Reference there is a call &lt;a href="http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETlocation.html"&gt;GET Bucket location&lt;/a&gt;. I use &lt;a href="https://github.com/greghendershott/aws"&gt;Greg&amp;rsquo;s AWS library for Racket&lt;/a&gt; and this library authenticates its calls with &lt;a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html"&gt;signature version V4&lt;/a&gt;. But V4 requires the user to know the &lt;em&gt;region&lt;/em&gt; to correctly sign the request. So I need to know the region to ask Amazon S3 for the region where the bucket is located. Otherwise Amazon S3 responds with an error:&lt;/p&gt;
@@ -135,7 +135,7 @@ is wrong; expecting 'eu-central-1'&amp;lt;/Message&amp;gt;
   <item>
    <title>How to run Racket on the Raspberry Pi 2</title>
    <link>http://www.dbrunner.de/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/</link>
-   <guid>urn:http-www-dbrunner-de:-2015-08-27-how-to-run-racket-on-the-raspberry-pi-2</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-08-27-how-to-run-racket-on-the-raspberry-pi-2</guid>
    <pubDate>Thu, 27 Aug 2015 11:25:45 UT</pubDate>
    <description>
 &lt;p&gt;I got a &lt;a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/"&gt;Raspberry Pi 2 Model B&lt;/a&gt; to play with. I used Raspbian image as operating system. I was wondering how difficult it is to get Racket running on the Raspberry Pi. I downloaded the &lt;a href="http://mirror.racket-lang.org/installers/6.2.1/racket-6.2.1-src-builtpkgs.tgz"&gt;Unix source + built packages&lt;/a&gt; tarball from &lt;a href="http://racket-lang.org"&gt;Racket&amp;rsquo;s homepage&lt;/a&gt; because I only wanted to compile the core of Racket. After unpacking the tarball I was suprised that the instructions were quite short:&lt;/p&gt;
@@ -160,7 +160,7 @@ commands:
   <item>
    <title>Running Racket on AWS Lambda</title>
    <link>http://www.dbrunner.de/2015/08/27/running-racket-on-aws-lambda/</link>
-   <guid>urn:http-www-dbrunner-de:-2015-08-27-running-racket-on-aws-lambda</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-08-27-running-racket-on-aws-lambda</guid>
    <pubDate>Thu, 27 Aug 2015 10:46:57 UT</pubDate>
    <description>
 &lt;p&gt;I started to use AWS for some projects recently. But I only use few of their services. From time to time I look into some of there services and wonder if they are useful for my tasks. I looked into &lt;a href="http://aws.amazon.com/lambda"&gt;AWS Lambda&lt;/a&gt;, "&amp;hellip; a compute service that runs your code in response to events and automatically manages the compute resources for you, making it easy to build applications that respond quickly to new information." Nowadays these &amp;ldquo;lambda functions&amp;rdquo; could be written in NodeJS or Java. When I was looking for a roadmap of the supported languages I found an interesting &lt;a href="http://blog.0x82.com/2014/11/24/aws-lambda-functions-in-go/"&gt;blog post&lt;/a&gt; by &lt;a href="https://www.twitter.com/rubenfonseca"&gt;Ruben Fonseca&lt;/a&gt;. He explaind how to run Go code on AWS Lambda.&lt;/p&gt;
@@ -204,7 +204,7 @@ exports.handler = function(event, context) {
   <item>
    <title>Lexmarks Druckerpatronen-Lizenz</title>
    <link>http://www.dbrunner.de/2015/02/17/lexmarks-druckerpatronen-lizenz/</link>
-   <guid>urn:http-www-dbrunner-de:-2015-02-17-lexmarks-druckerpatronen-lizenz</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-02-17-lexmarks-druckerpatronen-lizenz</guid>
    <pubDate>Tue, 17 Feb 2015 10:28:02 UT</pubDate>
    <description>
 &lt;p&gt;Heute benötigte ich eine Ersatzpatrone für meinen Lexmark-Drucker. An der Aufreißlasche prangen Ausrufezeichen und der Hinweis: &amp;ldquo;Attention: Updated License Terms&amp;rdquo;.&lt;/p&gt;
@@ -218,7 +218,7 @@ exports.handler = function(event, context) {
   <item>
    <title>3. Docker-Meetup in Frankfurt</title>
    <link>http://www.dbrunner.de/2015/01/18/3-docker-meetup-in-frankfurt/</link>
-   <guid>urn:http-www-dbrunner-de:-2015-01-18-3-docker-meetup-in-frankfurt</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-01-18-3-docker-meetup-in-frankfurt</guid>
    <pubDate>Sun, 18 Jan 2015 19:05:35 UT</pubDate>
    <description>
 &lt;p&gt;Am 13. Januar 2015 fand in Frankfurt das bereits &lt;a href="http://www.meetup.com/Docker-Frankfurt/events/219160756/"&gt;dritte Docker-Meetup&lt;/a&gt; statt, hier einige Notizen von mir dazu.&lt;/p&gt;
@@ -251,7 +251,7 @@ exports.handler = function(event, context) {
   <item>
    <title>Eindrücke vom 31C3</title>
    <link>http://www.dbrunner.de/2015/01/05/eindrücke-vom-31c3/</link>
-   <guid>urn:http-www-dbrunner-de:-2015-01-05-eindrücke-vom-31c3</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-01-05-eindrücke-vom-31c3</guid>
    <pubDate>Mon, 05 Jan 2015 16:03:00 UT</pubDate>
    <description>
 &lt;p&gt;Dieses Jahr habe ich mich einmal aufgerafft und bin das erste mal zum Congress des CCC nach Hamburg gefahren. Im Folgenden ein paar Eindrücke:&lt;/p&gt;
@@ -288,14 +288,14 @@ exports.handler = function(event, context) {
   <item>
    <title>Aus zwei mach eins</title>
    <link>http://www.dbrunner.de/2015/01/04/aus-zwei-mach-eins/</link>
-   <guid>urn:http-www-dbrunner-de:-2015-01-04-aus-zwei-mach-eins</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-01-04-aus-zwei-mach-eins</guid>
    <pubDate>Sun, 04 Jan 2015 15:16:08 UT</pubDate>
    <description>
 &lt;p&gt;Bisher hatte ich meine Blog-Einträge auf zwei Blogs aufgeteilt, &lt;a href="http://blog.krrrcks.net"&gt;eines&lt;/a&gt; mit mehr technischen (und zum Teil englischen Texten) und dieses hier mit deutschen Texten. Ich denke, ich werde das auf dieses eine Blog hier konzentrieren. Das reduziert doch etwas den Verwaltungsaufwand. Ich habe die Texte vom nun etwas still gelegten Blog hier herüber kopiert.&lt;/p&gt;</description></item>
   <item>
    <title>Mind the storage driver for Ubuntu cloud images (on Azure)</title>
    <link>http://www.dbrunner.de/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure/</link>
-   <guid>urn:http-www-dbrunner-de:-2014-07-24-mind-the-storage-driver-for-ubuntu-cloud-images-on-azure</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-07-24-mind-the-storage-driver-for-ubuntu-cloud-images-on-azure</guid>
    <pubDate>Thu, 24 Jul 2014 10:30:43 UT</pubDate>
    <description>
 &lt;p&gt;A few days ago I wanted to build Firefox OS&amp;rsquo; newest release for a friend. Because I did not wanted these GB of code, binaries etc. on my notebook I fired up an Ubuntu image on Microsoft Azure. I feared that at a certain point in the build process I may had to download everything to my local machine and therefore I installed Docker via a simple&lt;/p&gt;
@@ -332,7 +332,7 @@ WARNING: No swap limit support&lt;/code&gt;&lt;/pre&gt;
   <item>
    <title>DateTime conversion can be tricky</title>
    <link>http://www.dbrunner.de/2014/07/24/datetime-conversion-can-be-tricky/</link>
-   <guid>urn:http-www-dbrunner-de:-2014-07-24-datetime-conversion-can-be-tricky</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-07-24-datetime-conversion-can-be-tricky</guid>
    <pubDate>Thu, 24 Jul 2014 07:41:36 UT</pubDate>
    <description>
 &lt;p&gt;I wrote a small Lisp application and a JavaScript client gets some data from that application. All time stamps are returned as &amp;ldquo;Lisp&amp;rdquo; time stamps, i.e. an integer with seconds where zero equals Jan 01 1900.&lt;/p&gt;
@@ -359,7 +359,7 @@ WARNING: No swap limit support&lt;/code&gt;&lt;/pre&gt;
   <item>
    <title>I learned something about symbols and packages</title>
    <link>http://www.dbrunner.de/2014/07/06/i-learned-something-about-symbols-and-packages/</link>
-   <guid>urn:http-www-dbrunner-de:-2014-07-06-i-learned-something-about-symbols-and-packages</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-07-06-i-learned-something-about-symbols-and-packages</guid>
    <pubDate>Sun, 06 Jul 2014 07:02:39 UT</pubDate>
    <description>
 &lt;p&gt;I am using Common Lisp for developing a web application. Several days ago a new part of this application didn&amp;rsquo;t worked as supposed and I spent a considerable large amount of time in finding the bug. It was a very simple problem with symbols where I mixed something up.&lt;/p&gt;
@@ -425,7 +425,7 @@ MY-APP&amp;gt;&lt;/code&gt;&lt;/p&gt;
   <item>
    <title>Unicode support for Octopress</title>
    <link>http://www.dbrunner.de/2014/06/10/unicode-support-for-octopress/</link>
-   <guid>urn:http-www-dbrunner-de:-2014-06-10-unicode-support-for-octopress</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-06-10-unicode-support-for-octopress</guid>
    <pubDate>Tue, 10 Jun 2014 07:26:22 UT</pubDate>
    <description>
 &lt;p&gt;Well, it seems Octopress/Jekyll would like to have a locale set for UTF&amp;ndash;8 support. I followed &lt;a href="http://www.dominik-gaetjens.de/blog/2012/06/09/utf-8-in-octopress/"&gt;this (text in German)&lt;/a&gt; hint and now my Dockerfile looks like this:&lt;/p&gt;
@@ -468,7 +468,7 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;
   <item>
    <title>My Dockerfile for setting up Octopress</title>
    <link>http://www.dbrunner.de/2014/05/26/my-dockerfile-for-setting-up-octopress/</link>
-   <guid>urn:http-www-dbrunner-de:-2014-05-26-my-dockerfile-for-setting-up-octopress</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-05-26-my-dockerfile-for-setting-up-octopress</guid>
    <pubDate>Mon, 26 May 2014 07:24:00 UT</pubDate>
    <description>
 &lt;p&gt;After my trouble with installing all the dependencies for Octopress I  came up with the following Dockerfile for Docker. This follows the  instructions from the Octopress homepage and uses RVM for managing the ruby dependencies.&lt;/p&gt;
@@ -503,14 +503,14 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;</description></item>
   <item>
    <title>Programm-Bibliotheken und verschiedene Versionsstände</title>
    <link>http://www.dbrunner.de/2011/10/16/programm-bibliotheken-und-verschiedene-versionsstände/</link>
-   <guid>urn:http-www-dbrunner-de:-2011-10-16-programm-bibliotheken-und-verschiedene-versionsstände</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2011-10-16-programm-bibliotheken-und-verschiedene-versionsstände</guid>
    <pubDate>Sat, 15 Oct 2011 22:00:00 UT</pubDate>
    <description>
 &lt;p&gt;Ich bin ein sehr intensiver Nutzer von &lt;a href="http://www.orgmode.org"&gt;Org-Mode&lt;/a&gt;, einem speziellen Modul/Modus für den Emacs-Editor (ich habe hier auf meiner Homepage auch einmal mit einer kleinen &lt;a href="http://archive.dbrunner.de/it/org-mode.html"&gt;Seite&lt;/a&gt; dazu begonnen). Nun ja, was soll man sagen: Bei Emacs wird eine recht alte Version mitgeliefert. Ich wollte dann mal auch wegen einiger Funktionen die neueste nutzen. Also via &lt;code&gt;git&lt;/code&gt; heruntergeladen und eingebunden und Peng, irgendwas funktioniert natürlich nicht mehr: Ich benötige pratisch täglich den Export von Org-Mode-Dateien nach &lt;code&gt;LaTeX&lt;/code&gt;, der wollte aber nicht mehr. Nun kann ich zwar Lisp, aber das Emacs Lisp ist doch etwas speziell und die Debug-Möglichkeiten sind etwas … nun ja, altbacken. Kurzum: Das macht überhaupt keinen Spaß. Im Endeffekt habe ich dann herausgefunden, dass unter bestimmten Umständen Teile des alten, bei Emacs mitgelieferten Codes nachgeladen wird anstelle der neuen Distribution. Diese bescheidene Art von Emacs mit Modulen und Paketen umzugehen ist wirklich erschreckend. Was dafür wiederum total toll war: In der von mir verwendeten Org-Mode-Version war wohl ein Fehler, das ganze Ding über die Mailingliste geschickt und innert einem halben Tag war der Fehler von anderen Nutzern und von Carsten Dominik auch gleich gefixt. Grandiose Antwortzeit!&lt;/p&gt;</description></item>
   <item>
    <title>Constanze Kurz/Frank Rieger, Die Datenfresser</title>
    <link>http://www.dbrunner.de/2011/06/30/constanze-kurz-frank-rieger-die-datenfresser/</link>
-   <guid>urn:http-www-dbrunner-de:-2011-06-30-constanze-kurz-frank-rieger-die-datenfresser</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2011-06-30-constanze-kurz-frank-rieger-die-datenfresser</guid>
    <pubDate>Thu, 30 Jun 2011 11:00:00 UT</pubDate>
    <description>
 &lt;p&gt;Nun, ich habe das Buch von Constanze Kurz und Frank Rieger, Die Datenfresser, gelesen. Hier eine sehr kurze Besprechung:&lt;/p&gt;
@@ -531,7 +531,7 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;</description></item>
   <item>
    <title>Nachtrag I zum E-Postbrief</title>
    <link>http://www.dbrunner.de/2010/07/26/nachtrag-i-zum-e-postbrief/</link>
-   <guid>urn:http-www-dbrunner-de:-2010-07-26-nachtrag-i-zum-e-postbrief</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2010-07-26-nachtrag-i-zum-e-postbrief</guid>
    <pubDate>Mon, 26 Jul 2010 08:32:00 UT</pubDate>
    <description>
 &lt;p&gt;Ein Nachtrag zu meinem Eintrag über den E-Postbrief. Da überall von &amp;ldquo;qualifizierter elektronischer Signatur&amp;rdquo; die Rede ist, möchte ich gern auf Folgendes hinweisen: Lässt sich der Benutzer ein Zertifikat zum zusätzlichen Verschlüsseln und Signieren erzeugen, so darf man sich ob der Güte dieses Schlüssels nicht täuschen. Es handelt sich dann nämlich &lt;strong&gt;nicht&lt;/strong&gt; um eine qualifizierte elektronische Signatur nach Signaturgesetz. So leicht erlesbar aus der &lt;a href="https://service.deutschepost.de/epost/downloads/7/Leistungsbeschreibung_E-Postbrief.pdf"&gt;Leistungsbeschreibung E-Postbrief&lt;/a&gt;; dort heißt es unter den &amp;ldquo;Zusatzleistungen&amp;rdquo;:&lt;/p&gt;
@@ -544,7 +544,7 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;</description></item>
   <item>
    <title>Der E-Postbrief, ein Selbstversuch</title>
    <link>http://www.dbrunner.de/2010/07/25/der-e-postbrief-ein-selbstversuch/</link>
-   <guid>urn:http-www-dbrunner-de:-2010-07-25-der-e-postbrief-ein-selbstversuch</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2010-07-25-der-e-postbrief-ein-selbstversuch</guid>
    <pubDate>Sun, 25 Jul 2010 21:57:00 UT</pubDate>
    <description>
 &lt;p&gt;So, da &lt;a href="http://www.heise.de/ix/meldung/Deutsche-Post-steigt-in-E-Mail-Geschaeft-ein-1037580.html"&gt;kam&lt;/a&gt; er also mit viel Marketingaufwand: Der &lt;a href="http://www.epost.de"&gt;E-Postbrief&lt;/a&gt; der Deutschen Post. Wohl mit Absicht etwas vor der Einführung der &lt;a href="http://www.heise.de/newsticker/meldung/Rechtssichere-Buerger-E-Post-De-Mail-Besonderheiten-und-Fallstricke-1037231.html"&gt;DE-Mail&lt;/a&gt;, einer Initiative der Bundesregierung. Nachdem dann auch ein Werbeflatterer in meinem (normalen) Briefkasten gelandet ist, habe ich mir einen Selbstversuch gegönnt und die neue Plattform testen wollen. (Erinnern Sie sich übrigens daran, dass die Post, ich glaube sogar auch unter der URL &lt;code&gt;epost.de&lt;/code&gt; schon vor Jahren jedem Bundesbürger eine lebenslang gültige E-Mail-Adresse versprochen hat? Nach einigen Jahren starb dieses E-Mail-Portal-Projekt. Werden schon Wetten auf das Ende des E-Postbriefs angenommen?)&lt;/p&gt;
@@ -579,7 +579,7 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;</description></item>
   <item>
    <title>Code snippets not working at the moment</title>
    <link>http://www.dbrunner.de/2010/07/02/code-snippets-not-working-at-the-moment/</link>
-   <guid>urn:http-www-dbrunner-de:-2010-07-02-code-snippets-not-working-at-the-moment</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2010-07-02-code-snippets-not-working-at-the-moment</guid>
    <pubDate>Thu, 01 Jul 2010 22:00:00 UT</pubDate>
    <description>
 &lt;p&gt;Two of my &lt;a href="http://archive.dbrunner.de/it/org-mode.html"&gt;code snippets&lt;/a&gt; for org-mode are not working with the actual &lt;code&gt;master&lt;/code&gt; of the git repository. I have to check this and I am going to fix them when I find enough time for that.&lt;/p&gt;</description></item></channel></rss>
