@@ -1,4 +1,4 @@
-# Publikationen
+# Publikationen etc.
 
 Die ist eine Aufstellung meiner Publikationen, Vorträge,
 Projekte. 
@@ -71,9 +71,16 @@ S. 47-62.
     [ENHR Conference 2012](http://www.ccnorway.no/enhr2012/), Housing:
     Local Welfare and Local Markets in a Globalised
     World, 24. bis 27. Juni 2012,
-    Lillehammer, Norwegen.  
+    Lillehammer, Norwegen.
 
-  - (zusammen mit Tim Voigt, Anne Piper und Axel Freier), Mitgliederstruktur und kooperative Diffusionsprozesse im Agribusiness, Poster für die 50. Jahrestagung der GEWISOLA, Möglichkeiten und Grenzen der wissenschaftlichen Politikanalyse, 29. September bis 1. Oktober 2010, Braunschweig, PDF [auf der Seite des Johann Heinrich von Thünen-Instituts](http://www.ti.bund.de/fileadmin/dam_uploads/Institute/LR/lr_de/lr_de_gewisola2010/lr_de_beitraege/P3_4.pdf) und [hier]({{ root.url }}/pub/poster-gewisola-2010.pdf). 
+  - (zusammen mit Tim Voigt, Anne Piper und Axel Freier),
+    Mitgliederstruktur und kooperative Diffusionsprozesse im
+    Agribusiness, Poster für die 50. Jahrestagung der GEWISOLA,
+    Möglichkeiten und Grenzen der wissenschaftlichen
+    Politikanalyse, 29. September bis 1. Oktober 2010, Braunschweig,
+    PDF
+    [auf der Seite des Johann Heinrich von Thünen-Instituts](http://www.ti.bund.de/fileadmin/dam_uploads/Institute/LR/lr_de/lr_de_gewisola2010/lr_de_beitraege/P3_4.pdf) und
+    [hier](/pub/poster-gewisola-2010.pdf).  
 
   - (zusammen mit Tim Voigt), Die Interaktion von Genossenschaften und
     ihren Mitgliedern im Wettbewerb: eine evolutionsökonomische
@@ -81,7 +88,9 @@ S. 47-62.
     Forschung: Proceedings der XIII. Nachwuchswissenschaftler Tagung
     der Arbeitsgemeinschaft genossenschaftswissenschaftlicher
     Institute (AGI) e.V., 18./19. März 2008 in Wien, RiCC Working
-    Paper 2008/1, S. 155-171, [PDF (ca. 410 KB)](http://www.wu-wien.ac.at/ricc/agi_nachwuchswissenschaftler_tagung2008/proceedings.pdf).
+    Paper 2008/1,
+    S. 155-171,
+    [PDF (ca. 410 KB)](http://www.wu-wien.ac.at/ricc/agi_nachwuchswissenschaftler_tagung2008/proceedings.pdf). 
 
   - (zusammen mit Tim Voigt), Entrepreneurial Decision-making in
     Cooperative Organizations - Theoretical Implications of a Case
@@ -101,7 +110,8 @@ S. 47-62.
     Arbeitspapier vorbereitet für das Kolloquium "Elemente von
     Strategiekonzepten der Zukunftssicherung genossenschaftlicher
     Kooperation", 25. bis 27. November 2005 in Marburg, 
-    [Download 1. Überarbeitung (PDF)](/pub/brunner_unternehmer-re01.pdf), [Download Ursprungsfassung (PDF)](/pub/brunner_unternehmer.pdf). 
+    [Download 1. Überarbeitung (PDF)](/pub/brunner_unternehmer-re01.pdf),
+    [Download Ursprungsfassung (PDF)](/pub/brunner_unternehmer.pdf). 
 
   - (mit Stephan Hagenbusch), Development of Institutions in the Early
     Modern Period, Arbeitspapier vorbereitet für den I. International
@@ -122,9 +132,13 @@ kommunalen Wohnungswirtschaft in Ostdeutschland, Deutsch-Ukrainisches
 Projekt Regierungsberatung zu Fragen der Reform der Regionalpolitik in
 der Ukraine (GTZ/BMZ), Mai 2006. Das Arbeitspapier ist in deutscher
 und ukrainischer Sprache erhältlich unter regpol@thales-is.kiev.ua
-oder Download in [deutscher](/pub/KommWohnZiBru-de.pdf) oder [ukrainischer](/pub/KommWohnZiBru-ua.pdf) Sprache.
+oder Download in [deutscher](/pub/KommWohnZiBru-de.pdf)
+oder [ukrainischer](/pub/KommWohnZiBru-ua.pdf) Sprache. 
 
 ## Andere Veröffentlichungen
+
+  - Glosse zu Bankbilanzen: "Für wen bilanzieren unsere Banken
+    eigentlich?", 5. März 2009, [PDF](/pub/bankbilanz.pdf).  
 
   - Finanzierung: Herausforderungen für die Wohnungsgenossenschaften,
     Die Wohnungswirtschaft, Nr. 5, 2005, S. 54-56.
@@ -244,7 +258,8 @@ oder Download in [deutscher](/pub/KommWohnZiBru-de.pdf) oder [ukrainischer](/pub
 
 -  *[Technische Hochschule Mittelhessen, StudiumPlus](http://www.studiumplus.de)*, 2-tägiges Modul 
   "Industrie 4.0, Internet of Things: Eine praktische Annäherung, 9. und 10. Dezember 2016.
-- *[Philipps-Universität Marburg, Fachbereich Wirtschaftswissenschaften](http://www.uni-marburg.de/fb02)*, Examenskolloquien zu den Vorlesungen "Markt und Wettbewerb", "Geld und Konjunktur", "Wachstum, Verteilung, Entwicklung" für die Diplom-Prüfungen von Prof. Dr. Ulrich Fehl, Wintersemester 2003/2004, Wintersemester 2004/2005, Wintersemester 2005/2006. 
+
+- *[Philipps-Universität Marburg, Fachbereich Wirtschaftswissenschaften](http://www.uni-marburg.de/fb02)*, Examenskolloquien zu den Vorlesungen "Markt und Wettbewerb", "Geld und Konjunktur", "Wachstum, Verteilung, Entwicklung" für die Diplom-Prüfungen von Prof. Dr. Ulrich Fehl, Wintersemester 2003/2004, Wintersemester 2004/2005, Wintersemester 2005/2006.  
 
 
 ## Projekte 
