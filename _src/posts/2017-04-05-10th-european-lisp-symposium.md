@@ -19,6 +19,6 @@ slides are available there as well. I host
 these files here: [Paper](/pub/els2017.pdf)
 and [slides](/pub/els2017-slides.pdf).
 
-PS: I am going to add the source code soon to my homepage. 
+PS: I am going to add the source code to my homepage soon. 
 
 
