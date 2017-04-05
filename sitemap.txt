@@ -52,6 +52,7 @@ http://www.dbrunner.de/2014/12/18/aus-der-entscheidung-des-bverfg-zur-erbschafts
 http://www.dbrunner.de/2010/07/30/missbrauchsgebühr-beim-bundesverfassungsgericht/
 http://www.dbrunner.de/2011/10/20/eu-will-länderratings-verbieten/
 http://www.dbrunner.de/2014/12/17/migration-alter-blog-einträge/
+http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium/
 http://www.dbrunner.de/2010/06/11/ein-blick-auf-das-neue-mueseum-maxxi-in-rom/
 http://www.dbrunner.de/2011/11/28/steuerliche-behandlung-von-popcorn/
 http://www.dbrunner.de/2010/12/08/selbstauskünfte-bei-unternehmen/

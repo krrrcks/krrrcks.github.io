@@ -149,6 +149,64 @@
 
           <article>
   <header>
+    <h1><a href='/2014/10/05/erfahrungen-mit-docker/'>Erfahrungen mit Docker</a></h2>
+    <p class='date-and-tags'>
+<time datetime="2014-10-05" pubdate="true">2014-10-05</time> :: <span class="tags"><a href="/tags/Docker.html">Docker</a></span></p>
+  </header>
+
+<p>Ein Bekannter bat mich, einmal von meinen Erfahrungen mit Docker zu berichten. Also hier als Blog-Post dazu. Ich werde nicht beschreiben, was genau Docker ist und wie es funktioniert. Hierzu gibt es mittlerweile schon eine Reihe von guten Quellen (bspw. auf der Docker-Homepage, in der c&rsquo;t war in Heft 17 (Seiten 146&ndash;151) auch eine ganz gute Einführung enthalten).</p>
+
+<h2 id="hintergrund">Hintergrund</h2>
+
+<p>Seit einigen Jahren verwende ich zum Ausrollen von Software OpenVZ als Container-Lösung. Das funktioniert sehr gut, schont die Ressourcen, lässt sich gut verwalten und überwachen. In den OpenVZ-Containern befindet sich ein kleines Linux der gewünschten Distribution mit so allem, was man im Standard dafür erwartet. Darin installiert und konfiguriert man seine Software und rollt sie dann auf dem Zielsystem bequem aus. Der einzige Nachteil hierbei ist, dass der Host einen eigenen OpenVZ-Kernel benötigt, da nicht oder noch nicht alle Features im Standard-Kernel bereit stehen. Das macht das Zusammenstellen auf meinem Notebook etwas schwierig, denn dort habe ich den OpenVZ-Kernel in der Regel nicht installiert.</p>
+
+<h2 id="warum-nun-docker">Warum nun Docker?</h2>
+
+<p>Im April bin ich eher zufällig (tauchte in den Release-Notes von Ubuntu 14.04 auf) auf das Docker-Projekt gestoßen und habe damit begonnen herumzuexperimentieren.</p>
+
+<p>Rund um Docker und den Einsatz haben sich eine Vielzahl von Projekten angesammelt. Nicht alles verstehe ich auf Anhieb und mir fällt es zum Teil auch schwer, die unterschiedlichen Projekte zum Ausrollen, Verwalten etc. zu bewerten und zu entscheiden, was davon auch &ldquo;zukunftsfähig&rdquo; ist. Wahrscheinlich muss man hier auch ein bisschen Geduld haben.</p>
+
+<h2 id="einsatzbereiche">Einsatzbereiche</h2>
+
+<p>Für mich haben sich im Wesentlichen zwei Haupteinsatzbereiche herauskristallisiert:  * als Werkzeug in der Software-Entwicklung und  * als Werkzeug zum Ausrollen und dauerhaften Betrieb von Anwendungen</p>
+
+<h3 id="werkzeug-in-der-software-entwicklung">Werkzeug in der Software-Entwicklung</h3>
+
+<p>Ich arbeite in Teams zusammen, bei denen die Entwickler mal nen Windows-Notebook und mal nen Linux-Notebook ihr Eigen nennen. Docker bot sich hier an, eine definitierte Test- und Entwicklungsplattform bereit zu stellen. Ich habe dazu alles, was man so braucht in ein Image zusammengeworfen, dies lässt sich mit dem aktuellen Source Code starten.</p>
+
+<h3 id="dauerhafter-betrieb">Dauerhafter Betrieb</h3>
+
+<h2 id="eigenarten-und-erfahrungen">Eigenarten und Erfahrungen</h2>
+
+<h2 id="was-toll-ist">Was toll ist:</h2>
+
+<ul>
+ <li>Sehr leicht zu installieren und man kann schnell damit anfangen herumzuspielen.</li>
+ <li>docker build / Dockerfile</li>
+ <li>Es entwickelt sich sehr schnell eine aktive Gemeinschaft, so habe  ich auch schon an MeetUps in Frankfurt und Darmstadt  mit Gewinn teilgenommen.</li>
+ <li>Nicht zu vergessen das Logo.</li></ul>
+
+<h2 id="was-nicht-so-toll-ist">Was nicht so toll ist:</h2>
+
+<ul>
+ <li>
+  <p>Images und Container erhalten zur Identifikation Hash-Werte; man  kann Images und Container auch mit Namen versehen. Ist man  allerdings ein wenig am experimentieren und herumbasteln, so sammeln  sich schnell eine Reihe von Containern mit wenig sprechenden Ids an  und zumindest ich verliere da schnell den Überblick.</p></li>
+ <li>
+  <p>Eigentlich sind die Container nicht so mobil, wie die Analogie es  vermuten lässt. Am ehesten sind es noch die Images, die man in eine  Registry einspielen und dann auf unterschiedlichen Systemen  herunterlädt. Mir würde allerdings auch so etwas wie Live Migration  (funktioniert beispielsweise bei OpenVZ für meine Einsatzzwecke ganz  hervorragend) gefallen.</p></li>
+ <li>
+  <p>Für den dauerhaften Betrieb gibt es eine Reihe von für mich offenen  Fragen. Hierzu gibt es zwar Lösungsansätze oder Produkte, aber viele  entwickeln sich erst. Ich will einmal exemplarisch einige offene  Enden herausgreifen:</p></li>
+ <li>
+  <p>Irgendwie muss man sich um seine Logfiles kümmern, wo die so  landen sollen. Hat man in einem &ldquo;normalen Linux&rdquo; (oder auch einem  Standard-OpenVZ-Container) meist so etwas wie ein logrotated am  laufen, so fehlt das (wenn man der Docker-Philosophie folgt, die  Container so schlank wie möglich zu halten) in einem  Docker-Deployment. Also muss man für jede Anwendung prüfen:  Schreibt sie ihr Log auf Platte? Dann muss man das da irgendwie  herausholen (bspw. über einen Log-File-Volume) oder überwachen,  nutzt sie syslogd muss man das auch irgendwie in den Griff  bekommen oder rotzt sie ihre Meldungen über die Standardausgabe  heraus, dann sammelt immerhin Docker die auf und man kann darin  blättern (die können dort aber auch recht groß werden).</p></li>
+ <li>
+  <p>Was tut man mit persistenten Daten? Also beispielsweise einer  Datenbank? Der Docker-Weg-zum-Glück bietet an, dass man einen  Container mit der Datenbank erstellt und dann einen für die  jeweilige Anwendung (ist bspw. für das Wordpress-Image auch so gut  zu studieren). Damit die Daten der Datenbank nicht in dem  Container herumliegen, kann man diese noch in ein Volume  packen. Damit die beiden Container nun miteinander kommunizieren  können, kann man deren Daten über Links einander bekannt  machen. Da man sich als Container und Anwendung nicht um  IP-Adressen etc. kümmern &ldquo;soll&rdquo;, ist das auch ganz fein. So erhält  man im Anwendungscontainer dann Umgebungsvariablen zum  Datenbankcontainer sowie auch einen Eintrag in /etc/hosts. Dumm  nur, wenn der Datenbankcontainer mal abschmiert und neu gestartet  werden muss, denn dann erhält er in der Regel eine neue IP-Adresse  und der Link vom Anwendungscontainer zur Datenbank funktioniert  nicht mehr. Sicher, es gibt nun Mittel und Wege damit umzugehen  (DNS-Geschichten, Entdecken der Dienste, etc.), aber ich fände es  eigentlich toll, wenn das Out-of-the-box funktionieren würde.</p></li></ul>
+
+<h2 id="fazit">Fazit</h2>
+
+<p>Ich finde es ein spannendes Projekt und wenn sich für mich die einen oder anderen Unklarheiten lichten, werde ich es sicherlich auch für den Produktiveinsatz in Erwägung ziehen. Ich vermute, dass das Projekt sich noch deutlich weiterentwickeln wird, die knapp 65 Mio Venture Capital werden neben Marketing hoffentlich auch ins Produkt gesteckt.</p>
+
+</article>
+<article>
+  <header>
     <h1><a href='/2014/10/05/aktenführung-beim-beitragsservice/'>Aktenführung beim Beitragsservice</a></h2>
     <p class='date-and-tags'>
 <time datetime="2014-10-05" pubdate="true">2014-10-05</time> :: <span class="tags"><a href="/tags/Allerlei.html">Allerlei</a>, <a href="/tags/Behörden.html">Behörden</a></span></p>
@@ -466,31 +524,6 @@ RUN echo "rvm use 1.9.3" &gt;&gt; /root/.bashrc
 WORKDIR /opt/octopress
 EXPOSE 4000
 CMD ["/bin/bash"] </code></pre>
-
-</article>
-<article>
-  <header>
-    <h1><a href='/2012/02/28/gießkanne-oder-nicht/'>Gießkanne oder nicht?</a></h2>
-    <p class='date-and-tags'>
-<time datetime="2012-02-28" pubdate="true">2012-02-28</time> :: <span class="tags"><a href="/tags/Wirtschaft.html">Wirtschaft</a></span></p>
-  </header>
-
-<p>Zu dem wohl bisher nicht veröffentlichten Gutachten einiger Wirtschaftsforschungsinstitute zur Förderung der Neuen Länder wurde heute morgen im Deutschlandfunk der Wirtschaftsminister von Thüringen, Matthias Machnig <a href="http://www.dradio.de/dlf/sendungen/interview_dlf/1688517/">interviewt.</a></p>
-
-<p>Er sagt dort zum Plädoyer eine Förderung nach dem Gießkannenprinzip einzustellen:</p>
-
-<blockquote>
- <p>&ldquo;Alle Jahre wieder kommen solche Thesen auf, sie haben mit der Realität nichts zu tun, weil die Behauptung, man würde mit der Gießkanne Fördermittel verteilen, das ist lange vorbei.&rdquo;</p></blockquote>
-
-<p>Nun kenne ich nicht die ganzen Programme, die dort etabliert sind und ich weiß auch nicht, wie die jeweiligen Programme in Thüringen vor Ort umgesetzt werden. Ich gehe aber einmal davon aus, dass sich zwischenzeitlich eine irgendwie geartete &ldquo;Priorisierung&rdquo; etabliert hat.</p>
-
-<p>Ich möchte jedoch auf ein grundsätzliches Problem aufmerksam machen: Im Bereich der Städtebauförderung (hier ist beispielsweise über das Programm &ldquo;Stadtumbau Ost&rdquo; auch eine spezifische regionale Förderung durchgeführt und etabliert worden) stellt sich regelmäßig die Frage, wie die Mittel der Programme auf die Länder zu verteilen sind. So hat sich die Bauministerkonferenz in einer Arbeitsgruppe darüber Gedanken gemacht und ihre bisherige Verteilung im Sinne einer &ldquo;problemorientierten&rdquo; Verteilung <a href="http://www.bauministerkonferenz.de/IndexSearch.aspx?method=get&amp;File=b8a84yy3y8b984808abb4yb8y9ya8ayyb9y884b94ya2a0a14949a4a1484b80b8y0ldc20mg52lp02ypzlmnx5wd0">im Jahr 2008</a>  fortentwickelt. Hier sind 70% der Mittel nach Bevölkerung zu verteilen und die restlichen Prozente nach Bevölkerungsverlusten, Arbeitslosigkeit, Ausländeranteil, überdurchschnittlichem Bevölkerungsanteil über 65 Jahre.</p>
-
-<p>So. Und nun schauen wir einmal in die <a href="http://www.brd.nrw.de/planen_bauen/staedtebaufoerderung/pdf/Verwaltungsvereinbarung_StBauF_2011__Bund-L__nder_.pdf">Verwaltungsvereinbarung Städtebauförderung 2011</a> und sehen diesen oder einen sehr ähnlichen Schlüssel für alle Teilprogramme: 70% der Mittel nach Bevölkerung, der Rest nach anderen Indikatoren.</p>
-
-<p>Nun frage ich mich: Was ist denn eine Verteilung nach Bevölkerung anderes als die oben beschriebene Gießkanne? Es müsste doch ein Zusammenhang zwischen Bevölkerung und dem jeweils zu behebenden Problem des Teilprogramms herzustellen sein. Der Nachweis wäre, insbesondere für den Wohnungsleerstand im Programm Stadtumbau Ost, ja erst noch zu erbringen. Bei einem Gespräch mit einem mit der Materie befassten habe ich vor Jahren einmal zu hören bekommen: Etwas anderes als nach Bevölkerung ist politisch gar nicht umsetzbar aber es ist natürlich im Grunde die Verteilung mit der Gießkanne und nicht nach dem Bedarf.</p>
-
-<p>(Dieser Artikel hat einen <a href="http://www.blablameter.de">Blablameter-Wert</a> von 0.32.)</p>
 
 </article>
 <footer>

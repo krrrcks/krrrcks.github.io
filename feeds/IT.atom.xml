@@ -4,7 +4,23 @@
  <link rel="self" href="http://www.dbrunner.de/feeds/IT.atom.xml" />
  <link href="http://www.dbrunner.de/tags/IT.html" />
  <id>urn:http-www-dbrunner-de:-tags-IT-html</id>
- <updated>2017-02-19T14:59:09Z</updated>
+ <updated>2017-04-05T14:00:31Z</updated>
+ <entry>
+  <title type="text">10th European Lisp Symposium</title>
+  <link rel="alternate" href="http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium/" />
+  <id>urn:http-www-dbrunner-de:-2017-04-05-10th-european-lisp-symposium</id>
+  <published>2017-04-05T14:00:31Z</published>
+  <updated>2017-04-05T14:00:31Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Last year my brother Stephan and I attended the European Lisp Symposium (ELS) for the first time. It was a great event and therefore we decided to come to &lt;a href="http://www.european-lisp-symposium.org/2017/index.html"&gt;this year&amp;rsquo;s symposium&lt;/a&gt;. It took place in Brussels from April 3 to April 4.&lt;/p&gt;
+
+&lt;p&gt;After giving a two-days course on IoT using Racket at &lt;a href="http://www.studiumplus.de"&gt;StudiumPlus&lt;/a&gt; last year we submitted a short demonstration. And: It got accepted! It was a great honor for me to give a demonstration at the symposium.&lt;/p&gt;
+
+&lt;p&gt;Our paper is in the proceedings which can be found find on the &lt;a href="http://www.european-lisp-symposium.org/2017/index.html"&gt;conference&amp;rsquo;s homepage&lt;/a&gt;. The slides are available there as well. I host these files here: &lt;a href="/pub/els2017.pdf"&gt;Paper&lt;/a&gt; and &lt;a href="/pub/els2017-slides.pdf"&gt;slides&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;PS: I am going to add the source code soon to my homepage.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Neues vom E-Postbrief</title>
   <link rel="alternate" href="http://www.dbrunner.de/2017/02/19/neues-vom-e-postbrief/" />
@@ -630,14 +646,4 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;</content></entry>
 
 &lt;p&gt;&lt;em&gt;Nachtrag:&lt;/em&gt; Nun ist doch endlich eine E-Mail an die &lt;code&gt;@dp-mail.de&lt;/code&gt;-Adresse angekommen.&lt;/p&gt;
 
-&lt;p&gt;2010&amp;ndash;08&amp;ndash;04 Mi &lt;em&gt;Nachtrag 2:&lt;/em&gt; Zufällig entdeckte ich in der aktuellen Ausgabe der Wirtschaftswoche eine ähnliche Schilderung von Pannen, der Artikel ist auch &lt;a href="http://www.wiwo.de/unternehmen-maerkte/post-verpatzt-start-des-e-briefs-436971/"&gt;online&lt;/a&gt; verfügbar.&lt;/p&gt;</content></entry>
- <entry>
-  <title type="text">Code snippets not working at the moment</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2010/07/02/code-snippets-not-working-at-the-moment/" />
-  <id>urn:http-www-dbrunner-de:-2010-07-02-code-snippets-not-working-at-the-moment</id>
-  <published>2010-07-01T22:00:00Z</published>
-  <updated>2010-07-01T22:00:00Z</updated>
-  <author>
-   <name>Daniel Brunner</name></author>
-  <content type="html">
-&lt;p&gt;Two of my &lt;a href="http://archive.dbrunner.de/it/org-mode.html"&gt;code snippets&lt;/a&gt; for org-mode are not working with the actual &lt;code&gt;master&lt;/code&gt; of the git repository. I have to check this and I am going to fix them when I find enough time for that.&lt;/p&gt;</content></entry></feed>
+&lt;p&gt;2010&amp;ndash;08&amp;ndash;04 Mi &lt;em&gt;Nachtrag 2:&lt;/em&gt; Zufällig entdeckte ich in der aktuellen Ausgabe der Wirtschaftswoche eine ähnliche Schilderung von Pannen, der Artikel ist auch &lt;a href="http://www.wiwo.de/unternehmen-maerkte/post-verpatzt-start-des-e-briefs-436971/"&gt;online&lt;/a&gt; verfügbar.&lt;/p&gt;</content></entry></feed>

@@ -4,14 +4,29 @@
   <title>Daniel Brunner: Daniel Brunner</title>
   <description>Daniel Brunner: Daniel Brunner</description>
   <link>http://www.dbrunner.de/index.html</link>
-  <lastBuildDate>Sun, 19 Feb 2017 14:59:09 UT</lastBuildDate>
-  <pubDate>Sun, 19 Feb 2017 14:59:09 UT</pubDate>
+  <lastBuildDate>Wed, 05 Apr 2017 14:00:31 UT</lastBuildDate>
+  <pubDate>Wed, 05 Apr 2017 14:00:31 UT</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>10th European Lisp Symposium</title>
+   <link>http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium/</link>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2017-04-05-10th-european-lisp-symposium</guid>
+   <pubDate>Wed, 05 Apr 2017 14:00:31 UT</pubDate>
+   <author>Daniel Brunner</author>
+   <description>
+&lt;p&gt;Last year my brother Stephan and I attended the European Lisp Symposium (ELS) for the first time. It was a great event and therefore we decided to come to &lt;a href="http://www.european-lisp-symposium.org/2017/index.html"&gt;this year&amp;rsquo;s symposium&lt;/a&gt;. It took place in Brussels from April 3 to April 4.&lt;/p&gt;
+
+&lt;p&gt;After giving a two-days course on IoT using Racket at &lt;a href="http://www.studiumplus.de"&gt;StudiumPlus&lt;/a&gt; last year we submitted a short demonstration. And: It got accepted! It was a great honor for me to give a demonstration at the symposium.&lt;/p&gt;
+
+&lt;p&gt;Our paper is in the proceedings which can be found find on the &lt;a href="http://www.european-lisp-symposium.org/2017/index.html"&gt;conference&amp;rsquo;s homepage&lt;/a&gt;. The slides are available there as well. I host these files here: &lt;a href="/pub/els2017.pdf"&gt;Paper&lt;/a&gt; and &lt;a href="/pub/els2017-slides.pdf"&gt;slides&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;PS: I am going to add the source code soon to my homepage.&lt;/p&gt;</description></item>
   <item>
    <title>Neues vom E-Postbrief</title>
    <link>http://www.dbrunner.de/2017/02/19/neues-vom-e-postbrief/</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2017-02-19-neues-vom-e-postbrief</guid>
    <pubDate>Sun, 19 Feb 2017 14:59:09 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;Im Sommer des Jahres 2010 bloggte ich (&lt;a href="/2010/07/25/der-e-postbrief-ein-selbstversuch/"&gt;hier&lt;/a&gt; und &lt;a href="/2010/07/26/nachtrag-i-zum-e-postbrief"&gt;hier&lt;/a&gt;) über meinen Selbstversuch mit dem &lt;a href="https://www.epost.de/"&gt;E-Postbrief&lt;/a&gt; (heißt wohl nun &amp;ldquo;E-POST&amp;rdquo;) der Deutschen Post. Zwischenzeitlich musste ich einmal das Kennwort erneuern. Bei dem Telefonat mit der Hotline fiel dem freundlichen Mitarbeiter auf, dass ich mich praktisch nie (es war damals über 12 Monate her) in den Dienst einloggte. Ob ich das Produkt denn wirklich noch weiter haben möchte, wollte er wissen. Nun, ich entschied mich erst einmal dabei zu bleiben. Ca. einmal im Jahr sendete mir die Post einen Newsletter in das Postfach, manchmal habe ich ihn gelesen, manchmal auch ignoriert.&lt;/p&gt;
 
@@ -23,6 +38,7 @@
    <link>http://www.dbrunner.de/2017/02/16/mein-wechsel-zu-frog/</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2017-02-16-mein-wechsel-zu-frog</guid>
    <pubDate>Thu, 16 Feb 2017 10:08:04 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;Bisher habe ich mein Blog mit &lt;a href="http://www.octopress.org"&gt;Octopress&lt;/a&gt; bereit gestellt. Eine neue Version (&amp;ldquo;3.0&amp;rdquo;) ist auf dem &lt;a href="http://octopress.org/2015/01/15/octopress-3.0-is-coming/"&gt;Weg&lt;/a&gt;. Nachdem in letzter Zeit die einen oder anderen Schwierigkeiten mit meiner Octopress-Installation auftauchten, habe ich mich entschieden, mit dem  Blog auf &lt;a href="https://github.com/greghendershott/frog"&gt;Frog&lt;/a&gt;, ebenfalls ein Generator für statische Blogseiten, zu wechseln.&lt;/p&gt;
 
@@ -58,6 +74,7 @@
    <link>http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco/</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2016-01-12-using-racket-minimal-and-raco</guid>
    <pubDate>Tue, 12 Jan 2016 09:55:43 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;I use Racket Minimal on my smart phone (&lt;a href="../2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/"&gt;this&lt;/a&gt; describes how to compile the run time for an ARM based system). It&amp;rsquo;s is a very small installation of Racket (about 36 MB after installation). After installation one only needs to install the packages that are really neded. But this can be a bit tricky because a lot of packages want to install their documentation and other stuff and bring a whole bunch of files on your drive as dependencies.&lt;/p&gt;
 
@@ -73,6 +90,7 @@
    <link>http://www.dbrunner.de/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-12-19-i-played-with-chicken-scheme-docker-and-alpine-linux</guid>
    <pubDate>Sat, 19 Dec 2015 16:54:50 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;I am looking forward to meet LISP people at the &lt;a href="https://events.ccc.de/congress/2015/wiki/Main_Page"&gt;32c3&amp;rsquo;s&lt;/a&gt; &lt;a href="https://events.ccc.de/congress/2015/wiki/Assembly:The_%28un%29employed_schemers_%26_lispers_guild"&gt;LISP assembly&lt;/a&gt;. The last days I played a bit with different Scheme implementations including  &lt;a href="http://call-cc.org"&gt;CHICKEN scheme&lt;/a&gt;. The main feature of CHICKEN is that it compiles the Scheme code to C and then creates dynamic libraries and binaries with the C compiler. I thought that combining these binaries with a minimal Docker container could give me a very small deployment. So here are my steps:&lt;/p&gt;
 
@@ -134,6 +152,7 @@ CMD /main/main&lt;/code&gt;&lt;/pre&gt;
    <link>http://www.dbrunner.de/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-09-04-how-to-use-get-bucket-location-on-amazon-s3-with-racket</guid>
    <pubDate>Fri, 04 Sep 2015 05:23:43 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;In &lt;a href="http://www.racket-lang.org"&gt;Racket&lt;/a&gt; I want to iterate over my buckets in Amazon S3. They are located in different regions. So how do I get my bucket&amp;rsquo;s location/region? In the API Reference there is a call &lt;a href="http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETlocation.html"&gt;GET Bucket location&lt;/a&gt;. I use &lt;a href="https://github.com/greghendershott/aws"&gt;Greg&amp;rsquo;s AWS library for Racket&lt;/a&gt; and this library authenticates its calls with &lt;a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html"&gt;signature version V4&lt;/a&gt;. But V4 requires the user to know the &lt;em&gt;region&lt;/em&gt; to correctly sign the request. So I need to know the region to ask Amazon S3 for the region where the bucket is located. Otherwise Amazon S3 responds with an error:&lt;/p&gt;
 
@@ -172,6 +191,7 @@ is wrong; expecting 'eu-central-1'&amp;lt;/Message&amp;gt;
    <link>http://www.dbrunner.de/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-08-27-how-to-run-racket-on-the-raspberry-pi-2</guid>
    <pubDate>Thu, 27 Aug 2015 11:25:45 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;I got a &lt;a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/"&gt;Raspberry Pi 2 Model B&lt;/a&gt; to play with. I used Raspbian image as operating system. I was wondering how difficult it is to get Racket running on the Raspberry Pi. I downloaded the &lt;a href="http://mirror.racket-lang.org/installers/6.2.1/racket-6.2.1-src-builtpkgs.tgz"&gt;Unix source + built packages&lt;/a&gt; tarball from &lt;a href="http://racket-lang.org"&gt;Racket&amp;rsquo;s homepage&lt;/a&gt; because I only wanted to compile the core of Racket. After unpacking the tarball I was suprised that the instructions were quite short:&lt;/p&gt;
 
@@ -197,6 +217,7 @@ commands:
    <link>http://www.dbrunner.de/2015/08/27/running-racket-on-aws-lambda/</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-08-27-running-racket-on-aws-lambda</guid>
    <pubDate>Thu, 27 Aug 2015 10:46:57 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;I started to use AWS for some projects recently. But I only use few of their services. From time to time I look into some of there services and wonder if they are useful for my tasks. I looked into &lt;a href="http://aws.amazon.com/lambda"&gt;AWS Lambda&lt;/a&gt;, "&amp;hellip; a compute service that runs your code in response to events and automatically manages the compute resources for you, making it easy to build applications that respond quickly to new information." Nowadays these &amp;ldquo;lambda functions&amp;rdquo; could be written in NodeJS or Java. When I was looking for a roadmap of the supported languages I found an interesting &lt;a href="http://blog.0x82.com/2014/11/24/aws-lambda-functions-in-go/"&gt;blog post&lt;/a&gt; by &lt;a href="https://www.twitter.com/rubenfonseca"&gt;Ruben Fonseca&lt;/a&gt;. He explaind how to run Go code on AWS Lambda.&lt;/p&gt;
 
@@ -241,6 +262,7 @@ exports.handler = function(event, context) {
    <link>http://www.dbrunner.de/2015/02/17/der-rundfunkrat-des-hr-übt-den-diskurs/</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-02-17-der-rundfunkrat-des-hr-übt-den-diskurs</guid>
    <pubDate>Tue, 17 Feb 2015 10:44:35 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;Am 15. Dezember 2014 hat der &lt;a href="http://www.bundesfinanzministerium.de/Web/DE/Ministerium/Geschaeftsbereich/Wissenschaftlicher_Beirat/wissenschaftlicher_beirat.html"&gt;Wissenschaftliche Beirat des Bundesministeriums des Finanzen&lt;/a&gt; ein Gutachten zu &amp;ldquo;Öffentlich-rechtliche Medien - Aufgabe und Finanzierung&amp;rdquo; &lt;a href="http://www.bundesfinanzministerium.de/Content/DE/Downloads/Broschueren_Bestellservice/2014-12-15-gutachten-medien.pdf?__blob=publicationFile&amp;amp;v=9"&gt;veröffentlicht&lt;/a&gt;.&lt;/p&gt;
 
@@ -296,6 +318,7 @@ exports.handler = function(event, context) {
    <link>http://www.dbrunner.de/2015/02/17/lexmarks-druckerpatronen-lizenz/</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-02-17-lexmarks-druckerpatronen-lizenz</guid>
    <pubDate>Tue, 17 Feb 2015 10:28:02 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;Heute benötigte ich eine Ersatzpatrone für meinen Lexmark-Drucker. An der Aufreißlasche prangen Ausrufezeichen und der Hinweis: &amp;ldquo;Attention: Updated License Terms&amp;rdquo;.&lt;/p&gt;
 
@@ -310,6 +333,7 @@ exports.handler = function(event, context) {
    <link>http://www.dbrunner.de/2015/01/30/spielt-alba-berlin-nun-handball-oder-basketball-der-sportschau-ist-es-egal/</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-01-30-spielt-alba-berlin-nun-handball-oder-basketball-der-sportschau-ist-es-egal</guid>
    <pubDate>Fri, 30 Jan 2015 10:32:49 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;Mit Stand vom 14. Januar 2015 erschien auf der Homepage der &lt;a href="http://www.sportschau"&gt;Sportschau&lt;/a&gt; ein &lt;a href="http://www.sportschau.de/weitere/basketball/eurocup144.html"&gt;Artikel&lt;/a&gt; über die Bamberger Basketballer. Darin findet sich ein Satz über die ALBA Berlin (ebenfalls eine Basketball-Mannschaft):&lt;/p&gt;
 
@@ -331,6 +355,7 @@ exports.handler = function(event, context) {
    <link>http://www.dbrunner.de/2015/01/18/3-docker-meetup-in-frankfurt/</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-01-18-3-docker-meetup-in-frankfurt</guid>
    <pubDate>Sun, 18 Jan 2015 19:05:35 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;Am 13. Januar 2015 fand in Frankfurt das bereits &lt;a href="http://www.meetup.com/Docker-Frankfurt/events/219160756/"&gt;dritte Docker-Meetup&lt;/a&gt; statt, hier einige Notizen von mir dazu.&lt;/p&gt;
 
@@ -364,6 +389,7 @@ exports.handler = function(event, context) {
    <link>http://www.dbrunner.de/2015/01/05/eindrücke-vom-31c3/</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-01-05-eindrücke-vom-31c3</guid>
    <pubDate>Mon, 05 Jan 2015 16:03:00 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;Dieses Jahr habe ich mich einmal aufgerafft und bin das erste mal zum Congress des CCC nach Hamburg gefahren. Im Folgenden ein paar Eindrücke:&lt;/p&gt;
 
@@ -401,6 +427,7 @@ exports.handler = function(event, context) {
    <link>http://www.dbrunner.de/2015/01/04/aus-zwei-mach-eins/</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-01-04-aus-zwei-mach-eins</guid>
    <pubDate>Sun, 04 Jan 2015 15:16:08 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;Bisher hatte ich meine Blog-Einträge auf zwei Blogs aufgeteilt, &lt;a href="http://blog.krrrcks.net"&gt;eines&lt;/a&gt; mit mehr technischen (und zum Teil englischen Texten) und dieses hier mit deutschen Texten. Ich denke, ich werde das auf dieses eine Blog hier konzentrieren. Das reduziert doch etwas den Verwaltungsaufwand. Ich habe die Texte vom nun etwas still gelegten Blog hier herüber kopiert.&lt;/p&gt;</description></item>
   <item>
@@ -408,6 +435,7 @@ exports.handler = function(event, context) {
    <link>http://www.dbrunner.de/2014/12/21/ich-habe-mal-octopress-aktualisert/</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-12-21-ich-habe-mal-octopress-aktualisert</guid>
    <pubDate>Sun, 21 Dec 2014 10:58:16 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;Neulich fiel mir auf, dass die Suchfunktion, die auf Google basiert, nicht nur auf der eigenen Homepage, sondern im &amp;ldquo;gesamten&amp;rdquo; Suchindex von Google gesucht hat. Eben flatterte dieser &lt;a href="https://twitter.com/octopress/status/546528904115404800"&gt;Tweet&lt;/a&gt; mit &lt;a href="https://github.com/imathis/octopress/commit/514ed5eb9f6bb91a6f3288febf3c2ba892a9b693"&gt;Link&lt;/a&gt; zu einem Fix an mir vorbei und da hat sich wohl die API geändert.&lt;/p&gt;
 
@@ -439,6 +467,7 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
    <link>http://www.dbrunner.de/2014/12/18/-neues-arbeitspapier/</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-12-18-neues-arbeitspapier</guid>
    <pubDate>Thu, 18 Dec 2014 17:24:27 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;Zusammen mit &lt;a href="http://www.bk.tudelft.nl/en/about-faculty/departments/otb/about-otb/staff/alle-medewerkers/haffner-marietta/"&gt;Marietta Haffner&lt;/a&gt; hatte ich für die &lt;a href="http://www.ccnorway.no/enhr2012/"&gt;ENHR-Konferenz im Jahr 2012 in Lillehammer&lt;/a&gt; ein Konferenzpapier vorbereitet, das Marietta dort vorgestellt hatte. Wir haben nun in der Arbeitspapier-Reihe des OTB an der TU Delft eine überarbeitete Fassung &lt;a href="http://www.bk.tudelft.nl/fileadmin/Faculteit/BK/Over_de_faculteit/Afdelingen/OTB/publicaties/Working_papers/OTB_Working_papers_2014-07_German_cooperatives.pdf"&gt;eingestellt&lt;/a&gt;.&lt;/p&gt;</description></item>
   <item>
@@ -446,6 +475,7 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
    <link>http://www.dbrunner.de/2014/12/18/aus-der-entscheidung-des-bverfg-zur-erbschaftsteuer/</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-12-18-aus-der-entscheidung-des-bverfg-zur-erbschaftsteuer</guid>
    <pubDate>Thu, 18 Dec 2014 06:41:37 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;Das Bundesverfassungsgerichts hat in seiner &lt;a href="http://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/DE/2014/12/ls20141217_1bvl002112.html"&gt;Entscheidung&lt;/a&gt; vom 17. Dezember 2014 (1 BvL 21/12) Regelungen zur Erbschaftsteuer als verfassungwidrig moniert. Ich finde in der Entscheidung eigentlich den fünften Leitsatz mit am interessantesten:&lt;/p&gt;
 
@@ -458,6 +488,7 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
    <link>http://www.dbrunner.de/2014/12/17/migration-alter-blog-einträge/</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-12-17-migration-alter-blog-einträge</guid>
    <pubDate>Wed, 17 Dec 2014 17:11:00 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;Es kamen lange Winterabende und ich habe die alten Blog-Einträge von der mittels Org-Mode erstellten Seite hier nach Octopress migriert. Im Archiv sind diese zu finden und die Links etc. sollten nun auch passend mit migriert worden sein.&lt;/p&gt;
 
@@ -473,6 +504,7 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
    <link>http://www.dbrunner.de/2014/11/21/wie-das-haus-von-bundesministerin-nahles-mauert/</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-11-21-wie-das-haus-von-bundesministerin-nahles-mauert</guid>
    <pubDate>Fri, 21 Nov 2014 09:39:08 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;Ein Gesetzesvorhaben der großen Koalition ist eine Regelung zur Tarifeinheit. Passend in die Tarifauseinandersetzungen bei der Deutschen Bahn zeigte Bundesministerin Nahles Entschlossenheit und Tatkraft:&lt;/p&gt;
 
@@ -507,6 +539,7 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
    <link>http://www.dbrunner.de/2014/11/13/warten-auf-den-technischen-fortschritt-als-politisches-prinzip/</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-11-13-warten-auf-den-technischen-fortschritt-als-politisches-prinzip</guid>
    <pubDate>Thu, 13 Nov 2014 08:53:28 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;Am 12. November 2014 sendete der &lt;a href="http://www.deutschlandfunk.de"&gt;Deutschlandfunk&lt;/a&gt; in der Reihe &amp;ldquo;Hintergrund&amp;rdquo; einen &lt;a href="http://www.deutschlandfunk.de/energetische-sanierung-widerstand-gegen-das-daemmen-waechst.724.de.html?dram:article_id=303005"&gt;Bericht&lt;/a&gt; über die energetische Sanierung mit Wärmedämmverbundsystemen.&lt;/p&gt;
 
@@ -536,59 +569,4 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 
 &lt;p&gt;Wo sind in diesem Zusammenhang eigentlich die ganzen Papiere und politischen Ansätze zu Nachhaltigkeit, Verantwortung, Schutz zukünftiger Generationen geblieben? Im Übrigen widerspricht die Haltung auch dem vom Bauministerium selbst herausgegebenen &lt;a href="http://www.nachhaltigesbauen.de/leitfaeden-und-arbeitshilfen-veroeffentlichungen/leitfaden-nachhaltiges-bauen-2013.html"&gt;Leitfaden Nachhaltiges Bauen 2013&lt;/a&gt;, in dem besonderer Wert auf den Lebenszyklus von Gebäuden auch unter dem Gesichtspunkt der Entsorgung von Materialen gelegt wird.&lt;/p&gt;
 
-&lt;p&gt;Wenn schon das Thema &amp;ldquo;Wärmedämmverbundsysteme&amp;rdquo; nicht die Priorität der Bundesministerin hat, so muss sie sich fragen lassen, ob gerade im Umwelt- und Bauressort das Prinzip &amp;ldquo;Hoffnung auf die Zukunft&amp;rdquo; Leitlinie ihrer Politik ist.&lt;/p&gt;</description></item>
-  <item>
-   <title>Erfahrungen mit Docker</title>
-   <link>http://www.dbrunner.de/2014/10/05/erfahrungen-mit-docker/</link>
-   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-10-05-erfahrungen-mit-docker</guid>
-   <pubDate>Sun, 05 Oct 2014 09:29:43 UT</pubDate>
-   <description>
-&lt;p&gt;Ein Bekannter bat mich, einmal von meinen Erfahrungen mit Docker zu berichten. Also hier als Blog-Post dazu. Ich werde nicht beschreiben, was genau Docker ist und wie es funktioniert. Hierzu gibt es mittlerweile schon eine Reihe von guten Quellen (bspw. auf der Docker-Homepage, in der c&amp;rsquo;t war in Heft 17 (Seiten 146&amp;ndash;151) auch eine ganz gute Einführung enthalten).&lt;/p&gt;
-
-&lt;h2 id="hintergrund"&gt;Hintergrund&lt;/h2&gt;
-
-&lt;p&gt;Seit einigen Jahren verwende ich zum Ausrollen von Software OpenVZ als Container-Lösung. Das funktioniert sehr gut, schont die Ressourcen, lässt sich gut verwalten und überwachen. In den OpenVZ-Containern befindet sich ein kleines Linux der gewünschten Distribution mit so allem, was man im Standard dafür erwartet. Darin installiert und konfiguriert man seine Software und rollt sie dann auf dem Zielsystem bequem aus. Der einzige Nachteil hierbei ist, dass der Host einen eigenen OpenVZ-Kernel benötigt, da nicht oder noch nicht alle Features im Standard-Kernel bereit stehen. Das macht das Zusammenstellen auf meinem Notebook etwas schwierig, denn dort habe ich den OpenVZ-Kernel in der Regel nicht installiert.&lt;/p&gt;
-
-&lt;h2 id="warum-nun-docker"&gt;Warum nun Docker?&lt;/h2&gt;
-
-&lt;p&gt;Im April bin ich eher zufällig (tauchte in den Release-Notes von Ubuntu 14.04 auf) auf das Docker-Projekt gestoßen und habe damit begonnen herumzuexperimentieren.&lt;/p&gt;
-
-&lt;p&gt;Rund um Docker und den Einsatz haben sich eine Vielzahl von Projekten angesammelt. Nicht alles verstehe ich auf Anhieb und mir fällt es zum Teil auch schwer, die unterschiedlichen Projekte zum Ausrollen, Verwalten etc. zu bewerten und zu entscheiden, was davon auch &amp;ldquo;zukunftsfähig&amp;rdquo; ist. Wahrscheinlich muss man hier auch ein bisschen Geduld haben.&lt;/p&gt;
-
-&lt;h2 id="einsatzbereiche"&gt;Einsatzbereiche&lt;/h2&gt;
-
-&lt;p&gt;Für mich haben sich im Wesentlichen zwei Haupteinsatzbereiche herauskristallisiert:  * als Werkzeug in der Software-Entwicklung und  * als Werkzeug zum Ausrollen und dauerhaften Betrieb von Anwendungen&lt;/p&gt;
-
-&lt;h3 id="werkzeug-in-der-software-entwicklung"&gt;Werkzeug in der Software-Entwicklung&lt;/h3&gt;
-
-&lt;p&gt;Ich arbeite in Teams zusammen, bei denen die Entwickler mal nen Windows-Notebook und mal nen Linux-Notebook ihr Eigen nennen. Docker bot sich hier an, eine definitierte Test- und Entwicklungsplattform bereit zu stellen. Ich habe dazu alles, was man so braucht in ein Image zusammengeworfen, dies lässt sich mit dem aktuellen Source Code starten.&lt;/p&gt;
-
-&lt;h3 id="dauerhafter-betrieb"&gt;Dauerhafter Betrieb&lt;/h3&gt;
-
-&lt;h2 id="eigenarten-und-erfahrungen"&gt;Eigenarten und Erfahrungen&lt;/h2&gt;
-
-&lt;h2 id="was-toll-ist"&gt;Was toll ist:&lt;/h2&gt;
-
-&lt;ul&gt;
- &lt;li&gt;Sehr leicht zu installieren und man kann schnell damit anfangen herumzuspielen.&lt;/li&gt;
- &lt;li&gt;docker build / Dockerfile&lt;/li&gt;
- &lt;li&gt;Es entwickelt sich sehr schnell eine aktive Gemeinschaft, so habe  ich auch schon an MeetUps in Frankfurt und Darmstadt  mit Gewinn teilgenommen.&lt;/li&gt;
- &lt;li&gt;Nicht zu vergessen das Logo.&lt;/li&gt;&lt;/ul&gt;
-
-&lt;h2 id="was-nicht-so-toll-ist"&gt;Was nicht so toll ist:&lt;/h2&gt;
-
-&lt;ul&gt;
- &lt;li&gt;
-  &lt;p&gt;Images und Container erhalten zur Identifikation Hash-Werte; man  kann Images und Container auch mit Namen versehen. Ist man  allerdings ein wenig am experimentieren und herumbasteln, so sammeln  sich schnell eine Reihe von Containern mit wenig sprechenden Ids an  und zumindest ich verliere da schnell den Überblick.&lt;/p&gt;&lt;/li&gt;
- &lt;li&gt;
-  &lt;p&gt;Eigentlich sind die Container nicht so mobil, wie die Analogie es  vermuten lässt. Am ehesten sind es noch die Images, die man in eine  Registry einspielen und dann auf unterschiedlichen Systemen  herunterlädt. Mir würde allerdings auch so etwas wie Live Migration  (funktioniert beispielsweise bei OpenVZ für meine Einsatzzwecke ganz  hervorragend) gefallen.&lt;/p&gt;&lt;/li&gt;
- &lt;li&gt;
-  &lt;p&gt;Für den dauerhaften Betrieb gibt es eine Reihe von für mich offenen  Fragen. Hierzu gibt es zwar Lösungsansätze oder Produkte, aber viele  entwickeln sich erst. Ich will einmal exemplarisch einige offene  Enden herausgreifen:&lt;/p&gt;&lt;/li&gt;
- &lt;li&gt;
-  &lt;p&gt;Irgendwie muss man sich um seine Logfiles kümmern, wo die so  landen sollen. Hat man in einem &amp;ldquo;normalen Linux&amp;rdquo; (oder auch einem  Standard-OpenVZ-Container) meist so etwas wie ein logrotated am  laufen, so fehlt das (wenn man der Docker-Philosophie folgt, die  Container so schlank wie möglich zu halten) in einem  Docker-Deployment. Also muss man für jede Anwendung prüfen:  Schreibt sie ihr Log auf Platte? Dann muss man das da irgendwie  herausholen (bspw. über einen Log-File-Volume) oder überwachen,  nutzt sie syslogd muss man das auch irgendwie in den Griff  bekommen oder rotzt sie ihre Meldungen über die Standardausgabe  heraus, dann sammelt immerhin Docker die auf und man kann darin  blättern (die können dort aber auch recht groß werden).&lt;/p&gt;&lt;/li&gt;
- &lt;li&gt;
-  &lt;p&gt;Was tut man mit persistenten Daten? Also beispielsweise einer  Datenbank? Der Docker-Weg-zum-Glück bietet an, dass man einen  Container mit der Datenbank erstellt und dann einen für die  jeweilige Anwendung (ist bspw. für das Wordpress-Image auch so gut  zu studieren). Damit die Daten der Datenbank nicht in dem  Container herumliegen, kann man diese noch in ein Volume  packen. Damit die beiden Container nun miteinander kommunizieren  können, kann man deren Daten über Links einander bekannt  machen. Da man sich als Container und Anwendung nicht um  IP-Adressen etc. kümmern &amp;ldquo;soll&amp;rdquo;, ist das auch ganz fein. So erhält  man im Anwendungscontainer dann Umgebungsvariablen zum  Datenbankcontainer sowie auch einen Eintrag in /etc/hosts. Dumm  nur, wenn der Datenbankcontainer mal abschmiert und neu gestartet  werden muss, denn dann erhält er in der Regel eine neue IP-Adresse  und der Link vom Anwendungscontainer zur Datenbank funktioniert  nicht mehr. Sicher, es gibt nun Mittel und Wege damit umzugehen  (DNS-Geschichten, Entdecken der Dienste, etc.), aber ich fände es  eigentlich toll, wenn das Out-of-the-box funktionieren würde.&lt;/p&gt;&lt;/li&gt;&lt;/ul&gt;
-
-&lt;h2 id="fazit"&gt;Fazit&lt;/h2&gt;
-
-&lt;p&gt;Ich finde es ein spannendes Projekt und wenn sich für mich die einen oder anderen Unklarheiten lichten, werde ich es sicherlich auch für den Produktiveinsatz in Erwägung ziehen. Ich vermute, dass das Projekt sich noch deutlich weiterentwickeln wird, die knapp 65 Mio Venture Capital werden neben Marketing hoffentlich auch ins Produkt gesteckt.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Wenn schon das Thema &amp;ldquo;Wärmedämmverbundsysteme&amp;rdquo; nicht die Priorität der Bundesministerin hat, so muss sie sich fragen lassen, ob gerade im Umwelt- und Bauressort das Prinzip &amp;ldquo;Hoffnung auf die Zukunft&amp;rdquo; Leitlinie ihrer Politik ist.&lt;/p&gt;</description></item></channel></rss>

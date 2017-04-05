@@ -4,7 +4,23 @@
  <link rel="self" href="http://www.dbrunner.de/feeds/Veranstaltungen.atom.xml" />
  <link href="http://www.dbrunner.de/tags/Veranstaltungen.html" />
  <id>urn:http-www-dbrunner-de:-tags-Veranstaltungen-html</id>
- <updated>2015-01-18T19:05:35Z</updated>
+ <updated>2017-04-05T14:00:31Z</updated>
+ <entry>
+  <title type="text">10th European Lisp Symposium</title>
+  <link rel="alternate" href="http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium/" />
+  <id>urn:http-www-dbrunner-de:-2017-04-05-10th-european-lisp-symposium</id>
+  <published>2017-04-05T14:00:31Z</published>
+  <updated>2017-04-05T14:00:31Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Last year my brother Stephan and I attended the European Lisp Symposium (ELS) for the first time. It was a great event and therefore we decided to come to &lt;a href="http://www.european-lisp-symposium.org/2017/index.html"&gt;this year&amp;rsquo;s symposium&lt;/a&gt;. It took place in Brussels from April 3 to April 4.&lt;/p&gt;
+
+&lt;p&gt;After giving a two-days course on IoT using Racket at &lt;a href="http://www.studiumplus.de"&gt;StudiumPlus&lt;/a&gt; last year we submitted a short demonstration. And: It got accepted! It was a great honor for me to give a demonstration at the symposium.&lt;/p&gt;
+
+&lt;p&gt;Our paper is in the proceedings which can be found find on the &lt;a href="http://www.european-lisp-symposium.org/2017/index.html"&gt;conference&amp;rsquo;s homepage&lt;/a&gt;. The slides are available there as well. I host these files here: &lt;a href="/pub/els2017.pdf"&gt;Paper&lt;/a&gt; and &lt;a href="/pub/els2017-slides.pdf"&gt;slides&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;PS: I am going to add the source code soon to my homepage.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">3. Docker-Meetup in Frankfurt</title>
   <link rel="alternate" href="http://www.dbrunner.de/2015/01/18/3-docker-meetup-in-frankfurt/" />
