@@ -7,11 +7,19 @@ Projekte.
 
 ###  Referierte Beiträge und Artikel
 
-(zusammen mit Tim Voigt), Innovation Processes in Cooperative
-Organizations, in: Hendrikse, G., Windsperger, J., Cliquet, G.,
-Tuunanen, M. (Hrsg), Strategy and Governance of Networks: Franchising,
-Cooperatives and Strategic Alliances, Heidelberg, Springer, 2008,
-S. 47-62.
+- (zusammen mit Stephan Brunner), Teaching Students of Engineering
+  some Insights of the Internet of Things using Racket and the
+  RaspberryPi, in: Riva, A. (Hrsg.), Proceedings of the 10th European
+  Lisp Symposium, Vrije Universiteit Brussel, Brussels, Belgium,
+  S. 49-50,
+  [PDF (Endfassung Beitrag)](/pub/els2017.pdf),
+  [Link zum kompletten Tagungsband](http://www.european-lisp-symposium.org/static/proceedings/2017.pdf). 
+
+- (zusammen mit Tim Voigt), Innovation Processes in Cooperative
+  Organizations, in: Hendrikse, G., Windsperger, J., Cliquet, G.,
+  Tuunanen, M. (Hrsg.), Strategy and Governance of Networks: Franchising,
+  Cooperatives and Strategic Alliances, Heidelberg, Springer, 2008,
+  S. 47-62.
 
 ### Beiträge in Sammelbänden
 
@@ -20,7 +28,7 @@ S. 47-62.
     B2B-Bestellsystems, in: Barton, Thomas et al., Herausforderungen
     an die Wirtschaftsinformatik: Integration und Konnexion,
     Tagungsband zur 26. AKWI-Jahrestagung, News \& Media, Berlin,
-    2013, S. 164-176, [PDF]({{ root.url }}/pub/JablonskiBrunner2013.pdf), [Link zum kompletten Tagungsband](http://www.akwi.de/AKWI_Tagungsband2013.pdf).
+    2013, S. 164-176, [PDF](/pub/JablonskiBrunner2013.pdf), [Link zum kompletten Tagungsband](http://www.akwi.de/AKWI_Tagungsband2013.pdf).
 
   - (mit Tim Voigt), Die Interaktion von Genossenschaften und ihren
     Mitgliedern im Wettbewerb: Eine evolutionsökonomische Analyse, in:
@@ -184,11 +192,20 @@ oder [ukrainischer](/pub/KommWohnZiBru-ua.pdf) Sprache.
 
 ## Vorträge 
 
+ - (zusammen mit Stephan Brunner) Vortrag und Diskussion zum obigen Beitrag "Teaching Students of Engineering
+  some Insights of the Internet of Things using Racket and the
+  RaspberryPi", 10th European Lisp Symposium, Vrije Universiteit
+  Brussel, Brussels, Belgium, 3.-4. April 2017, In-cooperation with
+  ACM, co-located with <Programming
+  2017>,
+  [PDF (Endfassung Beitrag)](/pub/els2017.pdf),
+  [Folien](/pub/els2017-slides.pdf), [Link zum kompletten Tagungsband](http://www.european-lisp-symposium.org/static/proceedings/2017.pdf).
+ 
  - (zusammen mit Christian Jablonski) Vortrag und Diskussion zum
    obigen Beitrag "Konnexion im E-Commerce: Problemfelder und
    Lösungsansätze anhand eines internetgestützten
    B2B-Bestellsystems", 26. AKWI-Jahrestagung, 16. September 2013, Technische Hochschule
-   Mittelhessen, Gießen und Friedberg.
+   Mittelhessen, Gießen und Friedberg, [PDF](/pub/JablonskiBrunner2013.pdf), [Link zum kompletten Tagungsband](http://www.akwi.de/AKWI_Tagungsband2013.pdf).
 
  - (zusammen mit Tim Voigt) "Diffussionsprozesse bei
    zwischenbetrieblicher Kooperation - Ein erweitertes
