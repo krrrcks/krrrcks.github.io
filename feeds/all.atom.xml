@@ -4,7 +4,33 @@
  <link rel="self" href="http://www.dbrunner.de/feeds/all.atom.xml" />
  <link href="http://www.dbrunner.de/index.html" />
  <id>urn:http-www-dbrunner-de:-index-html</id>
- <updated>2017-04-05T14:00:31Z</updated>
+ <updated>2017-04-06T17:42:00Z</updated>
+ <entry>
+  <title type="text">Meine Erfahrungen mit Locomore</title>
+  <link rel="alternate" href="http://www.dbrunner.de/2017/04/06/meine-erfahrungen-mit-locomore/" />
+  <id>urn:http-www-dbrunner-de:-2017-04-06-meine-erfahrungen-mit-locomore</id>
+  <published>2017-04-06T17:42:00Z</published>
+  <updated>2017-04-06T17:42:00Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Ende 2016 hat &lt;a href="https://locomore.com/de/index.html"&gt;Locomore&lt;/a&gt; eine Zugverbindung von Stuttgart nach Berlin und zurück auf den Markt gebracht. Mittlerweile bin ich schon zwei mal (jeweils von Kassel nach Berlin) mit dem Zug gefahren, einmal im Februar im &lt;a href="https://locomore.com/de/basic/"&gt;Reisebereich Basic&lt;/a&gt; und einmal im März im &lt;a href="https://locomore.com/de/business/"&gt;Reisebereich Business&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Die &amp;ldquo;alten&amp;rdquo; IC-Waggons sind sehr schön und praktisch erneuert worden. Ich finde auch die Farbgestaltung ganz ansprechend, sie wirkt sehr frisch und warm, gemütlich. Mir gefallen die guten Ablagen fürs Gepäck, so bekommt man in Waggons mit Abteilen im Gang auch noch größere Taschen auf der Ablage unter. Ebenso sind ausreichend Steckdosen verfügbar, um elektronische Geräte aufzuladen oder zu betreiben. Etwas ungeschickt finde ich jedoch die Höhe des Tischs, ich habe das Gefühl, der ist recht hoch bzw. nicht so praktisch gebaut. Geblendet hatte mich die Leselampe, deren Anordnung und Funktionsweise fand ich nicht so gelungen.&lt;/p&gt;
+
+&lt;p&gt;Das WLAN hat durchweg gut funktioniert, bei Tunneldurchfahrten gab es gelegentlich Hänger. Aber im Großen und Ganzen eine gute Verfügbarkeit. So konnte ich auf einer Fahrt auch bequem arbeiten.&lt;/p&gt;
+
+&lt;p&gt;Praktisch ist, dass die Reservierung gleich im Ticket enthalten ist, ein Service, den sich die Deutsche Bahn derzeit mit 4,50 Euro bezahlen lässt.&lt;/p&gt;
+
+&lt;p&gt;Das gebuchte Ticket kann man entweder in Papier mitführen oder einfach auf dem Smartphone anzeigen lassen. Letzteres hat einwandfrei funktioniert.&lt;/p&gt;
+
+&lt;p&gt;Ein wirklich gelungenes Konzept ist das Business-Abteil. Es funktioniert so, dass ein normales 6er-Abteil nur mit drei Personen belegt wird, man erhält noch ein kleines Kissen sowie einen Snack und zwei Getränke während der Fahrt.&lt;/p&gt;
+
+&lt;p&gt;Generell habe ich den Service als sehr freundlich und zuvorkommend erlebt. Da habe ich mich sehr wohl und gut umsorgt gefühlt. Auch mit dem kulinarischen Angebot (preislich auch unter der Deutschen Bahn) war ich sehr zufrieden.&lt;/p&gt;
+
+&lt;p&gt;Und letztlich: Endlich wieder einmal mit einem Fernzug in Berlin am Bahnhof Zoo ankommen!&lt;/p&gt;
+
+&lt;p&gt;Zusammengefasst: Eine gute Art zu reisen, ich war sehr zufrieden. Gerade mit dem Business-Ticket bekommt man ein wirklich gutes Angebot: Eine pünktliche und schnelle Verbindung, Sitzplatzresvierung, viel Platz im Abteil, Strom und WLAN plus Catering. Ich hoffe, dass das Konzept von Locomore aufgeht und werde gerne weiterhin mit Locomore fahren. Die nächste Fahrt ist schon gebucht!&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">10th European Lisp Symposium</title>
   <link rel="alternate" href="http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium/" />
@@ -569,42 +595,4 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 
 &lt;p&gt;&lt;strong&gt;Update (01. Dezember 2014):&lt;/strong&gt; Zwischenzeitlich habe ich den  Referentenentwurf für jedermann zum Download bei der taz gefunden:  &lt;a href="http://taz.de/static/pdf/ReferentenentwurfTarifeinheit.pdf"&gt;PDF&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Update (13. Dezember 2014):&lt;/strong&gt; Am 11. Dezember 2014 hat das  Bundeskabinett den Gesetzentwurf zur Tarifeinheit  &lt;a href="http://www.bundesregierung.de/Content/DE/Kabinettssitzung/2014/12/2014-12-11-kabinett.html?nn=434518"&gt;beschlossen&lt;/a&gt;,  er findet sich nun  &lt;a href="http://www.bmas.de/DE/Service/Presse/Pressemitteilungen/Tarifeinheit-staerkt-sozialpartnerschaft.html?nn=31846"&gt;auf der&lt;/a&gt;  Homepage des Bundesministeriums für  Arbeit und Soziales:  &lt;a href="http://www.bmas.de/SharedDocs/Downloads/DE/Thema-Arbeitsrecht/entwurf-gesetz-tarifeinheit.pdf?__blob=publicationFile"&gt;PDF&lt;/a&gt;  Wenig erstaunlicherweise habe ich auf meine Anfrage vom 29. Oktober  2014 außer den oben dargestellten Nachrichten des  &amp;ldquo;Kommunikationscenters&amp;rdquo; nichts gehört.&lt;/p&gt;</content></entry>
- <entry>
-  <title type="text">Warten auf den technischen Fortschritt als politisches Prinzip?</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2014/11/13/warten-auf-den-technischen-fortschritt-als-politisches-prinzip/" />
-  <id>urn:http-www-dbrunner-de:-2014-11-13-warten-auf-den-technischen-fortschritt-als-politisches-prinzip</id>
-  <published>2014-11-13T08:53:28Z</published>
-  <updated>2014-11-13T08:53:28Z</updated>
-  <author>
-   <name>Daniel Brunner</name></author>
-  <content type="html">
-&lt;p&gt;Am 12. November 2014 sendete der &lt;a href="http://www.deutschlandfunk.de"&gt;Deutschlandfunk&lt;/a&gt; in der Reihe &amp;ldquo;Hintergrund&amp;rdquo; einen &lt;a href="http://www.deutschlandfunk.de/energetische-sanierung-widerstand-gegen-das-daemmen-waechst.724.de.html?dram:article_id=303005"&gt;Bericht&lt;/a&gt; über die energetische Sanierung mit Wärmedämmverbundsystemen.&lt;/p&gt;
-
-&lt;p&gt;Zu der Diskussion wollte sich die zuständige Bundesministerin Barbara Hendricks nicht äußern, das Thema sei nur ein Randthema und sie habe andere Prioritäten. Sehr interessant waren dafür dann die Meinungen des sie vertretenden Staatssekretärs &lt;a href="http://www.bmub.bund.de/bmub/leitung-des-hauses/lebenslauf-von-herrn-gunther-adler/"&gt;Gunther Adler&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;In diesem Blogpost will ich auf einen Aspekt des Berichts eingehen. Es sei wohl so, dass die Entsorgung von Wärmedämmverbundsystemen (also im Wesentlichen auf verschiedene Arten behandeltes Polystyrol) schwierig ist. So wird gesagt:&lt;/p&gt;
-
-&lt;blockquote&gt;
- &lt;p&gt;&amp;ldquo;Das große Problem ist gerade bei der Polystyrol-Dämmung, dass die Lebenserwartung der Dämmplatten relativ gering ist. Man geht davon aus, dass sie 20 oder 30 Jahre an der Fassade bleiben können, dann ersetzt werden müssen.&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;Über die Entsorgung wurde gesagt:&lt;/p&gt;
-
-&lt;blockquote&gt;
- &lt;p&gt;&amp;ldquo;Das Dämmmaterial Polystyrol darf nicht auf die Mülldeponie, unter anderem wegen der erwähnten Flammschutzmittel. Das Material soll in Müllverbrennungsanlagen vernichtet werden, &amp;hellip;&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;Auf diese Thematik angesprochen, entgegnete der Staatssekretär unter anderem:&lt;/p&gt;
-
-&lt;blockquote&gt;
- &lt;p&gt;"&amp;hellip; da gibt es berechtigte Fragen, da gibt es auch nichts unter den Tisch zu kehren. Da gibt es im Moment noch Forschungsbedarf."&lt;/p&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;Die DLF-Redakteure wiesen hier jedoch darauf hin, dass das Material seit Langem eingesetzt würde. In den vergangenen 35 Jahren seien 900 Millionen Quadratmeter Wärmedämmverbundsysteme verbaut worden, davon 80 Prozent mit Polystyrol. Hierauf der Staatssekretär:&lt;/p&gt;
-
-&lt;blockquote&gt;
- &lt;p&gt;&amp;ldquo;Wenn wir da schon heute die Forschung anlaufen lassen und fragen, was passiert eigentlich in 30 oder 40 oder 50 Jahren, wenn das dann mal in die Müllverbrennungsanlage geht, da sollten wir doch offen für technischen Fortschritt in Deutschland sein, dass es unserer Industrie und unserer Forschung gelingen wird, beispielsweise Filteranlagen zu entwickeln, die wirklich garantieren, dass hundert Prozent aller Schadstoffe abgefangen werden.&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;Ich fasse zusammen: Das Bundesministerium für Umwelt, Naturschutz, Bau und Reaktorsicherheit unterstützt offen das Inverkehrbringen von Stoffen, deren Entsorgung zumindest &amp;ldquo;offene Fragen&amp;rdquo; und &amp;ldquo;Forschungsbedarf&amp;rdquo; bringt und das Ministerium findet, der technische Fortschritt wird es schon richten. Kurzum, es gilt das Prinzip &amp;ldquo;Hoffnung auf die Zukunft&amp;rdquo; und die Last, sich die Entsorgung zu überlegen, bürdet man den nachfolgenden Generationen auf.&lt;/p&gt;
-
-&lt;p&gt;Wo sind in diesem Zusammenhang eigentlich die ganzen Papiere und politischen Ansätze zu Nachhaltigkeit, Verantwortung, Schutz zukünftiger Generationen geblieben? Im Übrigen widerspricht die Haltung auch dem vom Bauministerium selbst herausgegebenen &lt;a href="http://www.nachhaltigesbauen.de/leitfaeden-und-arbeitshilfen-veroeffentlichungen/leitfaden-nachhaltiges-bauen-2013.html"&gt;Leitfaden Nachhaltiges Bauen 2013&lt;/a&gt;, in dem besonderer Wert auf den Lebenszyklus von Gebäuden auch unter dem Gesichtspunkt der Entsorgung von Materialen gelegt wird.&lt;/p&gt;
-
-&lt;p&gt;Wenn schon das Thema &amp;ldquo;Wärmedämmverbundsysteme&amp;rdquo; nicht die Priorität der Bundesministerin hat, so muss sie sich fragen lassen, ob gerade im Umwelt- und Bauressort das Prinzip &amp;ldquo;Hoffnung auf die Zukunft&amp;rdquo; Leitlinie ihrer Politik ist.&lt;/p&gt;</content></entry></feed>
+&lt;p&gt;&lt;strong&gt;Update (13. Dezember 2014):&lt;/strong&gt; Am 11. Dezember 2014 hat das  Bundeskabinett den Gesetzentwurf zur Tarifeinheit  &lt;a href="http://www.bundesregierung.de/Content/DE/Kabinettssitzung/2014/12/2014-12-11-kabinett.html?nn=434518"&gt;beschlossen&lt;/a&gt;,  er findet sich nun  &lt;a href="http://www.bmas.de/DE/Service/Presse/Pressemitteilungen/Tarifeinheit-staerkt-sozialpartnerschaft.html?nn=31846"&gt;auf der&lt;/a&gt;  Homepage des Bundesministeriums für  Arbeit und Soziales:  &lt;a href="http://www.bmas.de/SharedDocs/Downloads/DE/Thema-Arbeitsrecht/entwurf-gesetz-tarifeinheit.pdf?__blob=publicationFile"&gt;PDF&lt;/a&gt;  Wenig erstaunlicherweise habe ich auf meine Anfrage vom 29. Oktober  2014 außer den oben dargestellten Nachrichten des  &amp;ldquo;Kommunikationscenters&amp;rdquo; nichts gehört.&lt;/p&gt;</content></entry></feed>

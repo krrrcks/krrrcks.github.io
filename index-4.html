@@ -149,6 +149,44 @@
 
           <article>
   <header>
+    <h1><a href='/2014/05/26/my-dockerfile-for-setting-up-octopress/'>My Dockerfile for setting up Octopress</a></h2>
+    <p class='date-and-tags'>
+<time datetime="2014-05-26" pubdate="true">2014-05-26</time> :: <span class="tags"><a href="/tags/Docker.html">Docker</a>, <a href="/tags/Octopress.html">Octopress</a>, <a href="/tags/IT.html">IT</a></span></p>
+  </header>
+
+<p>After my trouble with installing all the dependencies for Octopress I  came up with the following Dockerfile for Docker. This follows the  instructions from the Octopress homepage and uses RVM for managing the ruby dependencies.</p>
+
+<pre><code># dockerfile for octopress
+
+FROM ubuntu:14.04
+MAINTAINER krrrcks &lt;krrrcks@krrrcks.net&gt;
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get update; \
+  apt-get -q -y upgrade
+RUN apt-get -q -y install git curl; \
+  apt-get clean
+RUN git clone git://github.com/imathis/octopress.git /opt/octopress
+RUN curl -L https://get.rvm.io | bash -s stable --ruby
+ENV HOME /root
+RUN echo "source /usr/local/rvm/scripts/rvm" &gt;&gt; /root/.bashrc; 
+RUN /bin/bash -l -c "source /usr/local/rvm/scripts/rvm; \
+  rvm install 1.9.3; \
+  rvm use 1.9.3; \
+  rvm rubygems latest; \
+  cd /opt/octopress; \
+  gem install bundler; \
+  bundle install; \
+  rake install" 
+RUN echo "rvm use 1.9.3" &gt;&gt; /root/.bashrc
+
+WORKDIR /opt/octopress
+EXPOSE 4000
+CMD ["/bin/bash"] </code></pre>
+
+</article>
+<article>
+  <header>
     <h1><a href='/2012/02/28/gießkanne-oder-nicht/'>Gießkanne oder nicht?</a></h2>
     <p class='date-and-tags'>
 <time datetime="2012-02-28" pubdate="true">2012-02-28</time> :: <span class="tags"><a href="/tags/Wirtschaft.html">Wirtschaft</a></span></p>
@@ -348,16 +386,6 @@
 <p>So richtig klar ist mir das nämlich nicht: Haben nicht die gleichen Politiker immer auf eine stärkere Kapitalmarktorientierung gedrängt? Haben wir mit Basel II und anderen Maßnahmen nicht die kapitalmarktorientierten Eigenkapitalunterlegungsvorschriften erhalten? Ausgehend vom Rating eines Schulderns sollte doch das notwendige Eigenkapital bestimmt und in der Folge der Kredit passend bepreist werden. Mit dem Effekt, dass dem kriselnden Häuslebauer die Banken mit Verstärkung von Sicherheiten um die Ecke kommen, mit dem Effekt, dass dem kriselnden Mittelständler die Banken die Zinsen nach oben anpassen und mehr Sicherheiten verlangen. Wenn nun Staaten kriseln, dann soll noch nicht mal der von der Politik vorgesehene Mittler, die Ratingagenturen, ihre Zweifel an der Rückzahlungsfähigkeit äußern dürfen?</p>
 
 <p>Wie kann man die Finanzmärkte in einer bestimmten Weise regulieren und dann über das eigentlich gewollte Ergebnis erstaunt sein?</p>
-
-</article>
-<article>
-  <header>
-    <h1><a href='/2011/10/16/programm-bibliotheken-und-verschiedene-versionsstände/'>Programm-Bibliotheken und verschiedene Versionsstände</a></h2>
-    <p class='date-and-tags'>
-<time datetime="2011-10-16" pubdate="true">2011-10-16</time> :: <span class="tags"><a href="/tags/Homepage.html">Homepage</a>, <a href="/tags/Org-Mode.html">Org-Mode</a>, <a href="/tags/IT.html">IT</a></span></p>
-  </header>
-
-<p>Ich bin ein sehr intensiver Nutzer von <a href="http://www.orgmode.org">Org-Mode</a>, einem speziellen Modul/Modus für den Emacs-Editor (ich habe hier auf meiner Homepage auch einmal mit einer kleinen <a href="http://archive.dbrunner.de/it/org-mode.html">Seite</a> dazu begonnen). Nun ja, was soll man sagen: Bei Emacs wird eine recht alte Version mitgeliefert. Ich wollte dann mal auch wegen einiger Funktionen die neueste nutzen. Also via <code>git</code> heruntergeladen und eingebunden und Peng, irgendwas funktioniert natürlich nicht mehr: Ich benötige pratisch täglich den Export von Org-Mode-Dateien nach <code>LaTeX</code>, der wollte aber nicht mehr. Nun kann ich zwar Lisp, aber das Emacs Lisp ist doch etwas speziell und die Debug-Möglichkeiten sind etwas … nun ja, altbacken. Kurzum: Das macht überhaupt keinen Spaß. Im Endeffekt habe ich dann herausgefunden, dass unter bestimmten Umständen Teile des alten, bei Emacs mitgelieferten Codes nachgeladen wird anstelle der neuen Distribution. Diese bescheidene Art von Emacs mit Modulen und Paketen umzugehen ist wirklich erschreckend. Was dafür wiederum total toll war: In der von mir verwendeten Org-Mode-Version war wohl ein Fehler, das ganze Ding über die Mailingliste geschickt und innert einem halben Tag war der Fehler von anderen Nutzern und von Carsten Dominik auch gleich gefixt. Grandiose Antwortzeit!</p>
 
 </article>
 <footer>
