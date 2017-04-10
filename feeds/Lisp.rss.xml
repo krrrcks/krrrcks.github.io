@@ -18,7 +18,7 @@
 
 &lt;p&gt;After giving a two-days course on IoT using Racket at &lt;a href="http://www.studiumplus.de"&gt;StudiumPlus&lt;/a&gt; last year we submitted a short demonstration. And: It got accepted! It was a great honor for me to give a demonstration at the symposium.&lt;/p&gt;
 
-&lt;p&gt;Our paper is in the proceedings which can be found find on the &lt;a href="http://www.european-lisp-symposium.org/2017/index.html"&gt;conference&amp;rsquo;s homepage&lt;/a&gt;. The slides are available there as well. I host these files here: &lt;a href="/pub/els2017.pdf"&gt;Paper&lt;/a&gt; and &lt;a href="/pub/els2017-slides.pdf"&gt;slides&lt;/a&gt;. The source code is provided as &lt;a href="/pub/els2017-src.zip"&gt;ZIP archive here&lt;/a&gt;.&lt;/p&gt;</description></item>
+&lt;p&gt;Our paper is in the proceedings which can be found find on the &lt;a href="http://www.european-lisp-symposium.org/2017/index.html"&gt;conference&amp;rsquo;s homepage&lt;/a&gt;. The slides are available there as well. I host these files here: &lt;a href="/pub/els2017.pdf"&gt;Paper&lt;/a&gt; and &lt;a href="/pub/els2017-slides.pdf"&gt;slides&lt;/a&gt;. The source code is provided as a &lt;a href="/pub/els2017-src.zip"&gt;ZIP archive&lt;/a&gt;.&lt;/p&gt;</description></item>
   <item>
    <title>Using Racket Minimal and raco</title>
    <link>http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco/</link>

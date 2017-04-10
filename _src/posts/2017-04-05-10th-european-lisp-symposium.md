@@ -18,6 +18,6 @@ the
 slides are available there as well. I host these files
 here: [Paper](/pub/els2017.pdf)
 and [slides](/pub/els2017-slides.pdf). The source code is provided
-as [ZIP archive here](/pub/els2017-src.zip).
+as a [ZIP archive](/pub/els2017-src.zip).
 
 
