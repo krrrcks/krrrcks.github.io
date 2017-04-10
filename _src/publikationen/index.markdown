@@ -13,7 +13,8 @@ Projekte.
   Lisp Symposium, Vrije Universiteit Brussel, Brussels, Belgium,
   S. 49-50,
   [PDF (Endfassung Beitrag)](/pub/els2017.pdf),
-  [Link zum kompletten Tagungsband](http://www.european-lisp-symposium.org/static/proceedings/2017.pdf). 
+  [Link zum kompletten Tagungsband](http://www.european-lisp-symposium.org/static/proceedings/2017.pdf),
+  [Quelltext (ZIP-Archiv)](/pub/els2017-src.zip). 
 
 - (zusammen mit Tim Voigt), Innovation Processes in Cooperative
   Organizations, in: Hendrikse, G., Windsperger, J., Cliquet, G.,
@@ -199,7 +200,9 @@ oder [ukrainischer](/pub/KommWohnZiBru-ua.pdf) Sprache.
   ACM, co-located with <Programming
   2017>,
   [PDF (Endfassung Beitrag)](/pub/els2017.pdf),
-  [Folien](/pub/els2017-slides.pdf), [Link zum kompletten Tagungsband](http://www.european-lisp-symposium.org/static/proceedings/2017.pdf).
+  [Folien](/pub/els2017-slides.pdf),
+  [Link zum kompletten Tagungsband](http://www.european-lisp-symposium.org/static/proceedings/2017.pdf),
+  [Quelltext (ZIP-Archiv)](/pub/els2017-src.zip).
  
  - (zusammen mit Christian Jablonski) Vortrag und Diskussion zum
    obigen Beitrag "Konnexion im E-Commerce: Problemfelder und

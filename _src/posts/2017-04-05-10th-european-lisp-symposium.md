@@ -15,10 +15,9 @@ to give a demonstration at the symposium.
 Our paper is in the proceedings which can be found find on
 the
 [conference's homepage](http://www.european-lisp-symposium.org/2017/index.html). The
-slides are available there as well. I host
-these files here: [Paper](/pub/els2017.pdf)
-and [slides](/pub/els2017-slides.pdf).
-
-PS: I am going to add the source code to my homepage soon. 
+slides are available there as well. I host these files
+here: [Paper](/pub/els2017.pdf)
+and [slides](/pub/els2017-slides.pdf). The source code is provided
+as [ZIP archive here](/pub/els2017-src.zip).
 
 

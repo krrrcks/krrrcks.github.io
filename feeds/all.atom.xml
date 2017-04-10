@@ -44,9 +44,7 @@
 
 &lt;p&gt;After giving a two-days course on IoT using Racket at &lt;a href="http://www.studiumplus.de"&gt;StudiumPlus&lt;/a&gt; last year we submitted a short demonstration. And: It got accepted! It was a great honor for me to give a demonstration at the symposium.&lt;/p&gt;
 
-&lt;p&gt;Our paper is in the proceedings which can be found find on the &lt;a href="http://www.european-lisp-symposium.org/2017/index.html"&gt;conference&amp;rsquo;s homepage&lt;/a&gt;. The slides are available there as well. I host these files here: &lt;a href="/pub/els2017.pdf"&gt;Paper&lt;/a&gt; and &lt;a href="/pub/els2017-slides.pdf"&gt;slides&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;PS: I am going to add the source code to my homepage soon.&lt;/p&gt;</content></entry>
+&lt;p&gt;Our paper is in the proceedings which can be found find on the &lt;a href="http://www.european-lisp-symposium.org/2017/index.html"&gt;conference&amp;rsquo;s homepage&lt;/a&gt;. The slides are available there as well. I host these files here: &lt;a href="/pub/els2017.pdf"&gt;Paper&lt;/a&gt; and &lt;a href="/pub/els2017-slides.pdf"&gt;slides&lt;/a&gt;. The source code is provided as &lt;a href="/pub/els2017-src.zip"&gt;ZIP archive here&lt;/a&gt;.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Neues vom E-Postbrief</title>
   <link rel="alternate" href="http://www.dbrunner.de/2017/02/19/neues-vom-e-postbrief/" />
