@@ -51,3 +51,5 @@ Sitzplatzresvierung, viel Platz im Abteil, Strom und WLAN plus
 Catering. Ich hoffe, dass das Konzept von Locomore aufgeht und werde
 gerne weiterhin mit Locomore fahren. Die nächste Fahrt ist schon
 gebucht!
+
+*Update (2017-05-11):* Oh wie schade, Locomore hat einen Insolvenzantrag [gestellt](https://locomore.com/en/news/2017-05-11/). 
