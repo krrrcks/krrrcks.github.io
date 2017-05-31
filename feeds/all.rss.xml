@@ -4,9 +4,23 @@
   <title>Daniel Brunner: Daniel Brunner</title>
   <description>Daniel Brunner: Daniel Brunner</description>
   <link>http://www.dbrunner.de/index.html</link>
-  <lastBuildDate>Thu, 06 Apr 2017 17:42:00 UT</lastBuildDate>
-  <pubDate>Thu, 06 Apr 2017 17:42:00 UT</pubDate>
+  <lastBuildDate>Wed, 31 May 2017 08:15:51 UT</lastBuildDate>
+  <pubDate>Wed, 31 May 2017 08:15:51 UT</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>Lexmark scheitert mit einer Patentklage in den USA</title>
+   <link>http://www.dbrunner.de/2017/05/31/lexmark-scheitert-mit-einer-patentklage-in-den-usa/</link>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2017-05-31-lexmark-scheitert-mit-einer-patentklage-in-den-usa</guid>
+   <pubDate>Wed, 31 May 2017 08:15:51 UT</pubDate>
+   <author>Daniel Brunner</author>
+   <description>
+&lt;p&gt;Ich hatte im Jahr 2015 einmal über Lexmarks Druckerpatronen-&amp;ldquo;Lizenz&amp;rdquo; &lt;a href="/2015/02/17/lexmarks-druckerpatronen-lizenz/"&gt;gebloggt&lt;/a&gt;. Mit dieser sollte erreicht werden, dass rabattierte Patronen direkt wieder an Lexmark zurückgehen, zumindest verpflichtet sich wie gebloggt der Endkunde dazu, diese Patrone nur einmal zu nuzen und sie auch an Lexmark zurückzugeben.&lt;/p&gt;
+
+&lt;p&gt;In den USA hat Lexmark nun versucht, das Wiederauffüllen sowie den Reimport gebrauchter Patronen durch andere Unternehmen gerichtlich zu unterbinden. Hierzu bediente sich Lexmark einer Patentklage gegen diese &amp;ldquo;Remanufacturer&amp;rdquo;. Diese waberte dann durch die Instanzen und im Ergebnis hat der Supreme Court entschieden, dass die Patentrechte nach dem Verkauf der Patronen (für die im Inland, also den USA, sowie den ins Ausland verkauften) erschöpft sind. Insbesondere stellt der Supreme Court fest, dass die Endkunden-Lizenz möglicherweise ein gültiger und durchsetzbarer Vertrag sein könnte, sich hieraus aber keine patentrechtlichen Ansprüche ableiten lassen.&lt;/p&gt;
+
+&lt;p&gt;Man wird sehen, wie die Druckerpatronen-Industrie darauf reagieren wird.&lt;/p&gt;
+
+&lt;p&gt;Die Entscheidung des Supreme Courts findet sich &lt;a href="https://www.supremecourt.gov/opinions/16pdf/15-1189_ebfj.pdf"&gt;hier&lt;/a&gt;. Hingewiesen wurde ich beim Lesen von &lt;a href="https://blog.fefe.de/?ts=a7d3257d"&gt;Fefes Blog&lt;/a&gt;.&lt;/p&gt;</description></item>
   <item>
    <title>Meine Erfahrungen mit Locomore</title>
    <link>http://www.dbrunner.de/2017/04/06/meine-erfahrungen-mit-locomore/</link>
@@ -522,39 +536,4 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 
 &lt;p&gt;Für die Migration meine Blog-Einträge lief dies wie folgt: Ich hatte die in der alten Homepage mit Org-Mode und Org-Jekyll erstellt. Dabei hatte das Org-Jekyll-Modul entsprechende HTML-Dateien mit einem YAML-Header erzeugt. Mittels Pandoc konnte ich die nun wieder nach Markdown konvertieren, habe die YAML-Header ein wenig angepasst, Kategorien aktualisiert und noch mal das Markup zwecks Zeilenumbrüche, Fußnoten und Links geprüft und leicht angepasst. Insgesamt sehr schnell bewältigbar.&lt;/p&gt;
 
-&lt;p&gt;Dieser ganze Zoo rund um Markdown und andere ähnliche Formate ist zwar manchmal ein bisschen unübersichtlich, aber mir gefällt das sehr gut, dass man mit wenig Markup schön Textdateien strukturieren kann und dann mit Pandoc auch gut hin und her konvertieren kann.&lt;/p&gt;</description></item>
-  <item>
-   <title>Wie das Haus von Bundesministerin Nahles mauert</title>
-   <link>http://www.dbrunner.de/2014/11/21/wie-das-haus-von-bundesministerin-nahles-mauert/</link>
-   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-11-21-wie-das-haus-von-bundesministerin-nahles-mauert</guid>
-   <pubDate>Fri, 21 Nov 2014 09:39:08 UT</pubDate>
-   <author>Daniel Brunner</author>
-   <description>
-&lt;p&gt;Ein Gesetzesvorhaben der großen Koalition ist eine Regelung zur Tarifeinheit. Passend in die Tarifauseinandersetzungen bei der Deutschen Bahn zeigte Bundesministerin Nahles Entschlossenheit und Tatkraft:&lt;/p&gt;
-
-&lt;p&gt;Am 28. Oktober 2014 &lt;a href="http://www.bmas.de/DE/Themen/Arbeitsrecht/Meldungen/gesetzentwurf-tarifeinheit.html;jsessionid=FB47DA2A8F96F14200ECE524ACBD96BC"&gt;informierte sie&lt;/a&gt; die Presse über den Gesetzentwurf ihres Hauses zur Tarifeinheit. Dieser solle in die Ressortabstimmung gehen und am 3. Dezember im Kabinett verabschieden werden. Den Abschluss des parlamentarischen Verfahrens erwartete Frau Nahles für den Sommer 2015.&lt;/p&gt;
-
-&lt;p&gt;Über die Vorstellung und den Inhalt des Entwurfs berichtete ausführlich in zwei Berichten die FAZ (&lt;a href="http://www.faz.net/-i2k-7vmd0"&gt;hier&lt;/a&gt; und &lt;a href="http://www.faz.net/-gqg-7vng9"&gt;hier&lt;/a&gt;). Den Berichten nach fand ein Gespräch der FAZ mit der Bundesministerin statt. Der FAZ lag der Referentenentwurf vor. Den Berichten ebenfalls zu entnehmen war, dass sozialpolitische und arbeitsrechtliche Interessenverbände wie die Bundesvereinigung der Arbeitgeber und auch der Deutsche Gewerkschaftsbund über den Entwurf verfügten, diese genannten sogar an &amp;ldquo;der Ausarbeitung des Gesetzes beteiligt&amp;rdquo; waren (Zitat aus dem FAZ-Bericht).&lt;/p&gt;
-
-&lt;p&gt;Ich bin ja skeptisch, wie man das, was die Koalition sich da vorgenommen hat, regeln kann. Also dachte ich mir: Wenn die Zeitung davon weiß, die Interessenverbände mitgearbeitet haben und auch denen der Entwurf vorlag und dann die Bundesministerin auch noch hierüber Pressegespräche führt und den Entwurf öffentlich &amp;ldquo;vorstellt&amp;rdquo;, dann kann ich da ja auch einmal einen Blick hineinwerfen. Ich habe, da ich den Entwurf nicht auf der Homepage entdeckte, diesen beim Bundesministerium für Arbeit und Soziales angefordert.&lt;/p&gt;
-
-&lt;p&gt;So einfach geht es aber nicht: Es antwortete mir am &lt;em&gt;29. Oktober 2014&lt;/em&gt; das &amp;ldquo;Kommunikationscenter&amp;rdquo; des Bundesministeriums für Arbeit und Soziales wie folgt:&lt;/p&gt;
-
-&lt;blockquote&gt;
- &lt;p&gt;Sollten Sie (&amp;hellip;) den Gesetzentwurf zur Tarifeinheit meinen, so müssen wir Ihnen mitteilen, dass dieser noch nicht veröffentlicht wurde. Er geht in Kürze in die Ressortabstimmung und kann erst danach veröffentlicht werden.&lt;/p&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;Ich wies in einer Antwort darauf hin, dass das ja nicht so ganz sein könnte, dass die Tarifparteien, interessierte Verbände und die Presse den Entwurf vorliegen hätten, der gemeine Bürger sich aber mit der Presseerklärung der Bundesministerin (ein MP3-File mit 2:36 Minuten Länge) bescheiden müsse. Am &lt;em&gt;30. Oktober 2014&lt;/em&gt; teilte das Kommunikationscenter mit, dass sie die Anfrage an die Fachabteilung weitergeben wollten, dafür aber noch meine Postanschrift benötigten. Diese habe ich umgehend übermittelt. Es passierte erst einmal nichts. Am &lt;em&gt;4. November 2014&lt;/em&gt; wollte ich dann den Stand wissen (es kann ja nicht so schwer sein, ein PDF per E-Mail zu versenden) und außerdem, welche Fachabteilung dafür zuständig ist (dann kann man das ja schnell per Telefon oder E-Mail klären). Nichts passierte. Am &lt;em&gt;7. November 2014&lt;/em&gt; habe ich dann noch mal erklärt, dass ich den Entwurf wirklich möchte und die Anfrage formal auf das Informationsfreiheitsgesetz gestützt. Nun wachte das Kommunikationscenter am &lt;em&gt;10. November 2014&lt;/em&gt; auf und teilte mit, dass sie die Anfrage an die zuständige Fachabteilung weitergeleitet hätten. Welche das ist, mochte man mir aber immer noch nicht mitteilen.&lt;/p&gt;
-
-&lt;p&gt;Das war es dann wieder, das Bundesministerium verfiel erneut in Stille. Seit dem sind zwei Wochen vergangen.&lt;/p&gt;
-
-&lt;p&gt;Da mich der Entwurf wirklich interessierte, habe ich einmal einen Interessenverband angeschrieben und nach ca. einer Stunde erhielt ich den Entwurf.&lt;/p&gt;
-
-&lt;p&gt;Ich stelle mir da ja schon einige Fragen: Was ist eigentlich so schwer daran, einen Referentenentwurf, den man ohnehin breit hat zirkulieren lassen, einem Bürger zur Verfügung zu stellen? Warum antwortet die Fachabteilung über einen Zeitraum vom 4. November 2014 bis heute einfach gar nicht?&lt;/p&gt;
-
-&lt;p&gt;Mir drängt sich jedenfalls der Eindruck auf, dass das Ministerium von Frau Nahles die Diskussion gestalten möchte. Dabei soll wohl die Bundesministerin als zupackende und problemlösende Politikerin dargestellt werden. Hierzu werden Verbände und Medien exklusiv mit Details versorgt. Der gemeine Bürger soll sich davon beeindrucken lassen und bloß nicht nach Details fragen; die erfährt er dann schon, wenn die Politik und Ministerialverwaltung es für geboten halten.&lt;/p&gt;
-
-&lt;p&gt;P.S.: Ich weiß, dass Referentenentwürfe normalerweise nicht auf der Homepage erscheinen und Gesetzesvorhaben vorab mit Verbänden diskutiert werden. Ich halte das auch grundsätzlich für sinnvoll. Ich habe aber bisher noch nicht ein solches &amp;ldquo;Mauern&amp;rdquo; erlebt. Bisher erhielt ich dort, wo ich angefragt hatte, immer ohne Schwierigkeiten Auskunft.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Update (01. Dezember 2014):&lt;/strong&gt; Zwischenzeitlich habe ich den  Referentenentwurf für jedermann zum Download bei der taz gefunden:  &lt;a href="http://taz.de/static/pdf/ReferentenentwurfTarifeinheit.pdf"&gt;PDF&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Update (13. Dezember 2014):&lt;/strong&gt; Am 11. Dezember 2014 hat das  Bundeskabinett den Gesetzentwurf zur Tarifeinheit  &lt;a href="http://www.bundesregierung.de/Content/DE/Kabinettssitzung/2014/12/2014-12-11-kabinett.html?nn=434518"&gt;beschlossen&lt;/a&gt;,  er findet sich nun  &lt;a href="http://www.bmas.de/DE/Service/Presse/Pressemitteilungen/Tarifeinheit-staerkt-sozialpartnerschaft.html?nn=31846"&gt;auf der&lt;/a&gt;  Homepage des Bundesministeriums für  Arbeit und Soziales:  &lt;a href="http://www.bmas.de/SharedDocs/Downloads/DE/Thema-Arbeitsrecht/entwurf-gesetz-tarifeinheit.pdf?__blob=publicationFile"&gt;PDF&lt;/a&gt;  Wenig erstaunlicherweise habe ich auf meine Anfrage vom 29. Oktober  2014 außer den oben dargestellten Nachrichten des  &amp;ldquo;Kommunikationscenters&amp;rdquo; nichts gehört.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Dieser ganze Zoo rund um Markdown und andere ähnliche Formate ist zwar manchmal ein bisschen unübersichtlich, aber mir gefällt das sehr gut, dass man mit wenig Markup schön Textdateien strukturieren kann und dann mit Pandoc auch gut hin und her konvertieren kann.&lt;/p&gt;</description></item></channel></rss>

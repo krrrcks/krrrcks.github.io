@@ -4,9 +4,23 @@
   <title>Daniel Brunner: Posts tagged 'IT'</title>
   <description>Daniel Brunner: Posts tagged 'IT'</description>
   <link>http://www.dbrunner.de/tags/IT.html</link>
-  <lastBuildDate>Wed, 05 Apr 2017 14:00:31 UT</lastBuildDate>
-  <pubDate>Wed, 05 Apr 2017 14:00:31 UT</pubDate>
+  <lastBuildDate>Wed, 31 May 2017 08:15:51 UT</lastBuildDate>
+  <pubDate>Wed, 31 May 2017 08:15:51 UT</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>Lexmark scheitert mit einer Patentklage in den USA</title>
+   <link>http://www.dbrunner.de/2017/05/31/lexmark-scheitert-mit-einer-patentklage-in-den-usa/</link>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2017-05-31-lexmark-scheitert-mit-einer-patentklage-in-den-usa</guid>
+   <pubDate>Wed, 31 May 2017 08:15:51 UT</pubDate>
+   <author>Daniel Brunner</author>
+   <description>
+&lt;p&gt;Ich hatte im Jahr 2015 einmal über Lexmarks Druckerpatronen-&amp;ldquo;Lizenz&amp;rdquo; &lt;a href="/2015/02/17/lexmarks-druckerpatronen-lizenz/"&gt;gebloggt&lt;/a&gt;. Mit dieser sollte erreicht werden, dass rabattierte Patronen direkt wieder an Lexmark zurückgehen, zumindest verpflichtet sich wie gebloggt der Endkunde dazu, diese Patrone nur einmal zu nuzen und sie auch an Lexmark zurückzugeben.&lt;/p&gt;
+
+&lt;p&gt;In den USA hat Lexmark nun versucht, das Wiederauffüllen sowie den Reimport gebrauchter Patronen durch andere Unternehmen gerichtlich zu unterbinden. Hierzu bediente sich Lexmark einer Patentklage gegen diese &amp;ldquo;Remanufacturer&amp;rdquo;. Diese waberte dann durch die Instanzen und im Ergebnis hat der Supreme Court entschieden, dass die Patentrechte nach dem Verkauf der Patronen (für die im Inland, also den USA, sowie den ins Ausland verkauften) erschöpft sind. Insbesondere stellt der Supreme Court fest, dass die Endkunden-Lizenz möglicherweise ein gültiger und durchsetzbarer Vertrag sein könnte, sich hieraus aber keine patentrechtlichen Ansprüche ableiten lassen.&lt;/p&gt;
+
+&lt;p&gt;Man wird sehen, wie die Druckerpatronen-Industrie darauf reagieren wird.&lt;/p&gt;
+
+&lt;p&gt;Die Entscheidung des Supreme Courts findet sich &lt;a href="https://www.supremecourt.gov/opinions/16pdf/15-1189_ebfj.pdf"&gt;hier&lt;/a&gt;. Hingewiesen wurde ich beim Lesen von &lt;a href="https://blog.fefe.de/?ts=a7d3257d"&gt;Fefes Blog&lt;/a&gt;.&lt;/p&gt;</description></item>
   <item>
    <title>10th European Lisp Symposium</title>
    <link>http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium/</link>
@@ -570,40 +584,4 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;</description></item>
  &lt;p&gt;"&lt;strong&gt;Persönlich signiert&lt;/strong&gt;: Der Absender signiert die Nachricht zusätzlich mit seinem privaten Schlüssel. Da der private Schlüssel eine eindeutige Zuordnung zu einem Nutzer ermöglicht, erhöht dies den Grad der Authentifizierung.&lt;/p&gt;
  &lt;p&gt;Die eingesetzten Verschlüsselungsverfahren erfüllen allerdings nicht die Voraussetzungen einer qualifizierten elektronischen Signatur nach dem Signaturgesetz (SigG), so dass gesetzlich vorgesehene Schriftformerfordernisse nicht erfüllt werden."&lt;/p&gt;&lt;/blockquote&gt;
 
-&lt;p&gt;Schade, so hat die Post noch eine Möglichkeit mit ihrem Produkt zu punkten verpasst und lässt den Ball ins Seitenaus rollen.&lt;/p&gt;</description></item>
-  <item>
-   <title>Der E-Postbrief, ein Selbstversuch</title>
-   <link>http://www.dbrunner.de/2010/07/25/der-e-postbrief-ein-selbstversuch/</link>
-   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2010-07-25-der-e-postbrief-ein-selbstversuch</guid>
-   <pubDate>Sun, 25 Jul 2010 21:57:00 UT</pubDate>
-   <author>Daniel Brunner</author>
-   <description>
-&lt;p&gt;So, da &lt;a href="http://www.heise.de/ix/meldung/Deutsche-Post-steigt-in-E-Mail-Geschaeft-ein-1037580.html"&gt;kam&lt;/a&gt; er also mit viel Marketingaufwand: Der &lt;a href="http://www.epost.de"&gt;E-Postbrief&lt;/a&gt; der Deutschen Post. Wohl mit Absicht etwas vor der Einführung der &lt;a href="http://www.heise.de/newsticker/meldung/Rechtssichere-Buerger-E-Post-De-Mail-Besonderheiten-und-Fallstricke-1037231.html"&gt;DE-Mail&lt;/a&gt;, einer Initiative der Bundesregierung. Nachdem dann auch ein Werbeflatterer in meinem (normalen) Briefkasten gelandet ist, habe ich mir einen Selbstversuch gegönnt und die neue Plattform testen wollen. (Erinnern Sie sich übrigens daran, dass die Post, ich glaube sogar auch unter der URL &lt;code&gt;epost.de&lt;/code&gt; schon vor Jahren jedem Bundesbürger eine lebenslang gültige E-Mail-Adresse versprochen hat? Nach einigen Jahren starb dieses E-Mail-Portal-Projekt. Werden schon Wetten auf das Ende des E-Postbriefs angenommen?)&lt;/p&gt;
-
-&lt;p&gt;Die Behauptung der Post, mit der E-Mail käme nun eine besondere Form von Rechtssicherheit in das Internet, mag man dem Werbe-Tamtam anlasten. Mir wäre nämlich nicht bekannt, dass E-Mails, in denen man etwas bestellt oder mit denen man Verträge gestaltet, nicht rechtsicher wären. Okay, zugegeben, das Protokoll zum Transport von E-Mails hat Probleme (insb. hinsichtlich der Identifizierung des Absenders). Aber grundsätzlich werden ständig und in großer Zahl Verträge per E-Mail geschlossen, verändert und auch E-Mails als Beweisstücke vor Gericht vorgelegt und anerkannt.&lt;/p&gt;
-
-&lt;p&gt;Was mir auch nicht so ganz klar ist: Wenn E-Mail-Adressen der Art &lt;code&gt;Hans.Mustermann1.23&lt;/code&gt; und &lt;code&gt;Hans.Mustermann.4&lt;/code&gt; vergeben werden, dann weiß ich zwar beim E-Postbrief, dass sich hinter jeder Adresse sicher ein Hans Mustermann verbirgt. Aber ob es derjenige Hans Mustermann ist, mit dem ich einen Vertrag abschließen will, ist mir aus der Adresse nicht erkennbar. Schlicht, solange ich nur die E-Mail-Adresse habe, sind Verwechslungen nicht ausgeschlossen. Das Durchnummerieren ist nur bedingt schön für den Anwender.&lt;/p&gt;
-
-&lt;p&gt;In der Folge nun einige Erlebnisse. Auf die weiteren konzeptionellen Probleme (siehe &lt;a href="http://www.heise.de/newsticker/meldung/Kritik-am-E-Postbrief-waechst-1044814.html"&gt;den Eintrag bei Heise.DE&lt;/a&gt; bzw. &lt;a href="http://www.heise.de/tp/blogs/8/148074"&gt;den Telepolis-Artikel&lt;/a&gt;) will ich gar nicht eingehen, sondern erst einmal das Gefühl des Benutzers in den Vordergrund stellen:&lt;/p&gt;
-
-&lt;p&gt;Nach dem Anmelde-Vorgang, den ich nicht sonderlich komplex fand, erhielt ich irgendwann eine SMS, dass mein Postfach freigeschaltet sei. Also gleich einmal angemeldet und alle möglich Funktionen ausprobiert.&lt;/p&gt;
-
-&lt;p&gt;Trotz der Kritik am vielgescholtene Adressverzeichnis (da nimmt sich &lt;a href="http://gutjahr.biz/blog/2010/07/die-gelbe-gefahr/"&gt;wohl&lt;/a&gt; die Post den Adressverkauf heraus) wollte ich dies testen und melde mich mit ein paar Zusatzinformationen an. Anschließend wollte ich prüfen, wie denn der Eintrag so aussieht, wenn man sich selbst aufruft. Aber, ich finde mich gar nicht im Verzeichnis. Also habe ich diese Einstellung wieder deaktiviert.&lt;/p&gt;
-
-&lt;p&gt;Völlig kryptisch ist das Verfahren, &amp;ldquo;normale&amp;rdquo; E-Mails zu senden. Man muss dazu nämlich ein normales E-Mail-Konto bei einem anderen Provider &amp;ldquo;einbinden&amp;rdquo;. Kein Problem, denke ich mir, lege eines bei meinem Provider an, binde es ein und alles scheint zu funktionieren. Allein, die E-Post-Adresse taugt gar nicht zum E-Mail-Empfang. Man erhält nur Fehlermeldung erfolgloser Zustellungen. Und wenn man umgekehrt eine E-Mail aus dem E-Postbrief-Portal senden will, wird die Domain &lt;code&gt;dp-mail.de&lt;/code&gt; als Absende-Domain angehängt. Eine solche E-Mail wird auch zugestellt (wobei nicht immer, auf die Zustellung einer E-Mail warte ich nocht), jedoch kann man darauf als Empfänger nicht mehr antworten, da auch die Antwort-E-Mail wieder wegen erfolgloser Zustellung irgendwo im gelben Konzern ihre Runden dreht. Dieses E-Mail-Einbinden funktioniert meines Erachtens gar nicht.&lt;/p&gt;
-
-&lt;p&gt;Freudig habe ich zur Kenntnis genommen, dass man auch Faxe empfangen und senden kann. Nach einem Klick wurde mir eine Fax-Nummer zugeteilt. Also schnell ein Testfax handschriftlich gekritzelt, zum Papierfax gerannt und losgefaxt. Ich habe ein Übertragungsprotokoll mit der Aufrschrift &amp;ldquo;Übertragung Ok&amp;rdquo;, aber selbst nach nun drei Tagen ist im E-Postbrief-Eingang kein Telefax eingegangen. Auch diese Funktion scheint kaputt zu sein. Den Versand aus dem E-Postbrief-Portal habe ich mir dann geschenkt.&lt;/p&gt;
-
-&lt;p&gt;Da ich noch niemanden kenne, der auch ein solches E-Postbrief-Konto hat, habe ich den Versuch gemacht und an meine Postanschrift einen E-Postbrief mit normaler Zustellung schreiben wollen. Beim ersten Versuch wollte das Anhängen eines Anhangs (siehe dazu auch noch unten eine generelle Anmerkung zu Fehlern) nicht klappen und eine Fehlerseite erschien. Erfreulicherweise wurde der bisher getippte Text als &amp;ldquo;Entwurf&amp;rdquo; gespeichert. Jedoch war es mir nicht möglich, diesen Entwurf weiter zu bearbeiten, ich konnte ihn mir nur anzeigen lassen, eine &amp;ldquo;Entwurf weiter bearbeiten&amp;rdquo;-Funktion war nicht auszumachen. Was also diese Entwürfe sollen, bleibt das Geheimnis des gelben Riesen. Nachdem ich nun einen neuen Brief erstellt und losgeschicken wollte, das nächste Ärgernis: Das Guthabenkonto für das Porto kann man nur in ganzen Euro-Beträgen aufladen. Das erscheint technisch völlig anachronistisch. Von der Kundenfreundlichkeit her ist das schlicht unverschämt. Aber um des Fortschritts willen investiere ich einen Euro und kann anschließend meinen ersten E-Postbrief (Anschreiben plus ein PDF mit zwei Seiten als Anhang) versenden. In der Tat, am kommenden Tag lag ein fein kuvertierter Brief in meinem Briefkasten. Einzig das PDF war etwas grieselig, aber da wird man mit Standardschriften und ähnlichem sicherlich optimieren können. Diese Funktion ist wirklich praktisch, da man sich das ausdrucken, kuvertieren und frankieren sparen und alles bequem via Web-Portal erledigen kann.&lt;/p&gt;
-
-&lt;p&gt;Empfangen habe ich noch nichts: E-Mails wollte das Portal nicht empfangen und Telefaxe auch nicht. Nun ja, vielleicht sendet mir ja irgendwann mal jemand einen E-Postbrief. Ich habe mir auch eine SMS-Benachrichtigung eingerichtet, befürchte aber, dass diese wie so vieles anderes auch nicht funktioniern wird.&lt;/p&gt;
-
-&lt;p&gt;Abschließend noch ein riesiges Ärgernis: Ständig erscheinen völlig unvermittelt (bspw. beim Absenden von E-Mails, beim Anhängen von PDS an einen E-Postbrief) Fehlerseiten der Art &amp;ldquo;Bitte entschuldigen Sie&amp;rdquo;. Angegeben jeweils völlig kryptische Fehlercodes. Da fragt man sich nach wenigen Minuten, ob dies Produkt wirklich so sicher und so toll ist, wie der Anbieter werbewirksam behauptet.&lt;/p&gt;
-
-&lt;p&gt;Einschränkend will ich sagen, dass ich vielleicht die Bedienung nicht ganz verstanden habe; aber Hilfe-Seiten oder passende Dokumentation habe ich nicht finden können, die mir aus den oben beschriebenen Fallstricken geholfen hätte.&lt;/p&gt;
-
-&lt;p&gt;Zusammenfassend: Man wird wohl einfach einmal abwarten können, ob sich der E-Postbrief oder DE-Mail durchsetzt; auch die Preise werden sicherlich noch ein wenig Bewegung erfahren. Ob die Regelungen aus den AGBen so Bestand haben werden, ist auch fraglich. Was jedoch klar ist: So wie derzeit ausgeliefert, macht das E-Postbrief-System den Eindruck als sei es ein halbes Jahr zu früh in Echtbetrieb gegangen und als habe man die Testphase gleich an die Benutzer delegiert. Ich kann von der Benutzung derzeit nur abraten. Folglich werde ich auch nicht verraten, unter welcher Name- und Nummernkombination ich &lt;code&gt;@epost.de&lt;/code&gt; zu erreichen bin.&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;Nachtrag:&lt;/em&gt; Nun ist doch endlich eine E-Mail an die &lt;code&gt;@dp-mail.de&lt;/code&gt;-Adresse angekommen.&lt;/p&gt;
-
-&lt;p&gt;2010&amp;ndash;08&amp;ndash;04 Mi &lt;em&gt;Nachtrag 2:&lt;/em&gt; Zufällig entdeckte ich in der aktuellen Ausgabe der Wirtschaftswoche eine ähnliche Schilderung von Pannen, der Artikel ist auch &lt;a href="http://www.wiwo.de/unternehmen-maerkte/post-verpatzt-start-des-e-briefs-436971/"&gt;online&lt;/a&gt; verfügbar.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Schade, so hat die Post noch eine Möglichkeit mit ihrem Produkt zu punkten verpasst und lässt den Ball ins Seitenaus rollen.&lt;/p&gt;</description></item></channel></rss>
