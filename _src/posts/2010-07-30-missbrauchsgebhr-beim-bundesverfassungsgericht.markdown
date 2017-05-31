@@ -7,8 +7,8 @@ einlegen, so sollte diese schon einigermaßen Gehalt haben. Ansonsten
 verdonnert einen das Gericht zu einer Missbrauchsgebühr von bis zu 2600
 Euro (siehe § 34 des Bundesverfassungsgerichtsgesetzes). Beim
 Durchblättern der aktuellen Entscheidungen bin ich auf folgende
-Begründung einer Missbrauchsgebühr gestoßen (Aktenzeichen 1 BvR
-2358/08):
+Begründung einer Missbrauchsgebühr gestoßen (Aktenzeichen [1 BvR
+2358/08](http://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/DE/2010/06/rk20100629_1bvr235808.html)):
 
 > "Den Prozessbevollmächtigten der Beschwerdeführerin wird eine
 > Missbrauchsgebühr in Höhe von 500 € auferlegt, weil die Erhebung der
@@ -34,7 +34,8 @@ Ich finde, da spricht das Gericht eine deutliche Sprache. Mich würde ja
 die Beschwerdeschrift spaßeshalber interessieren. Vielleicht waren es ja
 - wie ein Bekannter mutmaßte - ohnehin nur 300 Seiten Marmeladerezepte.
 
-Andererseits wies [Tobias Westphal](http://tobiaswestphal.de/2010/07/beguendung-einer-missbrauchsgebuehr/)
-darauf hin, dass pro Seite eine Gebühr von knapp 1,50 Euro anfiel. Ging
-also doch noch.
+Andererseits wies ein Bekannter darauf hin, dass pro Seite eine Gebühr
+von knapp 1,50 Euro anfiel. Ging also doch noch.
 
+*Update (2017-05-31):* Nicht existierenden Link entfernt, Link zur
+Entscheidung eingefügt.
