@@ -11,8 +11,8 @@ E-Mail: webmaster[at]dbrunner[dot]de
 Telefon: +49 6461 92870  
 Telefax: +49 6461 928740  
 
-Twitter: https://www.twitter.com/krrrcks  
-Github: https://www.github.com/krrrcks  
+Twitter: [https://www.twitter.com/krrrcks]  
+Github: [https://www.github.com/krrrcks]  
 
 Sämtliche von mir erstellten Texte und Bilder sind durch das deutsche Urheberrecht
 geschützt. Ich habe mir noch keine passende CC-Lizenz herausgesucht. Wenn Sie also
