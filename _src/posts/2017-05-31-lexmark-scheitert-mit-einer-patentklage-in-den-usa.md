@@ -29,3 +29,5 @@ sich
 [hier](https://www.supremecourt.gov/opinions/16pdf/15-1189_ebfj.pdf). Hingewiesen
 wurde ich beim Lesen
 von [Fefes Blog](https://blog.fefe.de/?ts=a7d3257d).
+
+*Update (2017-06-04)* Und hier noch der Link zur Fallseite beim [SCOTUSblog](http://www.scotusblog.com/case-files/cases/impression-products-inc-v-lexmark-international-inc/). 
