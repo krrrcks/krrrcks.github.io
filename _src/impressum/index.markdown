@@ -14,10 +14,11 @@ Telefax: +49 6461 928740
 Twitter: [https://www.twitter.com/krrrcks](https://www.twitter.com/krrrcks)  
 Github: [https://www.github.com/krrrcks](https://www.github.com/krrrcks)  
 
-Sämtliche von mir erstellten Texte und Bilder sind durch das deutsche Urheberrecht
-geschützt. Ich habe mir noch keine passende CC-Lizenz herausgesucht. Wenn Sie also
-irgendwas, sei es Text oder Bild, verwenden wollen, schicken Sie mir doch bitte
-eine Nachricht.
+Sämtliche von mir erstellten Texte und Bilder sind durch das deutsche
+Urheberrecht geschützt. Ich habe mir noch keine passende Lizenz
+herausgesucht. Wenn Sie also irgendwas, sei es Text, Bild oder
+Quellcode, verwenden wollen, schicken Sie mir doch bitte eine
+Nachricht. 
 
 *Ein Wort zum Datenschutz:* Diese Homepage ist
 mit [Frog](https://github.com/greghendershott/frog) erstellt, also
