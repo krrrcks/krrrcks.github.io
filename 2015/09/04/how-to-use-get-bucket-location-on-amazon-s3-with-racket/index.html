@@ -6,7 +6,7 @@
     <title>How to use GET Bucket location on Amazon S3 with Racket</title>
     <meta name="description" content="In Racket I want to iterate over my buckets in Amazon S3. They are located in different regions. So how do I get my bucket's location/region? In the API Reference there is a call GET Bucket location. I use Greg's AWS library for Racket and this library au...">
     <meta name="author"      content="Daniel Brunner">
-    <meta name="keywords"    content="IT, Lisp, Racket, AWS">
+    <meta name="keywords"    content="IT, Racket, AWS">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
     <link rel="canonical" href="http://www.dbrunner.de/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/">
@@ -97,8 +97,6 @@
 
 <li><a href="/tags/Linux.html">Linux</a></li>
 
-<li><a href="/tags/Lisp.html">Lisp</a></li>
-
 <li><a href="/tags/Medien.html">Medien</a></li>
 
 <li><a href="/tags/Octopress.html">Octopress</a></li>
@@ -148,7 +146,7 @@
   <header>
     <h1>How to use GET Bucket location on Amazon S3 with Racket</h1>
     <p class='date-and-tags'>
-<time datetime="2015-09-04" pubdate="true">2015-09-04</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Racket.html">Racket</a>, <a href="/tags/AWS.html">AWS</a></span></p>
+<time datetime="2015-09-04" pubdate="true">2015-09-04</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Racket.html">Racket</a>, <a href="/tags/AWS.html">AWS</a></span></p>
   </header>
 
 <p>In <a href="http://www.racket-lang.org">Racket</a> I want to iterate over my buckets in Amazon S3. They are located in different regions. So how do I get my bucket&rsquo;s location/region? In the API Reference there is a call <a href="http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETlocation.html">GET Bucket location</a>. I use <a href="https://github.com/greghendershott/aws">Greg&rsquo;s AWS library for Racket</a> and this library authenticates its calls with <a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">signature version V4</a>. But V4 requires the user to know the <em>region</em> to correctly sign the request. So I need to know the region to ask Amazon S3 for the region where the bucket is located. Otherwise Amazon S3 responds with an error:</p>

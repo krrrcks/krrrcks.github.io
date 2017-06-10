@@ -1,6 +1,6 @@
 	Title: How to run Racket on the Raspberry Pi 2
 	Date: 2015-08-27T13:25:45
-	Tags: IT, Lisp, Racket
+	Tags: IT, Racket
 
 I got a
 [Raspberry Pi 2 Model B](https://www.raspberrypi.org/products/raspberry-pi-2-model-b/)

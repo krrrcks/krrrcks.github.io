@@ -1,6 +1,6 @@
 	Title: Running Racket on AWS Lambda
 	Date: 2015-08-27T12:46:57
-	Tags: IT, Lisp, Racket, AWS
+	Tags: IT, Racket, AWS
 
 I started to use AWS for some projects recently. But I only use few of
 their services. From time to time I look into some of there services

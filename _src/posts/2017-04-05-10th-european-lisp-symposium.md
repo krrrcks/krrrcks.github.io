@@ -1,6 +1,6 @@
     Title: 10th European Lisp Symposium
     Date: 2017-04-05T16:00:31
-    Tags: Racket, IT, Lisp, Veranstaltungen 
+    Tags: Racket, IT, Scheme, Common Lisp, Veranstaltungen 
 
 Last year my brother Stephan and I attended the European Lisp
 Symposium (ELS) for the first time. It was a great event and therefore

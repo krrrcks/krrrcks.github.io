@@ -1,6 +1,6 @@
 	Title: Using Racket Minimal and raco
 	Date: 2016-01-12T10:55:43
-	Tags: IT, Lisp, Racket
+	Tags: IT, Racket
 
 I use Racket Minimal on my smart phone ([this](../2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/)
 describes how to compile the run time for an ARM based

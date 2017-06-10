@@ -1,6 +1,6 @@
 	Title: I played with CHICKEN Scheme, Docker and Alpine Linux
 	Date: 2015-12-19T17:54:50
-	Tags: IT, Lisp, Scheme, Docker, Linux
+	Tags: IT, Scheme, Docker, Linux
 
 I am looking forward to meet LISP people at the
 [32c3's](https://events.ccc.de/congress/2015/wiki/Main_Page) [LISP assembly](https://events.ccc.de/congress/2015/wiki/Assembly:The_%28un%29employed_schemers_%26_lispers_guild). The last days I played a bit with different Scheme

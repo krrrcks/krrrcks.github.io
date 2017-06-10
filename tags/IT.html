@@ -97,8 +97,6 @@
 
 <li><a href="/tags/Linux.html">Linux</a></li>
 
-<li><a href="/tags/Lisp.html">Lisp</a></li>
-
 <li><a href="/tags/Medien.html">Medien</a></li>
 
 <li><a href="/tags/Octopress.html">Octopress</a></li>
@@ -166,7 +164,7 @@
   <header>
     <h1><a href='/2017/04/05/10th-european-lisp-symposium/'>10th European Lisp Symposium</a></h2>
     <p class='date-and-tags'>
-<time datetime="2017-04-05" pubdate="true">2017-04-05</time> :: <span class="tags"><a href="/tags/Racket.html">Racket</a>, <a href="/tags/IT.html">IT</a>, <a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Veranstaltungen.html">Veranstaltungen</a></span></p>
+<time datetime="2017-04-05" pubdate="true">2017-04-05</time> :: <span class="tags"><a href="/tags/Racket.html">Racket</a>, <a href="/tags/IT.html">IT</a>, <a href="/tags/Scheme.html">Scheme</a>, <a href="/tags/Common-Lisp.html">Common Lisp</a>, <a href="/tags/Veranstaltungen.html">Veranstaltungen</a></span></p>
   </header>
 
 <p>Last year my brother Stephan and I attended the European Lisp Symposium (ELS) for the first time. It was a great event and therefore we decided to come to <a href="http://www.european-lisp-symposium.org/2017/index.html">this year&rsquo;s symposium</a>. It took place in Brussels from April 3 to April 4.</p>
@@ -194,7 +192,7 @@
   <header>
     <h1><a href='/2016/01/12/using-racket-minimal-and-raco/'>Using Racket Minimal and raco</a></h2>
     <p class='date-and-tags'>
-<time datetime="2016-01-12" pubdate="true">2016-01-12</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Racket.html">Racket</a></span></p>
+<time datetime="2016-01-12" pubdate="true">2016-01-12</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Racket.html">Racket</a></span></p>
   </header>
 
 <p>I use Racket Minimal on my smart phone (<a href="../2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/">this</a> describes how to compile the run time for an ARM based system). It&rsquo;s is a very small installation of Racket (about 36 MB after installation). After installation one only needs to install the packages that are really neded. But this can be a bit tricky because a lot of packages want to install their documentation and other stuff and bring a whole bunch of files on your drive as dependencies.</p>
@@ -212,7 +210,7 @@
   <header>
     <h1><a href='/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/'>I played with CHICKEN Scheme, Docker and Alpine Linux</a></h2>
     <p class='date-and-tags'>
-<time datetime="2015-12-19" pubdate="true">2015-12-19</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Scheme.html">Scheme</a>, <a href="/tags/Docker.html">Docker</a>, <a href="/tags/Linux.html">Linux</a></span></p>
+<time datetime="2015-12-19" pubdate="true">2015-12-19</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Scheme.html">Scheme</a>, <a href="/tags/Docker.html">Docker</a>, <a href="/tags/Linux.html">Linux</a></span></p>
   </header>
 
 <p>I am looking forward to meet LISP people at the <a href="https://events.ccc.de/congress/2015/wiki/Main_Page">32c3&rsquo;s</a> <a href="https://events.ccc.de/congress/2015/wiki/Assembly:The_%28un%29employed_schemers_%26_lispers_guild">LISP assembly</a>. The last days I played a bit with different Scheme implementations including  <a href="http://call-cc.org">CHICKEN scheme</a>. The main feature of CHICKEN is that it compiles the Scheme code to C and then creates dynamic libraries and binaries with the C compiler. I thought that combining these binaries with a minimal Docker container could give me a very small deployment. So here are my steps:</p>
@@ -276,7 +274,7 @@ CMD /main/main</code></pre>
   <header>
     <h1><a href='/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/'>How to use GET Bucket location on Amazon S3 with Racket</a></h2>
     <p class='date-and-tags'>
-<time datetime="2015-09-04" pubdate="true">2015-09-04</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Racket.html">Racket</a>, <a href="/tags/AWS.html">AWS</a></span></p>
+<time datetime="2015-09-04" pubdate="true">2015-09-04</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Racket.html">Racket</a>, <a href="/tags/AWS.html">AWS</a></span></p>
   </header>
 
 <p>In <a href="http://www.racket-lang.org">Racket</a> I want to iterate over my buckets in Amazon S3. They are located in different regions. So how do I get my bucket&rsquo;s location/region? In the API Reference there is a call <a href="http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETlocation.html">GET Bucket location</a>. I use <a href="https://github.com/greghendershott/aws">Greg&rsquo;s AWS library for Racket</a> and this library authenticates its calls with <a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">signature version V4</a>. But V4 requires the user to know the <em>region</em> to correctly sign the request. So I need to know the region to ask Amazon S3 for the region where the bucket is located. Otherwise Amazon S3 responds with an error:</p>
@@ -317,7 +315,7 @@ is wrong; expecting 'eu-central-1'&lt;/Message&gt;
   <header>
     <h1><a href='/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/'>How to run Racket on the Raspberry Pi 2</a></h2>
     <p class='date-and-tags'>
-<time datetime="2015-08-27" pubdate="true">2015-08-27</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Racket.html">Racket</a></span></p>
+<time datetime="2015-08-27" pubdate="true">2015-08-27</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Racket.html">Racket</a></span></p>
   </header>
 
 <p>I got a <a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi 2 Model B</a> to play with. I used Raspbian image as operating system. I was wondering how difficult it is to get Racket running on the Raspberry Pi. I downloaded the <a href="http://mirror.racket-lang.org/installers/6.2.1/racket-6.2.1-src-builtpkgs.tgz">Unix source + built packages</a> tarball from <a href="http://racket-lang.org">Racket&rsquo;s homepage</a> because I only wanted to compile the core of Racket. After unpacking the tarball I was suprised that the instructions were quite short:</p>
@@ -345,7 +343,7 @@ commands:
   <header>
     <h1><a href='/2015/08/27/running-racket-on-aws-lambda/'>Running Racket on AWS Lambda</a></h2>
     <p class='date-and-tags'>
-<time datetime="2015-08-27" pubdate="true">2015-08-27</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Racket.html">Racket</a>, <a href="/tags/AWS.html">AWS</a></span></p>
+<time datetime="2015-08-27" pubdate="true">2015-08-27</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Racket.html">Racket</a>, <a href="/tags/AWS.html">AWS</a></span></p>
   </header>
 
 <p>I started to use AWS for some projects recently. But I only use few of their services. From time to time I look into some of there services and wonder if they are useful for my tasks. I looked into <a href="http://aws.amazon.com/lambda">AWS Lambda</a>, "&hellip; a compute service that runs your code in response to events and automatically manages the compute resources for you, making it easy to build applications that respond quickly to new information." Nowadays these &ldquo;lambda functions&rdquo; could be written in NodeJS or Java. When I was looking for a roadmap of the supported languages I found an interesting <a href="http://blog.0x82.com/2014/11/24/aws-lambda-functions-in-go/">blog post</a> by <a href="https://www.twitter.com/rubenfonseca">Ruben Fonseca</a>. He explaind how to run Go code on AWS Lambda.</p>
