@@ -1,7 +1,7 @@
 # Impressum
 
-Dies ist mein kleines Blog. Ich zeichne hierfür auch presserechtlich verantwortlich.
-Ich bin wie folgt erreichbar:
+Dies ist meine kleine Homepage. Ich zeichne hierfür auch
+presserechtlich verantwortlich.  Ich bin wie folgt erreichbar:
 
 Daniel Brunner  
 Calvinstraße 19  
