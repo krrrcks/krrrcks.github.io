@@ -68,6 +68,7 @@ http://www.dbrunner.de/ueber/publikationen.html
 http://www.dbrunner.de/ueber/projekte.html
 http://www.dbrunner.de/ueber/lehre.html
 http://www.dbrunner.de/ueber/index.html
+http://www.dbrunner.de/ueber/cv.html
 http://www.dbrunner.de/racket/index.html
 http://www.dbrunner.de/link-sammlung/index.html
 http://www.dbrunner.de/impressum/index.html
