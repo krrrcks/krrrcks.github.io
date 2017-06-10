@@ -31,7 +31,7 @@
 @tabular[#:sep @hspace[1]
 	 #:column-properties '(right right-border left)
 	 #:row-properties '(top top top (top bottom-border) top top top (top bottom-border))
-(list (list "Datum (von-bis)" "" "1996-10 bis 2015-05")
+(list (list "Datum (von-bis)" "" "1996-10 bis 2001-05")
       (list "Name und Art der Bildungs- oder Ausbildungseinrichtung" "" "Philipps-Universität Marburg, Universität des Landes Hessen")
       (list "Hauptfächer" "" "Volkswirtschaftslehere mit den Fächern Volkwirtschaftstheorie, Volkswirtschaftspolitik, Finanzwissenschaft, Organisation und Personal, Wirtschaftsinformatik")
       (list "Erworbene Qualifikation" "" "Diplom-Volkswirt")
