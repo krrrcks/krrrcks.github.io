@@ -52,18 +52,22 @@ summary {
     font-family: "PT Serif", "Georgia", serif; 
 }
 
+#content h2, #content h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
 article {
     border-bottom: 1px dashed #e5e5e5;
 }
 
 .container {
-    font-size: 16px;
+    font-size: 18px;
 }
 
 /* Customize container */
 @media (min-width: 768px) {
     .container {
-    font-size: 18px; 
     max-width: 730px;
   }
 }

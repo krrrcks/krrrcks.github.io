@@ -14,9 +14,9 @@
     <link rel="prev" href="/2010/03/21/eine-verschwurbelte-stellenausschreibung/">
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
     <link rel="stylesheet" type="text/css" href="/css/dbr.css">
     <link rel="stylesheet" type="text/css" href="/css/pygments.css">
-    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
     <link rel="stylesheet" type="text/css" href="/css/custom.css">
     <!-- Feeds -->
     <link rel="alternate" type="application/atom+xml"
@@ -57,12 +57,17 @@
         <div class="collapse navbar-collapse our-nav-collapse"
              role="navigation">
           <ul class="nav navbar-nav">
-            <li>
-              <a href="/ueber/index.html">Über mich</a>
-            </li> 
-            <li>
-              <a href="/publikationen/index.html">Publikationen etc.</a>
-            </li> 
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Über mich <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/ueber/index.html">Kurzvorstellung</a></li>
+                <li><a href="/ueber/publikationen.html">Publikationen</a></li>
+                <li><a href="/ueber/vortraege.html">Vorträge</a></li>
+                <li><a href="/ueber/lehre.html">Lehre</a></li>
+                <li><a href="/ueber/projekte.html">Projekte/Themen</a></li>
+              </ul>
+            </li>
             <li>
               <a href="/impressum/index.html">Impressum</a>
             </li> 
@@ -131,6 +136,14 @@
 <li><a href="/tags/Veranstaltungen.html">Veranstaltungen</a></li>
 
 <li><a href="/tags/Wirtschaft.html">Wirtschaft</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Feeds <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/feeds/all.atom.xml">Atom</a></li>
+                <li><a href="/feeds/all.rss.xml|">RSS</a></li>
               </ul>
             </li>
           </ul>
@@ -222,8 +235,7 @@
                  }
              }(document,"script","twitter-wjs");
            </script></p>
-        <p>Made with  <a href="https://github.com/greghendershott/frog">Frog</a> and <a href="http://www.racket-lang.org">Racket</a>. Using <a href="http://www.getbootstrap.com">Bootstrap</a>.
-          Feeds are available via <a href="/feeds/all.atom.xml">Atom</a> or <a href="/feeds/all.rss.xml">RSS</a>.</p>
+        <p>Made with  <a href="https://github.com/greghendershott/frog">Frog</a> and <a href="http://www.racket-lang.org">Racket</a>. Using <a href="http://www.getbootstrap.com">Bootstrap</a>.</p>
         <p><em>(C) 2017, Daniel Brunner</em>.</p>
       </footer>
     </div>

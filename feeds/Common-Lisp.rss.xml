@@ -10,8 +10,9 @@
   <item>
    <title>DateTime conversion can be tricky</title>
    <link>http://www.dbrunner.de/2014/07/24/datetime-conversion-can-be-tricky/</link>
-   <guid>urn:http-www-dbrunner-de:-2014-07-24-datetime-conversion-can-be-tricky</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-07-24-datetime-conversion-can-be-tricky</guid>
    <pubDate>Thu, 24 Jul 2014 07:41:36 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;I wrote a small Lisp application and a JavaScript client gets some data from that application. All time stamps are returned as &amp;ldquo;Lisp&amp;rdquo; time stamps, i.e. an integer with seconds where zero equals Jan 01 1900.&lt;/p&gt;
 
@@ -37,8 +38,9 @@
   <item>
    <title>I learned something about symbols and packages</title>
    <link>http://www.dbrunner.de/2014/07/06/i-learned-something-about-symbols-and-packages/</link>
-   <guid>urn:http-www-dbrunner-de:-2014-07-06-i-learned-something-about-symbols-and-packages</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-07-06-i-learned-something-about-symbols-and-packages</guid>
    <pubDate>Sun, 06 Jul 2014 07:02:39 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;I am using Common Lisp for developing a web application. Several days ago a new part of this application didn&amp;rsquo;t worked as supposed and I spent a considerable large amount of time in finding the bug. It was a very simple problem with symbols where I mixed something up.&lt;/p&gt;
 

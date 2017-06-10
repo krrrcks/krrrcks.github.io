@@ -63,9 +63,12 @@ http://www.dbrunner.de/2010/07/09/kurze-anmerkung-zum-mehr-brutto-vom-netto/
 http://www.dbrunner.de/2017/02/19/neues-vom-e-postbrief/
 http://www.dbrunner.de/2010/03/07/kuler-eine-web-anwendung-zum-farben-abmischen-von-adobe/
 http://www.dbrunner.de/2014/07/06/i-learned-something-about-symbols-and-packages/
+http://www.dbrunner.de/ueber/vortraege.html
+http://www.dbrunner.de/ueber/publikationen.html
+http://www.dbrunner.de/ueber/projekte.html
+http://www.dbrunner.de/ueber/lehre.html
 http://www.dbrunner.de/ueber/index.html
 http://www.dbrunner.de/racket/index.html
-http://www.dbrunner.de/publikationen/index.html
 http://www.dbrunner.de/link-sammlung/index.html
 http://www.dbrunner.de/impressum/index.html
 http://www.dbrunner.de/404.html

@@ -10,8 +10,9 @@
   <item>
    <title>Mind the storage driver for Ubuntu cloud images (on Azure)</title>
    <link>http://www.dbrunner.de/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure/</link>
-   <guid>urn:http-www-dbrunner-de:-2014-07-24-mind-the-storage-driver-for-ubuntu-cloud-images-on-azure</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-07-24-mind-the-storage-driver-for-ubuntu-cloud-images-on-azure</guid>
    <pubDate>Thu, 24 Jul 2014 10:30:43 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;A few days ago I wanted to build Firefox OS&amp;rsquo; newest release for a friend. Because I did not wanted these GB of code, binaries etc. on my notebook I fired up an Ubuntu image on Microsoft Azure. I feared that at a certain point in the build process I may had to download everything to my local machine and therefore I installed Docker via a simple&lt;/p&gt;
 

@@ -1,7 +1,5 @@
 # Über mich
 
-## Kurzer Lebenslauf
-
 <img class="right" src="/img/daniel.jpg" title="Daniel">
 
 Mein Name ist *Daniel Brunner*, ich habe Ende der 1990er Jahre an der
@@ -11,17 +9,19 @@ am *[Marburger Genossenschaftsinstitut](http://www.ifg-marburg.de)*
 gearbeitet, dem ich auch heute noch verbunden bin. Anschließend habe
 ich im in den elterlichen
 *Software-Unternehmen ([Link](http://www.systemhaus-brunner.de) und [Link](http://www.brunner-software.de))* meine
-Arbeit aufgenommen.
+Arbeit aufgenommen. 
 
-## Interessen Ökonomie 
+## Interessen
+
+Ökonomie:  
 
 * Markt- und Wettbewerbstheorie
 * Evolutionsökonomik 
 * (österreichische) Kapitaltheorie 
 * Wohnungsmärkte
-* Genossenschaften
+* Genossenschaften 
 
-## Interessen Technik
+Technik:  
 
 * Common Lisp, [Racket](/racket/index.html), Scheme 
 * Linux, Container-Virtualisierung mit OpenVZ, Docker
@@ -31,15 +31,22 @@ Arbeit aufgenommen.
 
 ## Mitgliedschaften
 
-* American Economic Association
-* Verein für Socialpolitik
-* European Network for Housing Research 
+* [American Economic Association](https://www.aeaweb.org)
+* [Verein für Socialpolitik](https://www.socialpolitik.de)
+* [European Network for Housing Research](https://www.enhr.net)
 
-## Zu meinen bisherigen Homepages und Beiträgen
+## Weitere Informationen
+
+* [Publikationen](/ueber/publikationen.html)
+* [Vorträge](/ueber/vortraege.html)
+* [Lehre](/ueber/lehre.html)
+* [Projekte](/ueber/projekte.html)
+
+## Archiv meiner bisherigen Homepages und Beiträgen
 
 Hier habe ich noch einige Links zu den Inhalten meiner früheren
 Homepages gesammelt: 
 
-* [Links alter Beiträge (2010-2012)](/link-sammlung/)
 * [Alte Homepage (2010-2012)](http://archive.dbrunner.de)
 * [Alte Homepage (2005-2009)](http://archive.dbrunner.de/old/main.html) 
+

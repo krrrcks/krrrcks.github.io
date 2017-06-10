@@ -10,8 +10,9 @@
   <item>
    <title>Ich habe mal Octopress aktualisert</title>
    <link>http://www.dbrunner.de/2014/12/21/ich-habe-mal-octopress-aktualisert/</link>
-   <guid>urn:http-www-dbrunner-de:-2014-12-21-ich-habe-mal-octopress-aktualisert</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-12-21-ich-habe-mal-octopress-aktualisert</guid>
    <pubDate>Sun, 21 Dec 2014 10:58:16 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;Neulich fiel mir auf, dass die Suchfunktion, die auf Google basiert, nicht nur auf der eigenen Homepage, sondern im &amp;ldquo;gesamten&amp;rdquo; Suchindex von Google gesucht hat. Eben flatterte dieser &lt;a href="https://twitter.com/octopress/status/546528904115404800"&gt;Tweet&lt;/a&gt; mit &lt;a href="https://github.com/imathis/octopress/commit/514ed5eb9f6bb91a6f3288febf3c2ba892a9b693"&gt;Link&lt;/a&gt; zu einem Fix an mir vorbei und da hat sich wohl die API geändert.&lt;/p&gt;
 
@@ -41,8 +42,9 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
   <item>
    <title>Migration alter Blog-Einträge</title>
    <link>http://www.dbrunner.de/2014/12/17/migration-alter-blog-einträge/</link>
-   <guid>urn:http-www-dbrunner-de:-2014-12-17-migration-alter-blog-einträge</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-12-17-migration-alter-blog-einträge</guid>
    <pubDate>Wed, 17 Dec 2014 17:11:00 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;Es kamen lange Winterabende und ich habe die alten Blog-Einträge von der mittels Org-Mode erstellten Seite hier nach Octopress migriert. Im Archiv sind diese zu finden und die Links etc. sollten nun auch passend mit migriert worden sein.&lt;/p&gt;
 
@@ -56,8 +58,9 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
   <item>
    <title>Unicode support for Octopress</title>
    <link>http://www.dbrunner.de/2014/06/10/unicode-support-for-octopress/</link>
-   <guid>urn:http-www-dbrunner-de:-2014-06-10-unicode-support-for-octopress</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-06-10-unicode-support-for-octopress</guid>
    <pubDate>Tue, 10 Jun 2014 07:26:22 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;Well, it seems Octopress/Jekyll would like to have a locale set for UTF&amp;ndash;8 support. I followed &lt;a href="http://www.dominik-gaetjens.de/blog/2012/06/09/utf-8-in-octopress/"&gt;this (text in German)&lt;/a&gt; hint and now my Dockerfile looks like this:&lt;/p&gt;
 
@@ -99,8 +102,9 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;
   <item>
    <title>Relaunch fast fertig</title>
    <link>http://www.dbrunner.de/2014/06/10/relaunch-fast-fertig/</link>
-   <guid>urn:http-www-dbrunner-de:-2014-06-10-relaunch-fast-fertig</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-06-10-relaunch-fast-fertig</guid>
    <pubDate>Tue, 10 Jun 2014 07:20:03 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;So, nach einigem Gefummel mit Ruby und Octopress und den Weiterleitungsmöglichkeiten meines Hosters ist die Sache wohl bald so am laufen, wie ich mir das vorstelle. Es fehlt noch ein wenig das Eindeutschen der Octopress-Texte und vielleicht so eine Kategorien-Liste rechts.&lt;/p&gt;
 
@@ -110,8 +114,9 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;
   <item>
    <title>Ein Relaunch</title>
    <link>http://www.dbrunner.de/2014/06/06/ein-relaunch/</link>
-   <guid>urn:http-www-dbrunner-de:-2014-06-06-ein-relaunch</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-06-06-ein-relaunch</guid>
    <pubDate>Fri, 06 Jun 2014 13:48:31 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;Ich denke, mir geht es wie vielen: Nach einer gewissen Zeit, in der das bisherige Blog, die bisherige Web-Seite nicht gepflegt wird,  steht irgendwann ein Neubeginn an, dann gleich mit einem &amp;ldquo;Relaunch&amp;rdquo; und vielen neuen und guten Vorsätzen.&lt;/p&gt;
 
@@ -121,8 +126,9 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;
   <item>
    <title>My Dockerfile for setting up Octopress</title>
    <link>http://www.dbrunner.de/2014/05/26/my-dockerfile-for-setting-up-octopress/</link>
-   <guid>urn:http-www-dbrunner-de:-2014-05-26-my-dockerfile-for-setting-up-octopress</guid>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-05-26-my-dockerfile-for-setting-up-octopress</guid>
    <pubDate>Mon, 26 May 2014 07:24:00 UT</pubDate>
+   <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;After my trouble with installing all the dependencies for Octopress I  came up with the following Dockerfile for Docker. This follows the  instructions from the Octopress homepage and uses RVM for managing the ruby dependencies.&lt;/p&gt;
 
