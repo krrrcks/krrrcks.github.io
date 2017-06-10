@@ -7,7 +7,7 @@ Mein Name ist *Daniel Brunner*, ich habe Ende der 1990er Jahre an der
 *Volkswirtschaftslehre* studiert. Anschließend habe ich einige Jahre
 am *[Marburger Genossenschaftsinstitut](http://www.ifg-marburg.de)*
 gearbeitet, dem ich auch heute noch verbunden bin. Anschließend habe
-ich im in den elterlichen
+ich in den elterlichen
 *Software-Unternehmen ([Link](http://www.systemhaus-brunner.de) und [Link](http://www.brunner-software.de))* meine
 Arbeit aufgenommen. 
 
