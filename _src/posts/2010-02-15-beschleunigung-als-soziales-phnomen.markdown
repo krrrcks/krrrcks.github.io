@@ -1,6 +1,6 @@
 	Title: Beschleunigung als soziales Phänomen
 	Date: 2010-02-15T22:10:00
-	Tags: Gesellschaft
+	Tags: Allerlei
 
 Wozu späte Autofahrten gut sein können: Im September 2009 habe ich in
 den Funkhausgesprächen bei WDR5 eine interessante Gesprächsrunde zum

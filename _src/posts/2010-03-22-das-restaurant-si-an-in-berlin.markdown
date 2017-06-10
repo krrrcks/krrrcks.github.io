@@ -1,6 +1,6 @@
 	Title: Das Restaurant Si An in Berlin
 	Date: 2010-03-22T17:36:00
-	Tags: Ausgehen
+	Tags: Allerlei
 
 Nun schon zum wiederholten mal hat es mich in Berlin im Stadtteil
 Prenzlauer Berg in das [Si An](http://www.sian-berlin.de) in Berlin

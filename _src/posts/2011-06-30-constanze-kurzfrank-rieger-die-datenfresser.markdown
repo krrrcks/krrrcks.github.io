@@ -1,6 +1,6 @@
 	Title: Constanze Kurz/Frank Rieger, Die Datenfresser
 	Date: 2011-06-30T13:00:00
-	Tags: Bücher, IT
+	Tags: Allerlei, IT
 
 Nun, ich habe das Buch von Constanze Kurz und Frank Rieger, Die
 Datenfresser, gelesen. Hier eine sehr kurze Besprechung:

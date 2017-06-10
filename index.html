@@ -6,7 +6,7 @@
     <title>Daniel Brunner</title>
     <meta name="description" content="Daniel Brunner">
     <meta name="author"      content="Daniel Brunner">
-    <meta name="keywords"    content="AWS, Common Lisp, JavaScript, Gesellschaft, Linux, CHICKEN, Wirtschaft, Scheme, Bücher, Org-Mode, Politik, R, Veranstaltungen, MorgenGrauen, Frog, Medien, Allerlei, Statistik, Lisp, Ausgehen, all, Reisen, Homepage, Behörden, Octopress, Docker, IT, Racket, S3, Steuern, Azure">
+    <meta name="keywords"    content="AWS, Medien, Allerlei, Common Lisp, JavaScript, Statistik, Lisp, Linux, Wirtschaft, all, Reisen, Homepage, Frog, Behörden, Racket, Politik, Octopress, Docker, IT, Org-Mode, Steuern, Veranstaltungen, Scheme">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
     <link rel="canonical" href="http://www.dbrunner.de/index.html">
@@ -79,25 +79,15 @@
 
 <li><a href="/tags/Allerlei.html">Allerlei</a></li>
 
-<li><a href="/tags/Ausgehen.html">Ausgehen</a></li>
-
 <li><a href="/tags/AWS.html">AWS</a></li>
 
-<li><a href="/tags/Azure.html">Azure</a></li>
-
 <li><a href="/tags/Behörden.html">Behörden</a></li>
-
-<li><a href="/tags/Bücher.html">Bücher</a></li>
-
-<li><a href="/tags/CHICKEN.html">CHICKEN</a></li>
 
 <li><a href="/tags/Common-Lisp.html">Common Lisp</a></li>
 
 <li><a href="/tags/Docker.html">Docker</a></li>
 
 <li><a href="/tags/Frog.html">Frog</a></li>
-
-<li><a href="/tags/Gesellschaft.html">Gesellschaft</a></li>
 
 <li><a href="/tags/Homepage.html">Homepage</a></li>
 
@@ -111,21 +101,15 @@
 
 <li><a href="/tags/Medien.html">Medien</a></li>
 
-<li><a href="/tags/MorgenGrauen.html">MorgenGrauen</a></li>
-
 <li><a href="/tags/Octopress.html">Octopress</a></li>
 
 <li><a href="/tags/Org-Mode.html">Org-Mode</a></li>
 
 <li><a href="/tags/Politik.html">Politik</a></li>
 
-<li><a href="/tags/R.html">R</a></li>
-
 <li><a href="/tags/Racket.html">Racket</a></li>
 
 <li><a href="/tags/Reisen.html">Reisen</a></li>
-
-<li><a href="/tags/S3.html">S3</a></li>
 
 <li><a href="/tags/Scheme.html">Scheme</a></li>
 
@@ -297,7 +281,7 @@
   <header>
     <h1><a href='/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/'>I played with CHICKEN Scheme, Docker and Alpine Linux</a></h2>
     <p class='date-and-tags'>
-<time datetime="2015-12-19" pubdate="true">2015-12-19</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Scheme.html">Scheme</a>, <a href="/tags/CHICKEN.html">CHICKEN</a>, <a href="/tags/Docker.html">Docker</a>, <a href="/tags/Linux.html">Linux</a></span></p>
+<time datetime="2015-12-19" pubdate="true">2015-12-19</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Scheme.html">Scheme</a>, <a href="/tags/Docker.html">Docker</a>, <a href="/tags/Linux.html">Linux</a></span></p>
   </header>
 
 <p>I am looking forward to meet LISP people at the <a href="https://events.ccc.de/congress/2015/wiki/Main_Page">32c3&rsquo;s</a> <a href="https://events.ccc.de/congress/2015/wiki/Assembly:The_%28un%29employed_schemers_%26_lispers_guild">LISP assembly</a>. The last days I played a bit with different Scheme implementations including  <a href="http://call-cc.org">CHICKEN scheme</a>. The main feature of CHICKEN is that it compiles the Scheme code to C and then creates dynamic libraries and binaries with the C compiler. I thought that combining these binaries with a minimal Docker container could give me a very small deployment. So here are my steps:</p>
@@ -361,7 +345,7 @@ CMD /main/main</code></pre>
   <header>
     <h1><a href='/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/'>How to use GET Bucket location on Amazon S3 with Racket</a></h2>
     <p class='date-and-tags'>
-<time datetime="2015-09-04" pubdate="true">2015-09-04</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Racket.html">Racket</a>, <a href="/tags/AWS.html">AWS</a>, <a href="/tags/S3.html">S3</a></span></p>
+<time datetime="2015-09-04" pubdate="true">2015-09-04</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Lisp.html">Lisp</a>, <a href="/tags/Racket.html">Racket</a>, <a href="/tags/AWS.html">AWS</a></span></p>
   </header>
 
 <p>In <a href="http://www.racket-lang.org">Racket</a> I want to iterate over my buckets in Amazon S3. They are located in different regions. So how do I get my bucket&rsquo;s location/region? In the API Reference there is a call <a href="http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETlocation.html">GET Bucket location</a>. I use <a href="https://github.com/greghendershott/aws">Greg&rsquo;s AWS library for Racket</a> and this library authenticates its calls with <a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">signature version V4</a>. But V4 requires the user to know the <em>region</em> to correctly sign the request. So I need to know the region to ask Amazon S3 for the region where the bucket is located. Otherwise Amazon S3 responds with an error:</p>

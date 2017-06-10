@@ -1,6 +1,6 @@
 	Title: Eindrücke vom 31C3
 	Date: 2015-01-05T17:03:00
-	Tags: IT, Veranstaltungen, Reisen, MorgenGrauen
+	Tags: IT, Veranstaltungen, Reisen
 
 Dieses Jahr habe ich mich einmal aufgerafft und bin das erste mal zum
 Congress des CCC nach Hamburg gefahren. Im Folgenden ein paar

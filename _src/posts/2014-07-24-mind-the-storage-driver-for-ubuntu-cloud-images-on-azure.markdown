@@ -1,6 +1,6 @@
 	Title: Mind the storage driver for Ubuntu cloud images (on Azure)
 	Date: 2014-07-24T12:30:43
-	Tags: Azure, Docker, IT
+	Tags: Docker, IT
 
 A few days ago I wanted to build Firefox OS' newest release for a
 friend. Because I did not wanted these GB of code, binaries etc. on my

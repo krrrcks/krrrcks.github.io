@@ -1,6 +1,6 @@
 	Title: Verrechnen leicht gemacht
 	Date: 2010-06-13T15:10:00
-	Tags: Statistik, IT, R
+	Tags: Statistik, IT
 
 Folgende Ereignisse finde ich ja sehr erhellend: Telepolis
 [berichtete](http://www.heise.de/tp/blogs/3/121897) von einer Studie

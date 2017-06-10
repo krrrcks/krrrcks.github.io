@@ -1,6 +1,6 @@
 	Title: How to use GET Bucket location on Amazon S3 with Racket
 	Date: 2015-09-04T07:23:43 
-	Tags: IT, Lisp, Racket, AWS, S3
+	Tags: IT, Lisp, Racket, AWS
 
 In [Racket](http://www.racket-lang.org) I want to iterate over my
 buckets in Amazon S3. They are located in different regions. So how do
