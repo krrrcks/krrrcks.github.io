@@ -38,7 +38,7 @@
       (list "Datum (von-bis)" "" "1988-08 bis 1995-06")	      
       (list "Name und Art der Bildungs- oder Ausbildungseinrichtung" "" "Lahntalschule Biedenkopf, Gymnasium des Landkreises Marburg-Biedenkopf")
       (list "Hauptfächer" "" "Fächer der Abiturprüfung: Mathematik, Chemie, Religion, Deutsch")
-      (list "Erworbene Qualifikation" "" "Allgemeine Hochschulereife"))
+      (list "Erworbene Qualifikation" "" "Allgemeine Hochschulreife"))
 ]
 	    
 @; (list "Datum (von-bis)" "" "")
