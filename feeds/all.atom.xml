@@ -4,7 +4,17 @@
  <link rel="self" href="http://www.dbrunner.de/feeds/all.atom.xml" />
  <link href="http://www.dbrunner.de/index.html" />
  <id>urn:http-www-dbrunner-de:-index-html</id>
- <updated>2017-05-31T08:15:51Z</updated>
+ <updated>2017-06-14T10:18:02Z</updated>
+ <entry>
+  <title type="text">Folgen des Lexmark-Urteils</title>
+  <link rel="alternate" href="http://www.dbrunner.de/2017/06/14/folgen-des-lexmark-urteils/" />
+  <id>urn:http-www-dbrunner-de:-2017-06-14-folgen-des-lexmark-urteils</id>
+  <published>2017-06-14T10:18:02Z</published>
+  <updated>2017-06-14T10:18:02Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Zum Urteil des Supreme Courts über die Patentklage von Lexmark (gebloggt &lt;a href="/2017/05/31/lexmark-scheitert-mit-einer-patentklage-in-den-usa/"&gt;hier&lt;/a&gt;) habe ich in der &lt;a href="http://www.lto.de"&gt;Legal Tribune Online&lt;/a&gt; eine interessante Einordnung &lt;a href="http://www.lto.de/recht/hintergruende/h/us-supreme-court-urteil-lexmark-drucker-patronen-patentrechte-erschoepfung-welthandel-europa/"&gt;gelesen&lt;/a&gt;. In dem Beitrag darauf hingewiesen, dass die Entscheidung, dass beim Export von Gütern der Patentschutz erschöpft, eine Abkehr der bisherigen Rechtsprechung in den USA sei. Dies habe gravierende Auswirkungen auf den Export patentgeschützter Güter wie Medikament oder Lizenzverträge soweit sie sich auf die Erschöpfung von Patenten beziehen. Damit wird es für die US-Patenthinaher schwierig, den Re-Import mit dem Verweis auf das Patentrecht abzuwehren. Zugleich weist der Autor auf die Auswirkungen im internationalen Handel hin und macht deutlich, dass die Frage der Erschöpfung bei Patenten wohl eine der umstrittensten Fragen im Welthandel darstellt.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Lexmark scheitert mit einer Patentklage in den USA</title>
   <link rel="alternate" href="http://www.dbrunner.de/2017/05/31/lexmark-scheitert-mit-einer-patentklage-in-den-usa/" />
@@ -558,22 +568,4 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;blockquote&gt;
  &lt;p&gt;&amp;ldquo;Ein Steuergesetz ist verfassungswidrig, wenn es Gestaltungen zulässt, mit denen Steuerentlastungen erzielt werden können, die es nicht bezweckt und die gleichheitsrechtlich nicht zu rechtfertigen sind.&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
 
-&lt;p&gt;Nun bin ich kein Steuer-, Verfassungsrechtsspezialist (genaugenommen gar kein Rechtsspezialist) und weiß nicht, ob dieser Satz nicht ohnehin schon gilt oder Verfassungs- und Steurrechtsrealität ist. Ich habe es allerdings in dieser Klarheit noch nicht gelesen. Und wenn ich mir so das eine oder andere Steuergesetz und seine Wirkungen ansehe, dann kommt da unter diesem Leitsatz vielleicht in den kommenden Jahren einiges auf die Gerichte zu.&lt;/p&gt;</content></entry>
- <entry>
-  <title type="text">Migration alter Blog-Einträge</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2014/12/17/migration-alter-blog-einträge/" />
-  <id>urn:http-www-dbrunner-de:-2014-12-17-migration-alter-blog-einträge</id>
-  <published>2014-12-17T17:11:00Z</published>
-  <updated>2014-12-17T17:11:00Z</updated>
-  <author>
-   <name>Daniel Brunner</name></author>
-  <content type="html">
-&lt;p&gt;Es kamen lange Winterabende und ich habe die alten Blog-Einträge von der mittels Org-Mode erstellten Seite hier nach Octopress migriert. Im Archiv sind diese zu finden und die Links etc. sollten nun auch passend mit migriert worden sein.&lt;/p&gt;
-
-&lt;p&gt;Bei der Konvertierung habe ich ein Programm kennengelernt, das mir sehr geholfen hat: &lt;a href="http://johnmacfarlane.net/pandoc/"&gt;Pandoc&lt;/a&gt;. Das ist ein Konverter, der Text- und Markupdateien hin und her konvertieren kann. Dabei beherrscht er eine ganze Reihe von Formaten. Insbesondere kann er das Org-Mode-Format (das ich für viele Dinge verwende) ebenso wie LaTeX und Markdown (daneben aber auch noch eine Legion von Formaten).&lt;/p&gt;
-
-&lt;p&gt;Da mein Hauptdateiformat ohnehin &amp;ldquo;Textdateien&amp;rdquo; sind (&amp;ldquo;Never trust a file that isn&amp;rsquo;t ASCII&amp;rdquo;) ist das sehr praktisch, um zwischen verschiedenen Markup-Formaten hin und her zu springen.&lt;/p&gt;
-
-&lt;p&gt;Für die Migration meine Blog-Einträge lief dies wie folgt: Ich hatte die in der alten Homepage mit Org-Mode und Org-Jekyll erstellt. Dabei hatte das Org-Jekyll-Modul entsprechende HTML-Dateien mit einem YAML-Header erzeugt. Mittels Pandoc konnte ich die nun wieder nach Markdown konvertieren, habe die YAML-Header ein wenig angepasst, Kategorien aktualisiert und noch mal das Markup zwecks Zeilenumbrüche, Fußnoten und Links geprüft und leicht angepasst. Insgesamt sehr schnell bewältigbar.&lt;/p&gt;
-
-&lt;p&gt;Dieser ganze Zoo rund um Markdown und andere ähnliche Formate ist zwar manchmal ein bisschen unübersichtlich, aber mir gefällt das sehr gut, dass man mit wenig Markup schön Textdateien strukturieren kann und dann mit Pandoc auch gut hin und her konvertieren kann.&lt;/p&gt;</content></entry></feed>
+&lt;p&gt;Nun bin ich kein Steuer-, Verfassungsrechtsspezialist (genaugenommen gar kein Rechtsspezialist) und weiß nicht, ob dieser Satz nicht ohnehin schon gilt oder Verfassungs- und Steurrechtsrealität ist. Ich habe es allerdings in dieser Klarheit noch nicht gelesen. Und wenn ich mir so das eine oder andere Steuergesetz und seine Wirkungen ansehe, dann kommt da unter diesem Leitsatz vielleicht in den kommenden Jahren einiges auf die Gerichte zu.&lt;/p&gt;</content></entry></feed>

@@ -1,6 +1,6 @@
     Title: Lexmark scheitert mit einer Patentklage in den USA
     Date: 2017-05-31T10:15:51
-    Tags: IT, Wirtschaft, Allerlei
+    Tags: IT, Wirtschaft, Allerlei, Recht
 
 Ich hatte im Jahr 2015 einmal über Lexmarks
 Druckerpatronen-"Lizenz"

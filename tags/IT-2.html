@@ -106,6 +106,8 @@
 
 <li><a href="/tags/Racket.html">Racket</a></li>
 
+<li><a href="/tags/Recht.html">Recht</a></li>
+
 <li><a href="/tags/Reisen.html">Reisen</a></li>
 
 <li><a href="/tags/Scheme.html">Scheme</a></li>
@@ -142,6 +144,44 @@
           <h1>Posts tagged <em>IT</em></h1>
 
           <article>
+  <header>
+    <h1><a href='/2015/01/18/3-docker-meetup-in-frankfurt/'>
+<ol>
+ <li>Docker-Meetup in Frankfurt</li></ol></a></h1>
+    <p class='date-and-tags'>
+<time datetime="2015-01-18" pubdate="true">2015-01-18</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Docker.html">Docker</a>, <a href="/tags/Veranstaltungen.html">Veranstaltungen</a></span></p>
+  </header>
+
+<p>Am 13. Januar 2015 fand in Frankfurt das bereits <a href="http://www.meetup.com/Docker-Frankfurt/events/219160756/">dritte Docker-Meetup</a> statt, hier einige Notizen von mir dazu.</p>
+
+<h2 id="neues-zum-them-orchestrierung">Neues zum Them Orchestrierung</h2>
+
+<p><a href="https://www.twitter.com/PRossbach">Peter Rossbach</a> hat in einem munteren Vortrag einige Neuerungen aus dem &ldquo;Docker Universum&rdquo; zum Thema Orchestrierung vorgestellt. Unter anderem <a href="https://github.com/docker/machine">Docker Machine</a>, <a href="https://github.com/docker/swarm">Docker Swarm</a>, Docker Compose (ehemals <a href="http://fig.sh">fig.sh</a>, das wohl aufgrund von Aussprachemehrdeutigkeiten umbenannt wurde) etc. Ein sehr interessanter Überblick, insbesondere da Peter auch die ganzen Sachen immer mal angefasst und ausprobiert hat. Im Kern scheint es mir jedoch so zu sein, als wäre die Frage nach &ldquo;Was nimmt man am besten, um Docker auf einer oder mehreren Maschinen im Produktivbetrieb zu nutzen?&rdquo; noch recht in Bewegung. Für mich kristallisiert sich für meine Anwendungsfälle da bisher noch keine überzeugende Lösung heraus. Was ich jedoch einmal testen werde ist das fig.sh bzw. Docker Compose, da man damit eigentlich sehr schön in einem YAML-Dokument mehrere Container und ihre Abhängigkeiten darstellen kann.</p>
+
+<h2 id="docker-linking">Docker Linking</h2>
+
+<p><a href="http://linsenraum.de">Erkan Yanar</a> hat in einem Einsteigervortrag die Grundlagen von Links zwischen Containern vorgestellt. Hier scheint die Entwicklung auch noch in Bewegung zu sein, insbesondere Links über mehrere Hosts hinweg scheinen doch noch nicht so ganz einfach handzuhaben zu sein (vorgestellt wurden <a href="https://github.com/SvenDowideit/dockerfiles/blob/master/ambassador/Dockerfile">Ambassador-Ansätze</a> mit <a href="http://www.dest-unreach.org/socat/">socat</a> und anderes).</p>
+
+<p>Besonders erhellend fand ich den Hinweis, dass ab Docker Version 1.3 nun bei Links zwischen den Containern die <code>/etc/hosts</code> auch nach Neustarts von gelinkten Containern immer deren richtige IP-Adresse erhält, wohingegen die Umgebungsvariablen nur die Ursprungs-IP-Adressen enthalten (also ein klares &ldquo;Verlasst Euch nicht auf die Umgebungsvariablen!&rdquo;).</p>
+
+<h2 id="netzwerken-mit-docker">Netzwerken mit Docker</h2>
+
+<p><a href="https:/www.twitter.com/aschmidt75">Andreas Schmidt</a> stellte eine ganze Reihe von Varianten vor, mit denen man die Container im Netzwerk auf unterschiedliche Arten und Weisen verknoten kann. Soweit ganz interessant, aber nicht meine &ldquo;Liga&rdquo;, wo ich mich gut auskenne.</p>
+
+<h2 id="fazit">Fazit</h2>
+
+<p>Bei Docker in Bezug auf Orchestrierung und Container-Linken gibt es recht viel Bewegung und für mich kristallisieren sich die überzeugenden Konzepte noch nicht so richtig heraus, um damit in eine Produktivumgebung zu gehen. Im Bereich der Entwicklung und der Tests nutze ich die Container von Docker schon recht gerne, bei Produktiv-Umgebungen schreckt mich die Vielzahl an Werkzeugen und zum Teil auch die Komplexität doch noch etwas.</p>
+
+<p>Jedenfalls wieder ein gutes Meetup mit Ideen und Anregungen. Ich finde das schon sehr außergewöhnlich (besonders wenn man es mit anderen Branchen vergleicht), dass sich Leute zum Austauschen über Technologie treffen, Vorträge vorbereiten etc.</p>
+
+<h2 id="links-zu-den-folien">Links zu den Folien</h2>
+
+<ul>
+ <li><a href="https://speakerdeck.com/rossbachp/docker-meetup-frankfurt-2015-docker-orchestration">Peter Rossbach, Docker Orchestation</a></li>
+ <li><a href="https://speakerdeck.com/aschmidt75/docker-networking">Andreas Schmidt, Docker Networking</a></li></ul>
+
+</article>
+<article>
   <header>
     <h1><a href='/2015/01/05/eindrücke-vom-31c3/'>Eindrücke vom 31C3</a></h1>
     <p class='date-and-tags'>
@@ -446,22 +486,6 @@ CMD ["/bin/bash"] </code></pre>
 <p>Eher ein Buch zum Verschenken an Leute, die noch nicht so firm im Netz sind.</p>
 
 <p><a href="http://www.fischerverlage.de/buch/Die_Datenfresser/9783100485182">Constanze Kurz/Frank Rieger, Die Datenfresser, 272 Seiten, S. Fischer Verlag, 16,95 EUR.</a></p>
-
-</article>
-<article>
-  <header>
-    <h1><a href='/2010/07/26/nachtrag-i-zum-e-postbrief/'>Nachtrag I zum E-Postbrief</a></h1>
-    <p class='date-and-tags'>
-<time datetime="2010-07-26" pubdate="true">2010-07-26</time> :: <span class="tags"><a href="/tags/IT.html">IT</a></span></p>
-  </header>
-
-<p>Ein Nachtrag zu meinem Eintrag über den E-Postbrief. Da überall von &ldquo;qualifizierter elektronischer Signatur&rdquo; die Rede ist, möchte ich gern auf Folgendes hinweisen: Lässt sich der Benutzer ein Zertifikat zum zusätzlichen Verschlüsseln und Signieren erzeugen, so darf man sich ob der Güte dieses Schlüssels nicht täuschen. Es handelt sich dann nämlich <strong>nicht</strong> um eine qualifizierte elektronische Signatur nach Signaturgesetz. So leicht erlesbar aus der <a href="https://service.deutschepost.de/epost/downloads/7/Leistungsbeschreibung_E-Postbrief.pdf">Leistungsbeschreibung E-Postbrief</a>; dort heißt es unter den &ldquo;Zusatzleistungen&rdquo;:</p>
-
-<blockquote>
- <p>"<strong>Persönlich signiert</strong>: Der Absender signiert die Nachricht zusätzlich mit seinem privaten Schlüssel. Da der private Schlüssel eine eindeutige Zuordnung zu einem Nutzer ermöglicht, erhöht dies den Grad der Authentifizierung.</p>
- <p>Die eingesetzten Verschlüsselungsverfahren erfüllen allerdings nicht die Voraussetzungen einer qualifizierten elektronischen Signatur nach dem Signaturgesetz (SigG), so dass gesetzlich vorgesehene Schriftformerfordernisse nicht erfüllt werden."</p></blockquote>
-
-<p>Schade, so hat die Post noch eine Möglichkeit mit ihrem Produkt zu punkten verpasst und lässt den Ball ins Seitenaus rollen.</p>
 
 </article>
 <footer>

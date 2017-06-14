@@ -6,7 +6,7 @@
     <title>Daniel Brunner</title>
     <meta name="description" content="Daniel Brunner">
     <meta name="author"      content="Daniel Brunner">
-    <meta name="keywords"    content="AWS, Medien, Allerlei, Common Lisp, JavaScript, Statistik, Linux, Wirtschaft, all, Scheme, Homepage, Behörden, Org-Mode, Politik, Reisen, Docker, IT, Racket, Octopress, Steuern, Veranstaltungen, Frog">
+    <meta name="keywords"    content="AWS, Medien, Allerlei, Common Lisp, JavaScript, Statistik, Linux, Wirtschaft, all, Scheme, Homepage, Behörden, Org-Mode, Politik, Reisen, Docker, IT, Racket, Octopress, Steuern, Recht, Veranstaltungen, Frog">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
     <link rel="canonical" href="http://www.dbrunner.de/index.html">
@@ -106,6 +106,8 @@
 
 <li><a href="/tags/Racket.html">Racket</a></li>
 
+<li><a href="/tags/Recht.html">Recht</a></li>
+
 <li><a href="/tags/Reisen.html">Reisen</a></li>
 
 <li><a href="/tags/Scheme.html">Scheme</a></li>
@@ -146,9 +148,19 @@
 
           <article>
   <header>
+    <h1><a href='/2017/06/14/folgen-des-lexmark-urteils/'>Folgen des Lexmark-Urteils</a></h1>
+    <p class='date-and-tags'>
+<time datetime="2017-06-14" pubdate="true">2017-06-14</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Wirtschaft.html">Wirtschaft</a>, <a href="/tags/Allerlei.html">Allerlei</a>, <a href="/tags/Recht.html">Recht</a></span></p>
+  </header>
+
+<p>Zum Urteil des Supreme Courts über die Patentklage von Lexmark (gebloggt <a href="/2017/05/31/lexmark-scheitert-mit-einer-patentklage-in-den-usa/">hier</a>) habe ich in der <a href="http://www.lto.de">Legal Tribune Online</a> eine interessante Einordnung <a href="http://www.lto.de/recht/hintergruende/h/us-supreme-court-urteil-lexmark-drucker-patronen-patentrechte-erschoepfung-welthandel-europa/">gelesen</a>. In dem Beitrag darauf hingewiesen, dass die Entscheidung, dass beim Export von Gütern der Patentschutz erschöpft, eine Abkehr der bisherigen Rechtsprechung in den USA sei. Dies habe gravierende Auswirkungen auf den Export patentgeschützter Güter wie Medikament oder Lizenzverträge soweit sie sich auf die Erschöpfung von Patenten beziehen. Damit wird es für die US-Patenthinaher schwierig, den Re-Import mit dem Verweis auf das Patentrecht abzuwehren. Zugleich weist der Autor auf die Auswirkungen im internationalen Handel hin und macht deutlich, dass die Frage der Erschöpfung bei Patenten wohl eine der umstrittensten Fragen im Welthandel darstellt.</p>
+
+</article>
+<article>
+  <header>
     <h1><a href='/2017/05/31/lexmark-scheitert-mit-einer-patentklage-in-den-usa/'>Lexmark scheitert mit einer Patentklage in den USA</a></h1>
     <p class='date-and-tags'>
-<time datetime="2017-05-31" pubdate="true">2017-05-31</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Wirtschaft.html">Wirtschaft</a>, <a href="/tags/Allerlei.html">Allerlei</a></span></p>
+<time datetime="2017-05-31" pubdate="true">2017-05-31</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Wirtschaft.html">Wirtschaft</a>, <a href="/tags/Allerlei.html">Allerlei</a>, <a href="/tags/Recht.html">Recht</a></span></p>
   </header>
 
 <p>Ich hatte im Jahr 2015 einmal über Lexmarks Druckerpatronen-&ldquo;Lizenz&rdquo; <a href="/2015/02/17/lexmarks-druckerpatronen-lizenz/">gebloggt</a>. Mit dieser sollte erreicht werden, dass rabattierte Patronen direkt wieder an Lexmark zurückgehen, zumindest verpflichtet sich wie gebloggt der Endkunde dazu, diese Patrone nur einmal zu nuzen und sie auch an Lexmark zurückzugeben.</p>
@@ -405,53 +417,6 @@ commands:
 <p>Very nice and easy to get Racket running on ARM.</p>
 
 <p>PS: Because the Raspberry Pi 2 Model B has an ARMv7 processor the binary runs on my Jolla smart phone as well.</p>
-
-</article>
-<article>
-  <header>
-    <h1><a href='/2015/08/27/running-racket-on-aws-lambda/'>Running Racket on AWS Lambda</a></h1>
-    <p class='date-and-tags'>
-<time datetime="2015-08-27" pubdate="true">2015-08-27</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Racket.html">Racket</a>, <a href="/tags/AWS.html">AWS</a></span></p>
-  </header>
-
-<p>I started to use AWS for some projects recently. But I only use few of their services. From time to time I look into some of there services and wonder if they are useful for my tasks. I looked into <a href="http://aws.amazon.com/lambda">AWS Lambda</a>, "&hellip; a compute service that runs your code in response to events and automatically manages the compute resources for you, making it easy to build applications that respond quickly to new information." Nowadays these &ldquo;lambda functions&rdquo; could be written in NodeJS or Java. When I was looking for a roadmap of the supported languages I found an interesting <a href="http://blog.0x82.com/2014/11/24/aws-lambda-functions-in-go/">blog post</a> by <a href="https://www.twitter.com/rubenfonseca">Ruben Fonseca</a>. He explaind how to run Go code on AWS Lambda.</p>
-
-<p>I tried the same with <a href="http://racket-lang.org">Racket</a> and wrote a short Racket programm <code>test.rkt</code>:</p>
-
-<pre><code>#lang racket/base
-
-(display (format "Hello from Racket, args: ~a~%" (current-command-line-arguments)))</code></pre>
-
-<p>Then I used <code>raco</code> to create a binary <code>test</code>:</p>
-
-<pre><code>raco exe --orig-exe test.rkt</code></pre>
-
-<p>I took the NodeJS wrapper from Ruben&rsquo;s blog post and put it in a file <code>main.js</code>:</p>
-
-<pre><code>var child_process = require('child_process');
-
-exports.handler = function(event, context) {
-  var proc = child_process.spawn('./test', [ JSON.stringify(event) ], { stdio: 'inherit' });
-
-  proc.on('close', function(code) {
-    if(code !== 0) {
-      return context.done(new Error("Process exited with non-zero status code"));
-    }
-
-    context.done(null);
-  });
-}</code></pre>
-
-<p>Then I put both files in a zip archive, created a new AWS Lambda function, uploaded the zip file and invoked the function:</p>
-
-<div class="figure"><img src="/img/2015-08-27-racket-aws-lambda.png" alt="Invocation of AWS Lambda function" />
- <p class="caption">Invocation of AWS Lambda function</p></div>
-
-<p>Fine!</p>
-
-<p>PS: Only question is: When is AWS Lambda coming to the region <code>eu-central-1</code>, located in Frankfurt?</p>
-
-<p><em>Upate (2016&ndash;03&ndash;15):</em> AWS Lambda is <a href="https://aws.amazon.com/de/about-aws/whats-new/2016/03/aws-lambda-available-in-eu-frankfurt/">now available</a> in the EU (Frankfurt)  region!</p>
 
 </article>
 <footer>

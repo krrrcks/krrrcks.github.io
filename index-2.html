@@ -6,7 +6,7 @@
     <title>Daniel Brunner (page 2)</title>
     <meta name="description" content="Daniel Brunner (page 2)">
     <meta name="author"      content="Daniel Brunner">
-    <meta name="keywords"    content="AWS, Medien, Allerlei, Common Lisp, JavaScript, Statistik, Linux, Wirtschaft, all, Scheme, Homepage, Behörden, Org-Mode, Politik, Reisen, Docker, IT, Racket, Octopress, Steuern, Veranstaltungen, Frog">
+    <meta name="keywords"    content="AWS, Medien, Allerlei, Common Lisp, JavaScript, Statistik, Linux, Wirtschaft, all, Scheme, Homepage, Behörden, Org-Mode, Politik, Reisen, Docker, IT, Racket, Octopress, Steuern, Recht, Veranstaltungen, Frog">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
     <link rel="canonical" href="http://www.dbrunner.de/index-2.html">
@@ -106,6 +106,8 @@
 
 <li><a href="/tags/Racket.html">Racket</a></li>
 
+<li><a href="/tags/Recht.html">Recht</a></li>
+
 <li><a href="/tags/Reisen.html">Reisen</a></li>
 
 <li><a href="/tags/Scheme.html">Scheme</a></li>
@@ -142,6 +144,53 @@
 
 
           <article>
+  <header>
+    <h1><a href='/2015/08/27/running-racket-on-aws-lambda/'>Running Racket on AWS Lambda</a></h1>
+    <p class='date-and-tags'>
+<time datetime="2015-08-27" pubdate="true">2015-08-27</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Racket.html">Racket</a>, <a href="/tags/AWS.html">AWS</a></span></p>
+  </header>
+
+<p>I started to use AWS for some projects recently. But I only use few of their services. From time to time I look into some of there services and wonder if they are useful for my tasks. I looked into <a href="http://aws.amazon.com/lambda">AWS Lambda</a>, "&hellip; a compute service that runs your code in response to events and automatically manages the compute resources for you, making it easy to build applications that respond quickly to new information." Nowadays these &ldquo;lambda functions&rdquo; could be written in NodeJS or Java. When I was looking for a roadmap of the supported languages I found an interesting <a href="http://blog.0x82.com/2014/11/24/aws-lambda-functions-in-go/">blog post</a> by <a href="https://www.twitter.com/rubenfonseca">Ruben Fonseca</a>. He explaind how to run Go code on AWS Lambda.</p>
+
+<p>I tried the same with <a href="http://racket-lang.org">Racket</a> and wrote a short Racket programm <code>test.rkt</code>:</p>
+
+<pre><code>#lang racket/base
+
+(display (format "Hello from Racket, args: ~a~%" (current-command-line-arguments)))</code></pre>
+
+<p>Then I used <code>raco</code> to create a binary <code>test</code>:</p>
+
+<pre><code>raco exe --orig-exe test.rkt</code></pre>
+
+<p>I took the NodeJS wrapper from Ruben&rsquo;s blog post and put it in a file <code>main.js</code>:</p>
+
+<pre><code>var child_process = require('child_process');
+
+exports.handler = function(event, context) {
+  var proc = child_process.spawn('./test', [ JSON.stringify(event) ], { stdio: 'inherit' });
+
+  proc.on('close', function(code) {
+    if(code !== 0) {
+      return context.done(new Error("Process exited with non-zero status code"));
+    }
+
+    context.done(null);
+  });
+}</code></pre>
+
+<p>Then I put both files in a zip archive, created a new AWS Lambda function, uploaded the zip file and invoked the function:</p>
+
+<div class="figure"><img src="/img/2015-08-27-racket-aws-lambda.png" alt="Invocation of AWS Lambda function" />
+ <p class="caption">Invocation of AWS Lambda function</p></div>
+
+<p>Fine!</p>
+
+<p>PS: Only question is: When is AWS Lambda coming to the region <code>eu-central-1</code>, located in Frankfurt?</p>
+
+<p><em>Upate (2016&ndash;03&ndash;15):</em> AWS Lambda is <a href="https://aws.amazon.com/de/about-aws/whats-new/2016/03/aws-lambda-available-in-eu-frankfurt/">now available</a> in the EU (Frankfurt)  region!</p>
+
+</article>
+<article>
   <header>
     <h1><a href='/2015/02/17/der-rundfunkrat-des-hr-übt-den-diskurs/'>Der Rundfunkrat des hr übt den Diskurs</a></h1>
     <p class='date-and-tags'>
@@ -385,24 +434,6 @@ rake update_style              # update the template's style</code></pre>
  <p>&ldquo;Ein Steuergesetz ist verfassungswidrig, wenn es Gestaltungen zulässt, mit denen Steuerentlastungen erzielt werden können, die es nicht bezweckt und die gleichheitsrechtlich nicht zu rechtfertigen sind.&rdquo;</p></blockquote>
 
 <p>Nun bin ich kein Steuer-, Verfassungsrechtsspezialist (genaugenommen gar kein Rechtsspezialist) und weiß nicht, ob dieser Satz nicht ohnehin schon gilt oder Verfassungs- und Steurrechtsrealität ist. Ich habe es allerdings in dieser Klarheit noch nicht gelesen. Und wenn ich mir so das eine oder andere Steuergesetz und seine Wirkungen ansehe, dann kommt da unter diesem Leitsatz vielleicht in den kommenden Jahren einiges auf die Gerichte zu.</p>
-
-</article>
-<article>
-  <header>
-    <h1><a href='/2014/12/17/migration-alter-blog-einträge/'>Migration alter Blog-Einträge</a></h1>
-    <p class='date-and-tags'>
-<time datetime="2014-12-17" pubdate="true">2014-12-17</time> :: <span class="tags"><a href="/tags/Homepage.html">Homepage</a>, <a href="/tags/Org-Mode.html">Org-Mode</a>, <a href="/tags/Octopress.html">Octopress</a></span></p>
-  </header>
-
-<p>Es kamen lange Winterabende und ich habe die alten Blog-Einträge von der mittels Org-Mode erstellten Seite hier nach Octopress migriert. Im Archiv sind diese zu finden und die Links etc. sollten nun auch passend mit migriert worden sein.</p>
-
-<p>Bei der Konvertierung habe ich ein Programm kennengelernt, das mir sehr geholfen hat: <a href="http://johnmacfarlane.net/pandoc/">Pandoc</a>. Das ist ein Konverter, der Text- und Markupdateien hin und her konvertieren kann. Dabei beherrscht er eine ganze Reihe von Formaten. Insbesondere kann er das Org-Mode-Format (das ich für viele Dinge verwende) ebenso wie LaTeX und Markdown (daneben aber auch noch eine Legion von Formaten).</p>
-
-<p>Da mein Hauptdateiformat ohnehin &ldquo;Textdateien&rdquo; sind (&ldquo;Never trust a file that isn&rsquo;t ASCII&rdquo;) ist das sehr praktisch, um zwischen verschiedenen Markup-Formaten hin und her zu springen.</p>
-
-<p>Für die Migration meine Blog-Einträge lief dies wie folgt: Ich hatte die in der alten Homepage mit Org-Mode und Org-Jekyll erstellt. Dabei hatte das Org-Jekyll-Modul entsprechende HTML-Dateien mit einem YAML-Header erzeugt. Mittels Pandoc konnte ich die nun wieder nach Markdown konvertieren, habe die YAML-Header ein wenig angepasst, Kategorien aktualisiert und noch mal das Markup zwecks Zeilenumbrüche, Fußnoten und Links geprüft und leicht angepasst. Insgesamt sehr schnell bewältigbar.</p>
-
-<p>Dieser ganze Zoo rund um Markdown und andere ähnliche Formate ist zwar manchmal ein bisschen unübersichtlich, aber mir gefällt das sehr gut, dass man mit wenig Markup schön Textdateien strukturieren kann und dann mit Pandoc auch gut hin und her konvertieren kann.</p>
 
 </article>
 <footer>
