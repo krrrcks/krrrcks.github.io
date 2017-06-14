@@ -145,6 +145,21 @@
 
           <article>
   <header>
+    <h1><a href='/2014/12/18/aus-der-entscheidung-des-bverfg-zur-erbschaftsteuer/'>Aus der Entscheidung des BVerfG zur Erbschaftsteuer</a></h1>
+    <p class='date-and-tags'>
+<time datetime="2014-12-18" pubdate="true">2014-12-18</time> :: <span class="tags"><a href="/tags/Steuern.html">Steuern</a></span></p>
+  </header>
+
+<p>Das Bundesverfassungsgerichts hat in seiner <a href="http://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/DE/2014/12/ls20141217_1bvl002112.html">Entscheidung</a> vom 17. Dezember 2014 (1 BvL 21/12) Regelungen zur Erbschaftsteuer als verfassungwidrig moniert. Ich finde in der Entscheidung eigentlich den fünften Leitsatz mit am interessantesten:</p>
+
+<blockquote>
+ <p>&ldquo;Ein Steuergesetz ist verfassungswidrig, wenn es Gestaltungen zulässt, mit denen Steuerentlastungen erzielt werden können, die es nicht bezweckt und die gleichheitsrechtlich nicht zu rechtfertigen sind.&rdquo;</p></blockquote>
+
+<p>Nun bin ich kein Steuer-, Verfassungsrechtsspezialist (genaugenommen gar kein Rechtsspezialist) und weiß nicht, ob dieser Satz nicht ohnehin schon gilt oder Verfassungs- und Steurrechtsrealität ist. Ich habe es allerdings in dieser Klarheit noch nicht gelesen. Und wenn ich mir so das eine oder andere Steuergesetz und seine Wirkungen ansehe, dann kommt da unter diesem Leitsatz vielleicht in den kommenden Jahren einiges auf die Gerichte zu.</p>
+
+</article>
+<article>
+  <header>
     <h1><a href='/2014/12/17/migration-alter-blog-einträge/'>Migration alter Blog-Einträge</a></h1>
     <p class='date-and-tags'>
 <time datetime="2014-12-17" pubdate="true">2014-12-17</time> :: <span class="tags"><a href="/tags/Homepage.html">Homepage</a>, <a href="/tags/Org-Mode.html">Org-Mode</a>, <a href="/tags/Octopress.html">Octopress</a></span></p>
@@ -533,20 +548,6 @@ CMD ["/bin/bash"] </code></pre>
 <p>After playing around with Docker and Octopress I put the whole <code>/opt/octopress</code> folder on my host machine and then  restarted the image with the <code>-v</code> flag. Therefore I can edit the files on my host machine with my favorite editor and use the container only for producing the HTML files, for preview and for publishing.</p>
 
 <p>The <code>rake preview</code> is a neat feature because the server always looks for changed files and produces the HTML files on the fly. That means I can edit the files in my editor and could see the resulting pages in a  browser nearly the same time.</p>
-
-</article>
-<article>
-  <header>
-    <h1><a href='/2014/06/10/relaunch-fast-fertig/'>Relaunch fast fertig</a></h1>
-    <p class='date-and-tags'>
-<time datetime="2014-06-10" pubdate="true">2014-06-10</time> :: <span class="tags"><a href="/tags/Homepage.html">Homepage</a>, <a href="/tags/Octopress.html">Octopress</a></span></p>
-  </header>
-
-<p>So, nach einigem Gefummel mit Ruby und Octopress und den Weiterleitungsmöglichkeiten meines Hosters ist die Sache wohl bald so am laufen, wie ich mir das vorstelle. Es fehlt noch ein wenig das Eindeutschen der Octopress-Texte und vielleicht so eine Kategorien-Liste rechts.</p>
-
-<p>Ansonsten habe ich, um der &ldquo;Gem-Hölle&rdquo; zu entgehen, das Octopress in einen Docker-Container gepackt; hier ist ein <a href="/blog/2014/06/10/unicode-support-for-octopress/">Link</a> zu dem verwendeten <code>Dockerfile</code>. Ich habe es dann auch so gemacht, dass ich das <code>/opt/octopress</code>-Verzeichnis auf den Host-Rechner verschoben habe und in den Container als <em>Volume</em> hineinpacke. So kann ich auf dem Host-Rechner ganz bequem mit dem Emacs die Files editieren und verwende den Container nur noch für die Erstellung, das &ldquo;Preview&rdquo; und für das Hochladen.</p>
-
-<p>Die &ldquo;preview&rdquo;-Funktion ist übrigens ein wirklich nettes Features: Die kann man derart nutzen, dass ein Webserver den aktuellen Stand lokal ausliefert. Dabei beobachtet der Dienst, ob sich Dateien ändern und erstellt unmittelbar wieder die HTML-Seiten. So kann man bequem im Editor das Markdown bearbeiten und im Browser daneben das fertige Ergebnis beurteilen.</p>
 
 </article>
 <footer>

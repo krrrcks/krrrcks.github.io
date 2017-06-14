@@ -145,6 +145,34 @@
 
           <article>
   <header>
+    <h1><a href='/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/'>How to run Racket on the Raspberry Pi 2</a></h1>
+    <p class='date-and-tags'>
+<time datetime="2015-08-27" pubdate="true">2015-08-27</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Racket.html">Racket</a></span></p>
+  </header>
+
+<p>I got a <a href="https://www.raspberrypi.org/products/raspberry-pi-2-model-b/">Raspberry Pi 2 Model B</a> to play with. I used Raspbian image as operating system. I was wondering how difficult it is to get Racket running on the Raspberry Pi. I downloaded the <a href="http://mirror.racket-lang.org/installers/6.2.1/racket-6.2.1-src-builtpkgs.tgz">Unix source + built packages</a> tarball from <a href="http://racket-lang.org">Racket&rsquo;s homepage</a> because I only wanted to compile the core of Racket. After unpacking the tarball I was suprised that the instructions were quite short:</p>
+
+<pre><code>From this directory (where the `configure' file is), run the following
+commands:
+
+  mkdir build
+  cd build
+  ../configure
+  make
+  make install</code></pre>
+
+<p>Between <code>make</code> and <code>make install</code> I had to wait for about 40 minutes but then everything was fine and I could even use DrRacket on the Raspberry Pi:</p>
+
+<div class="figure"><img src="/img/2015-08-27-racket-pi.png" alt="DrRacket on Raspberry Pi" />
+ <p class="caption">DrRacket on Raspberry Pi</p></div>
+
+<p>Very nice and easy to get Racket running on ARM.</p>
+
+<p>PS: Because the Raspberry Pi 2 Model B has an ARMv7 processor the binary runs on my Jolla smart phone as well.</p>
+
+</article>
+<article>
+  <header>
     <h1><a href='/2015/08/27/running-racket-on-aws-lambda/'>Running Racket on AWS Lambda</a></h1>
     <p class='date-and-tags'>
 <time datetime="2015-08-27" pubdate="true">2015-08-27</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Racket.html">Racket</a>, <a href="/tags/AWS.html">AWS</a></span></p>
@@ -419,21 +447,6 @@ rake update_style              # update the template's style</code></pre>
   </header>
 
 <p>Zusammen mit <a href="http://www.bk.tudelft.nl/en/about-faculty/departments/otb/about-otb/staff/alle-medewerkers/haffner-marietta/">Marietta Haffner</a> hatte ich für die <a href="http://www.ccnorway.no/enhr2012/">ENHR-Konferenz im Jahr 2012 in Lillehammer</a> ein Konferenzpapier vorbereitet, das Marietta dort vorgestellt hatte. Wir haben nun in der Arbeitspapier-Reihe des OTB an der TU Delft eine überarbeitete Fassung <a href="http://www.bk.tudelft.nl/fileadmin/Faculteit/BK/Over_de_faculteit/Afdelingen/OTB/publicaties/Working_papers/OTB_Working_papers_2014-07_German_cooperatives.pdf">eingestellt</a>.</p>
-
-</article>
-<article>
-  <header>
-    <h1><a href='/2014/12/18/aus-der-entscheidung-des-bverfg-zur-erbschaftsteuer/'>Aus der Entscheidung des BVerfG zur Erbschaftsteuer</a></h1>
-    <p class='date-and-tags'>
-<time datetime="2014-12-18" pubdate="true">2014-12-18</time> :: <span class="tags"><a href="/tags/Steuern.html">Steuern</a></span></p>
-  </header>
-
-<p>Das Bundesverfassungsgerichts hat in seiner <a href="http://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/DE/2014/12/ls20141217_1bvl002112.html">Entscheidung</a> vom 17. Dezember 2014 (1 BvL 21/12) Regelungen zur Erbschaftsteuer als verfassungwidrig moniert. Ich finde in der Entscheidung eigentlich den fünften Leitsatz mit am interessantesten:</p>
-
-<blockquote>
- <p>&ldquo;Ein Steuergesetz ist verfassungswidrig, wenn es Gestaltungen zulässt, mit denen Steuerentlastungen erzielt werden können, die es nicht bezweckt und die gleichheitsrechtlich nicht zu rechtfertigen sind.&rdquo;</p></blockquote>
-
-<p>Nun bin ich kein Steuer-, Verfassungsrechtsspezialist (genaugenommen gar kein Rechtsspezialist) und weiß nicht, ob dieser Satz nicht ohnehin schon gilt oder Verfassungs- und Steurrechtsrealität ist. Ich habe es allerdings in dieser Klarheit noch nicht gelesen. Und wenn ich mir so das eine oder andere Steuergesetz und seine Wirkungen ansehe, dann kommt da unter diesem Leitsatz vielleicht in den kommenden Jahren einiges auf die Gerichte zu.</p>
 
 </article>
 <footer>

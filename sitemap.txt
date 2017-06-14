@@ -27,6 +27,7 @@ http://www.dbrunner.de/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine
 http://www.dbrunner.de/2009/03/05/für-wen-bilanzieren-unsere-banken-eigentlich/
 http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco/
 http://www.dbrunner.de/2010/04/01/änderungen-beim-datenschutzhinweis/
+http://www.dbrunner.de/2017/06/14/links-zur-patent-kontroverse-david-k-levine/
 http://www.dbrunner.de/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/
 http://www.dbrunner.de/2015/08/27/running-racket-on-aws-lambda/
 http://www.dbrunner.de/2010/07/02/vorsicht-vor-den-marginalien-bei-steuervereinfachung-und-subventionsabbau/

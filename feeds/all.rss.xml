@@ -4,9 +4,33 @@
   <title>Daniel Brunner: Daniel Brunner</title>
   <description>Daniel Brunner: Daniel Brunner</description>
   <link>http://www.dbrunner.de/index.html</link>
-  <lastBuildDate>Wed, 14 Jun 2017 10:18:02 UT</lastBuildDate>
-  <pubDate>Wed, 14 Jun 2017 10:18:02 UT</pubDate>
+  <lastBuildDate>Wed, 14 Jun 2017 10:38:32 UT</lastBuildDate>
+  <pubDate>Wed, 14 Jun 2017 10:38:32 UT</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>Links zur Patent-Kontroverse (David K. Levine)</title>
+   <link>http://www.dbrunner.de/2017/06/14/links-zur-patent-kontroverse-david-k-levine/</link>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2017-06-14-links-zur-patent-kontroverse-david-k-levine</guid>
+   <pubDate>Wed, 14 Jun 2017 10:38:32 UT</pubDate>
+   <author>Daniel Brunner</author>
+   <description>
+&lt;p&gt;David K. Levine (&lt;a href="https://en.wikipedia.org/wiki/David_K._Levine"&gt;englische Wikipedia&lt;/a&gt;) hat über viele Jahre Patente sowie &amp;ldquo;geistiges Eigentum&amp;rdquo; beforscht und kommt in einer &lt;a href="https://www.aeaweb.org/articles?id=10.1257/jep.27.1.3"&gt;Zusammenfassung eines Beitrags&lt;/a&gt; zu dem kurz formulierten Ergebnis:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;&amp;ldquo;The case against patents can be summarized briefly: there is no empirical evidence that they serve to increase innovation and productivity, unless productivity is identified with the number of patents awarded—which, as evidence shows, has no correlation with measured productivity. (&amp;hellip;)&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;Das Paper aus dem &lt;a href="https://www.aeaweb.org/journals/jep"&gt;Journal of Economic Perspectives&lt;/a&gt; ist gut zu lesen und auch frei verfügbar (&lt;a href="http://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.27.1.3"&gt;PDF hier&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;Darüberhinaus pflegt(e) seine Kollegen und er ein paar interessante Linksammlungen, Seiten mit Informationen zu den Themen:&lt;/p&gt;
+
+&lt;ul&gt;
+ &lt;li&gt;&lt;a href="http://www.againstmonopoly.org/"&gt;Against Monopoly&lt;/a&gt;&lt;/li&gt;
+ &lt;li&gt;&lt;a href="http://www.dklevine.com/general/intellectual/intellectual.htm"&gt;Intellectual Property Page&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;
+
+&lt;p&gt;Auf der zuletzt genannten Seite bzw. deren &lt;a href="http://www.dklevine.com/general/intellectual/napster6.htm"&gt;Hall of Shame&lt;/a&gt; habe ich dieses wunderschöne Zitat über das US Patent Office gefunden:&lt;/p&gt;
+
+&lt;blockquote&gt;
+ &lt;p&gt;Microsoft has patented the idea that &amp;ldquo;a user may discover and navigate among hyperlinks through the use of a keyboard.&amp;rdquo; Even if you thought the CIA and FBI are completely and utterly incompetent, you have to grant that U.S. Patent Office takes first prize. There is a rather significant missing reference to prior art in the application: the Lynx character based web browser. For obvious reasons (no mouse) this browser has always navigated among links using the keyboard - using in fact the same tab key cited in the Microsoft Patent.&lt;/p&gt;&lt;/blockquote&gt;</description></item>
   <item>
    <title>Folgen des Lexmark-Urteils</title>
    <link>http://www.dbrunner.de/2017/06/14/folgen-des-lexmark-urteils/</link>
@@ -517,17 +541,4 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
    <pubDate>Thu, 18 Dec 2014 17:24:27 UT</pubDate>
    <author>Daniel Brunner</author>
    <description>
-&lt;p&gt;Zusammen mit &lt;a href="http://www.bk.tudelft.nl/en/about-faculty/departments/otb/about-otb/staff/alle-medewerkers/haffner-marietta/"&gt;Marietta Haffner&lt;/a&gt; hatte ich für die &lt;a href="http://www.ccnorway.no/enhr2012/"&gt;ENHR-Konferenz im Jahr 2012 in Lillehammer&lt;/a&gt; ein Konferenzpapier vorbereitet, das Marietta dort vorgestellt hatte. Wir haben nun in der Arbeitspapier-Reihe des OTB an der TU Delft eine überarbeitete Fassung &lt;a href="http://www.bk.tudelft.nl/fileadmin/Faculteit/BK/Over_de_faculteit/Afdelingen/OTB/publicaties/Working_papers/OTB_Working_papers_2014-07_German_cooperatives.pdf"&gt;eingestellt&lt;/a&gt;.&lt;/p&gt;</description></item>
-  <item>
-   <title>Aus der Entscheidung des BVerfG zur Erbschaftsteuer</title>
-   <link>http://www.dbrunner.de/2014/12/18/aus-der-entscheidung-des-bverfg-zur-erbschaftsteuer/</link>
-   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-12-18-aus-der-entscheidung-des-bverfg-zur-erbschaftsteuer</guid>
-   <pubDate>Thu, 18 Dec 2014 06:41:37 UT</pubDate>
-   <author>Daniel Brunner</author>
-   <description>
-&lt;p&gt;Das Bundesverfassungsgerichts hat in seiner &lt;a href="http://www.bundesverfassungsgericht.de/SharedDocs/Entscheidungen/DE/2014/12/ls20141217_1bvl002112.html"&gt;Entscheidung&lt;/a&gt; vom 17. Dezember 2014 (1 BvL 21/12) Regelungen zur Erbschaftsteuer als verfassungwidrig moniert. Ich finde in der Entscheidung eigentlich den fünften Leitsatz mit am interessantesten:&lt;/p&gt;
-
-&lt;blockquote&gt;
- &lt;p&gt;&amp;ldquo;Ein Steuergesetz ist verfassungswidrig, wenn es Gestaltungen zulässt, mit denen Steuerentlastungen erzielt werden können, die es nicht bezweckt und die gleichheitsrechtlich nicht zu rechtfertigen sind.&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
-
-&lt;p&gt;Nun bin ich kein Steuer-, Verfassungsrechtsspezialist (genaugenommen gar kein Rechtsspezialist) und weiß nicht, ob dieser Satz nicht ohnehin schon gilt oder Verfassungs- und Steurrechtsrealität ist. Ich habe es allerdings in dieser Klarheit noch nicht gelesen. Und wenn ich mir so das eine oder andere Steuergesetz und seine Wirkungen ansehe, dann kommt da unter diesem Leitsatz vielleicht in den kommenden Jahren einiges auf die Gerichte zu.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Zusammen mit &lt;a href="http://www.bk.tudelft.nl/en/about-faculty/departments/otb/about-otb/staff/alle-medewerkers/haffner-marietta/"&gt;Marietta Haffner&lt;/a&gt; hatte ich für die &lt;a href="http://www.ccnorway.no/enhr2012/"&gt;ENHR-Konferenz im Jahr 2012 in Lillehammer&lt;/a&gt; ein Konferenzpapier vorbereitet, das Marietta dort vorgestellt hatte. Wir haben nun in der Arbeitspapier-Reihe des OTB an der TU Delft eine überarbeitete Fassung &lt;a href="http://www.bk.tudelft.nl/fileadmin/Faculteit/BK/Over_de_faculteit/Afdelingen/OTB/publicaties/Working_papers/OTB_Working_papers_2014-07_German_cooperatives.pdf"&gt;eingestellt&lt;/a&gt;.&lt;/p&gt;</description></item></channel></rss>
