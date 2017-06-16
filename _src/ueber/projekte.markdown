@@ -2,7 +2,9 @@
 
 ## Aktuelles
 
-* [Racket](/racket/)
+* [Racket](/racket/): Eine Sammlung, wo und wie ich Racket einsetze
+  (als Werkzeug, aber auch "in production") sowie einige für mich
+  interessante Ressourcen. *(Roh-Entwurf, in Ausarbeitung)*
 
 ## Abgeschlossene Projekte
 

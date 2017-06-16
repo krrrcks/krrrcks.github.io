@@ -4,7 +4,7 @@
 
     <meta charset="utf-8">
     <title>Racket</title>
-    <meta name="description" content="Racket: I collected several resources that I found useful when learning and using Racket. Libraries: AWS by Greg Hendershott: Very nice package that helps to access to many Amazon Web Services via Racket. s3-sync by Matthew Flatt: Syncs a local filesystem...">
+    <meta name="description" content="Racket: _(work in progress)_ Racket as a &quot;tool&quot;: I found Scribble  a nice tool for taking notes, preparing documents. I use it a lot  for communicating with colleagues, preparing offers etc. I  customized the LaTeX output to user our company's document cl...">
     <meta name="author"      content="Daniel Brunner">
     <meta name="keywords"    content="">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
@@ -80,7 +80,7 @@
 
 <li><a href="/tags/AWS.html">AWS</a></li>
 
-<li><a href="/tags/Behörden.html">Behörden</a></li>
+<li><a href="/tags/Beho%CC%88rden.html">Behörden</a></li>
 
 <li><a href="/tags/Common-Lisp.html">Common Lisp</a></li>
 
@@ -105,6 +105,8 @@
 <li><a href="/tags/Politik.html">Politik</a></li>
 
 <li><a href="/tags/Racket.html">Racket</a></li>
+
+<li><a href="/tags/Recht.html">Recht</a></li>
 
 <li><a href="/tags/Reisen.html">Reisen</a></li>
 
@@ -144,9 +146,29 @@
 
 <h1 id="racket">Racket</h1>
 
-<p>I collected several resources that I found useful when learning and using Racket.</p>
+<p><em>(work in progress)</em></p>
 
-<h2 id="libraries">Libraries</h2>
+<h2 id="racket-as-a-tool">Racket as a &ldquo;tool&rdquo;</h2>
+
+<ul>
+ <li>I found <a href="http://docs.racket-lang.org/scribble/index.html">Scribble</a>  a nice tool for taking notes, preparing documents. I use it a lot  for communicating with colleagues, preparing offers etc. I  customized the LaTeX output to user our company&rsquo;s document class.</li>
+ <li>I used <a href="http://docs.racket-lang.org/slideshow/index.html">Slideshow</a>  for some presentations. Though I lack a lot of practice and creating  figures etc. is very time-consuming for me.</li></ul>
+
+<h2 id="racket-in-production">Racket &ldquo;in production&rdquo;</h2>
+
+<ul>
+ <li>Receiving telegrams for a M2M application: The application receives  messages via HTTP, checks and convert them and then forwards the  messages to another service for data management and visualization.</li>
+ <li>Backup script: Fires up a instance on EC2 (Amazon Web Services),  copies and runs a Racket script on the new instance. This script  dumps a PostgreSQL database and copies the resulting dump to Amazon  S3.</li>
+ <li>File handling for an EDI project: Transfer files between a local  directory and a remote directory via SFTP.</li></ul>
+
+<h2 id="teaching--education">Teaching / Education</h2>
+
+<ul>
+ <li>&ldquo;IoT&rdquo; course (two days)</li></ul>
+
+<h2 id="resources">Resources</h2>
+
+<h3 id="libraries">Libraries</h3>
 
 <ul>
  <li><a href="https://github.com/greghendershott/aws">AWS</a> by <a href="http://www.greghendershott.com/">Greg Hendershott</a>: Very nice package that helps to access to many Amazon Web Services via Racket.</li>
@@ -156,12 +178,15 @@
  <li><a href="https://github.com/tonyg/racket-explorer">Racket Explorer</a> by <a href="https://eighty-twenty.org">Tony Garnock-Jones</a>: Utility for interactive exploration of complex data structures.</li>
  <li><a href="https://github.com/takikawa/raco-find-collection">raco-find-collection</a> by <a href="http://asumu.xyz">Asumu Takikawa</a>: A raco script for finding collections.</li></ul>
 
-<h2 id="blog-posts-and-articles">Blog Posts and Articles</h2>
+<h3 id="blog-posts-books-and-articles">Blog Posts, Books and Articles</h3>
 
 <ul>
- <li><a href="http://www.greghendershott.com/fear-of-macros/">Fear of Macros</a> by <a href="http://www.greghendershott.com/">Greg Hendershott</a>: A great tutorial for macros.</li></ul>
+ <li><a href="http://www.greghendershott.com/fear-of-macros/">Fear of Macros</a> by <a href="http://www.greghendershott.com/">Greg Hendershott</a>: A great tutorial for macros.</li>
+ <li><a href="http://www.ccs.neu.edu/home/matthias/manifesto/">The Racket Manifesto</a></li>
+ <li><a href="http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html">How to Design Programs, 2nd edition</a></li>
+ <li><a href="http://beautifulracket.com/">Beautiful Racket</a></li></ul>
 
-<h2 id="small-snippets">Small snippets</h2>
+<h3 id="small-snippets">Small snippets</h3>
 
 <ul>
  <li>How to install all libraries after a new version of Racket comes out: <code>raco pkg migrate</code>.</li>
