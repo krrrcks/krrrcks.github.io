@@ -33,12 +33,11 @@ bzw. deren
 [Hall of Shame](http://www.dklevine.com/general/intellectual/napster6.htm) habe
 ich dieses wunderschöne Zitat über das US Patent Office gefunden:
 
-> Microsoft has patented the idea that "a user may discover and
-> navigate among hyperlinks through the use of a keyboard." Even if
+> Microsoft has patented the [idea that "a user may discover and navigate among hyperlinks through the use of a keyboard."](http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&Sect2=HITOFF&d=PALL&p=1&u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&r=1&f=G&l=50&s1=6,785,865.PN.&OS=PN/6,785,865&RS=PN/6,785,865) Even if
 > you thought the CIA and FBI are completely and utterly incompetent,
 > you have to grant that U.S. Patent Office takes first prize. There
 > is a rather significant missing reference to prior art in the
-> application: the Lynx character based web browser. For obvious
+> application: the [Lynx character based web browser](http://lynx.browser.org/). For obvious
 > reasons (no mouse) this browser has always navigated among links
 > using the keyboard - using in fact the same tab key cited in the
 > Microsoft Patent.
