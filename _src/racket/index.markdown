@@ -7,7 +7,7 @@
 * I found [Scribble](http://docs.racket-lang.org/scribble/index.html)
   a nice tool for taking notes, preparing documents. I use it a lot
   for communicating with colleagues, preparing offers etc. I
-  customized the LaTeX output to user our company's document class. 
+  customized the LaTeX output to use our company's document class. 
 * I used [Slideshow](http://docs.racket-lang.org/slideshow/index.html)
   for some presentations. Though I lack a lot of practice and creating
   figures etc. is very time-consuming for me.
