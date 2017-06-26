@@ -33,7 +33,7 @@
  &lt;p&gt;Microsoft has patented the &lt;a href="http://patft.uspto.gov/netacgi/nph-Parser?Sect1=PTO1&amp;amp;Sect2=HITOFF&amp;amp;d=PALL&amp;amp;p=1&amp;amp;u=%2Fnetahtml%2FPTO%2Fsrchnum.htm&amp;amp;r=1&amp;amp;f=G&amp;amp;l=50&amp;amp;s1=6,785,865.PN.&amp;amp;OS=PN/6,785,865&amp;amp;RS=PN/6,785,865"&gt;idea that &amp;ldquo;a user may discover and navigate among hyperlinks through the use of a keyboard.&amp;rdquo;&lt;/a&gt; Even if you thought the CIA and FBI are completely and utterly incompetent, you have to grant that U.S. Patent Office takes first prize. There is a rather significant missing reference to prior art in the application: the &lt;a href="http://lynx.browser.org/"&gt;Lynx character based web browser&lt;/a&gt;. For obvious reasons (no mouse) this browser has always navigated among links using the keyboard - using in fact the same tab key cited in the Microsoft Patent.&lt;/p&gt;&lt;/blockquote&gt;</content></entry>
  <entry>
   <title type="text">Folgen des Lexmark-Urteils</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2017/06/14/folgen-des-lexmark-urteils/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2017/06/14/folgen-des-lexmark-urteils" />
   <id>urn:http-www-dbrunner-de:-2017-06-14-folgen-des-lexmark-urteils</id>
   <published>2017-06-14T10:18:02Z</published>
   <updated>2017-06-14T10:18:02Z</updated>
@@ -43,7 +43,7 @@
 &lt;p&gt;Zum Urteil des Supreme Courts über die Patentklage von Lexmark (gebloggt &lt;a href="/2017/05/31/lexmark-scheitert-mit-einer-patentklage-in-den-usa/"&gt;hier&lt;/a&gt;) habe ich in der &lt;a href="http://www.lto.de"&gt;Legal Tribune Online&lt;/a&gt; eine interessante Einordnung &lt;a href="http://www.lto.de/recht/hintergruende/h/us-supreme-court-urteil-lexmark-drucker-patronen-patentrechte-erschoepfung-welthandel-europa/"&gt;gelesen&lt;/a&gt;. In dem Beitrag darauf hingewiesen, dass die Entscheidung, dass beim Export von Gütern der Patentschutz erschöpft, eine Abkehr der bisherigen Rechtsprechung in den USA sei. Dies habe gravierende Auswirkungen auf den Export patentgeschützter Güter wie Medikament oder Lizenzverträge soweit sie sich auf die Erschöpfung von Patenten beziehen. Damit wird es für die US-Patenthinaher schwierig, den Re-Import mit dem Verweis auf das Patentrecht abzuwehren. Zugleich weist der Autor auf die Auswirkungen im internationalen Handel hin und macht deutlich, dass die Frage der Erschöpfung bei Patenten wohl eine der umstrittensten Fragen im Welthandel darstellt.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Lexmark scheitert mit einer Patentklage in den USA</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2017/05/31/lexmark-scheitert-mit-einer-patentklage-in-den-usa/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2017/05/31/lexmark-scheitert-mit-einer-patentklage-in-den-usa" />
   <id>urn:http-www-dbrunner-de:-2017-05-31-lexmark-scheitert-mit-einer-patentklage-in-den-usa</id>
   <published>2017-05-31T08:15:51Z</published>
   <updated>2017-05-31T08:15:51Z</updated>
@@ -61,7 +61,7 @@
 &lt;p&gt;&lt;em&gt;Update (2017&amp;ndash;06&amp;ndash;04)&lt;/em&gt; Und hier noch der Link zur Verfahrensseite beim &lt;a href="http://www.scotusblog.com/case-files/cases/impression-products-inc-v-lexmark-international-inc/"&gt;SCOTUSblog&lt;/a&gt;.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Meine Erfahrungen mit Locomore</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2017/04/06/meine-erfahrungen-mit-locomore/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2017/04/06/meine-erfahrungen-mit-locomore" />
   <id>urn:http-www-dbrunner-de:-2017-04-06-meine-erfahrungen-mit-locomore</id>
   <published>2017-04-06T17:42:00Z</published>
   <updated>2017-04-06T17:42:00Z</updated>
@@ -89,7 +89,7 @@
 &lt;p&gt;&lt;em&gt;Update (2017&amp;ndash;05&amp;ndash;11):&lt;/em&gt; Oh wie schade, Locomore hat einen Insolvenzantrag &lt;a href="https://locomore.com/en/news/2017-05-11/"&gt;gestellt&lt;/a&gt;.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">10th European Lisp Symposium</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium" />
   <id>urn:http-www-dbrunner-de:-2017-04-05-10th-european-lisp-symposium</id>
   <published>2017-04-05T14:00:31Z</published>
   <updated>2017-04-05T14:00:31Z</updated>
@@ -103,7 +103,7 @@
 &lt;p&gt;Our paper is in the proceedings which can be found find on the &lt;a href="http://www.european-lisp-symposium.org/2017/index.html"&gt;conference&amp;rsquo;s homepage&lt;/a&gt;. The slides are available there as well. I host these files here: &lt;a href="/pub/els2017.pdf"&gt;Paper&lt;/a&gt; and &lt;a href="/pub/els2017-slides.pdf"&gt;slides&lt;/a&gt;. The source code is provided as a &lt;a href="/pub/els2017-src.zip"&gt;ZIP archive&lt;/a&gt;.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Neues vom E-Postbrief</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2017/02/19/neues-vom-e-postbrief/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2017/02/19/neues-vom-e-postbrief" />
   <id>urn:http-www-dbrunner-de:-2017-02-19-neues-vom-e-postbrief</id>
   <published>2017-02-19T14:59:09Z</published>
   <updated>2017-02-19T14:59:09Z</updated>
@@ -117,7 +117,7 @@
 &lt;p&gt;(Und was war es? Die Rechnung für ein Zeitschriften-Abonnement.)&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Mein Wechsel zu Frog</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2017/02/16/mein-wechsel-zu-frog/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2017/02/16/mein-wechsel-zu-frog" />
   <id>urn:http-www-dbrunner-de:-2017-02-16-mein-wechsel-zu-frog</id>
   <published>2017-02-16T10:08:04Z</published>
   <updated>2017-02-16T10:08:04Z</updated>
@@ -155,7 +155,7 @@
 &lt;p&gt;Ach ja, zum Thema CSS und Fummeln darf natürlich nicht der übliche Hinweis auf diesen (bewegten) &lt;a href="https://imgur.com/gallery/Q3cUg29"&gt;Cartoon&lt;/a&gt; fehlen.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Using Racket Minimal and raco</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco" />
   <id>urn:http-www-dbrunner-de:-2016-01-12-using-racket-minimal-and-raco</id>
   <published>2016-01-12T09:55:43Z</published>
   <updated>2016-01-12T09:55:43Z</updated>
@@ -173,7 +173,7 @@
 &lt;p&gt;To sum up: After a simple &lt;code&gt;raco pkg install compiler-lib&lt;/code&gt; I could easily use &lt;code&gt;raco make&lt;/code&gt; and &lt;code&gt;raco test&lt;/code&gt; to play with my program on my phone.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">I played with CHICKEN Scheme, Docker and Alpine Linux</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux" />
   <id>urn:http-www-dbrunner-de:-2015-12-19-i-played-with-chicken-scheme-docker-and-alpine-linux</id>
   <published>2015-12-19T16:54:50Z</published>
   <updated>2015-12-19T16:54:50Z</updated>
@@ -237,7 +237,7 @@ CMD /main/main&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;To serve the pages I did a &lt;code&gt;docker run -d -p 8080:8080 krrrcks/spiffy-test&lt;/code&gt;  (spiffy listens on port 8080 in the default install) and browsed my static pages.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">How to use GET Bucket location on Amazon S3 with Racket</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket" />
   <id>urn:http-www-dbrunner-de:-2015-09-04-how-to-use-get-bucket-location-on-amazon-s3-with-racket</id>
   <published>2015-09-04T05:23:43Z</published>
   <updated>2015-09-04T05:23:43Z</updated>
@@ -278,7 +278,7 @@ is wrong; expecting 'eu-central-1'&amp;lt;/Message&amp;gt;
 &lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; Greg added a &lt;code&gt;bucket-location&lt;/code&gt; function to his great &lt;a href="http://docs.racket-lang.org/aws/S3__Storage_.html#%28def._%28%28lib._aws%2Fs3..rkt%29._bucket-location%29%29"&gt;library&lt;/a&gt;&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">How to run Racket on the Raspberry Pi 2</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2" />
   <id>urn:http-www-dbrunner-de:-2015-08-27-how-to-run-racket-on-the-raspberry-pi-2</id>
   <published>2015-08-27T11:25:45Z</published>
   <updated>2015-08-27T11:25:45Z</updated>
@@ -306,7 +306,7 @@ commands:
 &lt;p&gt;PS: Because the Raspberry Pi 2 Model B has an ARMv7 processor the binary runs on my Jolla smart phone as well.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Running Racket on AWS Lambda</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/08/27/running-racket-on-aws-lambda/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/08/27/running-racket-on-aws-lambda" />
   <id>urn:http-www-dbrunner-de:-2015-08-27-running-racket-on-aws-lambda</id>
   <published>2015-08-27T10:46:57Z</published>
   <updated>2015-08-27T10:46:57Z</updated>
@@ -353,8 +353,8 @@ exports.handler = function(event, context) {
 &lt;p&gt;&lt;em&gt;Upate (2016&amp;ndash;03&amp;ndash;15):&lt;/em&gt; AWS Lambda is &lt;a href="https://aws.amazon.com/de/about-aws/whats-new/2016/03/aws-lambda-available-in-eu-frankfurt/"&gt;now available&lt;/a&gt; in the EU (Frankfurt)  region!&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Der Rundfunkrat des hr übt den Diskurs</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/02/17/der-rundfunkrat-des-hr-übt-den-diskurs/" />
-  <id>urn:http-www-dbrunner-de:-2015-02-17-der-rundfunkrat-des-hr-übt-den-diskurs</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2015/02/17/der-rundfunkrat-des-hr-u%CC%88bt-den-diskurs" />
+  <id>urn:http-www-dbrunner-de:-2015-02-17-der-rundfunkrat-des-hr-u-CC-88bt-den-diskurs</id>
   <published>2015-02-17T10:44:35Z</published>
   <updated>2015-02-17T10:44:35Z</updated>
   <author>
@@ -411,7 +411,7 @@ exports.handler = function(event, context) {
 &lt;p&gt;&lt;em&gt;Update (2017&amp;ndash;03&amp;ndash;08):&lt;/em&gt; Laut &lt;a href="http://www.hr-online.de/website/extern/rundfunkrat/index.jsp?rubrik=62561&amp;amp;key=standard_document_63425232"&gt;Pressemitteilung&lt;/a&gt; des Rundfunkrates vom 03. Februar 2017 ist Rolf-Dieter Postlep aus dem Rundfunkrat ausgeschieden. Seinen Platz als Vertreterin der Hochschulen hat Kira Kastell eingenommen.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Lexmarks Druckerpatronen-Lizenz</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/02/17/lexmarks-druckerpatronen-lizenz/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/02/17/lexmarks-druckerpatronen-lizenz" />
   <id>urn:http-www-dbrunner-de:-2015-02-17-lexmarks-druckerpatronen-lizenz</id>
   <published>2015-02-17T10:28:02Z</published>
   <updated>2015-02-17T10:28:02Z</updated>
@@ -428,7 +428,7 @@ exports.handler = function(event, context) {
 &lt;p&gt;Irgendwie ja auch ein bisschen putzig, wie um einen Alltagsgegenstand wie Toner so ein Bohei gemacht wird. Zwei Gedanken kommen mir da in den Sinn: 1. Es verfestigt sich mein Eindruck, dass das Patentsystem recht nahe an kaputt ist. 2. Unternehmen, die so etwas machen, sollten weniger Geld für Juristen, Patentanwälte ausgeben und das Geld eher in coole Produkte investieren.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Spielt ALBA Berlin nun Handball oder Basketball? Der Sportschau ist es egal</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/01/30/spielt-alba-berlin-nun-handball-oder-basketball-der-sportschau-ist-es-egal/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/01/30/spielt-alba-berlin-nun-handball-oder-basketball-der-sportschau-ist-es-egal" />
   <id>urn:http-www-dbrunner-de:-2015-01-30-spielt-alba-berlin-nun-handball-oder-basketball-der-sportschau-ist-es-egal</id>
   <published>2015-01-30T10:32:49Z</published>
   <updated>2015-01-30T10:32:49Z</updated>
@@ -452,7 +452,7 @@ exports.handler = function(event, context) {
 &lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; Ich twitterte die Sportschau mit meinem Blog-Post an und  unmittelbar danach wurde der Fehler  &lt;a href="https://twitter.com/sportschau/status/561138889776447489"&gt;korrigiert.&lt;/a&gt;  Sehr prompte Reaktion.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">3. Docker-Meetup in Frankfurt</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/01/18/3-docker-meetup-in-frankfurt/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/01/18/3-docker-meetup-in-frankfurt" />
   <id>urn:http-www-dbrunner-de:-2015-01-18-3-docker-meetup-in-frankfurt</id>
   <published>2015-01-18T19:05:35Z</published>
   <updated>2015-01-18T19:05:35Z</updated>
@@ -488,8 +488,8 @@ exports.handler = function(event, context) {
  &lt;li&gt;&lt;a href="https://speakerdeck.com/aschmidt75/docker-networking"&gt;Andreas Schmidt, Docker Networking&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content></entry>
  <entry>
   <title type="text">Eindrücke vom 31C3</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/01/05/eindrücke-vom-31c3/" />
-  <id>urn:http-www-dbrunner-de:-2015-01-05-eindrücke-vom-31c3</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2015/01/05/eindru%CC%88cke-vom-31c3" />
+  <id>urn:http-www-dbrunner-de:-2015-01-05-eindru-CC-88cke-vom-31c3</id>
   <published>2015-01-05T16:03:00Z</published>
   <updated>2015-01-05T16:03:00Z</updated>
   <author>
@@ -528,7 +528,7 @@ exports.handler = function(event, context) {
 &lt;p&gt;Etwas spontan und nicht so sonderlich koordiniert haben wir auch einen &lt;a href="http://mg.mud.de"&gt;MorgenGrauen&lt;/a&gt;-Stammtisch ausgerufen und siehe da: Drei Spieler und zwei Gäste fanden sich ein, so dass man bei einem Bier ein wenig plaudern und sich austauschen konnte.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Aus zwei mach eins</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/01/04/aus-zwei-mach-eins/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/01/04/aus-zwei-mach-eins" />
   <id>urn:http-www-dbrunner-de:-2015-01-04-aus-zwei-mach-eins</id>
   <published>2015-01-04T15:16:08Z</published>
   <updated>2015-01-04T15:16:08Z</updated>
@@ -538,7 +538,7 @@ exports.handler = function(event, context) {
 &lt;p&gt;Bisher hatte ich meine Blog-Einträge auf zwei Blogs aufgeteilt, &lt;a href="http://blog.krrrcks.net"&gt;eines&lt;/a&gt; mit mehr technischen (und zum Teil englischen Texten) und dieses hier mit deutschen Texten. Ich denke, ich werde das auf dieses eine Blog hier konzentrieren. Das reduziert doch etwas den Verwaltungsaufwand. Ich habe die Texte vom nun etwas still gelegten Blog hier herüber kopiert.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Ich habe mal Octopress aktualisert</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2014/12/21/ich-habe-mal-octopress-aktualisert/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2014/12/21/ich-habe-mal-octopress-aktualisert" />
   <id>urn:http-www-dbrunner-de:-2014-12-21-ich-habe-mal-octopress-aktualisert</id>
   <published>2014-12-21T10:58:16Z</published>
   <updated>2014-12-21T10:58:16Z</updated>
@@ -572,7 +572,7 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;&lt;strong&gt;Update vom 04. Januar 2014:&lt;/strong&gt; Nach einem kurzen  &lt;a href="https://twitter.com/Krrrcks/status/546667456128114688"&gt;Gespräch&lt;/a&gt;  via Twitter habe ich mich entschieden, den eingebauten Server doch  wieder so zu belassen, wie es im &lt;code&gt;Rakefile&lt;/code&gt; ursprünglich  stand. Statt dessen habe ich einfach in dem Docker-Container einen  &lt;code&gt;nginx&lt;/code&gt; hinzuinstalliert, der dann mein &lt;code&gt;public&lt;/code&gt;-Verzeichnis an den  Port 4000 ausliefert. So funktioniert es wieder prima: Ich starte  den &lt;code&gt;nginx&lt;/code&gt; und lasse dann das &lt;code&gt;rake watch&lt;/code&gt; laufen, um die Seiten  immer wieder neu zu erzeugen, wenn sich Dinge geändert haben.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">"Neues" Arbeitspapier</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2014/12/18/-neues-arbeitspapier/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2014/12/18/-neues-arbeitspapier" />
   <id>urn:http-www-dbrunner-de:-2014-12-18-neues-arbeitspapier</id>
   <published>2014-12-18T17:24:27Z</published>
   <updated>2014-12-18T17:24:27Z</updated>

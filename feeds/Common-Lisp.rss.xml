@@ -9,7 +9,7 @@
   <ttl>1800</ttl>
   <item>
    <title>10th European Lisp Symposium</title>
-   <link>http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium/</link>
+   <link>http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2017-04-05-10th-european-lisp-symposium</guid>
    <pubDate>Wed, 05 Apr 2017 14:00:31 UT</pubDate>
    <author>Daniel Brunner</author>
@@ -21,7 +21,7 @@
 &lt;p&gt;Our paper is in the proceedings which can be found find on the &lt;a href="http://www.european-lisp-symposium.org/2017/index.html"&gt;conference&amp;rsquo;s homepage&lt;/a&gt;. The slides are available there as well. I host these files here: &lt;a href="/pub/els2017.pdf"&gt;Paper&lt;/a&gt; and &lt;a href="/pub/els2017-slides.pdf"&gt;slides&lt;/a&gt;. The source code is provided as a &lt;a href="/pub/els2017-src.zip"&gt;ZIP archive&lt;/a&gt;.&lt;/p&gt;</description></item>
   <item>
    <title>DateTime conversion can be tricky</title>
-   <link>http://www.dbrunner.de/2014/07/24/datetime-conversion-can-be-tricky/</link>
+   <link>http://www.dbrunner.de/2014/07/24/datetime-conversion-can-be-tricky</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-07-24-datetime-conversion-can-be-tricky</guid>
    <pubDate>Thu, 24 Jul 2014 07:41:36 UT</pubDate>
    <author>Daniel Brunner</author>
@@ -49,7 +49,7 @@
 &lt;p&gt;So a better solution would be to substract all seconds between 1900 and 1970 from &lt;code&gt;ts&lt;/code&gt;, multiply by 1,000 and treat this as a JavaScript time stamp. Perhaps best would be to do the conversion in the Lisp process and only deliver a JavaScript-like time stamp.&lt;/p&gt;</description></item>
   <item>
    <title>I learned something about symbols and packages</title>
-   <link>http://www.dbrunner.de/2014/07/06/i-learned-something-about-symbols-and-packages/</link>
+   <link>http://www.dbrunner.de/2014/07/06/i-learned-something-about-symbols-and-packages</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-07-06-i-learned-something-about-symbols-and-packages</guid>
    <pubDate>Sun, 06 Jul 2014 07:02:39 UT</pubDate>
    <author>Daniel Brunner</author>

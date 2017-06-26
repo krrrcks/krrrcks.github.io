@@ -9,7 +9,7 @@
   <ttl>1800</ttl>
   <item>
    <title>10th European Lisp Symposium</title>
-   <link>http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium/</link>
+   <link>http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2017-04-05-10th-european-lisp-symposium</guid>
    <pubDate>Wed, 05 Apr 2017 14:00:31 UT</pubDate>
    <author>Daniel Brunner</author>
@@ -21,7 +21,7 @@
 &lt;p&gt;Our paper is in the proceedings which can be found find on the &lt;a href="http://www.european-lisp-symposium.org/2017/index.html"&gt;conference&amp;rsquo;s homepage&lt;/a&gt;. The slides are available there as well. I host these files here: &lt;a href="/pub/els2017.pdf"&gt;Paper&lt;/a&gt; and &lt;a href="/pub/els2017-slides.pdf"&gt;slides&lt;/a&gt;. The source code is provided as a &lt;a href="/pub/els2017-src.zip"&gt;ZIP archive&lt;/a&gt;.&lt;/p&gt;</description></item>
   <item>
    <title>3. Docker-Meetup in Frankfurt</title>
-   <link>http://www.dbrunner.de/2015/01/18/3-docker-meetup-in-frankfurt/</link>
+   <link>http://www.dbrunner.de/2015/01/18/3-docker-meetup-in-frankfurt</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-01-18-3-docker-meetup-in-frankfurt</guid>
    <pubDate>Sun, 18 Jan 2015 19:05:35 UT</pubDate>
    <author>Daniel Brunner</author>
@@ -55,8 +55,8 @@
  &lt;li&gt;&lt;a href="https://speakerdeck.com/aschmidt75/docker-networking"&gt;Andreas Schmidt, Docker Networking&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</description></item>
   <item>
    <title>Eindrücke vom 31C3</title>
-   <link>http://www.dbrunner.de/2015/01/05/eindrücke-vom-31c3/</link>
-   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-01-05-eindrücke-vom-31c3</guid>
+   <link>http://www.dbrunner.de/2015/01/05/eindru%CC%88cke-vom-31c3</link>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-01-05-eindru-CC-88cke-vom-31c3</guid>
    <pubDate>Mon, 05 Jan 2015 16:03:00 UT</pubDate>
    <author>Daniel Brunner</author>
    <description>
@@ -93,7 +93,7 @@
 &lt;p&gt;Etwas spontan und nicht so sonderlich koordiniert haben wir auch einen &lt;a href="http://mg.mud.de"&gt;MorgenGrauen&lt;/a&gt;-Stammtisch ausgerufen und siehe da: Drei Spieler und zwei Gäste fanden sich ein, so dass man bei einem Bier ein wenig plaudern und sich austauschen konnte.&lt;/p&gt;</description></item>
   <item>
    <title>CeBIT 2010</title>
-   <link>http://www.dbrunner.de/2010/03/04/cebit-2010/</link>
+   <link>http://www.dbrunner.de/2010/03/04/cebit-2010</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2010-03-04-cebit-2010</guid>
    <pubDate>Thu, 04 Mar 2010 20:25:00 UT</pubDate>
    <author>Daniel Brunner</author>

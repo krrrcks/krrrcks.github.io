@@ -9,7 +9,7 @@
   <ttl>1800</ttl>
   <item>
    <title>10th European Lisp Symposium</title>
-   <link>http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium/</link>
+   <link>http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2017-04-05-10th-european-lisp-symposium</guid>
    <pubDate>Wed, 05 Apr 2017 14:00:31 UT</pubDate>
    <author>Daniel Brunner</author>
@@ -21,7 +21,7 @@
 &lt;p&gt;Our paper is in the proceedings which can be found find on the &lt;a href="http://www.european-lisp-symposium.org/2017/index.html"&gt;conference&amp;rsquo;s homepage&lt;/a&gt;. The slides are available there as well. I host these files here: &lt;a href="/pub/els2017.pdf"&gt;Paper&lt;/a&gt; and &lt;a href="/pub/els2017-slides.pdf"&gt;slides&lt;/a&gt;. The source code is provided as a &lt;a href="/pub/els2017-src.zip"&gt;ZIP archive&lt;/a&gt;.&lt;/p&gt;</description></item>
   <item>
    <title>I played with CHICKEN Scheme, Docker and Alpine Linux</title>
-   <link>http://www.dbrunner.de/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/</link>
+   <link>http://www.dbrunner.de/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-12-19-i-played-with-chicken-scheme-docker-and-alpine-linux</guid>
    <pubDate>Sat, 19 Dec 2015 16:54:50 UT</pubDate>
    <author>Daniel Brunner</author>

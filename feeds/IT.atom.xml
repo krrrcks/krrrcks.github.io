@@ -7,7 +7,7 @@
  <updated>2017-06-14T10:18:02Z</updated>
  <entry>
   <title type="text">Folgen des Lexmark-Urteils</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2017/06/14/folgen-des-lexmark-urteils/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2017/06/14/folgen-des-lexmark-urteils" />
   <id>urn:http-www-dbrunner-de:-2017-06-14-folgen-des-lexmark-urteils</id>
   <published>2017-06-14T10:18:02Z</published>
   <updated>2017-06-14T10:18:02Z</updated>
@@ -17,7 +17,7 @@
 &lt;p&gt;Zum Urteil des Supreme Courts über die Patentklage von Lexmark (gebloggt &lt;a href="/2017/05/31/lexmark-scheitert-mit-einer-patentklage-in-den-usa/"&gt;hier&lt;/a&gt;) habe ich in der &lt;a href="http://www.lto.de"&gt;Legal Tribune Online&lt;/a&gt; eine interessante Einordnung &lt;a href="http://www.lto.de/recht/hintergruende/h/us-supreme-court-urteil-lexmark-drucker-patronen-patentrechte-erschoepfung-welthandel-europa/"&gt;gelesen&lt;/a&gt;. In dem Beitrag darauf hingewiesen, dass die Entscheidung, dass beim Export von Gütern der Patentschutz erschöpft, eine Abkehr der bisherigen Rechtsprechung in den USA sei. Dies habe gravierende Auswirkungen auf den Export patentgeschützter Güter wie Medikament oder Lizenzverträge soweit sie sich auf die Erschöpfung von Patenten beziehen. Damit wird es für die US-Patenthinaher schwierig, den Re-Import mit dem Verweis auf das Patentrecht abzuwehren. Zugleich weist der Autor auf die Auswirkungen im internationalen Handel hin und macht deutlich, dass die Frage der Erschöpfung bei Patenten wohl eine der umstrittensten Fragen im Welthandel darstellt.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Lexmark scheitert mit einer Patentklage in den USA</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2017/05/31/lexmark-scheitert-mit-einer-patentklage-in-den-usa/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2017/05/31/lexmark-scheitert-mit-einer-patentklage-in-den-usa" />
   <id>urn:http-www-dbrunner-de:-2017-05-31-lexmark-scheitert-mit-einer-patentklage-in-den-usa</id>
   <published>2017-05-31T08:15:51Z</published>
   <updated>2017-05-31T08:15:51Z</updated>
@@ -35,7 +35,7 @@
 &lt;p&gt;&lt;em&gt;Update (2017&amp;ndash;06&amp;ndash;04)&lt;/em&gt; Und hier noch der Link zur Verfahrensseite beim &lt;a href="http://www.scotusblog.com/case-files/cases/impression-products-inc-v-lexmark-international-inc/"&gt;SCOTUSblog&lt;/a&gt;.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">10th European Lisp Symposium</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium" />
   <id>urn:http-www-dbrunner-de:-2017-04-05-10th-european-lisp-symposium</id>
   <published>2017-04-05T14:00:31Z</published>
   <updated>2017-04-05T14:00:31Z</updated>
@@ -49,7 +49,7 @@
 &lt;p&gt;Our paper is in the proceedings which can be found find on the &lt;a href="http://www.european-lisp-symposium.org/2017/index.html"&gt;conference&amp;rsquo;s homepage&lt;/a&gt;. The slides are available there as well. I host these files here: &lt;a href="/pub/els2017.pdf"&gt;Paper&lt;/a&gt; and &lt;a href="/pub/els2017-slides.pdf"&gt;slides&lt;/a&gt;. The source code is provided as a &lt;a href="/pub/els2017-src.zip"&gt;ZIP archive&lt;/a&gt;.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Neues vom E-Postbrief</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2017/02/19/neues-vom-e-postbrief/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2017/02/19/neues-vom-e-postbrief" />
   <id>urn:http-www-dbrunner-de:-2017-02-19-neues-vom-e-postbrief</id>
   <published>2017-02-19T14:59:09Z</published>
   <updated>2017-02-19T14:59:09Z</updated>
@@ -63,7 +63,7 @@
 &lt;p&gt;(Und was war es? Die Rechnung für ein Zeitschriften-Abonnement.)&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Using Racket Minimal and raco</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco" />
   <id>urn:http-www-dbrunner-de:-2016-01-12-using-racket-minimal-and-raco</id>
   <published>2016-01-12T09:55:43Z</published>
   <updated>2016-01-12T09:55:43Z</updated>
@@ -81,7 +81,7 @@
 &lt;p&gt;To sum up: After a simple &lt;code&gt;raco pkg install compiler-lib&lt;/code&gt; I could easily use &lt;code&gt;raco make&lt;/code&gt; and &lt;code&gt;raco test&lt;/code&gt; to play with my program on my phone.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">I played with CHICKEN Scheme, Docker and Alpine Linux</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux" />
   <id>urn:http-www-dbrunner-de:-2015-12-19-i-played-with-chicken-scheme-docker-and-alpine-linux</id>
   <published>2015-12-19T16:54:50Z</published>
   <updated>2015-12-19T16:54:50Z</updated>
@@ -145,7 +145,7 @@ CMD /main/main&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;To serve the pages I did a &lt;code&gt;docker run -d -p 8080:8080 krrrcks/spiffy-test&lt;/code&gt;  (spiffy listens on port 8080 in the default install) and browsed my static pages.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">How to use GET Bucket location on Amazon S3 with Racket</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket" />
   <id>urn:http-www-dbrunner-de:-2015-09-04-how-to-use-get-bucket-location-on-amazon-s3-with-racket</id>
   <published>2015-09-04T05:23:43Z</published>
   <updated>2015-09-04T05:23:43Z</updated>
@@ -186,7 +186,7 @@ is wrong; expecting 'eu-central-1'&amp;lt;/Message&amp;gt;
 &lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; Greg added a &lt;code&gt;bucket-location&lt;/code&gt; function to his great &lt;a href="http://docs.racket-lang.org/aws/S3__Storage_.html#%28def._%28%28lib._aws%2Fs3..rkt%29._bucket-location%29%29"&gt;library&lt;/a&gt;&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">How to run Racket on the Raspberry Pi 2</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2" />
   <id>urn:http-www-dbrunner-de:-2015-08-27-how-to-run-racket-on-the-raspberry-pi-2</id>
   <published>2015-08-27T11:25:45Z</published>
   <updated>2015-08-27T11:25:45Z</updated>
@@ -214,7 +214,7 @@ commands:
 &lt;p&gt;PS: Because the Raspberry Pi 2 Model B has an ARMv7 processor the binary runs on my Jolla smart phone as well.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Running Racket on AWS Lambda</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/08/27/running-racket-on-aws-lambda/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/08/27/running-racket-on-aws-lambda" />
   <id>urn:http-www-dbrunner-de:-2015-08-27-running-racket-on-aws-lambda</id>
   <published>2015-08-27T10:46:57Z</published>
   <updated>2015-08-27T10:46:57Z</updated>
@@ -261,7 +261,7 @@ exports.handler = function(event, context) {
 &lt;p&gt;&lt;em&gt;Upate (2016&amp;ndash;03&amp;ndash;15):&lt;/em&gt; AWS Lambda is &lt;a href="https://aws.amazon.com/de/about-aws/whats-new/2016/03/aws-lambda-available-in-eu-frankfurt/"&gt;now available&lt;/a&gt; in the EU (Frankfurt)  region!&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Lexmarks Druckerpatronen-Lizenz</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/02/17/lexmarks-druckerpatronen-lizenz/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/02/17/lexmarks-druckerpatronen-lizenz" />
   <id>urn:http-www-dbrunner-de:-2015-02-17-lexmarks-druckerpatronen-lizenz</id>
   <published>2015-02-17T10:28:02Z</published>
   <updated>2015-02-17T10:28:02Z</updated>
@@ -278,7 +278,7 @@ exports.handler = function(event, context) {
 &lt;p&gt;Irgendwie ja auch ein bisschen putzig, wie um einen Alltagsgegenstand wie Toner so ein Bohei gemacht wird. Zwei Gedanken kommen mir da in den Sinn: 1. Es verfestigt sich mein Eindruck, dass das Patentsystem recht nahe an kaputt ist. 2. Unternehmen, die so etwas machen, sollten weniger Geld für Juristen, Patentanwälte ausgeben und das Geld eher in coole Produkte investieren.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">3. Docker-Meetup in Frankfurt</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/01/18/3-docker-meetup-in-frankfurt/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/01/18/3-docker-meetup-in-frankfurt" />
   <id>urn:http-www-dbrunner-de:-2015-01-18-3-docker-meetup-in-frankfurt</id>
   <published>2015-01-18T19:05:35Z</published>
   <updated>2015-01-18T19:05:35Z</updated>
@@ -314,8 +314,8 @@ exports.handler = function(event, context) {
  &lt;li&gt;&lt;a href="https://speakerdeck.com/aschmidt75/docker-networking"&gt;Andreas Schmidt, Docker Networking&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content></entry>
  <entry>
   <title type="text">Eindrücke vom 31C3</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/01/05/eindrücke-vom-31c3/" />
-  <id>urn:http-www-dbrunner-de:-2015-01-05-eindrücke-vom-31c3</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2015/01/05/eindru%CC%88cke-vom-31c3" />
+  <id>urn:http-www-dbrunner-de:-2015-01-05-eindru-CC-88cke-vom-31c3</id>
   <published>2015-01-05T16:03:00Z</published>
   <updated>2015-01-05T16:03:00Z</updated>
   <author>
@@ -354,7 +354,7 @@ exports.handler = function(event, context) {
 &lt;p&gt;Etwas spontan und nicht so sonderlich koordiniert haben wir auch einen &lt;a href="http://mg.mud.de"&gt;MorgenGrauen&lt;/a&gt;-Stammtisch ausgerufen und siehe da: Drei Spieler und zwei Gäste fanden sich ein, so dass man bei einem Bier ein wenig plaudern und sich austauschen konnte.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Aus zwei mach eins</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/01/04/aus-zwei-mach-eins/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/01/04/aus-zwei-mach-eins" />
   <id>urn:http-www-dbrunner-de:-2015-01-04-aus-zwei-mach-eins</id>
   <published>2015-01-04T15:16:08Z</published>
   <updated>2015-01-04T15:16:08Z</updated>
@@ -364,7 +364,7 @@ exports.handler = function(event, context) {
 &lt;p&gt;Bisher hatte ich meine Blog-Einträge auf zwei Blogs aufgeteilt, &lt;a href="http://blog.krrrcks.net"&gt;eines&lt;/a&gt; mit mehr technischen (und zum Teil englischen Texten) und dieses hier mit deutschen Texten. Ich denke, ich werde das auf dieses eine Blog hier konzentrieren. Das reduziert doch etwas den Verwaltungsaufwand. Ich habe die Texte vom nun etwas still gelegten Blog hier herüber kopiert.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Mind the storage driver for Ubuntu cloud images (on Azure)</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure" />
   <id>urn:http-www-dbrunner-de:-2014-07-24-mind-the-storage-driver-for-ubuntu-cloud-images-on-azure</id>
   <published>2014-07-24T10:30:43Z</published>
   <updated>2014-07-24T10:30:43Z</updated>
@@ -404,7 +404,7 @@ WARNING: No swap limit support&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;(Update 2014&amp;ndash;10&amp;ndash;23)&lt;/strong&gt; Thanks to  &lt;a href="http://blog.iron.io/2014/10/docker-in-production-what-weve-learned.html"&gt;this blog post from Iron.io&lt;/a&gt;  I found some documentation of the devicemapper storage driver. It is  located in the  &lt;a href="https://github.com/docker/docker/tree/master/daemon/graphdriver/devmapper"&gt;Repository&lt;/a&gt;.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">DateTime conversion can be tricky</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2014/07/24/datetime-conversion-can-be-tricky/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2014/07/24/datetime-conversion-can-be-tricky" />
   <id>urn:http-www-dbrunner-de:-2014-07-24-datetime-conversion-can-be-tricky</id>
   <published>2014-07-24T07:41:36Z</published>
   <updated>2014-07-24T07:41:36Z</updated>
@@ -434,7 +434,7 @@ WARNING: No swap limit support&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;So a better solution would be to substract all seconds between 1900 and 1970 from &lt;code&gt;ts&lt;/code&gt;, multiply by 1,000 and treat this as a JavaScript time stamp. Perhaps best would be to do the conversion in the Lisp process and only deliver a JavaScript-like time stamp.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">I learned something about symbols and packages</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2014/07/06/i-learned-something-about-symbols-and-packages/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2014/07/06/i-learned-something-about-symbols-and-packages" />
   <id>urn:http-www-dbrunner-de:-2014-07-06-i-learned-something-about-symbols-and-packages</id>
   <published>2014-07-06T07:02:39Z</published>
   <updated>2014-07-06T07:02:39Z</updated>
@@ -503,7 +503,7 @@ MY-APP&amp;gt;&lt;/code&gt;&lt;/p&gt;
 &lt;p&gt;Therefore I was reminded to think about packages when interning  symbols. A good guide to symbols and packages could be found in this  document: &lt;a href="http://www.flownet.com/gat/packages.pdf"&gt;The Complete Idiot&amp;rsquo;s Guide to Common Lisp Packages&lt;/a&gt;.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Unicode support for Octopress</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2014/06/10/unicode-support-for-octopress/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2014/06/10/unicode-support-for-octopress" />
   <id>urn:http-www-dbrunner-de:-2014-06-10-unicode-support-for-octopress</id>
   <published>2014-06-10T07:26:22Z</published>
   <updated>2014-06-10T07:26:22Z</updated>
@@ -549,7 +549,7 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The &lt;code&gt;rake preview&lt;/code&gt; is a neat feature because the server always looks for changed files and produces the HTML files on the fly. That means I can edit the files in my editor and could see the resulting pages in a  browser nearly the same time.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">My Dockerfile for setting up Octopress</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2014/05/26/my-dockerfile-for-setting-up-octopress/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2014/05/26/my-dockerfile-for-setting-up-octopress" />
   <id>urn:http-www-dbrunner-de:-2014-05-26-my-dockerfile-for-setting-up-octopress</id>
   <published>2014-05-26T07:24:00Z</published>
   <updated>2014-05-26T07:24:00Z</updated>
@@ -587,8 +587,8 @@ EXPOSE 4000
 CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;</content></entry>
  <entry>
   <title type="text">Programm-Bibliotheken und verschiedene Versionsstände</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2011/10/16/programm-bibliotheken-und-verschiedene-versionsstände/" />
-  <id>urn:http-www-dbrunner-de:-2011-10-16-programm-bibliotheken-und-verschiedene-versionsstände</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2011/10/16/programm-bibliotheken-und-verschiedene-versionssta%CC%88nde" />
+  <id>urn:http-www-dbrunner-de:-2011-10-16-programm-bibliotheken-und-verschiedene-versionssta-CC-88nde</id>
   <published>2011-10-15T22:00:00Z</published>
   <updated>2011-10-15T22:00:00Z</updated>
   <author>
@@ -597,7 +597,7 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;</content></entry>
 &lt;p&gt;Ich bin ein sehr intensiver Nutzer von &lt;a href="http://www.orgmode.org"&gt;Org-Mode&lt;/a&gt;, einem speziellen Modul/Modus für den Emacs-Editor (ich habe hier auf meiner Homepage auch einmal mit einer kleinen &lt;a href="http://archive.dbrunner.de/it/org-mode.html"&gt;Seite&lt;/a&gt; dazu begonnen). Nun ja, was soll man sagen: Bei Emacs wird eine recht alte Version mitgeliefert. Ich wollte dann mal auch wegen einiger Funktionen die neueste nutzen. Also via &lt;code&gt;git&lt;/code&gt; heruntergeladen und eingebunden und Peng, irgendwas funktioniert natürlich nicht mehr: Ich benötige pratisch täglich den Export von Org-Mode-Dateien nach &lt;code&gt;LaTeX&lt;/code&gt;, der wollte aber nicht mehr. Nun kann ich zwar Lisp, aber das Emacs Lisp ist doch etwas speziell und die Debug-Möglichkeiten sind etwas … nun ja, altbacken. Kurzum: Das macht überhaupt keinen Spaß. Im Endeffekt habe ich dann herausgefunden, dass unter bestimmten Umständen Teile des alten, bei Emacs mitgelieferten Codes nachgeladen wird anstelle der neuen Distribution. Diese bescheidene Art von Emacs mit Modulen und Paketen umzugehen ist wirklich erschreckend. Was dafür wiederum total toll war: In der von mir verwendeten Org-Mode-Version war wohl ein Fehler, das ganze Ding über die Mailingliste geschickt und innert einem halben Tag war der Fehler von anderen Nutzern und von Carsten Dominik auch gleich gefixt. Grandiose Antwortzeit!&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Constanze Kurz/Frank Rieger, Die Datenfresser</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2011/06/30/constanze-kurz-frank-rieger-die-datenfresser/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2011/06/30/constanze-kurz-frank-rieger-die-datenfresser" />
   <id>urn:http-www-dbrunner-de:-2011-06-30-constanze-kurz-frank-rieger-die-datenfresser</id>
   <published>2011-06-30T11:00:00Z</published>
   <updated>2011-06-30T11:00:00Z</updated>

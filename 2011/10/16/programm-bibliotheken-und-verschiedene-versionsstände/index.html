@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Programm-Bibliotheken und verschiedene Versionsstände</title>
+    <meta name="description" content="Ich bin ein sehr intensiver Nutzer von Org-Mode, einem speziellen Modul/Modus für den Emacs-Editor (ich habe hier auf meiner Homepage auch einmal mit einer kleinen Seite dazu begonnen). Nun ja, was soll man sagen: Bei Emacs wird eine recht alte Version mi...">
+    <meta name="author"      content="Daniel Brunner">
+    <meta name="keywords"    content="Homepage, Org-Mode, IT">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon"      href="/favicon.ico">
+    <link rel="canonical" href="http://www.dbrunner.de/2011/10/16/programm-bibliotheken-und-verschiedene-versionssta%CC%88nde">
+    <link rel="next" href="/2011/10/15/umbau-der-webseite-und-des-blogs">
+    <link rel="prev" href="/2011/10/20/eu-will-la%CC%88nderratings-verbieten">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
+    <link rel="stylesheet" type="text/css" href="/css/dbr.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <!-- Feeds -->
+    <link rel="alternate" type="application/atom+xml"
+          href="/feeds/all.atom.xml" title="Atom Feed">
+    <link rel="alternate" type="application/rss+xml"
+          href="/feeds/all.rss.xml" title="RSS Feed">
+    <!-- JS -->
+    <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+    <link href="//fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+    <link href="//fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+    <!-- <script type="text/javascript">
+           (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+           (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+           m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+           })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+           ga('create', 'UA-xxxxx', 'auto');
+           ga('send', 'pageview');
+         </script> -->
+  </head>
+  <body>
+    <!-- A standard Twitter Bootstrap nav bar -->
+    <header class="navbar navbar-default navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle"
+                  data-toggle="collapse"
+                  data-target=".our-nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a href="/index.html" class="navbar-brand">Daniel Brunner</a>
+        </div>
+        <div class="collapse navbar-collapse our-nav-collapse"
+             role="navigation">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Über mich <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/ueber/index.html">Kurzvorstellung</a></li>
+                <li><a href="/ueber/publikationen.html">Publikationen</a></li>
+                <li><a href="/ueber/vortraege.html">Vorträge</a></li>
+                <li><a href="/ueber/lehre.html">Lehre</a></li>
+                <li><a href="/ueber/projekte.html">Projekte/Themen</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/impressum/index.html">Impressum</a>
+            </li> 
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Tags <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/index.html">All Posts</a></li>
+
+<li><a href="/tags/Allerlei.html">Allerlei</a></li>
+
+<li><a href="/tags/AWS.html">AWS</a></li>
+
+<li><a href="/tags/Beho%CC%88rden.html">Behörden</a></li>
+
+<li><a href="/tags/Common-Lisp.html">Common Lisp</a></li>
+
+<li><a href="/tags/Docker.html">Docker</a></li>
+
+<li><a href="/tags/Frog.html">Frog</a></li>
+
+<li><a href="/tags/Homepage.html">Homepage</a></li>
+
+<li><a href="/tags/IT.html">IT</a></li>
+
+<li><a href="/tags/JavaScript.html">JavaScript</a></li>
+
+<li><a href="/tags/Linux.html">Linux</a></li>
+
+<li><a href="/tags/Medien.html">Medien</a></li>
+
+<li><a href="/tags/Octopress.html">Octopress</a></li>
+
+<li><a href="/tags/Org-Mode.html">Org-Mode</a></li>
+
+<li><a href="/tags/Politik.html">Politik</a></li>
+
+<li><a href="/tags/Racket.html">Racket</a></li>
+
+<li><a href="/tags/Recht.html">Recht</a></li>
+
+<li><a href="/tags/Reisen.html">Reisen</a></li>
+
+<li><a href="/tags/Scheme.html">Scheme</a></li>
+
+<li><a href="/tags/Statistik.html">Statistik</a></li>
+
+<li><a href="/tags/Steuern.html">Steuern</a></li>
+
+<li><a href="/tags/Veranstaltungen.html">Veranstaltungen</a></li>
+
+<li><a href="/tags/Wirtschaft.html">Wirtschaft</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Feeds <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/feeds/all.atom.xml">Atom</a></li>
+                <li><a href="/feeds/all.rss.xml">RSS</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+
+        <!-- Main column -->
+        <div id="content" class="col-md-12">
+
+<!--           -->
+
+
+
+          <article>
+  <header>
+    <h1>Programm-Bibliotheken und verschiedene Versionsstände</h1>
+    <p class='date-and-tags'>
+<time datetime="2011-10-16" pubdate="true">2011-10-16</time> :: <span class="tags"><a href="/tags/Homepage.html">Homepage</a>, <a href="/tags/Org-Mode.html">Org-Mode</a>, <a href="/tags/IT.html">IT</a></span></p>
+  </header>
+
+<p>Ich bin ein sehr intensiver Nutzer von <a href="http://www.orgmode.org">Org-Mode</a>, einem speziellen Modul/Modus für den Emacs-Editor (ich habe hier auf meiner Homepage auch einmal mit einer kleinen <a href="http://archive.dbrunner.de/it/org-mode.html">Seite</a> dazu begonnen). Nun ja, was soll man sagen: Bei Emacs wird eine recht alte Version mitgeliefert. Ich wollte dann mal auch wegen einiger Funktionen die neueste nutzen. Also via <code>git</code> heruntergeladen und eingebunden und Peng, irgendwas funktioniert natürlich nicht mehr: Ich benötige pratisch täglich den Export von Org-Mode-Dateien nach <code>LaTeX</code>, der wollte aber nicht mehr. Nun kann ich zwar Lisp, aber das Emacs Lisp ist doch etwas speziell und die Debug-Möglichkeiten sind etwas … nun ja, altbacken. Kurzum: Das macht überhaupt keinen Spaß. Im Endeffekt habe ich dann herausgefunden, dass unter bestimmten Umständen Teile des alten, bei Emacs mitgelieferten Codes nachgeladen wird anstelle der neuen Distribution. Diese bescheidene Art von Emacs mit Modulen und Paketen umzugehen ist wirklich erschreckend. Was dafür wiederum total toll war: In der von mir verwendeten Org-Mode-Version war wohl ein Fehler, das ganze Ding über die Mailingliste geschickt und innert einem halben Tag war der Fehler von anderen Nutzern und von Carsten Dominik auch gleich gefixt. Grandiose Antwortzeit!</p>
+  <footer>
+    <script type="text/javascript">
+      !function(d,s,id){
+          var js,fjs=d.getElementsByTagName(s)[0];
+          if(!d.getElementById(id)){
+              js=d.createElement(s);
+              js.id=id;
+              js.src="//platform.twitter.com/widgets.js";
+              fjs.parentNode.insertBefore(js,fjs);
+          }
+      }(document,"script","twitter-wjs");
+    </script>
+    <a href="https://twitter.com/share"
+       class="twitter-share-button"
+       data-url="http://www.dbrunner.de/2011/10/16/programm-bibliotheken-und-verschiedene-versionssta%CC%88nde"
+       data-dnt="true">
+      "Tweet"</a>
+    <!-- <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+         <g:plusone size="medium" href="http://www.dbrunner.de/2011/10/16/programm-bibliotheken-und-verschiedene-versionssta%CC%88nde"></g:plusone> -->
+    <!-- <script type="text/javascript">
+           var disqus_shortname = 'shortname';
+           (function() {
+               var dsq = document.createElement('script');
+               dsq.type = 'text/javascript';
+               dsq.async = true;
+               dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+           })();
+         </script>
+         <div id="disqus_thread"></div> -->
+    <ul class="pager">
+    <li class="previous">
+      <a href="/2011/10/20/eu-will-la%CC%88nderratings-verbieten">&larr; <em>EU will Länderratings verbieten</em></a>
+    </li>
+    <li class="next">
+      <a href="/2011/10/15/umbau-der-webseite-und-des-blogs"><em>Umbau der Webseite und des Blogs</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
+        </div>
+      </div>
+      <footer>
+        <hr />
+        <p><a href="https://twitter.com/krrrcks"
+              class="twitter-follow-button"
+              data-show-count="false"
+              data-lang="en">
+             "Follow krrrcks"
+           </a>
+           <script type="text/javascript">
+             !function(d,s,id){
+                 var js,fjs=d.getElementsByTagName(s)[0];
+                 if(!d.getElementById(id)){
+                     js=d.createElement(s);
+                     js.id=id;
+                     js.src="//platform.twitter.com/widgets.js";
+                     fjs.parentNode.insertBefore(js,fjs);
+                 }
+             }(document,"script","twitter-wjs");
+           </script></p>
+        <p>Made with  <a href="https://github.com/greghendershott/frog">Frog</a> and <a href="http://www.racket-lang.org">Racket</a>. Using <a href="http://www.getbootstrap.com">Bootstrap</a>.</p>
+        <p><em>(C) 2017, Daniel Brunner</em>.</p>
+      </footer>
+    </div>
+    <!-- </body> JS -->
+    <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  </body>
+</html>

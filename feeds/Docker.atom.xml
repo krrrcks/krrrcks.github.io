@@ -7,7 +7,7 @@
  <updated>2015-12-19T16:54:50Z</updated>
  <entry>
   <title type="text">I played with CHICKEN Scheme, Docker and Alpine Linux</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux" />
   <id>urn:http-www-dbrunner-de:-2015-12-19-i-played-with-chicken-scheme-docker-and-alpine-linux</id>
   <published>2015-12-19T16:54:50Z</published>
   <updated>2015-12-19T16:54:50Z</updated>
@@ -71,7 +71,7 @@ CMD /main/main&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;To serve the pages I did a &lt;code&gt;docker run -d -p 8080:8080 krrrcks/spiffy-test&lt;/code&gt;  (spiffy listens on port 8080 in the default install) and browsed my static pages.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">3. Docker-Meetup in Frankfurt</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/01/18/3-docker-meetup-in-frankfurt/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/01/18/3-docker-meetup-in-frankfurt" />
   <id>urn:http-www-dbrunner-de:-2015-01-18-3-docker-meetup-in-frankfurt</id>
   <published>2015-01-18T19:05:35Z</published>
   <updated>2015-01-18T19:05:35Z</updated>
@@ -107,7 +107,7 @@ CMD /main/main&lt;/code&gt;&lt;/pre&gt;
  &lt;li&gt;&lt;a href="https://speakerdeck.com/aschmidt75/docker-networking"&gt;Andreas Schmidt, Docker Networking&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</content></entry>
  <entry>
   <title type="text">Erfahrungen mit Docker</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2014/10/05/erfahrungen-mit-docker/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2014/10/05/erfahrungen-mit-docker" />
   <id>urn:http-www-dbrunner-de:-2014-10-05-erfahrungen-mit-docker</id>
   <published>2014-10-05T09:29:43Z</published>
   <updated>2014-10-05T09:29:43Z</updated>
@@ -165,7 +165,7 @@ CMD /main/main&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Ich finde es ein spannendes Projekt und wenn sich für mich die einen oder anderen Unklarheiten lichten, werde ich es sicherlich auch für den Produktiveinsatz in Erwägung ziehen. Ich vermute, dass das Projekt sich noch deutlich weiterentwickeln wird, die knapp 65 Mio Venture Capital werden neben Marketing hoffentlich auch ins Produkt gesteckt.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Mind the storage driver for Ubuntu cloud images (on Azure)</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure" />
   <id>urn:http-www-dbrunner-de:-2014-07-24-mind-the-storage-driver-for-ubuntu-cloud-images-on-azure</id>
   <published>2014-07-24T10:30:43Z</published>
   <updated>2014-07-24T10:30:43Z</updated>
@@ -205,7 +205,7 @@ WARNING: No swap limit support&lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;&lt;strong&gt;(Update 2014&amp;ndash;10&amp;ndash;23)&lt;/strong&gt; Thanks to  &lt;a href="http://blog.iron.io/2014/10/docker-in-production-what-weve-learned.html"&gt;this blog post from Iron.io&lt;/a&gt;  I found some documentation of the devicemapper storage driver. It is  located in the  &lt;a href="https://github.com/docker/docker/tree/master/daemon/graphdriver/devmapper"&gt;Repository&lt;/a&gt;.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Unicode support for Octopress</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2014/06/10/unicode-support-for-octopress/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2014/06/10/unicode-support-for-octopress" />
   <id>urn:http-www-dbrunner-de:-2014-06-10-unicode-support-for-octopress</id>
   <published>2014-06-10T07:26:22Z</published>
   <updated>2014-06-10T07:26:22Z</updated>
@@ -251,7 +251,7 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The &lt;code&gt;rake preview&lt;/code&gt; is a neat feature because the server always looks for changed files and produces the HTML files on the fly. That means I can edit the files in my editor and could see the resulting pages in a  browser nearly the same time.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">My Dockerfile for setting up Octopress</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2014/05/26/my-dockerfile-for-setting-up-octopress/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2014/05/26/my-dockerfile-for-setting-up-octopress" />
   <id>urn:http-www-dbrunner-de:-2014-05-26-my-dockerfile-for-setting-up-octopress</id>
   <published>2014-05-26T07:24:00Z</published>
   <updated>2014-05-26T07:24:00Z</updated>

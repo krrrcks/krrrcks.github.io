@@ -9,7 +9,7 @@
   <ttl>1800</ttl>
   <item>
    <title>10th European Lisp Symposium</title>
-   <link>http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium/</link>
+   <link>http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2017-04-05-10th-european-lisp-symposium</guid>
    <pubDate>Wed, 05 Apr 2017 14:00:31 UT</pubDate>
    <author>Daniel Brunner</author>
@@ -21,7 +21,7 @@
 &lt;p&gt;Our paper is in the proceedings which can be found find on the &lt;a href="http://www.european-lisp-symposium.org/2017/index.html"&gt;conference&amp;rsquo;s homepage&lt;/a&gt;. The slides are available there as well. I host these files here: &lt;a href="/pub/els2017.pdf"&gt;Paper&lt;/a&gt; and &lt;a href="/pub/els2017-slides.pdf"&gt;slides&lt;/a&gt;. The source code is provided as a &lt;a href="/pub/els2017-src.zip"&gt;ZIP archive&lt;/a&gt;.&lt;/p&gt;</description></item>
   <item>
    <title>Mein Wechsel zu Frog</title>
-   <link>http://www.dbrunner.de/2017/02/16/mein-wechsel-zu-frog/</link>
+   <link>http://www.dbrunner.de/2017/02/16/mein-wechsel-zu-frog</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2017-02-16-mein-wechsel-zu-frog</guid>
    <pubDate>Thu, 16 Feb 2017 10:08:04 UT</pubDate>
    <author>Daniel Brunner</author>
@@ -57,7 +57,7 @@
 &lt;p&gt;Ach ja, zum Thema CSS und Fummeln darf natürlich nicht der übliche Hinweis auf diesen (bewegten) &lt;a href="https://imgur.com/gallery/Q3cUg29"&gt;Cartoon&lt;/a&gt; fehlen.&lt;/p&gt;</description></item>
   <item>
    <title>Using Racket Minimal and raco</title>
-   <link>http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco/</link>
+   <link>http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2016-01-12-using-racket-minimal-and-raco</guid>
    <pubDate>Tue, 12 Jan 2016 09:55:43 UT</pubDate>
    <author>Daniel Brunner</author>
@@ -73,7 +73,7 @@
 &lt;p&gt;To sum up: After a simple &lt;code&gt;raco pkg install compiler-lib&lt;/code&gt; I could easily use &lt;code&gt;raco make&lt;/code&gt; and &lt;code&gt;raco test&lt;/code&gt; to play with my program on my phone.&lt;/p&gt;</description></item>
   <item>
    <title>How to use GET Bucket location on Amazon S3 with Racket</title>
-   <link>http://www.dbrunner.de/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/</link>
+   <link>http://www.dbrunner.de/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-09-04-how-to-use-get-bucket-location-on-amazon-s3-with-racket</guid>
    <pubDate>Fri, 04 Sep 2015 05:23:43 UT</pubDate>
    <author>Daniel Brunner</author>
@@ -112,7 +112,7 @@ is wrong; expecting 'eu-central-1'&amp;lt;/Message&amp;gt;
 &lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; Greg added a &lt;code&gt;bucket-location&lt;/code&gt; function to his great &lt;a href="http://docs.racket-lang.org/aws/S3__Storage_.html#%28def._%28%28lib._aws%2Fs3..rkt%29._bucket-location%29%29"&gt;library&lt;/a&gt;&lt;/p&gt;</description></item>
   <item>
    <title>How to run Racket on the Raspberry Pi 2</title>
-   <link>http://www.dbrunner.de/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/</link>
+   <link>http://www.dbrunner.de/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-08-27-how-to-run-racket-on-the-raspberry-pi-2</guid>
    <pubDate>Thu, 27 Aug 2015 11:25:45 UT</pubDate>
    <author>Daniel Brunner</author>
@@ -138,7 +138,7 @@ commands:
 &lt;p&gt;PS: Because the Raspberry Pi 2 Model B has an ARMv7 processor the binary runs on my Jolla smart phone as well.&lt;/p&gt;</description></item>
   <item>
    <title>Running Racket on AWS Lambda</title>
-   <link>http://www.dbrunner.de/2015/08/27/running-racket-on-aws-lambda/</link>
+   <link>http://www.dbrunner.de/2015/08/27/running-racket-on-aws-lambda</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-08-27-running-racket-on-aws-lambda</guid>
    <pubDate>Thu, 27 Aug 2015 10:46:57 UT</pubDate>
    <author>Daniel Brunner</author>

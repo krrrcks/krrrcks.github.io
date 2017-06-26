@@ -4,7 +4,7 @@
 
     <meta charset="utf-8">
     <title>Racket</title>
-    <meta name="description" content="Racket: _(work in progress)_ Racket as a &quot;tool&quot;: I found Scribble  a nice tool for taking notes, preparing documents. I use it a lot  for communicating with colleagues, preparing offers etc. I  customized the LaTeX output to user our company's document cl...">
+    <meta name="description" content="Racket: _(work in progress)_ Racket as a &quot;tool&quot;: I found Scribble  a nice tool for taking notes, preparing documents. I use it a lot  for communicating with colleagues, preparing offers etc. I  customized the LaTeX output to use our company's document cla...">
     <meta name="author"      content="Daniel Brunner">
     <meta name="keywords"    content="">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
@@ -151,7 +151,7 @@
 <h2 id="racket-as-a-tool">Racket as a &ldquo;tool&rdquo;</h2>
 
 <ul>
- <li>I found <a href="http://docs.racket-lang.org/scribble/index.html">Scribble</a>  a nice tool for taking notes, preparing documents. I use it a lot  for communicating with colleagues, preparing offers etc. I  customized the LaTeX output to user our company&rsquo;s document class.</li>
+ <li>I found <a href="http://docs.racket-lang.org/scribble/index.html">Scribble</a>  a nice tool for taking notes, preparing documents. I use it a lot  for communicating with colleagues, preparing offers etc. I  customized the LaTeX output to use our company&rsquo;s document class.</li>
  <li>I used <a href="http://docs.racket-lang.org/slideshow/index.html">Slideshow</a>  for some presentations. Though I lack a lot of practice and creating  figures etc. is very time-consuming for me.</li></ul>
 
 <h2 id="racket-in-production">Racket &ldquo;in production&rdquo;</h2>
@@ -190,7 +190,7 @@
 
 <ul>
  <li>How to install all libraries after a new version of Racket comes out: <code>raco pkg migrate</code>.</li>
- <li>How to find where a module is located: <code>(collection-file-path "main" "drracket")</code>, <code>(require syntax/modresolve) (resolve-module-path 'drracket)</code> in Emacs (with Racket-Mode installed): <code>racket-open-require-path</code> (C-c C-x C-f), <code>racket-find-collection</code> which uses the Racket package <a href="https://github.com/takikawa/raco-find-collection">raco-find-collection</a>,  (Source: <a href="https://groups.google.com/forum/#!topic/racket-users/tJULSX5mYAA">Racket Users</a> mailing list).</li>
+ <li>How to find a module&rsquo;s location: <code>(collection-file-path "main" "drracket")</code>, <code>(require syntax/modresolve) (resolve-module-path 'drracket)</code> in Emacs (with Racket-Mode installed): <code>racket-open-require-path</code> (C-c C-x C-f), <code>racket-find-collection</code> which uses the Racket package <a href="https://github.com/takikawa/raco-find-collection">raco-find-collection</a>,  (Source: <a href="https://groups.google.com/forum/#!topic/racket-users/tJULSX5mYAA">Racket Users</a> mailing list).</li>
  <li>Adding <code>raco make</code> to Racket Minimal: <code>raco pkg install compiler-lib</code>.</li></ul>
         </div>
       </div>

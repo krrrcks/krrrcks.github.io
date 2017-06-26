@@ -7,7 +7,7 @@
  <updated>2017-02-16T10:08:04Z</updated>
  <entry>
   <title type="text">Mein Wechsel zu Frog</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2017/02/16/mein-wechsel-zu-frog/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2017/02/16/mein-wechsel-zu-frog" />
   <id>urn:http-www-dbrunner-de:-2017-02-16-mein-wechsel-zu-frog</id>
   <published>2017-02-16T10:08:04Z</published>
   <updated>2017-02-16T10:08:04Z</updated>
@@ -45,7 +45,7 @@
 &lt;p&gt;Ach ja, zum Thema CSS und Fummeln darf natürlich nicht der übliche Hinweis auf diesen (bewegten) &lt;a href="https://imgur.com/gallery/Q3cUg29"&gt;Cartoon&lt;/a&gt; fehlen.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Aus zwei mach eins</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/01/04/aus-zwei-mach-eins/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/01/04/aus-zwei-mach-eins" />
   <id>urn:http-www-dbrunner-de:-2015-01-04-aus-zwei-mach-eins</id>
   <published>2015-01-04T15:16:08Z</published>
   <updated>2015-01-04T15:16:08Z</updated>
@@ -55,7 +55,7 @@
 &lt;p&gt;Bisher hatte ich meine Blog-Einträge auf zwei Blogs aufgeteilt, &lt;a href="http://blog.krrrcks.net"&gt;eines&lt;/a&gt; mit mehr technischen (und zum Teil englischen Texten) und dieses hier mit deutschen Texten. Ich denke, ich werde das auf dieses eine Blog hier konzentrieren. Das reduziert doch etwas den Verwaltungsaufwand. Ich habe die Texte vom nun etwas still gelegten Blog hier herüber kopiert.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Ich habe mal Octopress aktualisert</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2014/12/21/ich-habe-mal-octopress-aktualisert/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2014/12/21/ich-habe-mal-octopress-aktualisert" />
   <id>urn:http-www-dbrunner-de:-2014-12-21-ich-habe-mal-octopress-aktualisert</id>
   <published>2014-12-21T10:58:16Z</published>
   <updated>2014-12-21T10:58:16Z</updated>
@@ -89,8 +89,8 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;&lt;strong&gt;Update vom 04. Januar 2014:&lt;/strong&gt; Nach einem kurzen  &lt;a href="https://twitter.com/Krrrcks/status/546667456128114688"&gt;Gespräch&lt;/a&gt;  via Twitter habe ich mich entschieden, den eingebauten Server doch  wieder so zu belassen, wie es im &lt;code&gt;Rakefile&lt;/code&gt; ursprünglich  stand. Statt dessen habe ich einfach in dem Docker-Container einen  &lt;code&gt;nginx&lt;/code&gt; hinzuinstalliert, der dann mein &lt;code&gt;public&lt;/code&gt;-Verzeichnis an den  Port 4000 ausliefert. So funktioniert es wieder prima: Ich starte  den &lt;code&gt;nginx&lt;/code&gt; und lasse dann das &lt;code&gt;rake watch&lt;/code&gt; laufen, um die Seiten  immer wieder neu zu erzeugen, wenn sich Dinge geändert haben.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Migration alter Blog-Einträge</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2014/12/17/migration-alter-blog-einträge/" />
-  <id>urn:http-www-dbrunner-de:-2014-12-17-migration-alter-blog-einträge</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2014/12/17/migration-alter-blog-eintra%CC%88ge" />
+  <id>urn:http-www-dbrunner-de:-2014-12-17-migration-alter-blog-eintra-CC-88ge</id>
   <published>2014-12-17T17:11:00Z</published>
   <updated>2014-12-17T17:11:00Z</updated>
   <author>
@@ -107,7 +107,7 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;Dieser ganze Zoo rund um Markdown und andere ähnliche Formate ist zwar manchmal ein bisschen unübersichtlich, aber mir gefällt das sehr gut, dass man mit wenig Markup schön Textdateien strukturieren kann und dann mit Pandoc auch gut hin und her konvertieren kann.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Relaunch fast fertig</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2014/06/10/relaunch-fast-fertig/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2014/06/10/relaunch-fast-fertig" />
   <id>urn:http-www-dbrunner-de:-2014-06-10-relaunch-fast-fertig</id>
   <published>2014-06-10T07:20:03Z</published>
   <updated>2014-06-10T07:20:03Z</updated>
@@ -121,7 +121,7 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;Die &amp;ldquo;preview&amp;rdquo;-Funktion ist übrigens ein wirklich nettes Features: Die kann man derart nutzen, dass ein Webserver den aktuellen Stand lokal ausliefert. Dabei beobachtet der Dienst, ob sich Dateien ändern und erstellt unmittelbar wieder die HTML-Seiten. So kann man bequem im Editor das Markdown bearbeiten und im Browser daneben das fertige Ergebnis beurteilen.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Archiv mit der alten Homepage</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2014/06/06/archiv-mit-der-alten-homepage/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2014/06/06/archiv-mit-der-alten-homepage" />
   <id>urn:http-www-dbrunner-de:-2014-06-06-archiv-mit-der-alten-homepage</id>
   <published>2014-06-06T15:05:45Z</published>
   <updated>2014-06-06T15:05:45Z</updated>
@@ -135,7 +135,7 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
  &lt;li&gt;Meine mit &lt;a href="http://www.tiddlywiki.com"&gt;Tiddlywiki&lt;/a&gt; gestaltete Seite unter &lt;a href="http://archive.dbrunner.de/old/main.html"&gt;http://archive.dbrunner.de/old/main.html&lt;/a&gt;  (2005&amp;ndash;2009)&lt;/li&gt;&lt;/ul&gt;</content></entry>
  <entry>
   <title type="text">Ein Relaunch</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2014/06/06/ein-relaunch/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2014/06/06/ein-relaunch" />
   <id>urn:http-www-dbrunner-de:-2014-06-06-ein-relaunch</id>
   <published>2014-06-06T13:48:31Z</published>
   <updated>2014-06-06T13:48:31Z</updated>
@@ -149,8 +149,8 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;Nun also ein Relaunch, aber ohne große Vorsätze. Es wird hier also  nur selten und nur wenig zu lesen geben.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Programm-Bibliotheken und verschiedene Versionsstände</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2011/10/16/programm-bibliotheken-und-verschiedene-versionsstände/" />
-  <id>urn:http-www-dbrunner-de:-2011-10-16-programm-bibliotheken-und-verschiedene-versionsstände</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2011/10/16/programm-bibliotheken-und-verschiedene-versionssta%CC%88nde" />
+  <id>urn:http-www-dbrunner-de:-2011-10-16-programm-bibliotheken-und-verschiedene-versionssta-CC-88nde</id>
   <published>2011-10-15T22:00:00Z</published>
   <updated>2011-10-15T22:00:00Z</updated>
   <author>
@@ -159,7 +159,7 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;Ich bin ein sehr intensiver Nutzer von &lt;a href="http://www.orgmode.org"&gt;Org-Mode&lt;/a&gt;, einem speziellen Modul/Modus für den Emacs-Editor (ich habe hier auf meiner Homepage auch einmal mit einer kleinen &lt;a href="http://archive.dbrunner.de/it/org-mode.html"&gt;Seite&lt;/a&gt; dazu begonnen). Nun ja, was soll man sagen: Bei Emacs wird eine recht alte Version mitgeliefert. Ich wollte dann mal auch wegen einiger Funktionen die neueste nutzen. Also via &lt;code&gt;git&lt;/code&gt; heruntergeladen und eingebunden und Peng, irgendwas funktioniert natürlich nicht mehr: Ich benötige pratisch täglich den Export von Org-Mode-Dateien nach &lt;code&gt;LaTeX&lt;/code&gt;, der wollte aber nicht mehr. Nun kann ich zwar Lisp, aber das Emacs Lisp ist doch etwas speziell und die Debug-Möglichkeiten sind etwas … nun ja, altbacken. Kurzum: Das macht überhaupt keinen Spaß. Im Endeffekt habe ich dann herausgefunden, dass unter bestimmten Umständen Teile des alten, bei Emacs mitgelieferten Codes nachgeladen wird anstelle der neuen Distribution. Diese bescheidene Art von Emacs mit Modulen und Paketen umzugehen ist wirklich erschreckend. Was dafür wiederum total toll war: In der von mir verwendeten Org-Mode-Version war wohl ein Fehler, das ganze Ding über die Mailingliste geschickt und innert einem halben Tag war der Fehler von anderen Nutzern und von Carsten Dominik auch gleich gefixt. Grandiose Antwortzeit!&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Umbau der Webseite und des Blogs</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2011/10/15/umbau-der-webseite-und-des-blogs/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2011/10/15/umbau-der-webseite-und-des-blogs" />
   <id>urn:http-www-dbrunner-de:-2011-10-15-umbau-der-webseite-und-des-blogs</id>
   <published>2011-10-14T22:00:00Z</published>
   <updated>2011-10-14T22:00:00Z</updated>
@@ -177,7 +177,7 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;&lt;strong&gt;Update:&lt;/strong&gt; Und die Links zu den Bildern hier im Blog scheinen auch noch nicht so richtig zu tun; da muss ich auch noch einmal ran.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Code snippets not working at the moment</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2010/07/02/code-snippets-not-working-at-the-moment/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2010/07/02/code-snippets-not-working-at-the-moment" />
   <id>urn:http-www-dbrunner-de:-2010-07-02-code-snippets-not-working-at-the-moment</id>
   <published>2010-07-01T22:00:00Z</published>
   <updated>2010-07-01T22:00:00Z</updated>
@@ -187,8 +187,8 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;Two of my &lt;a href="http://archive.dbrunner.de/it/org-mode.html"&gt;code snippets&lt;/a&gt; for org-mode are not working with the actual &lt;code&gt;master&lt;/code&gt; of the git repository. I have to check this and I am going to fix them when I find enough time for that.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Änderungen beim Datenschutzhinweis</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2010/04/01/änderungen-beim-datenschutzhinweis/" />
-  <id>urn:http-www-dbrunner-de:-2010-04-01-änderungen-beim-datenschutzhinweis</id>
+  <link rel="alternate" href="http://www.dbrunner.de/2010/04/01/a%CC%88nderungen-beim-datenschutzhinweis" />
+  <id>urn:http-www-dbrunner-de:-2010-04-01-a-CC-88nderungen-beim-datenschutzhinweis</id>
   <published>2010-03-31T22:00:00Z</published>
   <updated>2010-03-31T22:00:00Z</updated>
   <author>

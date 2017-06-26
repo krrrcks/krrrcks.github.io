@@ -9,7 +9,7 @@
   <ttl>1800</ttl>
   <item>
    <title>Ich habe mal Octopress aktualisert</title>
-   <link>http://www.dbrunner.de/2014/12/21/ich-habe-mal-octopress-aktualisert/</link>
+   <link>http://www.dbrunner.de/2014/12/21/ich-habe-mal-octopress-aktualisert</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-12-21-ich-habe-mal-octopress-aktualisert</guid>
    <pubDate>Sun, 21 Dec 2014 10:58:16 UT</pubDate>
    <author>Daniel Brunner</author>
@@ -41,8 +41,8 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;&lt;strong&gt;Update vom 04. Januar 2014:&lt;/strong&gt; Nach einem kurzen  &lt;a href="https://twitter.com/Krrrcks/status/546667456128114688"&gt;Gespräch&lt;/a&gt;  via Twitter habe ich mich entschieden, den eingebauten Server doch  wieder so zu belassen, wie es im &lt;code&gt;Rakefile&lt;/code&gt; ursprünglich  stand. Statt dessen habe ich einfach in dem Docker-Container einen  &lt;code&gt;nginx&lt;/code&gt; hinzuinstalliert, der dann mein &lt;code&gt;public&lt;/code&gt;-Verzeichnis an den  Port 4000 ausliefert. So funktioniert es wieder prima: Ich starte  den &lt;code&gt;nginx&lt;/code&gt; und lasse dann das &lt;code&gt;rake watch&lt;/code&gt; laufen, um die Seiten  immer wieder neu zu erzeugen, wenn sich Dinge geändert haben.&lt;/p&gt;</description></item>
   <item>
    <title>Migration alter Blog-Einträge</title>
-   <link>http://www.dbrunner.de/2014/12/17/migration-alter-blog-einträge/</link>
-   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-12-17-migration-alter-blog-einträge</guid>
+   <link>http://www.dbrunner.de/2014/12/17/migration-alter-blog-eintra%CC%88ge</link>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-12-17-migration-alter-blog-eintra-CC-88ge</guid>
    <pubDate>Wed, 17 Dec 2014 17:11:00 UT</pubDate>
    <author>Daniel Brunner</author>
    <description>
@@ -57,7 +57,7 @@ rake update_style              # update the template's style&lt;/code&gt;&lt;/pr
 &lt;p&gt;Dieser ganze Zoo rund um Markdown und andere ähnliche Formate ist zwar manchmal ein bisschen unübersichtlich, aber mir gefällt das sehr gut, dass man mit wenig Markup schön Textdateien strukturieren kann und dann mit Pandoc auch gut hin und her konvertieren kann.&lt;/p&gt;</description></item>
   <item>
    <title>Unicode support for Octopress</title>
-   <link>http://www.dbrunner.de/2014/06/10/unicode-support-for-octopress/</link>
+   <link>http://www.dbrunner.de/2014/06/10/unicode-support-for-octopress</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-06-10-unicode-support-for-octopress</guid>
    <pubDate>Tue, 10 Jun 2014 07:26:22 UT</pubDate>
    <author>Daniel Brunner</author>
@@ -101,7 +101,7 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;The &lt;code&gt;rake preview&lt;/code&gt; is a neat feature because the server always looks for changed files and produces the HTML files on the fly. That means I can edit the files in my editor and could see the resulting pages in a  browser nearly the same time.&lt;/p&gt;</description></item>
   <item>
    <title>Relaunch fast fertig</title>
-   <link>http://www.dbrunner.de/2014/06/10/relaunch-fast-fertig/</link>
+   <link>http://www.dbrunner.de/2014/06/10/relaunch-fast-fertig</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-06-10-relaunch-fast-fertig</guid>
    <pubDate>Tue, 10 Jun 2014 07:20:03 UT</pubDate>
    <author>Daniel Brunner</author>
@@ -113,7 +113,7 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Die &amp;ldquo;preview&amp;rdquo;-Funktion ist übrigens ein wirklich nettes Features: Die kann man derart nutzen, dass ein Webserver den aktuellen Stand lokal ausliefert. Dabei beobachtet der Dienst, ob sich Dateien ändern und erstellt unmittelbar wieder die HTML-Seiten. So kann man bequem im Editor das Markdown bearbeiten und im Browser daneben das fertige Ergebnis beurteilen.&lt;/p&gt;</description></item>
   <item>
    <title>Ein Relaunch</title>
-   <link>http://www.dbrunner.de/2014/06/06/ein-relaunch/</link>
+   <link>http://www.dbrunner.de/2014/06/06/ein-relaunch</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-06-06-ein-relaunch</guid>
    <pubDate>Fri, 06 Jun 2014 13:48:31 UT</pubDate>
    <author>Daniel Brunner</author>
@@ -125,7 +125,7 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Nun also ein Relaunch, aber ohne große Vorsätze. Es wird hier also  nur selten und nur wenig zu lesen geben.&lt;/p&gt;</description></item>
   <item>
    <title>My Dockerfile for setting up Octopress</title>
-   <link>http://www.dbrunner.de/2014/05/26/my-dockerfile-for-setting-up-octopress/</link>
+   <link>http://www.dbrunner.de/2014/05/26/my-dockerfile-for-setting-up-octopress</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-05-26-my-dockerfile-for-setting-up-octopress</guid>
    <pubDate>Mon, 26 May 2014 07:24:00 UT</pubDate>
    <author>Daniel Brunner</author>

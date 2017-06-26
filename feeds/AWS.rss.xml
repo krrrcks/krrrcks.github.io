@@ -9,7 +9,7 @@
   <ttl>1800</ttl>
   <item>
    <title>How to use GET Bucket location on Amazon S3 with Racket</title>
-   <link>http://www.dbrunner.de/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/</link>
+   <link>http://www.dbrunner.de/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-09-04-how-to-use-get-bucket-location-on-amazon-s3-with-racket</guid>
    <pubDate>Fri, 04 Sep 2015 05:23:43 UT</pubDate>
    <author>Daniel Brunner</author>
@@ -48,7 +48,7 @@ is wrong; expecting 'eu-central-1'&amp;lt;/Message&amp;gt;
 &lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; Greg added a &lt;code&gt;bucket-location&lt;/code&gt; function to his great &lt;a href="http://docs.racket-lang.org/aws/S3__Storage_.html#%28def._%28%28lib._aws%2Fs3..rkt%29._bucket-location%29%29"&gt;library&lt;/a&gt;&lt;/p&gt;</description></item>
   <item>
    <title>Running Racket on AWS Lambda</title>
-   <link>http://www.dbrunner.de/2015/08/27/running-racket-on-aws-lambda/</link>
+   <link>http://www.dbrunner.de/2015/08/27/running-racket-on-aws-lambda</link>
    <guid isPermaLink="false">urn:http-www-dbrunner-de:-2015-08-27-running-racket-on-aws-lambda</guid>
    <pubDate>Thu, 27 Aug 2015 10:46:57 UT</pubDate>
    <author>Daniel Brunner</author>

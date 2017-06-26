@@ -7,7 +7,7 @@
  <updated>2017-04-05T14:00:31Z</updated>
  <entry>
   <title type="text">10th European Lisp Symposium</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium" />
   <id>urn:http-www-dbrunner-de:-2017-04-05-10th-european-lisp-symposium</id>
   <published>2017-04-05T14:00:31Z</published>
   <updated>2017-04-05T14:00:31Z</updated>
@@ -21,7 +21,7 @@
 &lt;p&gt;Our paper is in the proceedings which can be found find on the &lt;a href="http://www.european-lisp-symposium.org/2017/index.html"&gt;conference&amp;rsquo;s homepage&lt;/a&gt;. The slides are available there as well. I host these files here: &lt;a href="/pub/els2017.pdf"&gt;Paper&lt;/a&gt; and &lt;a href="/pub/els2017-slides.pdf"&gt;slides&lt;/a&gt;. The source code is provided as a &lt;a href="/pub/els2017-src.zip"&gt;ZIP archive&lt;/a&gt;.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">DateTime conversion can be tricky</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2014/07/24/datetime-conversion-can-be-tricky/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2014/07/24/datetime-conversion-can-be-tricky" />
   <id>urn:http-www-dbrunner-de:-2014-07-24-datetime-conversion-can-be-tricky</id>
   <published>2014-07-24T07:41:36Z</published>
   <updated>2014-07-24T07:41:36Z</updated>
@@ -51,7 +51,7 @@
 &lt;p&gt;So a better solution would be to substract all seconds between 1900 and 1970 from &lt;code&gt;ts&lt;/code&gt;, multiply by 1,000 and treat this as a JavaScript time stamp. Perhaps best would be to do the conversion in the Lisp process and only deliver a JavaScript-like time stamp.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">I learned something about symbols and packages</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2014/07/06/i-learned-something-about-symbols-and-packages/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2014/07/06/i-learned-something-about-symbols-and-packages" />
   <id>urn:http-www-dbrunner-de:-2014-07-06-i-learned-something-about-symbols-and-packages</id>
   <published>2014-07-06T07:02:39Z</published>
   <updated>2014-07-06T07:02:39Z</updated>

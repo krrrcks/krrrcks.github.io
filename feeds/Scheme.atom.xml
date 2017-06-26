@@ -7,7 +7,7 @@
  <updated>2017-04-05T14:00:31Z</updated>
  <entry>
   <title type="text">10th European Lisp Symposium</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium" />
   <id>urn:http-www-dbrunner-de:-2017-04-05-10th-european-lisp-symposium</id>
   <published>2017-04-05T14:00:31Z</published>
   <updated>2017-04-05T14:00:31Z</updated>
@@ -21,7 +21,7 @@
 &lt;p&gt;Our paper is in the proceedings which can be found find on the &lt;a href="http://www.european-lisp-symposium.org/2017/index.html"&gt;conference&amp;rsquo;s homepage&lt;/a&gt;. The slides are available there as well. I host these files here: &lt;a href="/pub/els2017.pdf"&gt;Paper&lt;/a&gt; and &lt;a href="/pub/els2017-slides.pdf"&gt;slides&lt;/a&gt;. The source code is provided as a &lt;a href="/pub/els2017-src.zip"&gt;ZIP archive&lt;/a&gt;.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">I played with CHICKEN Scheme, Docker and Alpine Linux</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux" />
   <id>urn:http-www-dbrunner-de:-2015-12-19-i-played-with-chicken-scheme-docker-and-alpine-linux</id>
   <published>2015-12-19T16:54:50Z</published>
   <updated>2015-12-19T16:54:50Z</updated>

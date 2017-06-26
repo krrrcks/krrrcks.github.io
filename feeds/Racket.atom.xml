@@ -7,7 +7,7 @@
  <updated>2017-04-05T14:00:31Z</updated>
  <entry>
   <title type="text">10th European Lisp Symposium</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2017/04/05/10th-european-lisp-symposium" />
   <id>urn:http-www-dbrunner-de:-2017-04-05-10th-european-lisp-symposium</id>
   <published>2017-04-05T14:00:31Z</published>
   <updated>2017-04-05T14:00:31Z</updated>
@@ -21,7 +21,7 @@
 &lt;p&gt;Our paper is in the proceedings which can be found find on the &lt;a href="http://www.european-lisp-symposium.org/2017/index.html"&gt;conference&amp;rsquo;s homepage&lt;/a&gt;. The slides are available there as well. I host these files here: &lt;a href="/pub/els2017.pdf"&gt;Paper&lt;/a&gt; and &lt;a href="/pub/els2017-slides.pdf"&gt;slides&lt;/a&gt;. The source code is provided as a &lt;a href="/pub/els2017-src.zip"&gt;ZIP archive&lt;/a&gt;.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Mein Wechsel zu Frog</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2017/02/16/mein-wechsel-zu-frog/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2017/02/16/mein-wechsel-zu-frog" />
   <id>urn:http-www-dbrunner-de:-2017-02-16-mein-wechsel-zu-frog</id>
   <published>2017-02-16T10:08:04Z</published>
   <updated>2017-02-16T10:08:04Z</updated>
@@ -59,7 +59,7 @@
 &lt;p&gt;Ach ja, zum Thema CSS und Fummeln darf natürlich nicht der übliche Hinweis auf diesen (bewegten) &lt;a href="https://imgur.com/gallery/Q3cUg29"&gt;Cartoon&lt;/a&gt; fehlen.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Using Racket Minimal and raco</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2016/01/12/using-racket-minimal-and-raco" />
   <id>urn:http-www-dbrunner-de:-2016-01-12-using-racket-minimal-and-raco</id>
   <published>2016-01-12T09:55:43Z</published>
   <updated>2016-01-12T09:55:43Z</updated>
@@ -77,7 +77,7 @@
 &lt;p&gt;To sum up: After a simple &lt;code&gt;raco pkg install compiler-lib&lt;/code&gt; I could easily use &lt;code&gt;raco make&lt;/code&gt; and &lt;code&gt;raco test&lt;/code&gt; to play with my program on my phone.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">How to use GET Bucket location on Amazon S3 with Racket</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket" />
   <id>urn:http-www-dbrunner-de:-2015-09-04-how-to-use-get-bucket-location-on-amazon-s3-with-racket</id>
   <published>2015-09-04T05:23:43Z</published>
   <updated>2015-09-04T05:23:43Z</updated>
@@ -118,7 +118,7 @@ is wrong; expecting 'eu-central-1'&amp;lt;/Message&amp;gt;
 &lt;p&gt;&lt;em&gt;Update:&lt;/em&gt; Greg added a &lt;code&gt;bucket-location&lt;/code&gt; function to his great &lt;a href="http://docs.racket-lang.org/aws/S3__Storage_.html#%28def._%28%28lib._aws%2Fs3..rkt%29._bucket-location%29%29"&gt;library&lt;/a&gt;&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">How to run Racket on the Raspberry Pi 2</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2" />
   <id>urn:http-www-dbrunner-de:-2015-08-27-how-to-run-racket-on-the-raspberry-pi-2</id>
   <published>2015-08-27T11:25:45Z</published>
   <updated>2015-08-27T11:25:45Z</updated>
@@ -146,7 +146,7 @@ commands:
 &lt;p&gt;PS: Because the Raspberry Pi 2 Model B has an ARMv7 processor the binary runs on my Jolla smart phone as well.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Running Racket on AWS Lambda</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2015/08/27/running-racket-on-aws-lambda/" />
+  <link rel="alternate" href="http://www.dbrunner.de/2015/08/27/running-racket-on-aws-lambda" />
   <id>urn:http-www-dbrunner-de:-2015-08-27-running-racket-on-aws-lambda</id>
   <published>2015-08-27T10:46:57Z</published>
   <updated>2015-08-27T10:46:57Z</updated>
