@@ -53,3 +53,12 @@ gerne weiterhin mit Locomore fahren. Die nächste Fahrt ist schon
 gebucht!
 
 *Update (2017-05-11):* Oh wie schade, Locomore hat einen Insolvenzantrag [gestellt](https://locomore.com/en/news/2017-05-11/). 
+
+*Update (2017-08-17):* Locomore hat wohl mit LEO Express aus
+Tschechien einen Investor und mit Flixbus einen Vermarkter
+gefunden:
+[Flixbus: Locomore fährt wieder](https://www.flixbus.de/locomore)
+Spiegel
+ONLINE
+[meldet](http://www.spiegel.de/wirtschaft/unternehmen/locomore-nimmt-betrieb-wieder-auf-flixbus-wird-vertriebspartner-a-1162958.html),
+dass auch die Mitarbeiter von Locomore übernommen werden sollen. Nun, ich bin gespannt. 
