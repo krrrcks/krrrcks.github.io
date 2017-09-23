@@ -2,7 +2,7 @@
 
 ## Aktuell 
 
-[Technische Hochschule Mittelhessen, StudiumPlus](http://www.studiumplus.de)*,
+*[Technische Hochschule Mittelhessen, StudiumPlus](http://www.studiumplus.de)*,
 2-tägiges Modul "Industrie 4.0, Internet of Things: Eine praktische
 Annäherung", Wintersemester 2017/2018, Standort Wetzlar. 
 
