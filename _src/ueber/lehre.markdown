@@ -8,7 +8,7 @@ Annäherung", Wintersemester 2017/2018, Standort Wetzlar.
 
 ## Vergangen 
 
-- *[Technische Hochschule Mittelhessen, StudiumPlus](http://www.studiumplus.de), Vortrag "Konzepte und technische Umsetzung des IoT" im Rahmen des SMART-Teaching-Workshops "Digitalisierung", 22. September 2017.  
+- *[Technische Hochschule Mittelhessen, StudiumPlus](http://www.studiumplus.de)*, Vortrag "Konzepte und technische Umsetzung des IoT" im Rahmen des SMART-Teaching-Workshops "Digitalisierung", 22. September 2017.  
 
 -  *[Technische Hochschule Mittelhessen, StudiumPlus](http://www.studiumplus.de)*,
    2-tägiges Modul
