@@ -9,7 +9,7 @@ am *[Marburger Genossenschaftsinstitut](http://www.ifg-marburg.de)*
 gearbeitet, dem ich auch heute noch verbunden bin. Anschließend habe
 ich in den elterlichen
 *Software-Unternehmen ([Link](http://www.systemhaus-brunner.de) und [Link](http://www.brunner-software.de))* meine
-Arbeit aufgenommen. Gelegentlich bin ich an der [Technischen Hochschule Mittelhessen, StudiumPlus](http://www.studiumplus.de) als Dozent tätig. 
+Arbeit aufgenommen. Gelegentlich bin ich an der [Technischen Hochschule Mittelhessen, StudiumPlus](http://www.studiumplus.de), als Dozent tätig. 
 
 ## Interessen
 
