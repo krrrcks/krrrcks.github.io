@@ -1,18 +1,17 @@
 # Vorträge 
 
- - (zusammen mit Stephan Brunner) Vortrag und Diskussion zum obigen Beitrag "Teaching Students of Engineering
+ - (zusammen mit Stephan Brunner) Vortrag und Diskussion zum Beitrag "Teaching Students of Engineering
   some Insights of the Internet of Things using Racket and the
   RaspberryPi", 10th European Lisp Symposium, Vrije Universiteit
   Brussel, Brussels, Belgium, 3.-4. April 2017, In-cooperation with
-  ACM, co-located with <Programming
-  2017>,
+  ACM, co-located with \<Programming 2017\>,
   [PDF (Endfassung Beitrag)](/pub/els2017.pdf),
   [Folien](/pub/els2017-slides.pdf),
   [Link zum kompletten Tagungsband](http://www.european-lisp-symposium.org/static/proceedings/2017.pdf),
   [Quelltext (ZIP-Archiv)](/pub/els2017-src.zip).
  
  - (zusammen mit Christian Jablonski) Vortrag und Diskussion zum
-   obigen Beitrag "Konnexion im E-Commerce: Problemfelder und
+   Beitrag "Konnexion im E-Commerce: Problemfelder und
    Lösungsansätze anhand eines internetgestützten
    B2B-Bestellsystems", 26. AKWI-Jahrestagung, 16. September 2013, Technische Hochschule
    Mittelhessen, Gießen und Friedberg, [PDF](/pub/JablonskiBrunner2013.pdf), [Link zum kompletten Tagungsband](http://www.akwi.de/AKWI_Tagungsband2013.pdf).
