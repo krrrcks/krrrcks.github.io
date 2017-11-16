@@ -2,7 +2,7 @@
 
 ## Aktuell 
 
-- *[Technische Hochschule Mittelhessen, StudiumPlus](http://www.studiumplus.de)*, Übung im Rahmen des Moduls Informatik 1 (Softwaretechnologie), Wintersemester 2017/2018 (15. November 2017 am Standort Wetzlar und 23. November 2017 am Standort Frankenberg).
+- *[Technische Hochschule Mittelhessen, StudiumPlus](http://www.studiumplus.de)*, Übung im Rahmen des Moduls Informatik 1 (Studiengang Softwaretechnologie), Wintersemester 2017/2018 (jeweils ganztätig am 15. November 2017 am Standort Wetzlar und 23. November 2017 am Standort Frankenberg).
 
 - *[Technische Hochschule Mittelhessen, StudiumPlus](http://www.studiumplus.de)*,
 2-tägiges Modul "Industrie 4.0, Internet of Things: Eine praktische
