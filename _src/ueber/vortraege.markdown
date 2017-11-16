@@ -1,5 +1,9 @@
 # Vorträge 
 
+ - Vortrag zum Thema "Digitalisierung in der Berufswelt", Berufsbörse
+   von Lahntalschule Biedenkopf und Rotary Club
+   Biedenkopf, 14. November 2017, Biedenkopf.
+
  - (zusammen mit Stephan Brunner) Vortrag und Diskussion zum Beitrag "Teaching Students of Engineering
   some Insights of the Internet of Things using Racket and the
   RaspberryPi", 10th European Lisp Symposium, Vrije Universiteit
