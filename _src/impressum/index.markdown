@@ -22,7 +22,7 @@ Nachricht.
 
 *Ein Wort zum Datenschutz:* Diese Homepage ist
 mit [Frog](https://github.com/greghendershott/frog) erstellt, also
-sind das im Wesentlichen nur statische Inhalte. Diese Seite wird
+sind das im Wesentlichen nur statische Inhalte. Sie wird
 von [Github](https://github.com) über
 deren [Github Pages](https://pages.github.com)-Projekt gehostet.  Ich
 selbst erhebe und verarbeite keine Daten über Ihren Besuch auf dieser
