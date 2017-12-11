@@ -32,7 +32,7 @@ Da ich die Ergebnisse verschiedentlich weiterverwenden wollte, habe
 ich mich entschieden, diese in Racket zu verarbeiten und mit Scribble
 in ein Dokument (sowie auch Seiten hier auf der Homepage) zu
 setzen. Der Code hierfür ist als
-Racket-Datei [hier](/_src/lehre/format-eval.rkt) zu finden.
+Racket-Datei [hier](/lehre/format-eval.rkt) zu finden.
 
 Die Antworten führe ich dann als Liste von Arrays (Vector in
 Racket). 

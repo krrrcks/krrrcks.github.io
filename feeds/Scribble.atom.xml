@@ -25,7 +25,7 @@
 
 &lt;p&gt;Ich habe daher die Fragen vom vergangenen Jahr mit dem Projektor an die Wand projeziert und die Studierenden um ihre Einschätzung gebeten.&lt;/p&gt;
 
-&lt;p&gt;Da ich die Ergebnisse verschiedentlich weiterverwenden wollte, habe ich mich entschieden, diese in Racket zu verarbeiten und mit Scribble in ein Dokument (sowie auch Seiten hier auf der Homepage) zu setzen. Der Code hierfür ist als Racket-Datei &lt;a href="/_src/lehre/format-eval.rkt"&gt;hier&lt;/a&gt; zu finden.&lt;/p&gt;
+&lt;p&gt;Da ich die Ergebnisse verschiedentlich weiterverwenden wollte, habe ich mich entschieden, diese in Racket zu verarbeiten und mit Scribble in ein Dokument (sowie auch Seiten hier auf der Homepage) zu setzen. Der Code hierfür ist als Racket-Datei &lt;a href="/lehre/format-eval.rkt"&gt;hier&lt;/a&gt; zu finden.&lt;/p&gt;
 
 &lt;p&gt;Die Antworten führe ich dann als Liste von Arrays (Vector in Racket).&lt;/p&gt;
 
