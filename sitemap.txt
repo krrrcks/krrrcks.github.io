@@ -59,6 +59,7 @@ http://www.dbrunner.de/2014/10/05/aktenfu%CC%88hrung-beim-beitragsservice
 http://www.dbrunner.de/2011/11/07/schwarz-gelber-subventionsabbau
 http://www.dbrunner.de/2010/02/15/beschleunigung-als-soziales-pha%CC%88nomen
 http://www.dbrunner.de/2010/03/21/eine-verschwurbelte-stellenausschreibung
+http://www.dbrunner.de/2017/12/11/evaluierungsergebnisse-mit-racket-scribble-verarbeiten-und-darstellen
 http://www.dbrunner.de/2010/07/09/kurze-anmerkung-zum-mehr-brutto-vom-netto
 http://www.dbrunner.de/2014/07/06/i-learned-something-about-symbols-and-packages
 http://www.dbrunner.de/2010/07/25/der-e-postbrief-ein-selbstversuch
@@ -73,5 +74,9 @@ http://www.dbrunner.de/ueber/index.html
 http://www.dbrunner.de/ueber/cv.html
 http://www.dbrunner.de/racket/index.html
 http://www.dbrunner.de/link-sammlung/index.html
+http://www.dbrunner.de/lehre/ue-informatik1-eval-2017-11-23.html
+http://www.dbrunner.de/lehre/ue-informatik1-eval-2017-11-15.html
+http://www.dbrunner.de/lehre/iot-eval-2017.html
+http://www.dbrunner.de/lehre/iot-eval-2016.html
 http://www.dbrunner.de/impressum/index.html
 http://www.dbrunner.de/404.html

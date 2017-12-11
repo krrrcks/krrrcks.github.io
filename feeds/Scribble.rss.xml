@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?> 
+<rss version="2.0">
+ <channel>
+  <title>Daniel Brunner: Posts tagged 'Scribble'</title>
+  <description>Daniel Brunner: Posts tagged 'Scribble'</description>
+  <link>http://www.dbrunner.de/tags/Scribble.html</link>
+  <lastBuildDate>Mon, 11 Dec 2017 16:58:35 UT</lastBuildDate>
+  <pubDate>Mon, 11 Dec 2017 16:58:35 UT</pubDate>
+  <ttl>1800</ttl>
+  <item>
+   <title>Evaluierungsergebnisse mit Racket/Scribble verarbeiten und darstellen</title>
+   <link>http://www.dbrunner.de/2017/12/11/evaluierungsergebnisse-mit-racket-scribble-verarbeiten-und-darstellen</link>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2017-12-11-evaluierungsergebnisse-mit-racket-scribble-verarbeiten-und-darstellen</guid>
+   <pubDate>Mon, 11 Dec 2017 16:58:35 UT</pubDate>
+   <author>Daniel Brunner</author>
+   <description>
+&lt;p&gt;Auch in diesem Jahr habe ich (zum Teil mit Stephan Brunner zusammen) wieder Lehrveranstaltungen für StudiumPlus durchgeführt.&lt;/p&gt;
+
+&lt;p&gt;Die Ergebnisse finden sich jeweils als Link auf der &lt;a href="/ueber/lehre.html"&gt;Seite mit meinen Lehrveranstaltungen&lt;/a&gt;. Im Folgenden beschreibe ich, wie ich in diesem Jahr die Ergebnisse der Evaluierung mit Racket und Scribble verarbeitet habe.&lt;/p&gt;
+&lt;!-- more--&gt;
+
+&lt;p&gt;Im vergangenen Jahr wurde eine zentrale Evaluierung der Lehrveranstaltungen von StudiumPlus durchgeführt. Die Studierenden konnten zu 13 Fragen ihre Einschätzung von &amp;ldquo;trifft voll zu&amp;rdquo; über &amp;ldquo;trifft meistens zu&amp;rdquo;, &amp;ldquo;trifft teilweise zu&amp;rdquo;, &amp;ldquo;trifft selten zu&amp;rdquo; zu &amp;ldquo;trifft überhaupt nicht zu&amp;rdquo; abgeben. Von der Hochschule erhielten wir  dann eine Auswertung mit der Anzahl der jeweils gegebenen Einschätzungen pro Frage sowie der relativen Häufigkeit.&lt;/p&gt;
+
+&lt;p&gt;Nachdem ich in diesem Jahr eine Übung im Rahmen einer Vorlesung übernommen hatte, wusste ich nicht, ob dieser Teil eine eigene Evaluierung erhalten würde. Des Weiteren wurde für die Zwei-Tages-Module in diesem Jahr keine zentrale Evaluierung angeboten.&lt;/p&gt;
+
+&lt;p&gt;Ich habe daher die Fragen vom vergangenen Jahr mit dem Projektor an die Wand projeziert und die Studierenden um ihre Einschätzung gebeten.&lt;/p&gt;
+
+&lt;p&gt;Da ich die Ergebnisse verschiedentlich weiterverwenden wollte, habe ich mich entschieden, diese in Racket zu verarbeiten und mit Scribble in ein Dokument (sowie auch Seiten hier auf der Homepage) zu setzen. Der Code hierfür ist als Racket-Datei &lt;a href="/_src/lehre/format-eval.rkt"&gt;hier&lt;/a&gt; zu finden.&lt;/p&gt;
+
+&lt;p&gt;Die Antworten führe ich dann als Liste von Arrays (Vector in Racket).&lt;/p&gt;
+
+&lt;div class="brush: racket"&gt;
+ &lt;table class="sourcetable"&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td class="linenos"&gt;
+     &lt;div class="linenodiv"&gt;
+      &lt;pre&gt;1
+2
+3
+4
+5&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
+    &lt;td class="code"&gt;
+     &lt;div class="source"&gt;
+      &lt;pre&gt;&lt;span&gt;&lt;/span&gt;  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._list))" style="color: inherit"&gt;list&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/vectors.html#(def._((quote._~23~25kernel)._vector))" style="color: inherit"&gt;vector&lt;/a&gt;&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;; 1&lt;/span&gt;
+        &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/vectors.html#(def._((quote._~23~25kernel)._vector))" style="color: inherit"&gt;vector&lt;/a&gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="no"&gt;#f&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;; 2&lt;/span&gt;
+        &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/vectors.html#(def._((quote._~23~25kernel)._vector))" style="color: inherit"&gt;vector&lt;/a&gt;&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;; 3&lt;/span&gt;
+        &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/vectors.html#(def._((quote._~23~25kernel)._vector))" style="color: inherit"&gt;vector&lt;/a&gt;&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;  &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;; 4&lt;/span&gt;
+		&lt;span class="k"&gt;&lt;a href="http://docs.racket-lang.org/reference/stx-patterns.html#(form._((lib._racket/private/stxcase-scheme..rkt)._......))" style="color: inherit"&gt;...&lt;/a&gt;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Um die Häufigkeiten für eine Frage zu ermitteln, extrahiere ich mittels &lt;code&gt;vector-ref&lt;/code&gt; und &lt;code&gt;map&lt;/code&gt; sämtliche Antworten zu einer Frage. Hat ein Studierender nicht oder nicht leserlich geantwortet, habe ich jeweils &lt;code&gt;#f&lt;/code&gt; eingetragen, die ich aus der Ergebnisliste entferne:&lt;/p&gt;
+
+&lt;div class="brush: racket"&gt;
+ &lt;table class="sourcetable"&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td class="linenos"&gt;
+     &lt;div class="linenodiv"&gt;
+      &lt;pre&gt;1
+2
+3&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
+    &lt;td class="code"&gt;
+     &lt;div class="source"&gt;
+      &lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;&lt;a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit"&gt;define&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sample-question&lt;/span&gt; &lt;span class="n"&gt;loe&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="c1"&gt;;; Gibt alle Antworten auf eine Fragenummer&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/private/list..rkt)._remove*))" style="color: inherit"&gt;remove*&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._list))" style="color: inherit"&gt;list&lt;/a&gt;&lt;/span&gt; &lt;span class="no"&gt;#f&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/private/map..rkt)._map))" style="color: inherit"&gt;map&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="k"&gt;&lt;a href="http://docs.racket-lang.org/reference/lambda.html#(form._((lib._racket/private/base..rkt)._lambda))" style="color: inherit"&gt;lambda&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;answers&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/vectors.html#(def._((quote._~23~25kernel)._vector-ref))" style="color: inherit"&gt;vector-ref&lt;/a&gt;&lt;/span&gt; &lt;span class="n"&gt;answers&lt;/span&gt; &lt;span class="n"&gt;no&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt; &lt;span class="n"&gt;loe&lt;/span&gt;&lt;span class="p"&gt;)))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Als Ergebnis erhalte ich eine Liste mit Antworten (wobei die Antworten derart kodiert sind, dass eine &lt;code&gt;1&lt;/code&gt; für &amp;ldquo;trifft voll zu&amp;rdquo; und eine &lt;code&gt;5&lt;/code&gt; für &amp;ldquo;trifft überhaupt nicht zu&amp;rdquo; steht), zum Beispiel:&lt;/p&gt;
+
+&lt;div class="brush: racket"&gt;
+ &lt;table class="sourcetable"&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td class="linenos"&gt;
+     &lt;div class="linenodiv"&gt;
+      &lt;pre&gt;1&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
+    &lt;td class="code"&gt;
+     &lt;div class="source"&gt;
+      &lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;'&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Für die Weiterverarbeitung habe ich im &lt;code&gt;math&lt;/code&gt; Modul die praktische Funktion &lt;a href="http://docs.racket-lang.org/math/stats.html#%28def._%28%28lib._math%2Fstatistics..rkt%29._samples-~3ehash%29%29"&gt;&lt;code&gt;samples-&amp;gt;hash&lt;/code&gt;&lt;/a&gt; gefunden, die einem das Zählen abnimmt und einen Hash-Table mit der absoluten Häufigkeit zurückgibt:&lt;/p&gt;
+
+&lt;div class="brush: racket"&gt;
+ &lt;table class="sourcetable"&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td class="linenos"&gt;
+     &lt;div class="linenodiv"&gt;
+      &lt;pre&gt;1
+2&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
+    &lt;td class="code"&gt;
+     &lt;div class="source"&gt;
+      &lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit"&gt;&amp;gt;&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;samples-&amp;gt;hash&lt;/span&gt; &lt;span class="o"&gt;'&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;span class="o"&gt;'#hash&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="mi"&gt;7&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt; &lt;span class="o"&gt;.&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Hieraus habe ich dann eine Formatierung in eine Liste zusammengestellt, die anschließend in ein &lt;code&gt;tabular&lt;/code&gt; eingebettet werden kann:&lt;/p&gt;
+
+&lt;div class="brush: racket"&gt;
+ &lt;table class="sourcetable"&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td class="linenos"&gt;
+     &lt;div class="linenodiv"&gt;
+      &lt;pre&gt;1
+2
+3
+4&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
+    &lt;td class="code"&gt;
+     &lt;div class="source"&gt;
+      &lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;&lt;a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit"&gt;&amp;gt;&lt;/a&gt;&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="n"&gt;EVALUIERUNG&lt;/span&gt; &lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="o"&gt;'&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="s2"&gt;"Bewertung"&lt;/span&gt; &lt;span class="s2"&gt;"++"&lt;/span&gt; &lt;span class="s2"&gt;"+"&lt;/span&gt; &lt;span class="s2"&gt;"0"&lt;/span&gt; &lt;span class="s2"&gt;"-"&lt;/span&gt; &lt;span class="s2"&gt;"- -"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"Anzahl"&lt;/span&gt; &lt;span class="s2"&gt;"5"&lt;/span&gt; &lt;span class="s2"&gt;"7"&lt;/span&gt; &lt;span class="s2"&gt;"8"&lt;/span&gt; &lt;span class="s2"&gt;"2"&lt;/span&gt; &lt;span class="s2"&gt;"0"&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;"in v.H."&lt;/span&gt; &lt;span class="s2"&gt;"22.73"&lt;/span&gt; &lt;span class="s2"&gt;"31.82"&lt;/span&gt; &lt;span class="s2"&gt;"36.36"&lt;/span&gt; &lt;span class="s2"&gt;"9.09"&lt;/span&gt; &lt;span class="s2"&gt;"0.00"&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Etwas gekämpft hatte ich einige Zeit mit dem Umstand, dass ein sogenannter &lt;code&gt;content&lt;/code&gt; ein String sein muss und nicht einfach eine Zahl. Man muss also die vorher ausgerechneten Werte via &lt;code&gt;number-&amp;gt;string&lt;/code&gt; in einen String umwandeln, damit Scribble diese verwenden kann.&lt;/p&gt;
+
+&lt;p&gt;Da ich die Parameter für die Tabular-Umgebung auch nicht immer wieder tippen wollte, habe ich hierfür auch eine Funktion geschrieben, so dass es im Scribble-Dokument wie folgt aussieht (gegeben, dass sich hinter EVALUIERUNG die Liste der Arrays mit den Antworten verbirgt):&lt;/p&gt;
+
+&lt;div class="brush: scribble"&gt;
+ &lt;table class="sourcetable"&gt;
+  &lt;tbody&gt;
+   &lt;tr&gt;
+    &lt;td class="linenos"&gt;
+     &lt;div class="linenodiv"&gt;
+      &lt;pre&gt;1
+2
+3
+4
+5
+6&lt;/pre&gt;&lt;/div&gt;&lt;/td&gt;
+    &lt;td class="code"&gt;
+     &lt;div class="source"&gt;
+      &lt;pre&gt;&lt;span&gt;&lt;/span&gt;@itemlist[#:style &amp;#39;ordered @item{Die Veranstaltung ist klar strukturiert.
+@tabular-result[EVALUIERUNG 0]
+}
+@item{Die verwendeten Veranstaltungsunterlagen sind hilfreich.
+@tabular-result[EVALUIERUNG 1]}
+...
+&lt;/pre&gt;&lt;/div&gt;
+&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;/div&gt;
+
+&lt;p&gt;Das Ergebnis kann man am Beispiel der letzten Veranstaltung &lt;a href="/lehre/iot-eval-2017.html"&gt;hier&lt;/a&gt; einsehen, die zugehörige Scribble-Datei ist &lt;a href="/_src/lehre/iot-eval-2017.scrbl"&gt;hier&lt;/a&gt; einsehbar.&lt;/p&gt;
+
+&lt;p&gt;Der Vorteil für mich liegt bei dieser Vorgehensweise darin, dass ich die Antworten in strukturierter Form behalte und auch noch für andere Zwecke weiter verwenden kann. Darüberhinaus ist diese Ausgabe mittels Scribble vielfältig nutzbar: Ich erzeuge bspw. daraus ein PDF-Dokument (über LaTeX) und eine Seite hier auf der Homepage mit dem statischen Seitengenerator Frog. Und, ich musste keine Tabellenkalkulation verwenden.&lt;/p&gt;</description></item></channel></rss>

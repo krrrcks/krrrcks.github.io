@@ -6,7 +6,7 @@
     <title>Daniel Brunner (page 2)</title>
     <meta name="description" content="Daniel Brunner (page 2)">
     <meta name="author"      content="Daniel Brunner">
-    <meta name="keywords"    content="Scheme, Medien, Common Lisp, Statistik, Linux, Recht, Wirtschaft, all, Reisen, Allerlei, Politik, Org-Mode, Behörden, Octopress, Docker, IT, Racket, AWS, JavaScript, Steuern, Homepage, Veranstaltungen, Frog">
+    <meta name="keywords"    content="AWS, Lehre, Common Lisp, JavaScript, Linux, Wirtschaft, Scheme, Racket, Politik, Veranstaltungen, Frog, Scribble, Medien, Allerlei, Statistik, all, Reisen, Homepage, Behörden, Octopress, Docker, IT, Org-Mode, Steuern, Recht">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
     <link rel="canonical" href="http://www.dbrunner.de/index-2.html">
@@ -94,6 +94,8 @@
 
 <li><a href="/tags/JavaScript.html">JavaScript</a></li>
 
+<li><a href="/tags/Lehre.html">Lehre</a></li>
+
 <li><a href="/tags/Linux.html">Linux</a></li>
 
 <li><a href="/tags/Medien.html">Medien</a></li>
@@ -111,6 +113,8 @@
 <li><a href="/tags/Reisen.html">Reisen</a></li>
 
 <li><a href="/tags/Scheme.html">Scheme</a></li>
+
+<li><a href="/tags/Scribble.html">Scribble</a></li>
 
 <li><a href="/tags/Statistik.html">Statistik</a></li>
 
@@ -144,6 +148,47 @@
 
 
           <article>
+  <header>
+    <h1><a href='/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket'>How to use GET Bucket location on Amazon S3 with Racket</a></h1>
+    <p class='date-and-tags'>
+<time datetime="2015-09-04" pubdate="true">2015-09-04</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Racket.html">Racket</a>, <a href="/tags/AWS.html">AWS</a></span></p>
+  </header>
+
+<p>In <a href="http://www.racket-lang.org">Racket</a> I want to iterate over my buckets in Amazon S3. They are located in different regions. So how do I get my bucket&rsquo;s location/region? In the API Reference there is a call <a href="http://docs.aws.amazon.com/AmazonS3/latest/API/RESTBucketGETlocation.html">GET Bucket location</a>. I use <a href="https://github.com/greghendershott/aws">Greg&rsquo;s AWS library for Racket</a> and this library authenticates its calls with <a href="http://docs.aws.amazon.com/AmazonS3/latest/API/sigv4-auth-using-authorization-header.html">signature version V4</a>. But V4 requires the user to know the <em>region</em> to correctly sign the request. So I need to know the region to ask Amazon S3 for the region where the bucket is located. Otherwise Amazon S3 responds with an error:</p>
+
+<pre><code>&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;Error&gt;
+ &lt;Code&gt;AuthorizationHeaderMalformed&lt;/Code&gt;
+ &lt;Message&gt;The authorization header is malformed; the region 'us-east-1'
+is wrong; expecting 'eu-central-1'&lt;/Message&gt;
+ &lt;Region&gt;eu-central-1&lt;/Region&gt;
+ &lt;RequestId&gt;XXXX&lt;/RequestId&gt;
+ &lt;HostId&gt;XXXX&gt;
+&lt;/Error&gt;</code></pre>
+
+<p>After some search on the net I found a <a href="http://stackoverflow.com/questions/27091816/retrieve-buckets-objects-without-knowing-buckets-region-with-aws-s3-rest-api">post on Stackoverflow</a> that helped to solve that issue: If I use the URL format (instead of the normally used virtual host format) I could get the location of any bucket. Every region responds with a <em>LocationConstraint</em> answer.</p>
+
+<p>Therefore a code snippet for Racket could be:</p>
+
+<pre><code>(define (get-bucket-location bucket)
+  (parameterize
+      ([s3-path-requests? #t])
+    (define xpr (get/proc (string-append bucket "/?location") read-entity/xexpr))
+    (and (list? xpr)
+         (= (length xpr) 3)
+         (third xpr))))</code></pre>
+
+<p>For example:</p>
+
+<pre><code>&gt; (get-bucket-location "my-bucket-somewhere")
+"eu-central-1"</code></pre>
+
+<p>PS: I think official Amazon S3 documentation could be a bit more verbose on the issues with GetBucketLocation and signature V4.</p>
+
+<p><em>Update:</em> Greg added a <code>bucket-location</code> function to his great <a href="http://docs.racket-lang.org/aws/S3__Storage_.html#%28def._%28%28lib._aws%2Fs3..rkt%29._bucket-location%29%29">library</a></p>
+
+</article>
+<article>
   <header>
     <h1><a href='/2015/08/27/how-to-run-racket-on-the-raspberry-pi-2'>How to run Racket on the Raspberry Pi 2</a></h1>
     <p class='date-and-tags'>
@@ -437,16 +482,6 @@ rake update_style              # update the template's style</code></pre>
 <p><strong>Ergänzung:</strong> Ich lasse das Jekyll und Octopress in einem  <a href="/blog/2014/06/10/relaunch-fast-fertig/">Docker-Container</a> laufen und irgendwie bekam ich bei <code>rake preview</code>  meine Seite nicht mehr zu sehen. Da ich mich mit Ruby und den  Komponenten nicht so gut auskenne, weiß ich nicht, ob mein &ldquo;Fix&rdquo; so  gut ist: Ich habe im <code>Rakefile</code> den <code>rackup</code>-Aufruf um den  Parameter <code>-o 0.0.0.0</code> ergänzt. Dann bekam ich vom Host wieder eine  Verbindung zum Webserver im Octopress-Container.</p>
 
 <p><strong>Update vom 04. Januar 2014:</strong> Nach einem kurzen  <a href="https://twitter.com/Krrrcks/status/546667456128114688">Gespräch</a>  via Twitter habe ich mich entschieden, den eingebauten Server doch  wieder so zu belassen, wie es im <code>Rakefile</code> ursprünglich  stand. Statt dessen habe ich einfach in dem Docker-Container einen  <code>nginx</code> hinzuinstalliert, der dann mein <code>public</code>-Verzeichnis an den  Port 4000 ausliefert. So funktioniert es wieder prima: Ich starte  den <code>nginx</code> und lasse dann das <code>rake watch</code> laufen, um die Seiten  immer wieder neu zu erzeugen, wenn sich Dinge geändert haben.</p>
-
-</article>
-<article>
-  <header>
-    <h1><a href='/2014/12/18/-neues-arbeitspapier'>&ldquo;Neues&rdquo; Arbeitspapier</a></h1>
-    <p class='date-and-tags'>
-<time datetime="2014-12-18" pubdate="true">2014-12-18</time> :: <span class="tags"><a href="/tags/Wirtschaft.html">Wirtschaft</a></span></p>
-  </header>
-
-<p>Zusammen mit <a href="http://www.bk.tudelft.nl/en/about-faculty/departments/otb/about-otb/staff/alle-medewerkers/haffner-marietta/">Marietta Haffner</a> hatte ich für die <a href="http://www.ccnorway.no/enhr2012/">ENHR-Konferenz im Jahr 2012 in Lillehammer</a> ein Konferenzpapier vorbereitet, das Marietta dort vorgestellt hatte. Wir haben nun in der Arbeitspapier-Reihe des OTB an der TU Delft eine überarbeitete Fassung <a href="http://www.bk.tudelft.nl/fileadmin/Faculteit/BK/Over_de_faculteit/Afdelingen/OTB/publicaties/Working_papers/OTB_Working_papers_2014-07_German_cooperatives.pdf">eingestellt</a>.</p>
 
 </article>
 <footer>

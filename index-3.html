@@ -6,7 +6,7 @@
     <title>Daniel Brunner (page 3)</title>
     <meta name="description" content="Daniel Brunner (page 3)">
     <meta name="author"      content="Daniel Brunner">
-    <meta name="keywords"    content="Scheme, Medien, Common Lisp, Statistik, Linux, Recht, Wirtschaft, all, Reisen, Allerlei, Politik, Org-Mode, Behörden, Octopress, Docker, IT, Racket, AWS, JavaScript, Steuern, Homepage, Veranstaltungen, Frog">
+    <meta name="keywords"    content="AWS, Lehre, Common Lisp, JavaScript, Linux, Wirtschaft, Scheme, Racket, Politik, Veranstaltungen, Frog, Scribble, Medien, Allerlei, Statistik, all, Reisen, Homepage, Behörden, Octopress, Docker, IT, Org-Mode, Steuern, Recht">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
     <link rel="canonical" href="http://www.dbrunner.de/index-3.html">
@@ -94,6 +94,8 @@
 
 <li><a href="/tags/JavaScript.html">JavaScript</a></li>
 
+<li><a href="/tags/Lehre.html">Lehre</a></li>
+
 <li><a href="/tags/Linux.html">Linux</a></li>
 
 <li><a href="/tags/Medien.html">Medien</a></li>
@@ -111,6 +113,8 @@
 <li><a href="/tags/Reisen.html">Reisen</a></li>
 
 <li><a href="/tags/Scheme.html">Scheme</a></li>
+
+<li><a href="/tags/Scribble.html">Scribble</a></li>
 
 <li><a href="/tags/Statistik.html">Statistik</a></li>
 
@@ -144,6 +148,16 @@
 
 
           <article>
+  <header>
+    <h1><a href='/2014/12/18/-neues-arbeitspapier'>&ldquo;Neues&rdquo; Arbeitspapier</a></h1>
+    <p class='date-and-tags'>
+<time datetime="2014-12-18" pubdate="true">2014-12-18</time> :: <span class="tags"><a href="/tags/Wirtschaft.html">Wirtschaft</a></span></p>
+  </header>
+
+<p>Zusammen mit <a href="http://www.bk.tudelft.nl/en/about-faculty/departments/otb/about-otb/staff/alle-medewerkers/haffner-marietta/">Marietta Haffner</a> hatte ich für die <a href="http://www.ccnorway.no/enhr2012/">ENHR-Konferenz im Jahr 2012 in Lillehammer</a> ein Konferenzpapier vorbereitet, das Marietta dort vorgestellt hatte. Wir haben nun in der Arbeitspapier-Reihe des OTB an der TU Delft eine überarbeitete Fassung <a href="http://www.bk.tudelft.nl/fileadmin/Faculteit/BK/Over_de_faculteit/Afdelingen/OTB/publicaties/Working_papers/OTB_Working_papers_2014-07_German_cooperatives.pdf">eingestellt</a>.</p>
+
+</article>
+<article>
   <header>
     <h1><a href='/2014/12/18/aus-der-entscheidung-des-bverfg-zur-erbschaftsteuer'>Aus der Entscheidung des BVerfG zur Erbschaftsteuer</a></h1>
     <p class='date-and-tags'>
@@ -502,52 +516,6 @@ MY-APP&gt;</code></p>
 &lt;p&gt;Value of bar ist: 200&lt;/p&gt;</code></p>
 
 <p>Therefore I was reminded to think about packages when interning  symbols. A good guide to symbols and packages could be found in this  document: <a href="http://www.flownet.com/gat/packages.pdf">The Complete Idiot&rsquo;s Guide to Common Lisp Packages</a>.</p>
-
-</article>
-<article>
-  <header>
-    <h1><a href='/2014/06/10/unicode-support-for-octopress'>Unicode support for Octopress</a></h1>
-    <p class='date-and-tags'>
-<time datetime="2014-06-10" pubdate="true">2014-06-10</time> :: <span class="tags"><a href="/tags/Docker.html">Docker</a>, <a href="/tags/Octopress.html">Octopress</a>, <a href="/tags/IT.html">IT</a></span></p>
-  </header>
-
-<p>Well, it seems Octopress/Jekyll would like to have a locale set for UTF&ndash;8 support. I followed <a href="http://www.dominik-gaetjens.de/blog/2012/06/09/utf-8-in-octopress/">this (text in German)</a> hint and now my Dockerfile looks like this:</p>
-
-<pre><code># dockerfile for octopress
-
-FROM ubuntu:14.04
-MAINTAINER krrrcks &lt;krrrcks@krrrcks.net&gt;
-ENV DEBIAN_FRONTEND noninteractive
-
-RUN apt-get update; \
-  apt-get -q -y upgrade
-RUN /usr/sbin/locale-gen en_US.UTF-8; \
-  update-locale LANG=en_US.UTF-8
-RUN apt-get -q -y install git curl; \
-  apt-get clean
-RUN git clone git://github.com/imathis/octopress.git /opt/octopress
-RUN curl -L https://get.rvm.io | bash -s stable --ruby
-ENV HOME /root
-RUN echo "export LC_ALL=en_US.UTF-8" &gt;&gt; /root/.bashrc
-RUN echo "export LANG=en_US.UTF-8" &gt;&gt; /root/.bashrc
-RUN echo "source /usr/local/rvm/scripts/rvm" &gt;&gt; /root/.bashrc; 
-RUN /bin/bash -l -c "source /usr/local/rvm/scripts/rvm; \
-  rvm install 1.9.3; \
-  rvm use 1.9.3; \
-  rvm rubygems latest; \
-  cd /opt/octopress; \
-  gem install bundler; \
-  bundle install; \
-  rake install" 
-RUN echo "rvm use 1.9.3" &gt;&gt; /root/.bashrc
-
-WORKDIR /opt/octopress
-EXPOSE 4000
-CMD ["/bin/bash"] </code></pre>
-
-<p>After playing around with Docker and Octopress I put the whole <code>/opt/octopress</code> folder on my host machine and then  restarted the image with the <code>-v</code> flag. Therefore I can edit the files on my host machine with my favorite editor and use the container only for producing the HTML files, for preview and for publishing.</p>
-
-<p>The <code>rake preview</code> is a neat feature because the server always looks for changed files and produces the HTML files on the fly. That means I can edit the files in my editor and could see the resulting pages in a  browser nearly the same time.</p>
 
 </article>
 <footer>
