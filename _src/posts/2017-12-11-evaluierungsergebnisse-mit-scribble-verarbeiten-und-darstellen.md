@@ -98,7 +98,7 @@ hinter EVALUIERUNG die Liste der Arrays mit den Antworten verbirgt):
 @tabular-result[EVALUIERUNG 1]}
 ...
 ```
-Das Ergebnis kann man am Beispiel der letzten Veranstaltung [hier](/lehre/iot-eval-2017.html) einsehen, die zugehörige Scribble-Datei ist [hier](/_src/lehre/iot-eval-2017.scrbl) einsehbar. 
+Das Ergebnis kann man am Beispiel der letzten Veranstaltung [hier](/lehre/iot-eval-2017.html) einsehen, die zugehörige Scribble-Datei ist [hier](/lehre/iot-eval-2017.scrbl) einsehbar. 
 
 Der Vorteil für mich liegt bei dieser Vorgehensweise darin, dass ich
 die Antworten in strukturierter Form behalte und auch noch für andere

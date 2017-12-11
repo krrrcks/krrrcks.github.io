@@ -155,6 +155,6 @@
 &lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
 &lt;/div&gt;
 
-&lt;p&gt;Das Ergebnis kann man am Beispiel der letzten Veranstaltung &lt;a href="/lehre/iot-eval-2017.html"&gt;hier&lt;/a&gt; einsehen, die zugehörige Scribble-Datei ist &lt;a href="/_src/lehre/iot-eval-2017.scrbl"&gt;hier&lt;/a&gt; einsehbar.&lt;/p&gt;
+&lt;p&gt;Das Ergebnis kann man am Beispiel der letzten Veranstaltung &lt;a href="/lehre/iot-eval-2017.html"&gt;hier&lt;/a&gt; einsehen, die zugehörige Scribble-Datei ist &lt;a href="/lehre/iot-eval-2017.scrbl"&gt;hier&lt;/a&gt; einsehbar.&lt;/p&gt;
 
 &lt;p&gt;Der Vorteil für mich liegt bei dieser Vorgehensweise darin, dass ich die Antworten in strukturierter Form behalte und auch noch für andere Zwecke weiter verwenden kann. Darüberhinaus ist diese Ausgabe mittels Scribble vielfältig nutzbar: Ich erzeuge bspw. daraus ein PDF-Dokument (über LaTeX) und eine Seite hier auf der Homepage mit dem statischen Seitengenerator Frog. Und, ich musste keine Tabellenkalkulation verwenden.&lt;/p&gt;</description></item></channel></rss>
