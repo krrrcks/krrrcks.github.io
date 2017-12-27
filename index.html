@@ -255,35 +255,9 @@
   </header>
 
 <p>Bisher habe ich mein Blog mit <a href="http://www.octopress.org">Octopress</a> bereit gestellt. Eine neue Version (&ldquo;3.0&rdquo;) ist auf dem <a href="http://octopress.org/2015/01/15/octopress-3.0-is-coming/">Weg</a>. Nachdem in letzter Zeit die einen oder anderen Schwierigkeiten mit meiner Octopress-Installation auftauchten, habe ich mich entschieden, mit dem  Blog auf <a href="https://github.com/greghendershott/frog">Frog</a>, ebenfalls ein Generator für statische Blogseiten, zu wechseln.</p>
-
-<h2 id="meine-erfahrungen-mit-octopress">Meine Erfahrungen mit Octopress</h2>
-
-<ul>
- <li>Ich hatte Octopress und alle Abhängigkeiten in einen Docker-Container <a href="/2014/06/10/relaunch-fast-fertig/">gepackt</a>. Das war ganz sinnvoll, um die Ruby-Bibliotheken-Abhängigkeitshölle in den Griff zu bekommen. Es hatte mich aber nur bedingt glücklich gemacht, da ich immer auf Docker angewiesen war, um einen Blogpost zu erzeugen.</li>
- <li>Einige der Sachen, die <a href="http://octopress.org/2015/01/15/octopress-3.0-is-coming/">Brandon Mathis (dem Autor von Octopress)</a> aufgezeigt hatte, fand ich auch überarbeitungsbedürftig (bspw. das Ausliefern über Git und die enge Verzahnung, die Updates schwierig machte).</li>
- <li>Was mir sehr gut gefallen hat, war das Layout und Thema sowie auch die Zahl an Plugins und Erweiterungsmöglichkeiten. Da wird mir doch die eine oder andere Möglichkeit fehlen.</li></ul>
-
-<h2 id="warum-nun-frog">Warum nun Frog?</h2>
-
-<p>Es gibt ja viele Generatoren für statische Homepages und Blogs. Ich habe mich für den Generator  <a href="https://github.com/greghendershott/frog">Frog</a> von Greg Hendershott entschieden. Es sprach für mich dafür:</p>
-
-<ul>
- <li>Frog ist in <a href="http://www.racket-lang.org">Racket</a> geschrieben und da ich das praktisch täglich für allerlei Sachen benutze, liegt es mir deutlich näher als Ruby und ich kann die Abhängigkeiten etc. besser beurteilen und ggf. beheben.</li>
- <li>Frog verwendet im Standard ein paar HTML-Templates, die dann eine Seite mit Bootstrap-CSS etc. bereit stellen. Da ich eh das eine oder andere mit Bootstrap mache bzw. vorhabe, ist das für mich eine ganz gute Lernmöglichkeit.</li>
- <li>Die Anpassung von Templates ist für mich einfacher als bei Octopress, da ich dort direkt Racket-Code eingeben und nutzen kann.</li>
- <li>Wie Octopress/Jekyll verarbeitet Frog Markdown als Eingabeformat. Allerdings kann man auch <a href="https://docs.racket-lang.org/scribble/index.html">Scribble</a>-Dateien zum Schreiben von Seiten und Posts verwenden. Scribble verwende ich zwischenzeitlich recht oft als Dokumentations- bzw. Schreibwerkzeug, so dass das ein nettes zusätzliches Feature ist.</li>
- <li>Es wirkt auf mich, als wäre Frog auch etwas schneller als Octopress im Erzeugen der HTML-Seiten.</li></ul>
-
-<h2 id="umstellungsaufwand">Umstellungsaufwand</h2>
-
-<p>Frog verarbeitet ebenso wie Octopress Dateien im Markdown-Format; allerdings sind die Metadaten etwas anders formatiert (in Octopress gibt es eine YAML-Präambel). Insofern musste ich alle Blog-Posts (knapp 60 Stück) und Seiten einmal in die Hand nehmen und anpassen. Für die Einrichtung und die Anpassung der Files habe ich ca. eine Stunde gebraucht, dann noch &ldquo;etwas&rdquo; Gefummel mit dem CSS und den DNS-Einträgen für die Github Pages. Also durchaus überschaubar.</p>
-
-<h2 id="zukünftiges">Zukünftiges</h2>
-
-<p>Es gibt beim neuen Blog noch einiges, was ich ergänzen möchte (&ldquo;Letzte Artikel&rdquo;-Sidebar, Tag-Sidebar etc.) und mit dem CSS/Thema bin auch noch nicht so zufrieden, aber es tut zumindest nun schon mal.</p>
-
-<p>Ach ja, zum Thema CSS und Fummeln darf natürlich nicht der übliche Hinweis auf diesen (bewegten) <a href="https://imgur.com/gallery/Q3cUg29">Cartoon</a> fehlen.</p>
-
+  <footer>
+    <a href='/2017/02/16/mein-wechsel-zu-frog'>&hellip; more &hellip;</a>
+  </footer>
 </article>
 <article>
   <header>

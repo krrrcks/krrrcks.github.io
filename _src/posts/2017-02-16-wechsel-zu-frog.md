@@ -11,6 +11,8 @@ Octopress-Installation auftauchten, habe ich mich entschieden, mit dem
 Blog auf [Frog](https://github.com/greghendershott/frog), ebenfalls
 ein Generator für statische Blogseiten, zu wechseln.
 
+<!-- more -->
+
 ## Meine Erfahrungen mit Octopress
 
 * Ich hatte Octopress und alle Abhängigkeiten in einen Docker-Container [gepackt](/2014/06/10/relaunch-fast-fertig/). Das war ganz sinnvoll, um die Ruby-Bibliotheken-Abhängigkeitshölle in den Griff zu bekommen. Es hatte mich aber nur bedingt glücklich gemacht, da ich immer auf Docker angewiesen war, um einen Blogpost zu erzeugen.

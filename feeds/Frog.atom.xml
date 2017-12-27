@@ -15,6 +15,7 @@
    <name>Daniel Brunner</name></author>
   <content type="html">
 &lt;p&gt;Bisher habe ich mein Blog mit &lt;a href="http://www.octopress.org"&gt;Octopress&lt;/a&gt; bereit gestellt. Eine neue Version (&amp;ldquo;3.0&amp;rdquo;) ist auf dem &lt;a href="http://octopress.org/2015/01/15/octopress-3.0-is-coming/"&gt;Weg&lt;/a&gt;. Nachdem in letzter Zeit die einen oder anderen Schwierigkeiten mit meiner Octopress-Installation auftauchten, habe ich mich entschieden, mit dem  Blog auf &lt;a href="https://github.com/greghendershott/frog"&gt;Frog&lt;/a&gt;, ebenfalls ein Generator für statische Blogseiten, zu wechseln.&lt;/p&gt;
+&lt;!-- more--&gt;
 
 &lt;h2 id="meine-erfahrungen-mit-octopress"&gt;Meine Erfahrungen mit Octopress&lt;/h2&gt;
 
