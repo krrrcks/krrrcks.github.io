@@ -9,6 +9,8 @@ mittlerweile schon eine Reihe von guten Quellen (bspw. auf der
 Docker-Homepage, in der c't war in Heft 17 (Seiten 146-151) auch eine
 ganz gute Einführung enthalten).
 
+<!-- more --> 
+
 Hintergrund
 -----------
 

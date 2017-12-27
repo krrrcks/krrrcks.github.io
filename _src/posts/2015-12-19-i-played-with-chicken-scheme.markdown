@@ -11,6 +11,8 @@ libraries and binaries with the C compiler. I thought that combining
 these binaries with a minimal Docker container could give me a very
 small deployment. So here are my steps:
 
+<!-- more -->
+
 ## Choosing Alpine Linux as a "small" Linux
 
 The smallest Linux image for Docker is undoubtly busybox with a size

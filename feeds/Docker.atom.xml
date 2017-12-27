@@ -15,6 +15,7 @@
    <name>Daniel Brunner</name></author>
   <content type="html">
 &lt;p&gt;I am looking forward to meet LISP people at the &lt;a href="https://events.ccc.de/congress/2015/wiki/Main_Page"&gt;32c3&amp;rsquo;s&lt;/a&gt; &lt;a href="https://events.ccc.de/congress/2015/wiki/Assembly:The_%28un%29employed_schemers_%26_lispers_guild"&gt;LISP assembly&lt;/a&gt;. The last days I played a bit with different Scheme implementations including  &lt;a href="http://call-cc.org"&gt;CHICKEN scheme&lt;/a&gt;. The main feature of CHICKEN is that it compiles the Scheme code to C and then creates dynamic libraries and binaries with the C compiler. I thought that combining these binaries with a minimal Docker container could give me a very small deployment. So here are my steps:&lt;/p&gt;
+&lt;!-- more--&gt;
 
 &lt;h2 id="choosing-alpine-linux-as-a-small-linux"&gt;Choosing Alpine Linux as a &amp;ldquo;small&amp;rdquo; Linux&lt;/h2&gt;
 
@@ -115,6 +116,7 @@ CMD /main/main&lt;/code&gt;&lt;/pre&gt;
    <name>Daniel Brunner</name></author>
   <content type="html">
 &lt;p&gt;Ein Bekannter bat mich, einmal von meinen Erfahrungen mit Docker zu berichten. Also hier als Blog-Post dazu. Ich werde nicht beschreiben, was genau Docker ist und wie es funktioniert. Hierzu gibt es mittlerweile schon eine Reihe von guten Quellen (bspw. auf der Docker-Homepage, in der c&amp;rsquo;t war in Heft 17 (Seiten 146&amp;ndash;151) auch eine ganz gute Einführung enthalten).&lt;/p&gt;
+&lt;!-- more--&gt;
 
 &lt;h2 id="hintergrund"&gt;Hintergrund&lt;/h2&gt;
 

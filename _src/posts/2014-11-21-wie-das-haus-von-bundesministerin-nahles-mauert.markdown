@@ -7,6 +7,8 @@ Tarifeinheit. Passend in die Tarifauseinandersetzungen bei der
 Deutschen Bahn zeigte Bundesministerin Nahles Entschlossenheit und
 Tatkraft:
 
+<!-- more -->
+
 Am 28. Oktober 2014
 [informierte sie](http://www.bmas.de/DE/Themen/Arbeitsrecht/Meldungen/gesetzentwurf-tarifeinheit.html;jsessionid=FB47DA2A8F96F14200ECE524ACBD96BC)
 die Presse über den Gesetzentwurf ihres Hauses zur

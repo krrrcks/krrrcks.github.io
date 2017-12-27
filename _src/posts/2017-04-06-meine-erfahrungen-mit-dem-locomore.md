@@ -8,6 +8,8 @@ gebracht. Mittlerweile bin ich schon zwei mal (jeweils von Kassel nach
 Berlin) mit dem Zug gefahren, einmal im Februar im [Reisebereich Basic](https://locomore.com/de/basic/) und
 einmal im März im [Reisebereich Business](https://locomore.com/de/business/).
 
+<!-- more -->
+
 Die "alten" IC-Waggons sind sehr schön und praktisch erneuert
 worden. Ich finde auch die Farbgestaltung ganz ansprechend, sie wirkt
 sehr frisch und warm, gemütlich. Mir gefallen die guten Ablagen fürs

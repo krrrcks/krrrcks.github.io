@@ -169,6 +169,7 @@
 
 &lt;blockquote&gt;
  &lt;p&gt;&amp;ldquo;The case against patents can be summarized briefly: there is no empirical evidence that they serve to increase innovation and productivity, unless productivity is identified with the number of patents awarded—which, as evidence shows, has no correlation with measured productivity. (&amp;hellip;)&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;!-- more--&gt;
 
 &lt;p&gt;Das Paper aus dem &lt;a href="https://www.aeaweb.org/journals/jep"&gt;Journal of Economic Perspectives&lt;/a&gt; ist gut zu lesen und auch frei verfügbar (&lt;a href="http://pubs.aeaweb.org/doi/pdfplus/10.1257/jep.27.1.3"&gt;PDF hier&lt;/a&gt;).&lt;/p&gt;
 
@@ -214,6 +215,7 @@
    <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;Ende 2016 hat &lt;a href="https://locomore.com/de/index.html"&gt;Locomore&lt;/a&gt; eine Zugverbindung von Stuttgart nach Berlin und zurück auf den Markt gebracht. Mittlerweile bin ich schon zwei mal (jeweils von Kassel nach Berlin) mit dem Zug gefahren, einmal im Februar im &lt;a href="https://locomore.com/de/basic/"&gt;Reisebereich Basic&lt;/a&gt; und einmal im März im &lt;a href="https://locomore.com/de/business/"&gt;Reisebereich Business&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- more--&gt;
 
 &lt;p&gt;Die &amp;ldquo;alten&amp;rdquo; IC-Waggons sind sehr schön und praktisch erneuert worden. Ich finde auch die Farbgestaltung ganz ansprechend, sie wirkt sehr frisch und warm, gemütlich. Mir gefallen die guten Ablagen fürs Gepäck, so bekommt man in Waggons mit Abteilen im Gang auch noch größere Taschen auf der Ablage unter. Ebenso sind ausreichend Steckdosen verfügbar, um elektronische Geräte aufzuladen oder zu betreiben. Etwas ungeschickt finde ich jedoch die Höhe des Tischs, ich habe das Gefühl, der ist recht hoch bzw. nicht so praktisch gebaut. Geblendet hatte mich die Leselampe, deren Anordnung und Funktionsweise fand ich nicht so gelungen.&lt;/p&gt;
 
@@ -318,6 +320,7 @@
    <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;I am looking forward to meet LISP people at the &lt;a href="https://events.ccc.de/congress/2015/wiki/Main_Page"&gt;32c3&amp;rsquo;s&lt;/a&gt; &lt;a href="https://events.ccc.de/congress/2015/wiki/Assembly:The_%28un%29employed_schemers_%26_lispers_guild"&gt;LISP assembly&lt;/a&gt;. The last days I played a bit with different Scheme implementations including  &lt;a href="http://call-cc.org"&gt;CHICKEN scheme&lt;/a&gt;. The main feature of CHICKEN is that it compiles the Scheme code to C and then creates dynamic libraries and binaries with the C compiler. I thought that combining these binaries with a minimal Docker container could give me a very small deployment. So here are my steps:&lt;/p&gt;
+&lt;!-- more--&gt;
 
 &lt;h2 id="choosing-alpine-linux-as-a-small-linux"&gt;Choosing Alpine Linux as a &amp;ldquo;small&amp;rdquo; Linux&lt;/h2&gt;
 
@@ -490,6 +493,7 @@ exports.handler = function(event, context) {
    <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;Am 15. Dezember 2014 hat der &lt;a href="http://www.bundesfinanzministerium.de/Web/DE/Ministerium/Geschaeftsbereich/Wissenschaftlicher_Beirat/wissenschaftlicher_beirat.html"&gt;Wissenschaftliche Beirat des Bundesministeriums des Finanzen&lt;/a&gt; ein Gutachten zu &amp;ldquo;Öffentlich-rechtliche Medien - Aufgabe und Finanzierung&amp;rdquo; &lt;a href="http://www.bundesfinanzministerium.de/Content/DE/Downloads/Broschueren_Bestellservice/2014-12-15-gutachten-medien.pdf?__blob=publicationFile&amp;amp;v=9"&gt;veröffentlicht&lt;/a&gt;.&lt;/p&gt;
+&lt;!-- more--&gt;
 
 &lt;p&gt;Der Inhalt wollte dem einen oder anderen Vertreter der öffentlich-rechtlichen Medien nicht schmecken. So haben sich der Runkfunkrat und der Verwaltungsrat des Hessischen Rundfunks &amp;ldquo;ausführlich&amp;rdquo; mit dem Gutachten und einer Stellungnahme des &amp;ldquo;hr-Justitiars&amp;rdquo; befasst und einen &amp;ldquo;einstimmigen Beschluss&amp;rdquo; hierzu &lt;a href="http://www.hr-online.de/website/extern/rundfunkrat/download.jsp?key=standard_document_54315171&amp;amp;row=0&amp;amp;rubrik=62561"&gt;gefasst&lt;/a&gt;.&lt;/p&gt;
 
@@ -617,6 +621,7 @@ exports.handler = function(event, context) {
    <author>Daniel Brunner</author>
    <description>
 &lt;p&gt;Dieses Jahr habe ich mich einmal aufgerafft und bin das erste mal zum Congress des CCC nach Hamburg gefahren. Im Folgenden ein paar Eindrücke:&lt;/p&gt;
+&lt;!-- more--&gt;
 
 &lt;h2 id="drumherum"&gt;Drumherum&lt;/h2&gt;
 

@@ -6,6 +6,8 @@ Dieses Jahr habe ich mich einmal aufgerafft und bin das erste mal zum
 Congress des CCC nach Hamburg gefahren. Im Folgenden ein paar
 Eindrücke:
 
+<!-- more -->
+
 ## Drumherum
 
 Ich fand den [31C3](http://events.ccc.de/congress/2014/wiki/Main_Page) ein tolles Ereignis: Sehr professionell und

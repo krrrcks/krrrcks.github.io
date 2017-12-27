@@ -8,6 +8,8 @@ ein Gutachten zu "Öffentlich-rechtliche Medien - Aufgabe und
 Finanzierung"
 [veröffentlicht](http://www.bundesfinanzministerium.de/Content/DE/Downloads/Broschueren_Bestellservice/2014-12-15-gutachten-medien.pdf?__blob=publicationFile&v=9).
 
+<!-- more -->
+
 Der Inhalt wollte dem einen oder anderen Vertreter der
 öffentlich-rechtlichen Medien nicht schmecken. So haben sich der Runkfunkrat
 und der Verwaltungsrat des Hessischen Rundfunks "ausführlich" mit dem

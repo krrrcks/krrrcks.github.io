@@ -17,6 +17,8 @@ lebenslang gültige E-Mail-Adresse versprochen hat? Nach einigen Jahren
 starb dieses E-Mail-Portal-Projekt. Werden schon Wetten auf das Ende des
 E-Postbriefs angenommen?)
 
+<!-- more -->
+
 Die Behauptung der Post, mit der E-Mail käme nun eine besondere Form von
 Rechtssicherheit in das Internet, mag man dem Werbe-Tamtam anlasten. Mir
 wäre nämlich nicht bekannt, dass E-Mails, in denen man etwas bestellt

@@ -94,6 +94,8 @@
 
 <li><a href="/tags/JavaScript.html">JavaScript</a></li>
 
+<li><a href="/tags/Lehre.html">Lehre</a></li>
+
 <li><a href="/tags/Linux.html">Linux</a></li>
 
 <li><a href="/tags/Medien.html">Medien</a></li>
@@ -111,6 +113,8 @@
 <li><a href="/tags/Reisen.html">Reisen</a></li>
 
 <li><a href="/tags/Scheme.html">Scheme</a></li>
+
+<li><a href="/tags/Scribble.html">Scribble</a></li>
 
 <li><a href="/tags/Statistik.html">Statistik</a></li>
 
@@ -151,61 +155,9 @@
   </header>
 
 <p>I am looking forward to meet LISP people at the <a href="https://events.ccc.de/congress/2015/wiki/Main_Page">32c3&rsquo;s</a> <a href="https://events.ccc.de/congress/2015/wiki/Assembly:The_%28un%29employed_schemers_%26_lispers_guild">LISP assembly</a>. The last days I played a bit with different Scheme implementations including  <a href="http://call-cc.org">CHICKEN scheme</a>. The main feature of CHICKEN is that it compiles the Scheme code to C and then creates dynamic libraries and binaries with the C compiler. I thought that combining these binaries with a minimal Docker container could give me a very small deployment. So here are my steps:</p>
-
-<h2 id="choosing-alpine-linux-as-a-small-linux">Choosing Alpine Linux as a &ldquo;small&rdquo; Linux</h2>
-
-<p>The smallest Linux image for Docker is undoubtly busybox with a size of about 2.489 MB. But busybox lacks a package manager which makes installing software painful. Therefore I have chosen <a href="http://alpinelinux.org">Alpine Linux</a> which comes with package manager and it&rsquo;s image&rsquo;s size is about 5.234 MB. That&rsquo;s double the size of the busybox image but still quite small compared to the Ubuntu image which is about 266 MB.</p>
-
-<h2 id="creating-a-docker-container-with-chicken">Creating a Docker container with CHICKEN</h2>
-
-<p>Alpine Linux comes with the <a href="http://www.muscl-libc.org">musl libc</a> and I thought it would be best to compile all the CHICKEN stuff with that libc. Therefore I created a Docker container with gcc and all the other stuff with this Dockerfile (<a href="https://github.com/krrrcks/chicken-docker-alpine">Github repository</a>):</p>
-
-<pre><code>FROM alpine:3.2
-
-RUN apk update &amp;&amp; apk add make gcc musl-dev 
-RUN wget -O - http://code.call-cc.org/releases/4.10.0/chicken-4.10.0.tar.gz | tar xz
-
-WORKDIR /chicken-4.10.0
-
-RUN make PLATFORM=linux &amp;&amp; make PLATFORM=linux install
-
-RUN rm -fr /chicken-4.10.0 
-
-WORKDIR /
-
-CMD ["csi"]</code></pre>
-
-<p>This image is quite big (about 161.7 MB) and is available for download at the <a href="https://hub.docker.com/r/krrrcks/chicken-alpine/">Docker Hub</a>.</p>
-
-<h2 id="compiling-some-chicken-code">Compiling some CHICKEN code</h2>
-
-<p>For testing purposes I wanted a minimal web server running in the Alpine Linux image. Therefore I looked through the <a href="http://wiki.call-cc.org/chicken-projects/egg-index-4.html">egg index</a> and found <a href="http://wiki.call-cc.org/eggref/4/spiffy">spiffy</a>. I fired up the <code>chicken-alpine</code> container (but I used <code>ash</code> as command instead of the <code>csi</code> Scheme interpreter) and created a small web server that serves some static pages. I wrote a <code>main.scm</code>:</p>
-
-<pre><code>(use spiffy)
-(start-server)</code></pre>
-
-<p>and added some static pages to a <code>./web</code> sub-directory. Then everything had to be compiled and prepared for deployment:</p>
-
-<pre><code>chicken-install spiffy
-csc -deploy main.scm
-chicken-install -deploy -p $PWD/main spiffy</code></pre>
-
-<h2 id="deploy-in-a-fresh-alpine-linux-image">Deploy in a fresh Alpine Linux image</h2>
-
-<p>After the compilation I copied the <code>main</code> and <code>web</code> directories on my host machine using <code>docker cp</code> and created the following Dockerfile:</p>
-
-<pre><code>FROM alpine:3.2
-
-ADD main /main
-ADD web main/web
-WORKDIR main
-
-CMD /main/main</code></pre>
-
-<p>and let <code>docker build -t krrrcks/spiffy-test .</code> do the job. The size of the resulting image is about 12.37 MB and that&rsquo;s pretty small. I uploaded that image to the <a href="https://hub.docker.com/r/krrrcks/spiffy-test/">Docker Hub</a> as well.</p>
-
-<p>To serve the pages I did a <code>docker run -d -p 8080:8080 krrrcks/spiffy-test</code>  (spiffy listens on port 8080 in the default install) and browsed my static pages.</p>
-
+  <footer>
+    <a href='/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux'>&hellip; more &hellip;</a>
+  </footer>
 </article>
         </div>
       </div>

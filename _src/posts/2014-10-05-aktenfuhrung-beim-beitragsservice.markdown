@@ -9,6 +9,8 @@ verbucht werden sollte. Der GEZ war meine alte Beitragsnummer, die
 neue Beitragsnummer sowie meine Anschrift bekannt. Soweit so gut,
 besondere Veränderungen sind in der Zwischenzeit nicht eingetreten.
 
+<!-- more -->
+
 Am **17. April 2014** erreicht mich ein Schreiben des
 Beitragsservices. Sie schreiben dort:
 

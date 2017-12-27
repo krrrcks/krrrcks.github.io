@@ -16,6 +16,8 @@ dem kurz formulierten Ergebnis:
 > patents awarded—which, as evidence shows, has no correlation with
 > measured productivity. (...)"
 
+<!-- more -->
+
 Das Paper aus
 dem
 [Journal of Economic Perspectives](https://www.aeaweb.org/journals/jep) ist
