@@ -3,13 +3,13 @@
   <head>
 
     <meta charset="utf-8">
-    <title>Racket</title>
-    <meta name="description" content="Racket: _(work in progress)_ Racket as a &quot;tool&quot;: I found Scribble  a nice tool for taking notes, preparing documents. I use it a lot  for communicating with colleagues, preparing offers etc. I  customized the LaTeX output to use our company's document cla...">
+    <title>Genossenschaften</title>
+    <meta name="description" content="Genossenschaften: _(im Entwurf)_ Während meiner Zeit am Marburger Genossenschaftsinstitut habe mich mit folgenden Themen des Genossenschaftswesens befasst: Innovationsprozesse in kooperativen Strukturen: () Wohnungsgenossenschaften: ()...">
     <meta name="author"      content="Daniel Brunner">
     <meta name="keywords"    content="">
     <meta name="viewport"    content="width=device-width, initial-scale=1.0">
     <link rel="icon"      href="/favicon.ico">
-    <link rel="canonical" href="http://www.dbrunner.de/racket/index.html">
+    <link rel="canonical" href="http://www.dbrunner.de/ueber/geno.html">
 
 
     <!-- CSS -->
@@ -148,55 +148,19 @@
 
 
 
-<h1 id="racket">Racket</h1>
+<h1 id="genossenschaften">Genossenschaften</h1>
 
-<p><em>(work in progress)</em></p>
+<p><em>(im Entwurf)</em></p>
 
-<h2 id="racket-as-a-tool">Racket as a &ldquo;tool&rdquo;</h2>
+<p>Während meiner Zeit am <a href="http://www.ifg-marburg.de">Marburger Genossenschaftsinstitut</a> habe mich mit folgenden Themen des Genossenschaftswesens befasst:</p>
 
-<ul>
- <li>I found <a href="http://docs.racket-lang.org/scribble/index.html">Scribble</a>  a nice tool for taking notes, preparing documents. I use it a lot  for communicating with colleagues, preparing offers etc. I  customized the LaTeX output to use our company&rsquo;s document class.</li>
- <li>I used <a href="http://docs.racket-lang.org/slideshow/index.html">Slideshow</a>  for some presentations. Though I lack a lot of practice and creating  figures etc. is very time-consuming for me.</li></ul>
+<h2 id="innovationsprozesse-in-kooperativen-strukturen">Innovationsprozesse in kooperativen Strukturen</h2>
 
-<h2 id="racket-in-production">Racket &ldquo;in production&rdquo;</h2>
+<p>(&hellip;)</p>
 
-<ul>
- <li>Receiving telegrams for a M2M application: The application receives  messages via HTTP, checks and convert them and then forwards the  messages to another service for data management and visualization.</li>
- <li>Backup script: Fires up a instance on EC2 (Amazon Web Services),  copies and runs a Racket script on the new instance. This script  dumps a PostgreSQL database and copies the resulting dump to Amazon  S3.</li>
- <li>File handling for an EDI project: Transfer files between a local  directory and a remote directory via SFTP.</li></ul>
+<h2 id="wohnungsgenossenschaften">Wohnungsgenossenschaften</h2>
 
-<h2 id="teaching--education">Teaching / Education</h2>
-
-<ul>
- <li>&ldquo;IoT&rdquo; course (two days)</li>
- <li>I use Racket as the first programming language for my apprentices  together with the book &ldquo;How to Design Programs, 2nd edition&rdquo;.</li></ul>
-
-<h2 id="resources">Resources</h2>
-
-<h3 id="libraries">Libraries</h3>
-
-<ul>
- <li><a href="https://github.com/greghendershott/aws">AWS</a> by <a href="http://www.greghendershott.com/">Greg Hendershott</a>: Very nice package that helps to access to many Amazon Web Services via Racket.</li>
- <li><a href="https://github.com/mflatt/s3-sync">s3-sync</a> by <a href="http://www.cs.utah.edu/~mflatt/">Matthew Flatt</a>: Syncs a local filesystem with a S3 bucket.</li>
- <li><a href="https://github.com/greghendershott/frog">Frog</a> by <a href="http://www.greghendershott.com/">Greg Hendershott</a>: A nice static web site generator renders Markdown <em>and</em> Scribble; used to make this site.</li>
- <li><a href="https://github.com/florence/cover">Cover</a> by <a href="http://florence.io/">Spencer Florence</a>: A code coverage tool.</li>
- <li><a href="https://github.com/tonyg/racket-explorer">Racket Explorer</a> by <a href="https://eighty-twenty.org">Tony Garnock-Jones</a>: Utility for interactive exploration of complex data structures.</li>
- <li><a href="https://github.com/takikawa/raco-find-collection">raco-find-collection</a> by <a href="http://asumu.xyz">Asumu Takikawa</a>: A raco script for finding collections.</li></ul>
-
-<h3 id="blog-posts-books-and-articles">Blog Posts, Books and Articles</h3>
-
-<ul>
- <li><a href="http://www.greghendershott.com/fear-of-macros/">Fear of Macros</a> by <a href="http://www.greghendershott.com/">Greg Hendershott</a>: A great tutorial for macros.</li>
- <li><a href="http://www.ccs.neu.edu/home/matthias/manifesto/">The Racket Manifesto</a></li>
- <li><a href="http://www.ccs.neu.edu/home/matthias/HtDP2e/index.html">How to Design Programs, 2nd edition</a></li>
- <li><a href="http://beautifulracket.com/">Beautiful Racket</a></li></ul>
-
-<h3 id="small-snippets">Small snippets</h3>
-
-<ul>
- <li>How to install all libraries after a new version of Racket comes out: <code>raco pkg migrate</code>.</li>
- <li>How to find a module&rsquo;s location: <code>(collection-file-path "main" "drracket")</code>, <code>(require syntax/modresolve) (resolve-module-path 'drracket)</code> in Emacs (with Racket-Mode installed): <code>racket-open-require-path</code> (C-c C-x C-f), <code>racket-find-collection</code> which uses the Racket package <a href="https://github.com/takikawa/raco-find-collection">raco-find-collection</a>,  (Source: <a href="https://groups.google.com/forum/#!topic/racket-users/tJULSX5mYAA">Racket Users</a> mailing list).</li>
- <li>Adding <code>raco make</code> to Racket Minimal: <code>raco pkg install compiler-lib</code>.</li></ul>
+<p>(&hellip;)</p>
         </div>
       </div>
       <footer>
