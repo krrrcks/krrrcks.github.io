@@ -21,11 +21,18 @@ Diese theoretischen Überlegungen habe ich im Beitrag
 2006) weiterentwickelt ... (Methode: Theoretische Überlegungen anhand
 der Marktphasentheorie)
 
+Fallstudie in einer Bäckerei-Genossenschaft. Konnten wir dann
+anlässlich der EMnet 2007 in Rotterdam vorstellen. (Methode:
+Theoretische Überlegungen, Fallstudie)
+
+(Strukturgleichungsmodelle) 
+
 Ein theoretisches Spin-Off war dann der Beitrag mit Tim Voigt (Die
 Interaktion von Mitgliedern im Wettbewerb: eine evolutionsökonomische
 Analyse, 2009), in dem wir das Nelson-Winter-Modell um einen
 Kooperationsaspekt ergänzt haben. (Methode: Simulationsstudie anhand
 der Rekonstruktion des Nelson-Winter-Modells)
+
 
 
 ## Wohnungsgenossenschaften
