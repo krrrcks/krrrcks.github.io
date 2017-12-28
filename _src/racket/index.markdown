@@ -26,7 +26,7 @@
 
 ## Teaching / Education 
 
-* "IoT" course (two days)
+* "IoT" course (two days), see [our ELS 2017 Paper](/pub/els2017.pdf). 
 * I use Racket as the first programming language for my apprentices
   together with the book "How to Design Programs, 2nd edition".
 
