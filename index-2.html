@@ -149,6 +149,18 @@
 
           <article>
   <header>
+    <h1><a href='/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux'>I played with CHICKEN Scheme, Docker and Alpine Linux</a></h1>
+    <p class='date-and-tags'>
+<time datetime="2015-12-19" pubdate="true">2015-12-19</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Scheme.html">Scheme</a>, <a href="/tags/Docker.html">Docker</a>, <a href="/tags/Linux.html">Linux</a></span></p>
+  </header>
+
+<p>I am looking forward to meet LISP people at the <a href="https://events.ccc.de/congress/2015/wiki/Main_Page">32c3&rsquo;s</a> <a href="https://events.ccc.de/congress/2015/wiki/Assembly:The_%28un%29employed_schemers_%26_lispers_guild">LISP assembly</a>. The last days I played a bit with different Scheme implementations including  <a href="http://call-cc.org">CHICKEN scheme</a>. The main feature of CHICKEN is that it compiles the Scheme code to C and then creates dynamic libraries and binaries with the C compiler. I thought that combining these binaries with a minimal Docker container could give me a very small deployment. So here are my steps:</p>
+  <footer>
+    <a href='/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux'>&hellip; more &hellip;</a>
+  </footer>
+</article>
+<article>
+  <header>
     <h1><a href='/2015/09/04/how-to-use-get-bucket-location-on-amazon-s3-with-racket'>How to use GET Bucket location on Amazon S3 with Racket</a></h1>
     <p class='date-and-tags'>
 <time datetime="2015-09-04" pubdate="true">2015-09-04</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Racket.html">Racket</a>, <a href="/tags/AWS.html">AWS</a></span></p>
@@ -374,40 +386,6 @@ exports.handler = function(event, context) {
   </header>
 
 <p>Bisher hatte ich meine Blog-Einträge auf zwei Blogs aufgeteilt, <a href="http://blog.krrrcks.net">eines</a> mit mehr technischen (und zum Teil englischen Texten) und dieses hier mit deutschen Texten. Ich denke, ich werde das auf dieses eine Blog hier konzentrieren. Das reduziert doch etwas den Verwaltungsaufwand. Ich habe die Texte vom nun etwas still gelegten Blog hier herüber kopiert.</p>
-
-</article>
-<article>
-  <header>
-    <h1><a href='/2014/12/21/ich-habe-mal-octopress-aktualisert'>Ich habe mal Octopress aktualisert</a></h1>
-    <p class='date-and-tags'>
-<time datetime="2014-12-21" pubdate="true">2014-12-21</time> :: <span class="tags"><a href="/tags/Homepage.html">Homepage</a>, <a href="/tags/Octopress.html">Octopress</a></span></p>
-  </header>
-
-<p>Neulich fiel mir auf, dass die Suchfunktion, die auf Google basiert, nicht nur auf der eigenen Homepage, sondern im &ldquo;gesamten&rdquo; Suchindex von Google gesucht hat. Eben flatterte dieser <a href="https://twitter.com/octopress/status/546528904115404800">Tweet</a> mit <a href="https://github.com/imathis/octopress/commit/514ed5eb9f6bb91a6f3288febf3c2ba892a9b693">Link</a> zu einem Fix an mir vorbei und da hat sich wohl die API geändert.</p>
-
-<div class="figure"><img src="/img/2014-12-21-octopress.png" alt="Octopress-Tweet" />
- <p class="caption">Octopress-Tweet</p></div>
-
-<p>Also habe ich mich einmal an den <a href="http://octopress.org/docs/updating/">Hinweisen</a> zum Aktualisieren von Octopress orientiert. Hierzu werden die folgenden Schritte vorgeschlagen:</p>
-
-<pre><code>git pull octopress master      # Get the latest Octopress
-bundle install                 # Keep gems updated
-rake update_source             # update the template's source
-rake update_style              # update the template's style</code></pre>
-
-<p>Soweit lief das auch. Es tauchten anschließend zwei Probleme auf:</p>
-
-<ol>
- <li>
-  <p>Das <code>execjs</code> jammerte, dass ihm irgendwie eine  JavaScript-Bibliothek fehlte. Nach kurzer Recherche gab es die  Empfehlung, die Zeile <code>gem 'therubyracer'</code> in das <code>Gemfile</code>  aufzunehmen. Okay, das funktionierte schon einmal.</p></li>
- <li>
-  <p>Bei den Feeds für die Kategorien jammerte das Octopress ein  ungültiges Layout an. In <code>category_feed.xml</code> stand in der Tat  <code>layout: nil</code>. Ich habe das auf <code>layout: page</code> geändert. Nun tat  auch dies.</p></li></ol>
-
-<p>Mit dem Update funktioniert nun auch das Such-Formular wieder.</p>
-
-<p><strong>Ergänzung:</strong> Ich lasse das Jekyll und Octopress in einem  <a href="/blog/2014/06/10/relaunch-fast-fertig/">Docker-Container</a> laufen und irgendwie bekam ich bei <code>rake preview</code>  meine Seite nicht mehr zu sehen. Da ich mich mit Ruby und den  Komponenten nicht so gut auskenne, weiß ich nicht, ob mein &ldquo;Fix&rdquo; so  gut ist: Ich habe im <code>Rakefile</code> den <code>rackup</code>-Aufruf um den  Parameter <code>-o 0.0.0.0</code> ergänzt. Dann bekam ich vom Host wieder eine  Verbindung zum Webserver im Octopress-Container.</p>
-
-<p><strong>Update vom 04. Januar 2014:</strong> Nach einem kurzen  <a href="https://twitter.com/Krrrcks/status/546667456128114688">Gespräch</a>  via Twitter habe ich mich entschieden, den eingebauten Server doch  wieder so zu belassen, wie es im <code>Rakefile</code> ursprünglich  stand. Statt dessen habe ich einfach in dem Docker-Container einen  <code>nginx</code> hinzuinstalliert, der dann mein <code>public</code>-Verzeichnis an den  Port 4000 ausliefert. So funktioniert es wieder prima: Ich starte  den <code>nginx</code> und lasse dann das <code>rake watch</code> laufen, um die Seiten  immer wieder neu zu erzeugen, wenn sich Dinge geändert haben.</p>
 
 </article>
 <footer>

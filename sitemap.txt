@@ -13,6 +13,7 @@ http://www.dbrunner.de/2015/08/27/running-racket-on-aws-lambda
 http://www.dbrunner.de/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure
 http://www.dbrunner.de/2010/03/07/kuler-eine-web-anwendung-zum-farben-abmischen-von-adobe
 http://www.dbrunner.de/2014/11/13/warten-auf-den-technischen-fortschritt-als-politisches-prinzip
+http://www.dbrunner.de/2018/01/15/der-e-postbrief-eine-erfolgsgeschichte
 http://www.dbrunner.de/2014/10/05/erfahrungen-mit-docker
 http://www.dbrunner.de/2011/10/16/programm-bibliotheken-und-verschiedene-versionssta%CC%88nde
 http://www.dbrunner.de/2010/06/22/einmaligkeit-und-alternativlosigkeit-als-politische-kategorien

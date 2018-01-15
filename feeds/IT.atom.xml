@@ -4,7 +4,17 @@
  <link rel="self" href="http://www.dbrunner.de/feeds/IT.atom.xml" />
  <link href="http://www.dbrunner.de/tags/IT.html" />
  <id>urn:http-www-dbrunner-de:-tags-IT-html</id>
- <updated>2017-06-14T10:18:02Z</updated>
+ <updated>2018-01-15T08:24:57Z</updated>
+ <entry>
+  <title type="text">Der E-Postbrief: Eine Erfolgsgeschichte(?)</title>
+  <link rel="alternate" href="http://www.dbrunner.de/2018/01/15/der-e-postbrief-eine-erfolgsgeschichte" />
+  <id>urn:http-www-dbrunner-de:-2018-01-15-der-e-postbrief-eine-erfolgsgeschichte</id>
+  <published>2018-01-15T08:24:57Z</published>
+  <updated>2018-01-15T08:24:57Z</updated>
+  <author>
+   <name>Daniel Brunner</name></author>
+  <content type="html">
+&lt;p&gt;Die Erfolgsgeschichte des E-Postbriefs geht weiter: Nachdem ich in den vergangenen zwölf Monaten ausschließlich Nachrichten über die Änderungen der AGBen erhielt, trudelte am 12. Januar 2018 mein zweiter &amp;ldquo;echter&amp;rdquo; (also keine Newsletter oder AGB-Änderungen der Post) E-Postbrief ein: Es war &lt;a href="/2017/02/19/neues-vom-e-postbrief/"&gt;erneut&lt;/a&gt; eine Rechnung für ein Zeitschriften-Abonnement. Kurzum: 2 &amp;ldquo;echte&amp;rdquo; E-Postbriefe in 7,5 Jahren.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Folgen des Lexmark-Urteils</title>
   <link rel="alternate" href="http://www.dbrunner.de/2017/06/14/folgen-des-lexmark-urteils" />
@@ -596,28 +606,4 @@ CMD ["/bin/bash"] &lt;/code&gt;&lt;/pre&gt;</content></entry>
   <author>
    <name>Daniel Brunner</name></author>
   <content type="html">
-&lt;p&gt;Ich bin ein sehr intensiver Nutzer von &lt;a href="http://www.orgmode.org"&gt;Org-Mode&lt;/a&gt;, einem speziellen Modul/Modus für den Emacs-Editor (ich habe hier auf meiner Homepage auch einmal mit einer kleinen &lt;a href="http://archive.dbrunner.de/it/org-mode.html"&gt;Seite&lt;/a&gt; dazu begonnen). Nun ja, was soll man sagen: Bei Emacs wird eine recht alte Version mitgeliefert. Ich wollte dann mal auch wegen einiger Funktionen die neueste nutzen. Also via &lt;code&gt;git&lt;/code&gt; heruntergeladen und eingebunden und Peng, irgendwas funktioniert natürlich nicht mehr: Ich benötige pratisch täglich den Export von Org-Mode-Dateien nach &lt;code&gt;LaTeX&lt;/code&gt;, der wollte aber nicht mehr. Nun kann ich zwar Lisp, aber das Emacs Lisp ist doch etwas speziell und die Debug-Möglichkeiten sind etwas … nun ja, altbacken. Kurzum: Das macht überhaupt keinen Spaß. Im Endeffekt habe ich dann herausgefunden, dass unter bestimmten Umständen Teile des alten, bei Emacs mitgelieferten Codes nachgeladen wird anstelle der neuen Distribution. Diese bescheidene Art von Emacs mit Modulen und Paketen umzugehen ist wirklich erschreckend. Was dafür wiederum total toll war: In der von mir verwendeten Org-Mode-Version war wohl ein Fehler, das ganze Ding über die Mailingliste geschickt und innert einem halben Tag war der Fehler von anderen Nutzern und von Carsten Dominik auch gleich gefixt. Grandiose Antwortzeit!&lt;/p&gt;</content></entry>
- <entry>
-  <title type="text">Constanze Kurz/Frank Rieger, Die Datenfresser</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2011/06/30/constanze-kurz-frank-rieger-die-datenfresser" />
-  <id>urn:http-www-dbrunner-de:-2011-06-30-constanze-kurz-frank-rieger-die-datenfresser</id>
-  <published>2011-06-30T11:00:00Z</published>
-  <updated>2011-06-30T11:00:00Z</updated>
-  <author>
-   <name>Daniel Brunner</name></author>
-  <content type="html">
-&lt;p&gt;Nun, ich habe das Buch von Constanze Kurz und Frank Rieger, Die Datenfresser, gelesen. Hier eine sehr kurze Besprechung:&lt;/p&gt;
-
-&lt;p&gt;Die beiden Autoren wollen erklären, &amp;ldquo;wie Internetfirmen und Staat sich unsere persönlichen Daten einverbleiben und wie wir die Kontrolle darüber zurückerlangen.&amp;rdquo; Thematisch werden automatisierte Datenanalysen, der Wert der Nutzerdaten, die ökonomischen Mechanismen hinter sozialen Netzwerken und den Daten der Nutzer und einige Aspekte des staatlichen Einsatzes zur Datenanalyse vorgestellt und diskutiert.&lt;/p&gt;
-
-&lt;p&gt;Als wichtige Botschaft wird dem Leser mitgegeben, dass seine Daten für Unternehmen einen Wert darstellen und dass Angebote im Netz dazu dienen, diese Daten zu erlangen und zu monetarisieren; also Vorsicht vor Kostenlos-Angeboten, denn im Kern zahlt man auch für ein kostenloses Angebot, im Zweifel mit seinen Daten. Eine andere Kernbotschaft läuft darauf hinaus, dass Daten auch missbraucht werden können, sei es von staatlicher Stelle oder von zwielichtigen Zeitgenossen.&lt;/p&gt;
-
-&lt;p&gt;Das Bändchen mit 272 Seiten ist kurzweilig geschrieben, wechselt zwischen tatsächlichen Begebenheiten, Sachbuchdarstellung, fiktiven Geschichten und netzpolitischen und gesellschaftspolitischen Erwägungen geschickt hin und her. Der leichte und nicht in technische Details verliebte Sprachstil sowie die Art, wie technische Probleme dargestellt werden, macht es sicherlich auch einem Laien einfach, den Themen zu folgen und etwas hinter die Geschäftspraktiken und die Techniken zu sehen.&lt;/p&gt;
-
-&lt;p&gt;Das Buch leidet an mancher Stelle etwas, da die Kraft des Arguments nicht so richtig einschlagen mag. Beispiele sind insbesondere die Frage, wie man sich denn nun gegen die Datenfresser wehrt oder die Argumentation gegen die &amp;ldquo;Wer nichts zu verbergen hat…&amp;rdquo;-Ideologie. Das wirkt an der einen oder anderen Stelle zwar bemüht, aber nicht so kraftvoll, wie man sich das erhofft hat. Insbesondere ein schlüssiges Gegenkonzept hätte noch etwas breiter und prominenter ausgearbeitet werden können.&lt;/p&gt;
-
-&lt;p&gt;Auch werden zum Teil Gefahren und Befürchtungen recht abstrakt beschrieben, manchmal auch mit Hinweis, so etwas sei schon vorgekommen, aber man hätte es dann an der einen oder anderen Stelle doch gerne genauer gewusst.&lt;/p&gt;
-
-&lt;p&gt;Eher ein Buch zum Verschenken an Leute, die noch nicht so firm im Netz sind.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://www.fischerverlage.de/buch/Die_Datenfresser/9783100485182"&gt;Constanze Kurz/Frank Rieger, Die Datenfresser, 272 Seiten, S. Fischer Verlag, 16,95 EUR.&lt;/a&gt;&lt;/p&gt;</content></entry></feed>
+&lt;p&gt;Ich bin ein sehr intensiver Nutzer von &lt;a href="http://www.orgmode.org"&gt;Org-Mode&lt;/a&gt;, einem speziellen Modul/Modus für den Emacs-Editor (ich habe hier auf meiner Homepage auch einmal mit einer kleinen &lt;a href="http://archive.dbrunner.de/it/org-mode.html"&gt;Seite&lt;/a&gt; dazu begonnen). Nun ja, was soll man sagen: Bei Emacs wird eine recht alte Version mitgeliefert. Ich wollte dann mal auch wegen einiger Funktionen die neueste nutzen. Also via &lt;code&gt;git&lt;/code&gt; heruntergeladen und eingebunden und Peng, irgendwas funktioniert natürlich nicht mehr: Ich benötige pratisch täglich den Export von Org-Mode-Dateien nach &lt;code&gt;LaTeX&lt;/code&gt;, der wollte aber nicht mehr. Nun kann ich zwar Lisp, aber das Emacs Lisp ist doch etwas speziell und die Debug-Möglichkeiten sind etwas … nun ja, altbacken. Kurzum: Das macht überhaupt keinen Spaß. Im Endeffekt habe ich dann herausgefunden, dass unter bestimmten Umständen Teile des alten, bei Emacs mitgelieferten Codes nachgeladen wird anstelle der neuen Distribution. Diese bescheidene Art von Emacs mit Modulen und Paketen umzugehen ist wirklich erschreckend. Was dafür wiederum total toll war: In der von mir verwendeten Org-Mode-Version war wohl ein Fehler, das ganze Ding über die Mailingliste geschickt und innert einem halben Tag war der Fehler von anderen Nutzern und von Carsten Dominik auch gleich gefixt. Grandiose Antwortzeit!&lt;/p&gt;</content></entry></feed>

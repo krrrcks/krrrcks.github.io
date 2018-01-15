@@ -4,9 +4,17 @@
   <title>Daniel Brunner: Daniel Brunner</title>
   <description>Daniel Brunner: Daniel Brunner</description>
   <link>http://www.dbrunner.de/index.html</link>
-  <lastBuildDate>Mon, 11 Dec 2017 16:58:35 UT</lastBuildDate>
-  <pubDate>Mon, 11 Dec 2017 16:58:35 UT</pubDate>
+  <lastBuildDate>Mon, 15 Jan 2018 08:24:57 UT</lastBuildDate>
+  <pubDate>Mon, 15 Jan 2018 08:24:57 UT</pubDate>
   <ttl>1800</ttl>
+  <item>
+   <title>Der E-Postbrief: Eine Erfolgsgeschichte(?)</title>
+   <link>http://www.dbrunner.de/2018/01/15/der-e-postbrief-eine-erfolgsgeschichte</link>
+   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2018-01-15-der-e-postbrief-eine-erfolgsgeschichte</guid>
+   <pubDate>Mon, 15 Jan 2018 08:24:57 UT</pubDate>
+   <author>Daniel Brunner</author>
+   <description>
+&lt;p&gt;Die Erfolgsgeschichte des E-Postbriefs geht weiter: Nachdem ich in den vergangenen zwölf Monaten ausschließlich Nachrichten über die Änderungen der AGBen erhielt, trudelte am 12. Januar 2018 mein zweiter &amp;ldquo;echter&amp;rdquo; (also keine Newsletter oder AGB-Änderungen der Post) E-Postbrief ein: Es war &lt;a href="/2017/02/19/neues-vom-e-postbrief/"&gt;erneut&lt;/a&gt; eine Rechnung für ein Zeitschriften-Abonnement. Kurzum: 2 &amp;ldquo;echte&amp;rdquo; E-Postbriefe in 7,5 Jahren.&lt;/p&gt;</description></item>
   <item>
    <title>Evaluierungsergebnisse mit Racket/Scribble verarbeiten und darstellen</title>
    <link>http://www.dbrunner.de/2017/12/11/evaluierungsergebnisse-mit-racket-scribble-verarbeiten-und-darstellen</link>
@@ -660,36 +668,4 @@ exports.handler = function(event, context) {
    <pubDate>Sun, 04 Jan 2015 15:16:08 UT</pubDate>
    <author>Daniel Brunner</author>
    <description>
-&lt;p&gt;Bisher hatte ich meine Blog-Einträge auf zwei Blogs aufgeteilt, &lt;a href="http://blog.krrrcks.net"&gt;eines&lt;/a&gt; mit mehr technischen (und zum Teil englischen Texten) und dieses hier mit deutschen Texten. Ich denke, ich werde das auf dieses eine Blog hier konzentrieren. Das reduziert doch etwas den Verwaltungsaufwand. Ich habe die Texte vom nun etwas still gelegten Blog hier herüber kopiert.&lt;/p&gt;</description></item>
-  <item>
-   <title>Ich habe mal Octopress aktualisert</title>
-   <link>http://www.dbrunner.de/2014/12/21/ich-habe-mal-octopress-aktualisert</link>
-   <guid isPermaLink="false">urn:http-www-dbrunner-de:-2014-12-21-ich-habe-mal-octopress-aktualisert</guid>
-   <pubDate>Sun, 21 Dec 2014 10:58:16 UT</pubDate>
-   <author>Daniel Brunner</author>
-   <description>
-&lt;p&gt;Neulich fiel mir auf, dass die Suchfunktion, die auf Google basiert, nicht nur auf der eigenen Homepage, sondern im &amp;ldquo;gesamten&amp;rdquo; Suchindex von Google gesucht hat. Eben flatterte dieser &lt;a href="https://twitter.com/octopress/status/546528904115404800"&gt;Tweet&lt;/a&gt; mit &lt;a href="https://github.com/imathis/octopress/commit/514ed5eb9f6bb91a6f3288febf3c2ba892a9b693"&gt;Link&lt;/a&gt; zu einem Fix an mir vorbei und da hat sich wohl die API geändert.&lt;/p&gt;
-
-&lt;div class="figure"&gt;&lt;img src="/img/2014-12-21-octopress.png" alt="Octopress-Tweet" /&gt;
- &lt;p class="caption"&gt;Octopress-Tweet&lt;/p&gt;&lt;/div&gt;
-
-&lt;p&gt;Also habe ich mich einmal an den &lt;a href="http://octopress.org/docs/updating/"&gt;Hinweisen&lt;/a&gt; zum Aktualisieren von Octopress orientiert. Hierzu werden die folgenden Schritte vorgeschlagen:&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;git pull octopress master      # Get the latest Octopress
-bundle install                 # Keep gems updated
-rake update_source             # update the template's source
-rake update_style              # update the template's style&lt;/code&gt;&lt;/pre&gt;
-
-&lt;p&gt;Soweit lief das auch. Es tauchten anschließend zwei Probleme auf:&lt;/p&gt;
-
-&lt;ol&gt;
- &lt;li&gt;
-  &lt;p&gt;Das &lt;code&gt;execjs&lt;/code&gt; jammerte, dass ihm irgendwie eine  JavaScript-Bibliothek fehlte. Nach kurzer Recherche gab es die  Empfehlung, die Zeile &lt;code&gt;gem 'therubyracer'&lt;/code&gt; in das &lt;code&gt;Gemfile&lt;/code&gt;  aufzunehmen. Okay, das funktionierte schon einmal.&lt;/p&gt;&lt;/li&gt;
- &lt;li&gt;
-  &lt;p&gt;Bei den Feeds für die Kategorien jammerte das Octopress ein  ungültiges Layout an. In &lt;code&gt;category_feed.xml&lt;/code&gt; stand in der Tat  &lt;code&gt;layout: nil&lt;/code&gt;. Ich habe das auf &lt;code&gt;layout: page&lt;/code&gt; geändert. Nun tat  auch dies.&lt;/p&gt;&lt;/li&gt;&lt;/ol&gt;
-
-&lt;p&gt;Mit dem Update funktioniert nun auch das Such-Formular wieder.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Ergänzung:&lt;/strong&gt; Ich lasse das Jekyll und Octopress in einem  &lt;a href="/blog/2014/06/10/relaunch-fast-fertig/"&gt;Docker-Container&lt;/a&gt; laufen und irgendwie bekam ich bei &lt;code&gt;rake preview&lt;/code&gt;  meine Seite nicht mehr zu sehen. Da ich mich mit Ruby und den  Komponenten nicht so gut auskenne, weiß ich nicht, ob mein &amp;ldquo;Fix&amp;rdquo; so  gut ist: Ich habe im &lt;code&gt;Rakefile&lt;/code&gt; den &lt;code&gt;rackup&lt;/code&gt;-Aufruf um den  Parameter &lt;code&gt;-o 0.0.0.0&lt;/code&gt; ergänzt. Dann bekam ich vom Host wieder eine  Verbindung zum Webserver im Octopress-Container.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;Update vom 04. Januar 2014:&lt;/strong&gt; Nach einem kurzen  &lt;a href="https://twitter.com/Krrrcks/status/546667456128114688"&gt;Gespräch&lt;/a&gt;  via Twitter habe ich mich entschieden, den eingebauten Server doch  wieder so zu belassen, wie es im &lt;code&gt;Rakefile&lt;/code&gt; ursprünglich  stand. Statt dessen habe ich einfach in dem Docker-Container einen  &lt;code&gt;nginx&lt;/code&gt; hinzuinstalliert, der dann mein &lt;code&gt;public&lt;/code&gt;-Verzeichnis an den  Port 4000 ausliefert. So funktioniert es wieder prima: Ich starte  den &lt;code&gt;nginx&lt;/code&gt; und lasse dann das &lt;code&gt;rake watch&lt;/code&gt; laufen, um die Seiten  immer wieder neu zu erzeugen, wenn sich Dinge geändert haben.&lt;/p&gt;</description></item></channel></rss>
+&lt;p&gt;Bisher hatte ich meine Blog-Einträge auf zwei Blogs aufgeteilt, &lt;a href="http://blog.krrrcks.net"&gt;eines&lt;/a&gt; mit mehr technischen (und zum Teil englischen Texten) und dieses hier mit deutschen Texten. Ich denke, ich werde das auf dieses eine Blog hier konzentrieren. Das reduziert doch etwas den Verwaltungsaufwand. Ich habe die Texte vom nun etwas still gelegten Blog hier herüber kopiert.&lt;/p&gt;</description></item></channel></rss>
