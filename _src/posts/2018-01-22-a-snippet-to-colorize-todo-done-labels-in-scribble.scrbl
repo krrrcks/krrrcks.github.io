@@ -33,13 +33,13 @@ todos:
   (todo/done-entry "DONE" txt DONE-COLOR DONE-BACKGROUND))
 )
 
-One thing I like about Emacs' @hyperlink["http://www.org-mode.org"]{Org-mode} (a major mode for note taking, todo
-lists and everything else) is that it highlights any "TODO" or "DONE"
-labels. This makes it easy to get an overview what topics still have to be
-done. I am working in a small group and I organized our todo and resulting
-documents with Racket and Scribble (and at first with Org-Mode). I put all todo
-points in a Scribble document and added this small Racket snippet for green and red
-labels:
+One thing I like about Emacs' @hyperlink["http://www.org-mode.org"]{Org-mode}
+(a major mode for note taking, todo lists and everything else) is that it
+highlights any "TODO" or "DONE" labels. This makes it easy to get an overview
+what topics still have to be done. At the moment I am working in a small group
+and I organized our todo points and the resulting documents with Racket and
+Scribble (and at first with Org-Mode). I put all todo points in a Scribble
+document and added this small Racket snippet for green and red labels:
 
 @racketblock[(define TODO-COLOR "black")
 (define TODO-BACKGROUND "red")
