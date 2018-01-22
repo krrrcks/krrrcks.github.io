@@ -21,6 +21,7 @@ http://www.dbrunner.de/2011/06/30/constanze-kurz-frank-rieger-die-datenfresser
 http://www.dbrunner.de/2010/07/22/zur-diskussion-um-sta%CC%88ndige-und-nicht-sta%CC%88ndige-mitglieder-im-un-sicherheitsrat
 http://www.dbrunner.de/2010/03/04/cebit-2010
 http://www.dbrunner.de/2015/02/17/lexmarks-druckerpatronen-lizenz
+http://www.dbrunner.de/2018/01/22/a-snippet-to-colorize-todo-done-labels-in-scribble
 http://www.dbrunner.de/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux
 http://www.dbrunner.de/2015/01/05/eindru%CC%88cke-vom-31c3
 http://www.dbrunner.de/2012/01/17/zu-den-rating-agenturen-und-ihren-ratings

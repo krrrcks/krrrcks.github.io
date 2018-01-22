@@ -149,6 +149,16 @@
 
           <article>
   <header>
+    <h1><a href='/2015/01/04/aus-zwei-mach-eins'>Aus zwei mach eins</a></h1>
+    <p class='date-and-tags'>
+<time datetime="2015-01-04" pubdate="true">2015-01-04</time> :: <span class="tags"><a href="/tags/Homepage.html">Homepage</a>, <a href="/tags/IT.html">IT</a></span></p>
+  </header>
+
+<p>Bisher hatte ich meine Blog-Einträge auf zwei Blogs aufgeteilt, <a href="http://blog.krrrcks.net">eines</a> mit mehr technischen (und zum Teil englischen Texten) und dieses hier mit deutschen Texten. Ich denke, ich werde das auf dieses eine Blog hier konzentrieren. Das reduziert doch etwas den Verwaltungsaufwand. Ich habe die Texte vom nun etwas still gelegten Blog hier herüber kopiert.</p>
+
+</article>
+<article>
+  <header>
     <h1><a href='/2014/12/21/ich-habe-mal-octopress-aktualisert'>Ich habe mal Octopress aktualisert</a></h1>
     <p class='date-and-tags'>
 <time datetime="2014-12-21" pubdate="true">2014-12-21</time> :: <span class="tags"><a href="/tags/Homepage.html">Homepage</a>, <a href="/tags/Octopress.html">Octopress</a></span></p>
@@ -233,7 +243,7 @@ rake update_style              # update the template's style</code></pre>
 
 <p>Ein Gesetzesvorhaben der großen Koalition ist eine Regelung zur Tarifeinheit. Passend in die Tarifauseinandersetzungen bei der Deutschen Bahn zeigte Bundesministerin Nahles Entschlossenheit und Tatkraft:</p>
   <footer>
-    <a href='/2014/11/21/wie-das-haus-von-bundesministerin-nahles-mauert'>&hellip; weiter|more &hellip;</a>
+    <a href='/2014/11/21/wie-das-haus-von-bundesministerin-nahles-mauert'>&hellip; weiter | more &hellip;</a>
   </footer>
 </article>
 <article>
@@ -283,7 +293,7 @@ rake update_style              # update the template's style</code></pre>
 
 <p>Ein Bekannter bat mich, einmal von meinen Erfahrungen mit Docker zu berichten. Also hier als Blog-Post dazu. Ich werde nicht beschreiben, was genau Docker ist und wie es funktioniert. Hierzu gibt es mittlerweile schon eine Reihe von guten Quellen (bspw. auf der Docker-Homepage, in der c&rsquo;t war in Heft 17 (Seiten 146&ndash;151) auch eine ganz gute Einführung enthalten).</p>
   <footer>
-    <a href='/2014/10/05/erfahrungen-mit-docker'>&hellip; weiter|more &hellip;</a>
+    <a href='/2014/10/05/erfahrungen-mit-docker'>&hellip; weiter | more &hellip;</a>
   </footer>
 </article>
 <article>
@@ -295,7 +305,7 @@ rake update_style              # update the template's style</code></pre>
 
 <p>Im Jahr 2012 habe ich mich rechtmäßig (was allerdings auch etwas Überzeugungsarbeit kostete) von der damaligen GEZ abgemeldet und die neue Beitragsnummer mitgeteilt, über die meine damalige Rundfunkgebühr verbucht werden sollte. Der GEZ war meine alte Beitragsnummer, die neue Beitragsnummer sowie meine Anschrift bekannt. Soweit so gut, besondere Veränderungen sind in der Zwischenzeit nicht eingetreten.</p>
   <footer>
-    <a href='/2014/10/05/aktenfu%CC%88hrung-beim-beitragsservice'>&hellip; weiter|more &hellip;</a>
+    <a href='/2014/10/05/aktenfu%CC%88hrung-beim-beitragsservice'>&hellip; weiter | more &hellip;</a>
   </footer>
 </article>
 <article>
@@ -336,36 +346,6 @@ WARNING: No swap limit support</code></pre>
 <p>It would be nice seeing the Docker documentation being more detailed on those storage drivers.</p>
 
 <p><strong>(Update 2014&ndash;10&ndash;23)</strong> Thanks to  <a href="http://blog.iron.io/2014/10/docker-in-production-what-weve-learned.html">this blog post from Iron.io</a>  I found some documentation of the devicemapper storage driver. It is  located in the  <a href="https://github.com/docker/docker/tree/master/daemon/graphdriver/devmapper">Repository</a>.</p>
-
-</article>
-<article>
-  <header>
-    <h1><a href='/2014/07/24/datetime-conversion-can-be-tricky'>DateTime conversion can be tricky</a></h1>
-    <p class='date-and-tags'>
-<time datetime="2014-07-24" pubdate="true">2014-07-24</time> :: <span class="tags"><a href="/tags/JavaScript.html">JavaScript</a>, <a href="/tags/Common-Lisp.html">Common Lisp</a>, <a href="/tags/IT.html">IT</a></span></p>
-  </header>
-
-<p>I wrote a small Lisp application and a JavaScript client gets some data from that application. All time stamps are returned as &ldquo;Lisp&rdquo; time stamps, i.e. an integer with seconds where zero equals Jan 01 1900.</p>
-
-<p>In the JS client the time stamp is then converted to JS time stamps, i.e. millisconds where zero equals Jan 01 1970.</p>
-
-<p>When testing the application I noticed that sometimes the displayed date is one day behind. For example in the data base I have Jan 05 1980 but in JavaScript I get a Jan 04 1980. But some other dates worked: A time stamp Jan 05 1970 was correctly converted to Jan 05 1970.</p>
-
-<p>I had a look into the JavaScript code and found:</p>
-
-<pre><code>convA = function(ts) {
-  tmp = new Date(ts*1000);
-  tmp.setFullYear(tmp.getFullYear() - 70);
-  return tmp.getTime();
-}</code></pre>
-
-<p>It&rsquo;s likely the developer thought: &ldquo;Well, it&rsquo;s millisecond instead of second. Therefore I multiply by 1,000. But then I am 70 years in the future and I have to substract 70 years and everything will be ok.&rdquo;</p>
-
-<p>After thinking a while I came to the conclusion: Of course not!</p>
-
-<p>The developer made the assumption that there are as many leap years between 1900 and 1970 as between <code>ts</code> and <code>ts+70</code>. Obviously that assumption does not hold for all time stamps. And therefore sometimes the resulting JavaScript date is one day behind.</p>
-
-<p>So a better solution would be to substract all seconds between 1900 and 1970 from <code>ts</code>, multiply by 1,000 and treat this as a JavaScript time stamp. Perhaps best would be to do the conversion in the Lisp process and only deliver a JavaScript-like time stamp.</p>
 
 </article>
 <footer>

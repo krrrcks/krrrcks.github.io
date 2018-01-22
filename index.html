@@ -152,6 +152,19 @@
 
           <article>
   <header>
+    <h1><a href='/2018/01/22/a-snippet-to-colorize-todo-done-labels-in-scribble'>A snippet to colorize TODO/DONE labels in Scribble</a></h1>
+    <p class='date-and-tags'>
+<time datetime="2018-01-22" pubdate="true">2018-01-22</time> :: <span class="tags"><a href="/tags/Racket.html">Racket</a>, <a href="/tags/Scribble.html">Scribble</a></span></p>
+  </header>
+
+<p>I played with text properties in Scribble and produced red and green labels for
+todos:</p>
+  <footer>
+    <a href='/2018/01/22/a-snippet-to-colorize-todo-done-labels-in-scribble'>&hellip; weiter | more &hellip;</a>
+  </footer>
+</article>
+<article>
+  <header>
     <h1><a href='/2018/01/15/der-e-postbrief-eine-erfolgsgeschichte'>Der E-Postbrief: Eine Erfolgsgeschichte(?)</a></h1>
     <p class='date-and-tags'>
 <time datetime="2018-01-15" pubdate="true">2018-01-15</time> :: <span class="tags"><a href="/tags/IT.html">IT</a></span></p>
@@ -171,7 +184,7 @@
 
 <p>Die Ergebnisse finden sich jeweils als Link auf der <a href="/ueber/lehre.html">Seite mit meinen Lehrveranstaltungen</a>. Im Folgenden beschreibe ich, wie ich in diesem Jahr die Ergebnisse der Evaluierung mit Racket und Scribble verarbeitet habe.</p>
   <footer>
-    <a href='/2017/12/11/evaluierungsergebnisse-mit-racket-scribble-verarbeiten-und-darstellen'>&hellip; weiter|more &hellip;</a>
+    <a href='/2017/12/11/evaluierungsergebnisse-mit-racket-scribble-verarbeiten-und-darstellen'>&hellip; weiter | more &hellip;</a>
   </footer>
 </article>
 <article>
@@ -186,7 +199,7 @@
 <blockquote>
  <p>&ldquo;The case against patents can be summarized briefly: there is no empirical evidence that they serve to increase innovation and productivity, unless productivity is identified with the number of patents awarded—which, as evidence shows, has no correlation with measured productivity. (&hellip;)&rdquo;</p></blockquote>
   <footer>
-    <a href='/2017/06/14/links-zur-patent-kontroverse-david-k-levine'>&hellip; weiter|more &hellip;</a>
+    <a href='/2017/06/14/links-zur-patent-kontroverse-david-k-levine'>&hellip; weiter | more &hellip;</a>
   </footer>
 </article>
 <article>
@@ -226,7 +239,7 @@
 
 <p>Ende 2016 hat <a href="https://locomore.com/de/index.html">Locomore</a> eine Zugverbindung von Stuttgart nach Berlin und zurück auf den Markt gebracht. Mittlerweile bin ich schon zwei mal (jeweils von Kassel nach Berlin) mit dem Zug gefahren, einmal im Februar im <a href="https://locomore.com/de/basic/">Reisebereich Basic</a> und einmal im März im <a href="https://locomore.com/de/business/">Reisebereich Business</a>.</p>
   <footer>
-    <a href='/2017/04/06/meine-erfahrungen-mit-locomore'>&hellip; weiter|more &hellip;</a>
+    <a href='/2017/04/06/meine-erfahrungen-mit-locomore'>&hellip; weiter | more &hellip;</a>
   </footer>
 </article>
 <article>
@@ -266,26 +279,8 @@
 
 <p>Bisher habe ich mein Blog mit <a href="http://www.octopress.org">Octopress</a> bereit gestellt. Eine neue Version (&ldquo;3.0&rdquo;) ist auf dem <a href="http://octopress.org/2015/01/15/octopress-3.0-is-coming/">Weg</a>. Nachdem in letzter Zeit die einen oder anderen Schwierigkeiten mit meiner Octopress-Installation auftauchten, habe ich mich entschieden, mit dem  Blog auf <a href="https://github.com/greghendershott/frog">Frog</a>, ebenfalls ein Generator für statische Blogseiten, zu wechseln.</p>
   <footer>
-    <a href='/2017/02/16/mein-wechsel-zu-frog'>&hellip; weiter|more &hellip;</a>
+    <a href='/2017/02/16/mein-wechsel-zu-frog'>&hellip; weiter | more &hellip;</a>
   </footer>
-</article>
-<article>
-  <header>
-    <h1><a href='/2016/01/12/using-racket-minimal-and-raco'>Using Racket Minimal and raco</a></h1>
-    <p class='date-and-tags'>
-<time datetime="2016-01-12" pubdate="true">2016-01-12</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Racket.html">Racket</a></span></p>
-  </header>
-
-<p>I use Racket Minimal on my smart phone (<a href="../2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/">this</a> describes how to compile the run time for an ARM based system). It&rsquo;s is a very small installation of Racket (about 36 MB after installation). After installation one only needs to install the packages that are really neded. But this can be a bit tricky because a lot of packages want to install their documentation and other stuff and bring a whole bunch of files on your drive as dependencies.</p>
-
-<p>Some of the packages are divided up into a "-lib", "-doc" (and sometimes "-test") as laid out in the <a href="https://docs.racket-lang.org/pkg/getting-started.html#%28part._.Naming_and_.Designing_.Packages%29">documentation</a>. With these packages it&rsquo;s easier to only install the implementation.</p>
-
-<p>A small script of mine used only basic modules and relied on <code>rackunit</code> for the tests. On a mobile device the start up time of such a program can be  critical. Therefore it is wise to only require the needed packages and to have the source code being compiled to byte code. One could do this with <code>raco setup</code> (which is included in Minimal Racket) but I wanted to have <code>raco make</code> (which is not part of Minimal Racket) available.</p>
-
-<p>The commands of <code>raco</code> are added via a <code>raco-commands</code> variable in packages&rsquo; <code>info.rkt</code> file. I looked through the packages of my &ldquo;full install&rdquo; and found the package <code>compiler-lib</code> which adds some commands (<code>make</code>, <code>exe</code>, <code>pack</code>, <code>unpack</code>, <code>decompile</code>, <code>test</code>, <code>expand</code>, <code>read</code>, <code>distribute</code>, <code>demodularize</code>) to <a href="https://mirror.racket-lang.org/releases/6.3/doc/raco/index.html"><code>raco</code></a> and relies on only a few other packages. As a result the source and binary files need about 3.8 MB on my phone which is okay for me.</p>
-
-<p>To sum up: After a simple <code>raco pkg install compiler-lib</code> I could easily use <code>raco make</code> and <code>raco test</code> to play with my program on my phone.</p>
-
 </article>
 <footer>
  <ul class="pagination">

@@ -149,6 +149,24 @@
 
           <article>
   <header>
+    <h1><a href='/2016/01/12/using-racket-minimal-and-raco'>Using Racket Minimal and raco</a></h1>
+    <p class='date-and-tags'>
+<time datetime="2016-01-12" pubdate="true">2016-01-12</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Racket.html">Racket</a></span></p>
+  </header>
+
+<p>I use Racket Minimal on my smart phone (<a href="../2015/08/27/how-to-run-racket-on-the-raspberry-pi-2/">this</a> describes how to compile the run time for an ARM based system). It&rsquo;s is a very small installation of Racket (about 36 MB after installation). After installation one only needs to install the packages that are really neded. But this can be a bit tricky because a lot of packages want to install their documentation and other stuff and bring a whole bunch of files on your drive as dependencies.</p>
+
+<p>Some of the packages are divided up into a "-lib", "-doc" (and sometimes "-test") as laid out in the <a href="https://docs.racket-lang.org/pkg/getting-started.html#%28part._.Naming_and_.Designing_.Packages%29">documentation</a>. With these packages it&rsquo;s easier to only install the implementation.</p>
+
+<p>A small script of mine used only basic modules and relied on <code>rackunit</code> for the tests. On a mobile device the start up time of such a program can be  critical. Therefore it is wise to only require the needed packages and to have the source code being compiled to byte code. One could do this with <code>raco setup</code> (which is included in Minimal Racket) but I wanted to have <code>raco make</code> (which is not part of Minimal Racket) available.</p>
+
+<p>The commands of <code>raco</code> are added via a <code>raco-commands</code> variable in packages&rsquo; <code>info.rkt</code> file. I looked through the packages of my &ldquo;full install&rdquo; and found the package <code>compiler-lib</code> which adds some commands (<code>make</code>, <code>exe</code>, <code>pack</code>, <code>unpack</code>, <code>decompile</code>, <code>test</code>, <code>expand</code>, <code>read</code>, <code>distribute</code>, <code>demodularize</code>) to <a href="https://mirror.racket-lang.org/releases/6.3/doc/raco/index.html"><code>raco</code></a> and relies on only a few other packages. As a result the source and binary files need about 3.8 MB on my phone which is okay for me.</p>
+
+<p>To sum up: After a simple <code>raco pkg install compiler-lib</code> I could easily use <code>raco make</code> and <code>raco test</code> to play with my program on my phone.</p>
+
+</article>
+<article>
+  <header>
     <h1><a href='/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux'>I played with CHICKEN Scheme, Docker and Alpine Linux</a></h1>
     <p class='date-and-tags'>
 <time datetime="2015-12-19" pubdate="true">2015-12-19</time> :: <span class="tags"><a href="/tags/IT.html">IT</a>, <a href="/tags/Scheme.html">Scheme</a>, <a href="/tags/Docker.html">Docker</a>, <a href="/tags/Linux.html">Linux</a></span></p>
@@ -156,7 +174,7 @@
 
 <p>I am looking forward to meet LISP people at the <a href="https://events.ccc.de/congress/2015/wiki/Main_Page">32c3&rsquo;s</a> <a href="https://events.ccc.de/congress/2015/wiki/Assembly:The_%28un%29employed_schemers_%26_lispers_guild">LISP assembly</a>. The last days I played a bit with different Scheme implementations including  <a href="http://call-cc.org">CHICKEN scheme</a>. The main feature of CHICKEN is that it compiles the Scheme code to C and then creates dynamic libraries and binaries with the C compiler. I thought that combining these binaries with a minimal Docker container could give me a very small deployment. So here are my steps:</p>
   <footer>
-    <a href='/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux'>&hellip; weiter|more &hellip;</a>
+    <a href='/2015/12/19/i-played-with-chicken-scheme-docker-and-alpine-linux'>&hellip; weiter | more &hellip;</a>
   </footer>
 </article>
 <article>
@@ -284,7 +302,7 @@ exports.handler = function(event, context) {
 
 <p>Am 15. Dezember 2014 hat der <a href="http://www.bundesfinanzministerium.de/Web/DE/Ministerium/Geschaeftsbereich/Wissenschaftlicher_Beirat/wissenschaftlicher_beirat.html">Wissenschaftliche Beirat des Bundesministeriums des Finanzen</a> ein Gutachten zu &ldquo;Öffentlich-rechtliche Medien - Aufgabe und Finanzierung&rdquo; <a href="http://www.bundesfinanzministerium.de/Content/DE/Downloads/Broschueren_Bestellservice/2014-12-15-gutachten-medien.pdf?__blob=publicationFile&amp;v=9">veröffentlicht</a>.</p>
   <footer>
-    <a href='/2015/02/17/der-rundfunkrat-des-hr-u%CC%88bt-den-diskurs'>&hellip; weiter|more &hellip;</a>
+    <a href='/2015/02/17/der-rundfunkrat-des-hr-u%CC%88bt-den-diskurs'>&hellip; weiter | more &hellip;</a>
   </footer>
 </article>
 <article>
@@ -375,18 +393,8 @@ exports.handler = function(event, context) {
 
 <p>Dieses Jahr habe ich mich einmal aufgerafft und bin das erste mal zum Congress des CCC nach Hamburg gefahren. Im Folgenden ein paar Eindrücke:</p>
   <footer>
-    <a href='/2015/01/05/eindru%CC%88cke-vom-31c3'>&hellip; weiter|more &hellip;</a>
+    <a href='/2015/01/05/eindru%CC%88cke-vom-31c3'>&hellip; weiter | more &hellip;</a>
   </footer>
-</article>
-<article>
-  <header>
-    <h1><a href='/2015/01/04/aus-zwei-mach-eins'>Aus zwei mach eins</a></h1>
-    <p class='date-and-tags'>
-<time datetime="2015-01-04" pubdate="true">2015-01-04</time> :: <span class="tags"><a href="/tags/Homepage.html">Homepage</a>, <a href="/tags/IT.html">IT</a></span></p>
-  </header>
-
-<p>Bisher hatte ich meine Blog-Einträge auf zwei Blogs aufgeteilt, <a href="http://blog.krrrcks.net">eines</a> mit mehr technischen (und zum Teil englischen Texten) und dieses hier mit deutschen Texten. Ich denke, ich werde das auf dieses eine Blog hier konzentrieren. Das reduziert doch etwas den Verwaltungsaufwand. Ich habe die Texte vom nun etwas still gelegten Blog hier herüber kopiert.</p>
-
 </article>
 <footer>
  <ul class="pagination">
