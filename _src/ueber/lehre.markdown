@@ -6,7 +6,7 @@ Annäherung", Wintersemester 2017/2018 (8. und 9. Dezember 2017), Standort Wetzl
 
 - *[Technische Hochschule Mittelhessen, StudiumPlus](http://www.studiumplus.de)*, Übung im Rahmen des Moduls Informatik 1 (Studiengang Softwaretechnologie), Wintersemester 2017/2018 (jeweils ganztätig am 15. November 2017 am Standort Wetzlar [(Evaluierungsergebnis)](/lehre/ue-informatik1-eval-2017-11-15.html) und 23. November 2017 am Standort Frankenberg [(Evaluierungsergebnis)](/lehre/ue-informatik1-eval-2017-11-23.html)).
 
-- *[Technische Hochschule Mittelhessen, StudiumPlus](http://www.studiumplus.de)*, Vortrag "Konzepte und technische Umsetzung des IoT" im Rahmen des SMART-Teaching-Workshops "Digitalisierung", 22. September 2017.  
+- *[Technische Hochschule Mittelhessen, StudiumPlus](http://www.studiumplus.de)*, Vortrag "Konzepte und technische Umsetzung des IoT" im Rahmen des SMART-Teaching-Workshops "Digitalisierung", 22. September 2017 und Nachholertermin am 02. Februar 2018.  
 
 -  *[Technische Hochschule Mittelhessen, StudiumPlus](http://www.studiumplus.de)*,
    2-tägiges Modul
