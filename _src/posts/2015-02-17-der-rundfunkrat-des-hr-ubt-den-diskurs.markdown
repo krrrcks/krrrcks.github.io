@@ -6,7 +6,8 @@ Am 15. Dezember 2014 hat der
 [Wissenschaftliche Beirat des Bundesministeriums des Finanzen](http://www.bundesfinanzministerium.de/Web/DE/Ministerium/Geschaeftsbereich/Wissenschaftlicher_Beirat/wissenschaftlicher_beirat.html)
 ein Gutachten zu "Öffentlich-rechtliche Medien - Aufgabe und
 Finanzierung"
-[veröffentlicht](http://www.bundesfinanzministerium.de/Content/DE/Downloads/Broschueren_Bestellservice/2014-12-15-gutachten-medien.pdf?__blob=publicationFile&v=9).
+[veröffentlicht](http://download.hr-rundfunkrat.de/presse/2015/beschluss-gremien-gutachten-wiss
+enschaftlicher-beirat-100.pdf)
 
 <!-- more -->
 
