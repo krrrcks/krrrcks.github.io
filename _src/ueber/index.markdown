@@ -43,11 +43,4 @@ Technik:
 * [Lehre](/ueber/lehre.html)
 * [Projekte](/ueber/projekte.html)
 
-## Archiv meiner bisherigen Homepages und Beiträgen
-
-Hier habe ich noch einige Links zu den Inhalten meiner früheren
-Homepages gesammelt: 
-
-* [Alte Homepage (2010-2012)](http://archive.dbrunner.de)
-* [Alte Homepage (2005-2009)](http://archive.dbrunner.de/old/main.html) 
 

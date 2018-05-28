@@ -20,10 +20,11 @@ herausgesucht. Wenn Sie also irgendwas, sei es Text, Bild oder
 Quellcode, verwenden wollen, schicken Sie mir doch bitte eine
 Nachricht. 
 
-*Ein Wort zum Datenschutz:* Diese Homepage ist
-mit [Frog](https://github.com/greghendershott/frog) erstellt, also
-sind das im Wesentlichen nur statische Inhalte. Sie wird
-von [Github](https://github.com) über
+# Datenschutzer
+
+Diese Homepage ist mit [Frog](https://github.com/greghendershott/frog)
+erstellt, also sind das im Wesentlichen nur statische Inhalte. Sie
+wird von [Github](https://github.com) über
 deren [Github Pages](https://pages.github.com)-Projekt gehostet.  Ich
 selbst erhebe und verarbeite keine Daten über Ihren Besuch auf dieser
 Seite.
@@ -33,13 +34,6 @@ Seite.
  und Seiten), hierzu werden beim Betrachten der Seite Daten an Twitter
  gesendet. Twitters Datenschutzrichtlinie
  kann [hier](https://twitter.com/privacy) eingesehen werden.
-
-Für das Archiv der alten Homepage (die weiterhin bei Strato gehostet
-wird), zu finden über die
-Domain [http://archive.dbrunner.de](http://archive.dbrunner.de), gilt
-das dort
-unter [Kontakt/Impressum](http://archive.dbrunner.de/kontakt.html)
-Gesagte.
 
 Und ein Link zu
 meinem [Haftungsaussschluss](http://www.disclaimer.de/disclaimer.htm).
