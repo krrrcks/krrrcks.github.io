@@ -20,7 +20,7 @@ herausgesucht. Wenn Sie also irgendwas, sei es Text, Bild oder
 Quellcode, verwenden wollen, schicken Sie mir doch bitte eine
 Nachricht. 
 
-# Datenschutzer
+# Datenschutz
 
 Diese Homepage ist mit [Frog](https://github.com/greghendershott/frog)
 erstellt, also sind das im Wesentlichen nur statische Inhalte. Sie
@@ -28,12 +28,6 @@ wird von [Github](https://github.com) über
 deren [Github Pages](https://pages.github.com)-Projekt gehostet.  Ich
 selbst erhebe und verarbeite keine Daten über Ihren Besuch auf dieser
 Seite.
-
-*Update vom 14. Januar 2015:* Ich habe einen Twitter-Knopf aktiviert
- (besteht aus dem Follow-Knopf und den Tweet-Knöpfen an den Artikeln
- und Seiten), hierzu werden beim Betrachten der Seite Daten an Twitter
- gesendet. Twitters Datenschutzrichtlinie
- kann [hier](https://twitter.com/privacy) eingesehen werden.
 
 Und ein Link zu
 meinem [Haftungsaussschluss](http://www.disclaimer.de/disclaimer.htm).
