@@ -29,12 +29,18 @@ Technik:
 * Gnu Emacs, Org-mode
 * R, ggplot2 
 
-## Mitgliedschaften
+## Mitgliedschaften in Fachgesellschaften
 
 * [American Economic Association](https://www.aeaweb.org)
 * [Verein für Socialpolitik](https://www.socialpolitik.de)
 * [European Network for Housing Research](https://www.enhr.net)
 * [Association for Computing Machinery](https://www.acm.org)
+
+## Berufliches Engagement und Qualifikation
+
+* Nachweis der berufs- und arbeitspädagogischen Fertigkeiten, Kenntnisse und Fähigkeiten im Sinne des § 30 des Berufsbildungsgesetzes durch Bestehen der Prüfung nach der Ausbilder-Eignungsverordnung
+* Eingetragen als Ausbilder bei der IHK Lahn-Dill für die Berufe Fachinformatiker Fachrichtung: Anwendungsentwicklung, Informatikkaufmann
+* Mitglied der Prüfungsausschüsse der IHK Lahn-Dill für Fachinformatiker sowie Informatikkaufmann/-frau, IT-Systemkaufmann/-frau
 
 ## Weitere Informationen
 

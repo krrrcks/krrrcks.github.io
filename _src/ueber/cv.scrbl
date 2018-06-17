@@ -33,7 +33,7 @@
 	 #:row-properties '(top top top (top bottom-border) top top top (top bottom-border))
 (list (list "Datum (von-bis)" "" "1996-10 bis 2001-05")
       (list "Name und Art der Bildungs- oder Ausbildungseinrichtung" "" "Philipps-Universität Marburg, Universität des Landes Hessen")
-      (list "Hauptfächer" "" "Volkswirtschaftslehere mit den Fächern Volkwirtschaftstheorie, Volkswirtschaftspolitik, Finanzwissenschaft, Organisation und Personal, Wirtschaftsinformatik")
+      (list "Hauptfächer" "" "Volkswirtschaftslehere mit den Fächern Volkwirtschaftstheorie, Volkswirtschaftspolitik, Finanzwissenschaft, Organisation und Personal, Methoden der Wirtschaftsinformatik")
       (list "Erworbene Qualifikation" "" "Diplom-Volkswirt")
       (list "Datum (von-bis)" "" "1988-08 bis 1995-06")	      
       (list "Name und Art der Bildungs- oder Ausbildungseinrichtung" "" "Lahntalschule Biedenkopf, Gymnasium des Landkreises Marburg-Biedenkopf")
@@ -46,3 +46,17 @@
 @; (list "Hauptfächer" "" "")
 @; (list "Erworbene Qualifikation" "" "")
 
+@section{Berufliches Engagement und Qualifikationen}
+
+@tabular[#:sep @hspace[1]
+	 #:column-properties '(right right-border left)
+	 #:row-properties '(top top (top bottom-border) top top (top bottom-border) top top (top bottom-border))
+(list (list "Datum (von-bis)" "" "2017-05-13")
+      (list "Name und Art der Bildungs- und Ausbildungseinrichtung" "" "Industrie- und Handelskammer Gießen-Friedberg")
+      (list "Erworbene Qualifikation" "" "Nachweis der berufs- und arbeitspädagogischen Fertigkeiten, Kenntnisse und Fähigkeiten im Sinne des § 30 des Berufsbildungsgesetzes durch Bestehen der Prüfung nach der Ausbilder-Eignungsverordnung")
+      (list "Datum (von-bis)" "" "2017-05-31 bis heute")
+      (list "Name und Art der Bildungs- und Ausbildungseinrichtung" "" "Industrie- und Handelskammer Lahn-Dill")
+      (list "Bezeichnung des Engagements" "" "Eintragung als Ausbilder in das Verzeichnis der Berufsausbildungsverhältnisse für die Berufe Fachinformatiker Fachrichtung: Anwendungsentwicklung und Informatikkaufmann/-frau")
+      (list "Datum (von-bis)" "" "2018-06-02 bis heute")
+      (list "Name und Art der Bildungs- und Ausbildungseinrichtung" "" "Industrie- und Handelskammer Lahn-Dill")
+      (list "Bezeichnung des Engagements" "" "Berufung in die Prüfungsausschüsse der Industrie- und Handelskammer Lahn-Dill für Fachinformatiker sowie Informatikkaufmann/-frau, IT-Systemkaufmann/-frau"))]
