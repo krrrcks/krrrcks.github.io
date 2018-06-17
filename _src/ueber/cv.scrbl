@@ -57,6 +57,6 @@
       (list "Datum (von-bis)" "" "2017-05-31 bis heute")
       (list "Name und Art der Bildungs- und Ausbildungseinrichtung" "" "Industrie- und Handelskammer Lahn-Dill")
       (list "Bezeichnung des Engagements" "" "Eintragung als Ausbilder in das Verzeichnis der Berufsausbildungsverhältnisse für die Berufe Fachinformatiker Fachrichtung: Anwendungsentwicklung und Informatikkaufmann/-frau")
-      (list "Datum (von-bis)" "" "2018-06-02 bis heute")
+      (list "Datum (von-bis)" "" "2018-06-01 bis heute")
       (list "Name und Art der Bildungs- und Ausbildungseinrichtung" "" "Industrie- und Handelskammer Lahn-Dill")
       (list "Bezeichnung des Engagements" "" "Berufung in die Prüfungsausschüsse der Industrie- und Handelskammer Lahn-Dill für Fachinformatiker sowie Informatikkaufmann/-frau, IT-Systemkaufmann/-frau"))]
