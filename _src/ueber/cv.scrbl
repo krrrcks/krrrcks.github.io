@@ -50,13 +50,18 @@
 
 @tabular[#:sep @hspace[1]
 	 #:column-properties '(right right-border left)
-	 #:row-properties '(top top (top bottom-border) top top (top bottom-border) top top (top bottom-border))
-(list (list "Datum (von-bis)" "" "2017-05-13")
-      (list "Name und Art der Bildungs- und Ausbildungseinrichtung" "" "Industrie- und Handelskammer Gießen-Friedberg")
-      (list "Erworbene Qualifikation" "" "Nachweis der berufs- und arbeitspädagogischen Fertigkeiten, Kenntnisse und Fähigkeiten im Sinne des § 30 des Berufsbildungsgesetzes durch Bestehen der Prüfung nach der Ausbilder-Eignungsverordnung")
+	 #:row-properties '(top top (top bottom-border) top top (top bottom-border) top top (top bottom-border) top top (top bottom-border))
+(list
+      (list "Datum (von-bis)" "" "2018-06-01 bis heute")
+      (list "Name und Art der Bildungs- und Ausbildungseinrichtung" "" "Industrie- und Handelskammer Lahn-Dill")
+      (list "Bezeichnung des Engagements" "" "Berufung in die Prüfungsausschüsse der Industrie- und Handelskammer Lahn-Dill für Fachinformatiker sowie Informatikkaufmann/-frau, IT-Systemkaufmann/-frau")
+      (list "Datum (von-bis)" "" "2018-02-23/24 und 2018-03-09/10")
+      (list "Name und Art der Bildungs- und Ausbildungseinrichtung" "" "Akademie Schloss Raesfeld e.V.")
+      (list "Erworbene Qualifikation" "" "Grundlagen und Aufbauseminar Sachverständige incl. Abschlusstest")      
       (list "Datum (von-bis)" "" "2017-05-31 bis heute")
       (list "Name und Art der Bildungs- und Ausbildungseinrichtung" "" "Industrie- und Handelskammer Lahn-Dill")
       (list "Bezeichnung des Engagements" "" "Eintragung als Ausbilder in das Verzeichnis der Berufsausbildungsverhältnisse für die Berufe Fachinformatiker Fachrichtung: Anwendungsentwicklung und Informatikkaufmann/-frau")
-      (list "Datum (von-bis)" "" "2018-06-01 bis heute")
-      (list "Name und Art der Bildungs- und Ausbildungseinrichtung" "" "Industrie- und Handelskammer Lahn-Dill")
-      (list "Bezeichnung des Engagements" "" "Berufung in die Prüfungsausschüsse der Industrie- und Handelskammer Lahn-Dill für Fachinformatiker sowie Informatikkaufmann/-frau, IT-Systemkaufmann/-frau"))]
+      (list "Datum (von-bis)" "" "2017-05-13")
+      (list "Name und Art der Bildungs- und Ausbildungseinrichtung" "" "Industrie- und Handelskammer Gießen-Friedberg")
+      (list "Erworbene Qualifikation" "" "Nachweis der berufs- und arbeitspädagogischen Fertigkeiten, Kenntnisse und Fähigkeiten im Sinne des § 30 des Berufsbildungsgesetzes durch Bestehen der Prüfung nach der Ausbilder-Eignungsverordnung")
+)]
