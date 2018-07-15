@@ -65,3 +65,10 @@
       (list "Name und Art der Bildungs- und Ausbildungseinrichtung" "" "Industrie- und Handelskammer Gießen-Friedberg")
       (list "Erworbene Qualifikation" "" "Nachweis der berufs- und arbeitspädagogischen Fertigkeiten, Kenntnisse und Fähigkeiten im Sinne des § 30 des Berufsbildungsgesetzes durch Bestehen der Prüfung nach der Ausbilder-Eignungsverordnung")
 )]
+
+@section{Mitgliedschaft in Fachgesellschaften}
+
+@itemlist[@item{American Economic Association}
+@item{Verein für Socialpolitik}
+@item{European Network for Housing Research}
+@item{Association for Computing Machinery}]

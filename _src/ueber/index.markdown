@@ -23,11 +23,11 @@ Arbeit aufgenommen. Gelegentlich bin ich an der [Technischen Hochschule Mittelhe
 
 Technik:  
 
-* Common Lisp, [Racket](/racket/index.html), Scheme 
-* Linux, Container-Virtualisierung mit OpenVZ, Docker
-* TeX/LaTeX 
-* Gnu Emacs, Org-mode
-* R, ggplot2 
+* Funktionale Programmiersprachen wie [Common Lisp](https://www.common-lisp.net/), [Racket](/racket/index.html), [Scheme](http://www.schemers.org)
+* Linux, Container-Virtualisierung mit [OpenVZ](https://openvz.org), [Docker](https://www.docker.com)
+* TeX/[LaTeX](https://www.latex-project.org)
+* Informationsverarbeitung bspw. mit [R](https://r-project.org), Visualisierung mit [ggplot2](https://ggplot2.tidyverse.org)
+* [GNU Emacs](https://www.gnu.org/software/emacs/), [Org mode](https://www.gnu.org/software/emacs/)
 
 ## Mitgliedschaften in Fachgesellschaften
 
