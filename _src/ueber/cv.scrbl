@@ -5,7 +5,7 @@
 @section{Berufserfahrung}
 
 @tabular[#:sep @hspace[1]
-	 #:column-properties '(right right-border left)
+	 #:column-properties '(right left-border left)
 	 #:row-properties '(top top top (top bottom-border) top top top (top bottom-border) top top top (top bottom-border))
  (list (list "Datum (von-bis)" "" "2005-01 bis heute")
 	 (list "Name und Adresse des Arbeitgebers" "" "Brunner GmbH & Co. KG Informationsverarbeitung, Schulstraße 8, 35216 Biedenkopf")
@@ -29,7 +29,7 @@
 @section{Schul- und Berufsbildung}
 
 @tabular[#:sep @hspace[1]
-	 #:column-properties '(right right-border left)
+	 #:column-properties '(right left-border left)
 	 #:row-properties '(top top top (top bottom-border) top top top (top bottom-border))
 (list (list "Datum (von-bis)" "" "1996-10 bis 2001-05")
       (list "Name und Art der Bildungs- oder Ausbildungseinrichtung" "" "Philipps-Universität Marburg, Universität des Landes Hessen")
@@ -49,7 +49,7 @@
 @section{Berufliches Engagement und Qualifikationen}
 
 @tabular[#:sep @hspace[1]
-	 #:column-properties '(right right-border left)
+	 #:column-properties '(right left-border left)
 	 #:row-properties '(top top (top bottom-border) top top (top bottom-border) top top (top bottom-border) top top (top bottom-border))
 (list
       (list "Datum (von-bis)" "" "2018-06-01 bis heute")
@@ -71,4 +71,5 @@
 @itemlist[@item{American Economic Association}
 @item{Verein für Socialpolitik}
 @item{European Network for Housing Research}
-@item{Association for Computing Machinery}]
+@item{Association for Computing Machinery}
+@item{Gesellschaft für Informatik}]

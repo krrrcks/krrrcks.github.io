@@ -35,6 +35,7 @@ Technik:
 * [Verein für Socialpolitik](https://www.socialpolitik.de)
 * [European Network for Housing Research](https://www.enhr.net)
 * [Association for Computing Machinery](https://www.acm.org)
+* [Gesellschaft für Informatik](https://www.gi.de)
 
 ## Berufliches Engagement und Qualifikation
 
