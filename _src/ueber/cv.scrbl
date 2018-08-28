@@ -54,7 +54,7 @@
 (list
       (list "Datum (von-bis)" "" "2018-06-01 bis heute")
       (list "Name und Art der Bildungs- und Ausbildungseinrichtung" "" "Industrie- und Handelskammer Lahn-Dill")
-      (list "Bezeichnung des Engagements" "" "Berufung in die Prüfungsausschüsse der Industrie- und Handelskammer Lahn-Dill für Fachinformatiker sowie Informatikkaufmann/-frau, IT-Systemkaufmann/-frau")
+      (list "Bezeichnung des Engagements" "" "Berufung in die Prüfungsausschüsse der Industrie- und Handelskammer Lahn-Dill für Fachinformatiker/-in, IT-Systemelektroniker/in, Informatikkaufmann/-frau, IT-Systemkaufmann/-frau")
       (list "Datum (von-bis)" "" "2018-02-23/24 und 2018-03-09/10")
       (list "Name und Art der Bildungs- und Ausbildungseinrichtung" "" "Akademie Schloss Raesfeld e.V.")
       (list "Erworbene Qualifikation" "" "Grundlagen und Aufbauseminar Sachverständige incl. Abschlusstest")      
