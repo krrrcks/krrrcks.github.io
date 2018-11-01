@@ -12,9 +12,9 @@ Abs. 1 des Abgeordnetengesetzes. In diesem ist festgelegt, dass die
 Abgeordnetentätigkeit im Mittelpunkt der Tätigkeit
 steht. Darüberhinaus wehrten sich die Antragsteller gegen die
 Offenlegung ihrer Nebeneinkünfte. Im Ergebnis wurden die Anträge
-zurückgewiesen. In der Begründung findet sich ab Randnummer 225 ein
-bemerkenswertes Zitat eines Antragstellers und eine erhellende
-Einschätzung des Gerichts hierzu.
+am 4. Juli 2007 zurückgewiesen. In der Begründung findet sich ab
+Randnummer 225 ein bemerkenswertes Zitat eines Antragstellers und eine
+erhellende Einschätzung des Gerichts hierzu.
 
 <!-- more -->
 
