@@ -138,7 +138,47 @@
 
           <article>
   <header>
-    <h1><a href='/2014/07/24/datetime-conversion-can-be-tricky'>DateTime conversion can be tricky</a></h1>
+    <h1><a href='/blog/2014/07/24/mind-the-storage-driver-for-ubuntu-cloud-images-on-azure/'>Mind the storage driver for Ubuntu cloud images (on Azure)</a></h1>
+    <p class='date-and-tags'>
+<time datetime="2014-07-24" pubdate="true">2014-07-24</time> :: <span class="tags"><a href="/tags/Docker.html">Docker</a>, <a href="/tags/IT.html">IT</a></span></p>
+  </header>
+
+<p>A few days ago I wanted to build Firefox OS&rsquo; newest release for a friend. Because I did not wanted these GB of code, binaries etc. on my notebook I fired up an Ubuntu image on Microsoft Azure. I feared that at a certain point in the build process I may had to download everything to my local machine and therefore I installed Docker via a simple</p>
+
+<pre><code>sudo apt-get install docker.io</code></pre>
+
+<p>Then I started the build process as laid out on Mozilla&rsquo;s Developer Network. But, during downloading the source code (that&rsquo;s about 12 GB of Git repositories from Mozilla and Android), I got a &ldquo;no more space left on device&rdquo;. That was strange: I had a 100 GB volume attached to the VM and enough space and inodes left. After some searching I asked on the IRC channel and got a good hint: &ldquo;What&rsquo;s your storage driver?&rdquo;</p>
+
+<p>Well, I thought that it&rsquo;s AUFS; I wanted to add &ldquo;as usual&rdquo; because AUFS was available on my notebook from the beginning. But a <code>docker.io
+info</code> gave me:</p>
+
+<pre><code>$ sudo docker.io info
+Containers: 0
+Images: 0
+Storage Driver: devicemapper
+ Pool Name: docker-8:1-131188-pool
+ Data file: /var/lib/docker/devicemapper/devicemapper/data
+ Metadata file: /var/lib/docker/devicemapper/devicemapper/metadata
+ Data Space Used: 291.5 Mb
+ Data Space Total: 102400.0 Mb
+ Metadata Space Used: 0.7 Mb
+ Metadata Space Total: 2048.0 Mb
+Execution Driver: native-0.1
+Kernel Version: 3.13.0-29-generic
+WARNING: No swap limit support</code></pre>
+
+<p>I then learned that somehow the DeviceMapper driver only allows a certain amount of diffs and I reached that amount with my build process. (Maybe it&rsquo;s possible to relax that restriction but I do not know how.)</p>
+
+<p>I learned as well that the Ubuntu cloud image that is provided by Microsoft Azure doesn&rsquo;t have AUFS support. Therefore Docker uses the DeviceMapper storage driver instead. After I installed the AUFS support I could export the images, change the storage driver and import the images again.</p>
+
+<p>It would be nice seeing the Docker documentation being more detailed on those storage drivers.</p>
+
+<p><strong>(Update 2014&ndash;10&ndash;23)</strong> Thanks to  <a href="http://blog.iron.io/2014/10/docker-in-production-what-weve-learned.html">this blog post from Iron.io</a>  I found some documentation of the devicemapper storage driver. It is  located in the  <a href="https://github.com/docker/docker/tree/master/daemon/graphdriver/devmapper">Repository</a>.</p>
+
+</article>
+<article>
+  <header>
+    <h1><a href='/blog/2014/07/24/datetime-conversion-can-be-tricky/'>DateTime conversion can be tricky</a></h1>
     <p class='date-and-tags'>
 <time datetime="2014-07-24" pubdate="true">2014-07-24</time> :: <span class="tags"><a href="/tags/JavaScript.html">JavaScript</a>, <a href="/tags/Common-Lisp.html">Common Lisp</a>, <a href="/tags/IT.html">IT</a></span></p>
   </header>
@@ -168,7 +208,7 @@
 </article>
 <article>
   <header>
-    <h1><a href='/2014/07/06/i-learned-something-about-symbols-and-packages'>I learned something about symbols and packages</a></h1>
+    <h1><a href='/blog/2014/07/06/i-learned-something-about-symbols-and-packages/'>I learned something about symbols and packages</a></h1>
     <p class='date-and-tags'>
 <time datetime="2014-07-06" pubdate="true">2014-07-06</time> :: <span class="tags"><a href="/tags/Common-Lisp.html">Common Lisp</a>, <a href="/tags/IT.html">IT</a></span></p>
   </header>
@@ -237,7 +277,7 @@ MY-APP&gt;</code></p>
 </article>
 <article>
   <header>
-    <h1><a href='/2014/06/10/unicode-support-for-octopress'>Unicode support for Octopress</a></h1>
+    <h1><a href='/blog/2014/06/10/unicode-support-for-octopress/'>Unicode support for Octopress</a></h1>
     <p class='date-and-tags'>
 <time datetime="2014-06-10" pubdate="true">2014-06-10</time> :: <span class="tags"><a href="/tags/Docker.html">Docker</a>, <a href="/tags/Octopress.html">Octopress</a>, <a href="/tags/IT.html">IT</a></span></p>
   </header>
@@ -283,7 +323,7 @@ CMD ["/bin/bash"] </code></pre>
 </article>
 <article>
   <header>
-    <h1><a href='/2014/06/10/relaunch-fast-fertig'>Relaunch fast fertig</a></h1>
+    <h1><a href='/blog/2014/06/10/relaunch-fast-fertig/'>Relaunch fast fertig</a></h1>
     <p class='date-and-tags'>
 <time datetime="2014-06-10" pubdate="true">2014-06-10</time> :: <span class="tags"><a href="/tags/Homepage.html">Homepage</a>, <a href="/tags/Octopress.html">Octopress</a></span></p>
   </header>
@@ -297,7 +337,7 @@ CMD ["/bin/bash"] </code></pre>
 </article>
 <article>
   <header>
-    <h1><a href='/2014/06/06/archiv-mit-der-alten-homepage'>Archiv mit der alten Homepage</a></h1>
+    <h1><a href='/blog/2014/06/06/archiv-mit-der-alten-homepage/'>Archiv mit der alten Homepage</a></h1>
     <p class='date-and-tags'>
 <time datetime="2014-06-06" pubdate="true">2014-06-06</time> :: <span class="tags"><a href="/tags/Homepage.html">Homepage</a></span></p>
   </header>
@@ -311,7 +351,7 @@ CMD ["/bin/bash"] </code></pre>
 </article>
 <article>
   <header>
-    <h1><a href='/2014/06/06/ein-relaunch'>Ein Relaunch</a></h1>
+    <h1><a href='/blog/2014/06/06/ein-relaunch/'>Ein Relaunch</a></h1>
     <p class='date-and-tags'>
 <time datetime="2014-06-06" pubdate="true">2014-06-06</time> :: <span class="tags"><a href="/tags/Homepage.html">Homepage</a>, <a href="/tags/Octopress.html">Octopress</a></span></p>
   </header>
@@ -325,7 +365,7 @@ CMD ["/bin/bash"] </code></pre>
 </article>
 <article>
   <header>
-    <h1><a href='/2014/05/26/my-dockerfile-for-setting-up-octopress'>My Dockerfile for setting up Octopress</a></h1>
+    <h1><a href='/blog/2014/05/26/my-dockerfile-for-setting-up-octopress/'>My Dockerfile for setting up Octopress</a></h1>
     <p class='date-and-tags'>
 <time datetime="2014-05-26" pubdate="true">2014-05-26</time> :: <span class="tags"><a href="/tags/Docker.html">Docker</a>, <a href="/tags/Octopress.html">Octopress</a>, <a href="/tags/IT.html">IT</a></span></p>
   </header>
@@ -363,7 +403,7 @@ CMD ["/bin/bash"] </code></pre>
 </article>
 <article>
   <header>
-    <h1><a href='/2012/02/28/gie%C3%9Fkanne-oder-nicht'>Gießkanne oder nicht?</a></h1>
+    <h1><a href='/blog/2012/02/28/gie%C3%9Fkanne-oder-nicht/'>Gießkanne oder nicht?</a></h1>
     <p class='date-and-tags'>
 <time datetime="2012-02-28" pubdate="true">2012-02-28</time> :: <span class="tags"><a href="/tags/Wirtschaft.html">Wirtschaft</a></span></p>
   </header>
@@ -388,7 +428,7 @@ CMD ["/bin/bash"] </code></pre>
 </article>
 <article>
   <header>
-    <h1><a href='/2012/01/17/zu-den-rating-agenturen-und-ihren-ratings'>Zu den Rating-Agenturen und ihren Ratings</a></h1>
+    <h1><a href='/blog/2012/01/17/zu-den-rating-agenturen-und-ihren-ratings/'>Zu den Rating-Agenturen und ihren Ratings</a></h1>
     <p class='date-and-tags'>
 <time datetime="2012-01-17" pubdate="true">2012-01-17</time> :: <span class="tags"><a href="/tags/Wirtschaft.html">Wirtschaft</a></span></p>
   </header>
@@ -418,34 +458,6 @@ CMD ["/bin/bash"] </code></pre>
    <p>Einigen der Schimpftiraden über die deutschen Ökonomen kann ich allerdings nicht so recht folgen. So wurde den Ökonomen in Deutschland über viele Jahre vorgehalten, sie seien international wissenschaftlich nicht &ldquo;anschlussfähig&rdquo;, publizierten zuwenig in den großen Journalen. Nun sind diese, wie man leicht prüfen kann, in der Regel US-amerikanische oder britische Zeitschriften. Will man dort landen, muss man sich ein Stück weit natürlich auf die Weltsicht des Mainstreams einstellen. Es gibt Ausnahmen, zugegeben. Aber grob skizziert lande ich mit einem Standardthema und einer Mainstream-Methodik eher im American Economic Journal als mit etwas sehr Ausgefallenem und Unüblichen.&nbsp;<a href="#2012-01-17-zu-den-rating-agenturen-und-ihren-ratings-footnote-3-return">↩</a></p></li></ol></div>
 
 </article>
-<article>
-  <header>
-    <h1><a href='/2012/01/10/zu-den-negativen-zinsen'>Zu den negativen Zinsen</a></h1>
-    <p class='date-and-tags'>
-<time datetime="2012-01-10" pubdate="true">2012-01-10</time> :: <span class="tags"><a href="/tags/Wirtschaft.html">Wirtschaft</a></span></p>
-  </header>
-
-<p>Verschiedene Zeitungen berichteten, es habe nun bei einer aktuellen Refinanzierungsrunde Deutschlands negative &ldquo;Zinsen&rdquo; gegeben. Wie kann das passieren?</p>
-
-<p>Bei der Ausgabe einer Anleihe überlegt sich der ausgebende Staat einen Nominalzins, den er für die Anleihe zahlen würde. Ein Nominalsatz von 1,00% würde bei einer Anleihe von 100 EUR dem Zeichner oder Inhaber der Anleihe eine jährliche Zinszahlung von 1,00 EUR bringen. Diesen Wert nennt man auch den Kupon einer Anleihe, da dafür früher tatsächlich Stücke eines speziellen Bogens als Kupon abgeschnitten werden mussten und gegen diesen Kupon dann die Zahlung erfolgt.</p>
-
-<p>Nun geht der ausgebende Staat an den Markt und schaut für eine solche Anleihe, ob die ihm jemand abkaufen würde. Er sagt also: &ldquo;Ich will 100 EUR und zahle dafür nominal 1,00% im Jahr.&rdquo;</p>
-
-<p>Wenn er nun ein schlechter Schuldner ist, kann es sein, dass er die Anleihe dann nur für 90 los wird. Dann ist der Nominalzins immer noch 1,00%, da der Inhaber der Anleihe aber 1,00 EUR für 90 EUR bekommt, steigt die Rendite, zugleich muss die ausgebende Stelle am Ende der Laufzeit die 100 EUR zurückzahlen. Umgekehrt kann es auch sein, dass Leute 110 EUR für die Anleihe bieten, sie bekommen dann am Ende nur 100 EUR zurück und erhalten auch nur eine Zinszahlung von 1,00 EUR pro Jahr für die angelegten 110 EUR, was dann eine niedrigere Rendite als 1,00% ergibt.</p>
-
-<p>Oder um es noch einfacher zu machen, nehmen wir nun noch an, dass die Anleihe bereits nach einem Jahr zurückgezahlt wird:</p>
-
-<p>Wird sie zu 100 verkauft, so ist die Rendite einfach 1%, bei Kurs 101 ist die Rendite 0% (man bekommt am Ende des Jahres ja die 100 plus 1% Kupon, also 101 wieder, das ist also genau das, was man bei der Ausgabe gezahlt hat), bei Kurs 102 ist die Rendite dann &ndash;1%.</p>
-
-<p>Zusammengefasst, die Rendite sinkt, wenn der Kurs ansteigt und umgekehrt. Sie kann auch in der Konstellation negativ werden, wenn beispielsweise ein kleiner Kupon mit einem hohen Kurs einhergeht.</p>
-
-<p>Bei neuen Anleihen schätzt der ausgebende Staat in der Regel vorher ab, wo die Rendite wohl liegen wird und ruft ein Volumen und einen Kupon auf. Bei der Schuldenverwaltung in Deutschland liegt man mit dieser Abschätzung zumeist recht gut, so dass die Rendite oft sehr nah beim Kupon zu liegen kommt. Das ist bei anderen Ländern in jüngster Vergangenheit auch schon mal gerne schief gegangen.</p>
-
-<p>Bei den in der Presse dargestellten kurzfristigen Titeln handelte es sich um sogenannte unverzinsliche Schatzanweisungen. Diese funktionieren nun anders, denn sie haben gar keinen Kupon (sog. Nullkuponanleihen oder Zerobonds). Das bedeutet, wenn der Ausgabepreis unter 100 liegt, ergibt sich eine positive Rendite (der häufigste Fall), bei der gestrigen Auktion lag der Kurs über 100, damit wurde die Rendite negativ. Genaugenommen gab es also gar keine &ldquo;negative Zinsen&rdquo;, sondern eine &ldquo;negative Rendite&rdquo;</p>
-
-<p>Die aktuellen Informationen zu den Auktionsergebnissen kann man <a href="http://www.deutsche-finanzagentur.de/fileadmin/Material_Deutsche_Finanzagentur/PDF/Aktuelle_Informationen/Auktionsergebnisse.pdf">hier</a> einsehen.</p>
-
-</article>
 <footer>
  <ul class="pagination">
   <li class="page-item"><a class="page-link" href="/index-3.html">
@@ -457,6 +469,7 @@ CMD ["/bin/bash"] </code></pre>
   <li class="page-item"><a class="page-link" href="/index-5.html">5</a></li>
   <li class="page-item"><a class="page-link" href="/index-6.html">6</a></li>
   <li class="page-item"><a class="page-link" href="/index-7.html">7</a></li>
+  <li class="page-item"><a class="page-link" href="/index-8.html">8</a></li>
   <li class="page-item"><a class="page-link" href="/index-5.html">
     <quote>&rarr;</quote></a></li></ul></footer>
         </div>

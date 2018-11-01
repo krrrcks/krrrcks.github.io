@@ -7,8 +7,8 @@
  <updated>2018-01-22T15:24:41Z</updated>
  <entry>
   <title type="text">A snippet to colorize TODO/DONE labels in Scribble</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2018/01/22/a-snippet-to-colorize-todo-done-labels-in-scribble" />
-  <id>urn:http-www-dbrunner-de:-2018-01-22-a-snippet-to-colorize-todo-done-labels-in-scribble</id>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2018/01/22/a-snippet-to-colorize-todo-done-labels-in-scribble/" />
+  <id>urn:http-www-dbrunner-de:-blog-2018-01-22-a-snippet-to-colorize-todo-done-labels-in-scribble</id>
   <published>2018-01-22T15:24:41Z</published>
   <updated>2018-01-22T15:24:41Z</updated>
   <author>
@@ -82,8 +82,8 @@ document and added this small Racket snippet for green and red labels:&lt;/p&gt;
 document.&lt;/p&gt;</content></entry>
  <entry>
   <title type="text">Evaluierungsergebnisse mit Racket/Scribble verarbeiten und darstellen</title>
-  <link rel="alternate" href="http://www.dbrunner.de/2017/12/11/evaluierungsergebnisse-mit-racket-scribble-verarbeiten-und-darstellen" />
-  <id>urn:http-www-dbrunner-de:-2017-12-11-evaluierungsergebnisse-mit-racket-scribble-verarbeiten-und-darstellen</id>
+  <link rel="alternate" href="http://www.dbrunner.de/blog/2017/12/11/evaluierungsergebnisse-mit-racket-scribble-verarbeiten-und-darstellen/" />
+  <id>urn:http-www-dbrunner-de:-blog-2017-12-11-evaluierungsergebnisse-mit-racket-scribble-verarbeiten-und-darstellen</id>
   <published>2017-12-11T16:58:35Z</published>
   <updated>2017-12-11T16:58:35Z</updated>
   <author>

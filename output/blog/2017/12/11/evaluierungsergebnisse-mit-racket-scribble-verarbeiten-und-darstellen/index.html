@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Evaluierungsergebnisse mit Racket/Scribble verarbeiten und darstellen</title>
+    <meta name="description" content="Auch in diesem Jahr habe ich (zum Teil mit Stephan Brunner zusammen) wieder Lehrveranstaltungen für StudiumPlus durchgeführt.  Die Ergebnisse finden sich jeweils als Link auf der Seite mit meinen Lehrveranstaltungen. Im Folgenden beschreibe ich, wie ich i...">
+    <meta name="author"      content="Daniel Brunner">
+    <meta name="keywords"    content="Racket, Scribble, Lehre">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon"      href="/favicon.ico">
+    <link rel="canonical" href="http://www.dbrunner.de/blog/2017/12/11/evaluierungsergebnisse-mit-racket-scribble-verarbeiten-und-darstellen/">
+    <link rel="next" href="/blog/2017/06/14/links-zur-patent-kontroverse-david-k-levine/">
+    <link rel="prev" href="/blog/2018/01/15/der-e-postbrief-eine-erfolgsgeschichte/">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
+    <link rel="stylesheet" type="text/css" href="/css/dbr.css">
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <!-- Feeds -->
+    <link rel="alternate" type="application/atom+xml"
+          href="/feeds/all.atom.xml" title="Atom Feed">
+    <link rel="alternate" type="application/rss+xml"
+          href="/feeds/all.rss.xml" title="RSS Feed">
+    <!-- JS -->
+  </head>
+  <body>
+    <!-- A standard Twitter Bootstrap nav bar -->
+    <header class="navbar navbar-default navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle"
+                  data-toggle="collapse"
+                  data-target=".our-nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a href="/index.html" class="navbar-brand">Daniel Brunner</a>
+        </div>
+        <div class="collapse navbar-collapse our-nav-collapse"
+             role="navigation">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Über mich <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/ueber/index.html">Kurzvorstellung</a></li>
+                <li><a href="/ueber/publikationen.html">Publikationen</a></li>
+                <li><a href="/ueber/vortraege.html">Vorträge</a></li>
+                <li><a href="/ueber/lehre.html">Lehre</a></li>
+                <li><a href="/ueber/projekte.html">Projekte/Themen</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/impressum/index.html">Impressum/Datenschutz</a>
+            </li> 
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Tags <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/index.html">All Posts</a></li>
+
+<li><a href="/tags/Allerlei.html">Allerlei</a></li>
+
+<li><a href="/tags/AWS.html">AWS</a></li>
+
+<li><a href="/tags/Beho%CC%88rden.html">Behörden</a></li>
+
+<li><a href="/tags/Common-Lisp.html">Common Lisp</a></li>
+
+<li><a href="/tags/Docker.html">Docker</a></li>
+
+<li><a href="/tags/Frog.html">Frog</a></li>
+
+<li><a href="/tags/Homepage.html">Homepage</a></li>
+
+<li><a href="/tags/IT.html">IT</a></li>
+
+<li><a href="/tags/JavaScript.html">JavaScript</a></li>
+
+<li><a href="/tags/Lehre.html">Lehre</a></li>
+
+<li><a href="/tags/Linux.html">Linux</a></li>
+
+<li><a href="/tags/Medien.html">Medien</a></li>
+
+<li><a href="/tags/Octopress.html">Octopress</a></li>
+
+<li><a href="/tags/Org-Mode.html">Org-Mode</a></li>
+
+<li><a href="/tags/Politik.html">Politik</a></li>
+
+<li><a href="/tags/Racket.html">Racket</a></li>
+
+<li><a href="/tags/Recht.html">Recht</a></li>
+
+<li><a href="/tags/Reisen.html">Reisen</a></li>
+
+<li><a href="/tags/Scheme.html">Scheme</a></li>
+
+<li><a href="/tags/Scribble.html">Scribble</a></li>
+
+<li><a href="/tags/Statistik.html">Statistik</a></li>
+
+<li><a href="/tags/Steuern.html">Steuern</a></li>
+
+<li><a href="/tags/Veranstaltungen.html">Veranstaltungen</a></li>
+
+<li><a href="/tags/Wirtschaft.html">Wirtschaft</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Feeds <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/feeds/all.atom.xml">Atom</a></li>
+                <li><a href="/feeds/all.rss.xml">RSS</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+
+        <!-- Main column -->
+        <div id="content" class="col-md-12">
+
+<!--           -->
+
+
+
+          <article>
+  <header>
+    <h1>Evaluierungsergebnisse mit Racket/Scribble verarbeiten und darstellen</h1>
+    <p class='date-and-tags'>
+<time datetime="2017-12-11" pubdate="true">2017-12-11</time> :: <span class="tags"><a href="/tags/Racket.html">Racket</a>, <a href="/tags/Scribble.html">Scribble</a>, <a href="/tags/Lehre.html">Lehre</a></span></p>
+  </header>
+
+<p>Auch in diesem Jahr habe ich (zum Teil mit Stephan Brunner zusammen) wieder Lehrveranstaltungen für StudiumPlus durchgeführt.</p>
+
+<p>Die Ergebnisse finden sich jeweils als Link auf der <a href="/ueber/lehre.html">Seite mit meinen Lehrveranstaltungen</a>. Im Folgenden beschreibe ich, wie ich in diesem Jahr die Ergebnisse der Evaluierung mit Racket und Scribble verarbeitet habe.</p>
+<!-- more-->
+
+<p>Im vergangenen Jahr wurde eine zentrale Evaluierung der Lehrveranstaltungen von StudiumPlus durchgeführt. Die Studierenden konnten zu 13 Fragen ihre Einschätzung von &ldquo;trifft voll zu&rdquo; über &ldquo;trifft meistens zu&rdquo;, &ldquo;trifft teilweise zu&rdquo;, &ldquo;trifft selten zu&rdquo; zu &ldquo;trifft überhaupt nicht zu&rdquo; abgeben. Von der Hochschule erhielten wir  dann eine Auswertung mit der Anzahl der jeweils gegebenen Einschätzungen pro Frage sowie der relativen Häufigkeit.</p>
+
+<p>Nachdem ich in diesem Jahr eine Übung im Rahmen einer Vorlesung übernommen hatte, wusste ich nicht, ob dieser Teil eine eigene Evaluierung erhalten würde. Des Weiteren wurde für die Zwei-Tages-Module in diesem Jahr keine zentrale Evaluierung angeboten.</p>
+
+<p>Ich habe daher die Fragen vom vergangenen Jahr mit dem Projektor an die Wand projeziert und die Studierenden um ihre Einschätzung gebeten.</p>
+
+<p>Da ich die Ergebnisse verschiedentlich weiterverwenden wollte, habe ich mich entschieden, diese in Racket zu verarbeiten und mit Scribble in ein Dokument (sowie auch Seiten hier auf der Homepage) zu setzen. Der Code hierfür ist als Racket-Datei <a href="/lehre/format-eval.rkt">hier</a> zu finden.</p>
+
+<p>Die Antworten führe ich dann als Liste von Arrays (Vector in Racket).</p>
+
+<div class="brush: racket">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1
+2
+3
+4
+5</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span></span>  <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._list))" style="color: inherit">list</a></span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/vectors.html#(def._((quote._~23~25kernel)._vector))" style="color: inherit">vector</a></span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">3</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">; 1</span>
+        <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/vectors.html#(def._((quote._~23~25kernel)._vector))" style="color: inherit">vector</a></span> <span class="mi">2</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">2</span> <span class="no">#f</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">; 2</span>
+        <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/vectors.html#(def._((quote._~23~25kernel)._vector))" style="color: inherit">vector</a></span> <span class="mi">1</span> <span class="mi">4</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">; 3</span>
+        <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/vectors.html#(def._((quote._~23~25kernel)._vector))" style="color: inherit">vector</a></span> <span class="mi">2</span> <span class="mi">3</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span>  <span class="mi">2</span> <span class="mi">1</span> <span class="mi">1</span> <span class="mi">2</span><span class="p">)</span> <span class="c1">; 4</span>
+		<span class="k"><a href="http://docs.racket-lang.org/reference/stx-patterns.html#(form._((lib._racket/private/stxcase-scheme..rkt)._......))" style="color: inherit">...</a></span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p>Um die Häufigkeiten für eine Frage zu ermitteln, extrahiere ich mittels <code>vector-ref</code> und <code>map</code> sämtliche Antworten zu einer Frage. Hat ein Studierender nicht oder nicht leserlich geantwortet, habe ich jeweils <code>#f</code> eingetragen, die ich aus der Ergebnisliste entferne:</p>
+
+<div class="brush: racket">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1
+2
+3</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span></span><span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/define.html#(form._((lib._racket/private/base..rkt)._define))" style="color: inherit">define</a></span> <span class="p">(</span><span class="n">sample-question</span> <span class="n">loe</span> <span class="n">no</span><span class="p">)</span>
+  <span class="c1">;; Gibt alle Antworten auf eine Fragenummer</span>
+  <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/private/list..rkt)._remove*))" style="color: inherit">remove*</a></span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((quote._~23~25kernel)._list))" style="color: inherit">list</a></span> <span class="no">#f</span><span class="p">)</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/pairs.html#(def._((lib._racket/private/map..rkt)._map))" style="color: inherit">map</a></span> <span class="p">(</span><span class="k"><a href="http://docs.racket-lang.org/reference/lambda.html#(form._((lib._racket/private/base..rkt)._lambda))" style="color: inherit">lambda</a></span> <span class="p">(</span><span class="n">answers</span><span class="p">)</span> <span class="p">(</span><span class="nb"><a href="http://docs.racket-lang.org/reference/vectors.html#(def._((quote._~23~25kernel)._vector-ref))" style="color: inherit">vector-ref</a></span> <span class="n">answers</span> <span class="n">no</span><span class="p">))</span> <span class="n">loe</span><span class="p">)))</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p>Als Ergebnis erhalte ich eine Liste mit Antworten (wobei die Antworten derart kodiert sind, dass eine <code>1</code> für &ldquo;trifft voll zu&rdquo; und eine <code>5</code> für &ldquo;trifft überhaupt nicht zu&rdquo; steht), zum Beispiel:</p>
+
+<div class="brush: racket">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span></span><span class="o">'</span><span class="p">(</span><span class="mi">4</span> <span class="mi">1</span> <span class="mi">4</span> <span class="mi">3</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">4</span> <span class="mi">3</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">3</span> <span class="mi">2</span> <span class="mi">4</span> <span class="mi">1</span> <span class="mi">4</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">3</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p>Für die Weiterverarbeitung habe ich im <code>math</code> Modul die praktische Funktion <a href="http://docs.racket-lang.org/math/stats.html#%28def._%28%28lib._math%2Fstatistics..rkt%29._samples-~3ehash%29%29"><code>samples-&gt;hash</code></a> gefunden, die einem das Zählen abnimmt und einen Hash-Table mit der absoluten Häufigkeit zurückgibt:</p>
+
+<div class="brush: racket">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1
+2</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span></span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit">&gt;</a></span> <span class="p">(</span><span class="n">samples-&gt;hash</span> <span class="o">'</span><span class="p">(</span><span class="mi">4</span> <span class="mi">1</span> <span class="mi">4</span> <span class="mi">3</span> <span class="mi">3</span> <span class="mi">5</span> <span class="mi">4</span> <span class="mi">3</span> <span class="mi">3</span> <span class="mi">4</span> <span class="mi">3</span> <span class="mi">2</span> <span class="mi">4</span> <span class="mi">1</span> <span class="mi">4</span> <span class="mi">1</span> <span class="mi">3</span> <span class="mi">3</span> <span class="mi">2</span> <span class="mi">2</span> <span class="mi">2</span><span class="p">))</span>
+<span class="o">'#hash</span><span class="p">((</span><span class="mi">4</span> <span class="o">.</span> <span class="mi">6</span><span class="p">)</span> <span class="p">(</span><span class="mi">3</span> <span class="o">.</span> <span class="mi">7</span><span class="p">)</span> <span class="p">(</span><span class="mi">2</span> <span class="o">.</span> <span class="mi">4</span><span class="p">)</span> <span class="p">(</span><span class="mi">1</span> <span class="o">.</span> <span class="mi">3</span><span class="p">)</span> <span class="p">(</span><span class="mi">5</span> <span class="o">.</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p>Hieraus habe ich dann eine Formatierung in eine Liste zusammengestellt, die anschließend in ein <code>tabular</code> eingebettet werden kann:</p>
+
+<div class="brush: racket">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1
+2
+3
+4</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span></span><span class="nb"><a href="http://docs.racket-lang.org/reference/generic-numbers.html#(def._((quote._~23~25kernel)._~3e))" style="color: inherit">&gt;</a></span> <span class="p">(</span><span class="n">result</span> <span class="n">EVALUIERUNG</span> <span class="mi">0</span><span class="p">)</span>
+<span class="o">'</span><span class="p">((</span><span class="s2">"Bewertung"</span> <span class="s2">"++"</span> <span class="s2">"+"</span> <span class="s2">"0"</span> <span class="s2">"-"</span> <span class="s2">"- -"</span><span class="p">)</span>
+  <span class="p">(</span><span class="s2">"Anzahl"</span> <span class="s2">"5"</span> <span class="s2">"7"</span> <span class="s2">"8"</span> <span class="s2">"2"</span> <span class="s2">"0"</span><span class="p">)</span>
+  <span class="p">(</span><span class="s2">"in v.H."</span> <span class="s2">"22.73"</span> <span class="s2">"31.82"</span> <span class="s2">"36.36"</span> <span class="s2">"9.09"</span> <span class="s2">"0.00"</span><span class="p">))</span>
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p>Etwas gekämpft hatte ich einige Zeit mit dem Umstand, dass ein sogenannter <code>content</code> ein String sein muss und nicht einfach eine Zahl. Man muss also die vorher ausgerechneten Werte via <code>number-&gt;string</code> in einen String umwandeln, damit Scribble diese verwenden kann.</p>
+
+<p>Da ich die Parameter für die Tabular-Umgebung auch nicht immer wieder tippen wollte, habe ich hierfür auch eine Funktion geschrieben, so dass es im Scribble-Dokument wie folgt aussieht (gegeben, dass sich hinter EVALUIERUNG die Liste der Arrays mit den Antworten verbirgt):</p>
+
+<div class="brush: scribble">
+ <table class="sourcetable">
+  <tbody>
+   <tr>
+    <td class="linenos">
+     <div class="linenodiv">
+      <pre>1
+2
+3
+4
+5
+6</pre></div></td>
+    <td class="code">
+     <div class="source">
+      <pre><span></span>@itemlist[#:style &#39;ordered @item{Die Veranstaltung ist klar strukturiert.
+@tabular-result[EVALUIERUNG 0]
+}
+@item{Die verwendeten Veranstaltungsunterlagen sind hilfreich.
+@tabular-result[EVALUIERUNG 1]}
+...
+</pre></div>
+</td></tr></tbody></table>
+</div>
+
+<p>Das Ergebnis kann man am Beispiel der letzten Veranstaltung <a href="/lehre/iot-eval-2017.html">hier</a> einsehen, die zugehörige Scribble-Datei ist <a href="/lehre/iot-eval-2017.scrbl">hier</a> einsehbar.</p>
+
+<p>Der Vorteil für mich liegt bei dieser Vorgehensweise darin, dass ich die Antworten in strukturierter Form behalte und auch noch für andere Zwecke weiter verwenden kann. Darüberhinaus ist diese Ausgabe mittels Scribble vielfältig nutzbar: Ich erzeuge bspw. daraus ein PDF-Dokument (über LaTeX) und eine Seite hier auf der Homepage mit dem statischen Seitengenerator Frog. Und, ich musste keine Tabellenkalkulation verwenden.</p>
+  <footer>
+    <!-- <script type="text/javascript">
+           !function(d,s,id){
+               var js,fjs=d.getElementsByTagName(s)[0];
+               if(!d.getElementById(id)){
+                   js=d.createElement(s);
+                   js.id=id;
+                   js.src="//platform.twitter.com/widgets.js";
+                   fjs.parentNode.insertBefore(js,fjs);
+               }
+           }(document,"script","twitter-wjs");
+         </script>
+         <a href="https://twitter.com/share"
+            class="twitter-share-button"
+            data-url="http://www.dbrunner.de/blog/2017/12/11/evaluierungsergebnisse-mit-racket-scribble-verarbeiten-und-darstellen/"
+            data-dnt="true">
+           "Tweet"</a> -->
+    <!-- <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+         <g:plusone size="medium" href="http://www.dbrunner.de/blog/2017/12/11/evaluierungsergebnisse-mit-racket-scribble-verarbeiten-und-darstellen/"></g:plusone> -->
+    <!-- <script type="text/javascript">
+           var disqus_shortname = 'shortname';
+           (function() {
+               var dsq = document.createElement('script');
+               dsq.type = 'text/javascript';
+               dsq.async = true;
+               dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+           })();
+         </script>
+         <div id="disqus_thread"></div> -->
+    <ul class="pager">
+    <li class="previous">
+      <a href="/blog/2018/01/15/der-e-postbrief-eine-erfolgsgeschichte/">&larr; <em>Der E-Postbrief: Eine Erfolgsgeschichte(?)</em></a>
+    </li>
+    <li class="next">
+      <a href="/blog/2017/06/14/links-zur-patent-kontroverse-david-k-levine/"><em>Links zur Patent-Kontroverse (David K. Levine)</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
+        </div>
+      </div>
+      <footer>
+        <hr />
+        <p>Made with  <a href="https://github.com/greghendershott/frog">Frog</a> and <a href="http://www.racket-lang.org">Racket</a>. Using <a href="http://www.getbootstrap.com">Bootstrap</a>.</p>
+        <p><em>(C) 2018, Daniel Brunner</em>.</p>
+      </footer>
+    </div>
+    <!-- </body> JS -->
+    <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  </body>
+</html>

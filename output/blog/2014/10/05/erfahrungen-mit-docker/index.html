@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+
+    <meta charset="utf-8">
+    <title>Erfahrungen mit Docker</title>
+    <meta name="description" content="Ein Bekannter bat mich, einmal von meinen Erfahrungen mit Docker zu berichten. Also hier als Blog-Post dazu. Ich werde nicht beschreiben, was genau Docker ist und wie es funktioniert. Hierzu gibt es mittlerweile schon eine Reihe von guten Quellen (bspw. a...">
+    <meta name="author"      content="Daniel Brunner">
+    <meta name="keywords"    content="Docker">
+    <meta name="viewport"    content="width=device-width, initial-scale=1.0">
+    <link rel="icon"      href="/favicon.ico">
+    <link rel="canonical" href="http://www.dbrunner.de/blog/2014/10/05/erfahrungen-mit-docker/">
+    <link rel="next" href="/blog/2014/10/05/aktenfu%CC%88hrung-beim-beitragsservice/">
+    <link rel="prev" href="/blog/2014/11/13/warten-auf-den-technischen-fortschritt-als-politisches-prinzip/">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/scribble.css">
+    <link rel="stylesheet" type="text/css" href="/css/dbr.css">
+    <link rel="stylesheet" type="text/css" href="/css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="/css/pygments.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css">
+    <!-- Feeds -->
+    <link rel="alternate" type="application/atom+xml"
+          href="/feeds/all.atom.xml" title="Atom Feed">
+    <link rel="alternate" type="application/rss+xml"
+          href="/feeds/all.rss.xml" title="RSS Feed">
+    <!-- JS -->
+  </head>
+  <body>
+    <!-- A standard Twitter Bootstrap nav bar -->
+    <header class="navbar navbar-default navbar-inverse">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle"
+                  data-toggle="collapse"
+                  data-target=".our-nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+
+          <a href="/index.html" class="navbar-brand">Daniel Brunner</a>
+        </div>
+        <div class="collapse navbar-collapse our-nav-collapse"
+             role="navigation">
+          <ul class="nav navbar-nav">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Über mich <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/ueber/index.html">Kurzvorstellung</a></li>
+                <li><a href="/ueber/publikationen.html">Publikationen</a></li>
+                <li><a href="/ueber/vortraege.html">Vorträge</a></li>
+                <li><a href="/ueber/lehre.html">Lehre</a></li>
+                <li><a href="/ueber/projekte.html">Projekte/Themen</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="/impressum/index.html">Impressum/Datenschutz</a>
+            </li> 
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Tags <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/index.html">All Posts</a></li>
+
+<li><a href="/tags/Allerlei.html">Allerlei</a></li>
+
+<li><a href="/tags/AWS.html">AWS</a></li>
+
+<li><a href="/tags/Beho%CC%88rden.html">Behörden</a></li>
+
+<li><a href="/tags/Common-Lisp.html">Common Lisp</a></li>
+
+<li><a href="/tags/Docker.html">Docker</a></li>
+
+<li><a href="/tags/Frog.html">Frog</a></li>
+
+<li><a href="/tags/Homepage.html">Homepage</a></li>
+
+<li><a href="/tags/IT.html">IT</a></li>
+
+<li><a href="/tags/JavaScript.html">JavaScript</a></li>
+
+<li><a href="/tags/Lehre.html">Lehre</a></li>
+
+<li><a href="/tags/Linux.html">Linux</a></li>
+
+<li><a href="/tags/Medien.html">Medien</a></li>
+
+<li><a href="/tags/Octopress.html">Octopress</a></li>
+
+<li><a href="/tags/Org-Mode.html">Org-Mode</a></li>
+
+<li><a href="/tags/Politik.html">Politik</a></li>
+
+<li><a href="/tags/Racket.html">Racket</a></li>
+
+<li><a href="/tags/Recht.html">Recht</a></li>
+
+<li><a href="/tags/Reisen.html">Reisen</a></li>
+
+<li><a href="/tags/Scheme.html">Scheme</a></li>
+
+<li><a href="/tags/Scribble.html">Scribble</a></li>
+
+<li><a href="/tags/Statistik.html">Statistik</a></li>
+
+<li><a href="/tags/Steuern.html">Steuern</a></li>
+
+<li><a href="/tags/Veranstaltungen.html">Veranstaltungen</a></li>
+
+<li><a href="/tags/Wirtschaft.html">Wirtschaft</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Feeds <b class="caret"></b></a>
+              <ul class="dropdown-menu">
+                <li><a href="/feeds/all.atom.xml">Atom</a></li>
+                <li><a href="/feeds/all.rss.xml">RSS</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <div class="row">
+
+        <!-- Main column -->
+        <div id="content" class="col-md-12">
+
+<!--           -->
+
+
+
+          <article>
+  <header>
+    <h1>Erfahrungen mit Docker</h1>
+    <p class='date-and-tags'>
+<time datetime="2014-10-05" pubdate="true">2014-10-05</time> :: <span class="tags"><a href="/tags/Docker.html">Docker</a></span></p>
+  </header>
+
+<p>Ein Bekannter bat mich, einmal von meinen Erfahrungen mit Docker zu berichten. Also hier als Blog-Post dazu. Ich werde nicht beschreiben, was genau Docker ist und wie es funktioniert. Hierzu gibt es mittlerweile schon eine Reihe von guten Quellen (bspw. auf der Docker-Homepage, in der c&rsquo;t war in Heft 17 (Seiten 146&ndash;151) auch eine ganz gute Einführung enthalten).</p>
+<!-- more-->
+
+<h2 id="hintergrund">Hintergrund</h2>
+
+<p>Seit einigen Jahren verwende ich zum Ausrollen von Software OpenVZ als Container-Lösung. Das funktioniert sehr gut, schont die Ressourcen, lässt sich gut verwalten und überwachen. In den OpenVZ-Containern befindet sich ein kleines Linux der gewünschten Distribution mit so allem, was man im Standard dafür erwartet. Darin installiert und konfiguriert man seine Software und rollt sie dann auf dem Zielsystem bequem aus. Der einzige Nachteil hierbei ist, dass der Host einen eigenen OpenVZ-Kernel benötigt, da nicht oder noch nicht alle Features im Standard-Kernel bereit stehen. Das macht das Zusammenstellen auf meinem Notebook etwas schwierig, denn dort habe ich den OpenVZ-Kernel in der Regel nicht installiert.</p>
+
+<h2 id="warum-nun-docker">Warum nun Docker?</h2>
+
+<p>Im April bin ich eher zufällig (tauchte in den Release-Notes von Ubuntu 14.04 auf) auf das Docker-Projekt gestoßen und habe damit begonnen herumzuexperimentieren.</p>
+
+<p>Rund um Docker und den Einsatz haben sich eine Vielzahl von Projekten angesammelt. Nicht alles verstehe ich auf Anhieb und mir fällt es zum Teil auch schwer, die unterschiedlichen Projekte zum Ausrollen, Verwalten etc. zu bewerten und zu entscheiden, was davon auch &ldquo;zukunftsfähig&rdquo; ist. Wahrscheinlich muss man hier auch ein bisschen Geduld haben.</p>
+
+<h2 id="einsatzbereiche">Einsatzbereiche</h2>
+
+<p>Für mich haben sich im Wesentlichen zwei Haupteinsatzbereiche herauskristallisiert:  * als Werkzeug in der Software-Entwicklung und  * als Werkzeug zum Ausrollen und dauerhaften Betrieb von Anwendungen</p>
+
+<h3 id="werkzeug-in-der-software-entwicklung">Werkzeug in der Software-Entwicklung</h3>
+
+<p>Ich arbeite in Teams zusammen, bei denen die Entwickler mal nen Windows-Notebook und mal nen Linux-Notebook ihr Eigen nennen. Docker bot sich hier an, eine definitierte Test- und Entwicklungsplattform bereit zu stellen. Ich habe dazu alles, was man so braucht in ein Image zusammengeworfen, dies lässt sich mit dem aktuellen Source Code starten.</p>
+
+<h3 id="dauerhafter-betrieb">Dauerhafter Betrieb</h3>
+
+<h2 id="eigenarten-und-erfahrungen">Eigenarten und Erfahrungen</h2>
+
+<h2 id="was-toll-ist">Was toll ist:</h2>
+
+<ul>
+ <li>Sehr leicht zu installieren und man kann schnell damit anfangen herumzuspielen.</li>
+ <li>docker build / Dockerfile</li>
+ <li>Es entwickelt sich sehr schnell eine aktive Gemeinschaft, so habe  ich auch schon an MeetUps in Frankfurt und Darmstadt  mit Gewinn teilgenommen.</li>
+ <li>Nicht zu vergessen das Logo.</li></ul>
+
+<h2 id="was-nicht-so-toll-ist">Was nicht so toll ist:</h2>
+
+<ul>
+ <li>
+  <p>Images und Container erhalten zur Identifikation Hash-Werte; man  kann Images und Container auch mit Namen versehen. Ist man  allerdings ein wenig am experimentieren und herumbasteln, so sammeln  sich schnell eine Reihe von Containern mit wenig sprechenden Ids an  und zumindest ich verliere da schnell den Überblick.</p></li>
+ <li>
+  <p>Eigentlich sind die Container nicht so mobil, wie die Analogie es  vermuten lässt. Am ehesten sind es noch die Images, die man in eine  Registry einspielen und dann auf unterschiedlichen Systemen  herunterlädt. Mir würde allerdings auch so etwas wie Live Migration  (funktioniert beispielsweise bei OpenVZ für meine Einsatzzwecke ganz  hervorragend) gefallen.</p></li>
+ <li>
+  <p>Für den dauerhaften Betrieb gibt es eine Reihe von für mich offenen  Fragen. Hierzu gibt es zwar Lösungsansätze oder Produkte, aber viele  entwickeln sich erst. Ich will einmal exemplarisch einige offene  Enden herausgreifen:</p></li>
+ <li>
+  <p>Irgendwie muss man sich um seine Logfiles kümmern, wo die so  landen sollen. Hat man in einem &ldquo;normalen Linux&rdquo; (oder auch einem  Standard-OpenVZ-Container) meist so etwas wie ein logrotated am  laufen, so fehlt das (wenn man der Docker-Philosophie folgt, die  Container so schlank wie möglich zu halten) in einem  Docker-Deployment. Also muss man für jede Anwendung prüfen:  Schreibt sie ihr Log auf Platte? Dann muss man das da irgendwie  herausholen (bspw. über einen Log-File-Volume) oder überwachen,  nutzt sie syslogd muss man das auch irgendwie in den Griff  bekommen oder rotzt sie ihre Meldungen über die Standardausgabe  heraus, dann sammelt immerhin Docker die auf und man kann darin  blättern (die können dort aber auch recht groß werden).</p></li>
+ <li>
+  <p>Was tut man mit persistenten Daten? Also beispielsweise einer  Datenbank? Der Docker-Weg-zum-Glück bietet an, dass man einen  Container mit der Datenbank erstellt und dann einen für die  jeweilige Anwendung (ist bspw. für das Wordpress-Image auch so gut  zu studieren). Damit die Daten der Datenbank nicht in dem  Container herumliegen, kann man diese noch in ein Volume  packen. Damit die beiden Container nun miteinander kommunizieren  können, kann man deren Daten über Links einander bekannt  machen. Da man sich als Container und Anwendung nicht um  IP-Adressen etc. kümmern &ldquo;soll&rdquo;, ist das auch ganz fein. So erhält  man im Anwendungscontainer dann Umgebungsvariablen zum  Datenbankcontainer sowie auch einen Eintrag in /etc/hosts. Dumm  nur, wenn der Datenbankcontainer mal abschmiert und neu gestartet  werden muss, denn dann erhält er in der Regel eine neue IP-Adresse  und der Link vom Anwendungscontainer zur Datenbank funktioniert  nicht mehr. Sicher, es gibt nun Mittel und Wege damit umzugehen  (DNS-Geschichten, Entdecken der Dienste, etc.), aber ich fände es  eigentlich toll, wenn das Out-of-the-box funktionieren würde.</p></li></ul>
+
+<h2 id="fazit">Fazit</h2>
+
+<p>Ich finde es ein spannendes Projekt und wenn sich für mich die einen oder anderen Unklarheiten lichten, werde ich es sicherlich auch für den Produktiveinsatz in Erwägung ziehen. Ich vermute, dass das Projekt sich noch deutlich weiterentwickeln wird, die knapp 65 Mio Venture Capital werden neben Marketing hoffentlich auch ins Produkt gesteckt.</p>
+  <footer>
+    <!-- <script type="text/javascript">
+           !function(d,s,id){
+               var js,fjs=d.getElementsByTagName(s)[0];
+               if(!d.getElementById(id)){
+                   js=d.createElement(s);
+                   js.id=id;
+                   js.src="//platform.twitter.com/widgets.js";
+                   fjs.parentNode.insertBefore(js,fjs);
+               }
+           }(document,"script","twitter-wjs");
+         </script>
+         <a href="https://twitter.com/share"
+            class="twitter-share-button"
+            data-url="http://www.dbrunner.de/blog/2014/10/05/erfahrungen-mit-docker/"
+            data-dnt="true">
+           "Tweet"</a> -->
+    <!-- <script type="text/javascript" src="https://apis.google.com/js/plusone.js"></script>
+         <g:plusone size="medium" href="http://www.dbrunner.de/blog/2014/10/05/erfahrungen-mit-docker/"></g:plusone> -->
+    <!-- <script type="text/javascript">
+           var disqus_shortname = 'shortname';
+           (function() {
+               var dsq = document.createElement('script');
+               dsq.type = 'text/javascript';
+               dsq.async = true;
+               dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+               (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+           })();
+         </script>
+         <div id="disqus_thread"></div> -->
+    <ul class="pager">
+    <li class="previous">
+      <a href="/blog/2014/11/13/warten-auf-den-technischen-fortschritt-als-politisches-prinzip/">&larr; <em>Warten auf den technischen Fortschritt als politisches Prinzip?</em></a>
+    </li>
+    <li class="next">
+      <a href="/blog/2014/10/05/aktenfu%CC%88hrung-beim-beitragsservice/"><em>Aktenführung beim Beitragsservice</em> &rarr;</a>
+    </li>
+    </ul>
+  </footer>
+</article>
+        </div>
+      </div>
+      <footer>
+        <hr />
+        <p>Made with  <a href="https://github.com/greghendershott/frog">Frog</a> and <a href="http://www.racket-lang.org">Racket</a>. Using <a href="http://www.getbootstrap.com">Bootstrap</a>.</p>
+        <p><em>(C) 2018, Daniel Brunner</em>.</p>
+      </footer>
+    </div>
+    <!-- </body> JS -->
+    <script type="text/javascript" src="/js/jquery-3.1.1.min.js"></script>
+    <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  </body>
+</html>
